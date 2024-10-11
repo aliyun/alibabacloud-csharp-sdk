@@ -8,14 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
-    public class ListSparkJobRequest : TeaModel {
+    public class ListSparkJobAttemptShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>{   &quot;createTime&quot;:&quot;2020-12-28 09:00:00&quot;,   &quot;jobName&quot;:&quot;SparkPi&quot; }</para>
+        /// <para>{&quot;status&quot;:&quot;success&quot;, &quot;createTime&quot;:&quot;2021-05-27 11:00:00&quot;, &quot;timeZone&quot;:&quot;Asia/Shanghai&quot;}</para>
         /// </summary>
         [NameInMap("Condition")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Condition { get; set; }
+        public string ConditionShrink { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>j202105272322hangzhou5d64f1560000128</para>
+        /// </summary>
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -41,7 +51,7 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MySparkCluster</para>
+        /// <para>release-test</para>
         /// </summary>
         [NameInMap("VcName")]
         [Validation(Required=false)]

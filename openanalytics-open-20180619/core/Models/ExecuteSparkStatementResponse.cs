@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
-    public class ValidateVirtualClusterNameResponse : TeaModel {
+    public class ExecuteSparkStatementResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ValidateVirtualClusterNameResponseBody Body { get; set; }
+        public ExecuteSparkStatementResponseBody Body { get; set; }
 
     }
 

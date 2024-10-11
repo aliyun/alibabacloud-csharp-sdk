@@ -94,736 +94,1908 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        public AddAccountResponse AddAccountWithOptions(AddAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <param name="request">
+        /// CancelSparkStatementRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelSparkStatementResponse
+        /// </returns>
+        public CancelSparkStatementResponse CancelSparkStatementWithOptions(CancelSparkStatementRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatementId))
+            {
+                body["StatementId"] = request.StatementId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<AddAccountResponse>(DoRPCRequest("AddAccount", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelSparkStatement",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelSparkStatementResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<AddAccountResponse> AddAccountWithOptionsAsync(AddAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <param name="request">
+        /// CancelSparkStatementRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelSparkStatementResponse
+        /// </returns>
+        public async Task<CancelSparkStatementResponse> CancelSparkStatementWithOptionsAsync(CancelSparkStatementRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatementId))
+            {
+                body["StatementId"] = request.StatementId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<AddAccountResponse>(await DoRPCRequestAsync("AddAccount", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public AddAccountResponse AddAccount(AddAccountRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return AddAccountWithOptions(request, runtime);
-        }
-
-        public async Task<AddAccountResponse> AddAccountAsync(AddAccountRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await AddAccountWithOptionsAsync(request, runtime);
-        }
-
-        public AddEndPointResponse AddEndPointWithOptions(AddEndPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Action = "CancelSparkStatement",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
             };
-            return TeaModel.ToObject<AddEndPointResponse>(DoRPCRequest("AddEndPoint", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            return TeaModel.ToObject<CancelSparkStatementResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public async Task<AddEndPointResponse> AddEndPointWithOptionsAsync(AddEndPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<AddEndPointResponse>(await DoRPCRequestAsync("AddEndPoint", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public AddEndPointResponse AddEndPoint(AddEndPointRequest request)
+        /// <param name="request">
+        /// CancelSparkStatementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelSparkStatementResponse
+        /// </returns>
+        public CancelSparkStatementResponse CancelSparkStatement(CancelSparkStatementRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return AddEndPointWithOptions(request, runtime);
+            return CancelSparkStatementWithOptions(request, runtime);
         }
 
-        public async Task<AddEndPointResponse> AddEndPointAsync(AddEndPointRequest request)
+        /// <param name="request">
+        /// CancelSparkStatementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelSparkStatementResponse
+        /// </returns>
+        public async Task<CancelSparkStatementResponse> CancelSparkStatementAsync(CancelSparkStatementRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await AddEndPointWithOptionsAsync(request, runtime);
+            return await CancelSparkStatementWithOptionsAsync(request, runtime);
         }
 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public CreateInstanceResponse CreateInstanceWithOptions(CreateInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                body["ChargeType"] = request.ChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Component))
+            {
+                body["Component"] = request.Component;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateInstanceResponse>(DoRPCRequest("CreateInstance", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInstance",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public async Task<CreateInstanceResponse> CreateInstanceWithOptionsAsync(CreateInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                body["ChargeType"] = request.ChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Component))
+            {
+                body["Component"] = request.Component;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateInstanceResponse>(await DoRPCRequestAsync("CreateInstance", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInstance",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public CreateInstanceResponse CreateInstance(CreateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateInstanceWithOptions(request, runtime);
         }
 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public async Task<CreateInstanceResponse> CreateInstanceAsync(CreateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateInstanceWithOptionsAsync(request, runtime);
         }
 
-        public DeleteAccountResponse DeleteAccountWithOptions(DeleteAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <param name="request">
+        /// ExecuteSparkStatementRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteSparkStatementResponse
+        /// </returns>
+        public ExecuteSparkStatementResponse ExecuteSparkStatementWithOptions(ExecuteSparkStatementRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                body["Code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kind))
+            {
+                body["Kind"] = request.Kind;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteAccountResponse>(DoRPCRequest("DeleteAccount", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteSparkStatement",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteSparkStatementResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DeleteAccountResponse> DeleteAccountWithOptionsAsync(DeleteAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <param name="request">
+        /// ExecuteSparkStatementRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteSparkStatementResponse
+        /// </returns>
+        public async Task<ExecuteSparkStatementResponse> ExecuteSparkStatementWithOptionsAsync(ExecuteSparkStatementRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                body["Code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kind))
+            {
+                body["Kind"] = request.Kind;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteAccountResponse>(await DoRPCRequestAsync("DeleteAccount", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteSparkStatement",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteSparkStatementResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteAccountResponse DeleteAccount(DeleteAccountRequest request)
+        /// <param name="request">
+        /// ExecuteSparkStatementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteSparkStatementResponse
+        /// </returns>
+        public ExecuteSparkStatementResponse ExecuteSparkStatement(ExecuteSparkStatementRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DeleteAccountWithOptions(request, runtime);
+            return ExecuteSparkStatementWithOptions(request, runtime);
         }
 
-        public async Task<DeleteAccountResponse> DeleteAccountAsync(DeleteAccountRequest request)
+        /// <param name="request">
+        /// ExecuteSparkStatementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteSparkStatementResponse
+        /// </returns>
+        public async Task<ExecuteSparkStatementResponse> ExecuteSparkStatementAsync(ExecuteSparkStatementRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DeleteAccountWithOptionsAsync(request, runtime);
+            return await ExecuteSparkStatementWithOptionsAsync(request, runtime);
         }
 
-        public GetAllowIPResponse GetAllowIPWithOptions(GetAllowIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <param name="request">
+        /// GetJobAttemptLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobAttemptLogResponse
+        /// </returns>
+        public GetJobAttemptLogResponse GetJobAttemptLogWithOptions(GetJobAttemptLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobAttemptId))
+            {
+                body["JobAttemptId"] = request.JobAttemptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                body["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetAllowIPResponse>(DoRPCRequest("GetAllowIP", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobAttemptLog",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobAttemptLogResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetAllowIPResponse> GetAllowIPWithOptionsAsync(GetAllowIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <param name="request">
+        /// GetJobAttemptLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobAttemptLogResponse
+        /// </returns>
+        public async Task<GetJobAttemptLogResponse> GetJobAttemptLogWithOptionsAsync(GetJobAttemptLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobAttemptId))
+            {
+                body["JobAttemptId"] = request.JobAttemptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                body["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetAllowIPResponse>(await DoRPCRequestAsync("GetAllowIP", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public GetAllowIPResponse GetAllowIP(GetAllowIPRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetAllowIPWithOptions(request, runtime);
-        }
-
-        public async Task<GetAllowIPResponse> GetAllowIPAsync(GetAllowIPRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetAllowIPWithOptionsAsync(request, runtime);
-        }
-
-        public GetEndPointResponse GetEndPointWithOptions(GetEndPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Action = "GetJobAttemptLog",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
             };
-            return TeaModel.ToObject<GetEndPointResponse>(DoRPCRequest("GetEndPoint", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            return TeaModel.ToObject<GetJobAttemptLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public async Task<GetEndPointResponse> GetEndPointWithOptionsAsync(GetEndPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<GetEndPointResponse>(await DoRPCRequestAsync("GetEndPoint", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public GetEndPointResponse GetEndPoint(GetEndPointRequest request)
+        /// <param name="request">
+        /// GetJobAttemptLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobAttemptLogResponse
+        /// </returns>
+        public GetJobAttemptLogResponse GetJobAttemptLog(GetJobAttemptLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetEndPointWithOptions(request, runtime);
+            return GetJobAttemptLogWithOptions(request, runtime);
         }
 
-        public async Task<GetEndPointResponse> GetEndPointAsync(GetEndPointRequest request)
+        /// <param name="request">
+        /// GetJobAttemptLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobAttemptLogResponse
+        /// </returns>
+        public async Task<GetJobAttemptLogResponse> GetJobAttemptLogAsync(GetJobAttemptLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetEndPointWithOptionsAsync(request, runtime);
+            return await GetJobAttemptLogWithOptionsAsync(request, runtime);
         }
 
-        public GetEndPointByDomainResponse GetEndPointByDomainWithOptions(GetEndPointByDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<GetEndPointByDomainResponse>(DoRPCRequest("GetEndPointByDomain", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<GetEndPointByDomainResponse> GetEndPointByDomainWithOptionsAsync(GetEndPointByDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<GetEndPointByDomainResponse>(await DoRPCRequestAsync("GetEndPointByDomain", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public GetEndPointByDomainResponse GetEndPointByDomain(GetEndPointByDomainRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetEndPointByDomainWithOptions(request, runtime);
-        }
-
-        public async Task<GetEndPointByDomainResponse> GetEndPointByDomainAsync(GetEndPointByDomainRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetEndPointByDomainWithOptionsAsync(request, runtime);
-        }
-
+        /// <param name="request">
+        /// GetJobDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobDetailResponse
+        /// </returns>
         public GetJobDetailResponse GetJobDetailWithOptions(GetJobDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                body["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetJobDetailResponse>(DoRPCRequest("GetJobDetail", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobDetail",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// GetJobDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobDetailResponse
+        /// </returns>
         public async Task<GetJobDetailResponse> GetJobDetailWithOptionsAsync(GetJobDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                body["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetJobDetailResponse>(await DoRPCRequestAsync("GetJobDetail", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobDetail",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// GetJobDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobDetailResponse
+        /// </returns>
         public GetJobDetailResponse GetJobDetail(GetJobDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetJobDetailWithOptions(request, runtime);
         }
 
+        /// <param name="request">
+        /// GetJobDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobDetailResponse
+        /// </returns>
         public async Task<GetJobDetailResponse> GetJobDetailAsync(GetJobDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetJobDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <param name="request">
+        /// GetJobLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobLogResponse
+        /// </returns>
         public GetJobLogResponse GetJobLogWithOptions(GetJobLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                body["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetJobLogResponse>(DoRPCRequest("GetJobLog", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobLog",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// GetJobLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobLogResponse
+        /// </returns>
         public async Task<GetJobLogResponse> GetJobLogWithOptionsAsync(GetJobLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                body["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetJobLogResponse>(await DoRPCRequestAsync("GetJobLog", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobLog",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// GetJobLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobLogResponse
+        /// </returns>
         public GetJobLogResponse GetJobLog(GetJobLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetJobLogWithOptions(request, runtime);
         }
 
+        /// <param name="request">
+        /// GetJobLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobLogResponse
+        /// </returns>
         public async Task<GetJobLogResponse> GetJobLogAsync(GetJobLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetJobLogWithOptionsAsync(request, runtime);
         }
 
+        /// <param name="request">
+        /// GetJobStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobStatusResponse
+        /// </returns>
         public GetJobStatusResponse GetJobStatusWithOptions(GetJobStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                body["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetJobStatusResponse>(DoRPCRequest("GetJobStatus", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobStatus",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// GetJobStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobStatusResponse
+        /// </returns>
         public async Task<GetJobStatusResponse> GetJobStatusWithOptionsAsync(GetJobStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                body["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetJobStatusResponse>(await DoRPCRequestAsync("GetJobStatus", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobStatus",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// GetJobStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobStatusResponse
+        /// </returns>
         public GetJobStatusResponse GetJobStatus(GetJobStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetJobStatusWithOptions(request, runtime);
         }
 
+        /// <param name="request">
+        /// GetJobStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobStatusResponse
+        /// </returns>
         public async Task<GetJobStatusResponse> GetJobStatusAsync(GetJobStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetJobStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <param name="request">
+        /// GetSparkSessionStateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSparkSessionStateResponse
+        /// </returns>
+        public GetSparkSessionStateResponse GetSparkSessionStateWithOptions(GetSparkSessionStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSparkSessionState",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSparkSessionStateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// GetSparkSessionStateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSparkSessionStateResponse
+        /// </returns>
+        public async Task<GetSparkSessionStateResponse> GetSparkSessionStateWithOptionsAsync(GetSparkSessionStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSparkSessionState",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSparkSessionStateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// GetSparkSessionStateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSparkSessionStateResponse
+        /// </returns>
+        public GetSparkSessionStateResponse GetSparkSessionState(GetSparkSessionStateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSparkSessionStateWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// GetSparkSessionStateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSparkSessionStateResponse
+        /// </returns>
+        public async Task<GetSparkSessionStateResponse> GetSparkSessionStateAsync(GetSparkSessionStateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSparkSessionStateWithOptionsAsync(request, runtime);
+        }
+
+        /// <param name="request">
+        /// GetSparkStatementRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSparkStatementResponse
+        /// </returns>
+        public GetSparkStatementResponse GetSparkStatementWithOptions(GetSparkStatementRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatementId))
+            {
+                body["StatementId"] = request.StatementId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSparkStatement",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSparkStatementResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// GetSparkStatementRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSparkStatementResponse
+        /// </returns>
+        public async Task<GetSparkStatementResponse> GetSparkStatementWithOptionsAsync(GetSparkStatementRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatementId))
+            {
+                body["StatementId"] = request.StatementId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSparkStatement",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSparkStatementResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// GetSparkStatementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSparkStatementResponse
+        /// </returns>
+        public GetSparkStatementResponse GetSparkStatement(GetSparkStatementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSparkStatementWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// GetSparkStatementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSparkStatementResponse
+        /// </returns>
+        public async Task<GetSparkStatementResponse> GetSparkStatementAsync(GetSparkStatementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSparkStatementWithOptionsAsync(request, runtime);
+        }
+
+        /// <param name="request">
+        /// KillSparkJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// KillSparkJobResponse
+        /// </returns>
         public KillSparkJobResponse KillSparkJobWithOptions(KillSparkJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                body["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<KillSparkJobResponse>(DoRPCRequest("KillSparkJob", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "KillSparkJob",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<KillSparkJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// KillSparkJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// KillSparkJobResponse
+        /// </returns>
         public async Task<KillSparkJobResponse> KillSparkJobWithOptionsAsync(KillSparkJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                body["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<KillSparkJobResponse>(await DoRPCRequestAsync("KillSparkJob", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "KillSparkJob",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<KillSparkJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// KillSparkJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// KillSparkJobResponse
+        /// </returns>
         public KillSparkJobResponse KillSparkJob(KillSparkJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return KillSparkJobWithOptions(request, runtime);
         }
 
+        /// <param name="request">
+        /// KillSparkJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// KillSparkJobResponse
+        /// </returns>
         public async Task<KillSparkJobResponse> KillSparkJobAsync(KillSparkJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await KillSparkJobWithOptionsAsync(request, runtime);
         }
 
-        public ListSparkJobResponse ListSparkJobWithOptions(ListSparkJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <param name="tmpReq">
+        /// ListSparkJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSparkJobResponse
+        /// </returns>
+        public ListSparkJobResponse ListSparkJobWithOptions(ListSparkJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListSparkJobShrinkRequest request = new ListSparkJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Condition))
+            {
+                request.ConditionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Condition, "Condition", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionShrink))
+            {
+                query["Condition"] = request.ConditionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                query["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<ListSparkJobResponse>(DoRPCRequest("ListSparkJob", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSparkJob",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSparkJobResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListSparkJobResponse> ListSparkJobWithOptionsAsync(ListSparkJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <param name="tmpReq">
+        /// ListSparkJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSparkJobResponse
+        /// </returns>
+        public async Task<ListSparkJobResponse> ListSparkJobWithOptionsAsync(ListSparkJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListSparkJobShrinkRequest request = new ListSparkJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Condition))
+            {
+                request.ConditionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Condition, "Condition", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionShrink))
+            {
+                query["Condition"] = request.ConditionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                query["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<ListSparkJobResponse>(await DoRPCRequestAsync("ListSparkJob", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSparkJob",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSparkJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ListSparkJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSparkJobResponse
+        /// </returns>
         public ListSparkJobResponse ListSparkJob(ListSparkJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSparkJobWithOptions(request, runtime);
         }
 
+        /// <param name="request">
+        /// ListSparkJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSparkJobResponse
+        /// </returns>
         public async Task<ListSparkJobResponse> ListSparkJobAsync(ListSparkJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListSparkJobWithOptionsAsync(request, runtime);
         }
 
-        public QueryAccountListResponse QueryAccountListWithOptions(QueryAccountListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <param name="tmpReq">
+        /// ListSparkJobAttemptRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSparkJobAttemptResponse
+        /// </returns>
+        public ListSparkJobAttemptResponse ListSparkJobAttemptWithOptions(ListSparkJobAttemptRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListSparkJobAttemptShrinkRequest request = new ListSparkJobAttemptShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Condition))
+            {
+                request.ConditionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Condition, "Condition", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionShrink))
+            {
+                query["Condition"] = request.ConditionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                query["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<QueryAccountListResponse>(DoRPCRequest("QueryAccountList", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSparkJobAttempt",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSparkJobAttemptResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<QueryAccountListResponse> QueryAccountListWithOptionsAsync(QueryAccountListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <param name="tmpReq">
+        /// ListSparkJobAttemptRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSparkJobAttemptResponse
+        /// </returns>
+        public async Task<ListSparkJobAttemptResponse> ListSparkJobAttemptWithOptionsAsync(ListSparkJobAttemptRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListSparkJobAttemptShrinkRequest request = new ListSparkJobAttemptShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Condition))
+            {
+                request.ConditionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Condition, "Condition", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionShrink))
+            {
+                query["Condition"] = request.ConditionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                query["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<QueryAccountListResponse>(await DoRPCRequestAsync("QueryAccountList", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSparkJobAttempt",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSparkJobAttemptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public QueryAccountListResponse QueryAccountList(QueryAccountListRequest request)
+        /// <param name="request">
+        /// ListSparkJobAttemptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSparkJobAttemptResponse
+        /// </returns>
+        public ListSparkJobAttemptResponse ListSparkJobAttempt(ListSparkJobAttemptRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return QueryAccountListWithOptions(request, runtime);
+            return ListSparkJobAttemptWithOptions(request, runtime);
         }
 
-        public async Task<QueryAccountListResponse> QueryAccountListAsync(QueryAccountListRequest request)
+        /// <param name="request">
+        /// ListSparkJobAttemptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSparkJobAttemptResponse
+        /// </returns>
+        public async Task<ListSparkJobAttemptResponse> ListSparkJobAttemptAsync(ListSparkJobAttemptRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await QueryAccountListWithOptionsAsync(request, runtime);
+            return await ListSparkJobAttemptWithOptionsAsync(request, runtime);
         }
 
-        public QueryEndPointListResponse QueryEndPointListWithOptions(QueryEndPointListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <param name="request">
+        /// ListSparkStatementsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSparkStatementsResponse
+        /// </returns>
+        public ListSparkStatementsResponse ListSparkStatementsWithOptions(ListSparkStatementsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<QueryEndPointListResponse>(DoRPCRequest("QueryEndPointList", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSparkStatements",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSparkStatementsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<QueryEndPointListResponse> QueryEndPointListWithOptionsAsync(QueryEndPointListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <param name="request">
+        /// ListSparkStatementsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSparkStatementsResponse
+        /// </returns>
+        public async Task<ListSparkStatementsResponse> ListSparkStatementsWithOptionsAsync(ListSparkStatementsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<QueryEndPointListResponse>(await DoRPCRequestAsync("QueryEndPointList", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSparkStatements",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSparkStatementsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public QueryEndPointListResponse QueryEndPointList(QueryEndPointListRequest request)
+        /// <param name="request">
+        /// ListSparkStatementsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSparkStatementsResponse
+        /// </returns>
+        public ListSparkStatementsResponse ListSparkStatements(ListSparkStatementsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return QueryEndPointListWithOptions(request, runtime);
+            return ListSparkStatementsWithOptions(request, runtime);
         }
 
-        public async Task<QueryEndPointListResponse> QueryEndPointListAsync(QueryEndPointListRequest request)
+        /// <param name="request">
+        /// ListSparkStatementsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSparkStatementsResponse
+        /// </returns>
+        public async Task<ListSparkStatementsResponse> ListSparkStatementsAsync(ListSparkStatementsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await QueryEndPointListWithOptionsAsync(request, runtime);
+            return await ListSparkStatementsWithOptionsAsync(request, runtime);
         }
 
+        /// <param name="request">
+        /// ReleaseInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseInstanceResponse
+        /// </returns>
         public ReleaseInstanceResponse ReleaseInstanceWithOptions(ReleaseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ReleaseInstanceResponse>(DoRPCRequest("ReleaseInstance", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReleaseInstance",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReleaseInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ReleaseInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseInstanceResponse
+        /// </returns>
         public async Task<ReleaseInstanceResponse> ReleaseInstanceWithOptionsAsync(ReleaseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ReleaseInstanceResponse>(await DoRPCRequestAsync("ReleaseInstance", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReleaseInstance",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReleaseInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ReleaseInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseInstanceResponse
+        /// </returns>
         public ReleaseInstanceResponse ReleaseInstance(ReleaseInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReleaseInstanceWithOptions(request, runtime);
         }
 
+        /// <param name="request">
+        /// ReleaseInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseInstanceResponse
+        /// </returns>
         public async Task<ReleaseInstanceResponse> ReleaseInstanceAsync(ReleaseInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReleaseInstanceWithOptionsAsync(request, runtime);
         }
 
-        public RemoveEndPointResponse RemoveEndPointWithOptions(RemoveEndPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<RemoveEndPointResponse>(DoRPCRequest("RemoveEndPoint", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<RemoveEndPointResponse> RemoveEndPointWithOptionsAsync(RemoveEndPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<RemoveEndPointResponse>(await DoRPCRequestAsync("RemoveEndPoint", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public RemoveEndPointResponse RemoveEndPoint(RemoveEndPointRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return RemoveEndPointWithOptions(request, runtime);
-        }
-
-        public async Task<RemoveEndPointResponse> RemoveEndPointAsync(RemoveEndPointRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await RemoveEndPointWithOptionsAsync(request, runtime);
-        }
-
-        public ResetMainPasswordResponse ResetMainPasswordWithOptions(ResetMainPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<ResetMainPasswordResponse>(DoRPCRequest("ResetMainPassword", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<ResetMainPasswordResponse> ResetMainPasswordWithOptionsAsync(ResetMainPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<ResetMainPasswordResponse>(await DoRPCRequestAsync("ResetMainPassword", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public ResetMainPasswordResponse ResetMainPassword(ResetMainPasswordRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ResetMainPasswordWithOptions(request, runtime);
-        }
-
-        public async Task<ResetMainPasswordResponse> ResetMainPasswordAsync(ResetMainPasswordRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ResetMainPasswordWithOptionsAsync(request, runtime);
-        }
-
-        public SetAllowIPResponse SetAllowIPWithOptions(SetAllowIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<SetAllowIPResponse>(DoRPCRequest("SetAllowIP", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<SetAllowIPResponse> SetAllowIPWithOptionsAsync(SetAllowIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<SetAllowIPResponse>(await DoRPCRequestAsync("SetAllowIP", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public SetAllowIPResponse SetAllowIP(SetAllowIPRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return SetAllowIPWithOptions(request, runtime);
-        }
-
-        public async Task<SetAllowIPResponse> SetAllowIPAsync(SetAllowIPRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await SetAllowIPWithOptionsAsync(request, runtime);
-        }
-
+        /// <param name="request">
+        /// SubmitSparkJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSparkJobResponse
+        /// </returns>
         public SubmitSparkJobResponse SubmitSparkJobWithOptions(SubmitSparkJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigJson))
+            {
+                body["ConfigJson"] = request.ConfigJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                body["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<SubmitSparkJobResponse>(DoRPCRequest("SubmitSparkJob", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSparkJob",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSparkJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// SubmitSparkJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSparkJobResponse
+        /// </returns>
         public async Task<SubmitSparkJobResponse> SubmitSparkJobWithOptionsAsync(SubmitSparkJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigJson))
+            {
+                body["ConfigJson"] = request.ConfigJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                body["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<SubmitSparkJobResponse>(await DoRPCRequestAsync("SubmitSparkJob", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSparkJob",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSparkJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// SubmitSparkJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSparkJobResponse
+        /// </returns>
         public SubmitSparkJobResponse SubmitSparkJob(SubmitSparkJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitSparkJobWithOptions(request, runtime);
         }
 
+        /// <param name="request">
+        /// SubmitSparkJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSparkJobResponse
+        /// </returns>
         public async Task<SubmitSparkJobResponse> SubmitSparkJobAsync(SubmitSparkJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitSparkJobWithOptionsAsync(request, runtime);
         }
 
-        public UnSubscribeRegionResponse UnSubscribeRegionWithOptions(UnSubscribeRegionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <param name="request">
+        /// SubmitSparkSQLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSparkSQLResponse
+        /// </returns>
+        public SubmitSparkSQLResponse SubmitSparkSQLWithOptions(SubmitSparkSQLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sql))
+            {
+                body["Sql"] = request.Sql;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                body["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UnSubscribeRegionResponse>(DoRPCRequest("UnSubscribeRegion", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSparkSQL",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSparkSQLResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<UnSubscribeRegionResponse> UnSubscribeRegionWithOptionsAsync(UnSubscribeRegionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <param name="request">
+        /// SubmitSparkSQLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSparkSQLResponse
+        /// </returns>
+        public async Task<SubmitSparkSQLResponse> SubmitSparkSQLWithOptionsAsync(SubmitSparkSQLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sql))
+            {
+                body["Sql"] = request.Sql;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                body["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UnSubscribeRegionResponse>(await DoRPCRequestAsync("UnSubscribeRegion", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public UnSubscribeRegionResponse UnSubscribeRegion(UnSubscribeRegionRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return UnSubscribeRegionWithOptions(request, runtime);
-        }
-
-        public async Task<UnSubscribeRegionResponse> UnSubscribeRegionAsync(UnSubscribeRegionRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await UnSubscribeRegionWithOptionsAsync(request, runtime);
-        }
-
-        public UpdateAccountPasswordResponse UpdateAccountPasswordWithOptions(UpdateAccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Action = "SubmitSparkSQL",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateAccountPasswordResponse>(DoRPCRequest("UpdateAccountPassword", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            return TeaModel.ToObject<SubmitSparkSQLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public async Task<UpdateAccountPasswordResponse> UpdateAccountPasswordWithOptionsAsync(UpdateAccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<UpdateAccountPasswordResponse>(await DoRPCRequestAsync("UpdateAccountPassword", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public UpdateAccountPasswordResponse UpdateAccountPassword(UpdateAccountPasswordRequest request)
+        /// <param name="request">
+        /// SubmitSparkSQLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSparkSQLResponse
+        /// </returns>
+        public SubmitSparkSQLResponse SubmitSparkSQL(SubmitSparkSQLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return UpdateAccountPasswordWithOptions(request, runtime);
+            return SubmitSparkSQLWithOptions(request, runtime);
         }
 
-        public async Task<UpdateAccountPasswordResponse> UpdateAccountPasswordAsync(UpdateAccountPasswordRequest request)
+        /// <param name="request">
+        /// SubmitSparkSQLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSparkSQLResponse
+        /// </returns>
+        public async Task<SubmitSparkSQLResponse> SubmitSparkSQLAsync(SubmitSparkSQLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await UpdateAccountPasswordWithOptionsAsync(request, runtime);
+            return await SubmitSparkSQLWithOptionsAsync(request, runtime);
         }
 
-        public UpgradeInstanceResponse UpgradeInstanceWithOptions(UpgradeInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<UpgradeInstanceResponse>(DoRPCRequest("UpgradeInstance", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<UpgradeInstanceResponse> UpgradeInstanceWithOptionsAsync(UpgradeInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<UpgradeInstanceResponse>(await DoRPCRequestAsync("UpgradeInstance", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public UpgradeInstanceResponse UpgradeInstance(UpgradeInstanceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return UpgradeInstanceWithOptions(request, runtime);
-        }
-
-        public async Task<UpgradeInstanceResponse> UpgradeInstanceAsync(UpgradeInstanceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await UpgradeInstanceWithOptionsAsync(request, runtime);
-        }
-
+        /// <param name="request">
+        /// ValidateVirtualClusterNameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateVirtualClusterNameResponse
+        /// </returns>
         public ValidateVirtualClusterNameResponse ValidateVirtualClusterNameWithOptions(ValidateVirtualClusterNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                body["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ValidateVirtualClusterNameResponse>(DoRPCRequest("ValidateVirtualClusterName", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidateVirtualClusterName",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidateVirtualClusterNameResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ValidateVirtualClusterNameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateVirtualClusterNameResponse
+        /// </returns>
         public async Task<ValidateVirtualClusterNameResponse> ValidateVirtualClusterNameWithOptionsAsync(ValidateVirtualClusterNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VcName))
+            {
+                body["VcName"] = request.VcName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ValidateVirtualClusterNameResponse>(await DoRPCRequestAsync("ValidateVirtualClusterName", "2018-06-19", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidateVirtualClusterName",
+                Version = "2018-06-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidateVirtualClusterNameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ValidateVirtualClusterNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateVirtualClusterNameResponse
+        /// </returns>
         public ValidateVirtualClusterNameResponse ValidateVirtualClusterName(ValidateVirtualClusterNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ValidateVirtualClusterNameWithOptions(request, runtime);
         }
 
+        /// <param name="request">
+        /// ValidateVirtualClusterNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateVirtualClusterNameResponse
+        /// </returns>
         public async Task<ValidateVirtualClusterNameResponse> ValidateVirtualClusterNameAsync(ValidateVirtualClusterNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

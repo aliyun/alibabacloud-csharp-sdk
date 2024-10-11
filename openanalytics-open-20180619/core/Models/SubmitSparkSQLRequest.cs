@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
-    public class GetJobDetailRequest : TeaModel {
+    public class SubmitSparkSQLRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>j202010271622hangzhouf742a4330000923</para>
+        /// <para>set spark.driver.resourceSpec=medium;set spark.executor.instances=5;  set spark.executor.resourceSpec=medium;  set spark.app.name=sparksqltest;  show databases;</para>
         /// </summary>
-        [NameInMap("JobId")]
+        [NameInMap("Sql")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public string Sql { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MyCluster</para>
+        /// <para>MySparkCluster</para>
         /// </summary>
         [NameInMap("VcName")]
         [Validation(Required=false)]

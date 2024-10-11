@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
     public class KillSparkJobResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>deleted</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3970ACB5-3E30-4A3A-B63A-1790FCC261F4</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

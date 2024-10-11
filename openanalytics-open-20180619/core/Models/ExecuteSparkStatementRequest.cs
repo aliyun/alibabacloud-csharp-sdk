@@ -8,26 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
-    public class GetJobDetailRequest : TeaModel {
+    public class ExecuteSparkStatementRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>j202010271622hangzhouf742a4330000923</para>
+        /// <para>print(2+2)\n</para>
+        /// </summary>
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>j202106071620hangzhou****</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>MyCluster</para>
+        /// <para>sql</para>
         /// </summary>
-        [NameInMap("VcName")]
+        [NameInMap("Kind")]
         [Validation(Required=false)]
-        public string VcName { get; set; }
+        public string Kind { get; set; }
 
     }
 

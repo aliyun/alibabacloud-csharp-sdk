@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
-    public class ListSparkJobResponseBody : TeaModel {
+    public class ListSparkJobAttemptResponseBody : TeaModel {
         [NameInMap("DataResult")]
         [Validation(Required=false)]
-        public ListSparkJobResponseBodyDataResult DataResult { get; set; }
-        public class ListSparkJobResponseBodyDataResult : TeaModel {
-            [NameInMap("JobList")]
+        public ListSparkJobAttemptResponseBodyDataResult DataResult { get; set; }
+        public class ListSparkJobAttemptResponseBodyDataResult : TeaModel {
+            [NameInMap("JobAttemptList")]
             [Validation(Required=false)]
-            public List<ListSparkJobResponseBodyDataResultJobList> JobList { get; set; }
-            public class ListSparkJobResponseBodyDataResultJobList : TeaModel {
+            public List<ListSparkJobAttemptResponseBodyDataResultJobAttemptList> JobAttemptList { get; set; }
+            public class ListSparkJobAttemptResponseBodyDataResultJobAttemptList : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>2020-10-27 17:51:05</para>
+                /// <para>2021-05-27 23:22:08</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>1603792267000</para>
+                /// <para>1622128928000</para>
                 /// </summary>
                 [NameInMap("CreateTimeValue")]
                 [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>{&quot;args&quot;:[&quot;100&quot;],&quot;name&quot;:...}</para>
+                /// <para>{&quot;xxx&quot;:&quot;xxx&quot;}</para>
                 /// </summary>
                 [NameInMap("Detail")]
                 [Validation(Required=false)]
@@ -43,31 +43,31 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>small</para>
+                /// <para>00:01:12</para>
                 /// </summary>
-                [NameInMap("DriverResourceSpec")]
+                [NameInMap("DurationTime")]
                 [Validation(Required=false)]
-                public string DriverResourceSpec { get; set; }
+                public string DurationTime { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>100</para>
+                /// <para>72000</para>
                 /// </summary>
-                [NameInMap("ExecutorInstances")]
+                [NameInMap("DurationTimeValue")]
                 [Validation(Required=false)]
-                public string ExecutorInstances { get; set; }
+                public string DurationTimeValue { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>small</para>
+                /// <para>j202105272322hangzhou5d64f1560000128-0001</para>
                 /// </summary>
-                [NameInMap("ExecutorResourceSpec")]
+                [NameInMap("JobAttemptId")]
                 [Validation(Required=false)]
-                public string ExecutorResourceSpec { get; set; }
+                public string JobAttemptId { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>j202010271750hangzhouf742a4330000950</para>
+                /// <para>j202105272322hangzhou5d64f1560000128</para>
                 /// </summary>
                 [NameInMap("JobId")]
                 [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>SparkPi</para>
+                /// <para>xxx</para>
                 /// </summary>
                 [NameInMap("JobName")]
                 [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para><a href="https://dlaui-cn-hangzhou.aliyuncs.com/?token=xxx">https://dlaui-cn-hangzhou.aliyuncs.com/?token=xxx</a></para>
+                /// <para>xxx</para>
                 /// </summary>
                 [NameInMap("SparkUI")]
                 [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>running</para>
+                /// <para>success</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -99,39 +99,23 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>2020-10-27 17:51:05</para>
+                /// <para>2021-05-27 23:23:20</para>
                 /// </summary>
-                [NameInMap("SubmitTime")]
+                [NameInMap("TerminatedTime")]
                 [Validation(Required=false)]
-                public string SubmitTime { get; set; }
+                public string TerminatedTime { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>1603792267000</para>
+                /// <para>1622129000000</para>
                 /// </summary>
-                [NameInMap("SubmitTimeValue")]
+                [NameInMap("TerminatedTimeValue")]
                 [Validation(Required=false)]
-                public string SubmitTimeValue { get; set; }
+                public string TerminatedTimeValue { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>2020-10-27 17:51:05</para>
-                /// </summary>
-                [NameInMap("UpdateTime")]
-                [Validation(Required=false)]
-                public string UpdateTime { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1603792267000</para>
-                /// </summary>
-                [NameInMap("UpdateTimeValue")]
-                [Validation(Required=false)]
-                public string UpdateTimeValue { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>MyCluster</para>
+                /// <para>release-test</para>
                 /// </summary>
                 [NameInMap("VcName")]
                 [Validation(Required=false)]
@@ -157,7 +141,7 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>4998</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -167,7 +151,7 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>E18B0634-F003-486A-90B9-4AA6932DA3AA</para>
+        /// <para>4A839055-70C7-423D-A6F2-E714EA4502DB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

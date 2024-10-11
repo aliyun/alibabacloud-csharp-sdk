@@ -8,12 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
-    public class GetJobDetailRequest : TeaModel {
+    public class GetJobAttemptLogRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>j202010271622hangzhouf742a4330000923</para>
+        /// <para>j202105272322hangzhou5d64f1560000128-0001</para>
+        /// </summary>
+        [NameInMap("JobAttemptId")]
+        [Validation(Required=false)]
+        public string JobAttemptId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>j202105272322hangzhou5d64f1560000128</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
@@ -23,7 +33,7 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MyCluster</para>
+        /// <para>release-test</para>
         /// </summary>
         [NameInMap("VcName")]
         [Validation(Required=false)]

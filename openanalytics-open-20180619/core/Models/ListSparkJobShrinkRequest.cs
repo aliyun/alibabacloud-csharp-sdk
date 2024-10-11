@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
-    public class ListSparkJobRequest : TeaModel {
+    public class ListSparkJobShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>{   &quot;createTime&quot;:&quot;2020-12-28 09:00:00&quot;,   &quot;jobName&quot;:&quot;SparkPi&quot; }</para>
         /// </summary>
         [NameInMap("Condition")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Condition { get; set; }
+        public string ConditionShrink { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

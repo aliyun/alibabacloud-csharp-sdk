@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
-    public class SubmitSparkJobResponseBody : TeaModel {
+    public class GetSparkSessionStateResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>j202011032013hangzhouf742a4330003679</para>
-        /// </summary>
-        [NameInMap("JobId")]
-        [Validation(Required=false)]
-        public string JobId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>C039FD4D-2F3C-4556-AF09-864D3A6485B2</para>
+        /// <para>9AD49396-8F80-5511-9268-A6360B205136</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>killed</para>
+        /// </summary>
+        [NameInMap("State")]
+        [Validation(Required=false)]
+        public string State { get; set; }
 
     }
 
