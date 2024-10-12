@@ -8,15 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
-    public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody : TeaModel {
+    public class PersonalizedTextToImageAddInferenceJobResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public Personalizedtxt2imgQueryInferenceJobInfoResponseBodyData Data { get; set; }
-        public class Personalizedtxt2imgQueryInferenceJobInfoResponseBodyData : TeaModel {
+        public PersonalizedTextToImageAddInferenceJobResponseBodyData Data { get; set; }
+        public class PersonalizedTextToImageAddInferenceJobResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>2023-12-25T12:00:00</para>
@@ -58,6 +58,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string ModelId { get; set; }
 
             /// <summary>
+            /// <para>promptId</para>
+            /// 
             /// <b>Example:</b>
             /// <para>promptId-xxxx-xxxx-xxxx</para>
             /// </summary>

@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public string ObjectType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123456</para>
+        /// </summary>
         [NameInMap("id")]
         [Validation(Required=false)]
         public string Id { get; set; }

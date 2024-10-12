@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
-    public class Personalizedtxt2imgAddInferenceJobRequest : TeaModel {
+    public class PersonalizedTextToImageAddInferenceJobRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
@@ -19,13 +19,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>xxxx-xxxx-xxxx</para>
         /// </summary>
-        [NameInMap("modelId")]
+        [NameInMap("imageUrl")]
         [Validation(Required=false)]
-        public string ModelId { get; set; }
+        public List<string> ImageUrl { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -44,6 +41,22 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [NameInMap("seed")]
         [Validation(Required=false)]
         public long? Seed { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("strength")]
+        [Validation(Required=false)]
+        public double? Strength { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>800</para>
+        /// </summary>
+        [NameInMap("trainSteps")]
+        [Validation(Required=false)]
+        public int? TrainSteps { get; set; }
 
     }
 

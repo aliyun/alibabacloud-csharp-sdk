@@ -8,22 +8,46 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
-    public class Personalizedtxt2imgQueryModelTrainStatusResponseBody : TeaModel {
+    public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public Personalizedtxt2imgQueryModelTrainStatusResponseBodyData Data { get; set; }
-        public class Personalizedtxt2imgQueryModelTrainStatusResponseBodyData : TeaModel {
+        public List<AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBodyData> Data { get; set; }
+        public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>FINISHED</para>
+            /// <para>10</para>
             /// </summary>
-            [NameInMap("modelTrainStatus")]
+            [NameInMap("FreeConcurrencyCount")]
             [Validation(Required=false)]
-            public string ModelTrainStatus { get; set; }
+            public int? FreeConcurrencyCount { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("FreeCount")]
+            [Validation(Required=false)]
+            public int? FreeCount { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>online_ai_algorithm_personalized_text_to_image_call_count</para>
+            /// </summary>
+            [NameInMap("ServiceCode")]
+            [Validation(Required=false)]
+            public string ServiceCode { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>AI算法模型-个性化文生图-在线按量调用</para>
+            /// </summary>
+            [NameInMap("ServiceName")]
+            [Validation(Required=false)]
+            public string ServiceName { get; set; }
 
         }
 

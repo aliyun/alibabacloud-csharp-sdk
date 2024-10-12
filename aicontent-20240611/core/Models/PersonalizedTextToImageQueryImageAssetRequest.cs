@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
-    public class Personalizedtxt2imgQueryImageAssetRequest : TeaModel {
+    public class PersonalizedTextToImageQueryImageAssetRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>base64</para>
@@ -26,26 +26,6 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [NameInMap("imageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>girl-xxxx-xxxx-xxxx-xxxx</para>
-        /// </summary>
-        [NameInMap("modelId")]
-        [Validation(Required=false)]
-        public string ModelId { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>xxxx-xxxx-xxxx-xxxx</para>
-        /// </summary>
-        [NameInMap("promptId")]
-        [Validation(Required=false)]
-        public string PromptId { get; set; }
 
     }
 

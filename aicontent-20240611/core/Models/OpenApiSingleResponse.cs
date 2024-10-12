@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class OpenApiSingleResponse : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[]</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public OpenApiSingleResponseData Data { get; set; }
         public class OpenApiSingleResponseData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>FINISHED</para>
+            /// </summary>
             [NameInMap("modelTrainStatus")]
             [Validation(Required=false)]
             public string ModelTrainStatus { get; set; }
@@ -27,6 +35,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("httpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }

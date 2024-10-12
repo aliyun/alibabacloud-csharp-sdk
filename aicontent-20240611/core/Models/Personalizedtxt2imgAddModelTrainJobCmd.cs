@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class Personalizedtxt2imgAddModelTrainJobCmd : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("imageUrl")]
         [Validation(Required=false)]
         public List<string> ImageUrl { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>熊猫图片生成</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dog</para>
         /// </summary>
         [NameInMap("objectType")]
         [Validation(Required=false)]

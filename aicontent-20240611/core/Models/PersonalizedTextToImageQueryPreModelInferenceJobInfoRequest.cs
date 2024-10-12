@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
-    public class Personalizedtxt2imgQueryInferenceJobInfoRequest : TeaModel {
+    public class PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>180</para>
+        /// <para>girl-xxxx-xxxx-xxxx-xxxx</para>
         /// </summary>
         [NameInMap("inferenceJobId")]
         [Validation(Required=false)]
