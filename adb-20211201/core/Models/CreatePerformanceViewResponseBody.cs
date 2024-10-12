@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreatePerformanceViewResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// <remarks>
+        /// <para> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
@@ -40,6 +45,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string CreateStatus { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E031AABF-BD56-5966-A063-4283EF18DB45</para>
         /// </summary>

@@ -85,7 +85,6 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <remarks>
         /// <para> To ensure data security, we recommend that you specify at least two values.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Monday,Wednesday,Friday,Sunday</para>

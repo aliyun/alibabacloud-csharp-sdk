@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribePerformanceViewAttributeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// <remarks>
+        /// <para> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The type of the view.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Basic</para>
         /// </summary>
@@ -34,6 +41,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string CreateFromViewType { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>amv-bp198m028ih55xxxx</para>
         /// </summary>
@@ -42,6 +54,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to populate the names of the metrics in the original monitoring view when you view the monitoring view. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -50,6 +68,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? FillOriginViewKeys { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E031AABF-BD56-5966-A063-4283EF18DB45</para>
         /// </summary>
@@ -57,15 +77,29 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The information about the monitoring view.</para>
+        /// </summary>
         [NameInMap("ViewDetail")]
         [Validation(Required=false)]
         public DescribePerformanceViewAttributeResponseBodyViewDetail ViewDetail { get; set; }
         public class DescribePerformanceViewAttributeResponseBodyViewDetail : TeaModel {
+            /// <summary>
+            /// <para>The metric category.</para>
+            /// </summary>
             [NameInMap("Categories")]
             [Validation(Required=false)]
             public List<DescribePerformanceViewAttributeResponseBodyViewDetailCategories> Categories { get; set; }
             public class DescribePerformanceViewAttributeResponseBodyViewDetailCategories : TeaModel {
                 /// <summary>
+                /// <para>The name of the metric category. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Node</b></description></item>
+                /// <item><description><b>DiskData</b></description></item>
+                /// <item><description><b>WorkLoad</b></description></item>
+                /// <item><description><b>ResourceGroup</b></description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Node</para>
                 /// </summary>
@@ -73,11 +107,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
+                /// <summary>
+                /// <para>The metrics.</para>
+                /// </summary>
                 [NameInMap("Keys")]
                 [Validation(Required=false)]
                 public List<DescribePerformanceViewAttributeResponseBodyViewDetailCategoriesKeys> Keys { get; set; }
                 public class DescribePerformanceViewAttributeResponseBodyViewDetailCategoriesKeys : TeaModel {
                     /// <summary>
+                    /// <para>The name of the metric.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>AnalyticDB_CPU</para>
                     /// </summary>
@@ -86,6 +125,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string KeyName { get; set; }
 
                     /// <summary>
+                    /// <para>Specifies whether to select the metric. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>true</b></description></item>
+                    /// <item><description><b>false</b></description></item>
+                    /// </list>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -98,6 +143,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
+            /// <para>Specifies whether to enable the filter interaction feature. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -106,6 +157,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? ChartLinked { get; set; }
 
             /// <summary>
+            /// <para>The number of charts to display in each row.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -115,6 +168,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         }
 
+        /// <summary>
+        /// <para>The name of the view.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Basic</para>
+        /// </summary>
         [NameInMap("ViewName")]
         [Validation(Required=false)]
         public string ViewName { get; set; }

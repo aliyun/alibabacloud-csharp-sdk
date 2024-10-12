@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreatePerformanceViewRequest : TeaModel {
         /// <summary>
+        /// <para>The type of the view.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Basic</para>
         /// </summary>
@@ -168,7 +170,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
+        /// <para>The name of the view.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>viewname</para>
         /// </summary>
         [NameInMap("ViewName")]
         [Validation(Required=false)]

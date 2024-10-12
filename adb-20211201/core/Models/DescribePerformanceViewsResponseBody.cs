@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribePerformanceViewsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// <remarks>
+        /// <para> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3A8F6106-6AFD-5A34-9C80-8DE2C42D06E8</para>
         /// </summary>
@@ -33,11 +40,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>the list of view.</para>
+        /// </summary>
         [NameInMap("Views")]
         [Validation(Required=false)]
         public List<DescribePerformanceViewsResponseBodyViews> Views { get; set; }
         public class DescribePerformanceViewsResponseBodyViews : TeaModel {
             /// <summary>
+            /// <para>The time when created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-06-18T07:06:53.000+00:00</para>
             /// </summary>
@@ -46,6 +58,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The time when updated.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-06-18T07:07:32.000+00:00</para>
             /// </summary>
@@ -53,6 +67,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
 
+            /// <summary>
+            /// <para>The name of the view.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Basic</para>
+            /// </summary>
             [NameInMap("ViewName")]
             [Validation(Required=false)]
             public string ViewName { get; set; }

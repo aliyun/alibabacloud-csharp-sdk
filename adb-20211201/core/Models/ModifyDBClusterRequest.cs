@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ComputeResource { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public int? ReservedNodeCount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>LegacyForm</para>
+        /// </summary>
         [NameInMap("ReservedNodeSize")]
         [Validation(Required=false)]
         public string ReservedNodeSize { get; set; }

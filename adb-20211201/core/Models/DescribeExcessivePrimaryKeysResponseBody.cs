@@ -46,6 +46,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public class DescribeExcessivePrimaryKeysResponseBodyDetectionItems : TeaModel {
             /// <summary>
             /// <para>The detection result.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>OK</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -53,6 +56,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
             /// <summary>
             /// <para>The name of the detection item.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

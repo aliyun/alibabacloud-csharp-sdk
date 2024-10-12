@@ -22,6 +22,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string BackupSetId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID of the source cluster.</para>
+        /// <remarks>
+        /// <para> This parameter must be specified for cloning clusters across regions.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
         [NameInMap("CloneSourceRegionId")]
         [Validation(Required=false)]
         public string CloneSourceRegionId { get; set; }

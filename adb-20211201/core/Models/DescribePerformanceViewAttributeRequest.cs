@@ -54,7 +54,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The name of the view.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Basic</para>
         /// </summary>
         [NameInMap("ViewName")]
         [Validation(Required=false)]

@@ -81,6 +81,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public float? ReservedAcuNumber { get; set; }
 
                     /// <summary>
+                    /// <para>The number of spot ACUs.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>16ACU</para>
                     /// </summary>
@@ -89,6 +91,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public float? SpotAcuNumber { get; set; }
 
                     /// <summary>
+                    /// <para>The percent of spot ACUs.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0.9</para>
                     /// </summary>

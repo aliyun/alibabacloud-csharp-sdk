@@ -148,6 +148,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The name of the monitoring view.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Basic</para>
         /// </summary>
         [NameInMap("ViewName")]
         [Validation(Required=false)]

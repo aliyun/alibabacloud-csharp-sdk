@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the logs to be queried. Specify the time in the ISO 8601 standard in the <b>yyyy-MM-ddTHH:mm:ssZ</b> format. The time must be in UTC.</para>
+        /// <para>The end time of the logs to be queried. Specify the time in the ISO 8601 standard in the <b>yyyy-MM-ddTHH:mmZ</b> format. The time must be in UTC.</para>
         /// <remarks>
         /// <para> The end time must be later than the start time. The maximum time range that can be specified is 30 days.</para>
         /// </remarks>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Stage { get; set; }
 
         /// <summary>
-        /// <para>The start time of the logs to be queried. Specify the time in the ISO 8601 standard in the <b>yyyy-MM-ddTHH:mm:ssZ</b> format. The time must be in UTC.</para>
+        /// <para>The start time of the logs to be queried. Specify the time in the ISO 8601 standard in the <b>yyyy-MM-ddTHH:mmZ</b> format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

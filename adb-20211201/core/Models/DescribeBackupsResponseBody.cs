@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeBackupsResponseBody : TeaModel {
+        [NameInMap("FreeBackupSize")]
+        [Validation(Required=false)]
+        public long? FreeBackupSize { get; set; }
+
         /// <summary>
         /// <para>The queried backup sets.</para>
         /// </summary>
@@ -29,6 +33,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [NameInMap("BackupEndTime")]
                 [Validation(Required=false)]
                 public string BackupEndTime { get; set; }
+
+                [NameInMap("BackupExpiredTime")]
+                [Validation(Required=false)]
+                public string BackupExpiredTime { get; set; }
 
                 /// <summary>
                 /// <para>The backup set ID.</para>
@@ -127,6 +135,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalBackupSize")]
+        [Validation(Required=false)]
+        public long? TotalBackupSize { get; set; }
 
         /// <summary>
         /// <para>The total number of entries returned.</para>
