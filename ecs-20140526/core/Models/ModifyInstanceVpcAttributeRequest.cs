@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>By default, if this parameter is not specified, a private IP address is randomly assigned from the CIDR block of the specified vSwitch.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>172.17.**.**</para>
+        /// <para><c>172.17.**.**</c></para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]

@@ -343,7 +343,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <para>The EIP.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>42.112.**.**</para>
+                    /// <para><c>42.112.**.**</c></para>
                     /// </summary>
                     [NameInMap("IpAddress")]
                     [Validation(Required=false)]
@@ -804,7 +804,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         /// <para>The primary private IP address of the ENI.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>172.17.**.***</para>
+                        /// <para><c>172.17.**.**</c>*</para>
                         /// </summary>
                         [NameInMap("PrimaryIpAddress")]
                         [Validation(Required=false)]
@@ -851,7 +851,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 /// <para>The private IP address of the ENI.</para>
                                 /// 
                                 /// <b>Example:</b>
-                                /// <para>172.17.**.**</para>
+                                /// <para><c>172.17.**.**</c></para>
                                 /// </summary>
                                 [NameInMap("PrivateIpAddress")]
                                 [Validation(Required=false)]
@@ -1268,7 +1268,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <para>The NAT IP address of the instance. The NAT IP address is used by ECS instances in different VPCs for communication.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>172.17.**.**</para>
+                    /// <para><c>172.17.**.**</c></para>
                     /// </summary>
                     [NameInMap("NatIpAddress")]
                     [Validation(Required=false)]

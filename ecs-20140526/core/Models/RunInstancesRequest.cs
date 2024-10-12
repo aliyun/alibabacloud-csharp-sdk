@@ -1396,7 +1396,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>172.16.**.**</para>
+            /// <para><c>172.16.**.**</c></para>
             /// </summary>
             [NameInMap("PrimaryIpAddress")]
             [Validation(Required=false)]
@@ -1713,7 +1713,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>10.1.**.**</para>
+        /// <para><c>10.1.**.**</c></para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]

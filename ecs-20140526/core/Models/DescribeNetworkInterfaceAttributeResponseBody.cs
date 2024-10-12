@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The EIP.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>116.62.**.**</para>
+            /// <para><c>116.62.**.**</c></para>
             /// </summary>
             [NameInMap("PublicIpAddress")]
             [Validation(Required=false)]
@@ -475,7 +475,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The private IP address of the ENI.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10.1.**.**</para>
+        /// <para><c>10.1.**.**</c></para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
@@ -515,7 +515,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <para>The EIP.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>116.62.**.**</para>
+                    /// <para><c>116.62.**.**</c></para>
                     /// </summary>
                     [NameInMap("PublicIpAddress")]
                     [Validation(Required=false)]
@@ -541,7 +541,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <para>The private IP address of the ENI.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>172.17.**.**</para>
+                /// <para><c>172.17.**.**</c></para>
                 /// </summary>
                 [NameInMap("PrivateIpAddress")]
                 [Validation(Required=false)]

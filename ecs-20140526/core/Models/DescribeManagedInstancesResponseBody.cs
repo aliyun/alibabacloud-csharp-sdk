@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The public IP address of the managed instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>40.65.**.**</para>
+            /// <para><c>40.65.**.**</c></para>
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The internal IP address of the managed instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>10.0.**.**</para>
+            /// <para><c>10.0.**.**</c></para>
             /// </summary>
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]

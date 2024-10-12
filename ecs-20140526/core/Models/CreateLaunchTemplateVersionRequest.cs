@@ -475,6 +475,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string HostName { get; set; }
 
+        [NameInMap("HttpEndpoint")]
+        [Validation(Required=false)]
+        public string HttpEndpoint { get; set; }
+
+        [NameInMap("HttpPutResponseHopLimit")]
+        [Validation(Required=false)]
+        public int? HttpPutResponseHopLimit { get; set; }
+
+        [NameInMap("HttpTokens")]
+        [Validation(Required=false)]
+        public string HttpTokens { get; set; }
+
         /// <summary>
         /// <para>The ID of the image to use to create the Elastic Compute Service (ECS) instance. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available images.</para>
         /// 
@@ -693,7 +705,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The primary private IP address of the secondary ENI. The value of N in <c>NetworkInterface.N</c> cannot be greater than 1.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>192.168.**.**</para>
+            /// <para><c>192.168.**.**</c></para>
             /// </summary>
             [NameInMap("PrimaryIpAddress")]
             [Validation(Required=false)]
@@ -803,7 +815,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>To assign a private IP address to an instance of the VPC type, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by the <c>VSwitchId</c> parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10.1.**.**</para>
+        /// <para><c>10.1.**.**</c></para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]

@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The primary private IPv4 address of the ENI.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.168.**.**</para>
+        /// <para><c>192.168.**.**</c></para>
         /// </summary>
         [NameInMap("PrimaryIpAddress")]
         [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>An array that consists of the secondary private IPv4 addresses of the ENI. You can specify multiple secondary private IPv4 addresses. Valid values of N: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.168.**.**</para>
+        /// <para><c>192.168.**.**</c></para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]

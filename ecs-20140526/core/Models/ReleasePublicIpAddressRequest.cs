@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>121.40.**.**</para>
+        /// <para><c>121.40.**.**</c></para>
         /// </summary>
         [NameInMap("PublicIpAddress")]
         [Validation(Required=false)]

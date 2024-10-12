@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>To assign secondary private IP addresses to the ENI, you must specify <c>PrivateIpAddress.N</c> or <c>SecondaryPrivateIpAddressCount</c> but not both.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10.1.**.**</para>
+        /// <para><c>10.1.**.**</c></para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]

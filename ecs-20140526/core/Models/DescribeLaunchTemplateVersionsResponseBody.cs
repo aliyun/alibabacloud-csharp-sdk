@@ -372,6 +372,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public string HostName { get; set; }
 
+                    [NameInMap("HttpEndpoint")]
+                    [Validation(Required=false)]
+                    public string HttpEndpoint { get; set; }
+
+                    [NameInMap("HttpPutResponseHopLimit")]
+                    [Validation(Required=false)]
+                    public int? HttpPutResponseHopLimit { get; set; }
+
+                    [NameInMap("HttpTokens")]
+                    [Validation(Required=false)]
+                    public string HttpTokens { get; set; }
+
                     /// <summary>
                     /// <para>The ID of the image.</para>
                     /// 
@@ -649,7 +661,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <para>The private IP address to assign to the instance.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>10.1.**.**</para>
+                    /// <para><c>10.1.**.**</c></para>
                     /// </summary>
                     [NameInMap("PrivateIpAddress")]
                     [Validation(Required=false)]

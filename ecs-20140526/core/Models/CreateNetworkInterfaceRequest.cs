@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The specified IP address must be an idle IP address within the CIDR block of the vSwitch with which to associate the ENI. If this parameter is not specified, an idle IP address is assigned from within the vSwitch CIDR block at random.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>172.17.**.**</para>
+        /// <para><c>172.17.**.**</c></para>
         /// </summary>
         [NameInMap("PrimaryIpAddress")]
         [Validation(Required=false)]
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>172.17.**.**</para>
+        /// <para><c>172.17.**.**</c></para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]

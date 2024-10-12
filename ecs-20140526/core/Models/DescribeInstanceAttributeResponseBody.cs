@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The ID of the elastic IP address (EIP).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>30.21.**.**</para>
+            /// <para><c>30.21.**.**</c></para>
             /// </summary>
             [NameInMap("IpAddress")]
             [Validation(Required=false)]
@@ -475,7 +475,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The NAT IP address of the instance. It is used by ECS instances in different VPCs for communication.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>172.17.**.**</para>
+            /// <para><c>172.17.**.**</c></para>
             /// </summary>
             [NameInMap("NatIpAddress")]
             [Validation(Required=false)]

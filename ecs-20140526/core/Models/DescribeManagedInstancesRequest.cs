@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The internal or public IP address of the managed instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.168.**.**</para>
+        /// <para><c>192.168.**.**</c></para>
         /// </summary>
         [NameInMap("InstanceIp")]
         [Validation(Required=false)]

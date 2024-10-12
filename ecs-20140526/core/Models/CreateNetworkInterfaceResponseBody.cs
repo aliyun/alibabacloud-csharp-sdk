@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The private IP address of the ENI.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>172.17.**.**</para>
+        /// <para><c>172.17.**.**</c></para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <para>The private IP address of the instance.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>172.17.**.**</para>
+                /// <para><c>172.17.**.**</c></para>
                 /// </summary>
                 [NameInMap("PrivateIpAddress")]
                 [Validation(Required=false)]
