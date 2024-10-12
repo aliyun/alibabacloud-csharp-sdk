@@ -288,6 +288,20 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             [Validation(Required=false)]
             public long? PayerAccountUid { get; set; }
 
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public List<GetEnrolledAccountResponseBodyInputsTag> Tag { get; set; }
+            public class GetEnrolledAccountResponseBodyInputsTag : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
         }
 
         /// <summary>

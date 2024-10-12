@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Governance20210120.Models
 {
-    public class EnrollAccountRequest : TeaModel {
+    public class EnrollAccountShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The prefix for the account name of the member.</para>
         /// <list type="bullet">
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         /// </summary>
         [NameInMap("BaselineItems")]
         [Validation(Required=false)]
-        public List<EnrollAccountRequestBaselineItems> BaselineItems { get; set; }
-        public class EnrollAccountRequestBaselineItems : TeaModel {
+        public List<EnrollAccountShrinkRequestBaselineItems> BaselineItems { get; set; }
+        public class EnrollAccountShrinkRequestBaselineItems : TeaModel {
             /// <summary>
             /// <para>The configurations of the baseline item.</para>
             /// 
@@ -173,17 +173,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<EnrollAccountRequestTag> Tag { get; set; }
-        public class EnrollAccountRequestTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagShrink { get; set; }
 
     }
 
