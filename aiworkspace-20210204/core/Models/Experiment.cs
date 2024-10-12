@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class Experiment : TeaModel {
+        [NameInMap("Accessibility")]
+        [Validation(Required=false)]
+        public string Accessibility { get; set; }
+
         [NameInMap("ArtifactUri")]
         [Validation(Required=false)]
         public string ArtifactUri { get; set; }
@@ -27,7 +31,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         [NameInMap("Labels")]
         [Validation(Required=false)]
-        public List<Dictionary<string, object>> Labels { get; set; }
+        public List<ExperimentLabel> Labels { get; set; }
+
+        [NameInMap("LatestRun")]
+        [Validation(Required=false)]
+        public Run LatestRun { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -36,6 +44,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("TensorboardLogUri")]
         [Validation(Required=false)]

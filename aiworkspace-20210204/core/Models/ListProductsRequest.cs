@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListProductsRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>PAI_isolate</para>
+        /// </summary>
         [NameInMap("ProductCodes")]
         [Validation(Required=false)]
         public string ProductCodes { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>oss</para>
+        /// </summary>
         [NameInMap("ServiceCodes")]
         [Validation(Required=false)]
         public string ServiceCodes { get; set; }

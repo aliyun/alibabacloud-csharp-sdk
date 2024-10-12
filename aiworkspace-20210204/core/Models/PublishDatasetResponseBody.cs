@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class PublishDatasetResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>A0F049F0-8D69-5BAC-8F10-B******A34C</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

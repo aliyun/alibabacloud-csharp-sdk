@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class AddImageRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>PUBLIC</para>
+        /// </summary>
         [NameInMap("Accessibility")]
         [Validation(Required=false)]
         public string Accessibility { get; set; }
@@ -21,6 +25,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>registry.cn-hangzhou.aliyuncs.com/pai-compression/nlp:gpu</para>
+        /// </summary>
         [NameInMap("ImageUri")]
         [Validation(Required=false)]
         public string ImageUri { get; set; }
@@ -29,16 +39,30 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public List<AddImageRequestLabels> Labels { get; set; }
         public class AddImageRequestLabels : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>system.chipType</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>GPU</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>nlp-compression</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -47,6 +71,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public int? Size { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>15******45</para>
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

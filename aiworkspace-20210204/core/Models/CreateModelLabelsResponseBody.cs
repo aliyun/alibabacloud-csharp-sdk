@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateModelLabelsResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>F81D9EC0-1872-50F5-A96C-A0647D****1D</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DeleteModelVersionLabelsRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>key1,key2</para>
+        /// </summary>
         [NameInMap("LabelKeys")]
         [Validation(Required=false)]
         public string LabelKeys { get; set; }

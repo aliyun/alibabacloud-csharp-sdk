@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateCodeSourceResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>code-20********</para>
+        /// </summary>
         [NameInMap("CodeSourceId")]
         [Validation(Required=false)]
         public string CodeSourceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3**********</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

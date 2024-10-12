@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
-    public class ListServiceTemplatesResponse : TeaModel {
+    public class DeleteExperimentLabelResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ListServiceTemplatesResponseBody Body { get; set; }
+        public DeleteExperimentLabelResponseBody Body { get; set; }
 
     }
 

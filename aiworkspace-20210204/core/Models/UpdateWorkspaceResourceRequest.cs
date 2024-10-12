@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateWorkspaceResourceRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>group-kjds******sd</para>
+        /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("IsDefault")]
         [Validation(Required=false)]
         public bool? IsDefault { get; set; }
@@ -31,6 +39,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>MaxCompute</para>
+        /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }

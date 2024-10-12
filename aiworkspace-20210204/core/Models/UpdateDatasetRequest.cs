@@ -13,10 +13,20 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>myName</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{
+        ///   &quot;mountPath&quot;: &quot;/mnt/data/&quot;
+        /// }</para>
+        /// </summary>
         [NameInMap("Options")]
         [Validation(Required=false)]
         public string Options { get; set; }

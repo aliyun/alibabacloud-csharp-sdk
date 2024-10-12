@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateWorkspaceResourceResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1e195c5116124202371861018d5bde</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -17,12 +21,20 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public List<CreateWorkspaceResourceResponseBodyResources> Resources { get; set; }
         public class CreateWorkspaceResourceResponseBodyResources : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1234</para>
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }

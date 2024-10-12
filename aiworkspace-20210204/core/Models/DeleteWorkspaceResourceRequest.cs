@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DeleteWorkspaceResourceRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>group</para>
+        /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
@@ -17,10 +21,18 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Labels { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>DetachAndDelete</para>
+        /// </summary>
         [NameInMap("Option")]
         [Validation(Required=false)]
         public string Option { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>DLC</para>
+        /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }

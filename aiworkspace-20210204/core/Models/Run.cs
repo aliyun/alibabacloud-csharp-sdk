@@ -8,7 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
-    public class GetServiceTemplateResponseBody : TeaModel {
+    public class Run : TeaModel {
+        [NameInMap("Accessibility")]
+        [Validation(Required=false)]
+        public string Accessibility { get; set; }
+
+        [NameInMap("ExperimentId")]
+        [Validation(Required=false)]
+        public string ExperimentId { get; set; }
+
         [NameInMap("GmtCreateTime")]
         [Validation(Required=false)]
         public string GmtCreateTime { get; set; }
@@ -17,45 +25,49 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
 
-        [NameInMap("InferenceSpec")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> InferenceSpec { get; set; }
-
         [NameInMap("Labels")]
         [Validation(Required=false)]
-        public List<Label> Labels { get; set; }
+        public List<RunLabel> Labels { get; set; }
+
+        [NameInMap("Metrics")]
+        [Validation(Required=false)]
+        public List<RunMetric> Metrics { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
 
-        [NameInMap("Provider")]
+        [NameInMap("Params")]
         [Validation(Required=false)]
-        public string Provider { get; set; }
+        public List<RunParam> Params { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ServiceTemplateDescription")]
+        [NameInMap("RunId")]
         [Validation(Required=false)]
-        public string ServiceTemplateDescription { get; set; }
+        public string RunId { get; set; }
 
-        [NameInMap("ServiceTemplateDoc")]
+        [NameInMap("SourceId")]
         [Validation(Required=false)]
-        public string ServiceTemplateDoc { get; set; }
+        public string SourceId { get; set; }
 
-        [NameInMap("ServiceTemplateId")]
+        [NameInMap("SourceType")]
         [Validation(Required=false)]
-        public string ServiceTemplateId { get; set; }
-
-        [NameInMap("ServiceTemplateName")]
-        [Validation(Required=false)]
-        public string ServiceTemplateName { get; set; }
+        public string SourceType { get; set; }
 
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
+
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

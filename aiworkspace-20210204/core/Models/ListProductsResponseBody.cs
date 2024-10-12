@@ -17,10 +17,18 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             [Validation(Required=false)]
             public bool? HasPermissionToPurchase { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("IsPurchased")]
             [Validation(Required=false)]
             public bool? IsPurchased { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>DataWorks_isolate</para>
+            /// </summary>
             [NameInMap("ProductCode")]
             [Validation(Required=false)]
             public string ProductCode { get; set; }
@@ -29,12 +37,20 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             [Validation(Required=false)]
             public string ProductInstanceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="https://common-buy.aliy">https://common-buy.aliy</a></para>
+            /// </summary>
             [NameInMap("PurchaseUrl")]
             [Validation(Required=false)]
             public string PurchaseUrl { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1e195c5116124202371861018d5bde</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -43,6 +59,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public List<ListProductsResponseBodyServices> Services { get; set; }
         public class ListProductsResponseBodyServices : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("IsOpen")]
             [Validation(Required=false)]
             public bool? IsOpen { get; set; }
@@ -51,6 +71,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             [Validation(Required=false)]
             public string OpenUrl { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>oss</para>
+            /// </summary>
             [NameInMap("ServiceCode")]
             [Validation(Required=false)]
             public string ServiceCode { get; set; }

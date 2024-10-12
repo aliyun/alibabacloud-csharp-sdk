@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
-    public class GetServiceTemplateResponse : TeaModel {
+    public class DeleteRunResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public GetServiceTemplateResponseBody Body { get; set; }
+        public DeleteRunResponseBody Body { get; set; }
 
     }
 
