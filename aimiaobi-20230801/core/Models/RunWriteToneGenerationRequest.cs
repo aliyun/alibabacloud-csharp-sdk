@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunWriteToneGenerationRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ReferenceData")]
         [Validation(Required=false)]
         public RunWriteToneGenerationRequestReferenceData ReferenceData { get; set; }
         public class RunWriteToneGenerationRequestReferenceData : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Contents")]
             [Validation(Required=false)]
@@ -32,12 +32,19 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>7AA2AE16-D873-5C5F-9708-15396C382EB1</para>
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>llm-xxx</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

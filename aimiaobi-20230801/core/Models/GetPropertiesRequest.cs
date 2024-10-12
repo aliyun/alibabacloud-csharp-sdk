@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetPropertiesRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx_efm</para>
         /// </summary>
         [NameInMap("AgentKey")]
         [Validation(Required=false)]

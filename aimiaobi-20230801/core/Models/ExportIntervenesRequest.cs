@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ExportIntervenesRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>fed6555ec9e24b92aeecc34be484b887_p_efm</para>
         /// </summary>
         [NameInMap("AgentKey")]
         [Validation(Required=false)]

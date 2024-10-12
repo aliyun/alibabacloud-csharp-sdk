@@ -18,7 +18,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string MaterialIdsShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>llm-2setzb9x4ewsd</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

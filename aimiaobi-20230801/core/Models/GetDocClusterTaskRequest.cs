@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetDocClusterTaskRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxxx_p_efm</para>
         /// </summary>
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>93771c8e1142467fb1aedf1763feba1e</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

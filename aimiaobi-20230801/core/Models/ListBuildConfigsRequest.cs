@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListBuildConfigsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cd327c3d5d5e44159cc716e23bfa530e_p_beebot_public</para>
         /// </summary>
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
@@ -20,6 +23,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>media</para>
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

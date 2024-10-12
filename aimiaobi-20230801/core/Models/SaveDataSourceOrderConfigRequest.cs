@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class SaveDataSourceOrderConfigRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c160c841c8e54295bf2f441432785944_p_efm</para>
         /// </summary>
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>miaobi</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserConfigDataSourceList")]
         [Validation(Required=false)]
         public List<SaveDataSourceOrderConfigRequestUserConfigDataSourceList> UserConfigDataSourceList { get; set; }
         public class SaveDataSourceOrderConfigRequestUserConfigDataSourceList : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>QuarkCommonNews</para>
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
@@ -42,14 +51,20 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("Number")]
             [Validation(Required=false)]
             public int? Number { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SystemSearch</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

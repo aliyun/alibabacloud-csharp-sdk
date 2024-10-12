@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetCustomTopicSelectionPerspectiveAnalysisTaskRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxxx_p_efm</para>
         /// </summary>
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0dbf1055f8a2475d99904c3b76a0ffba</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

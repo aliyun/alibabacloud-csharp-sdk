@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListHotNewsWithTypeResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>DataNotExists</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -29,6 +33,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
+                /// </summary>
                 [NameInMap("DocUuid")]
                 [Validation(Required=false)]
                 public string DocUuid { get; set; }
@@ -37,6 +45,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public List<string> ImageUrls { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2023-04-11 06:14:07</para>
+                /// </summary>
                 [NameInMap("PubTime")]
                 [Validation(Required=false)]
                 public string PubTime { get; set; }
@@ -65,16 +77,28 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public string Title { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2023-10-14 14:30:00</para>
+                /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
                 public string UpdateTime { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="http://xxxxx/xxx">http://xxxxx/xxx</a></para>
+                /// </summary>
                 [NameInMap("Url")]
                 [Validation(Required=false)]
                 public string Url { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>society</para>
+            /// </summary>
             [NameInMap("NewsType")]
             [Validation(Required=false)]
             public string NewsType { get; set; }
@@ -83,24 +107,44 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string NewsTypeName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>77</para>
+            /// </summary>
             [NameInMap("TotalPages")]
             [Validation(Required=false)]
             public int? TotalPages { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>数据不存在</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

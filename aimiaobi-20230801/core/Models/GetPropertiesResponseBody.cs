@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetPropertiesResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>DataNotExists</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -25,6 +29,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public GetPropertiesResponseBodyDataConsoleConfig ConsoleConfig { get; set; }
             public class GetPropertiesResponseBodyDataConsoleConfig : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>xx</para>
+                /// </summary>
                 [NameInMap("TipContent")]
                 [Validation(Required=false)]
                 public string TipContent { get; set; }
@@ -43,6 +51,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public GetPropertiesResponseBodyDataIntelligentSearchConfig IntelligentSearchConfig { get; set; }
             public class GetPropertiesResponseBodyDataIntelligentSearchConfig : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>xxx</para>
+                /// </summary>
                 [NameInMap("ProductDescription")]
                 [Validation(Required=false)]
                 public string ProductDescription { get; set; }
@@ -55,28 +67,52 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     [Validation(Required=false)]
                     public List<GetPropertiesResponseBodyDataIntelligentSearchConfigSearchSamplesArticles> Articles { get; set; }
                     public class GetPropertiesResponseBodyDataIntelligentSearchConfigSearchSamplesArticles : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>true</para>
+                        /// </summary>
                         [NameInMap("Select")]
                         [Validation(Required=false)]
                         public bool? Select { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
                         [NameInMap("Stared")]
                         [Validation(Required=false)]
                         public bool? Stared { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>xx</para>
+                        /// </summary>
                         [NameInMap("Title")]
                         [Validation(Required=false)]
                         public string Title { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para><a href="http://xxx.com">http://xxx.com</a></para>
+                        /// </summary>
                         [NameInMap("Url")]
                         [Validation(Required=false)]
                         public string Url { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>xx</para>
+                    /// </summary>
                     [NameInMap("Prompt")]
                     [Validation(Required=false)]
                     public string Prompt { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>xxx</para>
+                    /// </summary>
                     [NameInMap("Text")]
                     [Validation(Required=false)]
                     public string Text { get; set; }
@@ -87,14 +123,26 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public List<GetPropertiesResponseBodyDataIntelligentSearchConfigSearchSources> SearchSources { get; set; }
                 public class GetPropertiesResponseBodyDataIntelligentSearchConfigSearchSources : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>xx</para>
+                    /// </summary>
                     [NameInMap("Code")]
                     [Validation(Required=false)]
                     public string Code { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>xx</para>
+                    /// </summary>
                     [NameInMap("DatasetName")]
                     [Validation(Required=false)]
                     public string DatasetName { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>xx</para>
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
@@ -111,12 +159,20 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>SystemSearch</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("SlrAuthorized")]
             [Validation(Required=false)]
             public bool? SlrAuthorized { get; set; }
@@ -125,18 +181,34 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public GetPropertiesResponseBodyDataUserInfo UserInfo { get; set; }
             public class GetPropertiesResponseBodyDataUserInfo : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("AgentId")]
                 [Validation(Required=false)]
                 public string AgentId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("TenantId")]
                 [Validation(Required=false)]
                 public string TenantId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public string UserId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>admin</para>
+                /// </summary>
                 [NameInMap("Username")]
                 [Validation(Required=false)]
                 public string Username { get; set; }
@@ -147,10 +219,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public List<GetPropertiesResponseBodyDataWanxiangImageSizeConfig> WanxiangImageSizeConfig { get; set; }
             public class GetPropertiesResponseBodyDataWanxiangImageSizeConfig : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1:1</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1024*1024</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -165,10 +245,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="https://img.alicdn.com/imgextra/i4/O1CN01RzKicz1W0YWzYkWcK_!!6000000002726-2-tps-132-104.png">https://img.alicdn.com/imgextra/i4/O1CN01RzKicz1W0YWzYkWcK_!!6000000002726-2-tps-132-104.png</a></para>
+                /// </summary>
                 [NameInMap("Pic")]
                 [Validation(Required=false)]
                 public string Pic { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <auto>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -177,18 +265,34 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>success</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

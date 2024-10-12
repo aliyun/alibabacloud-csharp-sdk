@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunTitleGenerationRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ReferenceData")]
         [Validation(Required=false)]
         public RunTitleGenerationRequestReferenceData ReferenceData { get; set; }
         public class RunTitleGenerationRequestReferenceData : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Contents")]
             [Validation(Required=false)]
@@ -25,12 +25,19 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xxxx</para>
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>llm-xxx</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

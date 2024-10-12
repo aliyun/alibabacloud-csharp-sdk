@@ -10,18 +10,28 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GenerateUploadConfigRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxxx_p_efm</para>
         /// </summary>
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test.docx</para>
+        /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>datasetUpload</para>
         /// </summary>
         [NameInMap("ParentDir")]
         [Validation(Required=false)]
