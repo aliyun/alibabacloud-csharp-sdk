@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class GetTokenRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>60</para>
+        /// </summary>
         [NameInMap("ExpireTime")]
         [Validation(Required=false)]
         public int? ExpireTime { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dsw-730xxxxxxxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

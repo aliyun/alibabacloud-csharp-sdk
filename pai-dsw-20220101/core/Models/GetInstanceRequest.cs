@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
-    public class StopInstanceRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
-        [NameInMap("SaveImage")]
+    public class GetInstanceRequest : TeaModel {
+        [NameInMap("Token")]
         [Validation(Required=false)]
-        public bool? SaveImage { get; set; }
+        public string Token { get; set; }
 
     }
 

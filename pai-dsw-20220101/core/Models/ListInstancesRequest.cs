@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class ListInstancesRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>AcceleratorType</para>
+        /// </summary>
         [NameInMap("AcceleratorType")]
         [Validation(Required=false)]
         public string AcceleratorType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>PRIVATE</para>
+        /// </summary>
         [NameInMap("Accessibility")]
         [Validation(Required=false)]
         public string Accessibility { get; set; }
@@ -29,10 +37,18 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string ImageName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dsw-730xxxxxxxxxx</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>training_data</para>
+        /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
@@ -73,34 +89,66 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string MinMemory { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>DESC</para>
+        /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>PayAsYouGo</para>
+        /// </summary>
         [NameInMap("PaymentType")]
         [Validation(Required=false)]
         public string PaymentType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rg-123456789</para>
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>gmtCreate</para>
+        /// </summary>
         [NameInMap("SortBy")]
         [Validation(Required=false)]
         public string SortBy { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Running</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>40823</para>
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

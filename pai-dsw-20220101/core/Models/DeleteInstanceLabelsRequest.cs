@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class DeleteInstanceLabelsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>labelKey1,labelKey2,labelKey3</para>
         /// </summary>
         [NameInMap("LabelKeys")]
         [Validation(Required=false)]

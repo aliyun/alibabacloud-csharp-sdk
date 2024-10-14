@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class UpdateInstanceLabelsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<UpdateInstanceLabelsRequestLabels> Labels { get; set; }
         public class UpdateInstanceLabelsRequestLabels : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>customLabelKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>labelValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

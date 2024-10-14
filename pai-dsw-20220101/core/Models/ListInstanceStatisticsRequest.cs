@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class ListInstanceStatisticsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>27218,34956</para>
         /// </summary>
         [NameInMap("WorkspaceIds")]
         [Validation(Required=false)]
