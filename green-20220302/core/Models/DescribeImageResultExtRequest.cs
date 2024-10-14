@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class DescribeImageResultExtRequest : TeaModel {
         /// <summary>
-        /// The content of the information to be obtained. Multiple values are separated by commas.
+        /// <para>The content of the information to be obtained. Multiple values are separated by commas.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>customImage,textInImage</para>
         /// </summary>
         [NameInMap("InfoType")]
         [Validation(Required=false)]
         public string InfoType { get; set; }
 
         /// <summary>
-        /// The reqId field returned by the Url Async Moderation API.
+        /// <para>The reqId field returned by the Url Async Moderation API.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>638EDDC65C82AB39319A9F60</para>
         /// </summary>
         [NameInMap("ReqId")]
         [Validation(Required=false)]

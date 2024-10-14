@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class TextModerationRequest : TeaModel {
         /// <summary>
-        /// The type of the moderation service.
+        /// <para>The type of the moderation service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>nickname_detection</para>
         /// </summary>
         [NameInMap("Service")]
         [Validation(Required=false)]
         public string Service { get; set; }
 
         /// <summary>
-        /// The parameters required by the moderation service. The value is a JSON string.
+        /// <para>The parameters required by the moderation service. The value is a JSON string.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;content&quot;:&quot;Content to be moderated&quot;}</para>
         /// </summary>
         [NameInMap("ServiceParameters")]
         [Validation(Required=false)]

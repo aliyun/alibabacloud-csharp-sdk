@@ -10,14 +10,23 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class UrlAsyncModerationRequest : TeaModel {
         /// <summary>
-        /// The type of the moderation service.
+        /// <para>The type of the moderation service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>url_detection</para>
         /// </summary>
         [NameInMap("Service")]
         [Validation(Required=false)]
         public string Service { get; set; }
 
         /// <summary>
-        /// The parameters required by the moderation service. The value is a JSON string.
+        /// <para>The parameters required by the moderation service. The value is a JSON string.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///         &quot;url&quot;: &quot;<a href="https://help.aliyun.com/">https://help.aliyun.com/</a>&quot;,
+        ///         &quot;dataId&quot;: &quot;url123******&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("ServiceParameters")]
         [Validation(Required=false)]

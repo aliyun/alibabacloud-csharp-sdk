@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class VideoModerationResponseBody : TeaModel {
         /// <summary>
-        /// The returned HTTP status code.
+        /// <para>The returned HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public VideoModerationResponseBodyData Data { get; set; }
         public class VideoModerationResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the moderated object.
+            /// <para>The ID of the moderated object.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>data1234</para>
             /// </summary>
             [NameInMap("DataId")]
             [Validation(Required=false)]
             public string DataId { get; set; }
 
             /// <summary>
-            /// The task ID.
+            /// <para>The task ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxxxx-xxxxx</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
@@ -40,14 +49,20 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         }
 
         /// <summary>
-        /// The message that is returned in response to the request.
+        /// <para>The message that is returned in response to the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SUCCESS</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
