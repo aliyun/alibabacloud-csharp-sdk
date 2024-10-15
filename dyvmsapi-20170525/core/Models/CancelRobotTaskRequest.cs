@@ -22,7 +22,10 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The unique ID of the robocall task. You can call the [CreateRobotTask](~~393531~~) operation to obtain the task ID.
+        /// <para>The unique ID of the robocall task. You can call the <a href="https://help.aliyun.com/document_detail/393531.html">CreateRobotTask</a> operation to obtain the task ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1045001</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

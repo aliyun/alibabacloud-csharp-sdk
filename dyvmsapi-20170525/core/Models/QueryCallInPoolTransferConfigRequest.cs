@@ -14,7 +14,11 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The China 400 number used to transfer the call.
+        /// <para>The China 400 number used to transfer the call.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>400****</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]

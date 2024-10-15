@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class SeekVideoFileRequest : TeaModel {
         /// <summary>
-        /// 呼叫唯一ID
+        /// <para>呼叫唯一ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("CallId")]
         [Validation(Required=false)]
         public string CallId { get; set; }
 
         /// <summary>
-        /// 被叫号码
+        /// <para>被叫号码</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("CalledNumber")]
         [Validation(Required=false)]
@@ -36,7 +42,10 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// 快进或快退值，负数为快退，单位秒
+        /// <para>快进或快退值，负数为快退，单位秒</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>92</para>
         /// </summary>
         [NameInMap("SeekTimes")]
         [Validation(Required=false)]

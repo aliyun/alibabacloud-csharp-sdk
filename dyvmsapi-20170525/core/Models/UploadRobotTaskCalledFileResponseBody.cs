@@ -10,33 +10,45 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class UploadRobotTaskCalledFileResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// <list type="bullet">
+        /// <item><description>The value OK indicates that the request was successful.</description></item>
+        /// <item><description>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</description></item>
+        /// </list>
         /// 
-        /// *   The value OK indicates that the request was successful.
-        /// *   For more information about other response codes, see [API error codes](~~112502~~).
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The unique ID of the robocall task.
+        /// <para>The unique ID of the robocall task.</para>
+        /// <para>You can call the <a href="~~QueryRobotTaskDetail~~">QueryRobotTaskDetail</a> operation to query the details of the robocall task based on the task ID.</para>
         /// 
-        /// You can call the [QueryRobotTaskDetail](~~QueryRobotTaskDetail~~) operation to query the details of the robocall task based on the task ID.
+        /// <b>Example:</b>
+        /// <para>10450****</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

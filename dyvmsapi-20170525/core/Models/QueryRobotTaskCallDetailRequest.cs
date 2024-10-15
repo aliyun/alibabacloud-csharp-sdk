@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class QueryRobotTaskCallDetailRequest : TeaModel {
         /// <summary>
-        /// The called number.
+        /// <para>The called number.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>130****0000</para>
         /// </summary>
         [NameInMap("Callee")]
         [Validation(Required=false)]
@@ -21,7 +25,11 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The timestamp of the time at which the call details you want to query.
+        /// <para>The timestamp of the time at which the call details you want to query.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2020-10-21 08:23:21</para>
         /// </summary>
         [NameInMap("QueryDate")]
         [Validation(Required=false)]
@@ -36,7 +44,11 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The unique ID of the robocall task. You can call the [CreateRobotTask](~~393531~~) operation to obtain the task ID.
+        /// <para>The unique ID of the robocall task. You can call the <a href="https://help.aliyun.com/document_detail/393531.html">CreateRobotTask</a> operation to obtain the task ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1045001</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

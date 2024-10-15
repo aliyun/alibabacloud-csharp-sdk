@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class ListCallTaskDetailRequest : TeaModel {
         /// <summary>
-        /// The called number.
+        /// <para>The called number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1300000****</para>
         /// </summary>
         [NameInMap("CalledNum")]
         [Validation(Required=false)]
@@ -21,14 +24,20 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: **10**.
+        /// <para>The number of entries per page. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -43,18 +52,26 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The task state. Valid values:
+        /// <para>The task state. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>SUCCESS</b>: The task is successful.</description></item>
+        /// <item><description><b>FAIL</b>: The task fails.</description></item>
+        /// <item><description><b>INIT</b>: The task is not started.</description></item>
+        /// </list>
         /// 
-        /// *   **SUCCESS**: The task is successful.
-        /// *   **FAIL**: The task fails.
-        /// *   **INIT**: The task is not started.
+        /// <b>Example:</b>
+        /// <para>SUCCESS</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The task ID.
+        /// <para>The task ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>150001****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

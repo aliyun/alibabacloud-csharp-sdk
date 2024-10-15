@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class QueryRobotTaskDetailRequest : TeaModel {
         /// <summary>
-        /// The unique ID of the robocall task. You can call the [CreateRobotTask](~~CreateRobotTask~~) operation to obtain the task ID.
+        /// <para>The unique ID of the robocall task. You can call the <a href="~~CreateRobotTask~~">CreateRobotTask</a> operation to obtain the task ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1045001</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

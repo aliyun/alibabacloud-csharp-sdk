@@ -10,58 +10,81 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class QueryRobotTaskCallListRequest : TeaModel {
         /// <summary>
-        /// The call result. Valid values:
+        /// <para>The call result. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>200002</b>: The line is busy.</description></item>
+        /// <item><description><b>200005</b>: The called party cannot be connected.</description></item>
+        /// <item><description><b>200010</b>: The phone of the called party is powered off.</description></item>
+        /// <item><description><b>200011</b>: The called party is out of service.</description></item>
+        /// <item><description><b>200012</b>: The call is lost.</description></item>
+        /// </list>
         /// 
-        /// *   **200002**: The line is busy.
-        /// *   **200005**: The called party cannot be connected.
-        /// *   **200010**: The phone of the called party is powered off.
-        /// *   **200011**: The called party is out of service.
-        /// *   **200012**: The call is lost.
+        /// <b>Example:</b>
+        /// <para>200002</para>
         /// </summary>
         [NameInMap("CallResult")]
         [Validation(Required=false)]
         public string CallResult { get; set; }
 
         /// <summary>
-        /// The called number.
+        /// <para>The called number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1300****0000</para>
         /// </summary>
         [NameInMap("Called")]
         [Validation(Required=false)]
         public string Called { get; set; }
 
         /// <summary>
-        /// The minimum number of conversation rounds in the call.
+        /// <para>The minimum number of conversation rounds in the call.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("DialogCountFrom")]
         [Validation(Required=false)]
         public string DialogCountFrom { get; set; }
 
         /// <summary>
-        /// The maximum number of conversation rounds in the call.
+        /// <para>The maximum number of conversation rounds in the call.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("DialogCountTo")]
         [Validation(Required=false)]
         public string DialogCountTo { get; set; }
 
         /// <summary>
-        /// The minimum call duration.
+        /// <para>The minimum call duration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("DurationFrom")]
         [Validation(Required=false)]
         public string DurationFrom { get; set; }
 
         /// <summary>
-        /// The maximum call duration.
+        /// <para>The maximum call duration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>60</para>
         /// </summary>
         [NameInMap("DurationTo")]
         [Validation(Required=false)]
         public string DurationTo { get; set; }
 
         /// <summary>
-        /// The party who hangs up. Valid values:
+        /// <para>The party who hangs up. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: the called party.</description></item>
+        /// <item><description><b>1</b>: the robot.</description></item>
+        /// </list>
         /// 
-        /// *   **0**: the called party.
-        /// *   **1**: the robot.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("HangupDirection")]
         [Validation(Required=false)]
@@ -72,14 +95,20 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -94,7 +123,11 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The unique ID of the robocall task. You can call the [CreateRobotTask](~~393531~~) operation to obtain the task ID.
+        /// <para>The unique ID of the robocall task. You can call the <a href="https://help.aliyun.com/document_detail/393531.html">CreateRobotTask</a> operation to obtain the task ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1045001****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

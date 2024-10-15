@@ -14,21 +14,30 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The service name. Default value: **dyvms**.
+        /// <para>The service name. Default value: <b>dyvms</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dyvms</para>
         /// </summary>
         [NameInMap("ProdCode")]
         [Validation(Required=false)]
@@ -43,10 +52,14 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The route type. Valid values:
+        /// <para>The route type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: number location first.</description></item>
+        /// <item><description><b>1</b>: random.</description></item>
+        /// </list>
         /// 
-        /// *   **0**: number location first.
-        /// *   **1**: random.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("RouteType")]
         [Validation(Required=false)]

@@ -10,31 +10,44 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class StopCallInConfigResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// Indicates whether the inbound call was stopped. Valid values:
+        /// <para>Indicates whether the inbound call was stopped. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The inbound call was stopped.</description></item>
+        /// <item><description>false: The inbound call failed to be stopped.</description></item>
+        /// </list>
         /// 
-        /// *   true: The inbound call was stopped.
-        /// *   false: The inbound call failed to be stopped.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>a78278ff-26bb-48ec-805c-26a0f4c102***</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

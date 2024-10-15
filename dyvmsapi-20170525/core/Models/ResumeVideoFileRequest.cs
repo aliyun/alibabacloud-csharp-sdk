@@ -9,10 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class ResumeVideoFileRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100001616500^1000018****</para>
+        /// </summary>
         [NameInMap("CallId")]
         [Validation(Required=false)]
         public string CallId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例值</para>
+        /// </summary>
         [NameInMap("CalledNumber")]
         [Validation(Required=false)]
         public string CalledNumber { get; set; }

@@ -10,41 +10,52 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class QueryCallInPoolTransferConfigResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// <list type="bullet">
+        /// <item><description>The value OK indicates that the request was successful.</description></item>
+        /// <item><description>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</description></item>
+        /// </list>
         /// 
-        /// *   The value OK indicates that the request was successful.
-        /// *   For more information about other response codes, see [API error codes](~~112502~~).
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The response parameters.
+        /// <para>The response parameters.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryCallInPoolTransferConfigResponseBodyData Data { get; set; }
         public class QueryCallInPoolTransferConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// The call mode. Valid values:
+            /// <para>The call mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>roundRobin</b></description></item>
+            /// <item><description><b>random</b></description></item>
+            /// </list>
             /// 
-            /// *   **roundRobin**
-            /// *   **random**
+            /// <b>Example:</b>
+            /// <para>random</para>
             /// </summary>
             [NameInMap("CalledRouteMode")]
             [Validation(Required=false)]
             public string CalledRouteMode { get; set; }
 
             /// <summary>
-            /// The details of the response parameters.
+            /// <para>The details of the response parameters.</para>
             /// </summary>
             [NameInMap("Details")]
             [Validation(Required=false)]
             public List<QueryCallInPoolTransferConfigResponseBodyDataDetails> Details { get; set; }
             public class QueryCallInPoolTransferConfigResponseBodyDataDetails : TeaModel {
                 /// <summary>
-                /// The number used to transfer the call.
+                /// <para>The number used to transfer the call.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>400****</para>
                 /// </summary>
                 [NameInMap("Called")]
                 [Validation(Required=false)]
@@ -53,14 +64,20 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
             }
 
             /// <summary>
-            /// The time when the call transfer task was created.
+            /// <para>The time when the call transfer task was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1623137002000</para>
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// The timeout period for transferring the call.
+            /// <para>The timeout period for transferring the call.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30</para>
             /// </summary>
             [NameInMap("TransferTimeout")]
             [Validation(Required=false)]
@@ -69,14 +86,20 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7BF47617-7851-48F7-A3A1-2021342A78E2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

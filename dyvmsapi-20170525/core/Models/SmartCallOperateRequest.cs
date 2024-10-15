@@ -10,16 +10,25 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class SmartCallOperateRequest : TeaModel {
         /// <summary>
-        /// The unique receipt ID of the call. You can call the [SmartCall](~~393526~~) operation to obtain the receipt ID.
+        /// <para>The unique receipt ID of the call. You can call the <a href="https://help.aliyun.com/document_detail/393526.html">SmartCall</a> operation to obtain the receipt ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>116012854210^1028142****</para>
         /// </summary>
         [NameInMap("CallId")]
         [Validation(Required=false)]
         public string CallId { get; set; }
 
         /// <summary>
-        /// The action that is initiated to the called number of an outbound robocall.
+        /// <para>The action that is initiated to the called number of an outbound robocall.</para>
+        /// <remarks>
+        /// <para>Only the value <b>parallelBridge</b> is supported. This value indicates that a bridge action is initiated between a called number and an agent of the call center.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > Only the value **parallelBridge** is supported. This value indicates that a bridge action is initiated between a called number and an agent of the call center.
+        /// <b>Example:</b>
+        /// <para>parallelBridge</para>
         /// </summary>
         [NameInMap("Command")]
         [Validation(Required=false)]
@@ -30,7 +39,10 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The extended field.
+        /// <para>The extended field.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Param</para>
         /// </summary>
         [NameInMap("Param")]
         [Validation(Required=false)]

@@ -9,10 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class GetCallProgressRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值</para>
+        /// </summary>
         [NameInMap("CallId")]
         [Validation(Required=false)]
         public string CallId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例值示例值</para>
+        /// </summary>
         [NameInMap("CalledNum")]
         [Validation(Required=false)]
         public string CalledNum { get; set; }

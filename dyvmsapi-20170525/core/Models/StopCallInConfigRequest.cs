@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class StopCallInConfigRequest : TeaModel {
         /// <summary>
-        /// The China 400 number from which the inbound call to be stopped is transferred.
+        /// <para>The China 400 number from which the inbound call to be stopped is transferred.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>400***</para>
         /// </summary>
         [NameInMap("Number")]
         [Validation(Required=false)]

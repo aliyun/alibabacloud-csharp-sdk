@@ -10,38 +10,53 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class CreateCallTaskRequest : TeaModel {
         /// <summary>
-        /// The type of the task template. Valid values:
+        /// <para>The type of the task template. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>VMS_VOICE_TTS</b>: the text-to-speech (TTS) notification template.</description></item>
+        /// <item><description><b>VMS_VOICE_CODE</b>: the voice notification template.</description></item>
+        /// <item><description><b>VMS_TTS</b>: the voice verification code template.</description></item>
+        /// </list>
         /// 
-        /// *   **VMS_VOICE_TTS**: the text-to-speech (TTS) notification template.
-        /// *   **VMS_VOICE_CODE**: the voice notification template.
-        /// *   **VMS_TTS**: the voice verification code template.
+        /// <b>Example:</b>
+        /// <para>VMS_VOICE_TTS</para>
         /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }
 
         /// <summary>
-        /// The called numbers.
+        /// <para>The called numbers.</para>
+        /// <list type="bullet">
+        /// <item><description>If you set DataType to LIST, the value of Data is in the LIST format.</description></item>
+        /// <item><description>If you set DataType to JSON, the value of Data is in the JSON format.</description></item>
+        /// </list>
         /// 
-        /// *   If you set DataType to LIST, the value of Data is in the LIST format.
-        /// *   If you set DataType to JSON, the value of Data is in the JSON format.
+        /// <b>Example:</b>
+        /// <para>{ &quot;paramNames&quot;:[&quot;name1&quot;,&quot;name2&quot;,&quot;key3&quot;], &quot;calleeList&quot;:[ { &quot;callee&quot;:&quot;131222222&quot;, &quot;params&quot;:[&quot;zangsan&quot;,&quot;zhangsan01&quot;,&quot;zhangsan02&quot;] }, { &quot;callee&quot;:&quot;131222222&quot;, &quot;params&quot;:[&quot;zangsan&quot;,&quot;zhangsan01&quot;,&quot;zhangsan02&quot;] }, ] }</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// The type of called numbers. Valid values:
+        /// <para>The type of called numbers. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>LIST</b>: the called numbers that are separated by commas (,).</description></item>
+        /// <item><description><b>JSON</b>: a JSON-formatted list of called numbers with template parameters.</description></item>
+        /// </list>
         /// 
-        /// *   **LIST**: the called numbers that are separated by commas (,).
-        /// *   **JSON**: a JSON-formatted list of called numbers with template parameters.
+        /// <b>Example:</b>
+        /// <para>JSON</para>
         /// </summary>
         [NameInMap("DataType")]
         [Validation(Required=false)]
         public string DataType { get; set; }
 
         /// <summary>
-        /// This parameter is unavailable.
+        /// <para>This parameter is unavailable.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("FireTime")]
         [Validation(Required=false)]
@@ -52,7 +67,10 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The calling number. Only virtual numbers are supported.
+        /// <para>The calling number. Only virtual numbers are supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>05516214****</para>
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
@@ -67,42 +85,60 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the calling number. Set the value to **LIST**.
+        /// <para>The type of the calling number. Set the value to <b>LIST</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LIST</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// This parameter is unavailable.
+        /// <para>This parameter is unavailable.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ScheduleType")]
         [Validation(Required=false)]
         public string ScheduleType { get; set; }
 
         /// <summary>
-        /// This parameter is unavailable.
+        /// <para>This parameter is unavailable.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("StopTime")]
         [Validation(Required=false)]
         public string StopTime { get; set; }
 
         /// <summary>
-        /// The task name.
+        /// <para>The task name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Aliyun</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
         /// <summary>
-        /// The template ID.
+        /// <para>The template ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TTS_2122****</para>
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
         public string TemplateCode { get; set; }
 
         /// <summary>
-        /// The template name.
+        /// <para>The template name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test Template</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

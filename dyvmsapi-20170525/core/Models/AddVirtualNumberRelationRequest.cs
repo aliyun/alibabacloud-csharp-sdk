@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,14 +10,21 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class AddVirtualNumberRelationRequest : TeaModel {
         /// <summary>
-        /// The company names. Separate multiple company names with commas (,).
+        /// <para>The company names. Separate multiple company names with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Company 1</para>
         /// </summary>
         [NameInMap("CorpNameList")]
         [Validation(Required=false)]
         public string CorpNameList { get; set; }
 
         /// <summary>
-        /// The real numbers. Separate multiple real numbers with commas (,).
+        /// <para>The real numbers. Separate multiple real numbers with commas (,).</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1321111****,1322222****</para>
         /// </summary>
         [NameInMap("NumberList")]
         [Validation(Required=false)]
@@ -31,14 +35,21 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The virtual number.
+        /// <para>The virtual number.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>05516214****</para>
         /// </summary>
         [NameInMap("PhoneNum")]
         [Validation(Required=false)]
         public string PhoneNum { get; set; }
 
         /// <summary>
-        /// The service name. Default value: **dyvms**.
+        /// <para>The service name. Default value: <b>dyvms</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dyvms</para>
         /// </summary>
         [NameInMap("ProdCode")]
         [Validation(Required=false)]
@@ -53,10 +64,15 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The route type. Valid values:
+        /// <para>The route type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: number location first.</description></item>
+        /// <item><description><b>1</b>: random.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **0**: number location first.
-        /// *   **1**: random.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("RouteType")]
         [Validation(Required=false)]

@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class QueryRobotInfoListRequest : TeaModel {
         /// <summary>
-        /// The review state. Valid values:
+        /// <para>The review state. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>CONFIGURABLE</b></description></item>
+        /// <item><description><b>AUDITING</b></description></item>
+        /// <item><description><b>AUDITPASS</b></description></item>
+        /// <item><description><b>AUDITFAIL</b></description></item>
+        /// </list>
         /// 
-        /// *   **CONFIGURABLE**
-        /// *   **AUDITING**
-        /// *   **AUDITPASS**
-        /// *   **AUDITFAIL**
+        /// <b>Example:</b>
+        /// <para>AUDITING</para>
         /// </summary>
         [NameInMap("AuditStatus")]
         [Validation(Required=false)]

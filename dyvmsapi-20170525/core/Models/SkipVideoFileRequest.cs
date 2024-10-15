@@ -9,14 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class SkipVideoFileRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>116012854210^10281427****</para>
+        /// </summary>
         [NameInMap("CallId")]
         [Validation(Required=false)]
         public string CallId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1590****000</para>
+        /// </summary>
         [NameInMap("CalledNumber")]
         [Validation(Required=false)]
         public string CalledNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>PR0210428****</para>
+        /// </summary>
         [NameInMap("OutId")]
         [Validation(Required=false)]
         public string OutId { get; set; }
@@ -33,6 +47,12 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04:02:01</para>
+        /// </summary>
         [NameInMap("SkipTimes")]
         [Validation(Required=false)]
         public long? SkipTimes { get; set; }

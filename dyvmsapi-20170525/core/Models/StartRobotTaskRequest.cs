@@ -22,14 +22,21 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The time scheduled for starting the robocall task, in the yyyy-MM-dd HH:mm:ss format.
+        /// <para>The time scheduled for starting the robocall task, in the yyyy-MM-dd HH:mm:ss format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-06-14 14:55:23</para>
         /// </summary>
         [NameInMap("ScheduleTime")]
         [Validation(Required=false)]
         public string ScheduleTime { get; set; }
 
         /// <summary>
-        /// The unique ID of the robocall task. You can call the [CreateRobotTask](~~CreateRobotTask~~) operation to obtain the task ID.
+        /// <para>The unique ID of the robocall task. You can call the <a href="~~CreateRobotTask~~">CreateRobotTask</a> operation to obtain the task ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>104500****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

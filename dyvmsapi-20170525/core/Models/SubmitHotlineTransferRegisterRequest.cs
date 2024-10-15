@@ -10,59 +10,91 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class SubmitHotlineTransferRegisterRequest : TeaModel {
         /// <summary>
-        /// The authenticity of the commitment. Valid values:
+        /// <para>The authenticity of the commitment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The commitment is authentic.</description></item>
+        /// <item><description><b>false</b>: The commitment is not authentic.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **true**: The commitment is authentic.
-        /// *   **false**: The commitment is not authentic.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Agreement")]
         [Validation(Required=false)]
         public string Agreement { get; set; }
 
         /// <summary>
-        /// The China 400 number.
+        /// <para>The China 400 number.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>400****</para>
         /// </summary>
         [NameInMap("HotlineNumber")]
         [Validation(Required=false)]
         public string HotlineNumber { get; set; }
 
         /// <summary>
-        /// The ID card number of the handler.
+        /// <para>The ID card number of the handler.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5****************9</para>
         /// </summary>
         [NameInMap("OperatorIdentityCard")]
         [Validation(Required=false)]
         public string OperatorIdentityCard { get; set; }
 
         /// <summary>
-        /// The email address of the handler.
+        /// <para>The email address of the handler.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="mailto:username@example.com">username@example.com</a></para>
         /// </summary>
         [NameInMap("OperatorMail")]
         [Validation(Required=false)]
         public string OperatorMail { get; set; }
 
         /// <summary>
-        /// The verification code that is received by the mailbox of the handler.
+        /// <para>The verification code that is received by the mailbox of the handler.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("OperatorMailVerifyCode")]
         [Validation(Required=false)]
         public string OperatorMailVerifyCode { get; set; }
 
         /// <summary>
-        /// The mobile phone number of the handler.
+        /// <para>The mobile phone number of the handler.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>158****7230</para>
         /// </summary>
         [NameInMap("OperatorMobile")]
         [Validation(Required=false)]
         public string OperatorMobile { get; set; }
 
         /// <summary>
-        /// The verification code that is received by the mobile phone of the handler.
+        /// <para>The verification code that is received by the mobile phone of the handler.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("OperatorMobileVerifyCode")]
         [Validation(Required=false)]
         public string OperatorMobileVerifyCode { get; set; }
 
         /// <summary>
-        /// The name of the handler.
+        /// <para>The name of the handler.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A***</para>
         /// </summary>
         [NameInMap("OperatorName")]
         [Validation(Required=false)]
@@ -73,7 +105,11 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The qualification ID. You can call the [GetHotlineQualificationByOrder](~~393548~~) operation to obtain the qualification ID.
+        /// <para>The qualification ID. You can call the <a href="https://help.aliyun.com/document_detail/393548.html">GetHotlineQualificationByOrder</a> operation to obtain the qualification ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10000004933****</para>
         /// </summary>
         [NameInMap("QualificationId")]
         [Validation(Required=false)]
@@ -88,28 +124,41 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The registration information about the China 400 number.
+        /// <para>The registration information about the China 400 number.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TransferPhoneNumberInfos")]
         [Validation(Required=false)]
         public List<SubmitHotlineTransferRegisterRequestTransferPhoneNumberInfos> TransferPhoneNumberInfos { get; set; }
         public class SubmitHotlineTransferRegisterRequestTransferPhoneNumberInfos : TeaModel {
             /// <summary>
-            /// The ID card number of the number owner.
+            /// <para>The ID card number of the number owner.</para>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>500***</para>
             /// </summary>
             [NameInMap("IdentityCard")]
             [Validation(Required=false)]
             public string IdentityCard { get; set; }
 
             /// <summary>
-            /// The China 400 number that you want to submit for registration.
+            /// <para>The China 400 number that you want to submit for registration.</para>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1580000****</para>
             /// </summary>
             [NameInMap("PhoneNumber")]
             [Validation(Required=false)]
             public string PhoneNumber { get; set; }
 
             /// <summary>
-            /// The real name or company name of the number owner.
+            /// <para>The real name or company name of the number owner.</para>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>A***</para>
             /// </summary>
             [NameInMap("PhoneNumberOwnerName")]
             [Validation(Required=false)]

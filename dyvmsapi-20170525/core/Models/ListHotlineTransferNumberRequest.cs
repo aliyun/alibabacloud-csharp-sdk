@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class ListHotlineTransferNumberRequest : TeaModel {
         /// <summary>
-        /// The China 400 number.
+        /// <para>The China 400 number.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>400****</para>
         /// </summary>
         [NameInMap("HotlineNumber")]
         [Validation(Required=false)]
@@ -21,21 +25,31 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: 1 to 10.
+        /// <para>The number of entries per page. Valid values: 1 to 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The qualification ID. You can call the [GetHotlineQualificationByOrder](~~393548~~) operation to obtain the qualification ID.
+        /// <para>The qualification ID. You can call the <a href="https://help.aliyun.com/document_detail/393548.html">GetHotlineQualificationByOrder</a> operation to obtain the qualification ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100***</para>
         /// </summary>
         [NameInMap("QualificationId")]
         [Validation(Required=false)]

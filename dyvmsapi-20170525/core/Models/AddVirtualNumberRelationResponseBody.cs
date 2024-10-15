@@ -10,33 +10,47 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class AddVirtualNumberRelationResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// <list type="bullet">
+        /// <item><description>The value 200 indicates that the request was successful.</description></item>
+        /// <item><description>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</description></item>
+        /// </list>
         /// 
-        /// *   The value 200 indicates that the request was successful.
-        /// *   For more information about other response codes, see [API error codes](~~112502~~).
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The numbers that failed to be associated.
+        /// <para>The numbers that failed to be associated.</para>
+        /// <remarks>
+        /// <para>If all numbers are associated, no value is returned for this parameter.</para>
+        /// </remarks>
         /// 
-        /// > If all numbers are associated, no value is returned for this parameter.
+        /// <b>Example:</b>
+        /// <para>1321111****</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F655A8D5-B967-440B-8683-DAD6FF8DE990</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

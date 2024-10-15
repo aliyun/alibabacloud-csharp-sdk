@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值示例值</para>
+        /// </summary>
         [NameInMap("VideoFile")]
         [Validation(Required=false)]
         public string VideoFile { get; set; }

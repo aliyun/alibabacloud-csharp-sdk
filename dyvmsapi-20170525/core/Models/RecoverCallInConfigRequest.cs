@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class RecoverCallInConfigRequest : TeaModel {
         /// <summary>
-        /// The China 400 number that is used to transfer the inbound call.
+        /// <para>The China 400 number that is used to transfer the inbound call.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>400***</para>
         /// </summary>
         [NameInMap("Number")]
         [Validation(Required=false)]

@@ -14,14 +14,20 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -36,32 +42,42 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The task state. Valid values:
+        /// <para>The task state. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>INIT</b>: The task is not started.</description></item>
+        /// <item><description><b>READY</b>: The task is ready to start.</description></item>
+        /// <item><description><b>DISPATCH</b>: The task is being parsed.</description></item>
+        /// <item><description><b>EXCUTING</b>: The task is being executed.</description></item>
+        /// <item><description><b>MANUAL_STOP</b>: The task is manually suspended.</description></item>
+        /// <item><description><b>SYSTEM_STOP</b>: The task is suspended by the system.</description></item>
+        /// <item><description><b>ARREARS_STOP</b>: The task is suspended due to overdue payments.</description></item>
+        /// <item><description><b>CANCEL</b>: The task is manually canceled.</description></item>
+        /// <item><description><b>SYSTEM_CANCEL</b>: The task is canceled by the system.</description></item>
+        /// <item><description><b>FINISH</b>: The task is complete.</description></item>
+        /// </list>
         /// 
-        /// *   **INIT**: The task is not started.
-        /// *   **READY**: The task is ready to start.
-        /// *   **DISPATCH**: The task is being parsed.
-        /// *   **EXCUTING**: The task is being executed.
-        /// *   **MANUAL_STOP**: The task is manually suspended.
-        /// *   **SYSTEM_STOP**: The task is suspended by the system.
-        /// *   **ARREARS_STOP**: The task is suspended due to overdue payments.
-        /// *   **CANCEL**: The task is manually canceled.
-        /// *   **SYSTEM_CANCEL**: The task is canceled by the system.
-        /// *   **FINISH**: The task is complete.
+        /// <b>Example:</b>
+        /// <para>EXCUTING</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The task name.
+        /// <para>The task name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test Template</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
         /// <summary>
-        /// The date when the task is created, in the yyyy-MM-dd format.
+        /// <para>The date when the task is created, in the yyyy-MM-dd format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-06-14</para>
         /// </summary>
         [NameInMap("Time")]
         [Validation(Required=false)]
