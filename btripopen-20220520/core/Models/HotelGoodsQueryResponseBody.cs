@@ -419,6 +419,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public bool? InstantConfirm { get; set; }
 
+                    [NameInMap("inventory_desc")]
+                    [Validation(Required=false)]
+                    public string InventoryDesc { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>100</para>
