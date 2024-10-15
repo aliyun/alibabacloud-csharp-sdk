@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>feth00jqwls</para>
         /// </summary>
         [NameInMap("x-acs-btrip-corp-token")]
         [Validation(Required=false)]

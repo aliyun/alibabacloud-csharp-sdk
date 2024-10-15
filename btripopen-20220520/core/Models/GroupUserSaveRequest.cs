@@ -47,20 +47,32 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Gender { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1001</para>
+        /// </summary>
         [NameInMap("job_no")]
         [Validation(Required=false)]
         public string JobNo { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>18000000000</para>
+        /// </summary>
         [NameInMap("phone")]
         [Validation(Required=false)]
         public string Phone { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ce/shi</para>
+        /// </summary>
         [NameInMap("real_name_en")]
         [Validation(Required=false)]
         public string RealNameEn { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("sub_corp_id_list")]
         [Validation(Required=false)]
@@ -75,22 +87,36 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("leave_status")]
             [Validation(Required=false)]
             public int? LeaveStatus { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>123</para>
+            /// </summary>
             [NameInMap("manager_user_id")]
             [Validation(Required=false)]
             public string ManagerUserId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("position_level")]
             [Validation(Required=false)]
             public string PositionLevel { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>btrip123</para>
             /// </summary>
             [NameInMap("sub_corp_id")]
             [Validation(Required=false)]
@@ -99,14 +125,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]
         public string UserId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("user_name")]
         [Validation(Required=false)]

@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class UpdateCustomRoleRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("role_id")]
         [Validation(Required=false)]
         public string RoleId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("role_name")]
         [Validation(Required=false)]

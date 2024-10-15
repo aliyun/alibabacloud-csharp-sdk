@@ -10,12 +10,19 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ExceedApplySyncRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>823744</para>
         /// </summary>
         [NameInMap("apply_id")]
         [Validation(Required=false)]
         public long? ApplyId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("biz_category")]
         [Validation(Required=false)]
         public int? BizCategory { get; set; }
@@ -25,18 +32,28 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
         public int? Status { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123421</para>
+        /// </summary>
         [NameInMap("thirdparty_flow_id")]
         [Validation(Required=false)]
         public string ThirdpartyFlowId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>open5145141</para>
         /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]

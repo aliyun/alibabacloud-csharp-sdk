@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CarApplyAddRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("cause")]
         [Validation(Required=false)]
         public string Cause { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("city")]
         [Validation(Required=false)]
@@ -28,16 +28,27 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CityCodeSet { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-07-12 14:52:52</para>
         /// </summary>
         [NameInMap("date")]
         [Validation(Required=false)]
         public string Date { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2022-07-12 18:51:25</para>
+        /// </summary>
         [NameInMap("finished_date")]
         [Validation(Required=false)]
         public string FinishedDate { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>project1413</para>
+        /// </summary>
         [NameInMap("project_code")]
         [Validation(Required=false)]
         public string ProjectCode { get; set; }
@@ -47,50 +58,73 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
         public int? Status { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IRGS1413</para>
         /// </summary>
         [NameInMap("third_part_apply_id")]
         [Validation(Required=false)]
         public string ThirdPartApplyId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>QA1411</para>
+        /// </summary>
         [NameInMap("third_part_cost_center_id")]
         [Validation(Required=false)]
         public string ThirdPartCostCenterId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>GA15131</para>
+        /// </summary>
         [NameInMap("third_part_invoice_id")]
         [Validation(Required=false)]
         public string ThirdPartInvoiceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("times_total")]
         [Validation(Required=false)]
         public int? TimesTotal { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("times_type")]
         [Validation(Required=false)]
         public int? TimesType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("times_used")]
         [Validation(Required=false)]
         public int? TimesUsed { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]
@@ -105,14 +139,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public List<CarApplyAddRequestTravelerStandardCarCitySet> CarCitySet { get; set; }
             public class CarApplyAddRequestTravelerStandardCarCitySet : TeaModel {
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("city_code")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("city_name")]
                 [Validation(Required=false)]
@@ -121,7 +155,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("user_id")]
             [Validation(Required=false)]
@@ -130,7 +164,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OPEN1415614</para>
         /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]

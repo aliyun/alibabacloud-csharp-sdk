@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TrainOrderPayRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1379598062646</para>
         /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("out_order_id")]
         [Validation(Required=false)]
         public string OutOrderId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("pay_amount")]
         [Validation(Required=false)]

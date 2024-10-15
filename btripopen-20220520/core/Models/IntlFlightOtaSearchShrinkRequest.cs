@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IntlFlightOtaSearchShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10023</para>
+        /// </summary>
         [NameInMap("btrip_user_id")]
         [Validation(Required=false)]
         public string BtripUserId { get; set; }
@@ -18,16 +22,27 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BuyerName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("cabin_type")]
         [Validation(Required=false)]
         public int? CabinType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("direct_only")]
         [Validation(Required=false)]
         public bool? DirectOnly { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>open12igetbis4o07v10B1TlOWcM00</para>
+        /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
@@ -36,12 +51,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Language { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("need_share_flight")]
         [Validation(Required=false)]
         public bool? NeedShareFlight { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("search_journeys")]
         [Validation(Required=false)]
@@ -51,12 +70,19 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string SearchPassengerListShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>TEST</para>
+        /// </summary>
         [NameInMap("supplier_code")]
         [Validation(Required=false)]
         public string SupplierCode { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("trip_type")]
         [Validation(Required=false)]

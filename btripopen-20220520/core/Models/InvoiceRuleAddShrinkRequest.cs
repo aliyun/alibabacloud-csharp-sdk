@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class InvoiceRuleAddShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("entities")]
         [Validation(Required=false)]
         public string EntitiesShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4854821</para>
         /// </summary>
         [NameInMap("third_part_id")]
         [Validation(Required=false)]

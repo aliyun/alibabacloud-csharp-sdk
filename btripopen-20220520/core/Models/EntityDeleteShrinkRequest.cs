@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class EntityDeleteShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("del_all")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string EntityDOListShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("thirdpart_id")]
         [Validation(Required=false)]

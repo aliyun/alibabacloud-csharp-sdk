@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class EntityAddResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>SUCCESS</para>
+        /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -21,26 +25,45 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public EntityAddResponseBodyModule Module { get; set; }
         public class EntityAddResponseBodyModule : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("add_num")]
             [Validation(Required=false)]
             public int? AddNum { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("selected_user_num")]
             [Validation(Required=false)]
             public int? SelectedUserNum { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// traceId
+        /// <para>traceId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>21041ce316577904808056433edbb2</para>
         /// </summary>
         [NameInMap("traceId")]
         [Validation(Required=false)]

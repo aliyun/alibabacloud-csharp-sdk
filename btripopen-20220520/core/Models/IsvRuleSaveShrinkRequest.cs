@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? ApplyNeed { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("book_type")]
         [Validation(Required=false)]
@@ -29,14 +29,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? RuleNeed { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
         public int? Status { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]

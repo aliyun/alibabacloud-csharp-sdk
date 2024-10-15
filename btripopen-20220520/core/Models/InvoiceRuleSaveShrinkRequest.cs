@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class InvoiceRuleSaveShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("all_employe")]
         [Validation(Required=false)]
         public bool? AllEmploye { get; set; }
@@ -22,7 +26,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? Scope { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i123</para>
         /// </summary>
         [NameInMap("third_part_id")]
         [Validation(Required=false)]

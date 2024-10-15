@@ -17,14 +17,26 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string DepDateShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>name</para>
+        /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1017002195370467200</para>
+        /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1017002195370467200</para>
+        /// </summary>
         [NameInMap("out_order_id")]
         [Validation(Required=false)]
         public string OutOrderId { get; set; }
@@ -37,10 +49,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string SelectedSegmentsShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>590f17eca9374f20ac7e8ed8a7db2f35</para>
+        /// </summary>
         [NameInMap("session_id")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("voluntary")]
         [Validation(Required=false)]
         public bool? Voluntary { get; set; }

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ApplyExternalNodeStatusUpdateRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("node_id")]
         [Validation(Required=false)]
@@ -24,6 +27,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string Comment { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2023-05-28 11:33:28</para>
+            /// </summary>
             [NameInMap("operate_time")]
             [Validation(Required=false)]
             public string OperateTime { get; set; }
@@ -32,10 +39,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string OperatorName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>AGREE</para>
+            /// </summary>
             [NameInMap("result")]
             [Validation(Required=false)]
             public string Result { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>PROCESS_APPROVE</para>
+            /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -43,7 +58,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PROCESS_AGREE</para>
         /// </summary>
         [NameInMap("process_action_result")]
         [Validation(Required=false)]

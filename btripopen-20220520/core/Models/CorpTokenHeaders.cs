@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>vf9_bvla0qs</para>
+        /// </summary>
         [NameInMap("x-acs-btrip-access-token")]
         [Validation(Required=false)]
         public string XAcsBtripAccessToken { get; set; }

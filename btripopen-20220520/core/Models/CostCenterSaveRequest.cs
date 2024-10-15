@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CostCenterSaveRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="mailto:a@alipay.com">a@alipay.com</a></para>
+        /// </summary>
         [NameInMap("alipay_no")]
         [Validation(Required=false)]
         public string AlipayNo { get; set; }
@@ -17,26 +21,36 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public long? Disable { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>12345</para>
+        /// </summary>
         [NameInMap("number")]
         [Validation(Required=false)]
         public string Number { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("scope")]
         [Validation(Required=false)]
         public long? Scope { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>340049</para>
         /// </summary>
         [NameInMap("thirdpart_id")]
         [Validation(Required=false)]
         public string ThirdpartId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

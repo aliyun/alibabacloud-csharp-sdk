@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TravelStandardQueryResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -37,6 +41,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public List<string> OpenServiceTypeList { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>2006517149</para>
+                    /// </summary>
                     [NameInMap("rule_code")]
                     [Validation(Required=false)]
                     public long? RuleCode { get; set; }
@@ -45,6 +53,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public string RuleDesc { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>6517149</para>
+                    /// </summary>
                     [NameInMap("rule_id")]
                     [Validation(Required=false)]
                     public long? RuleId { get; set; }
@@ -59,10 +71,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public List<TravelStandardQueryResponseBodyModuleReserveRuleModuleConfigList> ModuleConfigList { get; set; }
                 public class TravelStandardQueryResponseBodyModuleReserveRuleModuleConfigList : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>FLIGHT_ADVANCE_BUY_DAY</para>
+                    /// </summary>
                     [NameInMap("code")]
                     [Validation(Required=false)]
                     public string Code { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>3</para>
+                    /// </summary>
                     [NameInMap("value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
@@ -73,16 +93,27 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>407543AF-2BD9-5890-BD92-9D1AB7218B27</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// traceId
+        /// <para>traceId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>210bcc3a16583004579056128d33d7</para>
         /// </summary>
         [NameInMap("traceId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightCancelOrderV2Request : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]

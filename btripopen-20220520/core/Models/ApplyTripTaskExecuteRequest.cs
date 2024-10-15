@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ApplyTripTaskExecuteRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>open</para>
         /// </summary>
         [NameInMap("action_from")]
         [Validation(Required=false)]
@@ -21,21 +24,30 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>agree</para>
         /// </summary>
         [NameInMap("task_action")]
         [Validation(Required=false)]
         public string TaskAction { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("task_id")]
         [Validation(Required=false)]
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>thirdpart12138</para>
         /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]

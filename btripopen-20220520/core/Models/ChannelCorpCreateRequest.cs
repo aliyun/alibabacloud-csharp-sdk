@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ChannelCorpCreateRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("administrator_name")]
         [Validation(Required=false)]
         public string AdministratorName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>18378889782</para>
         /// </summary>
         [NameInMap("administrator_phone")]
         [Validation(Required=false)]
@@ -28,7 +31,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string City { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("corp_name")]
         [Validation(Required=false)]
@@ -38,12 +41,19 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Province { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("scope")]
         [Validation(Required=false)]
         public int? Scope { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>00001</para>
         /// </summary>
         [NameInMap("third_corp_id")]
         [Validation(Required=false)]

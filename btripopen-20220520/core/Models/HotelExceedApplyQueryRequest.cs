@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelExceedApplyQueryRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1287123</para>
+        /// </summary>
         [NameInMap("apply_id")]
         [Validation(Required=false)]
         public long? ApplyId { get; set; }

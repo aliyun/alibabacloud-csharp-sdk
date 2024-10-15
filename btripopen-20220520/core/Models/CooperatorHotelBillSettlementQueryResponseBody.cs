@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CooperatorHotelBillSettlementQueryResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -21,10 +25,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public CooperatorHotelBillSettlementQueryResponseBodyModule Module { get; set; }
         public class CooperatorHotelBillSettlementQueryResponseBodyModule : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("category")]
             [Validation(Required=false)]
             public int? Category { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>open12ilgngll7us7v10Bm5UlMg700</para>
+            /// </summary>
             [NameInMap("corp_id")]
             [Validation(Required=false)]
             public string CorpId { get; set; }
@@ -33,10 +45,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<CooperatorHotelBillSettlementQueryResponseBodyModuleItems> Items { get; set; }
             public class CooperatorHotelBillSettlementQueryResponseBodyModuleItems : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>124</para>
+                /// </summary>
                 [NameInMap("alipay_trade_no")]
                 [Validation(Required=false)]
                 public string AlipayTradeNo { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>123</para>
+                /// </summary>
                 [NameInMap("apply_arr_city_code")]
                 [Validation(Required=false)]
                 public string ApplyArrCityCode { get; set; }
@@ -45,6 +65,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ApplyArrCityName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>123</para>
+                /// </summary>
                 [NameInMap("apply_dep_city_code")]
                 [Validation(Required=false)]
                 public string ApplyDepCityCode { get; set; }
@@ -57,14 +81,26 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ApplyExtendField { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>sdasdas123324</para>
+                /// </summary>
                 [NameInMap("apply_id")]
                 [Validation(Required=false)]
                 public string ApplyId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1.0</para>
+                /// </summary>
                 [NameInMap("average_nights")]
                 [Validation(Required=false)]
                 public double? AverageNights { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2023-01-01 00:00:00</para>
+                /// </summary>
                 [NameInMap("bill_record_time")]
                 [Validation(Required=false)]
                 public string BillRecordTime { get; set; }
@@ -77,14 +113,26 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string BookReason { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2023-01-01 00:00:00</para>
+                /// </summary>
                 [NameInMap("book_time")]
                 [Validation(Required=false)]
                 public string BookTime { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>123</para>
+                /// </summary>
                 [NameInMap("booker_id")]
                 [Validation(Required=false)]
                 public string BookerId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>zs123</para>
+                /// </summary>
                 [NameInMap("booker_job_no")]
                 [Validation(Required=false)]
                 public string BookerJobNo { get; set; }
@@ -113,10 +161,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CascadeDepartment { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2024-02-13</para>
+                /// </summary>
                 [NameInMap("check_in_date")]
                 [Validation(Required=false)]
                 public string CheckInDate { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2024-02-15</para>
+                /// </summary>
                 [NameInMap("checkout_date")]
                 [Validation(Required=false)]
                 public string CheckoutDate { get; set; }
@@ -125,6 +181,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string City { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>330100</para>
+                /// </summary>
                 [NameInMap("city_code")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
@@ -133,10 +193,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CityCounty { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>330100</para>
+                /// </summary>
                 [NameInMap("city_county_code")]
                 [Validation(Required=false)]
                 public int? CityCountyCode { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>IN240102113438277278</para>
+                /// </summary>
                 [NameInMap("cooperator_bill_code")]
                 [Validation(Required=false)]
                 public string CooperatorBillCode { get; set; }
@@ -145,14 +213,26 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CooperatorName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>HO20240125162800280928</para>
+                /// </summary>
                 [NameInMap("cooperator_order_id")]
                 [Validation(Required=false)]
                 public string CooperatorOrderId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.1</para>
+                /// </summary>
                 [NameInMap("corp_refund_fee")]
                 [Validation(Required=false)]
                 public double? CorpRefundFee { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>100.0</para>
+                /// </summary>
                 [NameInMap("corp_total_fee")]
                 [Validation(Required=false)]
                 public double? CorpTotalFee { get; set; }
@@ -161,6 +241,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CostCenter { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>123</para>
+                /// </summary>
                 [NameInMap("cost_center_number")]
                 [Validation(Required=false)]
                 public string CostCenterNumber { get; set; }
@@ -169,6 +253,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Department { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>123</para>
+                /// </summary>
                 [NameInMap("department_id")]
                 [Validation(Required=false)]
                 public string DepartmentId { get; set; }
@@ -181,14 +269,26 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string FeeType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10.0</para>
+                /// </summary>
                 [NameInMap("fees")]
                 [Validation(Required=false)]
                 public double? Fees { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1.0</para>
+                /// </summary>
                 [NameInMap("fines")]
                 [Validation(Required=false)]
                 public double? Fines { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10.0</para>
+                /// </summary>
                 [NameInMap("fu_point_fee")]
                 [Validation(Required=false)]
                 public double? FuPointFee { get; set; }
@@ -197,6 +297,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string HotelName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("index")]
                 [Validation(Required=false)]
                 public string Index { get; set; }
@@ -217,14 +321,26 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string IsShareStr { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("nights")]
                 [Validation(Required=false)]
                 public int? Nights { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>3137168772101111000</para>
+                /// </summary>
                 [NameInMap("order_id")]
                 [Validation(Required=false)]
                 public string OrderId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>100.0</para>
+                /// </summary>
                 [NameInMap("order_price")]
                 [Validation(Required=false)]
                 public double? OrderPrice { get; set; }
@@ -237,10 +353,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string OrderType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>123</para>
+                /// </summary>
                 [NameInMap("over_apply_id")]
                 [Validation(Required=false)]
                 public string OverApplyId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>123</para>
+                /// </summary>
                 [NameInMap("payment_department_id")]
                 [Validation(Required=false)]
                 public string PaymentDepartmentId { get; set; }
@@ -249,18 +373,34 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string PaymentDepartmentName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.1</para>
+                /// </summary>
                 [NameInMap("person_refund_fee")]
                 [Validation(Required=false)]
                 public double? PersonRefundFee { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10.0</para>
+                /// </summary>
                 [NameInMap("person_settle_price")]
                 [Validation(Required=false)]
                 public double? PersonSettlePrice { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>72328485</para>
+                /// </summary>
                 [NameInMap("primary_id")]
                 [Validation(Required=false)]
                 public long? PrimaryId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>acs</para>
+                /// </summary>
                 [NameInMap("project_code")]
                 [Validation(Required=false)]
                 public string ProjectCode { get; set; }
@@ -269,6 +409,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ProjectName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.0</para>
+                /// </summary>
                 [NameInMap("promotion_fee")]
                 [Validation(Required=false)]
                 public double? PromotionFee { get; set; }
@@ -277,6 +421,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Remark { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
                 [NameInMap("reserve_rule")]
                 [Validation(Required=false)]
                 public int? ReserveRule { get; set; }
@@ -285,10 +433,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string RoomNo { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("room_number")]
                 [Validation(Required=false)]
                 public int? RoomNumber { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>105.0</para>
+                /// </summary>
                 [NameInMap("room_price")]
                 [Validation(Required=false)]
                 public double? RoomPrice { get; set; }
@@ -297,18 +453,34 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string RoomType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>5.0</para>
+                /// </summary>
                 [NameInMap("service_fee")]
                 [Validation(Required=false)]
                 public double? ServiceFee { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>110.0</para>
+                /// </summary>
                 [NameInMap("settlement_fee")]
                 [Validation(Required=false)]
                 public double? SettlementFee { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.0</para>
+                /// </summary>
                 [NameInMap("settlement_grant_fee")]
                 [Validation(Required=false)]
                 public double? SettlementGrantFee { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2023-01-01 00:00:00</para>
+                /// </summary>
                 [NameInMap("settlement_time")]
                 [Validation(Required=false)]
                 public string SettlementTime { get; set; }
@@ -321,34 +493,66 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Star { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>166564408</para>
+                /// </summary>
                 [NameInMap("sub_order_id")]
                 [Validation(Required=false)]
                 public string SubOrderId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>9%</para>
+                /// </summary>
                 [NameInMap("tax_rate")]
                 [Validation(Required=false)]
                 public string TaxRate { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("third_invoice_id")]
                 [Validation(Required=false)]
                 public string ThirdInvoiceId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>123</para>
+                /// </summary>
                 [NameInMap("third_itinerary_id")]
                 [Validation(Required=false)]
                 public string ThirdItineraryId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("total_nights")]
                 [Validation(Required=false)]
                 public int? TotalNights { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>123</para>
+                /// </summary>
                 [NameInMap("traveler_id")]
                 [Validation(Required=false)]
                 public string TravelerId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>zs123</para>
+                /// </summary>
                 [NameInMap("traveler_job_no")]
                 [Validation(Required=false)]
                 public string TravelerJobNo { get; set; }
@@ -365,20 +569,36 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string TravelerName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("voucher_type")]
                 [Validation(Required=false)]
                 public int? VoucherType { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2021-10-14</para>
+            /// </summary>
             [NameInMap("period_end")]
             [Validation(Required=false)]
             public string PeriodEnd { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2021-10-13</para>
+            /// </summary>
             [NameInMap("period_start")]
             [Validation(Required=false)]
             public string PeriodStart { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>30</para>
+            /// </summary>
             [NameInMap("total_size")]
             [Validation(Required=false)]
             public long? TotalSize { get; set; }
@@ -386,18 +606,28 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
-        /// requestId
+        /// <para>requestId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>407543AF-2BD9-5890-BD92-9D1AB7218B27</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// traceId
+        /// <para>traceId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>21041ce316577904808056433edbb2</para>
         /// </summary>
         [NameInMap("traceId")]
         [Validation(Required=false)]

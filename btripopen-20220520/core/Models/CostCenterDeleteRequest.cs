@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CostCenterDeleteRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>340049</para>
         /// </summary>
         [NameInMap("thirdpart_id")]
         [Validation(Required=false)]

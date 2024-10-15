@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TicketChangingApplyShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dis1234</para>
         /// </summary>
         [NameInMap("dis_order_id")]
         [Validation(Required=false)]
         public string DisOrderId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mid1243</para>
         /// </summary>
         [NameInMap("dis_sub_order_id")]
         [Validation(Required=false)]
@@ -28,14 +34,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? IsVoluntary { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("modify_flight_info_list")]
         [Validation(Required=false)]
         public string ModifyFlightInfoListShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1s8837sh991hsj92h</para>
         /// </summary>
         [NameInMap("ota_item_id")]
         [Validation(Required=false)]
@@ -46,12 +55,19 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Reason { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>us88s2bsbin22hjusd8i</para>
         /// </summary>
         [NameInMap("session_id")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("whether_retry")]
         [Validation(Required=false)]
         public bool? WhetherRetry { get; set; }

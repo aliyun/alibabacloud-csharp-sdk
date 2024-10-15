@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ModuleAgentInfoAttributeShowInfoMapValue : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>FIRST_BAGGAGE</para>
+        /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }

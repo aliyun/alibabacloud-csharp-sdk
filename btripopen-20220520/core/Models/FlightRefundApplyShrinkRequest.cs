@@ -9,26 +9,39 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightRefundApplyShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("corp_refund_price")]
         [Validation(Required=false)]
         public long? CorpRefundPrice { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dis123</para>
         /// </summary>
         [NameInMap("dis_order_id")]
         [Validation(Required=false)]
         public string DisOrderId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>refu123</para>
         /// </summary>
         [NameInMap("dis_sub_order_id")]
         [Validation(Required=false)]
         public string DisSubOrderId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("display_refund_money")]
         [Validation(Required=false)]
@@ -39,14 +52,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ExtraShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("is_voluntary")]
         [Validation(Required=false)]
         public int? IsVoluntary { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FlightItem_9966772382</para>
         /// </summary>
         [NameInMap("item_unit_ids")]
         [Validation(Required=false)]
@@ -56,6 +75,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string PassengerSegmentInfoListShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("personal_refund_price")]
         [Validation(Required=false)]
         public long? PersonalRefundPrice { get; set; }
@@ -65,7 +88,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ReasonDetail { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("reason_type")]
         [Validation(Required=false)]
@@ -76,12 +102,19 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RefundVoucherInfoShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0f9418cd2ce34af49ab0de16fea166d1</para>
         /// </summary>
         [NameInMap("session_id")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("total_refund_price")]
         [Validation(Required=false)]
         public long? TotalRefundPrice { get; set; }

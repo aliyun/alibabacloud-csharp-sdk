@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightModifyCancelV2ResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -18,25 +22,35 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// module
+        /// <para>module</para>
         /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public Dictionary<string, object> Module { get; set; }
 
         /// <summary>
-        /// requestId
+        /// <para>requestId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>407543AF-2BD9-5890-BD92-9D1AB7218B27</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// traceId
+        /// <para>traceId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>21041ce316577904808056433edbb2</para>
         /// </summary>
         [NameInMap("traceId")]
         [Validation(Required=false)]

@@ -10,40 +10,56 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelOrderPreValidateShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>23141</para>
         /// </summary>
         [NameInMap("btrip_user_id")]
         [Validation(Required=false)]
         public string BtripUserId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-05-15</para>
         /// </summary>
         [NameInMap("check_in")]
         [Validation(Required=false)]
         public string CheckIn { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-05-15</para>
         /// </summary>
         [NameInMap("check_out")]
         [Validation(Required=false)]
         public string CheckOut { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("daily_list")]
         [Validation(Required=false)]
         public string DailyListShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>612673015638</para>
         /// </summary>
         [NameInMap("item_id")]
         [Validation(Required=false)]
         public long? ItemId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("number_of_adults_per_room")]
         [Validation(Required=false)]
         public int? NumberOfAdultsPerRoom { get; set; }
@@ -53,42 +69,60 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OccupantInfoListShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>239872781</para>
         /// </summary>
         [NameInMap("rate_plan_id")]
         [Validation(Required=false)]
         public long? RatePlanId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>71652158</para>
         /// </summary>
         [NameInMap("room_id")]
         [Validation(Required=false)]
         public long? RoomId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("room_num")]
         [Validation(Required=false)]
         public int? RoomNum { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("search_room_price")]
         [Validation(Required=false)]
         public long? SearchRoomPrice { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2088441675613762</para>
         /// </summary>
         [NameInMap("seller_id")]
         [Validation(Required=false)]
         public long? SellerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>52302073</para>
         /// </summary>
         [NameInMap("shid")]
         [Validation(Required=false)]

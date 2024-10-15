@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IntlFlightOrderCancelRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>TRAVEL</para>
+        /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
@@ -17,10 +21,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Memo { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1012000000000000</para>
+        /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>F11374007131319304192</para>
+        /// </summary>
         [NameInMap("out_order_id")]
         [Validation(Required=false)]
         public string OutOrderId { get; set; }

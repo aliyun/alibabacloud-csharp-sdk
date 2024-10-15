@@ -17,10 +17,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public ModuleGroupItemShoppingItemMapValueCabinQuantityListSegmentPosition SegmentPosition { get; set; }
             public class ModuleGroupItemShoppingItemMapValueCabinQuantityListSegmentPosition : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("journey_index")]
                 [Validation(Required=false)]
                 public int? JourneyIndex { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("segment_index")]
                 [Validation(Required=false)]
                 public int? SegmentIndex { get; set; }
@@ -31,10 +39,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public ModuleGroupItemShoppingItemMapValueCabinQuantityListCabin Cabin { get; set; }
             public class ModuleGroupItemShoppingItemMapValueCabinQuantityListCabin : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Y</para>
+                /// </summary>
                 [NameInMap("cabin")]
                 [Validation(Required=false)]
                 public string Cabin { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Y</para>
+                /// </summary>
                 [NameInMap("cabin_class")]
                 [Validation(Required=false)]
                 public string CabinClass { get; set; }
@@ -43,6 +59,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CabinClassName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>A</para>
+                /// </summary>
                 [NameInMap("quantity")]
                 [Validation(Required=false)]
                 public string Quantity { get; set; }
@@ -55,14 +75,26 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public ModuleGroupItemShoppingItemMapValueSearchPrice SearchPrice { get; set; }
         public class ModuleGroupItemShoppingItemMapValueSearchPrice : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>120000</para>
+            /// </summary>
             [NameInMap("ticket_price")]
             [Validation(Required=false)]
             public int? TicketPrice { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>120000</para>
+            /// </summary>
             [NameInMap("sell_price")]
             [Validation(Required=false)]
             public int? SellPrice { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>6000</para>
+            /// </summary>
             [NameInMap("tax")]
             [Validation(Required=false)]
             public int? Tax { get; set; }
@@ -77,10 +109,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public ModuleGroupItemShoppingItemMapValueSegmentPriceListSegmentPosition SegmentPosition { get; set; }
             public class ModuleGroupItemShoppingItemMapValueSegmentPriceListSegmentPosition : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("journey_index")]
                 [Validation(Required=false)]
                 public int? JourneyIndex { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("segment_index")]
                 [Validation(Required=false)]
                 public int? SegmentIndex { get; set; }
@@ -91,14 +131,26 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public ModuleGroupItemShoppingItemMapValueSegmentPriceListSearchPrice SearchPrice { get; set; }
             public class ModuleGroupItemShoppingItemMapValueSegmentPriceListSearchPrice : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>120000</para>
+                /// </summary>
                 [NameInMap("ticket_price")]
                 [Validation(Required=false)]
                 public int? TicketPrice { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>120000</para>
+                /// </summary>
                 [NameInMap("sell_price")]
                 [Validation(Required=false)]
                 public int? SellPrice { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>6000</para>
+                /// </summary>
                 [NameInMap("tax")]
                 [Validation(Required=false)]
                 public int? Tax { get; set; }

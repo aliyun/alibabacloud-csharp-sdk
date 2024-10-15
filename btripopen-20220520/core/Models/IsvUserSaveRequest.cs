@@ -47,10 +47,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("depart_id")]
             [Validation(Required=false)]
             public long? DepartId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="mailto:123@163.com">123@163.com</a></para>
+            /// </summary>
             [NameInMap("email")]
             [Validation(Required=false)]
             public string Email { get; set; }
@@ -63,18 +71,34 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public bool? IsAdmin { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>8797</para>
+            /// </summary>
             [NameInMap("job_no")]
             [Validation(Required=false)]
             public string JobNo { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("leave_status")]
             [Validation(Required=false)]
             public int? LeaveStatus { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>123456</para>
+            /// </summary>
             [NameInMap("manager_user_id")]
             [Validation(Required=false)]
             public string ManagerUserId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>15364762829</para>
+            /// </summary>
             [NameInMap("phone")]
             [Validation(Required=false)]
             public string Phone { get; set; }
@@ -83,10 +107,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string Position { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("position_level")]
             [Validation(Required=false)]
             public string PositionLevel { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ceshi</para>
+            /// </summary>
             [NameInMap("real_name_en")]
             [Validation(Required=false)]
             public string RealNameEn { get; set; }
@@ -95,6 +127,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<string> RoleIdList { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>123</para>
+            /// </summary>
             [NameInMap("third_depart_id")]
             [Validation(Required=false)]
             public string ThirdDepartId { get; set; }
@@ -104,14 +140,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public List<string> ThirdDepartIdList { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123</para>
             /// </summary>
             [NameInMap("user_id")]
             [Validation(Required=false)]
             public string UserId { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("user_name")]
             [Validation(Required=false)]

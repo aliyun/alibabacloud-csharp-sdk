@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class EntityDeleteRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("del_all")]
         [Validation(Required=false)]
@@ -21,14 +24,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public List<EntityDeleteRequestEntityDOList> EntityDOList { get; set; }
         public class EntityDeleteRequestEntityDOList : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123</para>
             /// </summary>
             [NameInMap("entity_id")]
             [Validation(Required=false)]
             public string EntityId { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("entity_type")]
             [Validation(Required=false)]
@@ -37,7 +46,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("thirdpart_id")]
         [Validation(Required=false)]

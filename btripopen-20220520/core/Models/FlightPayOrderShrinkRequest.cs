@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightPayOrderShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("corp_pay_price")]
         [Validation(Required=false)]
         public long? CorpPayPrice { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dis123</para>
         /// </summary>
         [NameInMap("dis_order_id")]
         [Validation(Required=false)]
@@ -28,14 +34,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ExtraShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("personal_pay_price")]
         [Validation(Required=false)]
         public long? PersonalPayPrice { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("total_pay_price")]
         [Validation(Required=false)]

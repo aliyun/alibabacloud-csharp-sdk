@@ -14,14 +14,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public List<EntitySetRequestEntityDOList> EntityDOList { get; set; }
         public class EntitySetRequestEntityDOList : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123</para>
             /// </summary>
             [NameInMap("entity_id")]
             [Validation(Required=false)]
             public string EntityId { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("entity_type")]
             [Validation(Required=false)]
@@ -30,7 +36,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>340049</para>
         /// </summary>
         [NameInMap("thirdpart_id")]
         [Validation(Required=false)]

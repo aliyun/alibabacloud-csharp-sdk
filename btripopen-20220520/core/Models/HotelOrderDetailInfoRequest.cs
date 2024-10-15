@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string BtripOrderId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dis123</para>
+        /// </summary>
         [NameInMap("dis_order_id")]
         [Validation(Required=false)]
         public string DisOrderId { get; set; }

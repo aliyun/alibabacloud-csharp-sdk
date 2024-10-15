@@ -9,18 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceValue : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>17400</para>
+        /// </summary>
         [NameInMap("floor_price")]
         [Validation(Required=false)]
         public int? FloorPrice { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>121000</para>
+        /// </summary>
         [NameInMap("ticket_price")]
         [Validation(Required=false)]
         public int? TicketPrice { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>17400</para>
+        /// </summary>
         [NameInMap("sell_price")]
         [Validation(Required=false)]
         public int? SellPrice { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>17400</para>
+        /// </summary>
         [NameInMap("original_sell_price")]
         [Validation(Required=false)]
         public int? OriginalSellPrice { get; set; }
@@ -29,10 +45,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? BaseTotalPrice { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>17400</para>
+        /// </summary>
         [NameInMap("before_control_price")]
         [Validation(Required=false)]
         public int? BeforeControlPrice { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>11000</para>
+        /// </summary>
         [NameInMap("tax")]
         [Validation(Required=false)]
         public int? Tax { get; set; }
@@ -41,14 +65,26 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? SupplyPrice { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>242000</para>
+        /// </summary>
         [NameInMap("basic_cabin_price")]
         [Validation(Required=false)]
         public int? BasicCabinPrice { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5000</para>
+        /// </summary>
         [NameInMap("build_price")]
         [Validation(Required=false)]
         public int? BuildPrice { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>6000</para>
+        /// </summary>
         [NameInMap("oil_price")]
         [Validation(Required=false)]
         public int? OilPrice { get; set; }
@@ -61,12 +97,19 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? BusinessStandardPrice { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>242000</para>
+        /// </summary>
         [NameInMap("common_standard_price")]
         [Validation(Required=false)]
         public int? CommonStandardPrice { get; set; }
 
         /// <summary>
-        /// fdPrice
+        /// <para>fdPrice</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>fdPrice</para>
         /// </summary>
         [NameInMap("inter_ticket_price")]
         [Validation(Required=false)]
@@ -112,10 +155,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string DiscountInfo { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0.8</para>
+            /// </summary>
             [NameInMap("discount_num")]
             [Validation(Required=false)]
             public double? DiscountNum { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("show_ticket_price")]
             [Validation(Required=false)]
             public bool? ShowTicketPrice { get; set; }

@@ -9,31 +9,48 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CooperatorHotelBillSettlementQueryRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cooperator_alibtrip</para>
+        /// </summary>
         [NameInMap("cooperator_id")]
         [Validation(Required=false)]
         public string CooperatorId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("page_no")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("page_size")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-10-02</para>
         /// </summary>
         [NameInMap("period_end")]
         [Validation(Required=false)]
         public string PeriodEnd { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2021-10-01</para>
+        /// </summary>
         [NameInMap("period_start")]
         [Validation(Required=false)]
         public string PeriodStart { get; set; }

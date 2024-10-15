@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightOtaItemDetailRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cheshi</para>
         /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>68cdc6b37c87484c98b479b49306ffbb_0</para>
         /// </summary>
         [NameInMap("ota_item_id")]
         [Validation(Required=false)]
