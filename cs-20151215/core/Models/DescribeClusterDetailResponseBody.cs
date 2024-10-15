@@ -163,6 +163,26 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string NextVersion { get; set; }
 
+        [NameInMap("operation_policy")]
+        [Validation(Required=false)]
+        public DescribeClusterDetailResponseBodyOperationPolicy OperationPolicy { get; set; }
+        public class DescribeClusterDetailResponseBodyOperationPolicy : TeaModel {
+            [NameInMap("cluster_auto_upgrade")]
+            [Validation(Required=false)]
+            public DescribeClusterDetailResponseBodyOperationPolicyClusterAutoUpgrade ClusterAutoUpgrade { get; set; }
+            public class DescribeClusterDetailResponseBodyOperationPolicyClusterAutoUpgrade : TeaModel {
+                [NameInMap("channel")]
+                [Validation(Required=false)]
+                public string Channel { get; set; }
+
+                [NameInMap("enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>The ROS parameters of the cluster.</para>
         /// </summary>

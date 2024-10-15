@@ -2070,6 +2070,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["login_password"] = request.LoginPassword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintenanceWindow))
+            {
+                body["maintenance_window"] = request.MaintenanceWindow;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterAutoRenew))
             {
                 body["master_auto_renew"] = request.MasterAutoRenew;
@@ -2145,6 +2149,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumOfNodes))
             {
                 body["num_of_nodes"] = request.NumOfNodes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationPolicy))
+            {
+                body["operation_policy"] = request.OperationPolicy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
             {
@@ -2505,6 +2513,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["login_password"] = request.LoginPassword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintenanceWindow))
+            {
+                body["maintenance_window"] = request.MaintenanceWindow;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterAutoRenew))
             {
                 body["master_auto_renew"] = request.MasterAutoRenew;
@@ -2580,6 +2592,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumOfNodes))
             {
                 body["num_of_nodes"] = request.NumOfNodes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationPolicy))
+            {
+                body["operation_policy"] = request.OperationPolicy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
             {

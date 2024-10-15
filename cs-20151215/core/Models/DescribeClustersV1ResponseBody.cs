@@ -184,6 +184,26 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string NextVersion { get; set; }
 
+            [NameInMap("operation_policy")]
+            [Validation(Required=false)]
+            public DescribeClustersV1ResponseBodyClustersOperationPolicy OperationPolicy { get; set; }
+            public class DescribeClustersV1ResponseBodyClustersOperationPolicy : TeaModel {
+                [NameInMap("cluster_auto_upgrade")]
+                [Validation(Required=false)]
+                public DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade ClusterAutoUpgrade { get; set; }
+                public class DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade : TeaModel {
+                    [NameInMap("channel")]
+                    [Validation(Required=false)]
+                    public string Channel { get; set; }
+
+                    [NameInMap("enabled")]
+                    [Validation(Required=false)]
+                    public bool? Enabled { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// <para>Indicates whether Alibaba Cloud DNS PrivateZone is enabled. Valid values:</para>
             /// <list type="bullet">

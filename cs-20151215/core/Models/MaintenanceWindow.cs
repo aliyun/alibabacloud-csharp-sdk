@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>03:00:00Z</para>
+        /// <para>2020-10-15T12:31:00.000+08:00</para>
         /// </summary>
         [NameInMap("maintenance_time")]
         [Validation(Required=false)]

@@ -479,6 +479,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string LoginPassword { get; set; }
 
+        [NameInMap("maintenance_window")]
+        [Validation(Required=false)]
+        public MaintenanceWindow MaintenanceWindow { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only when <c>master_instance_charge_type</c> is set to <c>PrePaid</c>. Valid values:</para>
         /// <list type="bullet">
@@ -701,6 +705,26 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         [Obsolete]
         public long? NumOfNodes { get; set; }
+
+        [NameInMap("operation_policy")]
+        [Validation(Required=false)]
+        public CreateClusterRequestOperationPolicy OperationPolicy { get; set; }
+        public class CreateClusterRequestOperationPolicy : TeaModel {
+            [NameInMap("cluster_auto_upgrade")]
+            [Validation(Required=false)]
+            public CreateClusterRequestOperationPolicyClusterAutoUpgrade ClusterAutoUpgrade { get; set; }
+            public class CreateClusterRequestOperationPolicyClusterAutoUpgrade : TeaModel {
+                [NameInMap("channel")]
+                [Validation(Required=false)]
+                public string Channel { get; set; }
+
+                [NameInMap("enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+            }
+
+        }
 
         /// <summary>
         /// <para>The type of OS. Valid values:</para>
