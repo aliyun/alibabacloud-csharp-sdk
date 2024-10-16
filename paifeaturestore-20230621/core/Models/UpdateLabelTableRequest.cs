@@ -9,33 +9,43 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class UpdateLabelTableRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("DatasourceId")]
         [Validation(Required=false)]
         public string DatasourceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Fields")]
         [Validation(Required=false)]
         public List<UpdateLabelTableRequestFields> Fields { get; set; }
         public class UpdateLabelTableRequestFields : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Attributes")]
             [Validation(Required=false)]
             public List<string> Attributes { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>lat</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>DOUBLE</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -43,6 +53,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rec_test</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

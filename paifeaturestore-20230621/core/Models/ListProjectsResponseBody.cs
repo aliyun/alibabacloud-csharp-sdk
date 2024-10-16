@@ -13,76 +13,148 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public List<ListProjectsResponseBodyProjects> Projects { get; set; }
         public class ListProjectsResponseBodyProjects : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>This is a test.</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("FeatureEntityCount")]
             [Validation(Required=false)]
             public int? FeatureEntityCount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("FeatureViewCount")]
             [Validation(Required=false)]
             public int? FeatureViewCount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2021-12-15T23:24:33.132+08:00</para>
+            /// </summary>
             [NameInMap("GmtCreateTime")]
             [Validation(Required=false)]
             public string GmtCreateTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2021-12-15T23:24:33.132+08:00</para>
+            /// </summary>
             [NameInMap("GmtModifiedTime")]
             [Validation(Required=false)]
             public string GmtModifiedTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("ModelCount")]
             [Validation(Required=false)]
             public int? ModelCount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>project1</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>4</para>
+            /// </summary>
             [NameInMap("OfflineDatasourceId")]
             [Validation(Required=false)]
             public string OfflineDatasourceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>datasource1</para>
+            /// </summary>
             [NameInMap("OfflineDatasourceName")]
             [Validation(Required=false)]
             public string OfflineDatasourceName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>MaxCompute</para>
+            /// </summary>
             [NameInMap("OfflineDatasourceType")]
             [Validation(Required=false)]
             public string OfflineDatasourceType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("OfflineLifecycle")]
             [Validation(Required=false)]
             public int? OfflineLifecycle { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("OnlineDatasourceId")]
             [Validation(Required=false)]
             public string OnlineDatasourceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>datasource2</para>
+            /// </summary>
             [NameInMap("OnlineDatasourceName")]
             [Validation(Required=false)]
             public string OnlineDatasourceName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Hologres</para>
+            /// </summary>
             [NameInMap("OnlineDatasourceType")]
             [Validation(Required=false)]
             public string OnlineDatasourceType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1232132543543****</para>
+            /// </summary>
             [NameInMap("Owner")]
             [Validation(Required=false)]
             public string Owner { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public string ProjectId { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>44933189-493B-5C43-A5C6-11EEC2A43520</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }

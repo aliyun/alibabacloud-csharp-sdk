@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class CreateFeatureViewRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;save_original_field&quot;:true}</para>
+        /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>4</para>
+        /// </summary>
         [NameInMap("FeatureEntityId")]
         [Validation(Required=false)]
         public string FeatureEntityId { get; set; }
@@ -25,10 +33,18 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             [Validation(Required=false)]
             public List<string> Attributes { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>age</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>INT32</para>
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -36,34 +52,55 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FeatureView1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
         [NameInMap("RegisterDatasourceId")]
         [Validation(Required=false)]
         public string RegisterDatasourceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>table1</para>
+        /// </summary>
         [NameInMap("RegisterTable")]
         [Validation(Required=false)]
         public string RegisterTable { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("SyncOnlineTable")]
         [Validation(Required=false)]
         public bool? SyncOnlineTable { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>90</para>
+        /// </summary>
         [NameInMap("TTL")]
         [Validation(Required=false)]
         public int? TTL { get; set; }
@@ -73,14 +110,20 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public List<string> Tags { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Batch</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Custom</para>
         /// </summary>
         [NameInMap("WriteMethod")]
         [Validation(Required=false)]

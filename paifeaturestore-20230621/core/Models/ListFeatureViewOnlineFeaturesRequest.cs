@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class ListFeatureViewOnlineFeaturesRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("JoinIds")]
         [Validation(Required=false)]

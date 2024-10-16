@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public ExportModelFeatureTrainingSetTableRequestLabelInputConfig LabelInputConfig { get; set; }
         public class ExportModelFeatureTrainingSetTableRequestLabelInputConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2022-07-02 00:00:00</para>
+            /// </summary>
             [NameInMap("EventTime")]
             [Validation(Required=false)]
             public string EventTime { get; set; }

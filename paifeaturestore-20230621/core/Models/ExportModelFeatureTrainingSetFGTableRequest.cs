@@ -10,22 +10,30 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class ExportModelFeatureTrainingSetFGTableRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TrainingSetFgConfig")]
         [Validation(Required=false)]
         public ExportModelFeatureTrainingSetFGTableRequestTrainingSetFgConfig TrainingSetFgConfig { get; set; }
         public class ExportModelFeatureTrainingSetFGTableRequestTrainingSetFgConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>rank_v1_fg.json</para>
+            /// </summary>
             [NameInMap("FgJsonName")]
             [Validation(Required=false)]
             public string FgJsonName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>fg_on_odps-1.3.60-jar-with-dependencies.jar</para>
+            /// </summary>
             [NameInMap("JarName")]
             [Validation(Required=false)]
             public string JarName { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Partitions")]
             [Validation(Required=false)]

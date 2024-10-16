@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class CreateServiceIdentityRoleRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AliyunServiceRoleForFeatureStore</para>
         /// </summary>
         [NameInMap("RoleName")]
         [Validation(Required=false)]
