@@ -39,6 +39,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string DstVpcId { get; set; }
 
+        [NameInMap("HitContentType")]
+        [Validation(Required=false)]
+        public int? HitContentType { get; set; }
+
+        [NameInMap("HitTo")]
+        [Validation(Required=false)]
+        public int? HitTo { get; set; }
+
+        [NameInMap("ParsedContent")]
+        [Validation(Required=false)]
+        public string ParsedContent { get; set; }
+
         /// <summary>
         /// <para>The attack payload of the intrusion event.</para>
         /// 

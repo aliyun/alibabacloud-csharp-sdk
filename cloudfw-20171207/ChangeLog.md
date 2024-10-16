@@ -1,3 +1,7 @@
+2024-10-16 Version: 3.2.1
+- Update API DescribeRiskEventPayload: update response param.
+
+
 2024-09-24 Version: 3.2.0
 - Support API DescribeUserBuyVersion.
 - Update API AddAddressBook: update param AddressList.
