@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         /// <item><description>The image size cannot exceed 20 MB, the height or width of the image cannot exceed 30,000 pixels, and the image cannot exceed 0.25 billion pixels.</description></item>
         /// <item><description>We recommend that you upload images of at least 256 × 256 pixels to ensure required moderation result.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;http://<c>127.66.**.**</c>/image.jpeg&quot;,&quot;http://<c>127.66.**.**</c>/photo.jpeg&quot;]</para>
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]

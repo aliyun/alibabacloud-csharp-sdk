@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>http://<c>127.66.**.**</c>/image.jpeg</para>
         /// </summary>
         [NameInMap("ImageUrl")]
         [Validation(Required=false)]

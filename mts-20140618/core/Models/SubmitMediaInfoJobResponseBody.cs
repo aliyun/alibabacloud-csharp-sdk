@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     public string FormatLongName { get; set; }
 
                     /// <summary>
-                    /// <para>The short name of the container format. For more information about the parameters, see <a href="https://www.alibabacloud.com/help/zh/apsaravideo-for-media-processing/latest/parameter-details-a">Parameter details</a>.</para>
+                    /// <para>The short name of the container format. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>mov</para>

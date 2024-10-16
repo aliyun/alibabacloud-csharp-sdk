@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                 [Validation(Required=false)]
                 public string CustomViewId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>http://<c>127.66.**.**</c>/photo.jpeg</para>
+                /// </summary>
                 [NameInMap("ImageUrl")]
                 [Validation(Required=false)]
                 public string ImageUrl { get; set; }

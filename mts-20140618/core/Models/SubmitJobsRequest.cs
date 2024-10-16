@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         /// <para>The ID of the MPS queue. For more information, see <a href="https://help.aliyun.com/document_detail/31827.html">Terms</a>.</para>
         /// <list type="bullet">
         /// <item><description>To obtain the ID of an MPS queue, you can log on to the <a href="https://mps.console.aliyun.com/overview">MPS console</a> and choose <b>Global Settings</b> &gt; <b>MPS Queue and Callback</b> in the left-side navigation pane.</description></item>
-        /// <item><description>If you want to receive asynchronous message notifications, associate an MNS queue or topic with the MPS queue. For more information, see <a href="https://www.alibabacloud.com/help/zh/apsaravideo-for-media-processing/latest/receive-message-notifications">Receive notifications</a>.</description></item>
+        /// <item><description>If you want to receive asynchronous message notifications, associate an MNS queue or topic with the MPS queue. For more information, see <a href="https://help.aliyun.com/document_detail/42618.html">Receive notifications</a>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

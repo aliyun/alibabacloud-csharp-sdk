@@ -48,10 +48,11 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The path of the input file. You can query the path of the input file in the MPS or OSS console. For more information, see the <b>Triggering and matching rules for a workflow</b> section of this topic.</para>
+        /// <para>The URL of the input file. You can obtain the URL in the MPS or OSS console. For more information, see the <b>Triggering and matching rule for a workflow</b> section of this topic.</para>
         /// <list type="bullet">
-        /// <item><description>The value can be up to 3,200 bytes in length.</description></item>
-        /// <item><description>The URL complies with RFC 2396 and is encoded in UTF-8, with reserved characters being percent-encoded. For more information, see <a href="https://help.aliyun.com/document_detail/423796.html">URL encoding</a>.</description></item>
+        /// <item><description>Only OSS HTTP URLs are supported. Alibaba Cloud CDN URLs and HTTPS URLs are not supported.</description></item>
+        /// <item><description>The value can be up to 3,200 bytes in size.</description></item>
+        /// <item><description>The URL complies with RFC 2396 and is encoded in UTF-8. For more information, see <a href="https://help.aliyun.com/document_detail/423796.html">URL encoding</a>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

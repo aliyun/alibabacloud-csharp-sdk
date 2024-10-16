@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public string JobStatus { get; set; }
 
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>7B117AF5-2A16-412C-B127-FA6175ED1AD0</para>

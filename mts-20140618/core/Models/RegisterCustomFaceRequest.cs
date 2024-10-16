@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public string PersonId { get; set; }
 
+        [NameInMap("PersonName")]
+        [Validation(Required=false)]
+        public string PersonName { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }

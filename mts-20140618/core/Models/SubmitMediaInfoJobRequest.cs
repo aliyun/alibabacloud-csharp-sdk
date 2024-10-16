@@ -46,7 +46,11 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the MPS queue to which the analysis job is submitted. To view the ID of the MPS queue, log on to the <b>MPS console</b> and choose <b>Global Settings</b> &gt; <b>Pipelines</b> in the left-side navigation pane.</para>
+        /// <para>The ID of the MPS queue to which the job was submitted. For more information, see <a href="https://help.aliyun.com/document_detail/29197.html">Terms</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>To view the ID of the MPS queue, log on to the <a href="https://mps.console.aliyun.com/overview">MPS console</a> and choose <b>Global Settings</b> &gt; <b>MPS queue and Callback</b> in the left-side navigation pane. On the MPS queue and Callback page, you can view the ID of an MPS queue or create an MPS queue.</description></item>
+        /// <item><description>If you want to receive asynchronous message notifications, associate an MNS queue or topic with the MPS queue. For more information, see <a href="https://www.alibabacloud.com/help/en/mps/receive-message-notifications/?spm=a2c63.p38356.0.0.b48576d2jxNSca">Receive message notifications</a>.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>88c6ca184c0e432bbf5b665e2a15****</para>
