@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateDBResourceGroupRequest : TeaModel {
+        [NameInMap("AutoStopInterval")]
+        [Validation(Required=false)]
+        public string AutoStopInterval { get; set; }
+
         /// <summary>
         /// <para>A reserved parameter.</para>
         /// 

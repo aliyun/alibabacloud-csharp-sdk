@@ -114,6 +114,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public List<DescribePerformanceViewAttributeResponseBodyViewDetailCategoriesKeys> Keys { get; set; }
                 public class DescribePerformanceViewAttributeResponseBodyViewDetailCategoriesKeys : TeaModel {
+                    [NameInMap("EnableAutoMc")]
+                    [Validation(Required=false)]
+                    public bool? EnableAutoMc { get; set; }
+
+                    [NameInMap("Engine")]
+                    [Validation(Required=false)]
+                    public List<string> Engine { get; set; }
+
+                    [NameInMap("GroupType")]
+                    [Validation(Required=false)]
+                    public List<string> GroupType { get; set; }
+
                     /// <summary>
                     /// <para>The name of the metric.</para>
                     /// 

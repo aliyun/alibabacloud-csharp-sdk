@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public List<DescribeDBResourceGroupResponseBodyGroupsInfo> GroupsInfo { get; set; }
         public class DescribeDBResourceGroupResponseBodyGroupsInfo : TeaModel {
+            [NameInMap("AutoStopInterval")]
+            [Validation(Required=false)]
+            public string AutoStopInterval { get; set; }
+
             /// <summary>
             /// <para>A reserved parameter.</para>
             /// 

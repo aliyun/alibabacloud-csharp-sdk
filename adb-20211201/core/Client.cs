@@ -1506,6 +1506,10 @@ namespace AlibabaCloud.SDK.Adb20211201
                 request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopInterval))
+            {
+                query["AutoStopInterval"] = request.AutoStopInterval;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterMode))
             {
                 query["ClusterMode"] = request.ClusterMode;
@@ -1631,6 +1635,10 @@ namespace AlibabaCloud.SDK.Adb20211201
                 request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopInterval))
+            {
+                query["AutoStopInterval"] = request.AutoStopInterval;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterMode))
             {
                 query["ClusterMode"] = request.ClusterMode;
@@ -20058,6 +20066,10 @@ namespace AlibabaCloud.SDK.Adb20211201
                 request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopInterval))
+            {
+                query["AutoStopInterval"] = request.AutoStopInterval;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterMode))
             {
                 query["ClusterMode"] = request.ClusterMode;
@@ -20121,6 +20133,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecName))
             {
                 query["SpecName"] = request.SpecName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetResourceGroupName))
             {
@@ -20179,6 +20195,10 @@ namespace AlibabaCloud.SDK.Adb20211201
                 request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopInterval))
+            {
+                query["AutoStopInterval"] = request.AutoStopInterval;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterMode))
             {
                 query["ClusterMode"] = request.ClusterMode;
@@ -20242,6 +20262,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecName))
             {
                 query["SpecName"] = request.SpecName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetResourceGroupName))
             {
