@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [Validation(Required=false)]
         public string OppoChannelId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>&quot;true&quot;,默认&quot;false&quot;</para>
+        /// </summary>
         [NameInMap("vivoAddBadge")]
         [Validation(Required=false)]
         public string VivoAddBadge { get; set; }

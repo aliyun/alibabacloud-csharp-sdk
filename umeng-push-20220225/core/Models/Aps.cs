@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [Validation(Required=false)]
         public Alert Alert { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>+1(自增)，-1(自减)，4(设置数字)</para>
+        /// </summary>
         [NameInMap("badge")]
         [Validation(Required=false)]
         public string Badge { get; set; }
