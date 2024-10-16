@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Extra { get; set; }
 
+        [NameInMap("message2ThirdChannel")]
+        [Validation(Required=false)]
+        public Message2ThirdChannel Message2ThirdChannel { get; set; }
+
     }
 
 }
