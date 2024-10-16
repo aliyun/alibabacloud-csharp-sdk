@@ -424,6 +424,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public bool? SpotInstanceRemedy { get; set; }
 
+        [NameInMap("StopInstanceTimeout")]
+        [Validation(Required=false)]
+        public int? StopInstanceTimeout { get; set; }
+
         /// <summary>
         /// <para>The IDs of vSwitches.</para>
         /// <para>This parameter takes effect only when the network type of the scaling group is virtual private cloud (VPC). The specified vSwitches and the scaling group must reside in the same VPC.</para>

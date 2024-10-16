@@ -771,6 +771,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public int? StandbyCapacity { get; set; }
 
+            [NameInMap("StopInstanceTimeout")]
+            [Validation(Required=false)]
+            public int? StopInstanceTimeout { get; set; }
+
             /// <summary>
             /// <para>The number of instances that was stopped in Economical Mode in the scaling group.</para>
             /// 

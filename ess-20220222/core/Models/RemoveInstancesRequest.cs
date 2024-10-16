@@ -120,6 +120,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string ScalingGroupId { get; set; }
 
+        [NameInMap("StopInstanceTimeout")]
+        [Validation(Required=false)]
+        public int? StopInstanceTimeout { get; set; }
+
     }
 
 }

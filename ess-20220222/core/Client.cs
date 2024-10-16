@@ -4949,6 +4949,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["SpotInstanceRemedy"] = request.SpotInstanceRemedy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopInstanceTimeout))
+            {
+                query["StopInstanceTimeout"] = request.StopInstanceTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncAlarmRuleToCms))
             {
                 query["SyncAlarmRuleToCms"] = request.SyncAlarmRuleToCms;
@@ -5196,6 +5200,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotInstanceRemedy))
             {
                 query["SpotInstanceRemedy"] = request.SpotInstanceRemedy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopInstanceTimeout))
+            {
+                query["StopInstanceTimeout"] = request.StopInstanceTimeout;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncAlarmRuleToCms))
             {
@@ -16706,6 +16714,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["SpotInstanceRemedy"] = request.SpotInstanceRemedy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopInstanceTimeout))
+            {
+                query["StopInstanceTimeout"] = request.StopInstanceTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIds))
             {
                 query["VSwitchIds"] = request.VSwitchIds;
@@ -16890,6 +16902,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotInstanceRemedy))
             {
                 query["SpotInstanceRemedy"] = request.SpotInstanceRemedy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopInstanceTimeout))
+            {
+                query["StopInstanceTimeout"] = request.StopInstanceTimeout;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIds))
             {
@@ -18095,6 +18111,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["ScalingGroupId"] = request.ScalingGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopInstanceTimeout))
+            {
+                query["StopInstanceTimeout"] = request.StopInstanceTimeout;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -18192,6 +18212,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingGroupId))
             {
                 query["ScalingGroupId"] = request.ScalingGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopInstanceTimeout))
+            {
+                query["StopInstanceTimeout"] = request.StopInstanceTimeout;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

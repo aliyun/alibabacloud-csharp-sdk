@@ -768,6 +768,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public bool? SpotInstanceRemedy { get; set; }
 
+        [NameInMap("StopInstanceTimeout")]
+        [Validation(Required=false)]
+        public int? StopInstanceTimeout { get; set; }
+
         /// <summary>
         /// <remarks>
         /// <para>This parameter is unavailable.</para>
