@@ -111,18 +111,6 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
 
         }
 
-        [NameInMap("errorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("errorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
     }
 
 }

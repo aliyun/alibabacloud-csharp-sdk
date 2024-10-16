@@ -39,6 +39,126 @@ namespace AlibabaCloud.SDK.IQS20240712
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>自然语言通用查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CommonQueryBySceneRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CommonQueryBySceneResponse
+        /// </returns>
+        public CommonQueryBySceneResponse CommonQueryBySceneWithOptions(CommonQueryBySceneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CommonQueryByScene",
+                Version = "2024-07-12",
+                Protocol = "HTTPS",
+                Pathname = "/amap-function-call-agent/iqs-agent-service/v2/nl/common",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CommonQueryBySceneResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>自然语言通用查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CommonQueryBySceneRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CommonQueryBySceneResponse
+        /// </returns>
+        public async Task<CommonQueryBySceneResponse> CommonQueryBySceneWithOptionsAsync(CommonQueryBySceneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CommonQueryByScene",
+                Version = "2024-07-12",
+                Protocol = "HTTPS",
+                Pathname = "/amap-function-call-agent/iqs-agent-service/v2/nl/common",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CommonQueryBySceneResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>自然语言通用查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CommonQueryBySceneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CommonQueryBySceneResponse
+        /// </returns>
+        public CommonQueryBySceneResponse CommonQueryByScene(CommonQueryBySceneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CommonQueryBySceneWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>自然语言通用查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CommonQueryBySceneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CommonQueryBySceneResponse
+        /// </returns>
+        public async Task<CommonQueryBySceneResponse> CommonQueryBySceneAsync(CommonQueryBySceneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CommonQueryBySceneWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>景点查询</para>
         /// </summary>
         /// 
@@ -159,7 +279,7 @@ namespace AlibabaCloud.SDK.IQS20240712
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>餐厅查询</para>
+        /// <para>酒店查询</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -200,7 +320,7 @@ namespace AlibabaCloud.SDK.IQS20240712
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>餐厅查询</para>
+        /// <para>酒店查询</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -241,7 +361,7 @@ namespace AlibabaCloud.SDK.IQS20240712
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>餐厅查询</para>
+        /// <para>酒店查询</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -260,7 +380,7 @@ namespace AlibabaCloud.SDK.IQS20240712
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>餐厅查询</para>
+        /// <para>酒店查询</para>
         /// </summary>
         /// 
         /// <param name="request">
