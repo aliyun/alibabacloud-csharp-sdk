@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("UnavailableZones")]
+            [Validation(Required=false)]
+            public List<string> UnavailableZones { get; set; }
+
             /// <summary>
             /// <para>The queried zones.</para>
             /// </summary>

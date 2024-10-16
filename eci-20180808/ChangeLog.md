@@ -1,3 +1,7 @@
+2024-10-16 Version: 1.1.3
+- Update API DescribeRegions: update response param.
+
+
 2024-09-26 Version: 1.1.2
 - Update API CreateImageCache: add param OsType.
 - Update API DescribeContainerGroups: update response param.
