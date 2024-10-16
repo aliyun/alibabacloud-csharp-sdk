@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
-    public class ListMemoriesRequest : TeaModel {
+    public class ListPromptTemplatesRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>10</para>
@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        [NameInMap("name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>dc270401186b433f975d7e1faaa34e0e</para>
@@ -24,6 +28,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>System</para>
+        /// </summary>
+        [NameInMap("type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

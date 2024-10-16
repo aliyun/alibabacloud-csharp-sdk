@@ -8,13 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
-    public class UpdateMemoryNodeRequest : TeaModel {
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
+    public class UpdatePromptTemplateRequest : TeaModel {
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
+
+        [NameInMap("name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
     }
 

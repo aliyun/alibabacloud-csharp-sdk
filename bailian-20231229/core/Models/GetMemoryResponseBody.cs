@@ -13,14 +13,26 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>6bff4f317a14442fbc9f73d29dbd5fc3</para>
+        /// </summary>
         [NameInMap("memoryId")]
         [Validation(Required=false)]
         public string MemoryId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>6a71f2d9-f1c9-913b-818b-114029103cad</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>llm-us9hjmt32nysdm5v</para>
+        /// </summary>
         [NameInMap("workspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

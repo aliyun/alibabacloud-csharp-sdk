@@ -10,14 +10,19 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class DeleteIndexDocumentRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The list of the primary key IDs of the documents.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DocumentIds")]
         [Validation(Required=false)]
         public List<string> DocumentIds { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The primary key ID of the knowledge base, which is the <c>Data.Id</c> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>79c0aly8zw</para>
         /// </summary>
         [NameInMap("IndexId")]
         [Validation(Required=false)]

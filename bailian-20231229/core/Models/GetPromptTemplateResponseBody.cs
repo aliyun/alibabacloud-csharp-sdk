@@ -8,26 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
-    public class GetMemoryNodeResponseBody : TeaModel {
+    public class GetPromptTemplateResponseBody : TeaModel {
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>6bff4f317a14442fbc9f73d29dbd5fc3</para>
-        /// </summary>
-        [NameInMap("memoryId")]
+        [NameInMap("name")]
         [Validation(Required=false)]
-        public string MemoryId { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>68de06c95368463a8be4a84efc872cc5</para>
+        /// <para>6e49109bfeb94a39bb268f4e483ccxxx</para>
         /// </summary>
-        [NameInMap("memoryNodeId")]
+        [NameInMap("promptTemplateId")]
         [Validation(Required=false)]
-        public string MemoryNodeId { get; set; }
+        public string PromptTemplateId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -39,7 +35,15 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>llm-us9hjmt32nysdm5v</para>
+        /// <para>[&quot;theme&quot;]</para>
+        /// </summary>
+        [NameInMap("variables")]
+        [Validation(Required=false)]
+        public List<string> Variables { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>llm-us9hjmt32nysdxxx</para>
         /// </summary>
         [NameInMap("workspaceId")]
         [Validation(Required=false)]

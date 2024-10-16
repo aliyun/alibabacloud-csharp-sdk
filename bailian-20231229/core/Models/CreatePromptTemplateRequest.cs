@@ -8,22 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
-    public class ListMemoriesRequest : TeaModel {
+    public class CreatePromptTemplateRequest : TeaModel {
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("maxResults")]
+        [NameInMap("content")]
         [Validation(Required=false)]
-        public int? MaxResults { get; set; }
+        public string Content { get; set; }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>dc270401186b433f975d7e1faaa34e0e</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("nextToken")]
+        [NameInMap("name")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public string Name { get; set; }
 
     }
 
