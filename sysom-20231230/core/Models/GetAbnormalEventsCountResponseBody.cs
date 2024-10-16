@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
-    public class InvokeDiagnosisResponseBody : TeaModel {
+    public class GetAbnormalEventsCountResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -19,29 +19,33 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 
         [NameInMap("data")]
         [Validation(Required=false)]
-        public InvokeDiagnosisResponseBodyData Data { get; set; }
-        public class InvokeDiagnosisResponseBodyData : TeaModel {
+        public List<GetAbnormalEventsCountResponseBodyData> Data { get; set; }
+        public class GetAbnormalEventsCountResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>ihqhAcrt</para>
+            /// <para>health</para>
             /// </summary>
-            [NameInMap("task_id")]
+            [NameInMap("type")]
             [Validation(Required=false)]
-            public string TaskId { get; set; }
+            public string Type { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public long? Value { get; set; }
 
         }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</para>
+        /// <para>result: code=1 msg=(Request failed, status_code != 200)</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
-
-        [NameInMap("request_id")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

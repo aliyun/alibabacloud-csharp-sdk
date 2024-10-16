@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -12,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class AuthDiagnosisRequest : TeaModel {
+        [NameInMap("autoCreateRole")]
+        [Validation(Required=false)]
+        public bool? AutoCreateRole { get; set; }
+
+        [NameInMap("autoInstallAgent")]
+        [Validation(Required=false)]
+        public bool? AutoInstallAgent { get; set; }
+
         [NameInMap("instances")]
         [Validation(Required=false)]
         public List<AuthDiagnosisRequestInstances> Instances { get; set; }
