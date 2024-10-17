@@ -8,36 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Domain20180208.Models
 {
-    public class BidDomainRequest : TeaModel {
+    public class QueryExchangeRateRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12345678</para>
+        /// <para>USD</para>
         /// </summary>
-        [NameInMap("AuctionId")]
+        [NameInMap("FromCurrency")]
         [Validation(Required=false)]
-        public string AuctionId { get; set; }
+        public string FromCurrency { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>RMB</para>
+        /// <para>CNY</para>
         /// </summary>
-        [NameInMap("Currency")]
+        [NameInMap("ToCurrency")]
         [Validation(Required=false)]
-        public string Currency { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>100</para>
-        /// </summary>
-        [NameInMap("MaxBid")]
-        [Validation(Required=false)]
-        public float? MaxBid { get; set; }
+        public string ToCurrency { get; set; }
 
     }
 

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
         [Validation(Required=false)]
         public string BindUrl { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>497F7522-82B0-4BD4-84FE-AE8749E4C2F9</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

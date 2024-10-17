@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 {
     public class CheckDomainStatusRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]

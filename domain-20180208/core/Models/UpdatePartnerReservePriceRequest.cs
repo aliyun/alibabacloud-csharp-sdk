@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 {
     public class UpdatePartnerReservePriceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BiddingId")]
         [Validation(Required=false)]
         public int? BiddingId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PartnerType")]
         [Validation(Required=false)]
         public string PartnerType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ReservePrice")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 {
     public class SelectedDomainListRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20231109</para>
         /// </summary>
         [NameInMap("ListDate")]
         [Validation(Required=false)]

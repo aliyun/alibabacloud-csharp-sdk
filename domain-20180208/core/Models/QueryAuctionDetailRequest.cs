@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 {
     public class QueryAuctionDetailRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("AuctionId")]
         [Validation(Required=false)]

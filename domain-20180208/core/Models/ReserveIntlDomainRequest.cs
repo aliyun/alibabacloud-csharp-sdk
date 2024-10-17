@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 {
     public class ReserveIntlDomainRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

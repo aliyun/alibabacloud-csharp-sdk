@@ -18,21 +18,21 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
             public List<ChangeAuctionRequestAuctionListBidRecords> BidRecords { get; set; }
             public class ChangeAuctionRequestAuctionListBidRecords : TeaModel {
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("Price")]
                 [Validation(Required=false)]
                 public float? Price { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
             }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
@@ -75,14 +75,14 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
             public long? TimeLeft { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Winner")]
             [Validation(Required=false)]
             public string Winner { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("WinnerPrice")]
             [Validation(Required=false)]

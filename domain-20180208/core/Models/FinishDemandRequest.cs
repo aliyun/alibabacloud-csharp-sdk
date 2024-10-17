@@ -10,12 +10,19 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 {
     public class FinishDemandRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SE20183A0Q7C5556</para>
         /// </summary>
         [NameInMap("BizId")]
         [Validation(Required=false)]
         public string BizId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>some message</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
