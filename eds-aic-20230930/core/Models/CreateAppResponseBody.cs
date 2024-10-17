@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateAppResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1234</para>
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public int? AppId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>E5138F7E-46B5-526A-8C99-82DEAE6B****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

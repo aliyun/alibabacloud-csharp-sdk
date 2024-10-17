@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<string> AndroidInstanceIds { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("AuthorizeUserId")]
         [Validation(Required=false)]
         public string AuthorizeUserId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("UnAuthorizeUserId")]
         [Validation(Required=false)]
         public string UnAuthorizeUserId { get; set; }

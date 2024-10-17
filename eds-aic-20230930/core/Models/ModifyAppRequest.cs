@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ModifyAppRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1234</para>
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public int? AppId { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="https://defaultIcon.png">https://defaultIcon.png</a></para>
+        /// </summary>
         [NameInMap("IconUrl")]
         [Validation(Required=false)]
         public string IconUrl { get; set; }

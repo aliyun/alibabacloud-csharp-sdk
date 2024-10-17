@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class UpdateInstanceGroupImageRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>imgc-075cllfeuazh****</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceGroupIds")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class BackupFileRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AndroidInstanceIdList")]
         [Validation(Required=false)]
         public List<string> AndroidInstanceIdList { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BackupFilePath")]
         [Validation(Required=false)]
@@ -28,16 +28,24 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SourceFilePathList")]
         [Validation(Required=false)]
         public List<string> SourceFilePathList { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>oss-cn-shanghai-internal.aliyuncs.com</para>
+        /// </summary>
         [NameInMap("UploadEndpoint")]
         [Validation(Required=false)]
         public string UploadEndpoint { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>OSS</para>
+        /// </summary>
         [NameInMap("UploadType")]
         [Validation(Required=false)]
         public string UploadType { get; set; }

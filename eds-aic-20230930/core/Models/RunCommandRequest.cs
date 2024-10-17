@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RunCommandRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ls</para>
+        /// </summary>
         [NameInMap("CommandContent")]
         [Validation(Required=false)]
         public string CommandContent { get; set; }
@@ -17,6 +21,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>60</para>
+        /// </summary>
         [NameInMap("Timeout")]
         [Validation(Required=false)]
         public long? Timeout { get; set; }

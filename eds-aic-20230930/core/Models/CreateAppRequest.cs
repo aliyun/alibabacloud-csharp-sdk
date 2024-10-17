@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateAppRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
@@ -24,6 +24,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>testApp.apk</para>
+        /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
@@ -32,14 +36,26 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string FilePath { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="https://test.png">https://test.png</a></para>
+        /// </summary>
         [NameInMap("IconUrl")]
         [Validation(Required=false)]
         public string IconUrl { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>-d</para>
+        /// </summary>
         [NameInMap("InstallParam")]
         [Validation(Required=false)]
         public string InstallParam { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="http://testApp.apk">http://testApp.apk</a></para>
+        /// </summary>
         [NameInMap("OssAppUrl")]
         [Validation(Required=false)]
         public string OssAppUrl { get; set; }

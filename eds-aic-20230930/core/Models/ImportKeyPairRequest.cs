@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ImportKeyPairRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TestKeyPairName</para>
         /// </summary>
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ABC1234567*****</para>
         /// </summary>
         [NameInMap("PublicKeyBody")]
         [Validation(Required=false)]

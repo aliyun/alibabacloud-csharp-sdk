@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreatePolicyGroupResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>pg-exbuu6yrpvb******</para>
+        /// </summary>
         [NameInMap("PolicyGroupId")]
         [Validation(Required=false)]
         public string PolicyGroupId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC******</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

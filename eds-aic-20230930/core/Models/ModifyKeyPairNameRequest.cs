@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ModifyKeyPairNameRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>kp-6v2q33ae4tw3a****</para>
         /// </summary>
         [NameInMap("KeyPairId")]
         [Validation(Required=false)]
         public string KeyPairId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>newKeyPairName</para>
         /// </summary>
         [NameInMap("NewKeyPairName")]
         [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ModifyKeyPairNameResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>69BCBBE4-FCF2-59B8-AD9D-531EB422****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
