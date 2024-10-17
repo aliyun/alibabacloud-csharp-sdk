@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20160607.Models
 {
-    public class UpdateUserInfoResponse : TeaModel {
+    public class UpdateUserInfoResponse : BaseModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
