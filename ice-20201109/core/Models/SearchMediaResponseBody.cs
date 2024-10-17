@@ -347,7 +347,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public SearchMediaResponseBodyMediaInfoListAiRoughData AiRoughData { get; set; }
             public class SearchMediaResponseBodyMediaInfoListAiRoughData : TeaModel {
                 /// <summary>
-                /// <para>The category of the AI job.</para>
+                /// <para>TV Series</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TV series</para>
@@ -550,10 +550,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public List<SearchMediaResponseBodyMediaInfoListIndexStatusList> IndexStatusList { get; set; }
             public class SearchMediaResponseBodyMediaInfoListIndexStatusList : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Success</para>
+                /// </summary>
                 [NameInMap("IndexStatus")]
                 [Validation(Required=false)]
                 public string IndexStatus { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>mm</para>
+                /// </summary>
                 [NameInMap("IndexType")]
                 [Validation(Required=false)]
                 public string IndexType { get; set; }
@@ -742,7 +750,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string SpriteImages { get; set; }
 
                 /// <summary>
-                /// <para>The state of the resource.</para>
+                /// <para>The state of the media asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>

@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SearchMediaByMultimodalRequest : TeaModel {
         /// <summary>
+        /// <para>The type of the media assets.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>image</description></item>
+        /// <item><description>video (default)</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>video</para>
         /// </summary>
@@ -18,6 +25,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MediaType { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +35,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 50.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +45,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The search library.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-1</para>
         /// </summary>
@@ -41,6 +54,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string SearchLibName { get; set; }
 
+        /// <summary>
+        /// <para>The content that you want to query. You can describe the content in natural language.</para>
+        /// </summary>
         [NameInMap("Text")]
         [Validation(Required=false)]
         public string Text { get; set; }

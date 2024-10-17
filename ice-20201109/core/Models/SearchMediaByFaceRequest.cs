@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SearchMediaByFaceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the entity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2d3bf1e35a1e42b5ab338d701efa****</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string EntityId { get; set; }
 
         /// <summary>
+        /// <para>The token that is used to identify the query. You can use this parameter in the SearchMediaClipByFace operation to specify the same query conditions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,11 +30,23 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string FaceSearchToken { get; set; }
 
+        /// <summary>
+        /// <para>The type of the media asset. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>image</description></item>
+        /// <item><description>video</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>video</para>
+        /// </summary>
         [NameInMap("MediaType")]
         [Validation(Required=false)]
         public string MediaType { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -40,6 +55,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 50.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -48,6 +65,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The URL of the face image.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,6 +75,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string PersonImageUrl { get; set; }
 
+        /// <summary>
+        /// <para>The name of the search library.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test1</para>
+        /// </summary>
         [NameInMap("SearchLibName")]
         [Validation(Required=false)]
         public string SearchLibName { get; set; }

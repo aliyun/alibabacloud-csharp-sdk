@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string EntityId { get; set; }
 
         /// <summary>
-        /// <para>The filter conditions. For more information about the parameter syntax, see <a href="https://help.aliyun.com/document_detail/2584256.html">Media asset search protocols</a>.</para>
+        /// <para>The filter conditions. For more information about the parameter syntax
+        /// &lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/document_detail/2584256.html">Media asset search protocols</a>.</para>
         /// </summary>
         [NameInMap("Match")]
         [Validation(Required=false)]

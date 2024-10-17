@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SearchMediaByHybridRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the media asset. The details of the media asset are returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>c469e944b5a856828dc2</b></b></para>
         /// </summary>

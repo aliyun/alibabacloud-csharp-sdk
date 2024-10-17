@@ -27,6 +27,24 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        [NameInMap("VisionChat")]
+        [Validation(Required=false)]
+        public AIAgentRuntimeConfigVisionChat VisionChat { get; set; }
+        public class AIAgentRuntimeConfigVisionChat : TeaModel {
+            [NameInMap("AgentUserId")]
+            [Validation(Required=false)]
+            public string AgentUserId { get; set; }
+
+            [NameInMap("AuthToken")]
+            [Validation(Required=false)]
+            public string AuthToken { get; set; }
+
+            [NameInMap("ChannelId")]
+            [Validation(Required=false)]
+            public string ChannelId { get; set; }
+
+        }
+
         [NameInMap("VoiceChat")]
         [Validation(Required=false)]
         public AIAgentRuntimeConfigVoiceChat VoiceChat { get; set; }

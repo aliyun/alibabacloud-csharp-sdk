@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateSearchLibRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the search library. The name can contain letters and digits and must start with a letter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

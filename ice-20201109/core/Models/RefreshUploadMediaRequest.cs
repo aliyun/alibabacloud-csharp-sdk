@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class RefreshUploadMediaRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the media asset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>411bed50018971edb60b0764a0ec6***</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetLiveEditingIndexFileRequest : TeaModel {
         /// <summary>
+        /// <para>The application name of the live stream.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testrecord</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The domain name of the live stream.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test.alivecdn.com</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the live stream editing project.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><em><b><b>cb6307a4edea614d8b3f3c</b></b></em></para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The name of the live stream.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>teststream</para>
         /// </summary>

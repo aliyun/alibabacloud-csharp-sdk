@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class QueryMediaIndexJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The indexing jobs enabled for the media asset.</para>
+        /// </summary>
         [NameInMap("IndexJobInfoList")]
         [Validation(Required=false)]
         public List<QueryMediaIndexJobResponseBodyIndexJobInfoList> IndexJobInfoList { get; set; }
         public class QueryMediaIndexJobResponseBodyIndexJobInfoList : TeaModel {
             /// <summary>
+            /// <para>The end time of the indexing job.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-11-21 11:33:51</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string GmtFinish { get; set; }
 
             /// <summary>
+            /// <para>The time when the index job was submitted.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-11-21 11:33:50</para>
             /// </summary>
@@ -38,6 +47,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string GmtSubmit { get; set; }
 
             /// <summary>
+            /// <para>The index type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>mm: large visual model.</description></item>
+            /// <item><description>face: face recognition.</description></item>
+            /// <item><description>aiLabel: smart tagging.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>mm</para>
             /// </summary>
@@ -46,6 +62,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string IndexType { get; set; }
 
             /// <summary>
+            /// <para>The job status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Running</description></item>
+            /// <item><description>Success</description></item>
+            /// <item><description>Fail</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Success</para>
             /// </summary>
@@ -56,6 +79,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4E84BE44-58A7-<b><b>-</b></b>-FBEBEA16EF94</para>
         /// </summary>
@@ -64,6 +89,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

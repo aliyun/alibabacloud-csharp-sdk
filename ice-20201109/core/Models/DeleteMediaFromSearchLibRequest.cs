@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteMediaFromSearchLibRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the media asset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MediaId { get; set; }
 
         /// <summary>
+        /// <para>The message body.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MsgBody { get; set; }
 
         /// <summary>
+        /// <para>The name of the search library. Default value: ims-default-search-lib.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test1</para>
         /// </summary>

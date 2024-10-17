@@ -99,8 +99,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建媒资分类</para>
+        /// <para>Creates a category.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can create at most three levels of categories. Each category level can contain a maximum of 100 subcategories.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddCategoryRequest
@@ -149,8 +154,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建媒资分类</para>
+        /// <para>Creates a category.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can create at most three levels of categories. Each category level can contain a maximum of 100 subcategories.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddCategoryRequest
@@ -199,8 +209,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建媒资分类</para>
+        /// <para>Creates a category.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can create at most three levels of categories. Each category level can contain a maximum of 100 subcategories.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddCategoryRequest
@@ -217,8 +232,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建媒资分类</para>
+        /// <para>Creates a category.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can create at most three levels of categories. Each category level can contain a maximum of 100 subcategories.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddCategoryRequest
@@ -235,7 +255,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>剪辑工程增加素材</para>
+        /// <para>Adds one or more materials to an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -281,7 +301,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>剪辑工程增加素材</para>
+        /// <para>Adds one or more materials to an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -327,7 +347,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>剪辑工程增加素材</para>
+        /// <para>Adds one or more materials to an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -345,7 +365,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>剪辑工程增加素材</para>
+        /// <para>Adds one or more materials to an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -483,7 +503,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为媒资增加标注信息</para>
+        /// <para>Adds marks for a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -529,7 +549,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为媒资增加标注信息</para>
+        /// <para>Adds marks for a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -575,7 +595,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为媒资增加标注信息</para>
+        /// <para>Adds marks for a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -593,7 +613,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为媒资增加标注信息</para>
+        /// <para>Adds marks for a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -791,7 +811,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新搜索索引</para>
+        /// <para>Modifies search index information including index status and configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -845,7 +865,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新搜索索引</para>
+        /// <para>Modifies search index information including index status and configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -899,7 +919,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新搜索索引</para>
+        /// <para>Modifies search index information including index status and configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -917,7 +937,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新搜索索引</para>
+        /// <para>Modifies search index information including index status and configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -935,7 +955,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取媒资信息</para>
+        /// <para>Queries the information about multiple media assets at a time based on media asset IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -981,7 +1001,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取媒资信息</para>
+        /// <para>Queries the information about multiple media assets at a time based on media asset IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1027,7 +1047,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取媒资信息</para>
+        /// <para>Queries the information about multiple media assets at a time based on media asset IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1045,7 +1065,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取媒资信息</para>
+        /// <para>Queries the information about multiple media assets at a time based on media asset IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2087,7 +2107,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云剪辑工程</para>
+        /// <para>Creates an online editing project. You can specify configurations such as the title, description, timeline, and thumbnail for the project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2167,7 +2187,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云剪辑工程</para>
+        /// <para>Creates an online editing project. You can specify configurations such as the title, description, timeline, and thumbnail for the project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2247,7 +2267,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云剪辑工程</para>
+        /// <para>Creates an online editing project. You can specify configurations such as the title, description, timeline, and thumbnail for the project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2265,7 +2285,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云剪辑工程</para>
+        /// <para>Creates an online editing project. You can specify configurations such as the title, description, timeline, and thumbnail for the project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2854,6 +2874,11 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <para>创建搜索索引</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The large visual model feature is still in the public preview phase. You can use this feature for free for 1,000 hours of videos.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSearchIndexRequest
         /// </param>
@@ -2907,6 +2932,11 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <summary>
         /// <para>创建搜索索引</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The large visual model feature is still in the public preview phase. You can use this feature for free for 1,000 hours of videos.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSearchIndexRequest
@@ -2962,6 +2992,11 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <para>创建搜索索引</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The large visual model feature is still in the public preview phase. You can use this feature for free for 1,000 hours of videos.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSearchIndexRequest
         /// </param>
@@ -2980,6 +3015,11 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <para>创建搜索索引</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The large visual model feature is still in the public preview phase. You can use this feature for free for 1,000 hours of videos.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSearchIndexRequest
         /// </param>
@@ -2995,7 +3035,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建库</para>
+        /// <para>Creates a search library to store media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3037,7 +3077,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建库</para>
+        /// <para>Creates a search library to store media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3079,7 +3119,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建库</para>
+        /// <para>Creates a search library to store media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3097,7 +3137,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建库</para>
+        /// <para>Creates a search library to store media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3115,8 +3155,21 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>本地媒资上传</para>
+        /// <para>Obtains the upload URL and credential of a media asset and creates information about the media asset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to obtain the upload URLs and credentials of audio and video files. You can also call this operation to obtain the upload URLs and credentials of images and auxiliary media assets.</para>
+        /// <list type="bullet">
+        /// <item><description>Obtaining an upload URL and credential is essential for Intelligent Media Services (IMS) and is required in each upload operation.</description></item>
+        /// <item><description>If the video upload credential expires, you can call the RefreshUploadMedia operation to obtain a new upload credential. The default validity period of a video upload credential is 3,000 seconds.</description></item>
+        /// <item><description>After you upload a media asset, you can configure a callback to receive upload event notifications or call the GetMediaInfo operation to determine whether the media asset is uploaded based on the returned status.</description></item>
+        /// <item><description>The MediaId parameter returned by this operation can be used for media asset lifecycle management or media processing.</description></item>
+        /// <item><description>You can call this operation to upload media assets only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media asset to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the file in the OSS bucket with the media asset library.</description></item>
+        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUploadMediaRequest
@@ -3181,8 +3234,21 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>本地媒资上传</para>
+        /// <para>Obtains the upload URL and credential of a media asset and creates information about the media asset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to obtain the upload URLs and credentials of audio and video files. You can also call this operation to obtain the upload URLs and credentials of images and auxiliary media assets.</para>
+        /// <list type="bullet">
+        /// <item><description>Obtaining an upload URL and credential is essential for Intelligent Media Services (IMS) and is required in each upload operation.</description></item>
+        /// <item><description>If the video upload credential expires, you can call the RefreshUploadMedia operation to obtain a new upload credential. The default validity period of a video upload credential is 3,000 seconds.</description></item>
+        /// <item><description>After you upload a media asset, you can configure a callback to receive upload event notifications or call the GetMediaInfo operation to determine whether the media asset is uploaded based on the returned status.</description></item>
+        /// <item><description>The MediaId parameter returned by this operation can be used for media asset lifecycle management or media processing.</description></item>
+        /// <item><description>You can call this operation to upload media assets only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media asset to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the file in the OSS bucket with the media asset library.</description></item>
+        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUploadMediaRequest
@@ -3247,8 +3313,21 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>本地媒资上传</para>
+        /// <para>Obtains the upload URL and credential of a media asset and creates information about the media asset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to obtain the upload URLs and credentials of audio and video files. You can also call this operation to obtain the upload URLs and credentials of images and auxiliary media assets.</para>
+        /// <list type="bullet">
+        /// <item><description>Obtaining an upload URL and credential is essential for Intelligent Media Services (IMS) and is required in each upload operation.</description></item>
+        /// <item><description>If the video upload credential expires, you can call the RefreshUploadMedia operation to obtain a new upload credential. The default validity period of a video upload credential is 3,000 seconds.</description></item>
+        /// <item><description>After you upload a media asset, you can configure a callback to receive upload event notifications or call the GetMediaInfo operation to determine whether the media asset is uploaded based on the returned status.</description></item>
+        /// <item><description>The MediaId parameter returned by this operation can be used for media asset lifecycle management or media processing.</description></item>
+        /// <item><description>You can call this operation to upload media assets only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media asset to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the file in the OSS bucket with the media asset library.</description></item>
+        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUploadMediaRequest
@@ -3265,8 +3344,21 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>本地媒资上传</para>
+        /// <para>Obtains the upload URL and credential of a media asset and creates information about the media asset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to obtain the upload URLs and credentials of audio and video files. You can also call this operation to obtain the upload URLs and credentials of images and auxiliary media assets.</para>
+        /// <list type="bullet">
+        /// <item><description>Obtaining an upload URL and credential is essential for Intelligent Media Services (IMS) and is required in each upload operation.</description></item>
+        /// <item><description>If the video upload credential expires, you can call the RefreshUploadMedia operation to obtain a new upload credential. The default validity period of a video upload credential is 3,000 seconds.</description></item>
+        /// <item><description>After you upload a media asset, you can configure a callback to receive upload event notifications or call the GetMediaInfo operation to determine whether the media asset is uploaded based on the returned status.</description></item>
+        /// <item><description>The MediaId parameter returned by this operation can be used for media asset lifecycle management or media processing.</description></item>
+        /// <item><description>You can call this operation to upload media assets only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media asset to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the file in the OSS bucket with the media asset library.</description></item>
+        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUploadMediaRequest
@@ -3283,8 +3375,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>本地上传媒体流</para>
+        /// <para>Obtains the upload URL and credential of a media stream.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to upload only a local media stream. After the media stream is uploaded, it is associated with the specified media asset ID.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to upload media streams only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</description></item>
+        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUploadStreamRequest
@@ -3341,8 +3442,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>本地上传媒体流</para>
+        /// <para>Obtains the upload URL and credential of a media stream.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to upload only a local media stream. After the media stream is uploaded, it is associated with the specified media asset ID.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to upload media streams only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</description></item>
+        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUploadStreamRequest
@@ -3399,8 +3509,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>本地上传媒体流</para>
+        /// <para>Obtains the upload URL and credential of a media stream.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to upload only a local media stream. After the media stream is uploaded, it is associated with the specified media asset ID.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to upload media streams only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</description></item>
+        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUploadStreamRequest
@@ -3417,8 +3536,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>本地上传媒体流</para>
+        /// <para>Obtains the upload URL and credential of a media stream.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to upload only a local media stream. After the media stream is uploaded, it is associated with the specified media asset ID.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to upload media streams only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream to your own OSS bucket, you can upload the file to your OSS bucket by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</description></item>
+        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUploadStreamRequest
@@ -3675,8 +3803,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资分类</para>
+        /// <para>Deletes a media asset category.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation also deletes the subcategories, including the level-2 and level-3 categories, of the category.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCategoryRequest
@@ -3717,8 +3850,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资分类</para>
+        /// <para>Deletes a media asset category.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation also deletes the subcategories, including the level-2 and level-3 categories, of the category.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCategoryRequest
@@ -3759,8 +3897,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资分类</para>
+        /// <para>Deletes a media asset category.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation also deletes the subcategories, including the level-2 and level-3 categories, of the category.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCategoryRequest
@@ -3777,8 +3920,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资分类</para>
+        /// <para>Deletes a media asset category.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation also deletes the subcategories, including the level-2 and level-3 categories, of the category.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCategoryRequest
@@ -4347,7 +4495,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除剪辑工程关联素材</para>
+        /// <para>Deletes one or more materials from an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4397,7 +4545,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除剪辑工程关联素材</para>
+        /// <para>Deletes one or more materials from an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4447,7 +4595,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除剪辑工程关联素材</para>
+        /// <para>Deletes one or more materials from an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4465,7 +4613,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除剪辑工程关联素材</para>
+        /// <para>Deletes one or more materials from an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4483,7 +4631,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除云剪辑工程</para>
+        /// <para>Deletes one or more online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4525,7 +4673,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除云剪辑工程</para>
+        /// <para>Deletes one or more online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4567,7 +4715,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除云剪辑工程</para>
+        /// <para>Deletes one or more online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4585,7 +4733,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除云剪辑工程</para>
+        /// <para>Deletes one or more online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5359,7 +5507,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资从搜索</para>
+        /// <para>Deletes a specific media asset from a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5409,7 +5557,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资从搜索</para>
+        /// <para>Deletes a specific media asset from a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5459,7 +5607,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资从搜索</para>
+        /// <para>Deletes a specific media asset from a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5477,7 +5625,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资从搜索</para>
+        /// <para>Deletes a specific media asset from a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5495,7 +5643,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资信息</para>
+        /// <para>Deletes multiple media assets at a time. You can delete at most 20 media assets at a time. If MediaIds is specified, it is preferentially used. If MediaIds is empty, InputURLs must be specified.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5545,7 +5693,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资信息</para>
+        /// <para>Deletes multiple media assets at a time. You can delete at most 20 media assets at a time. If MediaIds is specified, it is preferentially used. If MediaIds is empty, InputURLs must be specified.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5595,7 +5743,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资信息</para>
+        /// <para>Deletes multiple media assets at a time. You can delete at most 20 media assets at a time. If MediaIds is specified, it is preferentially used. If MediaIds is empty, InputURLs must be specified.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5613,7 +5761,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资信息</para>
+        /// <para>Deletes multiple media assets at a time. You can delete at most 20 media assets at a time. If MediaIds is specified, it is preferentially used. If MediaIds is empty, InputURLs must be specified.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5631,7 +5779,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资标注信息</para>
+        /// <para>Deletes the marks of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5677,7 +5825,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资标注信息</para>
+        /// <para>Deletes the marks of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5723,7 +5871,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资标注信息</para>
+        /// <para>Deletes the marks of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5741,7 +5889,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资标注信息</para>
+        /// <para>Deletes the marks of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5879,8 +6027,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除播放信息</para>
+        /// <para>Deletes media streams such as video streams and audio streams.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to delete multiple media streams at a time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePlayInfoRequest
@@ -5929,8 +6082,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除播放信息</para>
+        /// <para>Deletes media streams such as video streams and audio streams.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to delete multiple media streams at a time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePlayInfoRequest
@@ -5979,8 +6137,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除播放信息</para>
+        /// <para>Deletes media streams such as video streams and audio streams.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to delete multiple media streams at a time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePlayInfoRequest
@@ -5997,8 +6160,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除播放信息</para>
+        /// <para>Deletes media streams such as video streams and audio streams.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to delete multiple media streams at a time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePlayInfoRequest
@@ -7539,7 +7707,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除搜索索引</para>
+        /// <para>Deletes a search index. After you delete a search index, the existing index data is cleared and index-based analysis, storage, and query are not supported for subsequent media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7585,7 +7753,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除搜索索引</para>
+        /// <para>Deletes a search index. After you delete a search index, the existing index data is cleared and index-based analysis, storage, and query are not supported for subsequent media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7631,7 +7799,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除搜索索引</para>
+        /// <para>Deletes a search index. After you delete a search index, the existing index data is cleared and index-based analysis, storage, and query are not supported for subsequent media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7649,7 +7817,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除搜索索引</para>
+        /// <para>Deletes a search index. After you delete a search index, the existing index data is cleared and index-based analysis, storage, and query are not supported for subsequent media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7667,7 +7835,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除库</para>
+        /// <para>Deletes a search library and all media assets in the library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7709,7 +7877,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除库</para>
+        /// <para>Deletes a search library and all media assets in the library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7751,7 +7919,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除库</para>
+        /// <para>Deletes a search library and all media assets in the library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7769,7 +7937,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除库</para>
+        /// <para>Deletes a search library and all media assets in the library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8397,8 +8565,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询媒资分类</para>
+        /// <para>Queries the information about a category and its subcategories.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the information about a category and its subcategories based on the category ID and category type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCategoriesRequest
@@ -8455,8 +8628,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询媒资分类</para>
+        /// <para>Queries the information about a category and its subcategories.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the information about a category and its subcategories based on the category ID and category type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCategoriesRequest
@@ -8513,8 +8691,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询媒资分类</para>
+        /// <para>Queries the information about a category and its subcategories.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the information about a category and its subcategories based on the category ID and category type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCategoriesRequest
@@ -8531,8 +8714,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询媒资分类</para>
+        /// <para>Queries the information about a category and its subcategories.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the information about a category and its subcategories based on the category ID and category type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCategoriesRequest
@@ -9353,7 +9541,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个云剪辑工程</para>
+        /// <para>Queries the information about an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9399,7 +9587,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个云剪辑工程</para>
+        /// <para>Queries the information about an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9445,7 +9633,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个云剪辑工程</para>
+        /// <para>Queries the information about an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9463,7 +9651,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个云剪辑工程</para>
+        /// <para>Queries the information about an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9481,7 +9669,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取剪辑工程关联素材</para>
+        /// <para>Queries all materials associated with an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9523,7 +9711,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取剪辑工程关联素材</para>
+        /// <para>Queries all materials associated with an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9565,7 +9753,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取剪辑工程关联素材</para>
+        /// <para>Queries all materials associated with an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9583,7 +9771,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取剪辑工程关联素材</para>
+        /// <para>Queries all materials associated with an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9695,7 +9883,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取直播剪辑m3u8索引文件</para>
+        /// <para>Queries the index file of a live stream. The index file is used to preview an editing project in the console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9749,7 +9937,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取直播剪辑m3u8索引文件</para>
+        /// <para>Queries the index file of a live stream. The index file is used to preview an editing project in the console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9803,7 +9991,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取直播剪辑m3u8索引文件</para>
+        /// <para>Queries the index file of a live stream. The index file is used to preview an editing project in the console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9821,7 +10009,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取直播剪辑m3u8索引文件</para>
+        /// <para>Queries the index file of a live stream. The index file is used to preview an editing project in the console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10647,8 +10835,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒资内容信息</para>
+        /// <para>Queries information about a media asset based on the ID of the media asset in Intelligent Media Services (IMS) or the input URL of the media asset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMediaInfoRequest
@@ -10701,8 +10894,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒资内容信息</para>
+        /// <para>Queries information about a media asset based on the ID of the media asset in Intelligent Media Services (IMS) or the input URL of the media asset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMediaInfoRequest
@@ -10755,8 +10953,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒资内容信息</para>
+        /// <para>Queries information about a media asset based on the ID of the media asset in Intelligent Media Services (IMS) or the input URL of the media asset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMediaInfoRequest
@@ -10773,8 +10976,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒资内容信息</para>
+        /// <para>Queries information about a media asset based on the ID of the media asset in Intelligent Media Services (IMS) or the input URL of the media asset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMediaInfoRequest
@@ -10891,7 +11099,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒资标注信息</para>
+        /// <para>Queries the information about marks based on mark IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10937,7 +11145,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒资标注信息</para>
+        /// <para>Queries the information about marks based on mark IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10983,7 +11191,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒资标注信息</para>
+        /// <para>Queries the information about marks based on mark IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11001,7 +11209,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒资标注信息</para>
+        /// <para>Queries the information about marks based on mark IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11371,8 +11579,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取播放信息</para>
+        /// <para>Queries the playback URL of a video or audio file based on its ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You use the ID of a video or audio file to query the playback URL of the file. Then, you can use the playback URL to play the audio or video in ApsaraVideo Player SDK (for URL-based playback) or a third-party player.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPlayInfoRequest
@@ -11417,8 +11630,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取播放信息</para>
+        /// <para>Queries the playback URL of a video or audio file based on its ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You use the ID of a video or audio file to query the playback URL of the file. Then, you can use the playback URL to play the audio or video in ApsaraVideo Player SDK (for URL-based playback) or a third-party player.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPlayInfoRequest
@@ -11463,8 +11681,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取播放信息</para>
+        /// <para>Queries the playback URL of a video or audio file based on its ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You use the ID of a video or audio file to query the playback URL of the file. Then, you can use the playback URL to play the audio or video in ApsaraVideo Player SDK (for URL-based playback) or a third-party player.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPlayInfoRequest
@@ -11481,8 +11704,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取播放信息</para>
+        /// <para>Queries the playback URL of a video or audio file based on its ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You use the ID of a video or audio file to query the playback URL of the file. Then, you can use the playback URL to play the audio or video in ApsaraVideo Player SDK (for URL-based playback) or a third-party player.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPlayInfoRequest
@@ -12735,8 +12963,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取URL上传信息</para>
+        /// <para>Queries the information about URL-based upload jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the information, including the upload status, user data, creation time, and completion time, about URL-based upload jobs based on the returned job IDs or the URLs used during the upload.
+        /// If an upload job fails, you can view the error code and error message. If an upload job is successful, you can obtain the video ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUrlUploadInfosRequest
@@ -12781,8 +13015,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取URL上传信息</para>
+        /// <para>Queries the information about URL-based upload jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the information, including the upload status, user data, creation time, and completion time, about URL-based upload jobs based on the returned job IDs or the URLs used during the upload.
+        /// If an upload job fails, you can view the error code and error message. If an upload job is successful, you can obtain the video ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUrlUploadInfosRequest
@@ -12827,8 +13067,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取URL上传信息</para>
+        /// <para>Queries the information about URL-based upload jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the information, including the upload status, user data, creation time, and completion time, about URL-based upload jobs based on the returned job IDs or the URLs used during the upload.
+        /// If an upload job fails, you can view the error code and error message. If an upload job is successful, you can obtain the video ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUrlUploadInfosRequest
@@ -12845,8 +13091,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取URL上传信息</para>
+        /// <para>Queries the information about URL-based upload jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the information, including the upload status, user data, creation time, and completion time, about URL-based upload jobs based on the returned job IDs or the URLs used during the upload.
+        /// If an upload job fails, you can view the error code and error message. If an upload job is successful, you can obtain the video ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUrlUploadInfosRequest
@@ -12863,8 +13115,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒资新增列表</para>
+        /// <para>Queries information about video and audio files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query information about up to the first 5,000 audio and video files based on the filter condition, such as the status or category ID of the file. We recommend that you set the StartTime and EndTime parameters to narrow down the time range and perform multiple queries to obtain data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetVideoListRequest
@@ -12929,8 +13186,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒资新增列表</para>
+        /// <para>Queries information about video and audio files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query information about up to the first 5,000 audio and video files based on the filter condition, such as the status or category ID of the file. We recommend that you set the StartTime and EndTime parameters to narrow down the time range and perform multiple queries to obtain data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetVideoListRequest
@@ -12995,8 +13257,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒资新增列表</para>
+        /// <para>Queries information about video and audio files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query information about up to the first 5,000 audio and video files based on the filter condition, such as the status or category ID of the file. We recommend that you set the StartTime and EndTime parameters to narrow down the time range and perform multiple queries to obtain data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetVideoListRequest
@@ -13013,8 +13280,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒资新增列表</para>
+        /// <para>Queries information about video and audio files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query information about up to the first 5,000 audio and video files based on the filter condition, such as the status or category ID of the file. We recommend that you set the StartTime and EndTime parameters to narrow down the time range and perform multiple queries to obtain data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetVideoListRequest
@@ -13151,7 +13423,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插入媒资到搜索</para>
+        /// <para>Adds a media asset in a search library. Before you call this operation, you must create a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13209,7 +13481,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插入媒资到搜索</para>
+        /// <para>Adds a media asset in a search library. Before you call this operation, you must create a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13267,7 +13539,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插入媒资到搜索</para>
+        /// <para>Adds a media asset in a search library. Before you call this operation, you must create a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13285,7 +13557,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插入媒资到搜索</para>
+        /// <para>Adds a media asset in a search library. Before you call this operation, you must create a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13455,7 +13727,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出公共素材库所有标签</para>
+        /// <para>Queries a list of tags of media assets in the public media library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13501,7 +13773,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出公共素材库所有标签</para>
+        /// <para>Queries a list of tags of media assets in the public media library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13547,7 +13819,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出公共素材库所有标签</para>
+        /// <para>Queries a list of tags of media assets in the public media library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13565,7 +13837,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出公共素材库所有标签</para>
+        /// <para>Queries a list of tags of media assets in the public media library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14959,7 +15231,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云剪辑工程列表</para>
+        /// <para>Queries a list of projects that meet the specified conditions. You can filter projects by project creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15037,7 +15309,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云剪辑工程列表</para>
+        /// <para>Queries a list of projects that meet the specified conditions. You can filter projects by project creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15115,7 +15387,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云剪辑工程列表</para>
+        /// <para>Queries a list of projects that meet the specified conditions. You can filter projects by project creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15133,7 +15405,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云剪辑工程列表</para>
+        /// <para>Queries a list of projects that meet the specified conditions. You can filter projects by project creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16159,8 +16431,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出符合条件的媒资基础信息</para>
+        /// <para>Queries the basic information of all media assets that meet the specified conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If includeFileBasicInfo is set to true, the basic information, such as the duration and file size, of the source file is also returned. At most the first 100 entries that meet the specified conditions are returned. All media assets must exactly match all non-empty fields. The fields that support exact match include MediaType, Source, BusinessType, Category, and Status. If all information cannot be returned at a time, you can use NextToken to initiate a request to retrieve a new page of results.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMediaBasicInfosRequest
@@ -16241,8 +16518,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出符合条件的媒资基础信息</para>
+        /// <para>Queries the basic information of all media assets that meet the specified conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If includeFileBasicInfo is set to true, the basic information, such as the duration and file size, of the source file is also returned. At most the first 100 entries that meet the specified conditions are returned. All media assets must exactly match all non-empty fields. The fields that support exact match include MediaType, Source, BusinessType, Category, and Status. If all information cannot be returned at a time, you can use NextToken to initiate a request to retrieve a new page of results.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMediaBasicInfosRequest
@@ -16323,8 +16605,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出符合条件的媒资基础信息</para>
+        /// <para>Queries the basic information of all media assets that meet the specified conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If includeFileBasicInfo is set to true, the basic information, such as the duration and file size, of the source file is also returned. At most the first 100 entries that meet the specified conditions are returned. All media assets must exactly match all non-empty fields. The fields that support exact match include MediaType, Source, BusinessType, Category, and Status. If all information cannot be returned at a time, you can use NextToken to initiate a request to retrieve a new page of results.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMediaBasicInfosRequest
@@ -16341,8 +16628,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出符合条件的媒资基础信息</para>
+        /// <para>Queries the basic information of all media assets that meet the specified conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If includeFileBasicInfo is set to true, the basic information, such as the duration and file size, of the source file is also returned. At most the first 100 entries that meet the specified conditions are returned. All media assets must exactly match all non-empty fields. The fields that support exact match include MediaType, Source, BusinessType, Category, and Status. If all information cannot be returned at a time, you can use NextToken to initiate a request to retrieve a new page of results.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMediaBasicInfosRequest
@@ -16507,7 +16799,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒资的标注信息</para>
+        /// <para>Queries a list of marks of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16553,7 +16845,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒资的标注信息</para>
+        /// <para>Queries a list of marks of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16599,7 +16891,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒资的标注信息</para>
+        /// <para>Queries a list of marks of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16617,7 +16909,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒资的标注信息</para>
+        /// <para>Queries a list of marks of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17115,7 +17407,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出公共素材库素材的基础信息</para>
+        /// <para>Queries a list of media assets in the public media library that meet the specified conditions. A maximum of 100 media assets can be returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17181,7 +17473,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出公共素材库素材的基础信息</para>
+        /// <para>Queries a list of media assets in the public media library that meet the specified conditions. A maximum of 100 media assets can be returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17247,7 +17539,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出公共素材库素材的基础信息</para>
+        /// <para>Queries a list of media assets in the public media library that meet the specified conditions. A maximum of 100 media assets can be returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17265,7 +17557,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出公共素材库素材的基础信息</para>
+        /// <para>Queries a list of media assets in the public media library that meet the specified conditions. A maximum of 100 media assets can be returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19013,7 +19305,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询索引任务</para>
+        /// <para>Queries the indexing jobs enabled for a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19059,7 +19351,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询索引任务</para>
+        /// <para>Queries the indexing jobs enabled for a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19105,7 +19397,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询索引任务</para>
+        /// <para>Queries the indexing jobs enabled for a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19123,7 +19415,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询索引任务</para>
+        /// <para>Queries the indexing jobs enabled for a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19141,7 +19433,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询搜索索引</para>
+        /// <para>Queries the details of a search index.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19187,7 +19479,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询搜索索引</para>
+        /// <para>Queries the details of a search index.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19233,7 +19525,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询搜索索引</para>
+        /// <para>Queries the details of a search index.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19251,7 +19543,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询搜索索引</para>
+        /// <para>Queries the details of a search index.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19269,7 +19561,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询库</para>
+        /// <para>Queries the information about a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19311,7 +19603,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询库</para>
+        /// <para>Queries the information about a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19353,7 +19645,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询库</para>
+        /// <para>Queries the information about a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19371,7 +19663,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询库</para>
+        /// <para>Queries the information about a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19497,8 +19789,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新媒资上传凭证</para>
+        /// <para>Obtain a new upload credential for a media asset after its upload credential expires.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can also call this operation to overwrite media files. After you obtain the upload URL of a media file, you can upload the media file again without changing the audio or video ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RefreshUploadMediaRequest
@@ -19539,8 +19836,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新媒资上传凭证</para>
+        /// <para>Obtain a new upload credential for a media asset after its upload credential expires.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can also call this operation to overwrite media files. After you obtain the upload URL of a media file, you can upload the media file again without changing the audio or video ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RefreshUploadMediaRequest
@@ -19581,8 +19883,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新媒资上传凭证</para>
+        /// <para>Obtain a new upload credential for a media asset after its upload credential expires.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can also call this operation to overwrite media files. After you obtain the upload URL of a media file, you can upload the media file again without changing the audio or video ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RefreshUploadMediaRequest
@@ -19599,8 +19906,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新媒资上传凭证</para>
+        /// <para>Obtain a new upload credential for a media asset after its upload credential expires.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can also call this operation to overwrite media files. After you obtain the upload URL of a media file, you can upload the media file again without changing the audio or video ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RefreshUploadMediaRequest
@@ -19617,8 +19929,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册内容库资源</para>
+        /// <para>Registers a media asset with Intelligent Media Services (IMS). IMS assigns an ID to the media asset. This operation asynchronously accesses the media asset service in which the media asset is stored to obtain the file information of the media asset based on the input URL. You can also specify basic information, such as the title, tags, and description, for the media asset. This operation returns the ID of the media asset. You can call the GetMediaInfo operation based on the ID to query the details of the media asset. You can set InputURL only to the URL of an Object Storage Service (OSS) file or an ApsaraVideo VOD media asset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Registering a media asset is an asynchronous job that takes 2 to 3 seconds. When the operation returns the ID of the media asset, the registration may have not be completed. If you call the GetMediaInfo operation at this time, you may fail to obtain the information about the media asset.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RegisterMediaInfoRequest
@@ -19715,8 +20032,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册内容库资源</para>
+        /// <para>Registers a media asset with Intelligent Media Services (IMS). IMS assigns an ID to the media asset. This operation asynchronously accesses the media asset service in which the media asset is stored to obtain the file information of the media asset based on the input URL. You can also specify basic information, such as the title, tags, and description, for the media asset. This operation returns the ID of the media asset. You can call the GetMediaInfo operation based on the ID to query the details of the media asset. You can set InputURL only to the URL of an Object Storage Service (OSS) file or an ApsaraVideo VOD media asset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Registering a media asset is an asynchronous job that takes 2 to 3 seconds. When the operation returns the ID of the media asset, the registration may have not be completed. If you call the GetMediaInfo operation at this time, you may fail to obtain the information about the media asset.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RegisterMediaInfoRequest
@@ -19813,8 +20135,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册内容库资源</para>
+        /// <para>Registers a media asset with Intelligent Media Services (IMS). IMS assigns an ID to the media asset. This operation asynchronously accesses the media asset service in which the media asset is stored to obtain the file information of the media asset based on the input URL. You can also specify basic information, such as the title, tags, and description, for the media asset. This operation returns the ID of the media asset. You can call the GetMediaInfo operation based on the ID to query the details of the media asset. You can set InputURL only to the URL of an Object Storage Service (OSS) file or an ApsaraVideo VOD media asset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Registering a media asset is an asynchronous job that takes 2 to 3 seconds. When the operation returns the ID of the media asset, the registration may have not be completed. If you call the GetMediaInfo operation at this time, you may fail to obtain the information about the media asset.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RegisterMediaInfoRequest
@@ -19831,8 +20158,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册内容库资源</para>
+        /// <para>Registers a media asset with Intelligent Media Services (IMS). IMS assigns an ID to the media asset. This operation asynchronously accesses the media asset service in which the media asset is stored to obtain the file information of the media asset based on the input URL. You can also specify basic information, such as the title, tags, and description, for the media asset. This operation returns the ID of the media asset. You can call the GetMediaInfo operation based on the ID to query the details of the media asset. You can set InputURL only to the URL of an Object Storage Service (OSS) file or an ApsaraVideo VOD media asset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Registering a media asset is an asynchronous job that takes 2 to 3 seconds. When the operation returns the ID of the media asset, the registration may have not be completed. If you call the GetMediaInfo operation at this time, you may fail to obtain the information about the media asset.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RegisterMediaInfoRequest
@@ -19849,8 +20181,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册媒体流</para>
+        /// <para>Registers a media stream.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to register a media stream file in an Object Storage Service (OSS) bucket with Intelligent Media Services (IMS) and associate the media stream with the specified media asset ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RegisterMediaStreamRequest
@@ -19899,8 +20236,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册媒体流</para>
+        /// <para>Registers a media stream.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to register a media stream file in an Object Storage Service (OSS) bucket with Intelligent Media Services (IMS) and associate the media stream with the specified media asset ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RegisterMediaStreamRequest
@@ -19949,8 +20291,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册媒体流</para>
+        /// <para>Registers a media stream.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to register a media stream file in an Object Storage Service (OSS) bucket with Intelligent Media Services (IMS) and associate the media stream with the specified media asset ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RegisterMediaStreamRequest
@@ -19967,8 +20314,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册媒体流</para>
+        /// <para>Registers a media stream.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to register a media stream file in an Object Storage Service (OSS) bucket with Intelligent Media Services (IMS) and associate the media stream with the specified media asset ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RegisterMediaStreamRequest
@@ -20493,8 +20845,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能标签搜索</para>
+        /// <para>Queries media assets based on character names, subtitles, or AI categories.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query media assets or media asset clips based on character names, subtitles, or AI categories.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMediaByAILabelRequest
@@ -20510,6 +20867,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchingMode))
+            {
+                query["MatchingMode"] = request.MatchingMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
             {
                 query["MediaId"] = request.MediaId;
@@ -20567,8 +20928,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能标签搜索</para>
+        /// <para>Queries media assets based on character names, subtitles, or AI categories.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query media assets or media asset clips based on character names, subtitles, or AI categories.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMediaByAILabelRequest
@@ -20584,6 +20950,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchingMode))
+            {
+                query["MatchingMode"] = request.MatchingMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
             {
                 query["MediaId"] = request.MediaId;
@@ -20641,8 +21011,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能标签搜索</para>
+        /// <para>Queries media assets based on character names, subtitles, or AI categories.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query media assets or media asset clips based on character names, subtitles, or AI categories.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMediaByAILabelRequest
@@ -20659,8 +21034,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能标签搜索</para>
+        /// <para>Queries media assets based on character names, subtitles, or AI categories.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query media assets or media asset clips based on character names, subtitles, or AI categories.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMediaByAILabelRequest
@@ -20677,8 +21057,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸搜粗搜接口，输入一张人脸图片，搜索该人物所在媒资的相关信息</para>
+        /// <para>Queries the information about media assets that are related to a specific face.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMediaByFaceRequest
@@ -20743,8 +21128,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸搜粗搜接口，输入一张人脸图片，搜索该人物所在媒资的相关信息</para>
+        /// <para>Queries the information about media assets that are related to a specific face.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMediaByFaceRequest
@@ -20809,8 +21199,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸搜粗搜接口，输入一张人脸图片，搜索该人物所在媒资的相关信息</para>
+        /// <para>Queries the information about media assets that are related to a specific face.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMediaByFaceRequest
@@ -20827,8 +21222,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸搜粗搜接口，输入一张人脸图片，搜索该人物所在媒资的相关信息</para>
+        /// <para>Queries the information about media assets that are related to a specific face.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMediaByFaceRequest
@@ -20845,7 +21245,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>混合搜索</para>
+        /// <para>Queries media assets by using the hybrid search feature. This operation allows you to search for media assets by using natural language based on intelligent tag text search and the search capabilities of large language models (LLMs). This implements multimodal retrieval.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20907,7 +21307,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>混合搜索</para>
+        /// <para>Queries media assets by using the hybrid search feature. This operation allows you to search for media assets by using natural language based on intelligent tag text search and the search capabilities of large language models (LLMs). This implements multimodal retrieval.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20969,7 +21369,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>混合搜索</para>
+        /// <para>Queries media assets by using the hybrid search feature. This operation allows you to search for media assets by using natural language based on intelligent tag text search and the search capabilities of large language models (LLMs). This implements multimodal retrieval.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20987,7 +21387,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>混合搜索</para>
+        /// <para>Queries media assets by using the hybrid search feature. This operation allows you to search for media assets by using natural language based on intelligent tag text search and the search capabilities of large language models (LLMs). This implements multimodal retrieval.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21005,8 +21405,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多模态搜索</para>
+        /// <para>Queries media assets by using the large visual model. You can use natural language for the query.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMediaByMultimodalRequest
@@ -21063,8 +21468,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多模态搜索</para>
+        /// <para>Queries media assets by using the large visual model. You can use natural language for the query.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMediaByMultimodalRequest
@@ -21121,8 +21531,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多模态搜索</para>
+        /// <para>Queries media assets by using the large visual model. You can use natural language for the query.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMediaByMultimodalRequest
@@ -21139,8 +21554,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多模态搜索</para>
+        /// <para>Queries media assets by using the large visual model. You can use natural language for the query.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMediaByMultimodalRequest
@@ -21157,8 +21577,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸搜精搜接口，基于粗搜结果返回该人物所在媒资的相关人物片段信息</para>
+        /// <para>Queries the information about media asset clips that are related to a specific face based on the response to the SearchMediaByFace operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMediaClipByFaceRequest
@@ -21219,8 +21644,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸搜精搜接口，基于粗搜结果返回该人物所在媒资的相关人物片段信息</para>
+        /// <para>Queries the information about media asset clips that are related to a specific face based on the response to the SearchMediaByFace operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMediaClipByFaceRequest
@@ -21281,8 +21711,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸搜精搜接口，基于粗搜结果返回该人物所在媒资的相关人物片段信息</para>
+        /// <para>Queries the information about media asset clips that are related to a specific face based on the response to the SearchMediaByFace operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMediaClipByFaceRequest
@@ -21299,8 +21734,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸搜精搜接口，基于粗搜结果返回该人物所在媒资的相关人物片段信息</para>
+        /// <para>Queries the information about media asset clips that are related to a specific face based on the response to the SearchMediaByFace operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMediaClipByFaceRequest
@@ -25721,7 +26161,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交媒资结构化分析任务</para>
+        /// <para>Submits a structural analysis job for a media asset. For example, you can submit a job to analyze the speaker, translate the video, and obtain the paragraph summary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25767,7 +26207,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交媒资结构化分析任务</para>
+        /// <para>Submits a structural analysis job for a media asset. For example, you can submit a job to analyze the speaker, translate the video, and obtain the paragraph summary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25813,7 +26253,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交媒资结构化分析任务</para>
+        /// <para>Submits a structural analysis job for a media asset. For example, you can submit a job to analyze the speaker, translate the video, and obtain the paragraph summary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25831,7 +26271,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交媒资结构化分析任务</para>
+        /// <para>Submits a structural analysis job for a media asset. For example, you can submit a job to analyze the speaker, translate the video, and obtain the paragraph summary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27729,8 +28169,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频翻译任务</para>
+        /// <para>Submits a video translation job. You can call this operation to translate the subtitle that appears in a video into the specified language. In the future, this operation will support voice translation and lip synchronization for spoken content.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you call this operation to submit a video translation job, the system returns a job ID. You can call the GetSmartHandleJob operation based on the job ID to obtain the status and result information of the job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitVideoTranslationJobRequest
@@ -27795,8 +28240,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频翻译任务</para>
+        /// <para>Submits a video translation job. You can call this operation to translate the subtitle that appears in a video into the specified language. In the future, this operation will support voice translation and lip synchronization for spoken content.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you call this operation to submit a video translation job, the system returns a job ID. You can call the GetSmartHandleJob operation based on the job ID to obtain the status and result information of the job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitVideoTranslationJobRequest
@@ -27861,8 +28311,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频翻译任务</para>
+        /// <para>Submits a video translation job. You can call this operation to translate the subtitle that appears in a video into the specified language. In the future, this operation will support voice translation and lip synchronization for spoken content.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you call this operation to submit a video translation job, the system returns a job ID. You can call the GetSmartHandleJob operation based on the job ID to obtain the status and result information of the job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitVideoTranslationJobRequest
@@ -27879,8 +28334,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频翻译任务</para>
+        /// <para>Submits a video translation job. You can call this operation to translate the subtitle that appears in a video into the specified language. In the future, this operation will support voice translation and lip synchronization for spoken content.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you call this operation to submit a video translation job, the system returns a job ID. You can call the GetSmartHandleJob operation based on the job ID to obtain the status and result information of the job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitVideoTranslationJobRequest
@@ -28213,8 +28673,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒资分类</para>
+        /// <para>Updates a category.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you create a media asset category, you can call this operation to find the category based on the category ID and change the name of the category.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateCategoryRequest
@@ -28259,8 +28724,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒资分类</para>
+        /// <para>Updates a category.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you create a media asset category, you can call this operation to find the category based on the category ID and change the name of the category.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateCategoryRequest
@@ -28305,8 +28775,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒资分类</para>
+        /// <para>Updates a category.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you create a media asset category, you can call this operation to find the category based on the category ID and change the name of the category.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateCategoryRequest
@@ -28323,8 +28798,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒资分类</para>
+        /// <para>Updates a category.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you create a media asset category, you can call this operation to find the category based on the category ID and change the name of the category.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateCategoryRequest
@@ -28605,7 +29085,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云剪辑工程</para>
+        /// <para>Modifies an online editing project. You can call this operation to modify the configurations such as the title, timeline, and thumbnail of an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28677,7 +29157,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云剪辑工程</para>
+        /// <para>Modifies an online editing project. You can call this operation to modify the configurations such as the title, timeline, and thumbnail of an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28749,7 +29229,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云剪辑工程</para>
+        /// <para>Modifies an online editing project. You can call this operation to modify the configurations such as the title, timeline, and thumbnail of an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28767,7 +29247,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云剪辑工程</para>
+        /// <para>Modifies an online editing project. You can call this operation to modify the configurations such as the title, timeline, and thumbnail of an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29413,8 +29893,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateMediaInfo</para>
+        /// <para>Updates information about a media asset based on the ID of the media asset in Intelligent Media Services (IMS) or the input URL of the media asset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified. The request ID and media asset ID are returned. You cannot modify the input URL of a media asset by specifying the ID of the media asset.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMediaInfoRequest
@@ -29499,8 +29984,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateMediaInfo</para>
+        /// <para>Updates information about a media asset based on the ID of the media asset in Intelligent Media Services (IMS) or the input URL of the media asset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified. The request ID and media asset ID are returned. You cannot modify the input URL of a media asset by specifying the ID of the media asset.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMediaInfoRequest
@@ -29585,8 +30075,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateMediaInfo</para>
+        /// <para>Updates information about a media asset based on the ID of the media asset in Intelligent Media Services (IMS) or the input URL of the media asset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified. The request ID and media asset ID are returned. You cannot modify the input URL of a media asset by specifying the ID of the media asset.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMediaInfoRequest
@@ -29603,8 +30098,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateMediaInfo</para>
+        /// <para>Updates information about a media asset based on the ID of the media asset in Intelligent Media Services (IMS) or the input URL of the media asset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified. The request ID and media asset ID are returned. You cannot modify the input URL of a media asset by specifying the ID of the media asset.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMediaInfoRequest
@@ -29621,7 +30121,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为媒资修改标注信息</para>
+        /// <para>Modifies the marks of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29667,7 +30167,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为媒资修改标注信息</para>
+        /// <para>Modifies the marks of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29713,7 +30213,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为媒资修改标注信息</para>
+        /// <para>Modifies the marks of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29731,7 +30231,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为媒资修改标注信息</para>
+        /// <para>Modifies the marks of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29749,7 +30249,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒资到搜索</para>
+        /// <para>Updates the media asset information in a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29799,7 +30299,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒资到搜索</para>
+        /// <para>Updates the media asset information in a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29849,7 +30349,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒资到搜索</para>
+        /// <para>Updates the media asset information in a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29867,7 +30367,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒资到搜索</para>
+        /// <para>Updates the media asset information in a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30349,8 +30849,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>URL拉取上传</para>
+        /// <para>Uploads an audio or video file based on the URL of the source file. You can upload multiple media files at a time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If a callback is configured, you will receive an UploadByURLComplete event notification after the file is uploaded. You can query the upload status by calling the GetURLUploadInfos operation.</para>
+        /// <list type="bullet">
+        /// <item><description>After a request is submitted, the upload job is queued as an asynchronous job in the cloud. You can query the status of the upload job based on information such as the URL and media asset ID that are returned in the event notification.</description></item>
+        /// <item><description>You can call this operation to upload media files that are not stored on a local server or device and must be uploaded by using URLs that are accessible over the Internet.</description></item>
+        /// <item><description>You can call this operation to upload media files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the file in the OSS bucket with the media asset library.</description></item>
+        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// <item><description>You can call this operation to upload only audio and video files.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadMediaByURLRequest
@@ -30415,8 +30927,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>URL拉取上传</para>
+        /// <para>Uploads an audio or video file based on the URL of the source file. You can upload multiple media files at a time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If a callback is configured, you will receive an UploadByURLComplete event notification after the file is uploaded. You can query the upload status by calling the GetURLUploadInfos operation.</para>
+        /// <list type="bullet">
+        /// <item><description>After a request is submitted, the upload job is queued as an asynchronous job in the cloud. You can query the status of the upload job based on information such as the URL and media asset ID that are returned in the event notification.</description></item>
+        /// <item><description>You can call this operation to upload media files that are not stored on a local server or device and must be uploaded by using URLs that are accessible over the Internet.</description></item>
+        /// <item><description>You can call this operation to upload media files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the file in the OSS bucket with the media asset library.</description></item>
+        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// <item><description>You can call this operation to upload only audio and video files.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadMediaByURLRequest
@@ -30481,8 +31005,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>URL拉取上传</para>
+        /// <para>Uploads an audio or video file based on the URL of the source file. You can upload multiple media files at a time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If a callback is configured, you will receive an UploadByURLComplete event notification after the file is uploaded. You can query the upload status by calling the GetURLUploadInfos operation.</para>
+        /// <list type="bullet">
+        /// <item><description>After a request is submitted, the upload job is queued as an asynchronous job in the cloud. You can query the status of the upload job based on information such as the URL and media asset ID that are returned in the event notification.</description></item>
+        /// <item><description>You can call this operation to upload media files that are not stored on a local server or device and must be uploaded by using URLs that are accessible over the Internet.</description></item>
+        /// <item><description>You can call this operation to upload media files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the file in the OSS bucket with the media asset library.</description></item>
+        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// <item><description>You can call this operation to upload only audio and video files.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadMediaByURLRequest
@@ -30499,8 +31035,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>URL拉取上传</para>
+        /// <para>Uploads an audio or video file based on the URL of the source file. You can upload multiple media files at a time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If a callback is configured, you will receive an UploadByURLComplete event notification after the file is uploaded. You can query the upload status by calling the GetURLUploadInfos operation.</para>
+        /// <list type="bullet">
+        /// <item><description>After a request is submitted, the upload job is queued as an asynchronous job in the cloud. You can query the status of the upload job based on information such as the URL and media asset ID that are returned in the event notification.</description></item>
+        /// <item><description>You can call this operation to upload media files that are not stored on a local server or device and must be uploaded by using URLs that are accessible over the Internet.</description></item>
+        /// <item><description>You can call this operation to upload media files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the file in the OSS bucket with the media asset library.</description></item>
+        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// <item><description>You can call this operation to upload only audio and video files.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadMediaByURLRequest
@@ -30517,8 +31065,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>URL拉取上传媒体流</para>
+        /// <para>Uploads a media stream file based on the URL of the source file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to pull a media stream file based on a URL and upload the file. After the media stream file is uploaded, the media stream is associated with the specified media asset ID.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to upload media stream files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</description></item>
+        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadStreamByURLRequest
@@ -30579,8 +31136,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>URL拉取上传媒体流</para>
+        /// <para>Uploads a media stream file based on the URL of the source file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to pull a media stream file based on a URL and upload the file. After the media stream file is uploaded, the media stream is associated with the specified media asset ID.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to upload media stream files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</description></item>
+        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadStreamByURLRequest
@@ -30641,8 +31207,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>URL拉取上传媒体流</para>
+        /// <para>Uploads a media stream file based on the URL of the source file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to pull a media stream file based on a URL and upload the file. After the media stream file is uploaded, the media stream is associated with the specified media asset ID.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to upload media stream files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</description></item>
+        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadStreamByURLRequest
@@ -30659,8 +31234,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>URL拉取上传媒体流</para>
+        /// <para>Uploads a media stream file based on the URL of the source file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to pull a media stream file based on a URL and upload the file. After the media stream file is uploaded, the media stream is associated with the specified media asset ID.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to upload media stream files only to ApsaraVideo VOD, but not to your own Object Storage Service (OSS) buckets. To upload a media stream file to an OSS bucket, pull the file to a local directory, use <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a> to upload the file to an OSS bucket, and then call the <a href="https://help.aliyun.com/document_detail/440765.html">RegisterMediaStream</a> operation to associate the media stream with the specified media asset ID.</description></item>
+        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadStreamByURLRequest
