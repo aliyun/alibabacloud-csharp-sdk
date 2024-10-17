@@ -13,8 +13,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>This parameter is deprecated.</para>
         /// <para>The value 0 indicates that the partition filter expression is at the SQL level, and the system checks data quality after each SQL statement is executed.</para>
         /// <list type="bullet">
-        /// <item><description></description></item>
-        /// <item><description></description></item>
+        /// <item><description>0</description></item>
+        /// <item><description>1</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

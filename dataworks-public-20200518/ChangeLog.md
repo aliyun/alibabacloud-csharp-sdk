@@ -1,3 +1,7 @@
+2024-10-17 Version: 6.1.6
+- Update API ListNodes: update response param.
+
+
 2024-09-29 Version: 6.1.5
 - Generated csharp 2020-05-18 for dataworks-public.
 

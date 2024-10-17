@@ -213,6 +213,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public long? RepeatInterval { get; set; }
 
+                [NameInMap("RepeatMode")]
+                [Validation(Required=false)]
+                public int? RepeatMode { get; set; }
+
                 /// <summary>
                 /// <para>The name of the node.</para>
                 /// 
