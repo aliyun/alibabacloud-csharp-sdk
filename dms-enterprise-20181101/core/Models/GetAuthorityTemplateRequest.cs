@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetAuthorityTemplateRequest : TeaModel {
         /// <summary>
-        /// The ID of the permission template.
+        /// <para>The ID of the permission template.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1563</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public long? TemplateId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the tenant ID.
+        /// <para>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

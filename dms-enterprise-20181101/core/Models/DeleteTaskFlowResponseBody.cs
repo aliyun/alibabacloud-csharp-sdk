@@ -10,31 +10,44 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class DeleteTaskFlowResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request fails.
+        /// <para>The error code returned if the request fails.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>403</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request fails.
+        /// <para>The error message returned if the request fails.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9AFE13F6-A4FD-581B-BFDE-B63B1CDC2336</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The request is successful.
-        /// *   **false**: The request fails.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

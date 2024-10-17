@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetDataCronClearConfigRequest : TeaModel {
         /// <summary>
-        /// The ID of the ticket. You can call the [ListOrders](https://help.aliyun.com/document_detail/144643.html) operation to query the ticket ID.
+        /// <para>The ID of the ticket. You can call the <a href="https://help.aliyun.com/document_detail/144643.html">ListOrders</a> operation to query the ticket ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>420****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// <para>The ID of the tenant.</para>
+        /// <remarks>
+        /// <para>: To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a>.</para>
+        /// </remarks>
         /// 
-        /// > : To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html).
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

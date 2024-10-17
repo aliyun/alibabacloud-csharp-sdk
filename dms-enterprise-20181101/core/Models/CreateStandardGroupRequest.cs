@@ -10,34 +10,43 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateStandardGroupRequest : TeaModel {
         /// <summary>
-        /// The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).
+        /// <para>The type of the database engine. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>mysql</para>
         /// </summary>
         [NameInMap("DbType")]
         [Validation(Required=false)]
         public string DbType { get; set; }
 
         /// <summary>
-        /// The description of the security rule set.
+        /// <para>The description of the security rule set.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test_rule</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the security rule set.
+        /// <para>The name of the security rule set.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test_group</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// <para>The ID of the tenant.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3000</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

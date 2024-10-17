@@ -10,139 +10,181 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetSQLReviewOptimizeDetailResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// <para>The error code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The details of optimization suggestions for SQL statements.
+        /// <para>The details of optimization suggestions for SQL statements.</para>
         /// </summary>
         [NameInMap("OptimizeDetail")]
         [Validation(Required=false)]
         public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetail OptimizeDetail { get; set; }
         public class GetSQLReviewOptimizeDetailResponseBodyOptimizeDetail : TeaModel {
             /// <summary>
-            /// The ID of the database.
+            /// <para>The ID of the database.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>111222</para>
             /// </summary>
             [NameInMap("DbId")]
             [Validation(Required=false)]
             public int? DbId { get; set; }
 
             /// <summary>
-            /// The ID of the instance to which the database belongs.
+            /// <para>The ID of the instance to which the database belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123321</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public int? InstanceId { get; set; }
 
             /// <summary>
-            /// The quality of the SQL statement.
+            /// <para>The quality of the SQL statement.</para>
             /// </summary>
             [NameInMap("QualityResult")]
             [Validation(Required=false)]
             public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResult QualityResult { get; set; }
             public class GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResult : TeaModel {
                 /// <summary>
-                /// The error message returned.
+                /// <para>The error message returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>syntax error</para>
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// Indicates whether an error occurs. Valid values:
+                /// <para>Indicates whether an error occurs. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: An error occurs.</description></item>
+                /// <item><description><b>false</b>: No error occurs.</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: An error occurs.
-                /// *   **false**: No error occurs.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("OccurError")]
                 [Validation(Required=false)]
                 public bool? OccurError { get; set; }
 
                 /// <summary>
-                /// The review results based on rules.
+                /// <para>The review results based on rules.</para>
                 /// </summary>
                 [NameInMap("Results")]
                 [Validation(Required=false)]
                 public List<GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults> Results { get; set; }
                 public class GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults : TeaModel {
                     /// <summary>
-                    /// The comment that is specified when you create the SQL review rule. For more information, see [SQL review optimization](https://help.aliyun.com/document_detail/194114.html).
+                    /// <para>The comment that is specified when you create the SQL review rule. For more information, see <a href="https://help.aliyun.com/document_detail/194114.html">SQL review optimization</a>.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>xxx business rule: the query must have a where condition.</para>
                     /// </summary>
                     [NameInMap("Comments")]
                     [Validation(Required=false)]
                     public string Comments { get; set; }
 
                     /// <summary>
-                    /// The optimization suggestion for the SQL statement. Valid values:
+                    /// <para>The optimization suggestion for the SQL statement. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>MUST_IMPROVE</b>: The SQL statement must be improved.</description></item>
+                    /// <item><description><b>POTENTIAL_ISSUE</b>: The SQL statement contains potential issues.</description></item>
+                    /// <item><description><b>SUGGEST_IMPROVE</b>: We recommend that you improve the SQL statement.</description></item>
+                    /// <item><description><b>USEDMSTOOLKIT</b>: We recommend that you change schemas without locking tables.</description></item>
+                    /// <item><description><b>USEDMSDML_UNLOCK</b>: We recommend that you change data without locking tables.</description></item>
+                    /// <item><description><b>TABLEINDEXSUGGEST</b>: We recommend that you use SQL statements that use indexes.</description></item>
+                    /// </list>
                     /// 
-                    /// *   **MUST_IMPROVE**: The SQL statement must be improved.
-                    /// *   **POTENTIAL_ISSUE**: The SQL statement contains potential issues.
-                    /// *   **SUGGEST_IMPROVE**: We recommend that you improve the SQL statement.
-                    /// *   **USEDMSTOOLKIT**: We recommend that you change schemas without locking tables.
-                    /// *   **USEDMSDML_UNLOCK**: We recommend that you change data without locking tables.
-                    /// *   **TABLEINDEXSUGGEST**: We recommend that you use SQL statements that use indexes.
+                    /// <b>Example:</b>
+                    /// <para>MUST_IMPROVE</para>
                     /// </summary>
                     [NameInMap("Feedback")]
                     [Validation(Required=false)]
                     public string Feedback { get; set; }
 
                     /// <summary>
-                    /// The review results.
+                    /// <para>The review results.</para>
                     /// </summary>
                     [NameInMap("Messages")]
                     [Validation(Required=false)]
                     public List<string> Messages { get; set; }
 
                     /// <summary>
-                    /// The name of the rule. For more information, see [SQL review optimization](https://help.aliyun.com/document_detail/194114.html).
+                    /// <para>The name of the rule. For more information, see <a href="https://help.aliyun.com/document_detail/194114.html">SQL review optimization</a>.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>SELECT_SUGGEST_ASSIGN_WHERE</para>
                     /// </summary>
                     [NameInMap("RuleName")]
                     [Validation(Required=false)]
                     public string RuleName { get; set; }
 
                     /// <summary>
-                    /// The type of the SQL review rule. Valid values:
+                    /// <para>The type of the SQL review rule. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>REVIEW</b>: a rule that is used to review SQL statements based on standards.</description></item>
+                    /// <item><description><b>OPTIMIZE</b>: a rule that is used to provide optimization suggestions.</description></item>
+                    /// </list>
                     /// 
-                    /// *   **REVIEW**: a rule that is used to review SQL statements based on standards.
-                    /// *   **OPTIMIZE**: a rule that is used to provide optimization suggestions.
+                    /// <b>Example:</b>
+                    /// <para>REVIEW</para>
                     /// </summary>
                     [NameInMap("RuleType")]
                     [Validation(Required=false)]
                     public string RuleType { get; set; }
 
                     /// <summary>
-                    /// The SQL script for data changes.
+                    /// <para>The SQL script for data changes.</para>
                     /// </summary>
                     [NameInMap("Scripts")]
                     [Validation(Required=false)]
                     public List<GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResultsScripts> Scripts { get; set; }
                     public class GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResultsScripts : TeaModel {
                         /// <summary>
-                        /// The content of the SQL script.
+                        /// <para>The content of the SQL script.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>alter table xxx add index idx_xx(yyy);</para>
                         /// </summary>
                         [NameInMap("Content")]
                         [Validation(Required=false)]
                         public string Content { get; set; }
 
                         /// <summary>
-                        /// The purpose of the SQL script. The value is set to AddIndex.
+                        /// <para>The purpose of the SQL script. The value is set to AddIndex.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>AddIndex</para>
                         /// </summary>
                         [NameInMap("OpType")]
                         [Validation(Required=false)]
                         public string OpType { get; set; }
 
                         /// <summary>
-                        /// The name of the table.
+                        /// <para>The name of the table.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>xxx</para>
                         /// </summary>
                         [NameInMap("TableName")]
                         [Validation(Required=false)]
@@ -155,14 +197,20 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             }
 
             /// <summary>
-            /// The key that is used to query the details of optimization suggestions.
+            /// <para>The key that is used to query the details of optimization suggestions.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>a57e54ec5433475ea3082d882fdb****</para>
             /// </summary>
             [NameInMap("QueryKey")]
             [Validation(Required=false)]
             public string QueryKey { get; set; }
 
             /// <summary>
-            /// The type of the SQL statement. Valid values: DELETE, UPDATE, and ALTER_TABLE.
+            /// <para>The type of the SQL statement. Valid values: DELETE, UPDATE, and ALTER_TABLE.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>UPDATE</para>
             /// </summary>
             [NameInMap("SqlType")]
             [Validation(Required=false)]
@@ -171,14 +219,20 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

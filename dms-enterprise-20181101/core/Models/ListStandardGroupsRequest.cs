@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListStandardGroupsRequest : TeaModel {
         /// <summary>
-        /// The ID of the tenant.
+        /// <para>The ID of the tenant.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

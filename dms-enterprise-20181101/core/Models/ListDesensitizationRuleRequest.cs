@@ -10,51 +10,73 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListDesensitizationRuleRequest : TeaModel {
         /// <summary>
-        /// The type of the masking algorithm.
+        /// <para>The type of the masking algorithm.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MD5</para>
         /// </summary>
         [NameInMap("FuncType")]
         [Validation(Required=false)]
         public string FuncType { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. The maximum value is 100.
+        /// <para>The number of entries to return on each page. The maximum value is 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the masking rule.
+        /// <para>The ID of the masking rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public int? RuleId { get; set; }
 
         /// <summary>
-        /// The name of the masking rule.
+        /// <para>The name of the masking rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default desensitization rule test</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The algorithm used for masking.
+        /// <para>The algorithm used for masking.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>HASH</para>
         /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]
         public string RuleType { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// <para>The ID of the tenant.</para>
+        /// <remarks>
+        /// <para> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a>.</para>
+        /// </remarks>
         /// 
-        /// >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html).
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

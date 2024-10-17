@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListProxySQLExecAuditLogResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// <para>The error code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InvalidStartTime</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Specified parameter StartTime is not valid.</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The audit information about the database instance that is provided by the secure access proxy feature.
+        /// <para>The audit information about the database instance that is provided by the secure access proxy feature.</para>
         /// </summary>
         [NameInMap("ProxySQLExecAuditLogList")]
         [Validation(Required=false)]
@@ -35,95 +41,134 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListProxySQLExecAuditLogResponseBodyProxySQLExecAuditLogListProxySQLExecAuditLog> ProxySQLExecAuditLog { get; set; }
             public class ListProxySQLExecAuditLogResponseBodyProxySQLExecAuditLogListProxySQLExecAuditLog : TeaModel {
                 /// <summary>
-                /// Indicates the total number of rows returned after the SQL statement was executed. If an SELECT SQL statement is executed, the return value of this parameter indicates the total number of the queried data rows.
+                /// <para>Indicates the total number of rows returned after the SQL statement was executed. If an SELECT SQL statement is executed, the return value of this parameter indicates the total number of the queried data rows.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("AffectRows")]
                 [Validation(Required=false)]
                 public long? AffectRows { get; set; }
 
                 /// <summary>
-                /// The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.
+                /// <para>The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1324</para>
                 /// </summary>
                 [NameInMap("ElapsedTime")]
                 [Validation(Required=false)]
                 public long? ElapsedTime { get; set; }
 
                 /// <summary>
-                /// The execution status of the SQL statement. Valid values:
+                /// <para>The execution status of the SQL statement. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>FAIL</b>: The execution of the SQL statement fails.</description></item>
+                /// <item><description><b>CANCEL</b>: The execution of the SQL statement is canceled.</description></item>
+                /// <item><description><b>SUCCESS</b>: The SQL statement is executed.</description></item>
+                /// </list>
                 /// 
-                /// *   **FAIL**: The execution of the SQL statement fails.
-                /// *   **CANCEL**: The execution of the SQL statement is canceled.
-                /// *   **SUCCESS**: The SQL statement is executed.
+                /// <b>Example:</b>
+                /// <para>SUCCESS</para>
                 /// </summary>
                 [NameInMap("ExecState")]
                 [Validation(Required=false)]
                 public string ExecState { get; set; }
 
                 /// <summary>
-                /// The ID of the database instance.
+                /// <para>The ID of the database instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4***</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public long? InstanceId { get; set; }
 
                 /// <summary>
-                /// The name of the database instance.
+                /// <para>The name of the database instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>pc-uf662nrg017c6****.mysql.polardb.rds.aliyuncs.com:3306【test】</para>
                 /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// The time at which the user executes the SQL statement on the database instance. The value of this parameter must be a timestamp that follows the UNIX time format.
+                /// <para>The time at which the user executes the SQL statement on the database instance. The value of this parameter must be a timestamp that follows the UNIX time format.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1636876446000</para>
                 /// </summary>
                 [NameInMap("OpTime")]
                 [Validation(Required=false)]
                 public string OpTime { get; set; }
 
                 /// <summary>
-                /// The description.
+                /// <para>The description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>success</para>
                 /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// The SQL statement that was executed.
+                /// <para>The SQL statement that was executed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>select 1;</para>
                 /// </summary>
                 [NameInMap("SQL")]
                 [Validation(Required=false)]
                 public string SQL { get; set; }
 
                 /// <summary>
-                /// The type of the SQL statement. Valid values:
+                /// <para>The type of the SQL statement. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>SELECT</b></description></item>
+                /// <item><description><b>INSERT</b></description></item>
+                /// <item><description><b>DELETE</b></description></item>
+                /// <item><description><b>CREATE_TABLE</b></description></item>
+                /// </list>
+                /// <remarks>
+                /// <para> You can choose Operation Audit &gt; Secure Access Proxy in the top navigation bar of the DMS console to view more types of SQL statements.</para>
+                /// </remarks>
                 /// 
-                /// *   **SELECT**
-                /// *   **INSERT**
-                /// *   **DELETE**
-                /// *   **CREATE_TABLE**
-                /// 
-                /// >  You can choose Operation Audit > Secure Access Proxy in the top navigation bar of the DMS console to view more types of SQL statements.
+                /// <b>Example:</b>
+                /// <para>SELECT</para>
                 /// </summary>
                 [NameInMap("SQLType")]
                 [Validation(Required=false)]
                 public string SQLType { get; set; }
 
                 /// <summary>
-                /// The name of the database.
+                /// <para>The name of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_db</para>
                 /// </summary>
                 [NameInMap("SchemaName")]
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }
 
                 /// <summary>
-                /// The ID of the user.
+                /// <para>The ID of the user.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4****</para>
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public long? UserId { get; set; }
 
                 /// <summary>
-                /// The nickname of the user.
+                /// <para>The nickname of the user.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testNickName</para>
                 /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]
@@ -134,24 +179,34 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50ECB006-2C35-5FCA-91B9-01987A0B****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// <para>The number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetPhysicalDatabaseRequest : TeaModel {
         /// <summary>
-        /// The ID of the physical database. You can call the [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the ID.
+        /// <para>The ID of the physical database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>43153</para>
         /// </summary>
         [NameInMap("DbId")]
         [Validation(Required=false)]
         public long? DbId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the ID of the tenant.
+        /// <para>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the ID of the tenant.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

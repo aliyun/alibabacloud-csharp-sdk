@@ -10,34 +10,43 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateProxyRequest : TeaModel {
         /// <summary>
-        /// The ID of the database instance. You can call the [ListInstances](https://www.alibabacloud.com/help/en/data-management-service/latest/listinstances) or [GetInstance](https://www.alibabacloud.com/help/en/data-management-service/latest/getinstance) operation to query the database instance ID.
+        /// <para>The ID of the database instance. You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/listinstances">ListInstances</a> or <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/getinstance">GetInstance</a> operation to query the database instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>183****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public long? InstanceId { get; set; }
 
         /// <summary>
-        /// The password of the database account.
+        /// <para>The password of the database account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <hr>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) operation to query the tenant ID.
+        /// <para>The ID of the tenant. You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant">GetUserActiveTenant</a> operation to query the tenant ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
 
         /// <summary>
-        /// The username of the database account.
+        /// <para>The username of the database account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>username</para>
         /// </summary>
         [NameInMap("Username")]
         [Validation(Required=false)]

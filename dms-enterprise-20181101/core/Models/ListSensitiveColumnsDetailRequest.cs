@@ -10,61 +10,83 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListSensitiveColumnsDetailRequest : TeaModel {
         /// <summary>
-        /// The name of the field. You can call the [ListSensitiveColumns](https://help.aliyun.com/document_detail/188103.html) operation to obtain the name of the field.
+        /// <para>The name of the field. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> operation to obtain the name of the field.</para>
+        /// <remarks>
+        /// <para> You can also call the <a href="https://help.aliyun.com/document_detail/141870.html">ListColumns</a> operation to obtain the name of the field.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can also call the [ListColumns](https://help.aliyun.com/document_detail/141870.html) operation to obtain the name of the field.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ColumnName_test</para>
         /// </summary>
         [NameInMap("ColumnName")]
         [Validation(Required=false)]
         public string ColumnName { get; set; }
 
         /// <summary>
-        /// The ID of the database. The database can be a physical database or a logical database.
+        /// <para>The ID of the database. The database can be a physical database or a logical database.</para>
+        /// <list type="bullet">
+        /// <item><description>To obtain the ID of a physical database, call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</description></item>
+        /// <item><description>To obtain the ID of a logical database, call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</description></item>
+        /// </list>
         /// 
-        /// *   To obtain the ID of a physical database, call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation.
-        /// *   To obtain the ID of a logical database, call the [ListLogicDatabases](https://help.aliyun.com/document_detail/141874.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation.
+        /// <b>Example:</b>
+        /// <para>1860****</para>
         /// </summary>
         [NameInMap("DbId")]
         [Validation(Required=false)]
         public long? DbId { get; set; }
 
         /// <summary>
-        /// Specifies whether the database is a logical database. Valid values:
+        /// <para>Specifies whether the database is a logical database. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The database is a logical database.</description></item>
+        /// <item><description><b>false</b>: The database is a physical database.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The database is a logical database.
-        /// *   **false**: The database is a physical database.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Logic")]
         [Validation(Required=false)]
         public bool? Logic { get; set; }
 
         /// <summary>
-        /// The name of the database. You can call the [ListSensitiveColumns](https://help.aliyun.com/document_detail/188103.html) operation to obtain the name of the database.
+        /// <para>The name of the database. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> operation to obtain the name of the database.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You can also call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the name of a physical database.</description></item>
+        /// <item><description>You can also call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the name of a logical database.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > * You can also call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the name of a physical database.
-        /// > * You can also call the [ListLogicDatabases](https://help.aliyun.com/document_detail/141874.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the name of a logical database.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>SchemaName_test</para>
         /// </summary>
         [NameInMap("SchemaName")]
         [Validation(Required=false)]
         public string SchemaName { get; set; }
 
         /// <summary>
-        /// The name of the table. You can call the [ListSensitiveColumns](https://help.aliyun.com/document_detail/188103.html) operation to obtain the name of the table.
+        /// <para>The name of the table. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> operation to obtain the name of the table.</para>
+        /// <remarks>
+        /// <para> You can also call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to obtain the name of the table.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can also call the [ListTables](https://help.aliyun.com/document_detail/141878.html) operation to obtain the name of the table.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("TableName")]
         [Validation(Required=false)]
         public string TableName { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.
+        /// <para>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

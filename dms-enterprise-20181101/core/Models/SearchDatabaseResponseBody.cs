@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class SearchDatabaseResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E0D21075-CD3E-4D98-8264-FD8AD04A63B6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the databases.
+        /// <para>The information about the databases.</para>
         /// </summary>
         [NameInMap("SearchDatabaseList")]
         [Validation(Required=false)]
@@ -42,82 +51,114 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<SearchDatabaseResponseBodySearchDatabaseListSearchDatabase> SearchDatabase { get; set; }
             public class SearchDatabaseResponseBodySearchDatabaseListSearchDatabase : TeaModel {
                 /// <summary>
-                /// The alias of the database.
+                /// <para>The alias of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_rds</para>
                 /// </summary>
                 [NameInMap("Alias")]
                 [Validation(Required=false)]
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// The name of the catalog to which the database belongs.
+                /// <para>The name of the catalog to which the database belongs.</para>
+                /// <remarks>
+                /// <para>If the type of the database engine is PostgreSQL, the name of the database is displayed.</para>
+                /// </remarks>
                 /// 
-                /// > If the type of the database engine is PostgreSQL, the name of the database is displayed.
+                /// <b>Example:</b>
+                /// <para>dmstest</para>
                 /// </summary>
                 [NameInMap("CatalogName")]
                 [Validation(Required=false)]
                 public string CatalogName { get; set; }
 
                 /// <summary>
-                /// The ID of the database.
+                /// <para>The ID of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2528****</para>
                 /// </summary>
                 [NameInMap("DatabaseId")]
                 [Validation(Required=false)]
                 public string DatabaseId { get; set; }
 
                 /// <summary>
-                /// The name of the data link for cross-database queries.
+                /// <para>The name of the data link for cross-database queries.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>datalink_name</para>
                 /// </summary>
                 [NameInMap("DatalinkName")]
                 [Validation(Required=false)]
                 public string DatalinkName { get; set; }
 
                 /// <summary>
-                /// The type of the database engine.
+                /// <para>The type of the database engine.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mysql</para>
                 /// </summary>
                 [NameInMap("DbType")]
                 [Validation(Required=false)]
                 public string DbType { get; set; }
 
                 /// <summary>
-                /// The ID of the user who assumes the database administrator (DBA) role.
+                /// <para>The ID of the user who assumes the database administrator (DBA) role.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10****</para>
                 /// </summary>
                 [NameInMap("DbaId")]
                 [Validation(Required=false)]
                 public string DbaId { get; set; }
 
                 /// <summary>
-                /// The encoding method of the database.
+                /// <para>The encoding method of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>utf8</para>
                 /// </summary>
                 [NameInMap("Encoding")]
                 [Validation(Required=false)]
                 public string Encoding { get; set; }
 
                 /// <summary>
-                /// The environment type of the database. For more information, see [Change the environment type of an instance](https://help.aliyun.com/document_detail/163309.html).
+                /// <para>The environment type of the database. For more information, see <a href="https://help.aliyun.com/document_detail/163309.html">Change the environment type of an instance</a>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("EnvType")]
                 [Validation(Required=false)]
                 public string EnvType { get; set; }
 
                 /// <summary>
-                /// The endpoint of the instance in which the database resides.
+                /// <para>The endpoint of the instance in which the database resides.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rm-xxxx.mysql.rds.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("Host")]
                 [Validation(Required=false)]
                 public string Host { get; set; }
 
                 /// <summary>
-                /// Indicates whether the database is a logical database. Valid values:
+                /// <para>Indicates whether the database is a logical database. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: The database is a logical database.</description></item>
+                /// <item><description><b>false</b>: The database is not a logical database.</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: The database is a logical database.
-                /// *   **false**: The database is not a logical database.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Logic")]
                 [Validation(Required=false)]
                 public bool? Logic { get; set; }
 
                 /// <summary>
-                /// The IDs of the owners of the databases.
+                /// <para>The IDs of the owners of the databases.</para>
                 /// </summary>
                 [NameInMap("OwnerIdList")]
                 [Validation(Required=false)]
@@ -130,7 +171,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The nicknames of the database owners.
+                /// <para>The nicknames of the database owners.</para>
                 /// </summary>
                 [NameInMap("OwnerNameList")]
                 [Validation(Required=false)]
@@ -143,28 +184,40 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The port of the instance in which the database resides.
+                /// <para>The port of the instance in which the database resides.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3306</para>
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// The name of the database.
+                /// <para>The name of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("SchemaName")]
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }
 
                 /// <summary>
-                /// The name that is used to search for the database.
+                /// <para>The name that is used to search for the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="mailto:test@xxx.xxx.xxx.xxx">test@xxx.xxx.xxx.xxx</a>:3306</para>
                 /// </summary>
                 [NameInMap("SearchName")]
                 [Validation(Required=false)]
                 public string SearchName { get; set; }
 
                 /// <summary>
-                /// The system ID (SID) of the instance in which the database resides.
+                /// <para>The system ID (SID) of the instance in which the database resides.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testSid</para>
                 /// </summary>
                 [NameInMap("Sid")]
                 [Validation(Required=false)]
@@ -175,17 +228,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The request is successful.
-        /// *   **false**: The request fails.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

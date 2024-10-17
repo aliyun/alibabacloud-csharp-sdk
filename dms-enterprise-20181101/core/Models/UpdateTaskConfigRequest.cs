@@ -10,25 +10,32 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class UpdateTaskConfigRequest : TeaModel {
         /// <summary>
-        /// The advanced configuration for the node. The value of this parameter must be a JSON string.
+        /// <para>The advanced configuration for the node. The value of this parameter must be a JSON string.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>{ &quot;rerun&quot;:{ &quot;rerunEnable&quot;:true,  &quot;rerunCount&quot;:1,   &quot;rerunInterval&quot;:10 } }</para>
         /// </summary>
         [NameInMap("NodeConfig")]
         [Validation(Required=false)]
         public string NodeConfig { get; set; }
 
         /// <summary>
-        /// The ID of the task node. You can call the [GetTaskInstanceRelation](https://help.aliyun.com/document_detail/424711.html) operation to query the node ID.
+        /// <para>The ID of the task node. You can call the <a href="https://help.aliyun.com/document_detail/424711.html">GetTaskInstanceRelation</a> operation to query the node ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>43****</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the tenant ID.
+        /// <para>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

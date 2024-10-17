@@ -10,34 +10,43 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListDataCorrectPreCheckDBRequest : TeaModel {
         /// <summary>
-        /// The ID of the ticket for the data change.
+        /// <para>The ID of the ticket for the data change.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>432****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>Valid values: an integer that is greater than 0.</para>
+        /// <para>Default value: 1.</para>
         /// 
-        /// Valid values: an integer that is greater than 0.
-        /// 
-        /// Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the ID of the tenant.
+        /// <para>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the ID of the tenant.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4321****</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

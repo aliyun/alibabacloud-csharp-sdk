@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListLogicTablesResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The details of the logical tables.
+        /// <para>The details of the logical tables.</para>
         /// </summary>
         [NameInMap("LogicTableList")]
         [Validation(Required=false)]
@@ -35,21 +41,27 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListLogicTablesResponseBodyLogicTableListLogicTable> LogicTable { get; set; }
             public class ListLogicTablesResponseBodyLogicTableListLogicTable : TeaModel {
                 /// <summary>
-                /// The ID of the logical database.
+                /// <para>The ID of the logical database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("DatabaseId")]
                 [Validation(Required=false)]
                 public string DatabaseId { get; set; }
 
                 /// <summary>
-                /// Indicates whether the table is a logical table. The value is fixed to true.
+                /// <para>Indicates whether the table is a logical table. The value is fixed to true.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Logic")]
                 [Validation(Required=false)]
                 public bool? Logic { get; set; }
 
                 /// <summary>
-                /// The IDs of the owners of the logical tables.
+                /// <para>The IDs of the owners of the logical tables.</para>
                 /// </summary>
                 [NameInMap("OwnerIdList")]
                 [Validation(Required=false)]
@@ -62,7 +74,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The nicknames of the owners of the logical tables.
+                /// <para>The nicknames of the owners of the logical tables.</para>
                 /// </summary>
                 [NameInMap("OwnerNameList")]
                 [Validation(Required=false)]
@@ -75,42 +87,60 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The logical database to which the logical table belongs.
+                /// <para>The logical database to which the logical table belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>yuyang_test</para>
                 /// </summary>
                 [NameInMap("SchemaName")]
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }
 
                 /// <summary>
-                /// The number of logical tables.
+                /// <para>The number of logical tables.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4</para>
                 /// </summary>
                 [NameInMap("TableCount")]
                 [Validation(Required=false)]
                 public string TableCount { get; set; }
 
                 /// <summary>
-                /// The expression of the logical table.
+                /// <para>The expression of the logical table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test[1-4]</para>
                 /// </summary>
                 [NameInMap("TableExpr")]
                 [Validation(Required=false)]
                 public string TableExpr { get; set; }
 
                 /// <summary>
-                /// The GUID of the logical table.
+                /// <para>The GUID of the logical table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>IDB_L_308302.yuyang_test.test_ch</para>
                 /// </summary>
                 [NameInMap("TableGuid")]
                 [Validation(Required=false)]
                 public string TableGuid { get; set; }
 
                 /// <summary>
-                /// The ID of the logical table.
+                /// <para>The ID of the logical table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("TableId")]
                 [Validation(Required=false)]
                 public string TableId { get; set; }
 
                 /// <summary>
-                /// The name of the logical table.
+                /// <para>The name of the logical table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
@@ -121,21 +151,30 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F1E6484F-9DF1-4406-9BDE-0861C4629B69</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of logical tables that meet the query conditions.
+        /// <para>The total number of logical tables that meet the query conditions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

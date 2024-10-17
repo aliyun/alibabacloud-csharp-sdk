@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListInstanceLoginAuditLogResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// <para>The error code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InvalidPageSize</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Specified parameter PageSize is not valid.</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The logon records of the instance.
+        /// <para>The logon records of the instance.</para>
         /// </summary>
         [NameInMap("InstanceLoginAuditLogList")]
         [Validation(Required=false)]
@@ -35,49 +41,70 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListInstanceLoginAuditLogResponseBodyInstanceLoginAuditLogListInstanceLoginAuditLog> InstanceLoginAuditLog { get; set; }
             public class ListInstanceLoginAuditLogResponseBodyInstanceLoginAuditLogListInstanceLoginAuditLog : TeaModel {
                 /// <summary>
-                /// The database account that is used to log on to the instance.
+                /// <para>The database account that is used to log on to the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_User</para>
                 /// </summary>
                 [NameInMap("DbUser")]
                 [Validation(Required=false)]
                 public string DbUser { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// <para>The ID of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>177****</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public long? InstanceId { get; set; }
 
                 /// <summary>
-                /// The name of the instance.
+                /// <para>The name of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rm-bp144d5ky4l4rli0417****.mysql.rds.aliyuncs.com:3306[rm-bp144d5ky4l4r****]</para>
                 /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// The time when the user performed an operation on the instance.
+                /// <para>The time when the user performed an operation on the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-11-18 11:13:26</para>
                 /// </summary>
                 [NameInMap("OpTime")]
                 [Validation(Required=false)]
                 public string OpTime { get; set; }
 
                 /// <summary>
-                /// The source IP address of the request.
+                /// <para>The source IP address of the request.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>117.36.XX.XX,100.104.XX.XX</para>
                 /// </summary>
                 [NameInMap("RequestIp")]
                 [Validation(Required=false)]
                 public string RequestIp { get; set; }
 
                 /// <summary>
-                /// The ID of the user.
+                /// <para>The ID of the user.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12****</para>
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public long? UserId { get; set; }
 
                 /// <summary>
-                /// The alias of the user.
+                /// <para>The alias of the user.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_UserName</para>
                 /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]
@@ -88,24 +115,34 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>074CE7C9-4F9C-5B62-89BC-7B4914A3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// <para>The number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

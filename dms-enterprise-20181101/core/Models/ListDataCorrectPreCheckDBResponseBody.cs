@@ -10,42 +10,57 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListDataCorrectPreCheckDBResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// <para>The error code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The information about the databases that are involved in the precheck.
+        /// <para>The information about the databases that are involved in the precheck.</para>
         /// </summary>
         [NameInMap("PreCheckDBList")]
         [Validation(Required=false)]
         public List<ListDataCorrectPreCheckDBResponseBodyPreCheckDBList> PreCheckDBList { get; set; }
         public class ListDataCorrectPreCheckDBResponseBodyPreCheckDBList : TeaModel {
             /// <summary>
-            /// The ID of the database.
+            /// <para>The ID of the database.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>43***</para>
             /// </summary>
             [NameInMap("DbId")]
             [Validation(Required=false)]
             public long? DbId { get; set; }
 
             /// <summary>
-            /// The name of the database.
+            /// <para>The name of the database.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test@localhost:3306</para>
             /// </summary>
             [NameInMap("SearchName")]
             [Validation(Required=false)]
             public string SearchName { get; set; }
 
             /// <summary>
-            /// The number of SQL statements.
+            /// <para>The number of SQL statements.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("SqlNum")]
             [Validation(Required=false)]
@@ -54,14 +69,20 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>95A972AF-FAED-4768-9360-7C0DF5D594D0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

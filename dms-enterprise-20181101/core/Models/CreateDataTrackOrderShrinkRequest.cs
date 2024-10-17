@@ -10,32 +10,36 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateDataTrackOrderShrinkRequest : TeaModel {
         /// <summary>
-        /// The purpose or objective of the data tracking ticket. This parameter is used to help reduce unnecessary communication.
+        /// <para>The purpose or objective of the data tracking ticket. This parameter is used to help reduce unnecessary communication.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// The parameters of the ticket.
-        /// 
-        /// This parameter is required.
+        /// <para>The parameters of the ticket.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Param")]
         [Validation(Required=false)]
         public string ParamShrink { get; set; }
 
         /// <summary>
-        /// The IDs of the operators that are related to the ticket.
+        /// <para>The IDs of the operators that are related to the ticket.</para>
         /// </summary>
         [NameInMap("RelatedUserList")]
         [Validation(Required=false)]
         public string RelatedUserListShrink { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.
+        /// <para>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

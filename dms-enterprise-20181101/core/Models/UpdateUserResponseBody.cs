@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class UpdateUserResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// <para>The error code returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// <para>The error message returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E9BEBF41-4F69-4605-A5D5-A67955173941</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request succeeded.
+        /// <para>Indicates whether the request succeeded.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

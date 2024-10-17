@@ -10,38 +10,54 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GrantTemplateAuthorityResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// <para>The error message returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>34E01EDD-6A16-4CF0-9541-C644D1BE01AA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the permissions on resources were granted to the users by using the permission template.
+        /// <para>Indicates whether the permissions on resources were granted to the users by using the permission template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public bool? Result { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

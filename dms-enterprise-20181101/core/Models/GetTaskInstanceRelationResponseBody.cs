@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetTaskInstanceRelationResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request fails.
+        /// <para>The error code returned if the request fails.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request fails.
+        /// <para>The error message returned if the request fails.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The information about the nodes in the execution record of the task flow.
+        /// <para>The information about the nodes in the execution record of the task flow.</para>
         /// </summary>
         [NameInMap("NodeList")]
         [Validation(Required=false)]
@@ -35,70 +41,98 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<GetTaskInstanceRelationResponseBodyNodeListNode> Node { get; set; }
             public class GetTaskInstanceRelationResponseBodyNodeListNode : TeaModel {
                 /// <summary>
-                /// The business time of the node.
+                /// <para>The business time of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-11-09 14:37:26</para>
                 /// </summary>
                 [NameInMap("BusinessTime")]
                 [Validation(Required=false)]
                 public string BusinessTime { get; set; }
 
                 /// <summary>
-                /// The time when the execution of the task flow was complete. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
+                /// <para>The time when the execution of the task flow was complete. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-11-11 14:38:57</para>
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// The amount of time consumed for running the node. Unit: milliseconds.
+                /// <para>The amount of time consumed for running the node. Unit: milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>170655</para>
                 /// </summary>
                 [NameInMap("ExecuteTime")]
                 [Validation(Required=false)]
                 public long? ExecuteTime { get; set; }
 
                 /// <summary>
-                /// The ID of the execution record of the task flow.
+                /// <para>The ID of the execution record of the task flow.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>14059</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// The description of the task.
+                /// <para>The description of the task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
                 /// <summary>
-                /// The ID of the node.
+                /// <para>The ID of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>14059</para>
                 /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public long? NodeId { get; set; }
 
                 /// <summary>
-                /// The name of the node.
+                /// <para>The name of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Spark SQL-1</para>
                 /// </summary>
                 [NameInMap("NodeName")]
                 [Validation(Required=false)]
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](https://help.aliyun.com/document_detail/424705.html).
+                /// <para>The type of the node. For more information about the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/424705.html">NodeType parameter</a>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>36</para>
                 /// </summary>
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]
                 public int? NodeType { get; set; }
 
                 /// <summary>
-                /// The status of the node. Valid values:
+                /// <para>The status of the node. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: The node is waiting to be scheduled.</description></item>
+                /// <item><description><b>1</b>: The node is running.</description></item>
+                /// <item><description><b>2</b>: The node is suspended.</description></item>
+                /// <item><description><b>3</b>: The node failed to run.</description></item>
+                /// <item><description><b>4</b>: The node is run.</description></item>
+                /// <item><description><b>5</b>: The node is complete.</description></item>
+                /// </list>
                 /// 
-                /// *   **0**: The node is waiting to be scheduled.
-                /// *   **1**: The node is running.
-                /// *   **2**: The node is suspended.
-                /// *   **3**: The node failed to run.
-                /// *   **4**: The node is run.
-                /// *   **5**: The node is complete.
+                /// <b>Example:</b>
+                /// <para>4</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -109,17 +143,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>028BF827-3801-5869-8548-F4A039256304</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The request is successful.
-        /// *   **false**: The request fails.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,27 +10,32 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class UpdateTaskFlowEdgesShrinkRequest : TeaModel {
         /// <summary>
-        /// The task flow ID. You can call the [ListTaskFlow](https://help.aliyun.com/document_detail/424565.html) or [ListLhTaskFlowAndScenario](https://help.aliyun.com/document_detail/426672.html) operation to query the task flow ID.
+        /// <para>The task flow ID. You can call the <a href="https://help.aliyun.com/document_detail/424565.html">ListTaskFlow</a> or <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to query the task flow ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>15***</para>
         /// </summary>
         [NameInMap("DagId")]
         [Validation(Required=false)]
         public long? DagId { get; set; }
 
         /// <summary>
-        /// The list of updated task flow edges.
-        /// 
-        /// This parameter is required.
+        /// <para>The list of updated task flow edges.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Edges")]
         [Validation(Required=false)]
         public string EdgesShrink { get; set; }
 
         /// <summary>
-        /// The tenant ID.
+        /// <para>The tenant ID.</para>
+        /// <remarks>
+        /// <para>To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</para>
+        /// </remarks>
         /// 
-        /// > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

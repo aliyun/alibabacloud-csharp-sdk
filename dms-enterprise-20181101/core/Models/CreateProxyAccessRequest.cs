@@ -10,39 +10,52 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateProxyAccessRequest : TeaModel {
         /// <summary>
-        /// The database account.
+        /// <para>The database account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("IndepAccount")]
         [Validation(Required=false)]
         public string IndepAccount { get; set; }
 
         /// <summary>
-        /// The password that is used to log on to the database.
+        /// <para>The password that is used to log on to the database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("IndepPassword")]
         [Validation(Required=false)]
         public string IndepPassword { get; set; }
 
         /// <summary>
-        /// The ID of the security protection agent. You can call the [ListProxies](https://www.alibabacloud.com/help/en/data-management-service/latest/listproxies) or [GetProxy](https://www.alibabacloud.com/help/en/data-management-service/latest/getproxy) operation to obtain this parameter.
+        /// <para>The ID of the security protection agent. You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/listproxies">ListProxies</a> or <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/getproxy">GetProxy</a> operation to obtain this parameter.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ProxyId")]
         [Validation(Required=false)]
         public long? ProxyId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) or [ListUserTenants](https://www.alibabacloud.com/help/en/data-management-service/latest/listusertenants) operation to obtain this parameter.
+        /// <para>The ID of the tenant. You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant">GetUserActiveTenant</a> or <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/listusertenants">ListUserTenants</a> operation to obtain this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
 
         /// <summary>
-        /// The ID of the user. You can call the [ListUsers](https://www.alibabacloud.com/help/en/data-management-service/latest/listusers) or [GetUser](https://www.alibabacloud.com/help/en/data-management-service/latest/getuser) operation to obtain this parameter.
+        /// <para>The ID of the user. You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/listusers">ListUsers</a> or <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/getuser">GetUser</a> operation to obtain this parameter.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

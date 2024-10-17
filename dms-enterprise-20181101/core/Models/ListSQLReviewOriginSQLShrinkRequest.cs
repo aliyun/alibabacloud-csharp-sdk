@@ -10,23 +10,28 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListSQLReviewOriginSQLShrinkRequest : TeaModel {
         /// <summary>
-        /// The parameters that are used to filter SQL statements involved in the ticket.
+        /// <para>The parameters that are used to filter SQL statements involved in the ticket.</para>
         /// </summary>
         [NameInMap("OrderActionDetail")]
         [Validation(Required=false)]
         public string OrderActionDetailShrink { get; set; }
 
         /// <summary>
-        /// The ID of the ticket for the SQL review. You can call the [CreateSQLReviewOrder](https://help.aliyun.com/document_detail/257777.html) operation to query the ID of the ticket.
+        /// <para>The ID of the SQL review ticket. You can call the <a href="https://help.aliyun.com/document_detail/257777.html">CreateSQLReviewOrder</a> operation to query the ticket ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123321</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/465818.html) operation to query the ID of the tenant.
+        /// <para>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

@@ -10,38 +10,51 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListTaskFlowResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>403</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4116147E-C628-5816-8779-8EEAF8E973F4</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The information about the task flows returned.
+        /// <para>The information about the task flows returned.</para>
         /// </summary>
         [NameInMap("TaskFlowList")]
         [Validation(Required=false)]
@@ -52,64 +65,90 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListTaskFlowResponseBodyTaskFlowListTaskFlow> TaskFlow { get; set; }
             public class ListTaskFlowResponseBodyTaskFlowListTaskFlow : TeaModel {
                 /// <summary>
-                /// The ID of the user who creates the task flow.
+                /// <para>The ID of the user who creates the task flow.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>51****</para>
                 /// </summary>
                 [NameInMap("CreatorId")]
                 [Validation(Required=false)]
                 public string CreatorId { get; set; }
 
                 /// <summary>
-                /// The name of the user who creates the task flow.
+                /// <para>The name of the user who creates the task flow.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Creator_NickName</para>
                 /// </summary>
                 [NameInMap("CreatorNickName")]
                 [Validation(Required=false)]
                 public string CreatorNickName { get; set; }
 
                 /// <summary>
-                /// The name of the task flow owner.
+                /// <para>The name of the task flow owner.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Owner_NickName</para>
                 /// </summary>
                 [NameInMap("DagOwnerNickName")]
                 [Validation(Required=false)]
                 public string DagOwnerNickName { get; set; }
 
                 /// <summary>
-                /// The ID of the latest deployment record.
+                /// <para>The ID of the latest deployment record.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12**</para>
                 /// </summary>
                 [NameInMap("DeployId")]
                 [Validation(Required=false)]
                 public long? DeployId { get; set; }
 
                 /// <summary>
-                /// The ID of the task flow.
+                /// <para>The ID of the task flow.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>134137****</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// The status of the latest execution. Valid values:
+                /// <para>The status of the latest execution. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: invalid.</description></item>
+                /// <item><description><b>1</b>: scheduling disabled.</description></item>
+                /// <item><description><b>2</b>: waiting to be scheduled.</description></item>
+                /// </list>
                 /// 
-                /// *   **0**: invalid.
-                /// *   **1**: scheduling disabled.
-                /// *   **2**: waiting to be scheduled.
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("LatestInstanceStatus")]
                 [Validation(Required=false)]
                 public int? LatestInstanceStatus { get; set; }
 
                 /// <summary>
-                /// The time when the latest execution record was generated.
+                /// <para>The time when the latest execution record was generated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-04-13</para>
                 /// </summary>
                 [NameInMap("LatestInstanceTime")]
                 [Validation(Required=false)]
                 public string LatestInstanceTime { get; set; }
 
                 /// <summary>
-                /// The status of the task flow. Valid values:
+                /// <para>The status of the task flow. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: The task flow is invalid.</description></item>
+                /// <item><description><b>1</b>: Scheduling is disabled for the task flow.</description></item>
+                /// <item><description><b>2</b>: The task flow is waiting to be scheduled.</description></item>
+                /// </list>
                 /// 
-                /// *   **0**: The task flow is invalid.
-                /// *   **1**: Scheduling is disabled for the task flow.
-                /// *   **2**: The task flow is waiting to be scheduled.
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]

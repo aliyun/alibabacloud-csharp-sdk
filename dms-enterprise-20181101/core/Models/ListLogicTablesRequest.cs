@@ -10,46 +10,64 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListLogicTablesRequest : TeaModel {
         /// <summary>
-        /// The ID of the logical database.
+        /// <para>The ID of the logical database.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("DatabaseId")]
         [Validation(Required=false)]
         public string DatabaseId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// Specifies whether to return the GUID of the table.
+        /// <para>Specifies whether to return the GUID of the table.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ReturnGuid")]
         [Validation(Required=false)]
         public bool? ReturnGuid { get; set; }
 
         /// <summary>
-        /// The keyword that is used to search for the logical tables. Prefix match is supported.
+        /// <para>The keyword that is used to search for the logical tables. Prefix match is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("SearchName")]
         [Validation(Required=false)]
         public string SearchName { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// <para>The ID of the tenant.</para>
+        /// <remarks>
+        /// <para>To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</para>
+        /// </remarks>
         /// 
-        /// > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).
+        /// <b>Example:</b>
+        /// <para>-1</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

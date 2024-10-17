@@ -10,42 +10,54 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetLogicDatabaseResponseBody : TeaModel {
         /// <summary>
-        /// The status code.
+        /// <para>The status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The details of the logical database.
+        /// <para>The details of the logical database.</para>
         /// </summary>
         [NameInMap("LogicDatabase")]
         [Validation(Required=false)]
         public GetLogicDatabaseResponseBodyLogicDatabase LogicDatabase { get; set; }
         public class GetLogicDatabaseResponseBodyLogicDatabase : TeaModel {
             /// <summary>
-            /// The alias of the logical database.
+            /// <para>The alias of the logical database.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_logic_alias</para>
             /// </summary>
             [NameInMap("Alias")]
             [Validation(Required=false)]
             public string Alias { get; set; }
 
             /// <summary>
-            /// The ID of the logical database.
+            /// <para>The ID of the logical database.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1***</para>
             /// </summary>
             [NameInMap("DatabaseId")]
             [Validation(Required=false)]
             public string DatabaseId { get; set; }
 
             /// <summary>
-            /// The IDs of database shards of the logical database.
+            /// <para>The IDs of database shards of the logical database.</para>
             /// </summary>
             [NameInMap("DatabaseIds")]
             [Validation(Required=false)]
@@ -58,37 +70,47 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             }
 
             /// <summary>
-            /// The database engine. For more information about the valid values of the DbType parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).
+            /// <para>The database engine. For more information about the valid values of the DbType parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>POLARDB</para>
             /// </summary>
             [NameInMap("DbType")]
             [Validation(Required=false)]
             public string DbType { get; set; }
 
             /// <summary>
-            /// The type of the environment to which the database belongs. Valid values:
+            /// <para>The type of the environment to which the database belongs. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>product: production environment</description></item>
+            /// <item><description>dev: development environment</description></item>
+            /// <item><description>pre: pre-release environment</description></item>
+            /// <item><description>test: test environment</description></item>
+            /// <item><description>sit: system integration testing (SIT) environment</description></item>
+            /// <item><description>uat: user acceptance testing (UAT) environment</description></item>
+            /// <item><description>pet: stress testing environment</description></item>
+            /// <item><description>stag: staging environment</description></item>
+            /// </list>
             /// 
-            /// *   product: production environment
-            /// *   dev: development environment
-            /// *   pre: pre-release environment
-            /// *   test: test environment
-            /// *   sit: system integration testing (SIT) environment
-            /// *   uat: user acceptance testing (UAT) environment
-            /// *   pet: stress testing environment
-            /// *   stag: staging environment
+            /// <b>Example:</b>
+            /// <para>dev</para>
             /// </summary>
             [NameInMap("EnvType")]
             [Validation(Required=false)]
             public string EnvType { get; set; }
 
             /// <summary>
-            /// Indicates whether the database is a logical database. The return value is true.
+            /// <para>Indicates whether the database is a logical database. The return value is true.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Logic")]
             [Validation(Required=false)]
             public bool? Logic { get; set; }
 
             /// <summary>
-            /// The IDs of the owners of the logical database.
+            /// <para>The IDs of the owners of the logical database.</para>
             /// </summary>
             [NameInMap("OwnerIdList")]
             [Validation(Required=false)]
@@ -101,7 +123,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             }
 
             /// <summary>
-            /// The names of the owners of the logical database.
+            /// <para>The names of the owners of the logical database.</para>
             /// </summary>
             [NameInMap("OwnerNameList")]
             [Validation(Required=false)]
@@ -114,14 +136,20 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             }
 
             /// <summary>
-            /// The name of the logical database.
+            /// <para>The name of the logical database.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_logic_db</para>
             /// </summary>
             [NameInMap("SchemaName")]
             [Validation(Required=false)]
             public string SchemaName { get; set; }
 
             /// <summary>
-            /// The name that is used to search for the logical database.
+            /// <para>The name that is used to search for the logical database.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_logic_db[test_logic_alias]</para>
             /// </summary>
             [NameInMap("SearchName")]
             [Validation(Required=false)]
@@ -130,17 +158,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>90260530-565C-42B9-A6E8-893481FE6AB6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

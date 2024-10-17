@@ -10,30 +10,41 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListDBTaskSQLJobDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the SQL task. You can call the [ListDBTaskSQLJob](https://help.aliyun.com/document_detail/207049.html) operation to query the SQL task ID.
+        /// <para>The ID of the SQL task. You can call the <a href="https://help.aliyun.com/document_detail/207049.html">ListDBTaskSQLJob</a> operation to query the SQL task ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1276****</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public long? JobId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.
+        /// <para>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

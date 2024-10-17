@@ -10,45 +10,61 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListUserPermissionsResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C51420E3-144A-4A94-B473-8662FCF4AD10</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
+        /// </list>
         /// 
-        /// - true: The request is successful.
-        /// - false: The request fails.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of entries that meet the query conditions.
+        /// <para>The total number of entries that meet the query conditions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// The details of the permissions that the user has.
+        /// <para>The details of the permissions that the user has.</para>
         /// </summary>
         [NameInMap("UserPermissions")]
         [Validation(Required=false)]
@@ -59,87 +75,117 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListUserPermissionsResponseBodyUserPermissionsUserPermission> UserPermission { get; set; }
             public class ListUserPermissionsResponseBodyUserPermissionsUserPermission : TeaModel {
                 /// <summary>
-                /// The alias of the instance.
+                /// <para>The alias of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>instance_alias</para>
                 /// </summary>
                 [NameInMap("Alias")]
                 [Validation(Required=false)]
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// The name of the field.
+                /// <para>The name of the field.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>column_name</para>
                 /// </summary>
                 [NameInMap("ColumnName")]
                 [Validation(Required=false)]
                 public string ColumnName { get; set; }
 
                 /// <summary>
-                /// The ID of the database.
+                /// <para>The ID of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1860****</para>
                 /// </summary>
                 [NameInMap("DbId")]
                 [Validation(Required=false)]
                 public string DbId { get; set; }
 
                 /// <summary>
-                /// The type of the database. For more information about the valid values of this parameter, see [DbType parameter](https://www.alibabacloud.com/help/en/data-management-service/latest/dbtype-parameter).
+                /// <para>The type of the database. For more information about the valid values of this parameter, see <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/dbtype-parameter">DbType parameter</a>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>polardb</para>
                 /// </summary>
                 [NameInMap("DbType")]
                 [Validation(Required=false)]
                 public string DbType { get; set; }
 
                 /// <summary>
-                /// The permissions on a specific type of objects that are granted to the user. Valid values: 
+                /// <para>The permissions on a specific type of objects that are granted to the user. Valid values: </para>
+                /// <list type="bullet">
+                /// <item><description>DATABASE: permissions on physical databases</description></item>
+                /// <item><description>LOGIC_DATABASE: permissions on logical databases</description></item>
+                /// <item><description>TABLE: permissions on physical tables</description></item>
+                /// <item><description>LOGIC_TABLE: permissions on logical tables</description></item>
+                /// </list>
                 /// 
-                /// - DATABASE: permissions on physical databases
-                /// - LOGIC_DATABASE: permissions on logical databases
-                /// - TABLE: permissions on physical tables
-                /// - LOGIC_TABLE: permissions on logical tables
+                /// <b>Example:</b>
+                /// <para>DATABASE</para>
                 /// </summary>
                 [NameInMap("DsType")]
                 [Validation(Required=false)]
                 public string DsType { get; set; }
 
                 /// <summary>
-                /// The type of the environment to which the database belongs. Valid values:
+                /// <para>The type of the environment to which the database belongs. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>product: production environment</description></item>
+                /// <item><description>dev: development environment</description></item>
+                /// <item><description>pre: staging environment</description></item>
+                /// <item><description>test: test environment</description></item>
+                /// <item><description>sit: SIT environment</description></item>
+                /// <item><description>uat: UAT environment</description></item>
+                /// <item><description>pet: stress testing environment</description></item>
+                /// <item><description>stag: STAG environment</description></item>
+                /// </list>
                 /// 
-                /// - product: production environment
-                /// - dev: development environment
-                /// - pre: staging environment
-                /// - test: test environment
-                /// - sit: SIT environment
-                /// - uat: UAT environment
-                /// - pet: stress testing environment
-                /// - stag: STAG environment
+                /// <b>Example:</b>
+                /// <para>dev</para>
                 /// </summary>
                 [NameInMap("EnvType")]
                 [Validation(Required=false)]
                 public string EnvType { get; set; }
 
                 /// <summary>
-                /// The endpoint that is used to connect the database.
+                /// <para>The endpoint that is used to connect the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rm-bp144d5ky4l4r****</para>
                 /// </summary>
                 [NameInMap("Host")]
                 [Validation(Required=false)]
                 public string Host { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// <para>The ID of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>174****</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// Indicates whether the database is a logical database. Valid values:
+                /// <para>Indicates whether the database is a logical database. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: The database is a logical database.</description></item>
+                /// <item><description>false: The database is a physical database.</description></item>
+                /// </list>
                 /// 
-                /// *   true: The database is a logical database.
-                /// *   false: The database is a physical database.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Logic")]
                 [Validation(Required=false)]
                 public bool? Logic { get; set; }
 
                 /// <summary>
-                /// The details of permissions.
+                /// <para>The details of permissions.</para>
                 /// </summary>
                 [NameInMap("PermDetails")]
                 [Validation(Required=false)]
@@ -150,46 +196,65 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<ListUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail> PermDetail { get; set; }
                     public class ListUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail : TeaModel {
                         /// <summary>
-                        /// The time when the permissions were granted.
+                        /// <para>The time when the permissions were granted.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2019-12-12 00:00:00</para>
                         /// </summary>
                         [NameInMap("CreateDate")]
                         [Validation(Required=false)]
                         public string CreateDate { get; set; }
 
                         /// <summary>
-                        /// The time when the permissions expire.
+                        /// <para>The time when the permissions expire.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2020-12-12 00:00:00</para>
                         /// </summary>
                         [NameInMap("ExpireDate")]
                         [Validation(Required=false)]
                         public string ExpireDate { get; set; }
 
                         /// <summary>
-                        /// This parameter is reserved.
+                        /// <para>This parameter is reserved.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>xxx</para>
                         /// </summary>
                         [NameInMap("ExtraData")]
                         [Validation(Required=false)]
                         public string ExtraData { get; set; }
 
                         /// <summary>
-                        /// The user who grants the permissions.
+                        /// <para>The user who grants the permissions.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>xxx authorization</para>
                         /// </summary>
                         [NameInMap("OriginFrom")]
                         [Validation(Required=false)]
                         public string OriginFrom { get; set; }
 
                         /// <summary>
-                        /// The type of the permissions. Valid values:
+                        /// <para>The type of the permissions. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>QUERY: the query permissions</description></item>
+                        /// <item><description>EXPORT: the export permissions</description></item>
+                        /// <item><description>CORRECT: the change permissions</description></item>
+                        /// </list>
                         /// 
-                        /// *   QUERY: the query permissions
-                        /// *   EXPORT: the export permissions
-                        /// *   CORRECT: the change permissions
+                        /// <b>Example:</b>
+                        /// <para>QUERY</para>
                         /// </summary>
                         [NameInMap("PermType")]
                         [Validation(Required=false)]
                         public string PermType { get; set; }
 
                         /// <summary>
-                        /// The ID of the authorization record.
+                        /// <para>The ID of the authorization record.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>758****</para>
                         /// </summary>
                         [NameInMap("UserAccessId")]
                         [Validation(Required=false)]
@@ -200,49 +265,70 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The port that is used to connect to the instance.
+                /// <para>The port that is used to connect to the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3306</para>
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public long? Port { get; set; }
 
                 /// <summary>
-                /// The name of the database.
+                /// <para>The name of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_db</para>
                 /// </summary>
                 [NameInMap("SchemaName")]
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }
 
                 /// <summary>
-                /// The name that is used to search for the database.
+                /// <para>The name that is used to search for the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_db@xxx:3306</para>
                 /// </summary>
                 [NameInMap("SearchName")]
                 [Validation(Required=false)]
                 public string SearchName { get; set; }
 
                 /// <summary>
-                /// The ID of the table.
+                /// <para>The ID of the table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>13434</para>
                 /// </summary>
                 [NameInMap("TableId")]
                 [Validation(Required=false)]
                 public string TableId { get; set; }
 
                 /// <summary>
-                /// The name of the table.
+                /// <para>The name of the table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_table</para>
                 /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
                 public string TableName { get; set; }
 
                 /// <summary>
-                /// The ID of the user.
+                /// <para>The ID of the user.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>51****</para>
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public string UserId { get; set; }
 
                 /// <summary>
-                /// The nickname of the user.
+                /// <para>The nickname of the user.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>nick_name</para>
                 /// </summary>
                 [NameInMap("UserNickName")]
                 [Validation(Required=false)]

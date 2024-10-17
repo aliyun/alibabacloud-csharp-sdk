@@ -10,49 +10,62 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListSQLReviewOriginSQLRequest : TeaModel {
         /// <summary>
-        /// The parameters that are used to filter SQL statements involved in the ticket.
+        /// <para>The parameters that are used to filter SQL statements involved in the ticket.</para>
         /// </summary>
         [NameInMap("OrderActionDetail")]
         [Validation(Required=false)]
         public ListSQLReviewOriginSQLRequestOrderActionDetail OrderActionDetail { get; set; }
         public class ListSQLReviewOriginSQLRequestOrderActionDetail : TeaModel {
             /// <summary>
-            /// The review status of the SQL statement. Valid values:
+            /// <para>The review status of the SQL statement. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>new</b>: The SQL statement was waiting to be reviewed.</description></item>
+            /// <item><description><b>unknown</b>: The SQL statement cannot be parsed.</description></item>
+            /// <item><description><b>check_not_pass</b>: The SQL statement failed to pass the review.</description></item>
+            /// <item><description><b>check_pass</b>: The SQL statement passed the review.</description></item>
+            /// <item><description><b>force_pass</b>: The SQL statement passed the manual review.</description></item>
+            /// <item><description><b>force_not_pass</b>: The SQL statement failed to pass the manual review.</description></item>
+            /// </list>
             /// 
-            /// *   **new**: The SQL statement is pending for analysis.
-            /// *   **unknown**: The SQL statement failed to be parsed.
-            /// *   **check_not_pass**: The SQL statement failed the review.
-            /// *   **check_pass**: The SQL statement passed the review.
-            /// *   **force_pass**: The SQL statement passed the review by manual effort.
-            /// *   **force_not_pass**: The SQL statement failed the review by manual effort.
+            /// <b>Example:</b>
+            /// <para>check_not_pass</para>
             /// </summary>
             [NameInMap("CheckStatusResult")]
             [Validation(Required=false)]
             public string CheckStatusResult { get; set; }
 
             /// <summary>
-            /// The ID of the file.
+            /// <para>The ID of the file that contains the SQL statements to be reviewed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123345</para>
             /// </summary>
             [NameInMap("FileId")]
             [Validation(Required=false)]
             public long? FileId { get; set; }
 
             /// <summary>
-            /// The paging settings.
+            /// <para>The pagination information.</para>
             /// </summary>
             [NameInMap("Page")]
             [Validation(Required=false)]
             public ListSQLReviewOriginSQLRequestOrderActionDetailPage Page { get; set; }
             public class ListSQLReviewOriginSQLRequestOrderActionDetailPage : TeaModel {
                 /// <summary>
-                /// The number of the page to return.
+                /// <para>The page number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("PageNumber")]
                 [Validation(Required=false)]
                 public int? PageNumber { get; set; }
 
                 /// <summary>
-                /// The number of entries to return on each page.
+                /// <para>The number of entries per page.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20</para>
                 /// </summary>
                 [NameInMap("PageSize")]
                 [Validation(Required=false)]
@@ -61,14 +74,18 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             }
 
             /// <summary>
-            /// The optimization suggestion for the SQL statement. Valid values:
+            /// <para>The optimization suggestion for the SQL statement. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>MUST_IMPROVE</b>: The SQL statement must be optimized.</description></item>
+            /// <item><description><b>POTENTIAL_ISSUE</b>: The SQL statement contains potential issues.</description></item>
+            /// <item><description><b>SUGGEST_IMPROVE</b>: We recommend that you optimize the SQL statement.</description></item>
+            /// <item><description><b>USE_DMS_TOOLKIT</b>: We recommend that you change schemas without locking tables.</description></item>
+            /// <item><description><b>USE_DMS_DML_UNLOCK</b>: We recommend that you change data without locking tables.</description></item>
+            /// <item><description><b>TABLE_INDEX_SUGGEST</b>: We recommend that you optimize indexes for the SQL statement.</description></item>
+            /// </list>
             /// 
-            /// *   **MUST_IMPROVE**: The SQL statement must be improved.
-            /// *   **POTENTIAL_ISSUE**: The SQL statement contains potential issues.
-            /// *   **SUGGEST_IMPROVE**: We recommend that you improve the SQL statement.
-            /// *   **USE_DMS_TOOLKIT**: We recommend that you change schemas without locking tables.
-            /// *   **USE_DMS_DML_UNLOCK**: We recommend that you change data without locking tables.
-            /// *   **TABLE_INDEX_SUGGEST**: We recommend that you use SQL statements that use indexes.
+            /// <b>Example:</b>
+            /// <para>MUST_IMPROVE</para>
             /// </summary>
             [NameInMap("SQLReviewResult")]
             [Validation(Required=false)]
@@ -77,16 +94,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The ID of the ticket for the SQL review. You can call the [CreateSQLReviewOrder](https://help.aliyun.com/document_detail/257777.html) operation to query the ID of the ticket.
+        /// <para>The ID of the SQL review ticket. You can call the <a href="https://help.aliyun.com/document_detail/257777.html">CreateSQLReviewOrder</a> operation to query the ticket ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123321</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/465818.html) operation to query the ID of the tenant.
+        /// <para>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

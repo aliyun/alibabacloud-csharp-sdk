@@ -10,45 +10,61 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListInstanceUserPermissionsResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7D162AAE-6501-5691-BF14-D7018F662895</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
+        /// </list>
         /// 
-        /// - true: The request is successful.
-        /// - false: The request fails.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// <para>The total number of returned entries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// The permissions of the user on the instance.
+        /// <para>The permissions of the user on the instance.</para>
         /// </summary>
         [NameInMap("UserPermissions")]
         [Validation(Required=false)]
@@ -59,14 +75,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermission> UserPermission { get; set; }
             public class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermission : TeaModel {
                 /// <summary>
-                /// The ID of the instance.
+                /// <para>The ID of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>174****</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The details of permissions.
+                /// <para>The details of permissions.</para>
                 /// </summary>
                 [NameInMap("PermDetails")]
                 [Validation(Required=false)]
@@ -77,45 +96,64 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail> PermDetail { get; set; }
                     public class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail : TeaModel {
                         /// <summary>
-                        /// The time when the permissions were granted.
+                        /// <para>The time when the permissions were granted.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2019-12-12 00:00:00</para>
                         /// </summary>
                         [NameInMap("CreateDate")]
                         [Validation(Required=false)]
                         public string CreateDate { get; set; }
 
                         /// <summary>
-                        /// The time when the permissions expire.
+                        /// <para>The time when the permissions expire.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2020-12-12 00:00:00</para>
                         /// </summary>
                         [NameInMap("ExpireDate")]
                         [Validation(Required=false)]
                         public string ExpireDate { get; set; }
 
                         /// <summary>
-                        /// This parameter is reserved.
+                        /// <para>This parameter is reserved.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>XXX</para>
                         /// </summary>
                         [NameInMap("ExtraData")]
                         [Validation(Required=false)]
                         public string ExtraData { get; set; }
 
                         /// <summary>
-                        /// The user who grants the permissions.
+                        /// <para>The user who grants the permissions.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>xxx authorization</para>
                         /// </summary>
                         [NameInMap("OriginFrom")]
                         [Validation(Required=false)]
                         public string OriginFrom { get; set; }
 
                         /// <summary>
-                        /// The type of the permissions. Valid values:
+                        /// <para>The type of the permissions. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>LOGIN: the logon permissions</description></item>
+                        /// <item><description>PERF: the query permissions on the instance</description></item>
+                        /// </list>
                         /// 
-                        /// *   LOGIN: the logon permissions
-                        /// *   PERF: the query permissions on the instance
+                        /// <b>Example:</b>
+                        /// <para>LOGIN</para>
                         /// </summary>
                         [NameInMap("PermType")]
                         [Validation(Required=false)]
                         public string PermType { get; set; }
 
                         /// <summary>
-                        /// The ID of the authorization record.
+                        /// <para>The ID of the authorization record.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>773****</para>
                         /// </summary>
                         [NameInMap("UserAccessId")]
                         [Validation(Required=false)]
@@ -126,14 +164,20 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The ID of the user.
+                /// <para>The ID of the user.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>51****</para>
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public string UserId { get; set; }
 
                 /// <summary>
-                /// The nickname of the user.
+                /// <para>The nickname of the user.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_nick_name</para>
                 /// </summary>
                 [NameInMap("UserNickName")]
                 [Validation(Required=false)]

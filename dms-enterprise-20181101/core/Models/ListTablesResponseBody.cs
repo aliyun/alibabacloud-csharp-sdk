@@ -10,38 +10,51 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListTablesResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// <para>The error code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B16FB618-5E96-4FFD-BB0D-490C890A4030</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The details of the tables.
+        /// <para>The details of the tables.</para>
         /// </summary>
         [NameInMap("TableList")]
         [Validation(Required=false)]
@@ -52,42 +65,57 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListTablesResponseBodyTableListTable> Table { get; set; }
             public class ListTablesResponseBodyTableListTable : TeaModel {
                 /// <summary>
-                /// The ID of the physical database.
+                /// <para>The ID of the physical database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1860****</para>
                 /// </summary>
                 [NameInMap("DatabaseId")]
                 [Validation(Required=false)]
                 public string DatabaseId { get; set; }
 
                 /// <summary>
-                /// The description of the table.
+                /// <para>The description of the table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The encoding format of the table.
+                /// <para>The encoding format of the table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>utf8</para>
                 /// </summary>
                 [NameInMap("Encoding")]
                 [Validation(Required=false)]
                 public string Encoding { get; set; }
 
                 /// <summary>
-                /// The engine of the table.
+                /// <para>The engine of the table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>InnoDB</para>
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The number of rows in the table. This is a statistical value and does not indicate the actual number of rows.
+                /// <para>The number of rows in the table. This is a statistical value and does not indicate the actual number of rows.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10085</para>
                 /// </summary>
                 [NameInMap("NumRows")]
                 [Validation(Required=false)]
                 public long? NumRows { get; set; }
 
                 /// <summary>
-                /// The ID list of the table owners.
+                /// <para>The ID list of the table owners.</para>
                 /// </summary>
                 [NameInMap("OwnerIdList")]
                 [Validation(Required=false)]
@@ -100,7 +128,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The nickname list of the table owners.
+                /// <para>The nickname list of the table owners.</para>
                 /// </summary>
                 [NameInMap("OwnerNameList")]
                 [Validation(Required=false)]
@@ -113,42 +141,60 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The storage space that is occupied by the table. This is a statistical value and does not indicate the accurate storage space. Unit: MB.
+                /// <para>The storage space that is occupied by the table. This is a statistical value and does not indicate the accurate storage space. Unit: MB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1024</para>
                 /// </summary>
                 [NameInMap("StoreCapacity")]
                 [Validation(Required=false)]
                 public long? StoreCapacity { get; set; }
 
                 /// <summary>
-                /// The GUID of the table in DMS.
+                /// <para>The GUID of the table in DMS.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>IDB_44743****.qntest.consumption_records</para>
                 /// </summary>
                 [NameInMap("TableGuid")]
                 [Validation(Required=false)]
                 public string TableGuid { get; set; }
 
                 /// <summary>
-                /// The ID of the table.
+                /// <para>The ID of the table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>44743****</para>
                 /// </summary>
                 [NameInMap("TableId")]
                 [Validation(Required=false)]
                 public string TableId { get; set; }
 
                 /// <summary>
-                /// The table name.
+                /// <para>The table name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>consumption_records</para>
                 /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
                 public string TableName { get; set; }
 
                 /// <summary>
-                /// The database in which the table resides.
+                /// <para>The database in which the table resides.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>qntest</para>
                 /// </summary>
                 [NameInMap("TableSchemaName")]
                 [Validation(Required=false)]
                 public string TableSchemaName { get; set; }
 
                 /// <summary>
-                /// The type of the table. Default value: NORMAL.
+                /// <para>The type of the table. Default value: NORMAL.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>NORMAL</para>
                 /// </summary>
                 [NameInMap("TableType")]
                 [Validation(Required=false)]
@@ -159,7 +205,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The total number of tables that meet the query conditions.
+        /// <para>The total number of tables that meet the query conditions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

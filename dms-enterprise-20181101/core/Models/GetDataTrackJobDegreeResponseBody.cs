@@ -10,66 +10,88 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetDataTrackJobDegreeResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// <para>The error code returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// <para>The error message returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The progress details of the data tracking task.
+        /// <para>The progress details of the data tracking task.</para>
         /// </summary>
         [NameInMap("JobDegree")]
         [Validation(Required=false)]
         public GetDataTrackJobDegreeResponseBodyJobDegree JobDegree { get; set; }
         public class GetDataTrackJobDegreeResponseBodyJobDegree : TeaModel {
             /// <summary>
-            /// The progress of binary log download. Valid values: 0 to 1. A value of 1 indicates that binary log download is complete.
+            /// <para>The progress of binary log download. Valid values: 0 to 1. A value of 1 indicates that binary log download is complete.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("DownloadCompletionDegree")]
             [Validation(Required=false)]
             public double? DownloadCompletionDegree { get; set; }
 
             /// <summary>
-            /// The progress of binary log parsing. Valid values: 0 to 1. A value of 1 indicates that binary log parsing is complete.
+            /// <para>The progress of binary log parsing. Valid values: 0 to 1. A value of 1 indicates that binary log parsing is complete.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("FilterCompletionDegree")]
             [Validation(Required=false)]
             public double? FilterCompletionDegree { get; set; }
 
             /// <summary>
-            /// The status of the data tracking task. Valid values:
+            /// <para>The status of the data tracking task. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>INIT</b>: The task is being initialized.</description></item>
+            /// <item><description><b>LISTING</b>: The binary logs are being obtained.</description></item>
+            /// <item><description><b>LIST_SUCCESS</b>: The binary logs are successfully obtained.</description></item>
+            /// <item><description><b>DOWNLOADING</b>: The binary logs are being downloaded.</description></item>
+            /// <item><description><b>DOWNLOAD_FAIL</b>: The binary logs failed to be downloaded.</description></item>
+            /// <item><description><b>DOWNLOAD_SUCCESS</b>: The binary logs are successfully downloaded.</description></item>
+            /// <item><description><b>FILTERING</b>: The binary logs are being parsed.</description></item>
+            /// <item><description><b>FILTER_FAIL</b>: The binary logs failed to be parsed.</description></item>
+            /// <item><description><b>FILTER_SUCCESS</b>: The binary logs are successfully parsed.</description></item>
+            /// </list>
             /// 
-            /// *   **INIT**: The task is being initialized.
-            /// *   **LISTING**: The binary logs are being obtained.
-            /// *   **LIST_SUCCESS**: The binary logs are successfully obtained.
-            /// *   **DOWNLOADING**: The binary logs are being downloaded.
-            /// *   **DOWNLOAD_FAIL**: The binary logs failed to be downloaded.
-            /// *   **DOWNLOAD_SUCCESS**: The binary logs are successfully downloaded.
-            /// *   **FILTERING**: The binary logs are being parsed.
-            /// *   **FILTER_FAIL**: The binary logs failed to be parsed.
-            /// *   **FILTER_SUCCESS**: The binary logs are successfully parsed.
+            /// <b>Example:</b>
+            /// <para>FILTER_SUCCESS</para>
             /// </summary>
             [NameInMap("JobStatus")]
             [Validation(Required=false)]
             public string JobStatus { get; set; }
 
             /// <summary>
-            /// The progress of binary log obtaining. Valid values: 0 to 1. A value of 1 indicates that binary log obtaining is complete.
+            /// <para>The progress of binary log obtaining. Valid values: 0 to 1. A value of 1 indicates that binary log obtaining is complete.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ListCompletionDegree")]
             [Validation(Required=false)]
             public double? ListCompletionDegree { get; set; }
 
             /// <summary>
-            /// The description of the task status.
+            /// <para>The description of the task status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>searching success</para>
             /// </summary>
             [NameInMap("StatusDesc")]
             [Validation(Required=false)]
@@ -78,17 +100,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C51420E3-144A-4A94-B473-8662FCF4AD10</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

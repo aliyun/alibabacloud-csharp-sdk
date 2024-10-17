@@ -10,92 +10,122 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class UpdateTaskFlowScheduleRequest : TeaModel {
         /// <summary>
-        /// The start of the time range for scheduling.
+        /// <para>The start of the time range for scheduling.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CronBeginDate_test</para>
         /// </summary>
         [NameInMap("CronBeginDate")]
         [Validation(Required=false)]
         public string CronBeginDate { get; set; }
 
         /// <summary>
-        /// The end of the time range for scheduling.
+        /// <para>The end of the time range for scheduling.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CronEndDate_test</para>
         /// </summary>
         [NameInMap("CronEndDate")]
         [Validation(Required=false)]
         public string CronEndDate { get; set; }
 
         /// <summary>
-        /// The cron expression for timed scheduling.
+        /// <para>The cron expression for timed scheduling.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CronStr_test</para>
         /// </summary>
         [NameInMap("CronStr")]
         [Validation(Required=false)]
         public string CronStr { get; set; }
 
         /// <summary>
-        /// The type of the scheduling cycle. Valid values:
+        /// <para>The type of the scheduling cycle. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>MINUTE</b>: scheduling by minute</description></item>
+        /// <item><description><b>HOUR</b>: scheduling by hour</description></item>
+        /// <item><description><b>DAY</b>: scheduling by day</description></item>
+        /// <item><description><b>WEEK</b>: scheduling by week</description></item>
+        /// <item><description><b>MONTH</b>: scheduling by month</description></item>
+        /// </list>
         /// 
-        /// *   **MINUTE**: scheduling by minute
-        /// *   **HOUR**: scheduling by hour
-        /// *   **DAY**: scheduling by day
-        /// *   **WEEK**: scheduling by week
-        /// *   **MONTH**: scheduling by month
+        /// <b>Example:</b>
+        /// <para>HOUR</para>
         /// </summary>
         [NameInMap("CronType")]
         [Validation(Required=false)]
         public string CronType { get; set; }
 
         /// <summary>
-        /// The ID of the task flow.
+        /// <para>The ID of the task flow.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>7***</para>
         /// </summary>
         [NameInMap("DagId")]
         [Validation(Required=false)]
         public long? DagId { get; set; }
 
         /// <summary>
-        /// The event scheduling configuration. The value of this parameter is a JSON string.
+        /// <para>The event scheduling configuration. The value of this parameter is a JSON string.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ScheduleParam_test</para>
         /// </summary>
         [NameInMap("ScheduleParam")]
         [Validation(Required=false)]
         public string ScheduleParam { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable scheduling. Valid values:
+        /// <para>Specifies whether to enable scheduling. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enable</b></description></item>
+        /// <item><description><b>Disable</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **Enable**
-        /// *   **Disable**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Disable</para>
         /// </summary>
         [NameInMap("ScheduleSwitch")]
         [Validation(Required=false)]
         public bool? ScheduleSwitch { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// <para>The ID of the tenant.</para>
+        /// <remarks>
+        /// <para>: To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a>.</para>
+        /// </remarks>
         /// 
-        /// > : To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html).
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
 
         /// <summary>
-        /// The time zone. The default time zone is UTC+8 (Asia/Shanghai).
+        /// <para>The time zone. The default time zone is UTC+8 (Asia/Shanghai).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Asia/Shanghai</para>
         /// </summary>
         [NameInMap("TimeZoneId")]
         [Validation(Required=false)]
         public string TimeZoneId { get; set; }
 
         /// <summary>
-        /// The mode in which the task flow is triggered. Valid values:
+        /// <para>The mode in which the task flow is triggered. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Cron</b>: The task flow is triggered based on timed scheduling.</description></item>
+        /// <item><description><b>Event</b>: The task flow is triggered by events.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **Cron**: The task flow is triggered based on timed scheduling.
-        /// *   **Event**: The task flow is triggered by events.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Event</para>
         /// </summary>
         [NameInMap("TriggerType")]
         [Validation(Required=false)]

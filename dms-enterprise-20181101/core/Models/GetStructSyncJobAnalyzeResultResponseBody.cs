@@ -10,56 +10,71 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetStructSyncJobAnalyzeResultResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1810E635-A2D7-428B-BAA9-85DAEB9B1A77</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The analysis result of the schema synchronization task.
+        /// <para>The analysis result of the schema synchronization task.</para>
         /// </summary>
         [NameInMap("StructSyncJobAnalyzeResult")]
         [Validation(Required=false)]
         public GetStructSyncJobAnalyzeResultResponseBodyStructSyncJobAnalyzeResult StructSyncJobAnalyzeResult { get; set; }
         public class GetStructSyncJobAnalyzeResultResponseBodyStructSyncJobAnalyzeResult : TeaModel {
             /// <summary>
-            /// The details of the analysis results.
+            /// <para>The details of the analysis results.</para>
             /// </summary>
             [NameInMap("ResultList")]
             [Validation(Required=false)]
             public List<GetStructSyncJobAnalyzeResultResponseBodyStructSyncJobAnalyzeResultResultList> ResultList { get; set; }
             public class GetStructSyncJobAnalyzeResultResponseBodyStructSyncJobAnalyzeResultResultList : TeaModel {
                 /// <summary>
-                /// The SQL script.
+                /// <para>The SQL script.</para>
                 /// </summary>
                 [NameInMap("Script")]
                 [Validation(Required=false)]
                 public string Script { get; set; }
 
                 /// <summary>
-                /// The name of the source table.
+                /// <para>The name of the source table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>helloz_bak</para>
                 /// </summary>
                 [NameInMap("SourceTableName")]
                 [Validation(Required=false)]
                 public string SourceTableName { get; set; }
 
                 /// <summary>
-                /// The name of the destination table.
+                /// <para>The name of the destination table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>helloz_bak</para>
                 /// </summary>
                 [NameInMap("TargetTableName")]
                 [Validation(Required=false)]
@@ -68,27 +83,34 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             }
 
             /// <summary>
-            /// The statistics on the analysis results.
+            /// <para>The statistics on the analysis results.</para>
             /// </summary>
             [NameInMap("SummaryList")]
             [Validation(Required=false)]
             public List<GetStructSyncJobAnalyzeResultResponseBodyStructSyncJobAnalyzeResultSummaryList> SummaryList { get; set; }
             public class GetStructSyncJobAnalyzeResultResponseBodyStructSyncJobAnalyzeResultSummaryList : TeaModel {
                 /// <summary>
-                /// The type of the comparison. Valid values:
+                /// <para>The type of the comparison. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>CREATE_TABLE</b>: compares the created tables.</description></item>
+                /// <item><description><b>ALTER_TABLE</b>: compares the modified tables.</description></item>
+                /// <item><description><b>EQUAL_TABLE</b>: compares the identical tables.</description></item>
+                /// <item><description><b>PASS_TABLE</b>: compares the tables that are skipped during schema synchronization.</description></item>
+                /// <item><description><b>NOT_COMPARE</b>: does not compare tables.</description></item>
+                /// </list>
                 /// 
-                /// *   **CREATE_TABLE**: compares the created tables.
-                /// *   **ALTER_TABLE**: compares the modified tables.
-                /// *   **EQUAL_TABLE**: compares the identical tables.
-                /// *   **PASS_TABLE**: compares the tables that are skipped during schema synchronization.
-                /// *   **NOT_COMPARE**: does not compare tables.
+                /// <b>Example:</b>
+                /// <para>CREATE_TABLE</para>
                 /// </summary>
                 [NameInMap("CompareType")]
                 [Validation(Required=false)]
                 public string CompareType { get; set; }
 
                 /// <summary>
-                /// The number of tables.
+                /// <para>The number of tables.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
@@ -99,7 +121,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

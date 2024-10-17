@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListSensitiveColumnsDetailResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// <para>The error code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7629888F-C9FB-4D16-A7D3-B443FE06FBD4</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details of the sensitive field.
+        /// <para>The details of the sensitive field.</para>
         /// </summary>
         [NameInMap("SensitiveColumnsDetailList")]
         [Validation(Required=false)]
@@ -42,73 +51,104 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail> SensitiveColumnsDetail { get; set; }
             public class ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail : TeaModel {
                 /// <summary>
-                /// The description of the field.
+                /// <para>The description of the field.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("ColumnDescription")]
                 [Validation(Required=false)]
                 public string ColumnDescription { get; set; }
 
                 /// <summary>
-                /// The name of the field.
+                /// <para>The name of the field.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ColumnName_test</para>
                 /// </summary>
                 [NameInMap("ColumnName")]
                 [Validation(Required=false)]
                 public string ColumnName { get; set; }
 
                 /// <summary>
-                /// The data type of the field.
+                /// <para>The data type of the field.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>varchar(32)</para>
                 /// </summary>
                 [NameInMap("ColumnType")]
                 [Validation(Required=false)]
                 public string ColumnType { get; set; }
 
                 /// <summary>
-                /// The ID of the database.
+                /// <para>The ID of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1860****</para>
                 /// </summary>
                 [NameInMap("DbId")]
                 [Validation(Required=false)]
                 public long? DbId { get; set; }
 
                 /// <summary>
-                /// The type of the database.
+                /// <para>The type of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mysql</para>
                 /// </summary>
                 [NameInMap("DbType")]
                 [Validation(Required=false)]
                 public string DbType { get; set; }
 
                 /// <summary>
-                /// The type of the environment to which the database belongs.
+                /// <para>The type of the environment to which the database belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>product</para>
                 /// </summary>
                 [NameInMap("EnvType")]
                 [Validation(Required=false)]
                 public string EnvType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the database is a logical database. Valid values:
+                /// <para>Indicates whether the database is a logical database. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: The database is a logical database.</description></item>
+                /// <item><description><b>false</b>: The database is not a logical database.</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: The database is a logical database.
-                /// *   **false**: The database is not a logical database.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Logic")]
                 [Validation(Required=false)]
                 public bool? Logic { get; set; }
 
                 /// <summary>
-                /// The name of the database.
+                /// <para>The name of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>SchemaName_test</para>
                 /// </summary>
                 [NameInMap("SchemaName")]
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }
 
                 /// <summary>
-                /// The name that is used to search for the database.
+                /// <para>The name that is used to search for the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test@xxx:3306</para>
                 /// </summary>
                 [NameInMap("SearchName")]
                 [Validation(Required=false)]
                 public string SearchName { get; set; }
 
                 /// <summary>
-                /// The name of the table.
+                /// <para>The name of the table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
@@ -119,10 +159,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// - **true**: The request was successful.
-        /// - **false**: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

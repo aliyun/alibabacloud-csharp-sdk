@@ -10,245 +10,321 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class UpdateInstanceRequest : TeaModel {
         /// <summary>
-        /// The name of the database link for cross-database queries.
+        /// <para>The name of the database link for cross-database queries.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter is required if UseDsql is set to 1.</para>
+        /// </description></item>
+        /// <item><description><para>The name can contain only lowercase letters and underscores (_).</para>
+        /// </description></item>
+        /// <item><description><para>The name must be unique within a tenant.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// > 
-        /// 
-        /// *   This parameter is required if UseDsql is set to 1.
-        /// 
-        /// *   The name can contain only lowercase letters and underscores (_).
-        /// 
-        /// *   The name must be unique within a tenant.
+        /// <b>Example:</b>
+        /// <para>datalink_test</para>
         /// </summary>
         [NameInMap("DataLinkName")]
         [Validation(Required=false)]
         public string DataLinkName { get; set; }
 
         /// <summary>
-        /// The password that is used to log on to the database.
+        /// <para>The password that is used to log on to the database.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <hr>
         /// </summary>
         [NameInMap("DatabasePassword")]
         [Validation(Required=false)]
         public string DatabasePassword { get; set; }
 
         /// <summary>
-        /// The account that is used to log on to the database.
+        /// <para>The account that is used to log on to the database.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dbuser</para>
         /// </summary>
         [NameInMap("DatabaseUser")]
         [Validation(Required=false)]
         public string DatabaseUser { get; set; }
 
         /// <summary>
-        /// The ID of the user who assumes the database administrator (DBA) role of the database instance. You can call the [ListUsers](https://help.aliyun.com/document_detail/141938.html) or [GetInstance](https://help.aliyun.com/document_detail/141567.html) operation to query the user ID.
+        /// <para>The ID of the user who assumes the database administrator (DBA) role of the database instance. You can call the <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> or <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> operation to query the user ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>27****</para>
         /// </summary>
         [NameInMap("DbaId")]
         [Validation(Required=false)]
         public string DbaId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the lock-free schema change feature for the database instance. Valid values:
+        /// <para>Specifies whether to enable the lock-free schema change feature for the database instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0:</b> disables the lock-free schema change feature.</description></item>
+        /// <item><description><b>1</b>: uses the online DDL of MySQL first.</description></item>
+        /// <item><description><b>2</b>: uses the lock-free schema change feature of DMS first.</description></item>
+        /// </list>
         /// 
-        /// *   **0:** disables the lock-free schema change feature.
-        /// *   **1**: uses the online DDL of MySQL first.
-        /// *   **2**: uses the lock-free schema change feature of DMS first.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("DdlOnline")]
         [Validation(Required=false)]
         public int? DdlOnline { get; set; }
 
         /// <summary>
-        /// The ID of the ECS instance on which the database instance is deployed.
+        /// <para>The ID of the ECS instance on which the database instance is deployed.</para>
+        /// <remarks>
+        /// <para>This parameter is required if the InstanceSource parameter is set to ECS_OWN.</para>
+        /// </remarks>
         /// 
-        /// > This parameter is required if the InstanceSource parameter is set to ECS_OWN.
+        /// <b>Example:</b>
+        /// <para>i-2zei9gs1t7h8l7ac****</para>
         /// </summary>
         [NameInMap("EcsInstanceId")]
         [Validation(Required=false)]
         public string EcsInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the database instance resides.
+        /// <para>The ID of the region in which the database instance resides.</para>
+        /// <remarks>
+        /// <para>This parameter is required if InstanceSource is set to RDS, ECS_OWN, and VPC_IDC.</para>
+        /// </remarks>
         /// 
-        /// > This parameter is required if InstanceSource is set to RDS, ECS_OWN, and VPC_IDC.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("EcsRegion")]
         [Validation(Required=false)]
         public string EcsRegion { get; set; }
 
         /// <summary>
-        /// *   **Y:** enables the sensitive data protection feature
-        /// *   **N:** disables the sensitive data protection feature
-        /// *   **NULL or other:** does not update the status of the sensitive data protection feature
+        /// <list type="bullet">
+        /// <item><description><b>Y:</b> enables the sensitive data protection feature</description></item>
+        /// <item><description><b>N:</b> disables the sensitive data protection feature</description></item>
+        /// <item><description><b>NULL or other:</b> does not update the status of the sensitive data protection feature</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Y</para>
         /// </summary>
         [NameInMap("EnableSellSitd")]
         [Validation(Required=false)]
         public string EnableSellSitd { get; set; }
 
         /// <summary>
-        /// The type of the environment in which the database instance is deployed. Valid values:
+        /// <para>The type of the environment in which the database instance is deployed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>product:</b> production environment</description></item>
+        /// <item><description><b>dev:</b> development environment</description></item>
+        /// <item><description><b>pre:</b> pre-release environment</description></item>
+        /// <item><description><b>test:</b> test environment</description></item>
+        /// <item><description><b>sit:</b> system integration testing (SIT) environment</description></item>
+        /// <item><description><b>uat:</b> user acceptance testing (UAT) environment</description></item>
+        /// <item><description><b>pet:</b> stress testing environment</description></item>
+        /// <item><description><b>stag:</b> staging environment</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **product:** production environment
-        /// *   **dev:** development environment
-        /// *   **pre:** pre-release environment
-        /// *   **test:** test environment
-        /// *   **sit:** system integration testing (SIT) environment
-        /// *   **uat:** user acceptance testing (UAT) environment
-        /// *   **pet:** stress testing environment
-        /// *   **stag:** staging environment
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>product</para>
         /// </summary>
         [NameInMap("EnvType")]
         [Validation(Required=false)]
         public string EnvType { get; set; }
 
         /// <summary>
-        /// The timeout period for exporting data from the database instance.
+        /// <para>The timeout period for exporting data from the database instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>600</para>
         /// </summary>
         [NameInMap("ExportTimeout")]
         [Validation(Required=false)]
         public int? ExportTimeout { get; set; }
 
         /// <summary>
-        /// The host address that is used to connect to the database instance.
+        /// <para>The host address that is used to connect to the database instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>192.XXX.0.56</para>
         /// </summary>
         [NameInMap("Host")]
         [Validation(Required=false)]
         public string Host { get; set; }
 
         /// <summary>
-        /// The alias of the database instance. Specify an alias that can help you identify the database instance in DMS.
+        /// <para>The alias of the database instance. Specify an alias that can help you identify the database instance in DMS.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>instance_test</para>
         /// </summary>
         [NameInMap("InstanceAlias")]
         [Validation(Required=false)]
         public string InstanceAlias { get; set; }
 
         /// <summary>
-        /// The ID of the database instance. You can call the [GetInstance](https://help.aliyun.com/document_detail/141567.html) operation to query the instance ID.
+        /// <para>The ID of the database instance. You can call the <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>126****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The source of the database instance. Valid values:
+        /// <para>The source of the database instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PUBLIC_OWN:</b> a self-managed database instance that is deployed on the Internet</description></item>
+        /// <item><description><b>RDS:</b> an ApsaraDB RDS instance</description></item>
+        /// <item><description><b>ECS_OWN:</b> a self-managed database that is deployed on an Elastic Compute Service (ECS) instance</description></item>
+        /// <item><description><b>VPC_IDC:</b> a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **PUBLIC_OWN:** a self-managed database instance that is deployed on the Internet
-        /// *   **RDS:** an ApsaraDB RDS instance
-        /// *   **ECS_OWN:** a self-managed database that is deployed on an Elastic Compute Service (ECS) instance
-        /// *   **VPC_IDC:** a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ECS_OWN</para>
         /// </summary>
         [NameInMap("InstanceSource")]
         [Validation(Required=false)]
         public string InstanceSource { get; set; }
 
         /// <summary>
-        /// The type of the database. For more information about the valid values of this parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).
+        /// <para>The type of the database. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>mysql</para>
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The port that is used to connect to the database instance.
+        /// <para>The port that is used to connect to the database instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3306</para>
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
         public int? Port { get; set; }
 
         /// <summary>
-        /// The timeout period for querying data in the database instance.
+        /// <para>The timeout period for querying data in the database instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>60</para>
         /// </summary>
         [NameInMap("QueryTimeout")]
         [Validation(Required=false)]
         public int? QueryTimeout { get; set; }
 
         /// <summary>
-        /// The name of the security rule set (GroupName) for the instance. You can call the [ListStandardGroups](https://help.aliyun.com/document_detail/417891.html) or [GetInstance](https://help.aliyun.com/document_detail/141567.html) operation to query the name of the security rule set.
+        /// <para>The name of the security rule set (GroupName) for the instance. You can call the <a href="https://help.aliyun.com/document_detail/417891.html">ListStandardGroups</a> or <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> operation to query the name of the security rule set.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3****</para>
         /// </summary>
         [NameInMap("SafeRuleId")]
         [Validation(Required=false)]
         public string SafeRuleId { get; set; }
 
         /// <summary>
-        /// The system ID (SID) of the database instance.
+        /// <para>The system ID (SID) of the database instance.</para>
+        /// <remarks>
+        /// <para>This parameter is required if the InstanceType parameter is set to ORACLE.</para>
+        /// </remarks>
         /// 
-        /// > This parameter is required if the InstanceType parameter is set to ORACLE.
+        /// <b>Example:</b>
+        /// <para>XXX</para>
         /// </summary>
         [NameInMap("Sid")]
         [Validation(Required=false)]
         public string Sid { get; set; }
 
         /// <summary>
-        /// Specifies whether to skip the connectivity test. Valid values:
+        /// <para>Specifies whether to skip the connectivity test. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true:</b> skips the connectivity test</description></item>
+        /// <item><description><b>false:</b> does not skip the connectivity test</description></item>
+        /// </list>
         /// 
-        /// *   **true:** skips the connectivity test
-        /// *   **false:** does not skip the connectivity test
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("SkipTest")]
         [Validation(Required=false)]
         public bool? SkipTest { get; set; }
 
         /// <summary>
-        /// The ID of the classification template. You can call the [ListClassificationTemplates](https://help.aliyun.com/document_detail/460613.html) operation to query the template ID.
+        /// <para>The ID of the classification template. You can call the <a href="https://help.aliyun.com/document_detail/460613.html">ListClassificationTemplates</a> operation to query the template ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public long? TemplateId { get; set; }
 
         /// <summary>
-        /// The type of the classification template. You can call the [ListClassificationTemplates](https://help.aliyun.com/document_detail/460613.html) operation to query the template type.
+        /// <para>The type of the classification template. You can call the <a href="https://help.aliyun.com/document_detail/460613.html">ListClassificationTemplates</a> operation to query the template type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>INNER</para>
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]
         public string TemplateType { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.
+        /// <para>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the cross-database query feature for the database instance. Valid values:
+        /// <para>Specifies whether to enable the cross-database query feature for the database instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: disables the cross-database query feature.</description></item>
+        /// <item><description><b>1</b>: enables the cross-database query feature.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>Supported database types: MySQL, SQL Server, PostgreSQL, PolarDB for PostgreSQL (compatible with Oracle), and ApsaraDB for Redis.</para>
+        /// </remarks>
         /// 
-        /// *   **0**: disables the cross-database query feature.
-        /// *   **1**: enables the cross-database query feature.
-        /// 
-        /// > Supported database types: MySQL, SQL Server, PostgreSQL, PolarDB for PostgreSQL (compatible with Oracle), and ApsaraDB for Redis.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("UseDsql")]
         [Validation(Required=false)]
         public int? UseDsql { get; set; }
 
         /// <summary>
-        /// The ID of the VPC to which the database instance belongs.
+        /// <para>The ID of the VPC to which the database instance belongs.</para>
+        /// <remarks>
+        /// <para>This parameter is required if the InstanceSource parameter is set to VPC_IDC.</para>
+        /// </remarks>
         /// 
-        /// > This parameter is required if the InstanceSource parameter is set to VPC_IDC.
+        /// <b>Example:</b>
+        /// <para>vpc-xxx</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

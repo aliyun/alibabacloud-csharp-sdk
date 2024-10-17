@@ -10,83 +10,114 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListInstancesRequest : TeaModel {
         /// <summary>
-        /// The type of the database. For more information about the valid values of this parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).
+        /// <para>The type of the database. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MySQL</para>
         /// </summary>
         [NameInMap("DbType")]
         [Validation(Required=false)]
         public string DbType { get; set; }
 
         /// <summary>
-        /// The type of the environment to which the database instance belongs. Valid values:
+        /// <para>The type of the environment to which the database instance belongs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>product:</b> production environment</description></item>
+        /// <item><description><b>dev</b>: development environment</description></item>
+        /// <item><description><b>pre</b>: pre-release environment</description></item>
+        /// <item><description><b>test</b>: test environment</description></item>
+        /// <item><description><b>sit</b>: system integration testing (SIT) environment</description></item>
+        /// <item><description><b>uat</b>: user acceptance testing (UAT) environment</description></item>
+        /// <item><description><b>pet</b>: stress testing environment</description></item>
+        /// <item><description><b>stag:</b> staging environment</description></item>
+        /// </list>
         /// 
-        /// *   **product:** production environment
-        /// *   **dev**: development environment
-        /// *   **pre**: pre-release environment
-        /// *   **test**: test environment
-        /// *   **sit**: system integration testing (SIT) environment
-        /// *   **uat**: user acceptance testing (UAT) environment
-        /// *   **pet**: stress testing environment
-        /// *   **stag:** staging environment
+        /// <b>Example:</b>
+        /// <para>product</para>
         /// </summary>
         [NameInMap("EnvType")]
         [Validation(Required=false)]
         public string EnvType { get; set; }
 
         /// <summary>
-        /// The source of the database instance. Valid values:
+        /// <para>The source of the database instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PUBLIC_OWN</b>: a self-managed database instance that is deployed on the Internet</description></item>
+        /// <item><description><b>RDS</b>: an ApsaraDB RDS instance</description></item>
+        /// <item><description><b>ECS_OWN</b>: a self-managed database that is deployed on an Elastic Compute Service (ECS) instance</description></item>
+        /// <item><description><b>VPC_IDC</b>: a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)</description></item>
+        /// </list>
         /// 
-        /// *   **PUBLIC_OWN**: a self-managed database instance that is deployed on the Internet
-        /// *   **RDS**: an ApsaraDB RDS instance
-        /// *   **ECS_OWN**: a self-managed database that is deployed on an Elastic Compute Service (ECS) instance
-        /// *   **VPC_IDC**: a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)
+        /// <b>Example:</b>
+        /// <para>RDS</para>
         /// </summary>
         [NameInMap("InstanceSource")]
         [Validation(Required=false)]
         public string InstanceSource { get; set; }
 
         /// <summary>
-        /// The status of the database instance. Valid values:
+        /// <para>The status of the database instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>NORMAL</b></description></item>
+        /// <item><description><b>DISABLE</b></description></item>
+        /// </list>
         /// 
-        /// *   **NORMAL**
-        /// *   **DISABLE**
+        /// <b>Example:</b>
+        /// <para>NORMAL</para>
         /// </summary>
         [NameInMap("InstanceState")]
         [Validation(Required=false)]
         public string InstanceState { get; set; }
 
         /// <summary>
-        /// The network type of the database instance. Valid values:
+        /// <para>The network type of the database instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>CLASSIC:</b> classic network</description></item>
+        /// <item><description><b>VPC:</b> VPC</description></item>
+        /// </list>
         /// 
-        /// *   **CLASSIC:** classic network
-        /// *   **VPC:** VPC
+        /// <b>Example:</b>
+        /// <para>VPC</para>
         /// </summary>
         [NameInMap("NetType")]
         [Validation(Required=false)]
         public string NetType { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. The number cannot exceed 100.
+        /// <para>The number of entries to return on each page. The number cannot exceed 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The keyword that is used to search for database instances.
+        /// <para>The keyword that is used to search for database instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("SearchKey")]
         [Validation(Required=false)]
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to obtain the tenant ID.
+        /// <para>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to obtain the tenant ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

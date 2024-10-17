@@ -10,27 +10,30 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ExecuteDataCorrectRequest : TeaModel {
         /// <summary>
-        /// The parameters that are required to perform the data change.
-        /// 
-        /// ```
-        /// 
+        /// <para>The parameters that are required to perform the data change.</para>
+        /// <pre><c>
         /// json
-        /// "actionDetail" : {
-        ///     "startTime" :"2021-07-01 00:00:00", // Specify the start time to change data. If you want to immediately change data, you do not need to set this parameter. 
-        ///     "endTime" : "2021-07-01 01:00:00", // Specify the end time to change data. If you want to immediately change data, you do not need to set this parameter. 
-        ///     "transaction" : false, // Specify whether to change data as a transaction. 
-        ///     "backupData" : true // Specify whether to back up data. 
+        /// &quot;actionDetail&quot; : {
+        ///     &quot;startTime&quot; :&quot;2021-07-01 00:00:00&quot;, // Specify the start time to change data. If you want to immediately change data, you do not need to set this parameter. 
+        ///     &quot;endTime&quot; : &quot;2021-07-01 01:00:00&quot;, // Specify the end time to change data. If you want to immediately change data, you do not need to set this parameter. 
+        ///     &quot;transaction&quot; : false, // Specify whether to change data as a transaction. 
+        ///     &quot;backupData&quot; : true // Specify whether to back up data. 
         ///   }
-        /// ```
+        /// </c></pre>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{ &quot;startTime&quot; : &quot;2021-07-01 00:00:00&quot;, &quot;endTime&quot; : &quot;2021-07-01 01:00:00&quot;, &quot;transaction&quot; : false, &quot;backupData&quot; : true }</para>
         /// </summary>
         [NameInMap("ActionDetail")]
         [Validation(Required=false)]
         public Dictionary<string, object> ActionDetail { get; set; }
 
         /// <summary>
-        /// The ID of the ticket. You can call the [ListOrders](https://help.aliyun.com/document_detail/144643.html) operation to query the ID of the ticket.
+        /// <para>The ID of the ticket. You can call the <a href="https://help.aliyun.com/document_detail/144643.html">ListOrders</a> operation to query the ID of the ticket.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>406****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
@@ -41,7 +44,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RealLoginUserUid { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.
+        /// <para>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

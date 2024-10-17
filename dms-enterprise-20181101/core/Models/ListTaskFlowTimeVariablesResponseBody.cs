@@ -10,38 +10,51 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListTaskFlowTimeVariablesResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// <para>The error code returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// <para>The error message returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EC12A3BE-149F-5365-AF33-12CC8C963923</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The time variables for the task flow.
+        /// <para>The time variables for the task flow.</para>
         /// </summary>
         [NameInMap("TimeVariables")]
         [Validation(Required=false)]
@@ -52,14 +65,20 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListTaskFlowTimeVariablesResponseBodyTimeVariablesTimeVariable> TimeVariable { get; set; }
             public class ListTaskFlowTimeVariablesResponseBodyTimeVariablesTimeVariable : TeaModel {
                 /// <summary>
-                /// The name of the time variable.
+                /// <para>The name of the time variable.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>time_test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The format of the time variable.
+                /// <para>The format of the time variable.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2018-09-26|+7h</para>
                 /// </summary>
                 [NameInMap("Pattern")]
                 [Validation(Required=false)]

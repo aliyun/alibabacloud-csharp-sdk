@@ -9,22 +9,42 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class DeleteAuthorityTemplateResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
+        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3***</para>
+        /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }

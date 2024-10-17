@@ -10,20 +10,27 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListProxyAccessesRequest : TeaModel {
         /// <summary>
-        /// The ID of the secure access proxy. 
+        /// <para>The ID of the secure access proxy. </para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/listproxies">ListProxies</a> operation to query the ID of the secure access proxy.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [ListProxies](https://www.alibabacloud.com/help/en/data-management-service/latest/listproxies) operation to query the ID of the secure access proxy.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>47</para>
         /// </summary>
         [NameInMap("ProxyId")]
         [Validation(Required=false)]
         public long? ProxyId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. 
+        /// <para>The ID of the tenant. </para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant">GetUserActiveTenant</a> operation to query the ID of the tenant.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) operation to query the ID of the tenant.
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

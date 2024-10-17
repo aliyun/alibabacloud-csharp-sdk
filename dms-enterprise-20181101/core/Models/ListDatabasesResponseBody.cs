@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListDatabasesResponseBody : TeaModel {
         /// <summary>
-        /// The details of the databases.
+        /// <para>The details of the databases.</para>
         /// </summary>
         [NameInMap("DatabaseList")]
         [Validation(Required=false)]
@@ -21,70 +21,97 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListDatabasesResponseBodyDatabaseListDatabase> Database { get; set; }
             public class ListDatabasesResponseBodyDatabaseListDatabase : TeaModel {
                 /// <summary>
-                /// The name of the catalog to which the database belongs.
+                /// <para>The name of the catalog to which the database belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("CatalogName")]
                 [Validation(Required=false)]
                 public string CatalogName { get; set; }
 
                 /// <summary>
-                /// The ID of the database.
+                /// <para>The ID of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("DatabaseId")]
                 [Validation(Required=false)]
                 public string DatabaseId { get; set; }
 
                 /// <summary>
-                /// The type of the database engine.
+                /// <para>The type of the database engine.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mysql</para>
                 /// </summary>
                 [NameInMap("DbType")]
                 [Validation(Required=false)]
                 public string DbType { get; set; }
 
                 /// <summary>
-                /// The ID of the DBA.
+                /// <para>The ID of the DBA.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("DbaId")]
                 [Validation(Required=false)]
                 public string DbaId { get; set; }
 
                 /// <summary>
-                /// The nickname of the Database administrator (DBA) to which the database belongs.
+                /// <para>The nickname of the Database administrator (DBA) to which the database belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dba_user</para>
                 /// </summary>
                 [NameInMap("DbaName")]
                 [Validation(Required=false)]
                 public string DbaName { get; set; }
 
                 /// <summary>
-                /// The encoding format of the database.
+                /// <para>The encoding format of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>utf-8</para>
                 /// </summary>
                 [NameInMap("Encoding")]
                 [Validation(Required=false)]
                 public string Encoding { get; set; }
 
                 /// <summary>
-                /// The type of the environment to which the database belongs.
+                /// <para>The type of the environment to which the database belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dev</para>
                 /// </summary>
                 [NameInMap("EnvType")]
                 [Validation(Required=false)]
                 public string EnvType { get; set; }
 
                 /// <summary>
-                /// The endpoint of the instance to which the database belongs.
+                /// <para>The endpoint of the instance to which the database belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>xxx.xxx.xxx.xxx</para>
                 /// </summary>
                 [NameInMap("Host")]
                 [Validation(Required=false)]
                 public string Host { get; set; }
 
                 /// <summary>
-                /// The ID of the instance to which the database belongs.
+                /// <para>The ID of the instance to which the database belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The IDs of the owners of the database.
+                /// <para>The IDs of the owners of the database.</para>
                 /// </summary>
                 [NameInMap("OwnerIdList")]
                 [Validation(Required=false)]
@@ -97,7 +124,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The nicknames of the database owners.
+                /// <para>The nicknames of the database owners.</para>
                 /// </summary>
                 [NameInMap("OwnerNameList")]
                 [Validation(Required=false)]
@@ -110,40 +137,56 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The connection port of the instance to which the database belongs.
+                /// <para>The connection port of the instance to which the database belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3306</para>
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// The name of the database.
+                /// <para>The name of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("SchemaName")]
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }
 
                 /// <summary>
-                /// The name that is used for searching the database.
+                /// <para>The name that is used for searching the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="mailto:test@xxx.xxx.xxx.xxx">test@xxx.xxx.xxx.xxx</a>:3306</para>
                 /// </summary>
                 [NameInMap("SearchName")]
                 [Validation(Required=false)]
                 public string SearchName { get; set; }
 
                 /// <summary>
-                /// The system ID (SID) of the instance to which the database belongs.
+                /// <para>The system ID (SID) of the instance to which the database belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Sid")]
                 [Validation(Required=false)]
                 public string Sid { get; set; }
 
                 /// <summary>
-                /// The state of the database. Valid values:
+                /// <para>The state of the database. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>NORMAL: The database is normal.</description></item>
+                /// <item><description>DISABLE: The database is disabled.</description></item>
+                /// <item><description>OFFLINE: The database is unpublished.</description></item>
+                /// <item><description>NOT_EXIST: The database does not exist.</description></item>
+                /// </list>
                 /// 
-                /// *   NORMAL: The database is normal.
-                /// *   DISABLE: The database is disabled.
-                /// *   OFFLINE: The database is unpublished.
-                /// *   NOT_EXIST: The database does not exist.
+                /// <b>Example:</b>
+                /// <para>NORMAL</para>
                 /// </summary>
                 [NameInMap("State")]
                 [Validation(Required=false)]
@@ -154,35 +197,50 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The error code returned if the request failed.
+        /// <para>The error code returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// <para>The error message returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5541CDA6-F674-435C-81BD-40C2FB926CE3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The number of databases that belong to an instance.
+        /// <para>The number of databases that belong to an instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

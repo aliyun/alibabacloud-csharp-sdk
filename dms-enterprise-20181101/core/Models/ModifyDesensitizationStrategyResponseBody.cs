@@ -10,38 +10,54 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ModifyDesensitizationStrategyResponseBody : TeaModel {
         /// <summary>
-        /// The status code.
+        /// <para>The status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>283C461F-11D8-48AA-B695-DF092DA32AF3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned result.
+        /// <para>The returned result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public bool? Result { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

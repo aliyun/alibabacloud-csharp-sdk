@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetOnlineDDLProgressRequest : TeaModel {
         /// <summary>
-        /// The ID of the OnlineDDL SQL task details. You can call the [ListDBTaskSQLJobDetail](https://help.aliyun.com/document_detail/207073.html) operation to obtain the task detail ID.
+        /// <para>The ID of the OnlineDDL SQL task details. You can call the <a href="https://help.aliyun.com/document_detail/207073.html">ListDBTaskSQLJobDetail</a> operation to obtain the task detail ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>15***</para>
         /// </summary>
         [NameInMap("JobDetailId")]
         [Validation(Required=false)]
         public long? JobDetailId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// <para>The ID of the tenant.</para>
+        /// <remarks>
+        /// <para>To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the &quot;View information about the current tenant&quot; section of the <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a> topic.</para>
+        /// </remarks>
         /// 
-        /// > To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html) topic.
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

@@ -10,53 +10,65 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class UpdateSLARulesRequest : TeaModel {
         /// <summary>
-        /// The ID of the task flow. You can call the [ListTaskFlow](https://help.aliyun.com/document_detail/424565.html) or [ListLhTaskFlowAndScenario](https://help.aliyun.com/document_detail/426672.html) operation to query the task flow ID.
+        /// <para>The ID of the task flow. You can call the <a href="https://help.aliyun.com/document_detail/424565.html">ListTaskFlow</a> or <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to query the task flow ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>11****</para>
         /// </summary>
         [NameInMap("DagId")]
         [Validation(Required=false)]
         public long? DagId { get; set; }
 
         /// <summary>
-        /// The list of SLA rules.
+        /// <para>The list of SLA rules.</para>
         /// </summary>
         [NameInMap("SlaRuleList")]
         [Validation(Required=false)]
         public List<UpdateSLARulesRequestSlaRuleList> SlaRuleList { get; set; }
         public class UpdateSLARulesRequestSlaRuleList : TeaModel {
             /// <summary>
-            /// The ID of the task flow.
+            /// <para>The ID of the task flow.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>15***</para>
             /// </summary>
             [NameInMap("DagId")]
             [Validation(Required=false)]
             public long? DagId { get; set; }
 
             /// <summary>
-            /// The timeout period. Unit: minutes.
+            /// <para>The timeout period. Unit: minutes.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>1080</para>
             /// </summary>
             [NameInMap("IntervalMinutes")]
             [Validation(Required=false)]
             public int? IntervalMinutes { get; set; }
 
             /// <summary>
-            /// The ID of the task node.
+            /// <para>The ID of the task node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
             public long? NodeId { get; set; }
 
             /// <summary>
-            /// The rule type. Valid values:
+            /// <para>The rule type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: SLA rules for task flows</description></item>
+            /// <item><description><b>1</b>: SLA rules for nodes</description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   **0**: SLA rules for task flows
-            /// *   **1**: SLA rules for nodes
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -65,9 +77,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// <para>The ID of the tenant.</para>
+        /// <remarks>
+        /// <para>:To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a>.</para>
+        /// </remarks>
         /// 
-        /// > :To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html).
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

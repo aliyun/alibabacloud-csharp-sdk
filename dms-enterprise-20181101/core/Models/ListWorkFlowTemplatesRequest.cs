@@ -10,16 +10,23 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListWorkFlowTemplatesRequest : TeaModel {
         /// <summary>
-        /// The name that is used to query approval templates.
+        /// <para>The name that is used to query approval templates.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Admin</para>
         /// </summary>
         [NameInMap("SearchName")]
         [Validation(Required=false)]
         public string SearchName { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// <para>The ID of the tenant.</para>
+        /// <remarks>
+        /// <para>: To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a>.</para>
+        /// </remarks>
         /// 
-        /// > : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html).
+        /// <b>Example:</b>
+        /// <para>-1</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

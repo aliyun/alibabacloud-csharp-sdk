@@ -10,157 +10,211 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListDDLPublishRecordsResponseBody : TeaModel {
         /// <summary>
-        /// The details of the publishing records.
+        /// <para>The details of the publishing records.</para>
         /// </summary>
         [NameInMap("DDLPublishRecordList")]
         [Validation(Required=false)]
         public List<ListDDLPublishRecordsResponseBodyDDLPublishRecordList> DDLPublishRecordList { get; set; }
         public class ListDDLPublishRecordsResponseBodyDDLPublishRecordList : TeaModel {
             /// <summary>
-            /// The time when the approval expires.
+            /// <para>The time when the approval expires.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-12-14 20:52:38</para>
             /// </summary>
             [NameInMap("AuditExpireTime")]
             [Validation(Required=false)]
             public string AuditExpireTime { get; set; }
 
             /// <summary>
-            /// The approval state of the ticket. Valid values:
+            /// <para>The approval state of the ticket. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>EXEMPT_PASS</b>: The ticket passes without approval.</description></item>
+            /// <item><description><b>TO_AUDIT</b>: The ticket is pending for approval.</description></item>
+            /// <item><description><b>CANCEL</b>: The ticket is canceled.</description></item>
+            /// <item><description><b>SUCCESS</b>: The ticket is approved.</description></item>
+            /// <item><description><b>FAIL</b>: The ticket fails to pass the approval.</description></item>
+            /// </list>
             /// 
-            /// *   **EXEMPT_PASS**: The ticket passes without approval.
-            /// *   **TO_AUDIT**: The ticket is pending for approval.
-            /// *   **CANCEL**: The ticket is canceled.
-            /// *   **SUCCESS**: The ticket is approved.
-            /// *   **FAIL**: The ticket fails to pass the approval.
+            /// <b>Example:</b>
+            /// <para>CANCEL</para>
             /// </summary>
             [NameInMap("AuditStatus")]
             [Validation(Required=false)]
             public string AuditStatus { get; set; }
 
             /// <summary>
-            /// Release remarks.
+            /// <para>Release remarks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Release remarks</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
-            /// The ID of the user who creates the ticket. You can obtain the user ID by calling the [GetUser](https://help.aliyun.com/document_detail/147098.html) operation and querying the value of the UserId parameter. The value is not the unique ID (UID) of the Alibaba Cloud account.
+            /// <para>The ID of the user who creates the ticket. You can obtain the user ID by calling the <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> operation and querying the value of the UserId parameter. The value is not the unique ID (UID) of the Alibaba Cloud account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1423</para>
             /// </summary>
             [NameInMap("CreatorId")]
             [Validation(Required=false)]
             public long? CreatorId { get; set; }
 
             /// <summary>
-            /// Indicates whether the approval is terminated. Valid values:
+            /// <para>Indicates whether the approval is terminated. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: The approval is terminated.</description></item>
+            /// <item><description><b>false</b>: The approval is not terminated.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>Multiple reasons can terminate the approval. For example, you withdraw the application or your ticket is not approved before the specified time.</para>
+            /// </remarks>
             /// 
-            /// *   **true**: The approval is terminated.
-            /// *   **false**: The approval is not terminated.
-            /// 
-            /// > Multiple reasons can terminate the approval. For example, you withdraw the application or your ticket is not approved before the specified time.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Finality")]
             [Validation(Required=false)]
             public bool? Finality { get; set; }
 
             /// <summary>
-            /// The reason for the termination.
+            /// <para>The reason for the termination.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CANCEL</para>
             /// </summary>
             [NameInMap("FinalityReason")]
             [Validation(Required=false)]
             public string FinalityReason { get; set; }
 
             /// <summary>
-            /// The publishing state of the ticket. Valid values:
+            /// <para>The publishing state of the ticket. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>START</b>: The ticket is created.</description></item>
+            /// <item><description><b>ANALYZE</b>: The ticket is under analysis.</description></item>
+            /// <item><description><b>AUDIT</b>: The ticket is under approval.</description></item>
+            /// <item><description><b>DISPATCH</b>: A task is generated for the ticket.</description></item>
+            /// <item><description><b>SUCCESS</b>: The task is successful.</description></item>
+            /// </list>
             /// 
-            /// *   **START**: The ticket is created.
-            /// *   **ANALYZE**: The ticket is under analysis.
-            /// *   **AUDIT**: The ticket is under approval.
-            /// *   **DISPATCH**: A task is generated for the ticket.
-            /// *   **SUCCESS**: The task is successful.
+            /// <b>Example:</b>
+            /// <para>AUDIT</para>
             /// </summary>
             [NameInMap("PublishStatus")]
             [Validation(Required=false)]
             public string PublishStatus { get; set; }
 
             /// <summary>
-            /// The list of publishing tasks.
+            /// <para>The list of publishing tasks.</para>
             /// </summary>
             [NameInMap("PublishTaskInfoList")]
             [Validation(Required=false)]
             public List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoList> PublishTaskInfoList { get; set; }
             public class ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoList : TeaModel {
                 /// <summary>
-                /// The ID of the database.
+                /// <para>The ID of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4325</para>
                 /// </summary>
                 [NameInMap("DbId")]
                 [Validation(Required=false)]
                 public long? DbId { get; set; }
 
                 /// <summary>
-                /// Indicates whether the database is a logical database. Valid values:
+                /// <para>Indicates whether the database is a logical database. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: The database is a logical database.</description></item>
+                /// <item><description><b>false</b>: the database is not a logical database.</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: The database is a logical database.
-                /// *   **false**: the database is not a logical database.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Logic")]
                 [Validation(Required=false)]
                 public bool? Logic { get; set; }
 
                 /// <summary>
-                /// The time to publish the ticket.
+                /// <para>The time to publish the ticket.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2020-12-14 20:52:38</para>
                 /// </summary>
                 [NameInMap("PlanTime")]
                 [Validation(Required=false)]
                 public string PlanTime { get; set; }
 
                 /// <summary>
-                /// The list of the publishing tasks.
+                /// <para>The list of the publishing tasks.</para>
                 /// </summary>
                 [NameInMap("PublishJobList")]
                 [Validation(Required=false)]
                 public List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList> PublishJobList { get; set; }
                 public class ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList : TeaModel {
                     /// <summary>
-                    /// The ID of the SQL task group.
+                    /// <para>The ID of the SQL task group.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>423515</para>
                     /// </summary>
                     [NameInMap("DBTaskGroupId")]
                     [Validation(Required=false)]
                     public long? DBTaskGroupId { get; set; }
 
                     /// <summary>
-                    /// The number of SQL statements that are executed.
+                    /// <para>The number of SQL statements that are executed.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("ExecuteCount")]
                     [Validation(Required=false)]
                     public long? ExecuteCount { get; set; }
 
                     /// <summary>
-                    /// The script for data changes.
+                    /// <para>The script for data changes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ALTER TABLE test_toolkit_rename_table_after_rename MODIFY COLUMN gmt_modified datetime NOT NULL</para>
                     /// </summary>
                     [NameInMap("Scripts")]
                     [Validation(Required=false)]
                     public string Scripts { get; set; }
 
                     /// <summary>
-                    /// The description of the state.
+                    /// <para>The description of the state.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>NONE</para>
                     /// </summary>
                     [NameInMap("StatusDesc")]
                     [Validation(Required=false)]
                     public string StatusDesc { get; set; }
 
                     /// <summary>
-                    /// The name of the table after the change.
+                    /// <para>The name of the table after the change.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>test_toolkit_rename_table_after_rename</para>
                     /// </summary>
                     [NameInMap("TableName")]
                     [Validation(Required=false)]
                     public string TableName { get; set; }
 
                     /// <summary>
-                    /// The state of the publishing task. Valid values:
+                    /// <para>The state of the publishing task. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>NONE</b>: The state of the task is unknown.</description></item>
+                    /// <item><description><b>SUCCESS</b>: The task is successful.</description></item>
+                    /// <item><description><b>FAIL</b>: The task fails.</description></item>
+                    /// </list>
                     /// 
-                    /// *   **NONE**: The state of the task is unknown.
-                    /// *   **SUCCESS**: The task is successful.
-                    /// *   **FAIL**: The task fails.
+                    /// <b>Example:</b>
+                    /// <para>NONE</para>
                     /// </summary>
                     [NameInMap("TaskJobStatus")]
                     [Validation(Required=false)]
@@ -169,24 +223,34 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The publishing policy. Valid values:
+                /// <para>The publishing policy. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>IMMEDIATELY</b>: immediately publishes the ticket.</description></item>
+                /// <item><description><b>REGULARLY</b>: publishes the ticket at a scheduled time.</description></item>
+                /// </list>
                 /// 
-                /// *   **IMMEDIATELY**: immediately publishes the ticket.
-                /// *   **REGULARLY**: publishes the ticket at a scheduled time.
+                /// <b>Example:</b>
+                /// <para>IMMEDIATELY</para>
                 /// </summary>
                 [NameInMap("PublishStrategy")]
                 [Validation(Required=false)]
                 public string PublishStrategy { get; set; }
 
                 /// <summary>
-                /// The description of the state.
+                /// <para>The description of the state.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>NONE</para>
                 /// </summary>
                 [NameInMap("StatusDesc")]
                 [Validation(Required=false)]
                 public string StatusDesc { get; set; }
 
                 /// <summary>
-                /// The state of the task.
+                /// <para>The state of the task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>NONE</para>
                 /// </summary>
                 [NameInMap("TaskJobStatus")]
                 [Validation(Required=false)]
@@ -195,26 +259,36 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             }
 
             /// <summary>
-            /// The risk level of the operation. Valid values:
+            /// <para>The risk level of the operation. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>NONE_RISK</b>: The operation does not have risks.</description></item>
+            /// <item><description><b>LOW_RISK</b>: The operation is at low risk.</description></item>
+            /// <item><description><b>MIDDLE_RISK</b>: The operation is at medium risk.</description></item>
+            /// <item><description><b>HIGH_RISK</b>: The operation is at high risk.</description></item>
+            /// </list>
             /// 
-            /// *   **NONE_RISK**: The operation does not have risks.
-            /// *   **LOW_RISK**: The operation is at low risk.
-            /// *   **MIDDLE_RISK**: The operation is at medium risk.
-            /// *   **HIGH_RISK**: The operation is at high risk.
+            /// <b>Example:</b>
+            /// <para>LOW_RISK</para>
             /// </summary>
             [NameInMap("RiskLevel")]
             [Validation(Required=false)]
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// The description of the publishing state.
+            /// <para>The description of the publishing state.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CANCEL</para>
             /// </summary>
             [NameInMap("StatusDesc")]
             [Validation(Required=false)]
             public string StatusDesc { get; set; }
 
             /// <summary>
-            /// The ID of the approval process.
+            /// <para>The ID of the approval process.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>432153</para>
             /// </summary>
             [NameInMap("WorkflowInstanceId")]
             [Validation(Required=false)]
@@ -223,28 +297,40 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The error code returned if the request failed.
+        /// <para>The error code returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// <para>The error message returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A1549FB0-D4B8-4140-919F-17322C1072B8</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

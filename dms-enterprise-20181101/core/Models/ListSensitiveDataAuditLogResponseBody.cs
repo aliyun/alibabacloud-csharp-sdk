@@ -10,109 +10,147 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListSensitiveDataAuditLogResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// <para>The error code returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>403</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// <para>The error message returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E0D21075-CD3E-4D98-8264-FD8AD04A63B6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The audit logs for sensitive data.
+        /// <para>The audit logs for sensitive data.</para>
         /// </summary>
         [NameInMap("SensitiveDataAuditLogList")]
         [Validation(Required=false)]
         public List<ListSensitiveDataAuditLogResponseBodySensitiveDataAuditLogList> SensitiveDataAuditLogList { get; set; }
         public class ListSensitiveDataAuditLogResponseBodySensitiveDataAuditLogList : TeaModel {
             /// <summary>
-            /// The name of the database that stores the sensitive data.
+            /// <para>The name of the database that stores the sensitive data.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="mailto:ExampleDbName@xxx.xxx.xxx.xxx">ExampleDbName@xxx.xxx.xxx.xxx</a>:3306</para>
             /// </summary>
             [NameInMap("DbDisplayName")]
             [Validation(Required=false)]
             public string DbDisplayName { get; set; }
 
             /// <summary>
-            /// The ID of the instance.
+            /// <para>The ID of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>12****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public long? InstanceId { get; set; }
 
             /// <summary>
-            /// The name of the function module whose audit logs were queried.
+            /// <para>The name of the function module whose audit logs were queried.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SQL_CONSOLE</para>
             /// </summary>
             [NameInMap("ModuleName")]
             [Validation(Required=false)]
             public string ModuleName { get; set; }
 
             /// <summary>
-            /// The time when the operation was performed. The time is in the yyyy-MM-DD HH:mm:ss format.
+            /// <para>The time when the operation was performed. The time is in the yyyy-MM-DD HH:mm:ss format.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-11-18 10:01:00</para>
             /// </summary>
             [NameInMap("OpTime")]
             [Validation(Required=false)]
             public string OpTime { get; set; }
 
             /// <summary>
-            /// The logs for sensitive data.
+            /// <para>The logs for sensitive data.</para>
             /// </summary>
             [NameInMap("SensitiveDataLog")]
             [Validation(Required=false)]
             public List<ListSensitiveDataAuditLogResponseBodySensitiveDataAuditLogListSensitiveDataLog> SensitiveDataLog { get; set; }
             public class ListSensitiveDataAuditLogResponseBodySensitiveDataAuditLogListSensitiveDataLog : TeaModel {
                 /// <summary>
-                /// The name of the column that contains sensitive data.
+                /// <para>The name of the column that contains sensitive data.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ExampleColumnName</para>
                 /// </summary>
                 [NameInMap("ColumnName")]
                 [Validation(Required=false)]
                 public string ColumnName { get; set; }
 
                 /// <summary>
-                /// The permission that the user has on the column. Valid values:
+                /// <para>The permission that the user has on the column. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>No permission</b></description></item>
+                /// <item><description><b>Partial redaction</b></description></item>
+                /// <item><description><b>Plaintext</b></description></item>
+                /// <item><description><b>Change</b></description></item>
+                /// <item><description><b>Enable data masking</b></description></item>
+                /// <item><description><b>Disable data masking</b></description></item>
+                /// </list>
                 /// 
-                /// *   **No permission**
-                /// *   **Partial redaction**
-                /// *   **Plaintext**
-                /// *   **Change**
-                /// *   **Enable data masking**
-                /// *   **Disable data masking**
+                /// <b>Example:</b>
+                /// <para>Change</para>
                 /// </summary>
                 [NameInMap("ColumnPermissionType")]
                 [Validation(Required=false)]
                 public string ColumnPermissionType { get; set; }
 
                 /// <summary>
-                /// The algorithm used for data masking.
+                /// <para>The algorithm used for data masking.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Default - Full redaction</para>
                 /// </summary>
                 [NameInMap("DesensitizationRule")]
                 [Validation(Required=false)]
                 public string DesensitizationRule { get; set; }
 
                 /// <summary>
-                /// The sensitivity level of the data. Valid values:
+                /// <para>The sensitivity level of the data. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Low</b></description></item>
+                /// <item><description><b>Medium</b></description></item>
+                /// <item><description><b>High</b></description></item>
+                /// </list>
                 /// 
-                /// *   **Low**
-                /// *   **Medium**
-                /// *   **High**
+                /// <b>Example:</b>
+                /// <para>Low</para>
                 /// </summary>
                 [NameInMap("SecurityLevel")]
                 [Validation(Required=false)]
                 public string SecurityLevel { get; set; }
 
                 /// <summary>
-                /// The name of the table that stores the sensitive data.
+                /// <para>The name of the table that stores the sensitive data.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ExampleTableName</para>
                 /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
@@ -121,24 +159,34 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             }
 
             /// <summary>
-            /// The details of the object on which the operation was performed. The value of this parameter is in one of the following formats:
+            /// <para>The details of the object on which the operation was performed. The value of this parameter is in one of the following formats:</para>
+            /// <list type="bullet">
+            /// <item><description>Object name - object ID</description></item>
+            /// <item><description>Object name (object ID)</description></item>
+            /// </list>
             /// 
-            /// *   Object name - object ID
-            /// *   Object name (object ID)
+            /// <b>Example:</b>
+            /// <para>Ticket - 1\<em>\</em>\<em>\</em></para>
             /// </summary>
             [NameInMap("TargetName")]
             [Validation(Required=false)]
             public string TargetName { get; set; }
 
             /// <summary>
-            /// The user ID of the requester.
+            /// <para>The user ID of the requester.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1**</para>
             /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public long? UserId { get; set; }
 
             /// <summary>
-            /// The username of the requester.
+            /// <para>The username of the requester.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ExampleUserName</para>
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
@@ -147,17 +195,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

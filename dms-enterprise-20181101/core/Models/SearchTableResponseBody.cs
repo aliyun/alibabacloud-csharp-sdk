@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class SearchTableResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// <para>The error code returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// <para>The error message returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1489257F-1B5D-4B5B-89EF-923C12CEEBD1</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details of the tables.
+        /// <para>The details of the tables.</para>
         /// </summary>
         [NameInMap("SearchTableList")]
         [Validation(Required=false)]
@@ -42,82 +51,111 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<SearchTableResponseBodySearchTableListSearchTable> SearchTable { get; set; }
             public class SearchTableResponseBodySearchTableListSearchTable : TeaModel {
                 /// <summary>
-                /// The name that is used to search for the database to which the table belongs.
+                /// <para>The name that is used to search for the database to which the table belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("DBSearchName")]
                 [Validation(Required=false)]
                 public string DBSearchName { get; set; }
 
                 /// <summary>
-                /// The ID of the database to which the table belongs.
+                /// <para>The ID of the database to which the table belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("DatabaseId")]
                 [Validation(Required=false)]
                 public string DatabaseId { get; set; }
 
                 /// <summary>
-                /// The name of the database.
+                /// <para>The name of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("DbName")]
                 [Validation(Required=false)]
                 public string DbName { get; set; }
 
                 /// <summary>
-                /// The type of the database. Valid values:
+                /// <para>The type of the database. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>MySQL</b></description></item>
+                /// <item><description><b>SQLServer</b></description></item>
+                /// <item><description><b>PostgreSQL</b></description></item>
+                /// <item><description><b>Oracle</b></description></item>
+                /// <item><description><b>DRDS</b></description></item>
+                /// <item><description><b>OceanBase</b></description></item>
+                /// <item><description><b>Mongo</b></description></item>
+                /// <item><description><b>Redis</b></description></item>
+                /// </list>
                 /// 
-                /// *   **MySQL**
-                /// *   **SQLServer**
-                /// *   **PostgreSQL**
-                /// *   **Oracle**
-                /// *   **DRDS**
-                /// *   **OceanBase**
-                /// *   **Mongo**
-                /// *   **Redis**
+                /// <b>Example:</b>
+                /// <para>mysql</para>
                 /// </summary>
                 [NameInMap("DbType")]
                 [Validation(Required=false)]
                 public string DbType { get; set; }
 
                 /// <summary>
-                /// The description of the table.
+                /// <para>The description of the table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The encoding format of the table.
+                /// <para>The encoding format of the table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>utf8</para>
                 /// </summary>
                 [NameInMap("Encoding")]
                 [Validation(Required=false)]
                 public string Encoding { get; set; }
 
                 /// <summary>
-                /// The engine of the table.
+                /// <para>The engine of the table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>innodb</para>
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The type of the environment to which the database belongs.
+                /// <para>The type of the environment to which the database belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("EnvType")]
                 [Validation(Required=false)]
                 public string EnvType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the table is a logical table. Valid values:
+                /// <para>Indicates whether the table is a logical table. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: The table is a logical table.</description></item>
+                /// <item><description><b>false</b>: The table is not a logical table.</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: The table is a logical table.
-                /// *   **false**: The table is not a logical table.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Logic")]
                 [Validation(Required=false)]
                 public bool? Logic { get; set; }
 
                 /// <summary>
-                /// The IDs of the table owners.
+                /// <para>The IDs of the table owners.</para>
                 /// </summary>
                 [NameInMap("OwnerIdList")]
                 [Validation(Required=false)]
@@ -130,7 +168,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The nicknames of the table owners.
+                /// <para>The nicknames of the table owners.</para>
                 /// </summary>
                 [NameInMap("OwnerNameList")]
                 [Validation(Required=false)]
@@ -143,28 +181,40 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The GUID of the table.
+                /// <para>The GUID of the table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>IDB_L_9032.db-test.yuyang_test</para>
                 /// </summary>
                 [NameInMap("TableGuid")]
                 [Validation(Required=false)]
                 public string TableGuid { get; set; }
 
                 /// <summary>
-                /// The ID of the table.
+                /// <para>The ID of the table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("TableId")]
                 [Validation(Required=false)]
                 public string TableId { get; set; }
 
                 /// <summary>
-                /// The name of the table.
+                /// <para>The name of the table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_table</para>
                 /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
                 public string TableName { get; set; }
 
                 /// <summary>
-                /// The name of the database to which the table belongs.
+                /// <para>The name of the database to which the table belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="mailto:test@xxx.xxx.xxx.xxx">test@xxx.xxx.xxx.xxx</a>:3306</para>
                 /// </summary>
                 [NameInMap("TableSchemaName")]
                 [Validation(Required=false)]
@@ -175,14 +225,20 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of entries that are returned.
+        /// <para>The total number of entries that are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

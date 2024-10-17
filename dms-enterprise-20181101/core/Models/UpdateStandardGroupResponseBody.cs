@@ -10,74 +10,102 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class UpdateStandardGroupResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// <para>The error code returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// <para>The error message returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The request ID. You can use the request ID to locate logs and troubleshoot issues.
+        /// <para>The request ID. You can use the request ID to locate logs and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4E1D2B4D-3E53-4ABC-999D-1D2520B3471A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the security rule set.
+        /// <para>The information about the security rule set.</para>
         /// </summary>
         [NameInMap("StandardGroup")]
         [Validation(Required=false)]
         public UpdateStandardGroupResponseBodyStandardGroup StandardGroup { get; set; }
         public class UpdateStandardGroupResponseBodyStandardGroup : TeaModel {
             /// <summary>
-            /// The type of the database for which the security rules are used.
+            /// <para>The type of the database for which the security rules are used.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mysql</para>
             /// </summary>
             [NameInMap("DbType")]
             [Validation(Required=false)]
             public string DbType { get; set; }
 
             /// <summary>
-            /// The description of the security rule set.
+            /// <para>The description of the security rule set.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Production Environment test rules</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The security rule set ID.
+            /// <para>The security rule set ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>41****</para>
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public long? GroupId { get; set; }
 
             /// <summary>
-            /// The control mode. Valid values:
+            /// <para>The control mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>NONE_CONTROL</b>: Flexible Management</description></item>
+            /// <item><description><b>STABLE</b>: Stable Change</description></item>
+            /// <item><description><b>COMMON</b>: Security Collaboration</description></item>
+            /// </list>
             /// 
-            /// *   **NONE_CONTROL**: Flexible Management
-            /// *   **STABLE**: Stable Change
-            /// *   **COMMON**: Security Collaboration
+            /// <b>Example:</b>
+            /// <para>COMMON</para>
             /// </summary>
             [NameInMap("GroupMode")]
             [Validation(Required=false)]
             public string GroupMode { get; set; }
 
             /// <summary>
-            /// The name of the security rule set.
+            /// <para>The name of the security rule set.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>poc_test</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
             /// <summary>
-            /// The ID of the user who last modified the security rules.
+            /// <para>The ID of the user who last modified the security rules.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>51****</para>
             /// </summary>
             [NameInMap("LastMenderId")]
             [Validation(Required=false)]
@@ -86,10 +114,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

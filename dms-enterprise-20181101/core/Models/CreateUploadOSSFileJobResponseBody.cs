@@ -10,35 +10,50 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateUploadOSSFileJobResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// <para>The error code returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// <para>The error message returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The key of the file upload task. You can query the upload progress and task details. For more information, see [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html).
+        /// <para>The key of the file upload task. You can query the upload progress and task details. For more information, see <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>65254a4c1614235217749100e</para>
         /// </summary>
         [NameInMap("JobKey")]
         [Validation(Required=false)]
         public string JobKey { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4E1D2B4D-3E53-4ABC-999D-1D2520B3471A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

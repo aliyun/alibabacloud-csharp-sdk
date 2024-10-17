@@ -10,57 +10,73 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class SearchDataTrackResultRequest : TeaModel {
         /// <summary>
-        /// The condition to filter columns.
+        /// <para>The condition to filter columns.</para>
         /// </summary>
         [NameInMap("ColumnFilter")]
         [Validation(Required=false)]
         public SearchDataTrackResultRequestColumnFilter ColumnFilter { get; set; }
         public class SearchDataTrackResultRequestColumnFilter : TeaModel {
             /// <summary>
-            /// The end value of the range used in the filter condition. This parameter takes effect only when Operator is set to BETWEEN.
+            /// <para>The end value of the range used in the filter condition. This parameter takes effect only when Operator is set to BETWEEN.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("BetweenEnd")]
             [Validation(Required=false)]
             public string BetweenEnd { get; set; }
 
             /// <summary>
-            /// The start value of the range used in the filter condition. This parameter takes effect only when Operator is set to BETWEEN.
+            /// <para>The start value of the range used in the filter condition. This parameter takes effect only when Operator is set to BETWEEN.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("BetweenStart")]
             [Validation(Required=false)]
             public string BetweenStart { get; set; }
 
             /// <summary>
-            /// The name of the column.
+            /// <para>The name of the column.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>c_payer_name</para>
             /// </summary>
             [NameInMap("ColumnName")]
             [Validation(Required=false)]
             public string ColumnName { get; set; }
 
             /// <summary>
-            /// The IN list used in the filter condition. This parameter takes effect only when Operator is set to IN or NOT_IN.
+            /// <para>The IN list used in the filter condition. This parameter takes effect only when Operator is set to IN or NOT_IN.</para>
             /// </summary>
             [NameInMap("InList")]
             [Validation(Required=false)]
             public List<string> InList { get; set; }
 
             /// <summary>
-            /// The type of the operator used to configure the filter condition. Valid values:
+            /// <para>The type of the operator used to configure the filter condition. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>EQUAL</b>: retrieves the column whose value is equal to the specified value.</description></item>
+            /// <item><description><b>NOT_EQUAL</b>: retrieves the column whose value is not equal to the specified value.</description></item>
+            /// <item><description><b>IN</b>: retrieves the column whose value is in the IN list.</description></item>
+            /// <item><description><b>BETWEEN</b>: retrieves the column whose value is in the specified range.</description></item>
+            /// <item><description><b>LESS</b>: retrieves the column whose value is less than the specified value.</description></item>
+            /// <item><description><b>MORE</b>: retrieves the column whose value is greater than the specified value.</description></item>
+            /// <item><description><b>NOT_IN</b>: retrieves the column whose value is not in the IN list.</description></item>
+            /// </list>
             /// 
-            /// *   **EQUAL**: retrieves the column whose value is equal to the specified value.
-            /// *   **NOT_EQUAL**: retrieves the column whose value is not equal to the specified value.
-            /// *   **IN**: retrieves the column whose value is in the IN list.
-            /// *   **BETWEEN**: retrieves the column whose value is in the specified range.
-            /// *   **LESS**: retrieves the column whose value is less than the specified value.
-            /// *   **MORE**: retrieves the column whose value is greater than the specified value.
-            /// *   **NOT_IN**: retrieves the column whose value is not in the IN list.
+            /// <b>Example:</b>
+            /// <para>EQUAL</para>
             /// </summary>
             [NameInMap("Operator")]
             [Validation(Required=false)]
             public string Operator { get; set; }
 
             /// <summary>
-            /// The value used in the filter condition.
+            /// <para>The value used in the filter condition.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -69,44 +85,55 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The end time of the time range in which you want to track data operations. The time must be in the yyyy-MM-dd HH:mm:ss format.
+        /// <para>The end time of the time range in which you want to track data operations. The time must be in the yyyy-MM-dd HH:mm:ss format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-04-23 10:00:00</para>
         /// </summary>
         [NameInMap("FilterEndTime")]
         [Validation(Required=false)]
         public string FilterEndTime { get; set; }
 
         /// <summary>
-        /// The start time of the time range in which you want to track data operations. The time must be in the yyyy-MM-dd HH:mm:ss format.
+        /// <para>The start time of the time range in which you want to track data operations. The time must be in the yyyy-MM-dd HH:mm:ss format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-04-23 00:00:00</para>
         /// </summary>
         [NameInMap("FilterStartTime")]
         [Validation(Required=false)]
         public string FilterStartTime { get; set; }
 
         /// <summary>
-        /// The names of the tables for which you want to track data operations.
+        /// <para>The names of the tables for which you want to track data operations.</para>
         /// </summary>
         [NameInMap("FilterTableList")]
         [Validation(Required=false)]
         public List<string> FilterTableList { get; set; }
 
         /// <summary>
-        /// The types of data operations that you want to track.
+        /// <para>The types of data operations that you want to track.</para>
         /// </summary>
         [NameInMap("FilterTypeList")]
         [Validation(Required=false)]
         public List<string> FilterTypeList { get; set; }
 
         /// <summary>
-        /// The ID of the ticket. You can call the [ListOrders](https://help.aliyun.com/document_detail/144643.html) operation to query the ticket ID.
+        /// <para>The ID of the ticket. You can call the <a href="https://help.aliyun.com/document_detail/144643.html">ListOrders</a> operation to query the ticket ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>420****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the tenant ID.
+        /// <para>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>62***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

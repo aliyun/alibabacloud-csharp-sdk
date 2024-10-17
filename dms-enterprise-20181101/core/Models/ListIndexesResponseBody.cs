@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListIndexesResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The details of indexes.
+        /// <para>The details of indexes.</para>
         /// </summary>
         [NameInMap("IndexList")]
         [Validation(Required=false)]
@@ -35,41 +41,57 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListIndexesResponseBodyIndexListIndex> Index { get; set; }
             public class ListIndexesResponseBodyIndexListIndex : TeaModel {
                 /// <summary>
-                /// The description of the index.
+                /// <para>The description of the index.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("IndexComment")]
                 [Validation(Required=false)]
                 public string IndexComment { get; set; }
 
                 /// <summary>
-                /// The ID of the index.
+                /// <para>The ID of the index.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("IndexId")]
                 [Validation(Required=false)]
                 public string IndexId { get; set; }
 
                 /// <summary>
-                /// The name of the index.
+                /// <para>The name of the index.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>idx_test</para>
                 /// </summary>
                 [NameInMap("IndexName")]
                 [Validation(Required=false)]
                 public string IndexName { get; set; }
 
                 /// <summary>
-                /// The type of the index. Valid values:
+                /// <para>The type of the index. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Primary</description></item>
+                /// <item><description>Unique</description></item>
+                /// <item><description>Normal</description></item>
+                /// <item><description>FullText</description></item>
+                /// <item><description>Spatial</description></item>
+                /// </list>
                 /// 
-                /// *   Primary
-                /// *   Unique
-                /// *   Normal
-                /// *   FullText
-                /// *   Spatial
+                /// <b>Example:</b>
+                /// <para>Primary</para>
                 /// </summary>
                 [NameInMap("IndexType")]
                 [Validation(Required=false)]
                 public string IndexType { get; set; }
 
                 /// <summary>
-                /// The ID of the table.
+                /// <para>The ID of the table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("TableId")]
                 [Validation(Required=false)]
@@ -80,14 +102,20 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1F4DE2F1-5B47-462A-A973-E02EB7AF386B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

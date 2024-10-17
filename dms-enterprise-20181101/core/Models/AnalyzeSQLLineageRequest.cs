@@ -10,29 +10,38 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class AnalyzeSQLLineageRequest : TeaModel {
         /// <summary>
-        /// The database ID.
+        /// <para>The database ID.</para>
+        /// <remarks>
+        /// <para> You can call one of the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a>, <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a>, and <a href="https://help.aliyun.com/document_detail/141869.html">GetDatabase</a> operations to obtain the database ID provided in the DatabaseId response parameter.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call one of the [SearchDatabase](https://help.aliyun.com/document_detail/141876.html), [ListDatabases](https://help.aliyun.com/document_detail/141873.html), and [GetDatabase](https://help.aliyun.com/document_detail/141869.html) operations to obtain the database ID provided in the DatabaseId response parameter.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123***</para>
         /// </summary>
         [NameInMap("DbId")]
         [Validation(Required=false)]
         public long? DbId { get; set; }
 
         /// <summary>
-        /// The SQL statement.
+        /// <para>The SQL statement.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>insert into a (id) select id from b;</para>
         /// </summary>
         [NameInMap("SqlContent")]
         [Validation(Required=false)]
         public string SqlContent { get; set; }
 
         /// <summary>
-        /// The tenant ID.
+        /// <para>The tenant ID.</para>
+        /// <remarks>
+        /// <para> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</para>
+        /// </remarks>
         /// 
-        /// >  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).
+        /// <b>Example:</b>
+        /// <para>3***</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

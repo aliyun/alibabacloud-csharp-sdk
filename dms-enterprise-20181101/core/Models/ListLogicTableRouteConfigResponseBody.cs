@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListLogicTableRouteConfigResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// <para>The error code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MissingTableId</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TableId is mandatory for this action.</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The routing algorithms.
+        /// <para>The routing algorithms.</para>
         /// </summary>
         [NameInMap("LogicTableRouteConfigList")]
         [Validation(Required=false)]
@@ -35,21 +41,30 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListLogicTableRouteConfigResponseBodyLogicTableRouteConfigListLogicTableRouteConfig> LogicTableRouteConfig { get; set; }
             public class ListLogicTableRouteConfigResponseBodyLogicTableRouteConfigListLogicTableRouteConfig : TeaModel {
                 /// <summary>
-                /// The routing algorithm expression.
+                /// <para>The routing algorithm expression.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>#id#%16\t</para>
                 /// </summary>
                 [NameInMap("RouteExpr")]
                 [Validation(Required=false)]
                 public string RouteExpr { get; set; }
 
                 /// <summary>
-                /// The unique key of the routing algorithm.
+                /// <para>The unique key of the routing algorithm.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("RouteKey")]
                 [Validation(Required=false)]
                 public string RouteKey { get; set; }
 
                 /// <summary>
-                /// The ID of the logical table.
+                /// <para>The ID of the logical table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4****</para>
                 /// </summary>
                 [NameInMap("TableId")]
                 [Validation(Required=false)]
@@ -60,17 +75,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7C6A0D7D-B034-59F6-854C-32425AC6****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// - **true**: The request was successful.
-        /// - **false**: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
