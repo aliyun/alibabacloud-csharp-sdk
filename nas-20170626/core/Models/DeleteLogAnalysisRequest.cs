@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DeleteLogAnalysisRequest : TeaModel {
         /// <summary>
-        /// The ID of the file system.
+        /// <para>The ID of the file system.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>174494xxxx</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateDataFlowTaskResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2D69A58F-345C-4FDE-88E4-BF518948****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the dataflow task.
+        /// <para>The ID of the dataflow task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>taskId-12345678</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

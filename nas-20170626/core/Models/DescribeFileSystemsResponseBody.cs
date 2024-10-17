@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeFileSystemsResponseBody : TeaModel {
         /// <summary>
-        /// The queried file systems.
+        /// <para>The queried file systems.</para>
         /// </summary>
         [NameInMap("FileSystems")]
         [Validation(Required=false)]
@@ -21,128 +21,175 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public List<DescribeFileSystemsResponseBodyFileSystemsFileSystem> FileSystem { get; set; }
             public class DescribeFileSystemsResponseBodyFileSystemsFileSystem : TeaModel {
                 /// <summary>
-                /// Number of access points.
+                /// <para>Number of access points.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("AccessPointCount")]
                 [Validation(Required=false)]
                 public string AccessPointCount { get; set; }
 
+                [NameInMap("AutoSnapshotPolicyId")]
+                [Validation(Required=false)]
+                public string AutoSnapshotPolicyId { get; set; }
+
                 /// <summary>
-                /// The bandwidth of the file system.
+                /// <para>The bandwidth of the file system.</para>
+                /// <para>Unit: MB/s. This parameter is unavailable for General-purpose NAS file systems.</para>
                 /// 
-                /// Unit: MB/s. This parameter is unavailable for General-purpose NAS file systems.
+                /// <b>Example:</b>
+                /// <para>150</para>
                 /// </summary>
                 [NameInMap("Bandwidth")]
                 [Validation(Required=false)]
                 public long? Bandwidth { get; set; }
 
                 /// <summary>
-                /// The capacity of the file system.
+                /// <para>The capacity of the file system.</para>
+                /// <para>Unit: GiB.</para>
                 /// 
-                /// Unit: GiB.
+                /// <b>Example:</b>
+                /// <para>100</para>
                 /// </summary>
                 [NameInMap("Capacity")]
                 [Validation(Required=false)]
                 public long? Capacity { get; set; }
 
                 /// <summary>
-                /// The billing method.
+                /// <para>The billing method.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Subscription: The subscription billing method is used.</description></item>
+                /// <item><description>PayAsYouGo: The pay-as-you-go billing method is used.</description></item>
+                /// <item><description>Package: A storage plan is attached to the file system.</description></item>
+                /// </list>
                 /// 
-                /// Valid values:
-                /// - Subscription: The subscription billing method is used.
-                /// - PayAsYouGo: The pay-as-you-go billing method is used.
-                /// - Package: A storage plan is attached to the file system.
+                /// <b>Example:</b>
+                /// <para>PayAsYouGo</para>
                 /// </summary>
                 [NameInMap("ChargeType")]
                 [Validation(Required=false)]
                 public string ChargeType { get; set; }
 
                 /// <summary>
-                /// The time when the file system was created.
+                /// <para>The time when the file system was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2020-01-05T16:00:00Z</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The description of the file system.
+                /// <para>The description of the file system.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The encryption type.
+                /// <para>The encryption type.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: The data in the file system is not encrypted.</description></item>
+                /// <item><description>1: A NAS-managed key is used to encrypt the data in the file system.</description></item>
+                /// <item><description>2: A KMS-managed key is used to encrypt the data in the file system.</description></item>
+                /// </list>
                 /// 
-                /// Valid values:
-                /// 
-                /// *   0: The data in the file system is not encrypted.
-                /// *   1: A NAS-managed key is used to encrypt the data in the file system.
-                /// *   2: A KMS-managed key is used to encrypt the data in the file system.
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("EncryptType")]
                 [Validation(Required=false)]
                 public int? EncryptType { get; set; }
 
                 /// <summary>
-                /// The time when the file system expires.
+                /// <para>The time when the file system expires.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2020-01-05T16:00:00Z</para>
                 /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
 
                 /// <summary>
-                /// The ID of the file system.
+                /// <para>The ID of the file system.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>109c04****</para>
                 /// </summary>
                 [NameInMap("FileSystemId")]
                 [Validation(Required=false)]
                 public string FileSystemId { get; set; }
 
                 /// <summary>
-                /// The type of the file system.
+                /// <para>The type of the file system.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>standard: General-purpose NAS file system</description></item>
+                /// <item><description>extreme: Extreme NAS file system</description></item>
+                /// <item><description>cpfs: CPFS file system<remarks>
+                /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
+                /// </remarks>
+                /// </description></item>
+                /// </list>
                 /// 
-                /// Valid values:
-                /// - standard: General-purpose NAS file system
-                /// - extreme: Extreme NAS file system
-                /// - cpfs: CPFS file system
-                /// > CPFS file systems are available only on the China site (aliyun.com).
+                /// <b>Example:</b>
+                /// <para>standard</para>
                 /// </summary>
                 [NameInMap("FileSystemType")]
                 [Validation(Required=false)]
                 public string FileSystemType { get; set; }
 
                 /// <summary>
-                /// The ID of the key that is managed by Key Management Service (KMS).
+                /// <para>The ID of the key that is managed by Key Management Service (KMS).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0e478b7a-4262-4802-b8cb-00d3fb40****</para>
                 /// </summary>
                 [NameInMap("KMSKeyId")]
                 [Validation(Required=false)]
                 public string KMSKeyId { get; set; }
 
                 /// <summary>
-                /// The Lightweight Directory Access Protocol (LDAP) configurations.
-                /// 
-                /// This parameter is available only for CPFS file systems.
+                /// <para>The Lightweight Directory Access Protocol (LDAP) configurations.</para>
+                /// <para>This parameter is available only for CPFS file systems.</para>
                 /// </summary>
                 [NameInMap("Ldap")]
                 [Validation(Required=false)]
                 public DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap Ldap { get; set; }
                 public class DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap : TeaModel {
                     /// <summary>
-                    /// An LDAP entry.
+                    /// <para>An LDAP entry.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cn=alibaba,dc=com</para>
                     /// </summary>
                     [NameInMap("BindDN")]
                     [Validation(Required=false)]
                     public string BindDN { get; set; }
 
                     /// <summary>
-                    /// An LDAP search base.
+                    /// <para>An LDAP search base.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>dc=example</para>
                     /// </summary>
                     [NameInMap("SearchBase")]
                     [Validation(Required=false)]
                     public string SearchBase { get; set; }
 
                     /// <summary>
-                    /// An LDAP URI.
+                    /// <para>An LDAP URI.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ldap://ldap.example.example</para>
                     /// </summary>
                     [NameInMap("URI")]
                     [Validation(Required=false)]
@@ -151,34 +198,40 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 }
 
                 /// <summary>
-                /// Archive storage usage.
+                /// <para>Archive storage usage.</para>
+                /// <para>Unit: Byte.</para>
                 /// 
-                /// Unit: Byte.
+                /// <b>Example:</b>
+                /// <para>1611661312</para>
                 /// </summary>
                 [NameInMap("MeteredArchiveSize")]
                 [Validation(Required=false)]
                 public long? MeteredArchiveSize { get; set; }
 
                 /// <summary>
-                /// The storage usage of the Infrequent Access (IA) storage medium.
+                /// <para>The storage usage of the Infrequent Access (IA) storage medium.</para>
+                /// <para>Unit: bytes.</para>
                 /// 
-                /// Unit: bytes.
+                /// <b>Example:</b>
+                /// <para>362832</para>
                 /// </summary>
                 [NameInMap("MeteredIASize")]
                 [Validation(Required=false)]
                 public long? MeteredIASize { get; set; }
 
                 /// <summary>
-                /// The storage usage of the file system.
+                /// <para>The storage usage of the file system.</para>
+                /// <para>The value of this parameter is the maximum storage usage of the file system over the last hour. Unit: bytes.</para>
                 /// 
-                /// The value of this parameter is the maximum storage usage of the file system over the last hour. Unit: bytes.
+                /// <b>Example:</b>
+                /// <para>1611661312</para>
                 /// </summary>
                 [NameInMap("MeteredSize")]
                 [Validation(Required=false)]
                 public long? MeteredSize { get; set; }
 
                 /// <summary>
-                /// The information about mount targets.
+                /// <para>The information about mount targets.</para>
                 /// </summary>
                 [NameInMap("MountTargets")]
                 [Validation(Required=false)]
@@ -189,16 +242,18 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                     public List<DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTarget> MountTarget { get; set; }
                     public class DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTarget : TeaModel {
                         /// <summary>
-                        /// The name of the permission group that is attached to the mount target.
+                        /// <para>The name of the permission group that is attached to the mount target.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>test-001</para>
                         /// </summary>
                         [NameInMap("AccessGroupName")]
                         [Validation(Required=false)]
                         public string AccessGroupName { get; set; }
 
                         /// <summary>
-                        /// The information about client management nodes.
-                        /// 
-                        /// This parameter is available only for CPFS file systems.
+                        /// <para>The information about client management nodes.</para>
+                        /// <para>This parameter is available only for CPFS file systems.</para>
                         /// </summary>
                         [NameInMap("ClientMasterNodes")]
                         [Validation(Required=false)]
@@ -209,21 +264,30 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                             public List<DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetClientMasterNodesClientMasterNode> ClientMasterNode { get; set; }
                             public class DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetClientMasterNodesClientMasterNode : TeaModel {
                                 /// <summary>
-                                /// The default logon password of the ECS instance on the client management node.
+                                /// <para>The default logon password of the ECS instance on the client management node.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>123456</para>
                                 /// </summary>
                                 [NameInMap("DefaultPasswd")]
                                 [Validation(Required=false)]
                                 public string DefaultPasswd { get; set; }
 
                                 /// <summary>
-                                /// The ID of the ECS instance on the client management node.
+                                /// <para>The ID of the ECS instance on the client management node.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>i-hp3i3odi5ory1buo****</para>
                                 /// </summary>
                                 [NameInMap("EcsId")]
                                 [Validation(Required=false)]
                                 public string EcsId { get; set; }
 
                                 /// <summary>
-                                /// The IP address of the ECS instance on the client management node.
+                                /// <para>The IP address of the ECS instance on the client management node.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>192.168.1.0</para>
                                 /// </summary>
                                 [NameInMap("EcsIp")]
                                 [Validation(Required=false)]
@@ -234,45 +298,59 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                         }
 
                         /// <summary>
-                        /// The dual-stack (IPv4 and IPv6) domain name of the mount target.
-                        /// > Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.
+                        /// <para>The dual-stack (IPv4 and IPv6) domain name of the mount target.</para>
+                        /// <remarks>
+                        /// <para>Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.</para>
+                        /// </remarks>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</para>
                         /// </summary>
                         [NameInMap("DualStackMountTargetDomain")]
                         [Validation(Required=false)]
                         public string DualStackMountTargetDomain { get; set; }
 
                         /// <summary>
-                        /// The domain name of the mount target.
+                        /// <para>The domain name of the mount target.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>109c042666-w****.cn-hangzhou.nas.aliyuncs.com</para>
                         /// </summary>
                         [NameInMap("MountTargetDomain")]
                         [Validation(Required=false)]
                         public string MountTargetDomain { get; set; }
 
                         /// <summary>
-                        /// The network type. Valid value: vpc.
+                        /// <para>The network type. Valid value: vpc.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>vpc</para>
                         /// </summary>
                         [NameInMap("NetworkType")]
                         [Validation(Required=false)]
                         public string NetworkType { get; set; }
 
                         /// <summary>
-                        /// The status of the mount target.
+                        /// <para>The status of the mount target.</para>
+                        /// <para>Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>Active: The mount target is available.</description></item>
+                        /// <item><description>Inactive: The mount target is unavailable.</description></item>
+                        /// <item><description>Pending: The mount target is being processed.</description></item>
+                        /// <item><description>Deleting: The mount target is being deleted.</description></item>
+                        /// <item><description>Hibernating: The mount target is being hibernated.</description></item>
+                        /// <item><description>Hibernated: The mount target is hibernated.</description></item>
+                        /// </list>
                         /// 
-                        /// Valid values:
-                        /// 
-                        /// *   Active: The mount target is available.
-                        /// *   Inactive: The mount target is unavailable.
-                        /// *   Pending: The mount target is being processed.
-                        /// *   Deleting: The mount target is being deleted.
-                        /// *   Hibernating: The mount target is being hibernated.
-                        /// *   Hibernated: The mount target is hibernated.
+                        /// <b>Example:</b>
+                        /// <para>Active</para>
                         /// </summary>
                         [NameInMap("Status")]
                         [Validation(Required=false)]
                         public string Status { get; set; }
 
                         /// <summary>
-                        /// The tags that are attached to the mount target.
+                        /// <para>The tags that are attached to the mount target.</para>
                         /// </summary>
                         [NameInMap("Tags")]
                         [Validation(Required=false)]
@@ -283,14 +361,20 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                             public List<DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetTagsTag> Tag { get; set; }
                             public class DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetTagsTag : TeaModel {
                                 /// <summary>
-                                /// The tag key.
+                                /// <para>The tag key.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>test</para>
                                 /// </summary>
                                 [NameInMap("Key")]
                                 [Validation(Required=false)]
                                 public string Key { get; set; }
 
                                 /// <summary>
-                                /// The tag value.
+                                /// <para>The tag value.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>test-value</para>
                                 /// </summary>
                                 [NameInMap("Value")]
                                 [Validation(Required=false)]
@@ -301,14 +385,20 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                         }
 
                         /// <summary>
-                        /// The ID of the VPC.
+                        /// <para>The ID of the VPC.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>vpc-bp1sevsgtqvk5gxbl****</para>
                         /// </summary>
                         [NameInMap("VpcId")]
                         [Validation(Required=false)]
                         public string VpcId { get; set; }
 
                         /// <summary>
-                        /// The ID of the vSwitch.
+                        /// <para>The ID of the vSwitch.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>vsw-bp1omfzsszekkvaxn****</para>
                         /// </summary>
                         [NameInMap("VswId")]
                         [Validation(Required=false)]
@@ -319,19 +409,24 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 }
 
                 /// <summary>
-                /// The options.
+                /// <para>The options.</para>
                 /// </summary>
                 [NameInMap("Options")]
                 [Validation(Required=false)]
                 public DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions Options { get; set; }
                 public class DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions : TeaModel {
                     /// <summary>
-                    /// Specifies whether to enable the oplock feature. Valid values:
+                    /// <para>Specifies whether to enable the oplock feature. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>true: enables the feature.</description></item>
+                    /// <item><description>false: disables the feature.</description></item>
+                    /// </list>
+                    /// <remarks>
+                    /// <para> Only Server Message Block (SMB) file systems support this feature.</para>
+                    /// </remarks>
                     /// 
-                    /// *   true: enables the feature.
-                    /// *   false: disables the feature.
-                    /// 
-                    /// >  Only Server Message Block (SMB) file systems support this feature.
+                    /// <b>Example:</b>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("EnableOplock")]
                     [Validation(Required=false)]
@@ -340,7 +435,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 }
 
                 /// <summary>
-                /// The information about storage plans.
+                /// <para>The information about storage plans.</para>
                 /// </summary>
                 [NameInMap("Packages")]
                 [Validation(Required=false)]
@@ -351,39 +446,55 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                     public List<DescribeFileSystemsResponseBodyFileSystemsFileSystemPackagesPackage> Package { get; set; }
                     public class DescribeFileSystemsResponseBodyFileSystemsFileSystemPackagesPackage : TeaModel {
                         /// <summary>
-                        /// The end time of the validity period for the storage plan.
+                        /// <para>The end time of the validity period for the storage plan.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2020-01-05T16:00:00Z</para>
                         /// </summary>
                         [NameInMap("ExpiredTime")]
                         [Validation(Required=false)]
                         public string ExpiredTime { get; set; }
 
                         /// <summary>
-                        /// The ID of the storage plan.
+                        /// <para>The ID of the storage plan.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>naspackage-0be9c4b624-37****</para>
                         /// </summary>
                         [NameInMap("PackageId")]
                         [Validation(Required=false)]
                         public string PackageId { get; set; }
 
                         /// <summary>
-                        /// The type of the storage plan.
+                        /// <para>The type of the storage plan.</para>
+                        /// <para>Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>ssd: the storage plan for Performance NAS file systems.</description></item>
+                        /// <item><description>hybrid: the storage plan for Capacity NAS file systems.</description></item>
+                        /// </list>
                         /// 
-                        /// Valid values:
-                        /// - ssd: the storage plan for Performance NAS file systems.
-                        /// - hybrid: the storage plan for Capacity NAS file systems.
+                        /// <b>Example:</b>
+                        /// <para>hybrid</para>
                         /// </summary>
                         [NameInMap("PackageType")]
                         [Validation(Required=false)]
                         public string PackageType { get; set; }
 
                         /// <summary>
-                        /// The capacity of the storage plan. Unit: bytes.
+                        /// <para>The capacity of the storage plan. Unit: bytes.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>107374182400</para>
                         /// </summary>
                         [NameInMap("Size")]
                         [Validation(Required=false)]
                         public long? Size { get; set; }
 
                         /// <summary>
-                        /// The start time of the validity period for the storage plan.
+                        /// <para>The start time of the validity period for the storage plan.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2019-12-05T01:40:56Z</para>
                         /// </summary>
                         [NameInMap("StartTime")]
                         [Validation(Required=false)]
@@ -394,64 +505,88 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 }
 
                 /// <summary>
-                /// The protocol type of the file system.
+                /// <para>The protocol type of the file system.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>NFS: Network File System (NFS)</description></item>
+                /// <item><description>SMB: Server Message Block (SMB)</description></item>
+                /// <item><description>cpfs: the protocol type supported by the CPFS file system</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
+                /// </remarks>
                 /// 
-                /// Valid values:
-                /// 
-                /// *   NFS: Network File System (NFS)
-                /// *   SMB: Server Message Block (SMB)
-                /// *   cpfs: the protocol type supported by the CPFS file system
-                /// 
-                /// > CPFS file systems are available only on the China site (aliyun.com).
+                /// <b>Example:</b>
+                /// <para>NFS</para>
                 /// </summary>
                 [NameInMap("ProtocolType")]
                 [Validation(Required=false)]
                 public string ProtocolType { get; set; }
 
+                [NameInMap("QuorumVswId")]
+                [Validation(Required=false)]
+                public string QuorumVswId { get; set; }
+
                 /// <summary>
-                /// The region ID.
+                /// <para>The region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The resource group ID.
+                /// <para>The resource group ID.</para>
+                /// <para>You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a> to view resource group IDs.</para>
                 /// 
-                /// You can log on to the [Resource Management console](https://resourcemanager.console.aliyun.com/resource-groups?) to view resource group IDs.
+                /// <b>Example:</b>
+                /// <para>rg-acfmwavnfdf****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The status of the file system. Valid values:
-                /// - Pending: The file system is being created or modified.
-                /// - Running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the Running state.
-                /// - Stopped: The file system is unavailable.
-                /// - Extending: The file system is being scaled up.
-                /// - Stopping: The file system is being stopped.
-                /// - Deleting: The file system is being deleted.
+                /// <para>The status of the file system. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Pending: The file system is being created or modified.</description></item>
+                /// <item><description>Running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the Running state.</description></item>
+                /// <item><description>Stopped: The file system is unavailable.</description></item>
+                /// <item><description>Extending: The file system is being scaled up.</description></item>
+                /// <item><description>Stopping: The file system is being stopped.</description></item>
+                /// <item><description>Deleting: The file system is being deleted.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Pending</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The storage type.
+                /// <para>The storage type.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Valid values for General-purpose NAS file systems: Capacity,Premium and Performance.</description></item>
+                /// <item><description>Valid values for Extreme NAS file systems: standard and advance.</description></item>
+                /// <item><description>Valid values for CPFS file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline).<remarks>
+                /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
+                /// </remarks>
+                /// </description></item>
+                /// </list>
                 /// 
-                /// Valid values:
-                /// - Valid values for General-purpose NAS file systems: Capacity,Premium and Performance.
-                /// - Valid values for Extreme NAS file systems: standard and advance.
-                /// - Valid values for CPFS file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline).
-                ///  > CPFS file systems are available only on the China site (aliyun.com).
+                /// <b>Example:</b>
+                /// <para>Performance</para>
                 /// </summary>
                 [NameInMap("StorageType")]
                 [Validation(Required=false)]
                 public string StorageType { get; set; }
 
                 /// <summary>
-                /// The features that are supported by the file system.
+                /// <para>The features that are supported by the file system.</para>
                 /// </summary>
                 [NameInMap("SupportedFeatures")]
                 [Validation(Required=false)]
@@ -464,7 +599,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 }
 
                 /// <summary>
-                /// The tags that are attached to the file system.
+                /// <para>The tags that are attached to the file system.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -475,14 +610,20 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                     public List<DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag> Tag { get; set; }
                     public class DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// <para>The tag key.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>test</para>
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// <para>The tag value.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>test-value</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -493,16 +634,35 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 }
 
                 /// <summary>
-                /// The version number of the file system.
+                /// <para>The version number of the file system.</para>
+                /// <para>This parameter is available only for Extreme NAS file systems and CPFS file systems.</para>
                 /// 
-                /// This parameter is available only for Extreme NAS file systems and CPFS file systems.
+                /// <b>Example:</b>
+                /// <para>2.3.4</para>
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
                 public string Version { get; set; }
 
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+                [NameInMap("VswIds")]
+                [Validation(Required=false)]
+                public DescribeFileSystemsResponseBodyFileSystemsFileSystemVswIds VswIds { get; set; }
+                public class DescribeFileSystemsResponseBodyFileSystemsFileSystemVswIds : TeaModel {
+                    [NameInMap("VswId")]
+                    [Validation(Required=false)]
+                    public List<string> VswId { get; set; }
+
+                }
+
                 /// <summary>
-                /// The ID of the zone where the file system resides.
+                /// <para>The ID of the zone where the file system resides.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-b</para>
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
@@ -513,28 +673,40 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>035B3A3A-E514-4B41-B906-5D906CFB****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of file systems.
+        /// <para>The total number of file systems.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

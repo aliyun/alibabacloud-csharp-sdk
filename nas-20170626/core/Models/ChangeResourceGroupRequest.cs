@@ -10,40 +10,46 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the new resource group.
+        /// <para>The ID of the new resource group.</para>
+        /// <para>You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a> to view resource group IDs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can log on to the [Resource Management console](https://resourcemanager.console.aliyun.com/resource-groups?) to view resource group IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rg-acfmwavnfdf****</para>
         /// </summary>
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
-        /// The region ID of the zone.
+        /// <para>The region ID of the zone.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2412111.html">DescribeRegions</a> operation to query the latest region list.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/2412111.html) operation to query the latest region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource ID.
+        /// <para>The resource ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>31a8e4****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The resource type.
+        /// <para>The resource type.</para>
+        /// <para>Set the value to filesystem.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Set the value to filesystem.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>filesystem</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

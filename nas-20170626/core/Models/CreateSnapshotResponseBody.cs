@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateSnapshotResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The snapshot ID.
+        /// <para>The snapshot ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>s-extreme-snapsho****</para>
         /// </summary>
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]

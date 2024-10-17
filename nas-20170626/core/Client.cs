@@ -43,17 +43,31 @@ namespace AlibabaCloud.SDK.NAS20170626
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @deprecated OpenAPI AddClientToBlackList is deprecated
-         *
-         * @summary 将客户端加入黑名单
-         *
-         * @description The API operation is available only for CPFS file systems.
-         *
-         * @param request AddClientToBlackListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddClientToBlackListResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI AddClientToBlackList is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将客户端加入黑名单</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API operation is available only for CPFS file systems.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddClientToBlackListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddClientToBlackListResponse
+        /// </returns>
+        [Obsolete("OpenAPI AddClientToBlackList is deprecated\n")]
         // Deprecated
         public AddClientToBlackListResponse AddClientToBlackListWithOptions(AddClientToBlackListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -94,17 +108,31 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<AddClientToBlackListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @deprecated OpenAPI AddClientToBlackList is deprecated
-         *
-         * @summary 将客户端加入黑名单
-         *
-         * @description The API operation is available only for CPFS file systems.
-         *
-         * @param request AddClientToBlackListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddClientToBlackListResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI AddClientToBlackList is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将客户端加入黑名单</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API operation is available only for CPFS file systems.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddClientToBlackListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddClientToBlackListResponse
+        /// </returns>
+        [Obsolete("OpenAPI AddClientToBlackList is deprecated\n")]
         // Deprecated
         public async Task<AddClientToBlackListResponse> AddClientToBlackListWithOptionsAsync(AddClientToBlackListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -145,16 +173,28 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<AddClientToBlackListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @deprecated OpenAPI AddClientToBlackList is deprecated
-         *
-         * @summary 将客户端加入黑名单
-         *
-         * @description The API operation is available only for CPFS file systems.
-         *
-         * @param request AddClientToBlackListRequest
-         * @return AddClientToBlackListResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI AddClientToBlackList is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将客户端加入黑名单</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API operation is available only for CPFS file systems.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddClientToBlackListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddClientToBlackListResponse
+        /// </returns>
+        [Obsolete("OpenAPI AddClientToBlackList is deprecated\n")]
         // Deprecated
         public AddClientToBlackListResponse AddClientToBlackList(AddClientToBlackListRequest request)
         {
@@ -162,16 +202,28 @@ namespace AlibabaCloud.SDK.NAS20170626
             return AddClientToBlackListWithOptions(request, runtime);
         }
 
-        /**
-         * @deprecated OpenAPI AddClientToBlackList is deprecated
-         *
-         * @summary 将客户端加入黑名单
-         *
-         * @description The API operation is available only for CPFS file systems.
-         *
-         * @param request AddClientToBlackListRequest
-         * @return AddClientToBlackListResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI AddClientToBlackList is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将客户端加入黑名单</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API operation is available only for CPFS file systems.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddClientToBlackListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddClientToBlackListResponse
+        /// </returns>
+        [Obsolete("OpenAPI AddClientToBlackList is deprecated\n")]
         // Deprecated
         public async Task<AddClientToBlackListResponse> AddClientToBlackListAsync(AddClientToBlackListRequest request)
         {
@@ -179,24 +231,42 @@ namespace AlibabaCloud.SDK.NAS20170626
             return await AddClientToBlackListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @deprecated OpenAPI AddTags is deprecated, please use NAS::2017-06-26::TagResources instead.
-         *
-         * @summary Adds one or more tags to a file system or overwrites one or more tags of a file system.
-         *
-         * @description >  The tag feature has been upgraded and this document will be unpublished. For more information, see TagResources.
-         * *   Each tag consists of a tag key (TagKey) and a tag value (TagValue).
-         * *   Placeholders at the start and end of each TagKey and TagValue are automatically removed. Placeholders include the spacebar ( ), tab (\\t), line break (\\n), and carriage return (\\r).
-         * *   You must specify a tag key. You can leave a tag value empty.
-         * *   The tag key and tag value are not case-sensitive.
-         * *   A tag key can be up to 64 characters in length and a tag value can be up to 128 characters in length.
-         * *   You can add a maximum of 10 tags to a file system. If you add two tags with the same tag key, the newly added tag will overwrite the existing tag.
-         * *   If you remove a tag from all linked file systems, the tag is automatically deleted.
-         *
-         * @param request AddTagsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddTagsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI AddTags is deprecated, please use NAS::2017-06-26::TagResources instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds one or more tags to a file system or overwrites one or more tags of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The tag feature has been upgraded and this document will be unpublished. For more information, see TagResources.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Each tag consists of a tag key (TagKey) and a tag value (TagValue).</description></item>
+        /// <item><description>Placeholders at the start and end of each TagKey and TagValue are automatically removed. Placeholders include the spacebar ( ), tab (\t), line break (\n), and carriage return (\r).</description></item>
+        /// <item><description>You must specify a tag key. You can leave a tag value empty.</description></item>
+        /// <item><description>The tag key and tag value are not case-sensitive.</description></item>
+        /// <item><description>A tag key can be up to 64 characters in length and a tag value can be up to 128 characters in length.</description></item>
+        /// <item><description>You can add a maximum of 10 tags to a file system. If you add two tags with the same tag key, the newly added tag will overwrite the existing tag.</description></item>
+        /// <item><description>If you remove a tag from all linked file systems, the tag is automatically deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddTagsResponse
+        /// </returns>
+        [Obsolete("OpenAPI AddTags is deprecated, please use NAS::2017-06-26::TagResources instead.\n")]
         // Deprecated
         public AddTagsResponse AddTagsWithOptions(AddTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -229,24 +299,42 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<AddTagsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @deprecated OpenAPI AddTags is deprecated, please use NAS::2017-06-26::TagResources instead.
-         *
-         * @summary Adds one or more tags to a file system or overwrites one or more tags of a file system.
-         *
-         * @description >  The tag feature has been upgraded and this document will be unpublished. For more information, see TagResources.
-         * *   Each tag consists of a tag key (TagKey) and a tag value (TagValue).
-         * *   Placeholders at the start and end of each TagKey and TagValue are automatically removed. Placeholders include the spacebar ( ), tab (\\t), line break (\\n), and carriage return (\\r).
-         * *   You must specify a tag key. You can leave a tag value empty.
-         * *   The tag key and tag value are not case-sensitive.
-         * *   A tag key can be up to 64 characters in length and a tag value can be up to 128 characters in length.
-         * *   You can add a maximum of 10 tags to a file system. If you add two tags with the same tag key, the newly added tag will overwrite the existing tag.
-         * *   If you remove a tag from all linked file systems, the tag is automatically deleted.
-         *
-         * @param request AddTagsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddTagsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI AddTags is deprecated, please use NAS::2017-06-26::TagResources instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds one or more tags to a file system or overwrites one or more tags of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The tag feature has been upgraded and this document will be unpublished. For more information, see TagResources.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Each tag consists of a tag key (TagKey) and a tag value (TagValue).</description></item>
+        /// <item><description>Placeholders at the start and end of each TagKey and TagValue are automatically removed. Placeholders include the spacebar ( ), tab (\t), line break (\n), and carriage return (\r).</description></item>
+        /// <item><description>You must specify a tag key. You can leave a tag value empty.</description></item>
+        /// <item><description>The tag key and tag value are not case-sensitive.</description></item>
+        /// <item><description>A tag key can be up to 64 characters in length and a tag value can be up to 128 characters in length.</description></item>
+        /// <item><description>You can add a maximum of 10 tags to a file system. If you add two tags with the same tag key, the newly added tag will overwrite the existing tag.</description></item>
+        /// <item><description>If you remove a tag from all linked file systems, the tag is automatically deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddTagsResponse
+        /// </returns>
+        [Obsolete("OpenAPI AddTags is deprecated, please use NAS::2017-06-26::TagResources instead.\n")]
         // Deprecated
         public async Task<AddTagsResponse> AddTagsWithOptionsAsync(AddTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -279,23 +367,39 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<AddTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @deprecated OpenAPI AddTags is deprecated, please use NAS::2017-06-26::TagResources instead.
-         *
-         * @summary Adds one or more tags to a file system or overwrites one or more tags of a file system.
-         *
-         * @description >  The tag feature has been upgraded and this document will be unpublished. For more information, see TagResources.
-         * *   Each tag consists of a tag key (TagKey) and a tag value (TagValue).
-         * *   Placeholders at the start and end of each TagKey and TagValue are automatically removed. Placeholders include the spacebar ( ), tab (\\t), line break (\\n), and carriage return (\\r).
-         * *   You must specify a tag key. You can leave a tag value empty.
-         * *   The tag key and tag value are not case-sensitive.
-         * *   A tag key can be up to 64 characters in length and a tag value can be up to 128 characters in length.
-         * *   You can add a maximum of 10 tags to a file system. If you add two tags with the same tag key, the newly added tag will overwrite the existing tag.
-         * *   If you remove a tag from all linked file systems, the tag is automatically deleted.
-         *
-         * @param request AddTagsRequest
-         * @return AddTagsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI AddTags is deprecated, please use NAS::2017-06-26::TagResources instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds one or more tags to a file system or overwrites one or more tags of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The tag feature has been upgraded and this document will be unpublished. For more information, see TagResources.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Each tag consists of a tag key (TagKey) and a tag value (TagValue).</description></item>
+        /// <item><description>Placeholders at the start and end of each TagKey and TagValue are automatically removed. Placeholders include the spacebar ( ), tab (\t), line break (\n), and carriage return (\r).</description></item>
+        /// <item><description>You must specify a tag key. You can leave a tag value empty.</description></item>
+        /// <item><description>The tag key and tag value are not case-sensitive.</description></item>
+        /// <item><description>A tag key can be up to 64 characters in length and a tag value can be up to 128 characters in length.</description></item>
+        /// <item><description>You can add a maximum of 10 tags to a file system. If you add two tags with the same tag key, the newly added tag will overwrite the existing tag.</description></item>
+        /// <item><description>If you remove a tag from all linked file systems, the tag is automatically deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddTagsResponse
+        /// </returns>
+        [Obsolete("OpenAPI AddTags is deprecated, please use NAS::2017-06-26::TagResources instead.\n")]
         // Deprecated
         public AddTagsResponse AddTags(AddTagsRequest request)
         {
@@ -303,23 +407,39 @@ namespace AlibabaCloud.SDK.NAS20170626
             return AddTagsWithOptions(request, runtime);
         }
 
-        /**
-         * @deprecated OpenAPI AddTags is deprecated, please use NAS::2017-06-26::TagResources instead.
-         *
-         * @summary Adds one or more tags to a file system or overwrites one or more tags of a file system.
-         *
-         * @description >  The tag feature has been upgraded and this document will be unpublished. For more information, see TagResources.
-         * *   Each tag consists of a tag key (TagKey) and a tag value (TagValue).
-         * *   Placeholders at the start and end of each TagKey and TagValue are automatically removed. Placeholders include the spacebar ( ), tab (\\t), line break (\\n), and carriage return (\\r).
-         * *   You must specify a tag key. You can leave a tag value empty.
-         * *   The tag key and tag value are not case-sensitive.
-         * *   A tag key can be up to 64 characters in length and a tag value can be up to 128 characters in length.
-         * *   You can add a maximum of 10 tags to a file system. If you add two tags with the same tag key, the newly added tag will overwrite the existing tag.
-         * *   If you remove a tag from all linked file systems, the tag is automatically deleted.
-         *
-         * @param request AddTagsRequest
-         * @return AddTagsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI AddTags is deprecated, please use NAS::2017-06-26::TagResources instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds one or more tags to a file system or overwrites one or more tags of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The tag feature has been upgraded and this document will be unpublished. For more information, see TagResources.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Each tag consists of a tag key (TagKey) and a tag value (TagValue).</description></item>
+        /// <item><description>Placeholders at the start and end of each TagKey and TagValue are automatically removed. Placeholders include the spacebar ( ), tab (\t), line break (\n), and carriage return (\r).</description></item>
+        /// <item><description>You must specify a tag key. You can leave a tag value empty.</description></item>
+        /// <item><description>The tag key and tag value are not case-sensitive.</description></item>
+        /// <item><description>A tag key can be up to 64 characters in length and a tag value can be up to 128 characters in length.</description></item>
+        /// <item><description>You can add a maximum of 10 tags to a file system. If you add two tags with the same tag key, the newly added tag will overwrite the existing tag.</description></item>
+        /// <item><description>If you remove a tag from all linked file systems, the tag is automatically deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddTagsResponse
+        /// </returns>
+        [Obsolete("OpenAPI AddTags is deprecated, please use NAS::2017-06-26::TagResources instead.\n")]
         // Deprecated
         public async Task<AddTagsResponse> AddTagsAsync(AddTagsRequest request)
         {
@@ -327,19 +447,32 @@ namespace AlibabaCloud.SDK.NAS20170626
             return await AddTagsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Applies an automatic snapshot policy to one or more file systems.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         * *   You can apply only one automatic snapshot policy to each file system.
-         * *   Each automatic snapshot policy can be applied to multiple file systems.
-         * *   If an automatic snapshot policy is applied to a file system, you can call the ApplyAutoSnapshotPolicy operation to change the automatic snapshot policy.
-         *
-         * @param request ApplyAutoSnapshotPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ApplyAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies an automatic snapshot policy to one or more file systems.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>You can apply only one automatic snapshot policy to each file system.</description></item>
+        /// <item><description>Each automatic snapshot policy can be applied to multiple file systems.</description></item>
+        /// <item><description>If an automatic snapshot policy is applied to a file system, you can call the ApplyAutoSnapshotPolicy operation to change the automatic snapshot policy.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ApplyAutoSnapshotPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyAutoSnapshotPolicyResponse
+        /// </returns>
         public ApplyAutoSnapshotPolicyResponse ApplyAutoSnapshotPolicyWithOptions(ApplyAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -371,19 +504,32 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ApplyAutoSnapshotPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Applies an automatic snapshot policy to one or more file systems.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         * *   You can apply only one automatic snapshot policy to each file system.
-         * *   Each automatic snapshot policy can be applied to multiple file systems.
-         * *   If an automatic snapshot policy is applied to a file system, you can call the ApplyAutoSnapshotPolicy operation to change the automatic snapshot policy.
-         *
-         * @param request ApplyAutoSnapshotPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ApplyAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies an automatic snapshot policy to one or more file systems.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>You can apply only one automatic snapshot policy to each file system.</description></item>
+        /// <item><description>Each automatic snapshot policy can be applied to multiple file systems.</description></item>
+        /// <item><description>If an automatic snapshot policy is applied to a file system, you can call the ApplyAutoSnapshotPolicy operation to change the automatic snapshot policy.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ApplyAutoSnapshotPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyAutoSnapshotPolicyResponse
+        /// </returns>
         public async Task<ApplyAutoSnapshotPolicyResponse> ApplyAutoSnapshotPolicyWithOptionsAsync(ApplyAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -415,61 +561,96 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ApplyAutoSnapshotPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Applies an automatic snapshot policy to one or more file systems.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         * *   You can apply only one automatic snapshot policy to each file system.
-         * *   Each automatic snapshot policy can be applied to multiple file systems.
-         * *   If an automatic snapshot policy is applied to a file system, you can call the ApplyAutoSnapshotPolicy operation to change the automatic snapshot policy.
-         *
-         * @param request ApplyAutoSnapshotPolicyRequest
-         * @return ApplyAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies an automatic snapshot policy to one or more file systems.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>You can apply only one automatic snapshot policy to each file system.</description></item>
+        /// <item><description>Each automatic snapshot policy can be applied to multiple file systems.</description></item>
+        /// <item><description>If an automatic snapshot policy is applied to a file system, you can call the ApplyAutoSnapshotPolicy operation to change the automatic snapshot policy.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ApplyAutoSnapshotPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyAutoSnapshotPolicyResponse
+        /// </returns>
         public ApplyAutoSnapshotPolicyResponse ApplyAutoSnapshotPolicy(ApplyAutoSnapshotPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ApplyAutoSnapshotPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Applies an automatic snapshot policy to one or more file systems.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         * *   You can apply only one automatic snapshot policy to each file system.
-         * *   Each automatic snapshot policy can be applied to multiple file systems.
-         * *   If an automatic snapshot policy is applied to a file system, you can call the ApplyAutoSnapshotPolicy operation to change the automatic snapshot policy.
-         *
-         * @param request ApplyAutoSnapshotPolicyRequest
-         * @return ApplyAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies an automatic snapshot policy to one or more file systems.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>You can apply only one automatic snapshot policy to each file system.</description></item>
+        /// <item><description>Each automatic snapshot policy can be applied to multiple file systems.</description></item>
+        /// <item><description>If an automatic snapshot policy is applied to a file system, you can call the ApplyAutoSnapshotPolicy operation to change the automatic snapshot policy.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ApplyAutoSnapshotPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyAutoSnapshotPolicyResponse
+        /// </returns>
         public async Task<ApplyAutoSnapshotPolicyResponse> ApplyAutoSnapshotPolicyAsync(ApplyAutoSnapshotPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ApplyAutoSnapshotPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Adds AutoRefresh configurations to a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can add AutoRefresh configurations only to the dataflows that are in the `Running` state.
-         * *   You can add a maximum of five AutoRefresh configurations to a dataflow.
-         * *   It generally takes 2 to 5 minutes to create an AutoRefresh configuration. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/336901.html) operation to query the dataflow status.
-         * *   AutoRefresh depends on the object modification events collected by EventBridge from the source Object Storage Service (OSS) bucket. You must first [activate EventBridge](https://help.aliyun.com/document_detail/182246.html).
-         *     **
-         *     **Note** The event buses and event rules created for CPFS in the EventBridge console contain the `Create for cpfs auto refresh` description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.
-         * *   The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. When you add an AutoRefresh configuration to the prefix for a CPFS dataflow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS dataflow.
-         * *   After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a dataflow task to load the updated data.
-         * *   AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS dataflow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the dataflow status becomes Misconfigured. To resolve these issues, you can increase the dataflow specifications or reduce the frequency of triggering the object modification event.
-         *
-         * @param request ApplyDataFlowAutoRefreshRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ApplyDataFlowAutoRefreshResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds AutoRefresh configurations to a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can add AutoRefresh configurations only to the dataflows that are in the <c>Running</c> state.</description></item>
+        /// <item><description>You can add a maximum of five AutoRefresh configurations to a dataflow.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to create an AutoRefresh configuration. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the dataflow status.</description></item>
+        /// <item><description>AutoRefresh depends on the object modification events collected by EventBridge from the source Object Storage Service (OSS) bucket. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.
+        /// **
+        /// <b>Note</b> The event buses and event rules created for CPFS in the EventBridge console contain the <c>Create for cpfs auto refresh</c> description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.</description></item>
+        /// <item><description>The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. When you add an AutoRefresh configuration to the prefix for a CPFS dataflow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS dataflow.</description></item>
+        /// <item><description>After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a dataflow task to load the updated data.</description></item>
+        /// <item><description>AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS dataflow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the dataflow status becomes Misconfigured. To resolve these issues, you can increase the dataflow specifications or reduce the frequency of triggering the object modification event.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ApplyDataFlowAutoRefreshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyDataFlowAutoRefreshResponse
+        /// </returns>
         public ApplyDataFlowAutoRefreshResponse ApplyDataFlowAutoRefreshWithOptions(ApplyDataFlowAutoRefreshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -521,25 +702,38 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ApplyDataFlowAutoRefreshResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Adds AutoRefresh configurations to a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can add AutoRefresh configurations only to the dataflows that are in the `Running` state.
-         * *   You can add a maximum of five AutoRefresh configurations to a dataflow.
-         * *   It generally takes 2 to 5 minutes to create an AutoRefresh configuration. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/336901.html) operation to query the dataflow status.
-         * *   AutoRefresh depends on the object modification events collected by EventBridge from the source Object Storage Service (OSS) bucket. You must first [activate EventBridge](https://help.aliyun.com/document_detail/182246.html).
-         *     **
-         *     **Note** The event buses and event rules created for CPFS in the EventBridge console contain the `Create for cpfs auto refresh` description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.
-         * *   The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. When you add an AutoRefresh configuration to the prefix for a CPFS dataflow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS dataflow.
-         * *   After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a dataflow task to load the updated data.
-         * *   AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS dataflow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the dataflow status becomes Misconfigured. To resolve these issues, you can increase the dataflow specifications or reduce the frequency of triggering the object modification event.
-         *
-         * @param request ApplyDataFlowAutoRefreshRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ApplyDataFlowAutoRefreshResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds AutoRefresh configurations to a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can add AutoRefresh configurations only to the dataflows that are in the <c>Running</c> state.</description></item>
+        /// <item><description>You can add a maximum of five AutoRefresh configurations to a dataflow.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to create an AutoRefresh configuration. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the dataflow status.</description></item>
+        /// <item><description>AutoRefresh depends on the object modification events collected by EventBridge from the source Object Storage Service (OSS) bucket. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.
+        /// **
+        /// <b>Note</b> The event buses and event rules created for CPFS in the EventBridge console contain the <c>Create for cpfs auto refresh</c> description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.</description></item>
+        /// <item><description>The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. When you add an AutoRefresh configuration to the prefix for a CPFS dataflow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS dataflow.</description></item>
+        /// <item><description>After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a dataflow task to load the updated data.</description></item>
+        /// <item><description>AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS dataflow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the dataflow status becomes Misconfigured. To resolve these issues, you can increase the dataflow specifications or reduce the frequency of triggering the object modification event.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ApplyDataFlowAutoRefreshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyDataFlowAutoRefreshResponse
+        /// </returns>
         public async Task<ApplyDataFlowAutoRefreshResponse> ApplyDataFlowAutoRefreshWithOptionsAsync(ApplyDataFlowAutoRefreshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -591,64 +785,99 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ApplyDataFlowAutoRefreshResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Adds AutoRefresh configurations to a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can add AutoRefresh configurations only to the dataflows that are in the `Running` state.
-         * *   You can add a maximum of five AutoRefresh configurations to a dataflow.
-         * *   It generally takes 2 to 5 minutes to create an AutoRefresh configuration. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/336901.html) operation to query the dataflow status.
-         * *   AutoRefresh depends on the object modification events collected by EventBridge from the source Object Storage Service (OSS) bucket. You must first [activate EventBridge](https://help.aliyun.com/document_detail/182246.html).
-         *     **
-         *     **Note** The event buses and event rules created for CPFS in the EventBridge console contain the `Create for cpfs auto refresh` description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.
-         * *   The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. When you add an AutoRefresh configuration to the prefix for a CPFS dataflow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS dataflow.
-         * *   After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a dataflow task to load the updated data.
-         * *   AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS dataflow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the dataflow status becomes Misconfigured. To resolve these issues, you can increase the dataflow specifications or reduce the frequency of triggering the object modification event.
-         *
-         * @param request ApplyDataFlowAutoRefreshRequest
-         * @return ApplyDataFlowAutoRefreshResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds AutoRefresh configurations to a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can add AutoRefresh configurations only to the dataflows that are in the <c>Running</c> state.</description></item>
+        /// <item><description>You can add a maximum of five AutoRefresh configurations to a dataflow.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to create an AutoRefresh configuration. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the dataflow status.</description></item>
+        /// <item><description>AutoRefresh depends on the object modification events collected by EventBridge from the source Object Storage Service (OSS) bucket. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.
+        /// **
+        /// <b>Note</b> The event buses and event rules created for CPFS in the EventBridge console contain the <c>Create for cpfs auto refresh</c> description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.</description></item>
+        /// <item><description>The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. When you add an AutoRefresh configuration to the prefix for a CPFS dataflow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS dataflow.</description></item>
+        /// <item><description>After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a dataflow task to load the updated data.</description></item>
+        /// <item><description>AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS dataflow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the dataflow status becomes Misconfigured. To resolve these issues, you can increase the dataflow specifications or reduce the frequency of triggering the object modification event.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ApplyDataFlowAutoRefreshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyDataFlowAutoRefreshResponse
+        /// </returns>
         public ApplyDataFlowAutoRefreshResponse ApplyDataFlowAutoRefresh(ApplyDataFlowAutoRefreshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ApplyDataFlowAutoRefreshWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Adds AutoRefresh configurations to a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can add AutoRefresh configurations only to the dataflows that are in the `Running` state.
-         * *   You can add a maximum of five AutoRefresh configurations to a dataflow.
-         * *   It generally takes 2 to 5 minutes to create an AutoRefresh configuration. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/336901.html) operation to query the dataflow status.
-         * *   AutoRefresh depends on the object modification events collected by EventBridge from the source Object Storage Service (OSS) bucket. You must first [activate EventBridge](https://help.aliyun.com/document_detail/182246.html).
-         *     **
-         *     **Note** The event buses and event rules created for CPFS in the EventBridge console contain the `Create for cpfs auto refresh` description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.
-         * *   The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. When you add an AutoRefresh configuration to the prefix for a CPFS dataflow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS dataflow.
-         * *   After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a dataflow task to load the updated data.
-         * *   AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS dataflow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the dataflow status becomes Misconfigured. To resolve these issues, you can increase the dataflow specifications or reduce the frequency of triggering the object modification event.
-         *
-         * @param request ApplyDataFlowAutoRefreshRequest
-         * @return ApplyDataFlowAutoRefreshResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds AutoRefresh configurations to a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can add AutoRefresh configurations only to the dataflows that are in the <c>Running</c> state.</description></item>
+        /// <item><description>You can add a maximum of five AutoRefresh configurations to a dataflow.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to create an AutoRefresh configuration. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the dataflow status.</description></item>
+        /// <item><description>AutoRefresh depends on the object modification events collected by EventBridge from the source Object Storage Service (OSS) bucket. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.
+        /// **
+        /// <b>Note</b> The event buses and event rules created for CPFS in the EventBridge console contain the <c>Create for cpfs auto refresh</c> description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.</description></item>
+        /// <item><description>The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. When you add an AutoRefresh configuration to the prefix for a CPFS dataflow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS dataflow.</description></item>
+        /// <item><description>After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a dataflow task to load the updated data.</description></item>
+        /// <item><description>AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS dataflow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the dataflow status becomes Misconfigured. To resolve these issues, you can increase the dataflow specifications or reduce the frequency of triggering the object modification event.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ApplyDataFlowAutoRefreshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyDataFlowAutoRefreshResponse
+        /// </returns>
         public async Task<ApplyDataFlowAutoRefreshResponse> ApplyDataFlowAutoRefreshAsync(ApplyDataFlowAutoRefreshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ApplyDataFlowAutoRefreshWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Removes automatic snapshot policies from one or more file systems.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request CancelAutoSnapshotPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes automatic snapshot policies from one or more file systems.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelAutoSnapshotPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelAutoSnapshotPolicyResponse
+        /// </returns>
         public CancelAutoSnapshotPolicyResponse CancelAutoSnapshotPolicyWithOptions(CancelAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -676,16 +905,29 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CancelAutoSnapshotPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Removes automatic snapshot policies from one or more file systems.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request CancelAutoSnapshotPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes automatic snapshot policies from one or more file systems.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelAutoSnapshotPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelAutoSnapshotPolicyResponse
+        /// </returns>
         public async Task<CancelAutoSnapshotPolicyResponse> CancelAutoSnapshotPolicyWithOptionsAsync(CancelAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -713,48 +955,83 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CancelAutoSnapshotPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Removes automatic snapshot policies from one or more file systems.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request CancelAutoSnapshotPolicyRequest
-         * @return CancelAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes automatic snapshot policies from one or more file systems.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelAutoSnapshotPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelAutoSnapshotPolicyResponse
+        /// </returns>
         public CancelAutoSnapshotPolicyResponse CancelAutoSnapshotPolicy(CancelAutoSnapshotPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelAutoSnapshotPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Removes automatic snapshot policies from one or more file systems.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request CancelAutoSnapshotPolicyRequest
-         * @return CancelAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes automatic snapshot policies from one or more file systems.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelAutoSnapshotPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelAutoSnapshotPolicyResponse
+        /// </returns>
         public async Task<CancelAutoSnapshotPolicyResponse> CancelAutoSnapshotPolicyAsync(CancelAutoSnapshotPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelAutoSnapshotPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Cancels the AutoRefresh configuration for a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can cancel AutoRefresh configurations only for the dataflows that are in the `Running` or `Stopped` state.
-         * *   It generally takes 2 to 5 minutes to cancel the AutoRefresh configurations. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/336901.html) operation to query the status of the AutoRefresh tasks.
-         *
-         * @param request CancelDataFlowAutoRefreshRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelDataFlowAutoRefreshResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the AutoRefresh configuration for a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can cancel AutoRefresh configurations only for the dataflows that are in the <c>Running</c> or <c>Stopped</c> state.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to cancel the AutoRefresh configurations. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the status of the AutoRefresh tasks.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelDataFlowAutoRefreshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDataFlowAutoRefreshResponse
+        /// </returns>
         public CancelDataFlowAutoRefreshResponse CancelDataFlowAutoRefreshWithOptions(CancelDataFlowAutoRefreshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -798,18 +1075,31 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CancelDataFlowAutoRefreshResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Cancels the AutoRefresh configuration for a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can cancel AutoRefresh configurations only for the dataflows that are in the `Running` or `Stopped` state.
-         * *   It generally takes 2 to 5 minutes to cancel the AutoRefresh configurations. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/336901.html) operation to query the status of the AutoRefresh tasks.
-         *
-         * @param request CancelDataFlowAutoRefreshRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelDataFlowAutoRefreshResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the AutoRefresh configuration for a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can cancel AutoRefresh configurations only for the dataflows that are in the <c>Running</c> or <c>Stopped</c> state.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to cancel the AutoRefresh configurations. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the status of the AutoRefresh tasks.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelDataFlowAutoRefreshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDataFlowAutoRefreshResponse
+        /// </returns>
         public async Task<CancelDataFlowAutoRefreshResponse> CancelDataFlowAutoRefreshWithOptionsAsync(CancelDataFlowAutoRefreshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -853,47 +1143,77 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CancelDataFlowAutoRefreshResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Cancels the AutoRefresh configuration for a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can cancel AutoRefresh configurations only for the dataflows that are in the `Running` or `Stopped` state.
-         * *   It generally takes 2 to 5 minutes to cancel the AutoRefresh configurations. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/336901.html) operation to query the status of the AutoRefresh tasks.
-         *
-         * @param request CancelDataFlowAutoRefreshRequest
-         * @return CancelDataFlowAutoRefreshResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the AutoRefresh configuration for a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can cancel AutoRefresh configurations only for the dataflows that are in the <c>Running</c> or <c>Stopped</c> state.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to cancel the AutoRefresh configurations. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the status of the AutoRefresh tasks.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelDataFlowAutoRefreshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDataFlowAutoRefreshResponse
+        /// </returns>
         public CancelDataFlowAutoRefreshResponse CancelDataFlowAutoRefresh(CancelDataFlowAutoRefreshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelDataFlowAutoRefreshWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Cancels the AutoRefresh configuration for a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can cancel AutoRefresh configurations only for the dataflows that are in the `Running` or `Stopped` state.
-         * *   It generally takes 2 to 5 minutes to cancel the AutoRefresh configurations. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/336901.html) operation to query the status of the AutoRefresh tasks.
-         *
-         * @param request CancelDataFlowAutoRefreshRequest
-         * @return CancelDataFlowAutoRefreshResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the AutoRefresh configuration for a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can cancel AutoRefresh configurations only for the dataflows that are in the <c>Running</c> or <c>Stopped</c> state.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to cancel the AutoRefresh configurations. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the status of the AutoRefresh tasks.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelDataFlowAutoRefreshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDataFlowAutoRefreshResponse
+        /// </returns>
         public async Task<CancelDataFlowAutoRefreshResponse> CancelDataFlowAutoRefreshAsync(CancelDataFlowAutoRefreshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelDataFlowAutoRefreshWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 取消数据流动任务队列中尚未执行的子任务
-         *
-         * @param request CancelDataFlowSubTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelDataFlowSubTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消数据流动任务队列中尚未执行的子任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelDataFlowSubTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDataFlowSubTaskResponse
+        /// </returns>
         public CancelDataFlowSubTaskResponse CancelDataFlowSubTaskWithOptions(CancelDataFlowSubTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -941,13 +1261,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CancelDataFlowSubTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 取消数据流动任务队列中尚未执行的子任务
-         *
-         * @param request CancelDataFlowSubTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelDataFlowSubTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消数据流动任务队列中尚未执行的子任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelDataFlowSubTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDataFlowSubTaskResponse
+        /// </returns>
         public async Task<CancelDataFlowSubTaskResponse> CancelDataFlowSubTaskWithOptionsAsync(CancelDataFlowSubTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -995,42 +1323,67 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CancelDataFlowSubTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 取消数据流动任务队列中尚未执行的子任务
-         *
-         * @param request CancelDataFlowSubTaskRequest
-         * @return CancelDataFlowSubTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消数据流动任务队列中尚未执行的子任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelDataFlowSubTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDataFlowSubTaskResponse
+        /// </returns>
         public CancelDataFlowSubTaskResponse CancelDataFlowSubTask(CancelDataFlowSubTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelDataFlowSubTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 取消数据流动任务队列中尚未执行的子任务
-         *
-         * @param request CancelDataFlowSubTaskRequest
-         * @return CancelDataFlowSubTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消数据流动任务队列中尚未执行的子任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelDataFlowSubTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDataFlowSubTaskResponse
+        /// </returns>
         public async Task<CancelDataFlowSubTaskResponse> CancelDataFlowSubTaskAsync(CancelDataFlowSubTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelDataFlowSubTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Cancels a dataflow task that is not running.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflow tasks. You can view the version information on the file system details page in the console.
-         * *   You can cancel only the dataflow tasks that are in the `Pending` and `Executing` states.
-         * *   It generally takes 5 to 10 minutes to cancel a dataflow task. You can query the task execution status by calling the [DescribeDataFlowTasks](https://help.aliyun.com/document_detail/2402275.html) operation.
-         *
-         * @param request CancelDataFlowTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelDataFlowTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a dataflow task that is not running.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflow tasks. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can cancel only the dataflow tasks that are in the <c>Pending</c> and <c>Executing</c> states.</description></item>
+        /// <item><description>It generally takes 5 to 10 minutes to cancel a dataflow task. You can query the task execution status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelDataFlowTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDataFlowTaskResponse
+        /// </returns>
         public CancelDataFlowTaskResponse CancelDataFlowTaskWithOptions(CancelDataFlowTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1074,18 +1427,31 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CancelDataFlowTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Cancels a dataflow task that is not running.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflow tasks. You can view the version information on the file system details page in the console.
-         * *   You can cancel only the dataflow tasks that are in the `Pending` and `Executing` states.
-         * *   It generally takes 5 to 10 minutes to cancel a dataflow task. You can query the task execution status by calling the [DescribeDataFlowTasks](https://help.aliyun.com/document_detail/2402275.html) operation.
-         *
-         * @param request CancelDataFlowTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelDataFlowTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a dataflow task that is not running.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflow tasks. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can cancel only the dataflow tasks that are in the <c>Pending</c> and <c>Executing</c> states.</description></item>
+        /// <item><description>It generally takes 5 to 10 minutes to cancel a dataflow task. You can query the task execution status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelDataFlowTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDataFlowTaskResponse
+        /// </returns>
         public async Task<CancelDataFlowTaskResponse> CancelDataFlowTaskWithOptionsAsync(CancelDataFlowTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1129,49 +1495,82 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CancelDataFlowTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Cancels a dataflow task that is not running.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflow tasks. You can view the version information on the file system details page in the console.
-         * *   You can cancel only the dataflow tasks that are in the `Pending` and `Executing` states.
-         * *   It generally takes 5 to 10 minutes to cancel a dataflow task. You can query the task execution status by calling the [DescribeDataFlowTasks](https://help.aliyun.com/document_detail/2402275.html) operation.
-         *
-         * @param request CancelDataFlowTaskRequest
-         * @return CancelDataFlowTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a dataflow task that is not running.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflow tasks. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can cancel only the dataflow tasks that are in the <c>Pending</c> and <c>Executing</c> states.</description></item>
+        /// <item><description>It generally takes 5 to 10 minutes to cancel a dataflow task. You can query the task execution status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelDataFlowTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDataFlowTaskResponse
+        /// </returns>
         public CancelDataFlowTaskResponse CancelDataFlowTask(CancelDataFlowTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelDataFlowTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Cancels a dataflow task that is not running.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflow tasks. You can view the version information on the file system details page in the console.
-         * *   You can cancel only the dataflow tasks that are in the `Pending` and `Executing` states.
-         * *   It generally takes 5 to 10 minutes to cancel a dataflow task. You can query the task execution status by calling the [DescribeDataFlowTasks](https://help.aliyun.com/document_detail/2402275.html) operation.
-         *
-         * @param request CancelDataFlowTaskRequest
-         * @return CancelDataFlowTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a dataflow task that is not running.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflow tasks. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can cancel only the dataflow tasks that are in the <c>Pending</c> and <c>Executing</c> states.</description></item>
+        /// <item><description>It generally takes 5 to 10 minutes to cancel a dataflow task. You can query the task execution status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelDataFlowTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDataFlowTaskResponse
+        /// </returns>
         public async Task<CancelDataFlowTaskResponse> CancelDataFlowTaskAsync(CancelDataFlowTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelDataFlowTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Cancels the directory quota of a file system.
-         *
-         * @description Only General-purpose file systems support the directory quota feature.
-         *
-         * @param request CancelDirQuotaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelDirQuotaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the directory quota of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose file systems support the directory quota feature.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelDirQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDirQuotaResponse
+        /// </returns>
         public CancelDirQuotaResponse CancelDirQuotaWithOptions(CancelDirQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1211,15 +1610,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CancelDirQuotaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Cancels the directory quota of a file system.
-         *
-         * @description Only General-purpose file systems support the directory quota feature.
-         *
-         * @param request CancelDirQuotaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelDirQuotaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the directory quota of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose file systems support the directory quota feature.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelDirQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDirQuotaResponse
+        /// </returns>
         public async Task<CancelDirQuotaResponse> CancelDirQuotaWithOptionsAsync(CancelDirQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1259,43 +1669,72 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CancelDirQuotaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Cancels the directory quota of a file system.
-         *
-         * @description Only General-purpose file systems support the directory quota feature.
-         *
-         * @param request CancelDirQuotaRequest
-         * @return CancelDirQuotaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the directory quota of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose file systems support the directory quota feature.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelDirQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDirQuotaResponse
+        /// </returns>
         public CancelDirQuotaResponse CancelDirQuota(CancelDirQuotaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelDirQuotaWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Cancels the directory quota of a file system.
-         *
-         * @description Only General-purpose file systems support the directory quota feature.
-         *
-         * @param request CancelDirQuotaRequest
-         * @return CancelDirQuotaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the directory quota of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose file systems support the directory quota feature.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelDirQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDirQuotaResponse
+        /// </returns>
         public async Task<CancelDirQuotaResponse> CancelDirQuotaAsync(CancelDirQuotaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelDirQuotaWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Cancels a running data retrieval task.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request CancelLifecycleRetrieveJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelLifecycleRetrieveJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a running data retrieval task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelLifecycleRetrieveJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelLifecycleRetrieveJobResponse
+        /// </returns>
         public CancelLifecycleRetrieveJobResponse CancelLifecycleRetrieveJobWithOptions(CancelLifecycleRetrieveJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1323,15 +1762,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CancelLifecycleRetrieveJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Cancels a running data retrieval task.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request CancelLifecycleRetrieveJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelLifecycleRetrieveJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a running data retrieval task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelLifecycleRetrieveJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelLifecycleRetrieveJobResponse
+        /// </returns>
         public async Task<CancelLifecycleRetrieveJobResponse> CancelLifecycleRetrieveJobWithOptionsAsync(CancelLifecycleRetrieveJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1359,46 +1809,77 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CancelLifecycleRetrieveJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Cancels a running data retrieval task.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request CancelLifecycleRetrieveJobRequest
-         * @return CancelLifecycleRetrieveJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a running data retrieval task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelLifecycleRetrieveJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelLifecycleRetrieveJobResponse
+        /// </returns>
         public CancelLifecycleRetrieveJobResponse CancelLifecycleRetrieveJob(CancelLifecycleRetrieveJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelLifecycleRetrieveJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Cancels a running data retrieval task.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request CancelLifecycleRetrieveJobRequest
-         * @return CancelLifecycleRetrieveJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a running data retrieval task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelLifecycleRetrieveJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelLifecycleRetrieveJobResponse
+        /// </returns>
         public async Task<CancelLifecycleRetrieveJobResponse> CancelLifecycleRetrieveJobAsync(CancelLifecycleRetrieveJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelLifecycleRetrieveJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Cancels a running job of the recycle bin.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   You can cancel only jobs that are in the Running state. You cannot cancel jobs that are in the PartialSuccess, Success, Fail, or Cancelled state.
-         * *   If you cancel a running job that permanently deletes files, you cannot restore the files that are already permanently deleted.
-         * *   If you cancel a running job that restores files, you can query the restored files from the file system, and query the unrestored files from the recycle bin.
-         *
-         * @param request CancelRecycleBinJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelRecycleBinJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a running job of the recycle bin.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can cancel only jobs that are in the Running state. You cannot cancel jobs that are in the PartialSuccess, Success, Fail, or Cancelled state.</description></item>
+        /// <item><description>If you cancel a running job that permanently deletes files, you cannot restore the files that are already permanently deleted.</description></item>
+        /// <item><description>If you cancel a running job that restores files, you can query the restored files from the file system, and query the unrestored files from the recycle bin.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelRecycleBinJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelRecycleBinJobResponse
+        /// </returns>
         public CancelRecycleBinJobResponse CancelRecycleBinJobWithOptions(CancelRecycleBinJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1422,18 +1903,31 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CancelRecycleBinJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Cancels a running job of the recycle bin.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   You can cancel only jobs that are in the Running state. You cannot cancel jobs that are in the PartialSuccess, Success, Fail, or Cancelled state.
-         * *   If you cancel a running job that permanently deletes files, you cannot restore the files that are already permanently deleted.
-         * *   If you cancel a running job that restores files, you can query the restored files from the file system, and query the unrestored files from the recycle bin.
-         *
-         * @param request CancelRecycleBinJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelRecycleBinJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a running job of the recycle bin.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can cancel only jobs that are in the Running state. You cannot cancel jobs that are in the PartialSuccess, Success, Fail, or Cancelled state.</description></item>
+        /// <item><description>If you cancel a running job that permanently deletes files, you cannot restore the files that are already permanently deleted.</description></item>
+        /// <item><description>If you cancel a running job that restores files, you can query the restored files from the file system, and query the unrestored files from the recycle bin.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelRecycleBinJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelRecycleBinJobResponse
+        /// </returns>
         public async Task<CancelRecycleBinJobResponse> CancelRecycleBinJobWithOptionsAsync(CancelRecycleBinJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1457,47 +1951,77 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CancelRecycleBinJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Cancels a running job of the recycle bin.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   You can cancel only jobs that are in the Running state. You cannot cancel jobs that are in the PartialSuccess, Success, Fail, or Cancelled state.
-         * *   If you cancel a running job that permanently deletes files, you cannot restore the files that are already permanently deleted.
-         * *   If you cancel a running job that restores files, you can query the restored files from the file system, and query the unrestored files from the recycle bin.
-         *
-         * @param request CancelRecycleBinJobRequest
-         * @return CancelRecycleBinJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a running job of the recycle bin.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can cancel only jobs that are in the Running state. You cannot cancel jobs that are in the PartialSuccess, Success, Fail, or Cancelled state.</description></item>
+        /// <item><description>If you cancel a running job that permanently deletes files, you cannot restore the files that are already permanently deleted.</description></item>
+        /// <item><description>If you cancel a running job that restores files, you can query the restored files from the file system, and query the unrestored files from the recycle bin.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelRecycleBinJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelRecycleBinJobResponse
+        /// </returns>
         public CancelRecycleBinJobResponse CancelRecycleBinJob(CancelRecycleBinJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelRecycleBinJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Cancels a running job of the recycle bin.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   You can cancel only jobs that are in the Running state. You cannot cancel jobs that are in the PartialSuccess, Success, Fail, or Cancelled state.
-         * *   If you cancel a running job that permanently deletes files, you cannot restore the files that are already permanently deleted.
-         * *   If you cancel a running job that restores files, you can query the restored files from the file system, and query the unrestored files from the recycle bin.
-         *
-         * @param request CancelRecycleBinJobRequest
-         * @return CancelRecycleBinJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a running job of the recycle bin.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can cancel only jobs that are in the Running state. You cannot cancel jobs that are in the PartialSuccess, Success, Fail, or Cancelled state.</description></item>
+        /// <item><description>If you cancel a running job that permanently deletes files, you cannot restore the files that are already permanently deleted.</description></item>
+        /// <item><description>If you cancel a running job that restores files, you can query the restored files from the file system, and query the unrestored files from the recycle bin.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelRecycleBinJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelRecycleBinJobResponse
+        /// </returns>
         public async Task<CancelRecycleBinJobResponse> CancelRecycleBinJobAsync(CancelRecycleBinJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelRecycleBinJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Changes the resource group to which a file system belongs.
-         *
-         * @param request ChangeResourceGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group to which a file system belongs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public ChangeResourceGroupResponse ChangeResourceGroupWithOptions(ChangeResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1537,13 +2061,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ChangeResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the resource group to which a file system belongs.
-         *
-         * @param request ChangeResourceGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group to which a file system belongs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public async Task<ChangeResourceGroupResponse> ChangeResourceGroupWithOptionsAsync(ChangeResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1583,37 +2115,57 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ChangeResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the resource group to which a file system belongs.
-         *
-         * @param request ChangeResourceGroupRequest
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group to which a file system belongs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public ChangeResourceGroupResponse ChangeResourceGroup(ChangeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ChangeResourceGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Changes the resource group to which a file system belongs.
-         *
-         * @param request ChangeResourceGroupRequest
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group to which a file system belongs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public async Task<ChangeResourceGroupResponse> ChangeResourceGroupAsync(ChangeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ChangeResourceGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a permission group.
-         *
-         * @param request CreateAccessGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateAccessGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a permission group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAccessGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccessGroupResponse
+        /// </returns>
         public CreateAccessGroupResponse CreateAccessGroupWithOptions(CreateAccessGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1653,13 +2205,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateAccessGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a permission group.
-         *
-         * @param request CreateAccessGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateAccessGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a permission group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAccessGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccessGroupResponse
+        /// </returns>
         public async Task<CreateAccessGroupResponse> CreateAccessGroupWithOptionsAsync(CreateAccessGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1699,41 +2259,66 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateAccessGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a permission group.
-         *
-         * @param request CreateAccessGroupRequest
-         * @return CreateAccessGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a permission group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAccessGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccessGroupResponse
+        /// </returns>
         public CreateAccessGroupResponse CreateAccessGroup(CreateAccessGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateAccessGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a permission group.
-         *
-         * @param request CreateAccessGroupRequest
-         * @return CreateAccessGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a permission group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAccessGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccessGroupResponse
+        /// </returns>
         public async Task<CreateAccessGroupResponse> CreateAccessGroupAsync(CreateAccessGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateAccessGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates an access point.
-         *
-         * @description *   After you call the CreateAccessPoint operation, an access point is not immediately created. Therefore, after you perform the CreateAccessPoint operation successfully, call the DescribeAccessPoints or DescribeAccessPoint operation to query the status of the access point. If the status is **Active**, mount the file system. Otherwise, the file system may fail to be mounted.
-         * *   Only General-purpose Network File System (NFS) file systems support this operation.
-         * *   If you want to perform the EnabledRam operation to enable a Resource Access Management (RAM) policy, you must configure the corresponding RAM permissions. For more information, see [Manage endpoints](https://help.aliyun.com/document_detail/2545998.html).
-         *
-         * @param request CreateAccessPointRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateAccessPointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  After you call the CreateAccessPoint operation, an access point is not immediately created. Therefore, after you perform the CreateAccessPoint operation successfully, call the DescribeAccessPoints or DescribeAccessPoint operation to query the status of the access point. If the status is <b>Active</b>, mount the file system. Otherwise, the file system may fail to be mounted.</para>
+        /// <list type="bullet">
+        /// <item><description>Only General-purpose Network File System (NFS) file systems support this operation.</description></item>
+        /// <item><description>If you want to perform the EnabledRam operation to enable a Resource Access Management (RAM) policy, you must configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage endpoints</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAccessPointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccessPointResponse
+        /// </returns>
         public CreateAccessPointResponse CreateAccessPointWithOptions(CreateAccessPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1809,17 +2394,30 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateAccessPointResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an access point.
-         *
-         * @description *   After you call the CreateAccessPoint operation, an access point is not immediately created. Therefore, after you perform the CreateAccessPoint operation successfully, call the DescribeAccessPoints or DescribeAccessPoint operation to query the status of the access point. If the status is **Active**, mount the file system. Otherwise, the file system may fail to be mounted.
-         * *   Only General-purpose Network File System (NFS) file systems support this operation.
-         * *   If you want to perform the EnabledRam operation to enable a Resource Access Management (RAM) policy, you must configure the corresponding RAM permissions. For more information, see [Manage endpoints](https://help.aliyun.com/document_detail/2545998.html).
-         *
-         * @param request CreateAccessPointRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateAccessPointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  After you call the CreateAccessPoint operation, an access point is not immediately created. Therefore, after you perform the CreateAccessPoint operation successfully, call the DescribeAccessPoints or DescribeAccessPoint operation to query the status of the access point. If the status is <b>Active</b>, mount the file system. Otherwise, the file system may fail to be mounted.</para>
+        /// <list type="bullet">
+        /// <item><description>Only General-purpose Network File System (NFS) file systems support this operation.</description></item>
+        /// <item><description>If you want to perform the EnabledRam operation to enable a Resource Access Management (RAM) policy, you must configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage endpoints</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAccessPointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccessPointResponse
+        /// </returns>
         public async Task<CreateAccessPointResponse> CreateAccessPointWithOptionsAsync(CreateAccessPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1895,45 +2493,75 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateAccessPointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an access point.
-         *
-         * @description *   After you call the CreateAccessPoint operation, an access point is not immediately created. Therefore, after you perform the CreateAccessPoint operation successfully, call the DescribeAccessPoints or DescribeAccessPoint operation to query the status of the access point. If the status is **Active**, mount the file system. Otherwise, the file system may fail to be mounted.
-         * *   Only General-purpose Network File System (NFS) file systems support this operation.
-         * *   If you want to perform the EnabledRam operation to enable a Resource Access Management (RAM) policy, you must configure the corresponding RAM permissions. For more information, see [Manage endpoints](https://help.aliyun.com/document_detail/2545998.html).
-         *
-         * @param request CreateAccessPointRequest
-         * @return CreateAccessPointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  After you call the CreateAccessPoint operation, an access point is not immediately created. Therefore, after you perform the CreateAccessPoint operation successfully, call the DescribeAccessPoints or DescribeAccessPoint operation to query the status of the access point. If the status is <b>Active</b>, mount the file system. Otherwise, the file system may fail to be mounted.</para>
+        /// <list type="bullet">
+        /// <item><description>Only General-purpose Network File System (NFS) file systems support this operation.</description></item>
+        /// <item><description>If you want to perform the EnabledRam operation to enable a Resource Access Management (RAM) policy, you must configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage endpoints</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAccessPointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccessPointResponse
+        /// </returns>
         public CreateAccessPointResponse CreateAccessPoint(CreateAccessPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateAccessPointWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates an access point.
-         *
-         * @description *   After you call the CreateAccessPoint operation, an access point is not immediately created. Therefore, after you perform the CreateAccessPoint operation successfully, call the DescribeAccessPoints or DescribeAccessPoint operation to query the status of the access point. If the status is **Active**, mount the file system. Otherwise, the file system may fail to be mounted.
-         * *   Only General-purpose Network File System (NFS) file systems support this operation.
-         * *   If you want to perform the EnabledRam operation to enable a Resource Access Management (RAM) policy, you must configure the corresponding RAM permissions. For more information, see [Manage endpoints](https://help.aliyun.com/document_detail/2545998.html).
-         *
-         * @param request CreateAccessPointRequest
-         * @return CreateAccessPointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  After you call the CreateAccessPoint operation, an access point is not immediately created. Therefore, after you perform the CreateAccessPoint operation successfully, call the DescribeAccessPoints or DescribeAccessPoint operation to query the status of the access point. If the status is <b>Active</b>, mount the file system. Otherwise, the file system may fail to be mounted.</para>
+        /// <list type="bullet">
+        /// <item><description>Only General-purpose Network File System (NFS) file systems support this operation.</description></item>
+        /// <item><description>If you want to perform the EnabledRam operation to enable a Resource Access Management (RAM) policy, you must configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage endpoints</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAccessPointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccessPointResponse
+        /// </returns>
         public async Task<CreateAccessPointResponse> CreateAccessPointAsync(CreateAccessPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateAccessPointWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a rule for a permission group.
-         *
-         * @param request CreateAccessRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateAccessRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a rule for a permission group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAccessRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccessRuleResponse
+        /// </returns>
         public CreateAccessRuleResponse CreateAccessRuleWithOptions(CreateAccessRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1985,13 +2613,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateAccessRuleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a rule for a permission group.
-         *
-         * @param request CreateAccessRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateAccessRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a rule for a permission group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAccessRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccessRuleResponse
+        /// </returns>
         public async Task<CreateAccessRuleResponse> CreateAccessRuleWithOptionsAsync(CreateAccessRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2043,48 +2679,73 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateAccessRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a rule for a permission group.
-         *
-         * @param request CreateAccessRuleRequest
-         * @return CreateAccessRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a rule for a permission group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAccessRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccessRuleResponse
+        /// </returns>
         public CreateAccessRuleResponse CreateAccessRule(CreateAccessRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateAccessRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a rule for a permission group.
-         *
-         * @param request CreateAccessRuleRequest
-         * @return CreateAccessRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a rule for a permission group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAccessRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccessRuleResponse
+        /// </returns>
         public async Task<CreateAccessRuleResponse> CreateAccessRuleAsync(CreateAccessRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateAccessRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates an automatic snapshot policy.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support the snapshot feature.
-         * *   You can create a maximum of 100 automatic snapshot policies in each region for an Alibaba Cloud account.
-         * *   If an auto snapshot is being created when the scheduled time for a new auto snapshot arrives, the creation of the new snapshot is skipped. This occurs if the file system stores a large volume of data. For example, you have scheduled auto snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a file system. The system starts to create an auto snapshot at 09:00:00 and does not complete the process until 10:20:00. The process takes 80 minutes because the file system has a large volume of data. In this case, the system does not create an auto snapshot at 10:00:00, but creates an auto snapshot at 11:00:00.
-         * *   A maximum of 128 auto snapshots can be created for a file system. If the upper limit is reached, the earliest auto snapshot is deleted. This rule does not apply to manual snapshots.
-         * *   If you modify the retention period of an automatic snapshot policy, the modification applies only to subsequent snapshots, but not to the existing snapshots.
-         * *   If an auto snapshot is being created for a file system, you cannot create a manual snapshot for the file system. You must wait after the auto snapshot is created.
-         * *   You can only apply automatic snapshot policies to a file system that is in the Running state.
-         * *   All auto snapshots are named in the `auto_yyyyMMdd_X` format, where: `auto` indicates that the snapshot is created based on an automatic snapshot policy. `yyyyMMdd` indicates the date on which the snapshot is created. `y` indicates the year. `M` indicates the month. `d` indicates the day. `X` indicates the ordinal number of the snapshot on the current day. For example, `auto_20201018_1` indicates the first auto snapshot that was created on October 18, 2020.
-         * *   After an automatic snapshot policy is created, you can call the ApplyAutoSnapshotPolicy operation to apply the policy to a file system and call the ModifyAutoSnapshotPolicy operation to modify the policy.
-         *
-         * @param request CreateAutoSnapshotPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an automatic snapshot policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies in each region for an Alibaba Cloud account.</description></item>
+        /// <item><description>If an auto snapshot is being created when the scheduled time for a new auto snapshot arrives, the creation of the new snapshot is skipped. This occurs if the file system stores a large volume of data. For example, you have scheduled auto snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a file system. The system starts to create an auto snapshot at 09:00:00 and does not complete the process until 10:20:00. The process takes 80 minutes because the file system has a large volume of data. In this case, the system does not create an auto snapshot at 10:00:00, but creates an auto snapshot at 11:00:00.</description></item>
+        /// <item><description>A maximum of 128 auto snapshots can be created for a file system. If the upper limit is reached, the earliest auto snapshot is deleted. This rule does not apply to manual snapshots.</description></item>
+        /// <item><description>If you modify the retention period of an automatic snapshot policy, the modification applies only to subsequent snapshots, but not to the existing snapshots.</description></item>
+        /// <item><description>If an auto snapshot is being created for a file system, you cannot create a manual snapshot for the file system. You must wait after the auto snapshot is created.</description></item>
+        /// <item><description>You can only apply automatic snapshot policies to a file system that is in the Running state.</description></item>
+        /// <item><description>All auto snapshots are named in the <c>auto_yyyyMMdd_X</c> format, where: <c>auto</c> indicates that the snapshot is created based on an automatic snapshot policy. <c>yyyyMMdd</c> indicates the date on which the snapshot is created. <c>y</c> indicates the year. <c>M</c> indicates the month. <c>d</c> indicates the day. <c>X</c> indicates the ordinal number of the snapshot on the current day. For example, <c>auto_20201018_1</c> indicates the first auto snapshot that was created on October 18, 2020.</description></item>
+        /// <item><description>After an automatic snapshot policy is created, you can call the ApplyAutoSnapshotPolicy operation to apply the policy to a file system and call the ModifyAutoSnapshotPolicy operation to modify the policy.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAutoSnapshotPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAutoSnapshotPolicyResponse
+        /// </returns>
         public CreateAutoSnapshotPolicyResponse CreateAutoSnapshotPolicyWithOptions(CreateAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2128,24 +2789,37 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateAutoSnapshotPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an automatic snapshot policy.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support the snapshot feature.
-         * *   You can create a maximum of 100 automatic snapshot policies in each region for an Alibaba Cloud account.
-         * *   If an auto snapshot is being created when the scheduled time for a new auto snapshot arrives, the creation of the new snapshot is skipped. This occurs if the file system stores a large volume of data. For example, you have scheduled auto snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a file system. The system starts to create an auto snapshot at 09:00:00 and does not complete the process until 10:20:00. The process takes 80 minutes because the file system has a large volume of data. In this case, the system does not create an auto snapshot at 10:00:00, but creates an auto snapshot at 11:00:00.
-         * *   A maximum of 128 auto snapshots can be created for a file system. If the upper limit is reached, the earliest auto snapshot is deleted. This rule does not apply to manual snapshots.
-         * *   If you modify the retention period of an automatic snapshot policy, the modification applies only to subsequent snapshots, but not to the existing snapshots.
-         * *   If an auto snapshot is being created for a file system, you cannot create a manual snapshot for the file system. You must wait after the auto snapshot is created.
-         * *   You can only apply automatic snapshot policies to a file system that is in the Running state.
-         * *   All auto snapshots are named in the `auto_yyyyMMdd_X` format, where: `auto` indicates that the snapshot is created based on an automatic snapshot policy. `yyyyMMdd` indicates the date on which the snapshot is created. `y` indicates the year. `M` indicates the month. `d` indicates the day. `X` indicates the ordinal number of the snapshot on the current day. For example, `auto_20201018_1` indicates the first auto snapshot that was created on October 18, 2020.
-         * *   After an automatic snapshot policy is created, you can call the ApplyAutoSnapshotPolicy operation to apply the policy to a file system and call the ModifyAutoSnapshotPolicy operation to modify the policy.
-         *
-         * @param request CreateAutoSnapshotPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an automatic snapshot policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies in each region for an Alibaba Cloud account.</description></item>
+        /// <item><description>If an auto snapshot is being created when the scheduled time for a new auto snapshot arrives, the creation of the new snapshot is skipped. This occurs if the file system stores a large volume of data. For example, you have scheduled auto snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a file system. The system starts to create an auto snapshot at 09:00:00 and does not complete the process until 10:20:00. The process takes 80 minutes because the file system has a large volume of data. In this case, the system does not create an auto snapshot at 10:00:00, but creates an auto snapshot at 11:00:00.</description></item>
+        /// <item><description>A maximum of 128 auto snapshots can be created for a file system. If the upper limit is reached, the earliest auto snapshot is deleted. This rule does not apply to manual snapshots.</description></item>
+        /// <item><description>If you modify the retention period of an automatic snapshot policy, the modification applies only to subsequent snapshots, but not to the existing snapshots.</description></item>
+        /// <item><description>If an auto snapshot is being created for a file system, you cannot create a manual snapshot for the file system. You must wait after the auto snapshot is created.</description></item>
+        /// <item><description>You can only apply automatic snapshot policies to a file system that is in the Running state.</description></item>
+        /// <item><description>All auto snapshots are named in the <c>auto_yyyyMMdd_X</c> format, where: <c>auto</c> indicates that the snapshot is created based on an automatic snapshot policy. <c>yyyyMMdd</c> indicates the date on which the snapshot is created. <c>y</c> indicates the year. <c>M</c> indicates the month. <c>d</c> indicates the day. <c>X</c> indicates the ordinal number of the snapshot on the current day. For example, <c>auto_20201018_1</c> indicates the first auto snapshot that was created on October 18, 2020.</description></item>
+        /// <item><description>After an automatic snapshot policy is created, you can call the ApplyAutoSnapshotPolicy operation to apply the policy to a file system and call the ModifyAutoSnapshotPolicy operation to modify the policy.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAutoSnapshotPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAutoSnapshotPolicyResponse
+        /// </returns>
         public async Task<CreateAutoSnapshotPolicyResponse> CreateAutoSnapshotPolicyWithOptionsAsync(CreateAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2189,113 +2863,178 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateAutoSnapshotPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an automatic snapshot policy.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support the snapshot feature.
-         * *   You can create a maximum of 100 automatic snapshot policies in each region for an Alibaba Cloud account.
-         * *   If an auto snapshot is being created when the scheduled time for a new auto snapshot arrives, the creation of the new snapshot is skipped. This occurs if the file system stores a large volume of data. For example, you have scheduled auto snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a file system. The system starts to create an auto snapshot at 09:00:00 and does not complete the process until 10:20:00. The process takes 80 minutes because the file system has a large volume of data. In this case, the system does not create an auto snapshot at 10:00:00, but creates an auto snapshot at 11:00:00.
-         * *   A maximum of 128 auto snapshots can be created for a file system. If the upper limit is reached, the earliest auto snapshot is deleted. This rule does not apply to manual snapshots.
-         * *   If you modify the retention period of an automatic snapshot policy, the modification applies only to subsequent snapshots, but not to the existing snapshots.
-         * *   If an auto snapshot is being created for a file system, you cannot create a manual snapshot for the file system. You must wait after the auto snapshot is created.
-         * *   You can only apply automatic snapshot policies to a file system that is in the Running state.
-         * *   All auto snapshots are named in the `auto_yyyyMMdd_X` format, where: `auto` indicates that the snapshot is created based on an automatic snapshot policy. `yyyyMMdd` indicates the date on which the snapshot is created. `y` indicates the year. `M` indicates the month. `d` indicates the day. `X` indicates the ordinal number of the snapshot on the current day. For example, `auto_20201018_1` indicates the first auto snapshot that was created on October 18, 2020.
-         * *   After an automatic snapshot policy is created, you can call the ApplyAutoSnapshotPolicy operation to apply the policy to a file system and call the ModifyAutoSnapshotPolicy operation to modify the policy.
-         *
-         * @param request CreateAutoSnapshotPolicyRequest
-         * @return CreateAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an automatic snapshot policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies in each region for an Alibaba Cloud account.</description></item>
+        /// <item><description>If an auto snapshot is being created when the scheduled time for a new auto snapshot arrives, the creation of the new snapshot is skipped. This occurs if the file system stores a large volume of data. For example, you have scheduled auto snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a file system. The system starts to create an auto snapshot at 09:00:00 and does not complete the process until 10:20:00. The process takes 80 minutes because the file system has a large volume of data. In this case, the system does not create an auto snapshot at 10:00:00, but creates an auto snapshot at 11:00:00.</description></item>
+        /// <item><description>A maximum of 128 auto snapshots can be created for a file system. If the upper limit is reached, the earliest auto snapshot is deleted. This rule does not apply to manual snapshots.</description></item>
+        /// <item><description>If you modify the retention period of an automatic snapshot policy, the modification applies only to subsequent snapshots, but not to the existing snapshots.</description></item>
+        /// <item><description>If an auto snapshot is being created for a file system, you cannot create a manual snapshot for the file system. You must wait after the auto snapshot is created.</description></item>
+        /// <item><description>You can only apply automatic snapshot policies to a file system that is in the Running state.</description></item>
+        /// <item><description>All auto snapshots are named in the <c>auto_yyyyMMdd_X</c> format, where: <c>auto</c> indicates that the snapshot is created based on an automatic snapshot policy. <c>yyyyMMdd</c> indicates the date on which the snapshot is created. <c>y</c> indicates the year. <c>M</c> indicates the month. <c>d</c> indicates the day. <c>X</c> indicates the ordinal number of the snapshot on the current day. For example, <c>auto_20201018_1</c> indicates the first auto snapshot that was created on October 18, 2020.</description></item>
+        /// <item><description>After an automatic snapshot policy is created, you can call the ApplyAutoSnapshotPolicy operation to apply the policy to a file system and call the ModifyAutoSnapshotPolicy operation to modify the policy.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAutoSnapshotPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAutoSnapshotPolicyResponse
+        /// </returns>
         public CreateAutoSnapshotPolicyResponse CreateAutoSnapshotPolicy(CreateAutoSnapshotPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateAutoSnapshotPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates an automatic snapshot policy.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support the snapshot feature.
-         * *   You can create a maximum of 100 automatic snapshot policies in each region for an Alibaba Cloud account.
-         * *   If an auto snapshot is being created when the scheduled time for a new auto snapshot arrives, the creation of the new snapshot is skipped. This occurs if the file system stores a large volume of data. For example, you have scheduled auto snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a file system. The system starts to create an auto snapshot at 09:00:00 and does not complete the process until 10:20:00. The process takes 80 minutes because the file system has a large volume of data. In this case, the system does not create an auto snapshot at 10:00:00, but creates an auto snapshot at 11:00:00.
-         * *   A maximum of 128 auto snapshots can be created for a file system. If the upper limit is reached, the earliest auto snapshot is deleted. This rule does not apply to manual snapshots.
-         * *   If you modify the retention period of an automatic snapshot policy, the modification applies only to subsequent snapshots, but not to the existing snapshots.
-         * *   If an auto snapshot is being created for a file system, you cannot create a manual snapshot for the file system. You must wait after the auto snapshot is created.
-         * *   You can only apply automatic snapshot policies to a file system that is in the Running state.
-         * *   All auto snapshots are named in the `auto_yyyyMMdd_X` format, where: `auto` indicates that the snapshot is created based on an automatic snapshot policy. `yyyyMMdd` indicates the date on which the snapshot is created. `y` indicates the year. `M` indicates the month. `d` indicates the day. `X` indicates the ordinal number of the snapshot on the current day. For example, `auto_20201018_1` indicates the first auto snapshot that was created on October 18, 2020.
-         * *   After an automatic snapshot policy is created, you can call the ApplyAutoSnapshotPolicy operation to apply the policy to a file system and call the ModifyAutoSnapshotPolicy operation to modify the policy.
-         *
-         * @param request CreateAutoSnapshotPolicyRequest
-         * @return CreateAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an automatic snapshot policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies in each region for an Alibaba Cloud account.</description></item>
+        /// <item><description>If an auto snapshot is being created when the scheduled time for a new auto snapshot arrives, the creation of the new snapshot is skipped. This occurs if the file system stores a large volume of data. For example, you have scheduled auto snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a file system. The system starts to create an auto snapshot at 09:00:00 and does not complete the process until 10:20:00. The process takes 80 minutes because the file system has a large volume of data. In this case, the system does not create an auto snapshot at 10:00:00, but creates an auto snapshot at 11:00:00.</description></item>
+        /// <item><description>A maximum of 128 auto snapshots can be created for a file system. If the upper limit is reached, the earliest auto snapshot is deleted. This rule does not apply to manual snapshots.</description></item>
+        /// <item><description>If you modify the retention period of an automatic snapshot policy, the modification applies only to subsequent snapshots, but not to the existing snapshots.</description></item>
+        /// <item><description>If an auto snapshot is being created for a file system, you cannot create a manual snapshot for the file system. You must wait after the auto snapshot is created.</description></item>
+        /// <item><description>You can only apply automatic snapshot policies to a file system that is in the Running state.</description></item>
+        /// <item><description>All auto snapshots are named in the <c>auto_yyyyMMdd_X</c> format, where: <c>auto</c> indicates that the snapshot is created based on an automatic snapshot policy. <c>yyyyMMdd</c> indicates the date on which the snapshot is created. <c>y</c> indicates the year. <c>M</c> indicates the month. <c>d</c> indicates the day. <c>X</c> indicates the ordinal number of the snapshot on the current day. For example, <c>auto_20201018_1</c> indicates the first auto snapshot that was created on October 18, 2020.</description></item>
+        /// <item><description>After an automatic snapshot policy is created, you can call the ApplyAutoSnapshotPolicy operation to apply the policy to a file system and call the ModifyAutoSnapshotPolicy operation to modify the policy.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAutoSnapshotPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAutoSnapshotPolicyResponse
+        /// </returns>
         public async Task<CreateAutoSnapshotPolicyResponse> CreateAutoSnapshotPolicyAsync(CreateAutoSnapshotPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateAutoSnapshotPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a dataflow for a Cloud Parallel File Storage (CPFS) file system and source storage.
-         *
-         * @description *   Basic operations
-         *     *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows.
-         *     *   You can create a data flow only when a CPFS or CPFS for LINGJUN file system is in the Running state.
-         *     *   A maximum of 10 data flows can be created for a CPFS or CPFS for LINGJUN file system.
-         *     *   It generally takes 2 to 5 minutes to create a data flow. You can call the DescribeDataFlows operation to check whether the data flow has been created.
-         * *   Permissions
-         *     When you create a data flow, CPFS obtains the following two service-linked roles: `AliyunServiceRoleForNasOssDataflow` and `AliyunServiceRoleForNasEventNotification`. For more information, see [CPFS service-linked roles](https://help.aliyun.com/document_detail/185138.html).
-         * *   CPFS usage notes
-         *     *   Billing
-         *         *   If you create a data flow, you are charged for using the data flow throughput. For more information, see [Billing of CPFS](https://help.aliyun.com/document_detail/111858.html).
-         *         *   When you configure the AutoRefresh feature for a data flow, CPFS must use EventBridge to collect object modification events from the source Object Storage Service (OSS) bucket. Event fees are incurred. For more information, see [Billing of EventBridge](https://help.aliyun.com/document_detail/163752.html).
-         *     *   Data flow specifications
-         *         *   The data flow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data flow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a data flow.
-         *         *   When you create a data flow, the vSwitch IP addresses used by a CPFS mount target are consumed. Make sure that the vSwitch can provide sufficient IP addresses.
-         *         *   Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the data flow whose throughput is changed meet the requirements.
-         *     *   Fileset
-         *         *   The destination for a data flow is a fileset in the CPFS file system. A fileset is a new directory tree structure (a small file directory) in a CPFS file system. Each fileset independently manages an inode space.
-         *         *   When you create a data flow for a CPFS file system, the related fileset must already exist and cannot be nested with other filesets. Only one data flow can be created in a fileset, which corresponds to one source storage.
-         *         *   A fileset supports a maximum of one million files. If the number of files imported from an OSS bucket into the fileset exceeds the upper limit, the `no space` error message is returned when you add new files.
-         *      >   If data already exists in the fileset, after you create a data flow, the existing data in the fileset is cleared and replaced with the data synchronized from the OSS bucket.
-         *     *   AutoRefresh
-         *         *   After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a data flow task to load the updated data.
-         *         *   AutoRefresh depends on the object modification events collected by EventBridge from the source OSS bucket. You must first [activate EventBridge](https://help.aliyun.com/document_detail/182246.html).
-         *         *   The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. You can configure a maximum of five AutoRefresh directories for a data flow.
-         *         *   AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS data flow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the data flow status becomes `Misconfigured`. To resolve these issues, you can increase the data flow specifications or reduce the frequency of triggering the object modification event.
-         *         *   When you add an AutoRefresh configuration to the prefix for a CPFS data flow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS data flow.
-         *         > The event buses and event rules created for CPFS in the EventBridge console contain the `Create for cpfs auto refresh` description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.
-         *     *   Source storage
-         *         *   The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.
-         *         *   CPFS data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.
-         *         *   If data flows for multiple CPFS file systems or multiple data flows for the same CPFS file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS file systems to one OSS bucket.
-         *         *   Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.
-         *          >  Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS cannot access the data in the OSS bucket.
-         * *   CPFS for LINGJUN usage notes
-         *     *   Source storage
-         *         *   The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.
-         *         *   CPFS for LINGJUN data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.
-         *         *   If data flows for multiple CPFS for LINGJUN file systems or multiple data flows for the same CPFS for LINGJUN file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS for LINGJUN file systems to one OSS bucket.
-         *         *   Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.
-         *         > Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS for LINGJUN cannot access the data in the OSS bucket.
-         *     *   Limits of data flows on file systems
-         *         *   You cannot rename a non-empty directory in a path that is associated with a data flow. Otherwise, the Permission Denied error message or an error message indicating that the directory is not empty is returned.
-         *         *   Proceed with caution when you use special characters in the names of directories and files. The following characters are supported: letters, digits, exclamation points (!), hyphens (-), underscores (_), periods (.), asterisks (\\*), and parentheses (()).
-         *         *   The path can be up to 1,023 characters in length.
-         *     *   Limits of data flows on import
-         *         *   After a symbolic link is imported to CPFS for LINGJUN, the symbolic link is converted into a common data file that contains no symbolic link information.
-         *         *   If an OSS bucket has multiple versions, only data of the latest version is used.
-         *         *   The name of a file or a subdirectory can be up to 255 bytes in length.
-         *     *   Limits of data flows on export
-         *         *   After a symbolic link is synchronized to OSS, the file that the symbolic link points to is not synchronized to OSS. In this case, the symbolic link is converted into a common object that contains no data.
-         *         *   Hard links can be synchronized to OSS only as common files that contain no link information.
-         *         *   After a file of the Socket, Device, or Pipe type is exported to an OSS bucket, the file is converted into a common object that contains no data.
-         *         *   The directory path can be up to 1,023 characters in length.
-         *
-         * @param request CreateDataFlowRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a dataflow for a Cloud Parallel File Storage (CPFS) file system and source storage.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Basic operations
+        ///     *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows.
+        ///     *   You can create a data flow only when a CPFS or CPFS for LINGJUN file system is in the Running state.
+        ///     *   A maximum of 10 data flows can be created for a CPFS or CPFS for LINGJUN file system.
+        ///     *   It generally takes 2 to 5 minutes to create a data flow. You can call the DescribeDataFlows operation to check whether the data flow has been created.</para>
+        /// <list type="bullet">
+        /// <item><description>Permissions
+        /// When you create a data flow, CPFS obtains the following two service-linked roles: <c>AliyunServiceRoleForNasOssDataflow</c> and <c>AliyunServiceRoleForNasEventNotification</c>. For more information, see <a href="https://help.aliyun.com/document_detail/185138.html">CPFS service-linked roles</a>.</description></item>
+        /// <item><description>CPFS usage notes<list type="bullet">
+        /// <item><description>Billing<list type="bullet">
+        /// <item><description>If you create a data flow, you are charged for using the data flow throughput. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing of CPFS</a>.</description></item>
+        /// <item><description>When you configure the AutoRefresh feature for a data flow, CPFS must use EventBridge to collect object modification events from the source Object Storage Service (OSS) bucket. Event fees are incurred. For more information, see <a href="https://help.aliyun.com/document_detail/163752.html">Billing of EventBridge</a>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Data flow specifications<list type="bullet">
+        /// <item><description>The data flow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data flow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a data flow.</description></item>
+        /// <item><description>When you create a data flow, the vSwitch IP addresses used by a CPFS mount target are consumed. Make sure that the vSwitch can provide sufficient IP addresses.</description></item>
+        /// <item><description>Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the data flow whose throughput is changed meet the requirements.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Fileset<list type="bullet">
+        /// <item><description>The destination for a data flow is a fileset in the CPFS file system. A fileset is a new directory tree structure (a small file directory) in a CPFS file system. Each fileset independently manages an inode space.</description></item>
+        /// <item><description>When you create a data flow for a CPFS file system, the related fileset must already exist and cannot be nested with other filesets. Only one data flow can be created in a fileset, which corresponds to one source storage.</description></item>
+        /// <item><description>A fileset supports a maximum of one million files. If the number of files imported from an OSS bucket into the fileset exceeds the upper limit, the <c>no space</c> error message is returned when you add new files.<remarks>
+        /// <para>  If data already exists in the fileset, after you create a data flow, the existing data in the fileset is cleared and replaced with the data synchronized from the OSS bucket.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>AutoRefresh<list type="bullet">
+        /// <item><description>After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a data flow task to load the updated data.</description></item>
+        /// <item><description>AutoRefresh depends on the object modification events collected by EventBridge from the source OSS bucket. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</description></item>
+        /// <item><description>The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. You can configure a maximum of five AutoRefresh directories for a data flow.</description></item>
+        /// <item><description>AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS data flow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the data flow status becomes <c>Misconfigured</c>. To resolve these issues, you can increase the data flow specifications or reduce the frequency of triggering the object modification event.</description></item>
+        /// <item><description>When you add an AutoRefresh configuration to the prefix for a CPFS data flow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS data flow.<remarks>
+        /// <para>The event buses and event rules created for CPFS in the EventBridge console contain the <c>Create for cpfs auto refresh</c> description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Source storage<list type="bullet">
+        /// <item><description>The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.</description></item>
+        /// <item><description>CPFS data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.</description></item>
+        /// <item><description>If data flows for multiple CPFS file systems or multiple data flows for the same CPFS file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS file systems to one OSS bucket.</description></item>
+        /// <item><description>Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.<remarks>
+        /// <para> Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS cannot access the data in the OSS bucket.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>CPFS for LINGJUN usage notes<list type="bullet">
+        /// <item><description>Source storage<list type="bullet">
+        /// <item><description>The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.</description></item>
+        /// <item><description>CPFS for LINGJUN data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.</description></item>
+        /// <item><description>If data flows for multiple CPFS for LINGJUN file systems or multiple data flows for the same CPFS for LINGJUN file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS for LINGJUN file systems to one OSS bucket.</description></item>
+        /// <item><description>Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.<remarks>
+        /// <para>Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS for LINGJUN cannot access the data in the OSS bucket.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Limits of data flows on file systems<list type="bullet">
+        /// <item><description>You cannot rename a non-empty directory in a path that is associated with a data flow. Otherwise, the Permission Denied error message or an error message indicating that the directory is not empty is returned.</description></item>
+        /// <item><description>Proceed with caution when you use special characters in the names of directories and files. The following characters are supported: letters, digits, exclamation points (!), hyphens (-), underscores (_), periods (.), asterisks (\*), and parentheses (()).</description></item>
+        /// <item><description>The path can be up to 1,023 characters in length.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Limits of data flows on import<list type="bullet">
+        /// <item><description>After a symbolic link is imported to CPFS for LINGJUN, the symbolic link is converted into a common data file that contains no symbolic link information.</description></item>
+        /// <item><description>If an OSS bucket has multiple versions, only data of the latest version is used.</description></item>
+        /// <item><description>The name of a file or a subdirectory can be up to 255 bytes in length.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Limits of data flows on export<list type="bullet">
+        /// <item><description>After a symbolic link is synchronized to OSS, the file that the symbolic link points to is not synchronized to OSS. In this case, the symbolic link is converted into a common object that contains no data.</description></item>
+        /// <item><description>Hard links can be synchronized to OSS only as common files that contain no link information.</description></item>
+        /// <item><description>After a file of the Socket, Device, or Pipe type is exported to an OSS bucket, the file is converted into a common object that contains no data.</description></item>
+        /// <item><description>The directory path can be up to 1,023 characters in length.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDataFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataFlowResponse
+        /// </returns>
         public CreateDataFlowResponse CreateDataFlowWithOptions(CreateDataFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2371,67 +3110,110 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateDataFlowResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a dataflow for a Cloud Parallel File Storage (CPFS) file system and source storage.
-         *
-         * @description *   Basic operations
-         *     *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows.
-         *     *   You can create a data flow only when a CPFS or CPFS for LINGJUN file system is in the Running state.
-         *     *   A maximum of 10 data flows can be created for a CPFS or CPFS for LINGJUN file system.
-         *     *   It generally takes 2 to 5 minutes to create a data flow. You can call the DescribeDataFlows operation to check whether the data flow has been created.
-         * *   Permissions
-         *     When you create a data flow, CPFS obtains the following two service-linked roles: `AliyunServiceRoleForNasOssDataflow` and `AliyunServiceRoleForNasEventNotification`. For more information, see [CPFS service-linked roles](https://help.aliyun.com/document_detail/185138.html).
-         * *   CPFS usage notes
-         *     *   Billing
-         *         *   If you create a data flow, you are charged for using the data flow throughput. For more information, see [Billing of CPFS](https://help.aliyun.com/document_detail/111858.html).
-         *         *   When you configure the AutoRefresh feature for a data flow, CPFS must use EventBridge to collect object modification events from the source Object Storage Service (OSS) bucket. Event fees are incurred. For more information, see [Billing of EventBridge](https://help.aliyun.com/document_detail/163752.html).
-         *     *   Data flow specifications
-         *         *   The data flow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data flow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a data flow.
-         *         *   When you create a data flow, the vSwitch IP addresses used by a CPFS mount target are consumed. Make sure that the vSwitch can provide sufficient IP addresses.
-         *         *   Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the data flow whose throughput is changed meet the requirements.
-         *     *   Fileset
-         *         *   The destination for a data flow is a fileset in the CPFS file system. A fileset is a new directory tree structure (a small file directory) in a CPFS file system. Each fileset independently manages an inode space.
-         *         *   When you create a data flow for a CPFS file system, the related fileset must already exist and cannot be nested with other filesets. Only one data flow can be created in a fileset, which corresponds to one source storage.
-         *         *   A fileset supports a maximum of one million files. If the number of files imported from an OSS bucket into the fileset exceeds the upper limit, the `no space` error message is returned when you add new files.
-         *      >   If data already exists in the fileset, after you create a data flow, the existing data in the fileset is cleared and replaced with the data synchronized from the OSS bucket.
-         *     *   AutoRefresh
-         *         *   After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a data flow task to load the updated data.
-         *         *   AutoRefresh depends on the object modification events collected by EventBridge from the source OSS bucket. You must first [activate EventBridge](https://help.aliyun.com/document_detail/182246.html).
-         *         *   The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. You can configure a maximum of five AutoRefresh directories for a data flow.
-         *         *   AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS data flow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the data flow status becomes `Misconfigured`. To resolve these issues, you can increase the data flow specifications or reduce the frequency of triggering the object modification event.
-         *         *   When you add an AutoRefresh configuration to the prefix for a CPFS data flow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS data flow.
-         *         > The event buses and event rules created for CPFS in the EventBridge console contain the `Create for cpfs auto refresh` description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.
-         *     *   Source storage
-         *         *   The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.
-         *         *   CPFS data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.
-         *         *   If data flows for multiple CPFS file systems or multiple data flows for the same CPFS file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS file systems to one OSS bucket.
-         *         *   Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.
-         *          >  Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS cannot access the data in the OSS bucket.
-         * *   CPFS for LINGJUN usage notes
-         *     *   Source storage
-         *         *   The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.
-         *         *   CPFS for LINGJUN data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.
-         *         *   If data flows for multiple CPFS for LINGJUN file systems or multiple data flows for the same CPFS for LINGJUN file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS for LINGJUN file systems to one OSS bucket.
-         *         *   Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.
-         *         > Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS for LINGJUN cannot access the data in the OSS bucket.
-         *     *   Limits of data flows on file systems
-         *         *   You cannot rename a non-empty directory in a path that is associated with a data flow. Otherwise, the Permission Denied error message or an error message indicating that the directory is not empty is returned.
-         *         *   Proceed with caution when you use special characters in the names of directories and files. The following characters are supported: letters, digits, exclamation points (!), hyphens (-), underscores (_), periods (.), asterisks (\\*), and parentheses (()).
-         *         *   The path can be up to 1,023 characters in length.
-         *     *   Limits of data flows on import
-         *         *   After a symbolic link is imported to CPFS for LINGJUN, the symbolic link is converted into a common data file that contains no symbolic link information.
-         *         *   If an OSS bucket has multiple versions, only data of the latest version is used.
-         *         *   The name of a file or a subdirectory can be up to 255 bytes in length.
-         *     *   Limits of data flows on export
-         *         *   After a symbolic link is synchronized to OSS, the file that the symbolic link points to is not synchronized to OSS. In this case, the symbolic link is converted into a common object that contains no data.
-         *         *   Hard links can be synchronized to OSS only as common files that contain no link information.
-         *         *   After a file of the Socket, Device, or Pipe type is exported to an OSS bucket, the file is converted into a common object that contains no data.
-         *         *   The directory path can be up to 1,023 characters in length.
-         *
-         * @param request CreateDataFlowRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a dataflow for a Cloud Parallel File Storage (CPFS) file system and source storage.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Basic operations
+        ///     *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows.
+        ///     *   You can create a data flow only when a CPFS or CPFS for LINGJUN file system is in the Running state.
+        ///     *   A maximum of 10 data flows can be created for a CPFS or CPFS for LINGJUN file system.
+        ///     *   It generally takes 2 to 5 minutes to create a data flow. You can call the DescribeDataFlows operation to check whether the data flow has been created.</para>
+        /// <list type="bullet">
+        /// <item><description>Permissions
+        /// When you create a data flow, CPFS obtains the following two service-linked roles: <c>AliyunServiceRoleForNasOssDataflow</c> and <c>AliyunServiceRoleForNasEventNotification</c>. For more information, see <a href="https://help.aliyun.com/document_detail/185138.html">CPFS service-linked roles</a>.</description></item>
+        /// <item><description>CPFS usage notes<list type="bullet">
+        /// <item><description>Billing<list type="bullet">
+        /// <item><description>If you create a data flow, you are charged for using the data flow throughput. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing of CPFS</a>.</description></item>
+        /// <item><description>When you configure the AutoRefresh feature for a data flow, CPFS must use EventBridge to collect object modification events from the source Object Storage Service (OSS) bucket. Event fees are incurred. For more information, see <a href="https://help.aliyun.com/document_detail/163752.html">Billing of EventBridge</a>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Data flow specifications<list type="bullet">
+        /// <item><description>The data flow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data flow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a data flow.</description></item>
+        /// <item><description>When you create a data flow, the vSwitch IP addresses used by a CPFS mount target are consumed. Make sure that the vSwitch can provide sufficient IP addresses.</description></item>
+        /// <item><description>Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the data flow whose throughput is changed meet the requirements.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Fileset<list type="bullet">
+        /// <item><description>The destination for a data flow is a fileset in the CPFS file system. A fileset is a new directory tree structure (a small file directory) in a CPFS file system. Each fileset independently manages an inode space.</description></item>
+        /// <item><description>When you create a data flow for a CPFS file system, the related fileset must already exist and cannot be nested with other filesets. Only one data flow can be created in a fileset, which corresponds to one source storage.</description></item>
+        /// <item><description>A fileset supports a maximum of one million files. If the number of files imported from an OSS bucket into the fileset exceeds the upper limit, the <c>no space</c> error message is returned when you add new files.<remarks>
+        /// <para>  If data already exists in the fileset, after you create a data flow, the existing data in the fileset is cleared and replaced with the data synchronized from the OSS bucket.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>AutoRefresh<list type="bullet">
+        /// <item><description>After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a data flow task to load the updated data.</description></item>
+        /// <item><description>AutoRefresh depends on the object modification events collected by EventBridge from the source OSS bucket. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</description></item>
+        /// <item><description>The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. You can configure a maximum of five AutoRefresh directories for a data flow.</description></item>
+        /// <item><description>AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS data flow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the data flow status becomes <c>Misconfigured</c>. To resolve these issues, you can increase the data flow specifications or reduce the frequency of triggering the object modification event.</description></item>
+        /// <item><description>When you add an AutoRefresh configuration to the prefix for a CPFS data flow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS data flow.<remarks>
+        /// <para>The event buses and event rules created for CPFS in the EventBridge console contain the <c>Create for cpfs auto refresh</c> description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Source storage<list type="bullet">
+        /// <item><description>The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.</description></item>
+        /// <item><description>CPFS data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.</description></item>
+        /// <item><description>If data flows for multiple CPFS file systems or multiple data flows for the same CPFS file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS file systems to one OSS bucket.</description></item>
+        /// <item><description>Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.<remarks>
+        /// <para> Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS cannot access the data in the OSS bucket.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>CPFS for LINGJUN usage notes<list type="bullet">
+        /// <item><description>Source storage<list type="bullet">
+        /// <item><description>The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.</description></item>
+        /// <item><description>CPFS for LINGJUN data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.</description></item>
+        /// <item><description>If data flows for multiple CPFS for LINGJUN file systems or multiple data flows for the same CPFS for LINGJUN file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS for LINGJUN file systems to one OSS bucket.</description></item>
+        /// <item><description>Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.<remarks>
+        /// <para>Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS for LINGJUN cannot access the data in the OSS bucket.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Limits of data flows on file systems<list type="bullet">
+        /// <item><description>You cannot rename a non-empty directory in a path that is associated with a data flow. Otherwise, the Permission Denied error message or an error message indicating that the directory is not empty is returned.</description></item>
+        /// <item><description>Proceed with caution when you use special characters in the names of directories and files. The following characters are supported: letters, digits, exclamation points (!), hyphens (-), underscores (_), periods (.), asterisks (\*), and parentheses (()).</description></item>
+        /// <item><description>The path can be up to 1,023 characters in length.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Limits of data flows on import<list type="bullet">
+        /// <item><description>After a symbolic link is imported to CPFS for LINGJUN, the symbolic link is converted into a common data file that contains no symbolic link information.</description></item>
+        /// <item><description>If an OSS bucket has multiple versions, only data of the latest version is used.</description></item>
+        /// <item><description>The name of a file or a subdirectory can be up to 255 bytes in length.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Limits of data flows on export<list type="bullet">
+        /// <item><description>After a symbolic link is synchronized to OSS, the file that the symbolic link points to is not synchronized to OSS. In this case, the symbolic link is converted into a common object that contains no data.</description></item>
+        /// <item><description>Hard links can be synchronized to OSS only as common files that contain no link information.</description></item>
+        /// <item><description>After a file of the Socket, Device, or Pipe type is exported to an OSS bucket, the file is converted into a common object that contains no data.</description></item>
+        /// <item><description>The directory path can be up to 1,023 characters in length.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDataFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataFlowResponse
+        /// </returns>
         public async Task<CreateDataFlowResponse> CreateDataFlowWithOptionsAsync(CreateDataFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2507,145 +3289,235 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateDataFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a dataflow for a Cloud Parallel File Storage (CPFS) file system and source storage.
-         *
-         * @description *   Basic operations
-         *     *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows.
-         *     *   You can create a data flow only when a CPFS or CPFS for LINGJUN file system is in the Running state.
-         *     *   A maximum of 10 data flows can be created for a CPFS or CPFS for LINGJUN file system.
-         *     *   It generally takes 2 to 5 minutes to create a data flow. You can call the DescribeDataFlows operation to check whether the data flow has been created.
-         * *   Permissions
-         *     When you create a data flow, CPFS obtains the following two service-linked roles: `AliyunServiceRoleForNasOssDataflow` and `AliyunServiceRoleForNasEventNotification`. For more information, see [CPFS service-linked roles](https://help.aliyun.com/document_detail/185138.html).
-         * *   CPFS usage notes
-         *     *   Billing
-         *         *   If you create a data flow, you are charged for using the data flow throughput. For more information, see [Billing of CPFS](https://help.aliyun.com/document_detail/111858.html).
-         *         *   When you configure the AutoRefresh feature for a data flow, CPFS must use EventBridge to collect object modification events from the source Object Storage Service (OSS) bucket. Event fees are incurred. For more information, see [Billing of EventBridge](https://help.aliyun.com/document_detail/163752.html).
-         *     *   Data flow specifications
-         *         *   The data flow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data flow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a data flow.
-         *         *   When you create a data flow, the vSwitch IP addresses used by a CPFS mount target are consumed. Make sure that the vSwitch can provide sufficient IP addresses.
-         *         *   Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the data flow whose throughput is changed meet the requirements.
-         *     *   Fileset
-         *         *   The destination for a data flow is a fileset in the CPFS file system. A fileset is a new directory tree structure (a small file directory) in a CPFS file system. Each fileset independently manages an inode space.
-         *         *   When you create a data flow for a CPFS file system, the related fileset must already exist and cannot be nested with other filesets. Only one data flow can be created in a fileset, which corresponds to one source storage.
-         *         *   A fileset supports a maximum of one million files. If the number of files imported from an OSS bucket into the fileset exceeds the upper limit, the `no space` error message is returned when you add new files.
-         *      >   If data already exists in the fileset, after you create a data flow, the existing data in the fileset is cleared and replaced with the data synchronized from the OSS bucket.
-         *     *   AutoRefresh
-         *         *   After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a data flow task to load the updated data.
-         *         *   AutoRefresh depends on the object modification events collected by EventBridge from the source OSS bucket. You must first [activate EventBridge](https://help.aliyun.com/document_detail/182246.html).
-         *         *   The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. You can configure a maximum of five AutoRefresh directories for a data flow.
-         *         *   AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS data flow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the data flow status becomes `Misconfigured`. To resolve these issues, you can increase the data flow specifications or reduce the frequency of triggering the object modification event.
-         *         *   When you add an AutoRefresh configuration to the prefix for a CPFS data flow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS data flow.
-         *         > The event buses and event rules created for CPFS in the EventBridge console contain the `Create for cpfs auto refresh` description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.
-         *     *   Source storage
-         *         *   The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.
-         *         *   CPFS data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.
-         *         *   If data flows for multiple CPFS file systems or multiple data flows for the same CPFS file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS file systems to one OSS bucket.
-         *         *   Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.
-         *          >  Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS cannot access the data in the OSS bucket.
-         * *   CPFS for LINGJUN usage notes
-         *     *   Source storage
-         *         *   The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.
-         *         *   CPFS for LINGJUN data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.
-         *         *   If data flows for multiple CPFS for LINGJUN file systems or multiple data flows for the same CPFS for LINGJUN file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS for LINGJUN file systems to one OSS bucket.
-         *         *   Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.
-         *         > Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS for LINGJUN cannot access the data in the OSS bucket.
-         *     *   Limits of data flows on file systems
-         *         *   You cannot rename a non-empty directory in a path that is associated with a data flow. Otherwise, the Permission Denied error message or an error message indicating that the directory is not empty is returned.
-         *         *   Proceed with caution when you use special characters in the names of directories and files. The following characters are supported: letters, digits, exclamation points (!), hyphens (-), underscores (_), periods (.), asterisks (\\*), and parentheses (()).
-         *         *   The path can be up to 1,023 characters in length.
-         *     *   Limits of data flows on import
-         *         *   After a symbolic link is imported to CPFS for LINGJUN, the symbolic link is converted into a common data file that contains no symbolic link information.
-         *         *   If an OSS bucket has multiple versions, only data of the latest version is used.
-         *         *   The name of a file or a subdirectory can be up to 255 bytes in length.
-         *     *   Limits of data flows on export
-         *         *   After a symbolic link is synchronized to OSS, the file that the symbolic link points to is not synchronized to OSS. In this case, the symbolic link is converted into a common object that contains no data.
-         *         *   Hard links can be synchronized to OSS only as common files that contain no link information.
-         *         *   After a file of the Socket, Device, or Pipe type is exported to an OSS bucket, the file is converted into a common object that contains no data.
-         *         *   The directory path can be up to 1,023 characters in length.
-         *
-         * @param request CreateDataFlowRequest
-         * @return CreateDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a dataflow for a Cloud Parallel File Storage (CPFS) file system and source storage.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Basic operations
+        ///     *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows.
+        ///     *   You can create a data flow only when a CPFS or CPFS for LINGJUN file system is in the Running state.
+        ///     *   A maximum of 10 data flows can be created for a CPFS or CPFS for LINGJUN file system.
+        ///     *   It generally takes 2 to 5 minutes to create a data flow. You can call the DescribeDataFlows operation to check whether the data flow has been created.</para>
+        /// <list type="bullet">
+        /// <item><description>Permissions
+        /// When you create a data flow, CPFS obtains the following two service-linked roles: <c>AliyunServiceRoleForNasOssDataflow</c> and <c>AliyunServiceRoleForNasEventNotification</c>. For more information, see <a href="https://help.aliyun.com/document_detail/185138.html">CPFS service-linked roles</a>.</description></item>
+        /// <item><description>CPFS usage notes<list type="bullet">
+        /// <item><description>Billing<list type="bullet">
+        /// <item><description>If you create a data flow, you are charged for using the data flow throughput. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing of CPFS</a>.</description></item>
+        /// <item><description>When you configure the AutoRefresh feature for a data flow, CPFS must use EventBridge to collect object modification events from the source Object Storage Service (OSS) bucket. Event fees are incurred. For more information, see <a href="https://help.aliyun.com/document_detail/163752.html">Billing of EventBridge</a>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Data flow specifications<list type="bullet">
+        /// <item><description>The data flow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data flow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a data flow.</description></item>
+        /// <item><description>When you create a data flow, the vSwitch IP addresses used by a CPFS mount target are consumed. Make sure that the vSwitch can provide sufficient IP addresses.</description></item>
+        /// <item><description>Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the data flow whose throughput is changed meet the requirements.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Fileset<list type="bullet">
+        /// <item><description>The destination for a data flow is a fileset in the CPFS file system. A fileset is a new directory tree structure (a small file directory) in a CPFS file system. Each fileset independently manages an inode space.</description></item>
+        /// <item><description>When you create a data flow for a CPFS file system, the related fileset must already exist and cannot be nested with other filesets. Only one data flow can be created in a fileset, which corresponds to one source storage.</description></item>
+        /// <item><description>A fileset supports a maximum of one million files. If the number of files imported from an OSS bucket into the fileset exceeds the upper limit, the <c>no space</c> error message is returned when you add new files.<remarks>
+        /// <para>  If data already exists in the fileset, after you create a data flow, the existing data in the fileset is cleared and replaced with the data synchronized from the OSS bucket.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>AutoRefresh<list type="bullet">
+        /// <item><description>After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a data flow task to load the updated data.</description></item>
+        /// <item><description>AutoRefresh depends on the object modification events collected by EventBridge from the source OSS bucket. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</description></item>
+        /// <item><description>The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. You can configure a maximum of five AutoRefresh directories for a data flow.</description></item>
+        /// <item><description>AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS data flow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the data flow status becomes <c>Misconfigured</c>. To resolve these issues, you can increase the data flow specifications or reduce the frequency of triggering the object modification event.</description></item>
+        /// <item><description>When you add an AutoRefresh configuration to the prefix for a CPFS data flow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS data flow.<remarks>
+        /// <para>The event buses and event rules created for CPFS in the EventBridge console contain the <c>Create for cpfs auto refresh</c> description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Source storage<list type="bullet">
+        /// <item><description>The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.</description></item>
+        /// <item><description>CPFS data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.</description></item>
+        /// <item><description>If data flows for multiple CPFS file systems or multiple data flows for the same CPFS file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS file systems to one OSS bucket.</description></item>
+        /// <item><description>Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.<remarks>
+        /// <para> Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS cannot access the data in the OSS bucket.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>CPFS for LINGJUN usage notes<list type="bullet">
+        /// <item><description>Source storage<list type="bullet">
+        /// <item><description>The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.</description></item>
+        /// <item><description>CPFS for LINGJUN data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.</description></item>
+        /// <item><description>If data flows for multiple CPFS for LINGJUN file systems or multiple data flows for the same CPFS for LINGJUN file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS for LINGJUN file systems to one OSS bucket.</description></item>
+        /// <item><description>Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.<remarks>
+        /// <para>Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS for LINGJUN cannot access the data in the OSS bucket.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Limits of data flows on file systems<list type="bullet">
+        /// <item><description>You cannot rename a non-empty directory in a path that is associated with a data flow. Otherwise, the Permission Denied error message or an error message indicating that the directory is not empty is returned.</description></item>
+        /// <item><description>Proceed with caution when you use special characters in the names of directories and files. The following characters are supported: letters, digits, exclamation points (!), hyphens (-), underscores (_), periods (.), asterisks (\*), and parentheses (()).</description></item>
+        /// <item><description>The path can be up to 1,023 characters in length.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Limits of data flows on import<list type="bullet">
+        /// <item><description>After a symbolic link is imported to CPFS for LINGJUN, the symbolic link is converted into a common data file that contains no symbolic link information.</description></item>
+        /// <item><description>If an OSS bucket has multiple versions, only data of the latest version is used.</description></item>
+        /// <item><description>The name of a file or a subdirectory can be up to 255 bytes in length.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Limits of data flows on export<list type="bullet">
+        /// <item><description>After a symbolic link is synchronized to OSS, the file that the symbolic link points to is not synchronized to OSS. In this case, the symbolic link is converted into a common object that contains no data.</description></item>
+        /// <item><description>Hard links can be synchronized to OSS only as common files that contain no link information.</description></item>
+        /// <item><description>After a file of the Socket, Device, or Pipe type is exported to an OSS bucket, the file is converted into a common object that contains no data.</description></item>
+        /// <item><description>The directory path can be up to 1,023 characters in length.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDataFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataFlowResponse
+        /// </returns>
         public CreateDataFlowResponse CreateDataFlow(CreateDataFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDataFlowWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a dataflow for a Cloud Parallel File Storage (CPFS) file system and source storage.
-         *
-         * @description *   Basic operations
-         *     *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows.
-         *     *   You can create a data flow only when a CPFS or CPFS for LINGJUN file system is in the Running state.
-         *     *   A maximum of 10 data flows can be created for a CPFS or CPFS for LINGJUN file system.
-         *     *   It generally takes 2 to 5 minutes to create a data flow. You can call the DescribeDataFlows operation to check whether the data flow has been created.
-         * *   Permissions
-         *     When you create a data flow, CPFS obtains the following two service-linked roles: `AliyunServiceRoleForNasOssDataflow` and `AliyunServiceRoleForNasEventNotification`. For more information, see [CPFS service-linked roles](https://help.aliyun.com/document_detail/185138.html).
-         * *   CPFS usage notes
-         *     *   Billing
-         *         *   If you create a data flow, you are charged for using the data flow throughput. For more information, see [Billing of CPFS](https://help.aliyun.com/document_detail/111858.html).
-         *         *   When you configure the AutoRefresh feature for a data flow, CPFS must use EventBridge to collect object modification events from the source Object Storage Service (OSS) bucket. Event fees are incurred. For more information, see [Billing of EventBridge](https://help.aliyun.com/document_detail/163752.html).
-         *     *   Data flow specifications
-         *         *   The data flow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data flow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a data flow.
-         *         *   When you create a data flow, the vSwitch IP addresses used by a CPFS mount target are consumed. Make sure that the vSwitch can provide sufficient IP addresses.
-         *         *   Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the data flow whose throughput is changed meet the requirements.
-         *     *   Fileset
-         *         *   The destination for a data flow is a fileset in the CPFS file system. A fileset is a new directory tree structure (a small file directory) in a CPFS file system. Each fileset independently manages an inode space.
-         *         *   When you create a data flow for a CPFS file system, the related fileset must already exist and cannot be nested with other filesets. Only one data flow can be created in a fileset, which corresponds to one source storage.
-         *         *   A fileset supports a maximum of one million files. If the number of files imported from an OSS bucket into the fileset exceeds the upper limit, the `no space` error message is returned when you add new files.
-         *      >   If data already exists in the fileset, after you create a data flow, the existing data in the fileset is cleared and replaced with the data synchronized from the OSS bucket.
-         *     *   AutoRefresh
-         *         *   After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a data flow task to load the updated data.
-         *         *   AutoRefresh depends on the object modification events collected by EventBridge from the source OSS bucket. You must first [activate EventBridge](https://help.aliyun.com/document_detail/182246.html).
-         *         *   The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. You can configure a maximum of five AutoRefresh directories for a data flow.
-         *         *   AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS data flow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the data flow status becomes `Misconfigured`. To resolve these issues, you can increase the data flow specifications or reduce the frequency of triggering the object modification event.
-         *         *   When you add an AutoRefresh configuration to the prefix for a CPFS data flow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS data flow.
-         *         > The event buses and event rules created for CPFS in the EventBridge console contain the `Create for cpfs auto refresh` description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.
-         *     *   Source storage
-         *         *   The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.
-         *         *   CPFS data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.
-         *         *   If data flows for multiple CPFS file systems or multiple data flows for the same CPFS file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS file systems to one OSS bucket.
-         *         *   Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.
-         *          >  Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS cannot access the data in the OSS bucket.
-         * *   CPFS for LINGJUN usage notes
-         *     *   Source storage
-         *         *   The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.
-         *         *   CPFS for LINGJUN data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.
-         *         *   If data flows for multiple CPFS for LINGJUN file systems or multiple data flows for the same CPFS for LINGJUN file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS for LINGJUN file systems to one OSS bucket.
-         *         *   Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.
-         *         > Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS for LINGJUN cannot access the data in the OSS bucket.
-         *     *   Limits of data flows on file systems
-         *         *   You cannot rename a non-empty directory in a path that is associated with a data flow. Otherwise, the Permission Denied error message or an error message indicating that the directory is not empty is returned.
-         *         *   Proceed with caution when you use special characters in the names of directories and files. The following characters are supported: letters, digits, exclamation points (!), hyphens (-), underscores (_), periods (.), asterisks (\\*), and parentheses (()).
-         *         *   The path can be up to 1,023 characters in length.
-         *     *   Limits of data flows on import
-         *         *   After a symbolic link is imported to CPFS for LINGJUN, the symbolic link is converted into a common data file that contains no symbolic link information.
-         *         *   If an OSS bucket has multiple versions, only data of the latest version is used.
-         *         *   The name of a file or a subdirectory can be up to 255 bytes in length.
-         *     *   Limits of data flows on export
-         *         *   After a symbolic link is synchronized to OSS, the file that the symbolic link points to is not synchronized to OSS. In this case, the symbolic link is converted into a common object that contains no data.
-         *         *   Hard links can be synchronized to OSS only as common files that contain no link information.
-         *         *   After a file of the Socket, Device, or Pipe type is exported to an OSS bucket, the file is converted into a common object that contains no data.
-         *         *   The directory path can be up to 1,023 characters in length.
-         *
-         * @param request CreateDataFlowRequest
-         * @return CreateDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a dataflow for a Cloud Parallel File Storage (CPFS) file system and source storage.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Basic operations
+        ///     *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows.
+        ///     *   You can create a data flow only when a CPFS or CPFS for LINGJUN file system is in the Running state.
+        ///     *   A maximum of 10 data flows can be created for a CPFS or CPFS for LINGJUN file system.
+        ///     *   It generally takes 2 to 5 minutes to create a data flow. You can call the DescribeDataFlows operation to check whether the data flow has been created.</para>
+        /// <list type="bullet">
+        /// <item><description>Permissions
+        /// When you create a data flow, CPFS obtains the following two service-linked roles: <c>AliyunServiceRoleForNasOssDataflow</c> and <c>AliyunServiceRoleForNasEventNotification</c>. For more information, see <a href="https://help.aliyun.com/document_detail/185138.html">CPFS service-linked roles</a>.</description></item>
+        /// <item><description>CPFS usage notes<list type="bullet">
+        /// <item><description>Billing<list type="bullet">
+        /// <item><description>If you create a data flow, you are charged for using the data flow throughput. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing of CPFS</a>.</description></item>
+        /// <item><description>When you configure the AutoRefresh feature for a data flow, CPFS must use EventBridge to collect object modification events from the source Object Storage Service (OSS) bucket. Event fees are incurred. For more information, see <a href="https://help.aliyun.com/document_detail/163752.html">Billing of EventBridge</a>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Data flow specifications<list type="bullet">
+        /// <item><description>The data flow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data flow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a data flow.</description></item>
+        /// <item><description>When you create a data flow, the vSwitch IP addresses used by a CPFS mount target are consumed. Make sure that the vSwitch can provide sufficient IP addresses.</description></item>
+        /// <item><description>Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the data flow whose throughput is changed meet the requirements.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Fileset<list type="bullet">
+        /// <item><description>The destination for a data flow is a fileset in the CPFS file system. A fileset is a new directory tree structure (a small file directory) in a CPFS file system. Each fileset independently manages an inode space.</description></item>
+        /// <item><description>When you create a data flow for a CPFS file system, the related fileset must already exist and cannot be nested with other filesets. Only one data flow can be created in a fileset, which corresponds to one source storage.</description></item>
+        /// <item><description>A fileset supports a maximum of one million files. If the number of files imported from an OSS bucket into the fileset exceeds the upper limit, the <c>no space</c> error message is returned when you add new files.<remarks>
+        /// <para>  If data already exists in the fileset, after you create a data flow, the existing data in the fileset is cleared and replaced with the data synchronized from the OSS bucket.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>AutoRefresh<list type="bullet">
+        /// <item><description>After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a data flow task to load the updated data.</description></item>
+        /// <item><description>AutoRefresh depends on the object modification events collected by EventBridge from the source OSS bucket. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</description></item>
+        /// <item><description>The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. You can configure a maximum of five AutoRefresh directories for a data flow.</description></item>
+        /// <item><description>AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS data flow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the data flow status becomes <c>Misconfigured</c>. To resolve these issues, you can increase the data flow specifications or reduce the frequency of triggering the object modification event.</description></item>
+        /// <item><description>When you add an AutoRefresh configuration to the prefix for a CPFS data flow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS data flow.<remarks>
+        /// <para>The event buses and event rules created for CPFS in the EventBridge console contain the <c>Create for cpfs auto refresh</c> description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Source storage<list type="bullet">
+        /// <item><description>The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.</description></item>
+        /// <item><description>CPFS data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.</description></item>
+        /// <item><description>If data flows for multiple CPFS file systems or multiple data flows for the same CPFS file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS file systems to one OSS bucket.</description></item>
+        /// <item><description>Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.<remarks>
+        /// <para> Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS cannot access the data in the OSS bucket.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>CPFS for LINGJUN usage notes<list type="bullet">
+        /// <item><description>Source storage<list type="bullet">
+        /// <item><description>The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.</description></item>
+        /// <item><description>CPFS for LINGJUN data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.</description></item>
+        /// <item><description>If data flows for multiple CPFS for LINGJUN file systems or multiple data flows for the same CPFS for LINGJUN file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS for LINGJUN file systems to one OSS bucket.</description></item>
+        /// <item><description>Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.<remarks>
+        /// <para>Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS for LINGJUN cannot access the data in the OSS bucket.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Limits of data flows on file systems<list type="bullet">
+        /// <item><description>You cannot rename a non-empty directory in a path that is associated with a data flow. Otherwise, the Permission Denied error message or an error message indicating that the directory is not empty is returned.</description></item>
+        /// <item><description>Proceed with caution when you use special characters in the names of directories and files. The following characters are supported: letters, digits, exclamation points (!), hyphens (-), underscores (_), periods (.), asterisks (\*), and parentheses (()).</description></item>
+        /// <item><description>The path can be up to 1,023 characters in length.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Limits of data flows on import<list type="bullet">
+        /// <item><description>After a symbolic link is imported to CPFS for LINGJUN, the symbolic link is converted into a common data file that contains no symbolic link information.</description></item>
+        /// <item><description>If an OSS bucket has multiple versions, only data of the latest version is used.</description></item>
+        /// <item><description>The name of a file or a subdirectory can be up to 255 bytes in length.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Limits of data flows on export<list type="bullet">
+        /// <item><description>After a symbolic link is synchronized to OSS, the file that the symbolic link points to is not synchronized to OSS. In this case, the symbolic link is converted into a common object that contains no data.</description></item>
+        /// <item><description>Hard links can be synchronized to OSS only as common files that contain no link information.</description></item>
+        /// <item><description>After a file of the Socket, Device, or Pipe type is exported to an OSS bucket, the file is converted into a common object that contains no data.</description></item>
+        /// <item><description>The directory path can be up to 1,023 characters in length.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDataFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataFlowResponse
+        /// </returns>
         public async Task<CreateDataFlowResponse> CreateDataFlowAsync(CreateDataFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDataFlowWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建数据流动子任务
-         *
-         * @param request CreateDataFlowSubTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDataFlowSubTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据流动子任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataFlowSubTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataFlowSubTaskResponse
+        /// </returns>
         public CreateDataFlowSubTaskResponse CreateDataFlowSubTaskWithOptions(CreateDataFlowSubTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2701,13 +3573,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateDataFlowSubTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建数据流动子任务
-         *
-         * @param request CreateDataFlowSubTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDataFlowSubTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据流动子任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataFlowSubTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataFlowSubTaskResponse
+        /// </returns>
         public async Task<CreateDataFlowSubTaskResponse> CreateDataFlowSubTaskWithOptionsAsync(CreateDataFlowSubTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2763,43 +3643,68 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateDataFlowSubTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建数据流动子任务
-         *
-         * @param request CreateDataFlowSubTaskRequest
-         * @return CreateDataFlowSubTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据流动子任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataFlowSubTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataFlowSubTaskResponse
+        /// </returns>
         public CreateDataFlowSubTaskResponse CreateDataFlowSubTask(CreateDataFlowSubTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDataFlowSubTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建数据流动子任务
-         *
-         * @param request CreateDataFlowSubTaskRequest
-         * @return CreateDataFlowSubTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据流动子任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataFlowSubTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataFlowSubTaskResponse
+        /// </returns>
         public async Task<CreateDataFlowSubTaskResponse> CreateDataFlowSubTaskAsync(CreateDataFlowSubTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDataFlowSubTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a dataflow task.
-         *
-         * @description *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.3.4 and later support data flows. You can view the version information on the file system details page in the console.
-         * *   You can create a data flow task only for a data flow that is in the Running state.
-         * *   Data flow tasks are executed asynchronously. You can call the [DescribeDataFlowTasks](https://help.aliyun.com/document_detail/336914.html) operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.
-         * *   When you manually run a data flow task, the automatic data update task for the data flow is interrupted and enters the pending state.
-         * *   When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS or CPFS for LINGJUN file system does not exceed 1,023 characters.
-         *
-         * @param request CreateDataFlowTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDataFlowTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a dataflow task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.3.4 and later support data flows. You can view the version information on the file system details page in the console.</para>
+        /// <list type="bullet">
+        /// <item><description>You can create a data flow task only for a data flow that is in the Running state.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/336914.html">DescribeDataFlowTasks</a> operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.</description></item>
+        /// <item><description>When you manually run a data flow task, the automatic data update task for the data flow is interrupted and enters the pending state.</description></item>
+        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS or CPFS for LINGJUN file system does not exceed 1,023 characters.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDataFlowTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataFlowTaskResponse
+        /// </returns>
         public CreateDataFlowTaskResponse CreateDataFlowTaskWithOptions(CreateDataFlowTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2871,19 +3776,32 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateDataFlowTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a dataflow task.
-         *
-         * @description *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.3.4 and later support data flows. You can view the version information on the file system details page in the console.
-         * *   You can create a data flow task only for a data flow that is in the Running state.
-         * *   Data flow tasks are executed asynchronously. You can call the [DescribeDataFlowTasks](https://help.aliyun.com/document_detail/336914.html) operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.
-         * *   When you manually run a data flow task, the automatic data update task for the data flow is interrupted and enters the pending state.
-         * *   When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS or CPFS for LINGJUN file system does not exceed 1,023 characters.
-         *
-         * @param request CreateDataFlowTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDataFlowTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a dataflow task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.3.4 and later support data flows. You can view the version information on the file system details page in the console.</para>
+        /// <list type="bullet">
+        /// <item><description>You can create a data flow task only for a data flow that is in the Running state.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/336914.html">DescribeDataFlowTasks</a> operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.</description></item>
+        /// <item><description>When you manually run a data flow task, the automatic data update task for the data flow is interrupted and enters the pending state.</description></item>
+        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS or CPFS for LINGJUN file system does not exceed 1,023 characters.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDataFlowTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataFlowTaskResponse
+        /// </returns>
         public async Task<CreateDataFlowTaskResponse> CreateDataFlowTaskWithOptionsAsync(CreateDataFlowTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2955,51 +3873,84 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateDataFlowTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a dataflow task.
-         *
-         * @description *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.3.4 and later support data flows. You can view the version information on the file system details page in the console.
-         * *   You can create a data flow task only for a data flow that is in the Running state.
-         * *   Data flow tasks are executed asynchronously. You can call the [DescribeDataFlowTasks](https://help.aliyun.com/document_detail/336914.html) operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.
-         * *   When you manually run a data flow task, the automatic data update task for the data flow is interrupted and enters the pending state.
-         * *   When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS or CPFS for LINGJUN file system does not exceed 1,023 characters.
-         *
-         * @param request CreateDataFlowTaskRequest
-         * @return CreateDataFlowTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a dataflow task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.3.4 and later support data flows. You can view the version information on the file system details page in the console.</para>
+        /// <list type="bullet">
+        /// <item><description>You can create a data flow task only for a data flow that is in the Running state.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/336914.html">DescribeDataFlowTasks</a> operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.</description></item>
+        /// <item><description>When you manually run a data flow task, the automatic data update task for the data flow is interrupted and enters the pending state.</description></item>
+        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS or CPFS for LINGJUN file system does not exceed 1,023 characters.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDataFlowTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataFlowTaskResponse
+        /// </returns>
         public CreateDataFlowTaskResponse CreateDataFlowTask(CreateDataFlowTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDataFlowTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a dataflow task.
-         *
-         * @description *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.3.4 and later support data flows. You can view the version information on the file system details page in the console.
-         * *   You can create a data flow task only for a data flow that is in the Running state.
-         * *   Data flow tasks are executed asynchronously. You can call the [DescribeDataFlowTasks](https://help.aliyun.com/document_detail/336914.html) operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.
-         * *   When you manually run a data flow task, the automatic data update task for the data flow is interrupted and enters the pending state.
-         * *   When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS or CPFS for LINGJUN file system does not exceed 1,023 characters.
-         *
-         * @param request CreateDataFlowTaskRequest
-         * @return CreateDataFlowTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a dataflow task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.3.4 and later support data flows. You can view the version information on the file system details page in the console.</para>
+        /// <list type="bullet">
+        /// <item><description>You can create a data flow task only for a data flow that is in the Running state.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/336914.html">DescribeDataFlowTasks</a> operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.</description></item>
+        /// <item><description>When you manually run a data flow task, the automatic data update task for the data flow is interrupted and enters the pending state.</description></item>
+        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS or CPFS for LINGJUN file system does not exceed 1,023 characters.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDataFlowTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataFlowTaskResponse
+        /// </returns>
         public async Task<CreateDataFlowTaskResponse> CreateDataFlowTaskAsync(CreateDataFlowTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDataFlowTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a directory in a file system.
-         *
-         * @description Only General-purpose Network File System (NFS) file systems support this operation.
-         *
-         * @param request CreateDirRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDirResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a directory in a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDirRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDirResponse
+        /// </returns>
         public CreateDirResponse CreateDirWithOptions(CreateDirRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3047,15 +3998,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateDirResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a directory in a file system.
-         *
-         * @description Only General-purpose Network File System (NFS) file systems support this operation.
-         *
-         * @param request CreateDirRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDirResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a directory in a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDirRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDirResponse
+        /// </returns>
         public async Task<CreateDirResponse> CreateDirWithOptionsAsync(CreateDirRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3103,44 +4065,75 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateDirResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a directory in a file system.
-         *
-         * @description Only General-purpose Network File System (NFS) file systems support this operation.
-         *
-         * @param request CreateDirRequest
-         * @return CreateDirResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a directory in a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDirRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDirResponse
+        /// </returns>
         public CreateDirResponse CreateDir(CreateDirRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDirWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a directory in a file system.
-         *
-         * @description Only General-purpose Network File System (NFS) file systems support this operation.
-         *
-         * @param request CreateDirRequest
-         * @return CreateDirResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a directory in a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDirRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDirResponse
+        /// </returns>
         public async Task<CreateDirResponse> CreateDirAsync(CreateDirRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDirWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a directory or file.
-         *
-         * @description *   This operation is only available to some users.
-         * *   This operation supports only General-purpose NAS file systems that use the Server Message Block (SMB) protocol and have Resource Access Management (RAM) enabled.
-         *
-         * @param request CreateFileRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a directory or file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is only available to some users.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation supports only General-purpose NAS file systems that use the Server Message Block (SMB) protocol and have Resource Access Management (RAM) enabled.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileResponse
+        /// </returns>
         public CreateFileResponse CreateFileWithOptions(CreateFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3184,16 +4177,29 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateFileResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a directory or file.
-         *
-         * @description *   This operation is only available to some users.
-         * *   This operation supports only General-purpose NAS file systems that use the Server Message Block (SMB) protocol and have Resource Access Management (RAM) enabled.
-         *
-         * @param request CreateFileRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a directory or file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is only available to some users.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation supports only General-purpose NAS file systems that use the Server Message Block (SMB) protocol and have Resource Access Management (RAM) enabled.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileResponse
+        /// </returns>
         public async Task<CreateFileResponse> CreateFileWithOptionsAsync(CreateFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3237,47 +4243,82 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a directory or file.
-         *
-         * @description *   This operation is only available to some users.
-         * *   This operation supports only General-purpose NAS file systems that use the Server Message Block (SMB) protocol and have Resource Access Management (RAM) enabled.
-         *
-         * @param request CreateFileRequest
-         * @return CreateFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a directory or file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is only available to some users.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation supports only General-purpose NAS file systems that use the Server Message Block (SMB) protocol and have Resource Access Management (RAM) enabled.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileResponse
+        /// </returns>
         public CreateFileResponse CreateFile(CreateFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateFileWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a directory or file.
-         *
-         * @description *   This operation is only available to some users.
-         * *   This operation supports only General-purpose NAS file systems that use the Server Message Block (SMB) protocol and have Resource Access Management (RAM) enabled.
-         *
-         * @param request CreateFileRequest
-         * @return CreateFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a directory or file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is only available to some users.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation supports only General-purpose NAS file systems that use the Server Message Block (SMB) protocol and have Resource Access Management (RAM) enabled.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileResponse
+        /// </returns>
         public async Task<CreateFileResponse> CreateFileAsync(CreateFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateFileWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a file system.
-         *
-         * @description *   Before you call this operation, you must understand the billing and pricing of Apsara File Storage NAS. For more information, see [Billing](https://help.aliyun.com/document_detail/178365.html) and [Pricing](https://www.alibabacloud.com/product/nas/pricing).
-         * *   Before you create a file system, you must complete real-name verification.
-         * *   When you call this operation, a service-linked role of NAS is automatically created. For more information, see [Manage the service-linked roles of NAS](https://help.aliyun.com/document_detail/208530.html).
-         *
-         * @param request CreateFileSystemRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, you must understand the billing and pricing of Apsara File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.alibabacloud.com/product/nas/pricing">Pricing</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you create a file system, you must complete real-name verification.</description></item>
+        /// <item><description>When you call this operation, a service-linked role of NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFileSystemRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileSystemResponse
+        /// </returns>
         public CreateFileSystemResponse CreateFileSystemWithOptions(CreateFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3369,17 +4410,30 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateFileSystemResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a file system.
-         *
-         * @description *   Before you call this operation, you must understand the billing and pricing of Apsara File Storage NAS. For more information, see [Billing](https://help.aliyun.com/document_detail/178365.html) and [Pricing](https://www.alibabacloud.com/product/nas/pricing).
-         * *   Before you create a file system, you must complete real-name verification.
-         * *   When you call this operation, a service-linked role of NAS is automatically created. For more information, see [Manage the service-linked roles of NAS](https://help.aliyun.com/document_detail/208530.html).
-         *
-         * @param request CreateFileSystemRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, you must understand the billing and pricing of Apsara File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.alibabacloud.com/product/nas/pricing">Pricing</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you create a file system, you must complete real-name verification.</description></item>
+        /// <item><description>When you call this operation, a service-linked role of NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFileSystemRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileSystemResponse
+        /// </returns>
         public async Task<CreateFileSystemResponse> CreateFileSystemWithOptionsAsync(CreateFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3471,52 +4525,87 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateFileSystemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a file system.
-         *
-         * @description *   Before you call this operation, you must understand the billing and pricing of Apsara File Storage NAS. For more information, see [Billing](https://help.aliyun.com/document_detail/178365.html) and [Pricing](https://www.alibabacloud.com/product/nas/pricing).
-         * *   Before you create a file system, you must complete real-name verification.
-         * *   When you call this operation, a service-linked role of NAS is automatically created. For more information, see [Manage the service-linked roles of NAS](https://help.aliyun.com/document_detail/208530.html).
-         *
-         * @param request CreateFileSystemRequest
-         * @return CreateFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, you must understand the billing and pricing of Apsara File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.alibabacloud.com/product/nas/pricing">Pricing</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you create a file system, you must complete real-name verification.</description></item>
+        /// <item><description>When you call this operation, a service-linked role of NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFileSystemRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileSystemResponse
+        /// </returns>
         public CreateFileSystemResponse CreateFileSystem(CreateFileSystemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateFileSystemWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a file system.
-         *
-         * @description *   Before you call this operation, you must understand the billing and pricing of Apsara File Storage NAS. For more information, see [Billing](https://help.aliyun.com/document_detail/178365.html) and [Pricing](https://www.alibabacloud.com/product/nas/pricing).
-         * *   Before you create a file system, you must complete real-name verification.
-         * *   When you call this operation, a service-linked role of NAS is automatically created. For more information, see [Manage the service-linked roles of NAS](https://help.aliyun.com/document_detail/208530.html).
-         *
-         * @param request CreateFileSystemRequest
-         * @return CreateFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, you must understand the billing and pricing of Apsara File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.alibabacloud.com/product/nas/pricing">Pricing</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you create a file system, you must complete real-name verification.</description></item>
+        /// <item><description>When you call this operation, a service-linked role of NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFileSystemRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileSystemResponse
+        /// </returns>
         public async Task<CreateFileSystemResponse> CreateFileSystemAsync(CreateFileSystemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateFileSystemWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a fileset.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support fileset creation. You can view the version information on the file system details page in the console.
-         * *   A maximum of 10 filesets can be created for a CPFS file system.
-         * *   The maximum depth supported by a fileset is eight levels. The depth of the root directory / is 0 levels. For example, the /test/aaa/ccc/ fileset has three levels.
-         * *   Nested filesets are not supported. If a fileset is specified as a parent directory, its subdirectory cannot be a fileset.
-         * *   A fileset supports a maximum of one million files. If the number of files exceeds the upper limit, the `no space` error message is returned when you add new files.
-         *
-         * @param request CreateFilesetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFilesetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a fileset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support fileset creation. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>A maximum of 10 filesets can be created for a CPFS file system.</description></item>
+        /// <item><description>The maximum depth supported by a fileset is eight levels. The depth of the root directory / is 0 levels. For example, the /test/aaa/ccc/ fileset has three levels.</description></item>
+        /// <item><description>Nested filesets are not supported. If a fileset is specified as a parent directory, its subdirectory cannot be a fileset.</description></item>
+        /// <item><description>A fileset supports a maximum of one million files. If the number of files exceeds the upper limit, the <c>no space</c> error message is returned when you add new files.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFilesetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFilesetResponse
+        /// </returns>
         public CreateFilesetResponse CreateFilesetWithOptions(CreateFilesetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3564,20 +4653,33 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateFilesetResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a fileset.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support fileset creation. You can view the version information on the file system details page in the console.
-         * *   A maximum of 10 filesets can be created for a CPFS file system.
-         * *   The maximum depth supported by a fileset is eight levels. The depth of the root directory / is 0 levels. For example, the /test/aaa/ccc/ fileset has three levels.
-         * *   Nested filesets are not supported. If a fileset is specified as a parent directory, its subdirectory cannot be a fileset.
-         * *   A fileset supports a maximum of one million files. If the number of files exceeds the upper limit, the `no space` error message is returned when you add new files.
-         *
-         * @param request CreateFilesetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFilesetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a fileset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support fileset creation. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>A maximum of 10 filesets can be created for a CPFS file system.</description></item>
+        /// <item><description>The maximum depth supported by a fileset is eight levels. The depth of the root directory / is 0 levels. For example, the /test/aaa/ccc/ fileset has three levels.</description></item>
+        /// <item><description>Nested filesets are not supported. If a fileset is specified as a parent directory, its subdirectory cannot be a fileset.</description></item>
+        /// <item><description>A fileset supports a maximum of one million files. If the number of files exceeds the upper limit, the <c>no space</c> error message is returned when you add new files.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFilesetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFilesetResponse
+        /// </returns>
         public async Task<CreateFilesetResponse> CreateFilesetWithOptionsAsync(CreateFilesetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3625,51 +4727,81 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateFilesetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a fileset.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support fileset creation. You can view the version information on the file system details page in the console.
-         * *   A maximum of 10 filesets can be created for a CPFS file system.
-         * *   The maximum depth supported by a fileset is eight levels. The depth of the root directory / is 0 levels. For example, the /test/aaa/ccc/ fileset has three levels.
-         * *   Nested filesets are not supported. If a fileset is specified as a parent directory, its subdirectory cannot be a fileset.
-         * *   A fileset supports a maximum of one million files. If the number of files exceeds the upper limit, the `no space` error message is returned when you add new files.
-         *
-         * @param request CreateFilesetRequest
-         * @return CreateFilesetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a fileset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support fileset creation. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>A maximum of 10 filesets can be created for a CPFS file system.</description></item>
+        /// <item><description>The maximum depth supported by a fileset is eight levels. The depth of the root directory / is 0 levels. For example, the /test/aaa/ccc/ fileset has three levels.</description></item>
+        /// <item><description>Nested filesets are not supported. If a fileset is specified as a parent directory, its subdirectory cannot be a fileset.</description></item>
+        /// <item><description>A fileset supports a maximum of one million files. If the number of files exceeds the upper limit, the <c>no space</c> error message is returned when you add new files.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFilesetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFilesetResponse
+        /// </returns>
         public CreateFilesetResponse CreateFileset(CreateFilesetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateFilesetWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a fileset.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support fileset creation. You can view the version information on the file system details page in the console.
-         * *   A maximum of 10 filesets can be created for a CPFS file system.
-         * *   The maximum depth supported by a fileset is eight levels. The depth of the root directory / is 0 levels. For example, the /test/aaa/ccc/ fileset has three levels.
-         * *   Nested filesets are not supported. If a fileset is specified as a parent directory, its subdirectory cannot be a fileset.
-         * *   A fileset supports a maximum of one million files. If the number of files exceeds the upper limit, the `no space` error message is returned when you add new files.
-         *
-         * @param request CreateFilesetRequest
-         * @return CreateFilesetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a fileset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support fileset creation. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>A maximum of 10 filesets can be created for a CPFS file system.</description></item>
+        /// <item><description>The maximum depth supported by a fileset is eight levels. The depth of the root directory / is 0 levels. For example, the /test/aaa/ccc/ fileset has three levels.</description></item>
+        /// <item><description>Nested filesets are not supported. If a fileset is specified as a parent directory, its subdirectory cannot be a fileset.</description></item>
+        /// <item><description>A fileset supports a maximum of one million files. If the number of files exceeds the upper limit, the <c>no space</c> error message is returned when you add new files.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFilesetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFilesetResponse
+        /// </returns>
         public async Task<CreateFilesetResponse> CreateFilesetAsync(CreateFilesetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateFilesetWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates LDAP configurations.
-         *
-         * @param request CreateLDAPConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateLDAPConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates LDAP configurations.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLDAPConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLDAPConfigResponse
+        /// </returns>
         public CreateLDAPConfigResponse CreateLDAPConfigWithOptions(CreateLDAPConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3709,13 +4841,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateLDAPConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates LDAP configurations.
-         *
-         * @param request CreateLDAPConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateLDAPConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates LDAP configurations.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLDAPConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLDAPConfigResponse
+        /// </returns>
         public async Task<CreateLDAPConfigResponse> CreateLDAPConfigWithOptionsAsync(CreateLDAPConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3755,40 +4895,65 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateLDAPConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates LDAP configurations.
-         *
-         * @param request CreateLDAPConfigRequest
-         * @return CreateLDAPConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates LDAP configurations.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLDAPConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLDAPConfigResponse
+        /// </returns>
         public CreateLDAPConfigResponse CreateLDAPConfig(CreateLDAPConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateLDAPConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates LDAP configurations.
-         *
-         * @param request CreateLDAPConfigRequest
-         * @return CreateLDAPConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates LDAP configurations.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLDAPConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLDAPConfigResponse
+        /// </returns>
         public async Task<CreateLDAPConfigResponse> CreateLDAPConfigAsync(CreateLDAPConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateLDAPConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a lifecycle policy.
-         *
-         * @description *   You can create lifecycle policies only for General-purpose NAS file systems.
-         * *   You can create up to 20 lifecycle policies in each region within an Alibaba Cloud account.
-         *
-         * @param request CreateLifecyclePolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateLifecyclePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lifecycle policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can create lifecycle policies only for General-purpose NAS file systems.</para>
+        /// <list type="bullet">
+        /// <item><description>You can create up to 20 lifecycle policies in each region within an Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateLifecyclePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLifecyclePolicyResponse
+        /// </returns>
         public CreateLifecyclePolicyResponse CreateLifecyclePolicyWithOptions(CreateLifecyclePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3836,16 +5001,29 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateLifecyclePolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a lifecycle policy.
-         *
-         * @description *   You can create lifecycle policies only for General-purpose NAS file systems.
-         * *   You can create up to 20 lifecycle policies in each region within an Alibaba Cloud account.
-         *
-         * @param request CreateLifecyclePolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateLifecyclePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lifecycle policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can create lifecycle policies only for General-purpose NAS file systems.</para>
+        /// <list type="bullet">
+        /// <item><description>You can create up to 20 lifecycle policies in each region within an Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateLifecyclePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLifecyclePolicyResponse
+        /// </returns>
         public async Task<CreateLifecyclePolicyResponse> CreateLifecyclePolicyWithOptionsAsync(CreateLifecyclePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3893,46 +5071,81 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateLifecyclePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a lifecycle policy.
-         *
-         * @description *   You can create lifecycle policies only for General-purpose NAS file systems.
-         * *   You can create up to 20 lifecycle policies in each region within an Alibaba Cloud account.
-         *
-         * @param request CreateLifecyclePolicyRequest
-         * @return CreateLifecyclePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lifecycle policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can create lifecycle policies only for General-purpose NAS file systems.</para>
+        /// <list type="bullet">
+        /// <item><description>You can create up to 20 lifecycle policies in each region within an Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateLifecyclePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLifecyclePolicyResponse
+        /// </returns>
         public CreateLifecyclePolicyResponse CreateLifecyclePolicy(CreateLifecyclePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateLifecyclePolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a lifecycle policy.
-         *
-         * @description *   You can create lifecycle policies only for General-purpose NAS file systems.
-         * *   You can create up to 20 lifecycle policies in each region within an Alibaba Cloud account.
-         *
-         * @param request CreateLifecyclePolicyRequest
-         * @return CreateLifecyclePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lifecycle policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can create lifecycle policies only for General-purpose NAS file systems.</para>
+        /// <list type="bullet">
+        /// <item><description>You can create up to 20 lifecycle policies in each region within an Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateLifecyclePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLifecyclePolicyResponse
+        /// </returns>
         public async Task<CreateLifecyclePolicyResponse> CreateLifecyclePolicyAsync(CreateLifecyclePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateLifecyclePolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a data retrieval task.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   You can run a maximum of 20 data retrieval tasks in each region within an Alibaba Cloud account.
-         *
-         * @param request CreateLifecycleRetrieveJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateLifecycleRetrieveJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data retrieval task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can run a maximum of 20 data retrieval tasks in each region within an Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateLifecycleRetrieveJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLifecycleRetrieveJobResponse
+        /// </returns>
         public CreateLifecycleRetrieveJobResponse CreateLifecycleRetrieveJobWithOptions(CreateLifecycleRetrieveJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3968,16 +5181,29 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateLifecycleRetrieveJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a data retrieval task.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   You can run a maximum of 20 data retrieval tasks in each region within an Alibaba Cloud account.
-         *
-         * @param request CreateLifecycleRetrieveJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateLifecycleRetrieveJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data retrieval task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can run a maximum of 20 data retrieval tasks in each region within an Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateLifecycleRetrieveJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLifecycleRetrieveJobResponse
+        /// </returns>
         public async Task<CreateLifecycleRetrieveJobResponse> CreateLifecycleRetrieveJobWithOptionsAsync(CreateLifecycleRetrieveJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4013,43 +5239,73 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateLifecycleRetrieveJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a data retrieval task.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   You can run a maximum of 20 data retrieval tasks in each region within an Alibaba Cloud account.
-         *
-         * @param request CreateLifecycleRetrieveJobRequest
-         * @return CreateLifecycleRetrieveJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data retrieval task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can run a maximum of 20 data retrieval tasks in each region within an Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateLifecycleRetrieveJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLifecycleRetrieveJobResponse
+        /// </returns>
         public CreateLifecycleRetrieveJobResponse CreateLifecycleRetrieveJob(CreateLifecycleRetrieveJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateLifecycleRetrieveJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a data retrieval task.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   You can run a maximum of 20 data retrieval tasks in each region within an Alibaba Cloud account.
-         *
-         * @param request CreateLifecycleRetrieveJobRequest
-         * @return CreateLifecycleRetrieveJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data retrieval task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can run a maximum of 20 data retrieval tasks in each region within an Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateLifecycleRetrieveJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLifecycleRetrieveJobResponse
+        /// </returns>
         public async Task<CreateLifecycleRetrieveJobResponse> CreateLifecycleRetrieveJobAsync(CreateLifecycleRetrieveJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateLifecycleRetrieveJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Dumps the logs of a General-purpose NAS file system to Simple Log Service.
-         *
-         * @param request CreateLogAnalysisRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateLogAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dumps the logs of a General-purpose NAS file system to Simple Log Service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLogAnalysisRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLogAnalysisResponse
+        /// </returns>
         public CreateLogAnalysisResponse CreateLogAnalysisWithOptions(CreateLogAnalysisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4081,13 +5337,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateLogAnalysisResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Dumps the logs of a General-purpose NAS file system to Simple Log Service.
-         *
-         * @param request CreateLogAnalysisRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateLogAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dumps the logs of a General-purpose NAS file system to Simple Log Service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLogAnalysisRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLogAnalysisResponse
+        /// </returns>
         public async Task<CreateLogAnalysisResponse> CreateLogAnalysisWithOptionsAsync(CreateLogAnalysisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4119,40 +5383,65 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateLogAnalysisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Dumps the logs of a General-purpose NAS file system to Simple Log Service.
-         *
-         * @param request CreateLogAnalysisRequest
-         * @return CreateLogAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dumps the logs of a General-purpose NAS file system to Simple Log Service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLogAnalysisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLogAnalysisResponse
+        /// </returns>
         public CreateLogAnalysisResponse CreateLogAnalysis(CreateLogAnalysisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateLogAnalysisWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Dumps the logs of a General-purpose NAS file system to Simple Log Service.
-         *
-         * @param request CreateLogAnalysisRequest
-         * @return CreateLogAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dumps the logs of a General-purpose NAS file system to Simple Log Service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLogAnalysisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLogAnalysisResponse
+        /// </returns>
         public async Task<CreateLogAnalysisResponse> CreateLogAnalysisAsync(CreateLogAnalysisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateLogAnalysisWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a mount target.
-         *
-         * @description *   After you call the CreateMountTarget operation, a mount target is not immediately created. Therefore, we recommend that you call the DescribeMountTargets operation to query the status of the mount target. If the mount target is in the **Active** state, you can then mount the file system. Otherwise, the file system may fail to be mounted.
-         * *   When you call this operation, a service-linked role of NAS is automatically created. For more information, see [Manage the service-linked roles of NAS](https://help.aliyun.com/document_detail/208530.html).
-         *
-         * @param request CreateMountTargetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a mount target.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  After you call the CreateMountTarget operation, a mount target is not immediately created. Therefore, we recommend that you call the DescribeMountTargets operation to query the status of the mount target. If the mount target is in the <b>Active</b> state, you can then mount the file system. Otherwise, the file system may fail to be mounted.</para>
+        /// <list type="bullet">
+        /// <item><description>When you call this operation, a service-linked role of NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMountTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMountTargetResponse
+        /// </returns>
         public CreateMountTargetResponse CreateMountTargetWithOptions(CreateMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4208,16 +5497,29 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateMountTargetResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a mount target.
-         *
-         * @description *   After you call the CreateMountTarget operation, a mount target is not immediately created. Therefore, we recommend that you call the DescribeMountTargets operation to query the status of the mount target. If the mount target is in the **Active** state, you can then mount the file system. Otherwise, the file system may fail to be mounted.
-         * *   When you call this operation, a service-linked role of NAS is automatically created. For more information, see [Manage the service-linked roles of NAS](https://help.aliyun.com/document_detail/208530.html).
-         *
-         * @param request CreateMountTargetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a mount target.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  After you call the CreateMountTarget operation, a mount target is not immediately created. Therefore, we recommend that you call the DescribeMountTargets operation to query the status of the mount target. If the mount target is in the <b>Active</b> state, you can then mount the file system. Otherwise, the file system may fail to be mounted.</para>
+        /// <list type="bullet">
+        /// <item><description>When you call this operation, a service-linked role of NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMountTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMountTargetResponse
+        /// </returns>
         public async Task<CreateMountTargetResponse> CreateMountTargetWithOptionsAsync(CreateMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4273,52 +5575,89 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateMountTargetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a mount target.
-         *
-         * @description *   After you call the CreateMountTarget operation, a mount target is not immediately created. Therefore, we recommend that you call the DescribeMountTargets operation to query the status of the mount target. If the mount target is in the **Active** state, you can then mount the file system. Otherwise, the file system may fail to be mounted.
-         * *   When you call this operation, a service-linked role of NAS is automatically created. For more information, see [Manage the service-linked roles of NAS](https://help.aliyun.com/document_detail/208530.html).
-         *
-         * @param request CreateMountTargetRequest
-         * @return CreateMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a mount target.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  After you call the CreateMountTarget operation, a mount target is not immediately created. Therefore, we recommend that you call the DescribeMountTargets operation to query the status of the mount target. If the mount target is in the <b>Active</b> state, you can then mount the file system. Otherwise, the file system may fail to be mounted.</para>
+        /// <list type="bullet">
+        /// <item><description>When you call this operation, a service-linked role of NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMountTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMountTargetResponse
+        /// </returns>
         public CreateMountTargetResponse CreateMountTarget(CreateMountTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateMountTargetWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a mount target.
-         *
-         * @description *   After you call the CreateMountTarget operation, a mount target is not immediately created. Therefore, we recommend that you call the DescribeMountTargets operation to query the status of the mount target. If the mount target is in the **Active** state, you can then mount the file system. Otherwise, the file system may fail to be mounted.
-         * *   When you call this operation, a service-linked role of NAS is automatically created. For more information, see [Manage the service-linked roles of NAS](https://help.aliyun.com/document_detail/208530.html).
-         *
-         * @param request CreateMountTargetRequest
-         * @return CreateMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a mount target.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  After you call the CreateMountTarget operation, a mount target is not immediately created. Therefore, we recommend that you call the DescribeMountTargets operation to query the status of the mount target. If the mount target is in the <b>Active</b> state, you can then mount the file system. Otherwise, the file system may fail to be mounted.</para>
+        /// <list type="bullet">
+        /// <item><description>When you call this operation, a service-linked role of NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMountTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMountTargetResponse
+        /// </returns>
         public async Task<CreateMountTargetResponse> CreateMountTargetAsync(CreateMountTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateMountTargetWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates an export directory for a protocol service.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Prerequisites
-         *     A protocol service is created.
-         * *   Others
-         *     *   The virtual private cloud (VPC) CIDR block of the export directory for the protocol service cannot overlap with the VPC CIDR block of the file system.
-         *     *   The VPC CIDR blocks of multiple export directories of a protocol service cannot overlap.
-         *     *   You can create a maximum of 10 export directories for a protocol service.
-         *     *   When you create export directories for a protocol service, a maximum of 32 IP addresses that are allocated by the specified vSwitch are used. Make sure that the vSwitch can provide sufficient IP addresses.
-         *
-         * @param request CreateProtocolMountTargetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateProtocolMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an export directory for a protocol service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Prerequisites
+        /// A protocol service is created.</description></item>
+        /// <item><description>Others<list type="bullet">
+        /// <item><description>The virtual private cloud (VPC) CIDR block of the export directory for the protocol service cannot overlap with the VPC CIDR block of the file system.</description></item>
+        /// <item><description>The VPC CIDR blocks of multiple export directories of a protocol service cannot overlap.</description></item>
+        /// <item><description>You can create a maximum of 10 export directories for a protocol service.</description></item>
+        /// <item><description>When you create export directories for a protocol service, a maximum of 32 IP addresses that are allocated by the specified vSwitch are used. Make sure that the vSwitch can provide sufficient IP addresses.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProtocolMountTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProtocolMountTargetResponse
+        /// </returns>
         public CreateProtocolMountTargetResponse CreateProtocolMountTargetWithOptions(CreateProtocolMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4382,22 +5721,37 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateProtocolMountTargetResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an export directory for a protocol service.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Prerequisites
-         *     A protocol service is created.
-         * *   Others
-         *     *   The virtual private cloud (VPC) CIDR block of the export directory for the protocol service cannot overlap with the VPC CIDR block of the file system.
-         *     *   The VPC CIDR blocks of multiple export directories of a protocol service cannot overlap.
-         *     *   You can create a maximum of 10 export directories for a protocol service.
-         *     *   When you create export directories for a protocol service, a maximum of 32 IP addresses that are allocated by the specified vSwitch are used. Make sure that the vSwitch can provide sufficient IP addresses.
-         *
-         * @param request CreateProtocolMountTargetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateProtocolMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an export directory for a protocol service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Prerequisites
+        /// A protocol service is created.</description></item>
+        /// <item><description>Others<list type="bullet">
+        /// <item><description>The virtual private cloud (VPC) CIDR block of the export directory for the protocol service cannot overlap with the VPC CIDR block of the file system.</description></item>
+        /// <item><description>The VPC CIDR blocks of multiple export directories of a protocol service cannot overlap.</description></item>
+        /// <item><description>You can create a maximum of 10 export directories for a protocol service.</description></item>
+        /// <item><description>When you create export directories for a protocol service, a maximum of 32 IP addresses that are allocated by the specified vSwitch are used. Make sure that the vSwitch can provide sufficient IP addresses.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProtocolMountTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProtocolMountTargetResponse
+        /// </returns>
         public async Task<CreateProtocolMountTargetResponse> CreateProtocolMountTargetWithOptionsAsync(CreateProtocolMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4461,68 +5815,113 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateProtocolMountTargetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an export directory for a protocol service.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Prerequisites
-         *     A protocol service is created.
-         * *   Others
-         *     *   The virtual private cloud (VPC) CIDR block of the export directory for the protocol service cannot overlap with the VPC CIDR block of the file system.
-         *     *   The VPC CIDR blocks of multiple export directories of a protocol service cannot overlap.
-         *     *   You can create a maximum of 10 export directories for a protocol service.
-         *     *   When you create export directories for a protocol service, a maximum of 32 IP addresses that are allocated by the specified vSwitch are used. Make sure that the vSwitch can provide sufficient IP addresses.
-         *
-         * @param request CreateProtocolMountTargetRequest
-         * @return CreateProtocolMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an export directory for a protocol service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Prerequisites
+        /// A protocol service is created.</description></item>
+        /// <item><description>Others<list type="bullet">
+        /// <item><description>The virtual private cloud (VPC) CIDR block of the export directory for the protocol service cannot overlap with the VPC CIDR block of the file system.</description></item>
+        /// <item><description>The VPC CIDR blocks of multiple export directories of a protocol service cannot overlap.</description></item>
+        /// <item><description>You can create a maximum of 10 export directories for a protocol service.</description></item>
+        /// <item><description>When you create export directories for a protocol service, a maximum of 32 IP addresses that are allocated by the specified vSwitch are used. Make sure that the vSwitch can provide sufficient IP addresses.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProtocolMountTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProtocolMountTargetResponse
+        /// </returns>
         public CreateProtocolMountTargetResponse CreateProtocolMountTarget(CreateProtocolMountTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateProtocolMountTargetWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates an export directory for a protocol service.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Prerequisites
-         *     A protocol service is created.
-         * *   Others
-         *     *   The virtual private cloud (VPC) CIDR block of the export directory for the protocol service cannot overlap with the VPC CIDR block of the file system.
-         *     *   The VPC CIDR blocks of multiple export directories of a protocol service cannot overlap.
-         *     *   You can create a maximum of 10 export directories for a protocol service.
-         *     *   When you create export directories for a protocol service, a maximum of 32 IP addresses that are allocated by the specified vSwitch are used. Make sure that the vSwitch can provide sufficient IP addresses.
-         *
-         * @param request CreateProtocolMountTargetRequest
-         * @return CreateProtocolMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an export directory for a protocol service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Prerequisites
+        /// A protocol service is created.</description></item>
+        /// <item><description>Others<list type="bullet">
+        /// <item><description>The virtual private cloud (VPC) CIDR block of the export directory for the protocol service cannot overlap with the VPC CIDR block of the file system.</description></item>
+        /// <item><description>The VPC CIDR blocks of multiple export directories of a protocol service cannot overlap.</description></item>
+        /// <item><description>You can create a maximum of 10 export directories for a protocol service.</description></item>
+        /// <item><description>When you create export directories for a protocol service, a maximum of 32 IP addresses that are allocated by the specified vSwitch are used. Make sure that the vSwitch can provide sufficient IP addresses.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProtocolMountTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProtocolMountTargetResponse
+        /// </returns>
         public async Task<CreateProtocolMountTargetResponse> CreateProtocolMountTargetAsync(CreateProtocolMountTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateProtocolMountTargetWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation takes about 5 to 10 minutes.
-         *
-         * @description *   This operation is available only to CPFS file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.3.0 and later support protocol services. You can query the version information of the file system by calling the [DescribeFileSystems](~~2402188.~~) operation.
-         * *   Protocol service types
-         *     Protocol services are classified into general-purpose protocol services and cache protocol services. Different from general-purpose protocol services, cache protocol services can cache hot data. If data exists in the cache, the bandwidth of the cache protocol service may exceed the bandwidth of the CPFS file system, reaching the maximum bandwidth specified for the protocol service.
-         *     *   General-purpose protocol services: provide NFS access and [directory-level mount targets](https://help.aliyun.com/document_detail/427175.html) for CPFS file systems. You do not need to configure a POSIX client to manage clusters. General-purpose protocol services are provided free of charge.
-         *     *   Cache protocol services: provide the server memory cache based on the least recently used (LRU) policy. When data is cached in the memory, CPFS provides higher internal bandwidth. Cache protocol services are divided into Cache L1 and Cache L2 specifications. The differences are the internal bandwidth size and memory cache size.
-         *        >   Note You are charged for using cache protocol services, which are in invitational preview. For more information about the billing method of cache protocol services, see [Billable items](https://help.aliyun.com/document_detail/111858.html). If you have any feedback or questions, you can join the DingTalk group (group number: 31045006299).
-         * *   Protocol type
-         *     Only NFSv3 is supported.
-         * *   Others
-         *     *   Only one protocol service can be created for a CPFS file system.
-         *     *   A protocol service can use a maximum of 32 IP addresses that are allocated by a specified vSwitch. Make sure that the vSwitch can provide sufficient IP addresses.
-         *
-         * @param request CreateProtocolServiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateProtocolServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation takes about 5 to 10 minutes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to CPFS file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.3.0 and later support protocol services. You can query the version information of the file system by calling the <a href="~~2402188.~~">DescribeFileSystems</a> operation.</description></item>
+        /// <item><description>Protocol service types
+        /// Protocol services are classified into general-purpose protocol services and cache protocol services. Different from general-purpose protocol services, cache protocol services can cache hot data. If data exists in the cache, the bandwidth of the cache protocol service may exceed the bandwidth of the CPFS file system, reaching the maximum bandwidth specified for the protocol service.<list type="bullet">
+        /// <item><description>General-purpose protocol services: provide NFS access and <a href="https://help.aliyun.com/document_detail/427175.html">directory-level mount targets</a> for CPFS file systems. You do not need to configure a POSIX client to manage clusters. General-purpose protocol services are provided free of charge.</description></item>
+        /// <item><description>Cache protocol services: provide the server memory cache based on the least recently used (LRU) policy. When data is cached in the memory, CPFS provides higher internal bandwidth. Cache protocol services are divided into Cache L1 and Cache L2 specifications. The differences are the internal bandwidth size and memory cache size.<remarks>
+        /// <para>  Note You are charged for using cache protocol services, which are in invitational preview. For more information about the billing method of cache protocol services, see <a href="https://help.aliyun.com/document_detail/111858.html">Billable items</a>. If you have any feedback or questions, you can join the DingTalk group (group number: 31045006299).</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Protocol type
+        /// Only NFSv3 is supported.</description></item>
+        /// <item><description>Others<list type="bullet">
+        /// <item><description>Only one protocol service can be created for a CPFS file system.</description></item>
+        /// <item><description>A protocol service can use a maximum of 32 IP addresses that are allocated by a specified vSwitch. Make sure that the vSwitch can provide sufficient IP addresses.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProtocolServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProtocolServiceResponse
+        /// </returns>
         public CreateProtocolServiceResponse CreateProtocolServiceWithOptions(CreateProtocolServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4582,26 +5981,45 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateProtocolServiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation takes about 5 to 10 minutes.
-         *
-         * @description *   This operation is available only to CPFS file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.3.0 and later support protocol services. You can query the version information of the file system by calling the [DescribeFileSystems](~~2402188.~~) operation.
-         * *   Protocol service types
-         *     Protocol services are classified into general-purpose protocol services and cache protocol services. Different from general-purpose protocol services, cache protocol services can cache hot data. If data exists in the cache, the bandwidth of the cache protocol service may exceed the bandwidth of the CPFS file system, reaching the maximum bandwidth specified for the protocol service.
-         *     *   General-purpose protocol services: provide NFS access and [directory-level mount targets](https://help.aliyun.com/document_detail/427175.html) for CPFS file systems. You do not need to configure a POSIX client to manage clusters. General-purpose protocol services are provided free of charge.
-         *     *   Cache protocol services: provide the server memory cache based on the least recently used (LRU) policy. When data is cached in the memory, CPFS provides higher internal bandwidth. Cache protocol services are divided into Cache L1 and Cache L2 specifications. The differences are the internal bandwidth size and memory cache size.
-         *        >   Note You are charged for using cache protocol services, which are in invitational preview. For more information about the billing method of cache protocol services, see [Billable items](https://help.aliyun.com/document_detail/111858.html). If you have any feedback or questions, you can join the DingTalk group (group number: 31045006299).
-         * *   Protocol type
-         *     Only NFSv3 is supported.
-         * *   Others
-         *     *   Only one protocol service can be created for a CPFS file system.
-         *     *   A protocol service can use a maximum of 32 IP addresses that are allocated by a specified vSwitch. Make sure that the vSwitch can provide sufficient IP addresses.
-         *
-         * @param request CreateProtocolServiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateProtocolServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation takes about 5 to 10 minutes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to CPFS file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.3.0 and later support protocol services. You can query the version information of the file system by calling the <a href="~~2402188.~~">DescribeFileSystems</a> operation.</description></item>
+        /// <item><description>Protocol service types
+        /// Protocol services are classified into general-purpose protocol services and cache protocol services. Different from general-purpose protocol services, cache protocol services can cache hot data. If data exists in the cache, the bandwidth of the cache protocol service may exceed the bandwidth of the CPFS file system, reaching the maximum bandwidth specified for the protocol service.<list type="bullet">
+        /// <item><description>General-purpose protocol services: provide NFS access and <a href="https://help.aliyun.com/document_detail/427175.html">directory-level mount targets</a> for CPFS file systems. You do not need to configure a POSIX client to manage clusters. General-purpose protocol services are provided free of charge.</description></item>
+        /// <item><description>Cache protocol services: provide the server memory cache based on the least recently used (LRU) policy. When data is cached in the memory, CPFS provides higher internal bandwidth. Cache protocol services are divided into Cache L1 and Cache L2 specifications. The differences are the internal bandwidth size and memory cache size.<remarks>
+        /// <para>  Note You are charged for using cache protocol services, which are in invitational preview. For more information about the billing method of cache protocol services, see <a href="https://help.aliyun.com/document_detail/111858.html">Billable items</a>. If you have any feedback or questions, you can join the DingTalk group (group number: 31045006299).</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Protocol type
+        /// Only NFSv3 is supported.</description></item>
+        /// <item><description>Others<list type="bullet">
+        /// <item><description>Only one protocol service can be created for a CPFS file system.</description></item>
+        /// <item><description>A protocol service can use a maximum of 32 IP addresses that are allocated by a specified vSwitch. Make sure that the vSwitch can provide sufficient IP addresses.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProtocolServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProtocolServiceResponse
+        /// </returns>
         public async Task<CreateProtocolServiceResponse> CreateProtocolServiceWithOptionsAsync(CreateProtocolServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4661,67 +6079,114 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateProtocolServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation takes about 5 to 10 minutes.
-         *
-         * @description *   This operation is available only to CPFS file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.3.0 and later support protocol services. You can query the version information of the file system by calling the [DescribeFileSystems](~~2402188.~~) operation.
-         * *   Protocol service types
-         *     Protocol services are classified into general-purpose protocol services and cache protocol services. Different from general-purpose protocol services, cache protocol services can cache hot data. If data exists in the cache, the bandwidth of the cache protocol service may exceed the bandwidth of the CPFS file system, reaching the maximum bandwidth specified for the protocol service.
-         *     *   General-purpose protocol services: provide NFS access and [directory-level mount targets](https://help.aliyun.com/document_detail/427175.html) for CPFS file systems. You do not need to configure a POSIX client to manage clusters. General-purpose protocol services are provided free of charge.
-         *     *   Cache protocol services: provide the server memory cache based on the least recently used (LRU) policy. When data is cached in the memory, CPFS provides higher internal bandwidth. Cache protocol services are divided into Cache L1 and Cache L2 specifications. The differences are the internal bandwidth size and memory cache size.
-         *        >   Note You are charged for using cache protocol services, which are in invitational preview. For more information about the billing method of cache protocol services, see [Billable items](https://help.aliyun.com/document_detail/111858.html). If you have any feedback or questions, you can join the DingTalk group (group number: 31045006299).
-         * *   Protocol type
-         *     Only NFSv3 is supported.
-         * *   Others
-         *     *   Only one protocol service can be created for a CPFS file system.
-         *     *   A protocol service can use a maximum of 32 IP addresses that are allocated by a specified vSwitch. Make sure that the vSwitch can provide sufficient IP addresses.
-         *
-         * @param request CreateProtocolServiceRequest
-         * @return CreateProtocolServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation takes about 5 to 10 minutes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to CPFS file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.3.0 and later support protocol services. You can query the version information of the file system by calling the <a href="~~2402188.~~">DescribeFileSystems</a> operation.</description></item>
+        /// <item><description>Protocol service types
+        /// Protocol services are classified into general-purpose protocol services and cache protocol services. Different from general-purpose protocol services, cache protocol services can cache hot data. If data exists in the cache, the bandwidth of the cache protocol service may exceed the bandwidth of the CPFS file system, reaching the maximum bandwidth specified for the protocol service.<list type="bullet">
+        /// <item><description>General-purpose protocol services: provide NFS access and <a href="https://help.aliyun.com/document_detail/427175.html">directory-level mount targets</a> for CPFS file systems. You do not need to configure a POSIX client to manage clusters. General-purpose protocol services are provided free of charge.</description></item>
+        /// <item><description>Cache protocol services: provide the server memory cache based on the least recently used (LRU) policy. When data is cached in the memory, CPFS provides higher internal bandwidth. Cache protocol services are divided into Cache L1 and Cache L2 specifications. The differences are the internal bandwidth size and memory cache size.<remarks>
+        /// <para>  Note You are charged for using cache protocol services, which are in invitational preview. For more information about the billing method of cache protocol services, see <a href="https://help.aliyun.com/document_detail/111858.html">Billable items</a>. If you have any feedback or questions, you can join the DingTalk group (group number: 31045006299).</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Protocol type
+        /// Only NFSv3 is supported.</description></item>
+        /// <item><description>Others<list type="bullet">
+        /// <item><description>Only one protocol service can be created for a CPFS file system.</description></item>
+        /// <item><description>A protocol service can use a maximum of 32 IP addresses that are allocated by a specified vSwitch. Make sure that the vSwitch can provide sufficient IP addresses.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProtocolServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProtocolServiceResponse
+        /// </returns>
         public CreateProtocolServiceResponse CreateProtocolService(CreateProtocolServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateProtocolServiceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation takes about 5 to 10 minutes.
-         *
-         * @description *   This operation is available only to CPFS file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.3.0 and later support protocol services. You can query the version information of the file system by calling the [DescribeFileSystems](~~2402188.~~) operation.
-         * *   Protocol service types
-         *     Protocol services are classified into general-purpose protocol services and cache protocol services. Different from general-purpose protocol services, cache protocol services can cache hot data. If data exists in the cache, the bandwidth of the cache protocol service may exceed the bandwidth of the CPFS file system, reaching the maximum bandwidth specified for the protocol service.
-         *     *   General-purpose protocol services: provide NFS access and [directory-level mount targets](https://help.aliyun.com/document_detail/427175.html) for CPFS file systems. You do not need to configure a POSIX client to manage clusters. General-purpose protocol services are provided free of charge.
-         *     *   Cache protocol services: provide the server memory cache based on the least recently used (LRU) policy. When data is cached in the memory, CPFS provides higher internal bandwidth. Cache protocol services are divided into Cache L1 and Cache L2 specifications. The differences are the internal bandwidth size and memory cache size.
-         *        >   Note You are charged for using cache protocol services, which are in invitational preview. For more information about the billing method of cache protocol services, see [Billable items](https://help.aliyun.com/document_detail/111858.html). If you have any feedback or questions, you can join the DingTalk group (group number: 31045006299).
-         * *   Protocol type
-         *     Only NFSv3 is supported.
-         * *   Others
-         *     *   Only one protocol service can be created for a CPFS file system.
-         *     *   A protocol service can use a maximum of 32 IP addresses that are allocated by a specified vSwitch. Make sure that the vSwitch can provide sufficient IP addresses.
-         *
-         * @param request CreateProtocolServiceRequest
-         * @return CreateProtocolServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation takes about 5 to 10 minutes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to CPFS file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.3.0 and later support protocol services. You can query the version information of the file system by calling the <a href="~~2402188.~~">DescribeFileSystems</a> operation.</description></item>
+        /// <item><description>Protocol service types
+        /// Protocol services are classified into general-purpose protocol services and cache protocol services. Different from general-purpose protocol services, cache protocol services can cache hot data. If data exists in the cache, the bandwidth of the cache protocol service may exceed the bandwidth of the CPFS file system, reaching the maximum bandwidth specified for the protocol service.<list type="bullet">
+        /// <item><description>General-purpose protocol services: provide NFS access and <a href="https://help.aliyun.com/document_detail/427175.html">directory-level mount targets</a> for CPFS file systems. You do not need to configure a POSIX client to manage clusters. General-purpose protocol services are provided free of charge.</description></item>
+        /// <item><description>Cache protocol services: provide the server memory cache based on the least recently used (LRU) policy. When data is cached in the memory, CPFS provides higher internal bandwidth. Cache protocol services are divided into Cache L1 and Cache L2 specifications. The differences are the internal bandwidth size and memory cache size.<remarks>
+        /// <para>  Note You are charged for using cache protocol services, which are in invitational preview. For more information about the billing method of cache protocol services, see <a href="https://help.aliyun.com/document_detail/111858.html">Billable items</a>. If you have any feedback or questions, you can join the DingTalk group (group number: 31045006299).</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Protocol type
+        /// Only NFSv3 is supported.</description></item>
+        /// <item><description>Others<list type="bullet">
+        /// <item><description>Only one protocol service can be created for a CPFS file system.</description></item>
+        /// <item><description>A protocol service can use a maximum of 32 IP addresses that are allocated by a specified vSwitch. Make sure that the vSwitch can provide sufficient IP addresses.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProtocolServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProtocolServiceResponse
+        /// </returns>
         public async Task<CreateProtocolServiceResponse> CreateProtocolServiceAsync(CreateProtocolServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateProtocolServiceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a job to permanently delete a file or directory from the recycle bin.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   If you permanently delete a directory, the files in the directory are recursively cleared.
-         * *   You can run only one job at a time for a single file system to permanently delete the files from the file system. You cannot create a restoration or deletion job when a file or directory is being deleted.
-         *
-         * @param request CreateRecycleBinDeleteJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateRecycleBinDeleteJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a job to permanently delete a file or directory from the recycle bin.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>If you permanently delete a directory, the files in the directory are recursively cleared.</description></item>
+        /// <item><description>You can run only one job at a time for a single file system to permanently delete the files from the file system. You cannot create a restoration or deletion job when a file or directory is being deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRecycleBinDeleteJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecycleBinDeleteJobResponse
+        /// </returns>
         public CreateRecycleBinDeleteJobResponse CreateRecycleBinDeleteJobWithOptions(CreateRecycleBinDeleteJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4745,17 +6210,30 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateRecycleBinDeleteJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a job to permanently delete a file or directory from the recycle bin.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   If you permanently delete a directory, the files in the directory are recursively cleared.
-         * *   You can run only one job at a time for a single file system to permanently delete the files from the file system. You cannot create a restoration or deletion job when a file or directory is being deleted.
-         *
-         * @param request CreateRecycleBinDeleteJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateRecycleBinDeleteJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a job to permanently delete a file or directory from the recycle bin.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>If you permanently delete a directory, the files in the directory are recursively cleared.</description></item>
+        /// <item><description>You can run only one job at a time for a single file system to permanently delete the files from the file system. You cannot create a restoration or deletion job when a file or directory is being deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRecycleBinDeleteJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecycleBinDeleteJobResponse
+        /// </returns>
         public async Task<CreateRecycleBinDeleteJobResponse> CreateRecycleBinDeleteJobWithOptionsAsync(CreateRecycleBinDeleteJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4779,51 +6257,86 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateRecycleBinDeleteJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a job to permanently delete a file or directory from the recycle bin.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   If you permanently delete a directory, the files in the directory are recursively cleared.
-         * *   You can run only one job at a time for a single file system to permanently delete the files from the file system. You cannot create a restoration or deletion job when a file or directory is being deleted.
-         *
-         * @param request CreateRecycleBinDeleteJobRequest
-         * @return CreateRecycleBinDeleteJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a job to permanently delete a file or directory from the recycle bin.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>If you permanently delete a directory, the files in the directory are recursively cleared.</description></item>
+        /// <item><description>You can run only one job at a time for a single file system to permanently delete the files from the file system. You cannot create a restoration or deletion job when a file or directory is being deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRecycleBinDeleteJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecycleBinDeleteJobResponse
+        /// </returns>
         public CreateRecycleBinDeleteJobResponse CreateRecycleBinDeleteJob(CreateRecycleBinDeleteJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateRecycleBinDeleteJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a job to permanently delete a file or directory from the recycle bin.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   If you permanently delete a directory, the files in the directory are recursively cleared.
-         * *   You can run only one job at a time for a single file system to permanently delete the files from the file system. You cannot create a restoration or deletion job when a file or directory is being deleted.
-         *
-         * @param request CreateRecycleBinDeleteJobRequest
-         * @return CreateRecycleBinDeleteJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a job to permanently delete a file or directory from the recycle bin.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>If you permanently delete a directory, the files in the directory are recursively cleared.</description></item>
+        /// <item><description>You can run only one job at a time for a single file system to permanently delete the files from the file system. You cannot create a restoration or deletion job when a file or directory is being deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRecycleBinDeleteJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecycleBinDeleteJobResponse
+        /// </returns>
         public async Task<CreateRecycleBinDeleteJobResponse> CreateRecycleBinDeleteJobAsync(CreateRecycleBinDeleteJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateRecycleBinDeleteJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Restores a file or directory from the recycle bin.
-         *
-         * @description ### Usage notes
-         * *   Only General-purpose NAS file systems support this operation.
-         * *   You can run only one job at a time for a single file system to restore files to or clear files from the file system. You cannot create a restore or cleanup job when files are being restored from the recycle bin.
-         * *   You can restore only one file or directory in a single restore job. If you restore a specified directory, all files in the directory are recursively restored.
-         * *   After files are restored, the data of the files is defragmented. When the data is being defragmented, the read performance is slightly degraded.
-         *
-         * @param request CreateRecycleBinRestoreJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateRecycleBinRestoreJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores a file or directory from the recycle bin.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>Only General-purpose NAS file systems support this operation.</description></item>
+        /// <item><description>You can run only one job at a time for a single file system to restore files to or clear files from the file system. You cannot create a restore or cleanup job when files are being restored from the recycle bin.</description></item>
+        /// <item><description>You can restore only one file or directory in a single restore job. If you restore a specified directory, all files in the directory are recursively restored.</description></item>
+        /// <item><description>After files are restored, the data of the files is defragmented. When the data is being defragmented, the read performance is slightly degraded.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRecycleBinRestoreJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecycleBinRestoreJobResponse
+        /// </returns>
         public CreateRecycleBinRestoreJobResponse CreateRecycleBinRestoreJobWithOptions(CreateRecycleBinRestoreJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4847,19 +6360,32 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateRecycleBinRestoreJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Restores a file or directory from the recycle bin.
-         *
-         * @description ### Usage notes
-         * *   Only General-purpose NAS file systems support this operation.
-         * *   You can run only one job at a time for a single file system to restore files to or clear files from the file system. You cannot create a restore or cleanup job when files are being restored from the recycle bin.
-         * *   You can restore only one file or directory in a single restore job. If you restore a specified directory, all files in the directory are recursively restored.
-         * *   After files are restored, the data of the files is defragmented. When the data is being defragmented, the read performance is slightly degraded.
-         *
-         * @param request CreateRecycleBinRestoreJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateRecycleBinRestoreJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores a file or directory from the recycle bin.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>Only General-purpose NAS file systems support this operation.</description></item>
+        /// <item><description>You can run only one job at a time for a single file system to restore files to or clear files from the file system. You cannot create a restore or cleanup job when files are being restored from the recycle bin.</description></item>
+        /// <item><description>You can restore only one file or directory in a single restore job. If you restore a specified directory, all files in the directory are recursively restored.</description></item>
+        /// <item><description>After files are restored, the data of the files is defragmented. When the data is being defragmented, the read performance is slightly degraded.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRecycleBinRestoreJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecycleBinRestoreJobResponse
+        /// </returns>
         public async Task<CreateRecycleBinRestoreJobResponse> CreateRecycleBinRestoreJobWithOptionsAsync(CreateRecycleBinRestoreJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4883,59 +6409,94 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateRecycleBinRestoreJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Restores a file or directory from the recycle bin.
-         *
-         * @description ### Usage notes
-         * *   Only General-purpose NAS file systems support this operation.
-         * *   You can run only one job at a time for a single file system to restore files to or clear files from the file system. You cannot create a restore or cleanup job when files are being restored from the recycle bin.
-         * *   You can restore only one file or directory in a single restore job. If you restore a specified directory, all files in the directory are recursively restored.
-         * *   After files are restored, the data of the files is defragmented. When the data is being defragmented, the read performance is slightly degraded.
-         *
-         * @param request CreateRecycleBinRestoreJobRequest
-         * @return CreateRecycleBinRestoreJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores a file or directory from the recycle bin.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>Only General-purpose NAS file systems support this operation.</description></item>
+        /// <item><description>You can run only one job at a time for a single file system to restore files to or clear files from the file system. You cannot create a restore or cleanup job when files are being restored from the recycle bin.</description></item>
+        /// <item><description>You can restore only one file or directory in a single restore job. If you restore a specified directory, all files in the directory are recursively restored.</description></item>
+        /// <item><description>After files are restored, the data of the files is defragmented. When the data is being defragmented, the read performance is slightly degraded.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRecycleBinRestoreJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecycleBinRestoreJobResponse
+        /// </returns>
         public CreateRecycleBinRestoreJobResponse CreateRecycleBinRestoreJob(CreateRecycleBinRestoreJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateRecycleBinRestoreJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Restores a file or directory from the recycle bin.
-         *
-         * @description ### Usage notes
-         * *   Only General-purpose NAS file systems support this operation.
-         * *   You can run only one job at a time for a single file system to restore files to or clear files from the file system. You cannot create a restore or cleanup job when files are being restored from the recycle bin.
-         * *   You can restore only one file or directory in a single restore job. If you restore a specified directory, all files in the directory are recursively restored.
-         * *   After files are restored, the data of the files is defragmented. When the data is being defragmented, the read performance is slightly degraded.
-         *
-         * @param request CreateRecycleBinRestoreJobRequest
-         * @return CreateRecycleBinRestoreJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores a file or directory from the recycle bin.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>Only General-purpose NAS file systems support this operation.</description></item>
+        /// <item><description>You can run only one job at a time for a single file system to restore files to or clear files from the file system. You cannot create a restore or cleanup job when files are being restored from the recycle bin.</description></item>
+        /// <item><description>You can restore only one file or directory in a single restore job. If you restore a specified directory, all files in the directory are recursively restored.</description></item>
+        /// <item><description>After files are restored, the data of the files is defragmented. When the data is being defragmented, the read performance is slightly degraded.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRecycleBinRestoreJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecycleBinRestoreJobResponse
+        /// </returns>
         public async Task<CreateRecycleBinRestoreJobResponse> CreateRecycleBinRestoreJobAsync(CreateRecycleBinRestoreJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateRecycleBinRestoreJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a snapshot.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support the snapshot feature.
-         * *   You can create a maximum of 128 snapshots for a file system.
-         * *   The compute node on which a file system is mounted must function as expected. Otherwise, you cannot create a snapshot for the file system.
-         * *   You can create only one snapshot for a file system at a time.
-         * *   If the file system expires when a snapshot is being created, the file system is released and the snapshot is deleted.
-         * *   When you create a snapshot for a file system, the I/O performance of the file system may be degraded for a short period of time. We recommend that you create snapshots during off-peak hours.
-         * *   A snapshot is a backup of a file system at a specific point in time. After you create a snapshot, incremental data that is generated in the file system will not be synchronized to the snapshot.
-         * *   Manually created snapshots will not be deleted until 15 days after the service is suspended due to overdue payments. We recommend that you delete unnecessary snapshots at regular intervals to prevent extra fees incurred by the snapshots.
-         *
-         * @param request CreateSnapshotRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSnapshotResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a snapshot.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// <item><description>You can create a maximum of 128 snapshots for a file system.</description></item>
+        /// <item><description>The compute node on which a file system is mounted must function as expected. Otherwise, you cannot create a snapshot for the file system.</description></item>
+        /// <item><description>You can create only one snapshot for a file system at a time.</description></item>
+        /// <item><description>If the file system expires when a snapshot is being created, the file system is released and the snapshot is deleted.</description></item>
+        /// <item><description>When you create a snapshot for a file system, the I/O performance of the file system may be degraded for a short period of time. We recommend that you create snapshots during off-peak hours.</description></item>
+        /// <item><description>A snapshot is a backup of a file system at a specific point in time. After you create a snapshot, incremental data that is generated in the file system will not be synchronized to the snapshot.</description></item>
+        /// <item><description>Manually created snapshots will not be deleted until 15 days after the service is suspended due to overdue payments. We recommend that you delete unnecessary snapshots at regular intervals to prevent extra fees incurred by the snapshots.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSnapshotRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSnapshotResponse
+        /// </returns>
         public CreateSnapshotResponse CreateSnapshotWithOptions(CreateSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4975,23 +6536,36 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateSnapshotResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a snapshot.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support the snapshot feature.
-         * *   You can create a maximum of 128 snapshots for a file system.
-         * *   The compute node on which a file system is mounted must function as expected. Otherwise, you cannot create a snapshot for the file system.
-         * *   You can create only one snapshot for a file system at a time.
-         * *   If the file system expires when a snapshot is being created, the file system is released and the snapshot is deleted.
-         * *   When you create a snapshot for a file system, the I/O performance of the file system may be degraded for a short period of time. We recommend that you create snapshots during off-peak hours.
-         * *   A snapshot is a backup of a file system at a specific point in time. After you create a snapshot, incremental data that is generated in the file system will not be synchronized to the snapshot.
-         * *   Manually created snapshots will not be deleted until 15 days after the service is suspended due to overdue payments. We recommend that you delete unnecessary snapshots at regular intervals to prevent extra fees incurred by the snapshots.
-         *
-         * @param request CreateSnapshotRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSnapshotResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a snapshot.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// <item><description>You can create a maximum of 128 snapshots for a file system.</description></item>
+        /// <item><description>The compute node on which a file system is mounted must function as expected. Otherwise, you cannot create a snapshot for the file system.</description></item>
+        /// <item><description>You can create only one snapshot for a file system at a time.</description></item>
+        /// <item><description>If the file system expires when a snapshot is being created, the file system is released and the snapshot is deleted.</description></item>
+        /// <item><description>When you create a snapshot for a file system, the I/O performance of the file system may be degraded for a short period of time. We recommend that you create snapshots during off-peak hours.</description></item>
+        /// <item><description>A snapshot is a backup of a file system at a specific point in time. After you create a snapshot, incremental data that is generated in the file system will not be synchronized to the snapshot.</description></item>
+        /// <item><description>Manually created snapshots will not be deleted until 15 days after the service is suspended due to overdue payments. We recommend that you delete unnecessary snapshots at regular intervals to prevent extra fees incurred by the snapshots.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSnapshotRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSnapshotResponse
+        /// </returns>
         public async Task<CreateSnapshotResponse> CreateSnapshotWithOptionsAsync(CreateSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5031,59 +6605,92 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<CreateSnapshotResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a snapshot.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support the snapshot feature.
-         * *   You can create a maximum of 128 snapshots for a file system.
-         * *   The compute node on which a file system is mounted must function as expected. Otherwise, you cannot create a snapshot for the file system.
-         * *   You can create only one snapshot for a file system at a time.
-         * *   If the file system expires when a snapshot is being created, the file system is released and the snapshot is deleted.
-         * *   When you create a snapshot for a file system, the I/O performance of the file system may be degraded for a short period of time. We recommend that you create snapshots during off-peak hours.
-         * *   A snapshot is a backup of a file system at a specific point in time. After you create a snapshot, incremental data that is generated in the file system will not be synchronized to the snapshot.
-         * *   Manually created snapshots will not be deleted until 15 days after the service is suspended due to overdue payments. We recommend that you delete unnecessary snapshots at regular intervals to prevent extra fees incurred by the snapshots.
-         *
-         * @param request CreateSnapshotRequest
-         * @return CreateSnapshotResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a snapshot.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// <item><description>You can create a maximum of 128 snapshots for a file system.</description></item>
+        /// <item><description>The compute node on which a file system is mounted must function as expected. Otherwise, you cannot create a snapshot for the file system.</description></item>
+        /// <item><description>You can create only one snapshot for a file system at a time.</description></item>
+        /// <item><description>If the file system expires when a snapshot is being created, the file system is released and the snapshot is deleted.</description></item>
+        /// <item><description>When you create a snapshot for a file system, the I/O performance of the file system may be degraded for a short period of time. We recommend that you create snapshots during off-peak hours.</description></item>
+        /// <item><description>A snapshot is a backup of a file system at a specific point in time. After you create a snapshot, incremental data that is generated in the file system will not be synchronized to the snapshot.</description></item>
+        /// <item><description>Manually created snapshots will not be deleted until 15 days after the service is suspended due to overdue payments. We recommend that you delete unnecessary snapshots at regular intervals to prevent extra fees incurred by the snapshots.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSnapshotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSnapshotResponse
+        /// </returns>
         public CreateSnapshotResponse CreateSnapshot(CreateSnapshotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSnapshotWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a snapshot.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support the snapshot feature.
-         * *   You can create a maximum of 128 snapshots for a file system.
-         * *   The compute node on which a file system is mounted must function as expected. Otherwise, you cannot create a snapshot for the file system.
-         * *   You can create only one snapshot for a file system at a time.
-         * *   If the file system expires when a snapshot is being created, the file system is released and the snapshot is deleted.
-         * *   When you create a snapshot for a file system, the I/O performance of the file system may be degraded for a short period of time. We recommend that you create snapshots during off-peak hours.
-         * *   A snapshot is a backup of a file system at a specific point in time. After you create a snapshot, incremental data that is generated in the file system will not be synchronized to the snapshot.
-         * *   Manually created snapshots will not be deleted until 15 days after the service is suspended due to overdue payments. We recommend that you delete unnecessary snapshots at regular intervals to prevent extra fees incurred by the snapshots.
-         *
-         * @param request CreateSnapshotRequest
-         * @return CreateSnapshotResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a snapshot.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// <item><description>You can create a maximum of 128 snapshots for a file system.</description></item>
+        /// <item><description>The compute node on which a file system is mounted must function as expected. Otherwise, you cannot create a snapshot for the file system.</description></item>
+        /// <item><description>You can create only one snapshot for a file system at a time.</description></item>
+        /// <item><description>If the file system expires when a snapshot is being created, the file system is released and the snapshot is deleted.</description></item>
+        /// <item><description>When you create a snapshot for a file system, the I/O performance of the file system may be degraded for a short period of time. We recommend that you create snapshots during off-peak hours.</description></item>
+        /// <item><description>A snapshot is a backup of a file system at a specific point in time. After you create a snapshot, incremental data that is generated in the file system will not be synchronized to the snapshot.</description></item>
+        /// <item><description>Manually created snapshots will not be deleted until 15 days after the service is suspended due to overdue payments. We recommend that you delete unnecessary snapshots at regular intervals to prevent extra fees incurred by the snapshots.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSnapshotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSnapshotResponse
+        /// </returns>
         public async Task<CreateSnapshotResponse> CreateSnapshotAsync(CreateSnapshotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSnapshotWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a permission group.
-         *
-         * @description The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.
-         *
-         * @param request DeleteAccessGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAccessGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a permission group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAccessGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccessGroupResponse
+        /// </returns>
         public DeleteAccessGroupResponse DeleteAccessGroupWithOptions(DeleteAccessGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5115,15 +6722,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteAccessGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a permission group.
-         *
-         * @description The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.
-         *
-         * @param request DeleteAccessGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAccessGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a permission group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAccessGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccessGroupResponse
+        /// </returns>
         public async Task<DeleteAccessGroupResponse> DeleteAccessGroupWithOptionsAsync(DeleteAccessGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5155,44 +6773,75 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteAccessGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a permission group.
-         *
-         * @description The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.
-         *
-         * @param request DeleteAccessGroupRequest
-         * @return DeleteAccessGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a permission group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAccessGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccessGroupResponse
+        /// </returns>
         public DeleteAccessGroupResponse DeleteAccessGroup(DeleteAccessGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAccessGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a permission group.
-         *
-         * @description The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.
-         *
-         * @param request DeleteAccessGroupRequest
-         * @return DeleteAccessGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a permission group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAccessGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccessGroupResponse
+        /// </returns>
         public async Task<DeleteAccessGroupResponse> DeleteAccessGroupAsync(DeleteAccessGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAccessGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes an access point.
-         *
-         * @description *   Only General-purpose Network File System (NFS) file systems support access points.
-         * *   After an access point is deleted, all I/O operations that are being performed on the directory accessed over the access point are interrupted immediately. Exercise caution when you perform this operation.
-         *
-         * @param request DeleteAccessPointRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAccessPointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose Network File System (NFS) file systems support access points.</para>
+        /// <list type="bullet">
+        /// <item><description>After an access point is deleted, all I/O operations that are being performed on the directory accessed over the access point are interrupted immediately. Exercise caution when you perform this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAccessPointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccessPointResponse
+        /// </returns>
         public DeleteAccessPointResponse DeleteAccessPointWithOptions(DeleteAccessPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5224,16 +6873,29 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteAccessPointResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an access point.
-         *
-         * @description *   Only General-purpose Network File System (NFS) file systems support access points.
-         * *   After an access point is deleted, all I/O operations that are being performed on the directory accessed over the access point are interrupted immediately. Exercise caution when you perform this operation.
-         *
-         * @param request DeleteAccessPointRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAccessPointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose Network File System (NFS) file systems support access points.</para>
+        /// <list type="bullet">
+        /// <item><description>After an access point is deleted, all I/O operations that are being performed on the directory accessed over the access point are interrupted immediately. Exercise caution when you perform this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAccessPointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccessPointResponse
+        /// </returns>
         public async Task<DeleteAccessPointResponse> DeleteAccessPointWithOptionsAsync(DeleteAccessPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5265,45 +6927,78 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteAccessPointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an access point.
-         *
-         * @description *   Only General-purpose Network File System (NFS) file systems support access points.
-         * *   After an access point is deleted, all I/O operations that are being performed on the directory accessed over the access point are interrupted immediately. Exercise caution when you perform this operation.
-         *
-         * @param request DeleteAccessPointRequest
-         * @return DeleteAccessPointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose Network File System (NFS) file systems support access points.</para>
+        /// <list type="bullet">
+        /// <item><description>After an access point is deleted, all I/O operations that are being performed on the directory accessed over the access point are interrupted immediately. Exercise caution when you perform this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAccessPointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccessPointResponse
+        /// </returns>
         public DeleteAccessPointResponse DeleteAccessPoint(DeleteAccessPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAccessPointWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes an access point.
-         *
-         * @description *   Only General-purpose Network File System (NFS) file systems support access points.
-         * *   After an access point is deleted, all I/O operations that are being performed on the directory accessed over the access point are interrupted immediately. Exercise caution when you perform this operation.
-         *
-         * @param request DeleteAccessPointRequest
-         * @return DeleteAccessPointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose Network File System (NFS) file systems support access points.</para>
+        /// <list type="bullet">
+        /// <item><description>After an access point is deleted, all I/O operations that are being performed on the directory accessed over the access point are interrupted immediately. Exercise caution when you perform this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAccessPointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccessPointResponse
+        /// </returns>
         public async Task<DeleteAccessPointResponse> DeleteAccessPointAsync(DeleteAccessPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAccessPointWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a rule from a permission group.
-         *
-         * @description Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.
-         *
-         * @param request DeleteAccessRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAccessRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a rule from a permission group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAccessRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccessRuleResponse
+        /// </returns>
         public DeleteAccessRuleResponse DeleteAccessRuleWithOptions(DeleteAccessRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5339,15 +7034,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteAccessRuleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a rule from a permission group.
-         *
-         * @description Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.
-         *
-         * @param request DeleteAccessRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAccessRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a rule from a permission group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAccessRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccessRuleResponse
+        /// </returns>
         public async Task<DeleteAccessRuleResponse> DeleteAccessRuleWithOptionsAsync(DeleteAccessRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5383,45 +7089,76 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteAccessRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a rule from a permission group.
-         *
-         * @description Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.
-         *
-         * @param request DeleteAccessRuleRequest
-         * @return DeleteAccessRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a rule from a permission group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAccessRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccessRuleResponse
+        /// </returns>
         public DeleteAccessRuleResponse DeleteAccessRule(DeleteAccessRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAccessRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a rule from a permission group.
-         *
-         * @description Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.
-         *
-         * @param request DeleteAccessRuleRequest
-         * @return DeleteAccessRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a rule from a permission group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAccessRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccessRuleResponse
+        /// </returns>
         public async Task<DeleteAccessRuleResponse> DeleteAccessRuleAsync(DeleteAccessRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAccessRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes an automatic snapshot policy.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support the snapshot feature.
-         * *   If you delete an automatic snapshot policy that is applied to a file system, snapshots for the file system are no longer created based on the policy.
-         *
-         * @param request DeleteAutoSnapshotPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an automatic snapshot policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// <item><description>If you delete an automatic snapshot policy that is applied to a file system, snapshots for the file system are no longer created based on the policy.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAutoSnapshotPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAutoSnapshotPolicyResponse
+        /// </returns>
         public DeleteAutoSnapshotPolicyResponse DeleteAutoSnapshotPolicyWithOptions(DeleteAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5449,17 +7186,30 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteAutoSnapshotPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an automatic snapshot policy.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support the snapshot feature.
-         * *   If you delete an automatic snapshot policy that is applied to a file system, snapshots for the file system are no longer created based on the policy.
-         *
-         * @param request DeleteAutoSnapshotPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an automatic snapshot policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// <item><description>If you delete an automatic snapshot policy that is applied to a file system, snapshots for the file system are no longer created based on the policy.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAutoSnapshotPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAutoSnapshotPolicyResponse
+        /// </returns>
         public async Task<DeleteAutoSnapshotPolicyResponse> DeleteAutoSnapshotPolicyWithOptionsAsync(DeleteAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5487,50 +7237,85 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteAutoSnapshotPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an automatic snapshot policy.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support the snapshot feature.
-         * *   If you delete an automatic snapshot policy that is applied to a file system, snapshots for the file system are no longer created based on the policy.
-         *
-         * @param request DeleteAutoSnapshotPolicyRequest
-         * @return DeleteAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an automatic snapshot policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// <item><description>If you delete an automatic snapshot policy that is applied to a file system, snapshots for the file system are no longer created based on the policy.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAutoSnapshotPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAutoSnapshotPolicyResponse
+        /// </returns>
         public DeleteAutoSnapshotPolicyResponse DeleteAutoSnapshotPolicy(DeleteAutoSnapshotPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAutoSnapshotPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes an automatic snapshot policy.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support the snapshot feature.
-         * *   If you delete an automatic snapshot policy that is applied to a file system, snapshots for the file system are no longer created based on the policy.
-         *
-         * @param request DeleteAutoSnapshotPolicyRequest
-         * @return DeleteAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an automatic snapshot policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// <item><description>If you delete an automatic snapshot policy that is applied to a file system, snapshots for the file system are no longer created based on the policy.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAutoSnapshotPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAutoSnapshotPolicyResponse
+        /// </returns>
         public async Task<DeleteAutoSnapshotPolicyResponse> DeleteAutoSnapshotPolicyAsync(DeleteAutoSnapshotPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAutoSnapshotPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   You can create filesets only in CPFS V2.2.0 and later. You can view the version information on the file system details page in the console.
-         * *   You can delete the dataflows that are only in the `Running` or `Stopped` state.
-         * *   After a dataflow is deleted, the resources related to the dataflow are released and cannot be restored. You must create a dataflow again if required.
-         *
-         * @param request DeleteDataFlowRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>You can create filesets only in CPFS V2.2.0 and later. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can delete the dataflows that are only in the <c>Running</c> or <c>Stopped</c> state.</description></item>
+        /// <item><description>After a dataflow is deleted, the resources related to the dataflow are released and cannot be restored. You must create a dataflow again if required.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataFlowResponse
+        /// </returns>
         public DeleteDataFlowResponse DeleteDataFlowWithOptions(DeleteDataFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5570,18 +7355,31 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteDataFlowResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   You can create filesets only in CPFS V2.2.0 and later. You can view the version information on the file system details page in the console.
-         * *   You can delete the dataflows that are only in the `Running` or `Stopped` state.
-         * *   After a dataflow is deleted, the resources related to the dataflow are released and cannot be restored. You must create a dataflow again if required.
-         *
-         * @param request DeleteDataFlowRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>You can create filesets only in CPFS V2.2.0 and later. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can delete the dataflows that are only in the <c>Running</c> or <c>Stopped</c> state.</description></item>
+        /// <item><description>After a dataflow is deleted, the resources related to the dataflow are released and cannot be restored. You must create a dataflow again if required.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataFlowResponse
+        /// </returns>
         public async Task<DeleteDataFlowResponse> DeleteDataFlowWithOptionsAsync(DeleteDataFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5621,51 +7419,86 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteDataFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   You can create filesets only in CPFS V2.2.0 and later. You can view the version information on the file system details page in the console.
-         * *   You can delete the dataflows that are only in the `Running` or `Stopped` state.
-         * *   After a dataflow is deleted, the resources related to the dataflow are released and cannot be restored. You must create a dataflow again if required.
-         *
-         * @param request DeleteDataFlowRequest
-         * @return DeleteDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>You can create filesets only in CPFS V2.2.0 and later. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can delete the dataflows that are only in the <c>Running</c> or <c>Stopped</c> state.</description></item>
+        /// <item><description>After a dataflow is deleted, the resources related to the dataflow are released and cannot be restored. You must create a dataflow again if required.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataFlowResponse
+        /// </returns>
         public DeleteDataFlowResponse DeleteDataFlow(DeleteDataFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDataFlowWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   You can create filesets only in CPFS V2.2.0 and later. You can view the version information on the file system details page in the console.
-         * *   You can delete the dataflows that are only in the `Running` or `Stopped` state.
-         * *   After a dataflow is deleted, the resources related to the dataflow are released and cannot be restored. You must create a dataflow again if required.
-         *
-         * @param request DeleteDataFlowRequest
-         * @return DeleteDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>You can create filesets only in CPFS V2.2.0 and later. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can delete the dataflows that are only in the <c>Running</c> or <c>Stopped</c> state.</description></item>
+        /// <item><description>After a dataflow is deleted, the resources related to the dataflow are released and cannot be restored. You must create a dataflow again if required.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataFlowResponse
+        /// </returns>
         public async Task<DeleteDataFlowResponse> DeleteDataFlowAsync(DeleteDataFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDataFlowWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a file system.
-         *
-         * @description *   Before you delete a file system, you must delete all mount targets of the file system.
-         * *   Before you delete a file system, you must make sure that no lifecycle policy is created for the file system.
-         * *   After a file system is deleted, the data on the file system cannot be restored. Proceed with caution.
-         *
-         * @param request DeleteFileSystemRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you delete a file system, you must delete all mount targets of the file system.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you delete a file system, you must make sure that no lifecycle policy is created for the file system.</description></item>
+        /// <item><description>After a file system is deleted, the data on the file system cannot be restored. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFileSystemRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFileSystemResponse
+        /// </returns>
         public DeleteFileSystemResponse DeleteFileSystemWithOptions(DeleteFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5693,17 +7526,30 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteFileSystemResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a file system.
-         *
-         * @description *   Before you delete a file system, you must delete all mount targets of the file system.
-         * *   Before you delete a file system, you must make sure that no lifecycle policy is created for the file system.
-         * *   After a file system is deleted, the data on the file system cannot be restored. Proceed with caution.
-         *
-         * @param request DeleteFileSystemRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you delete a file system, you must delete all mount targets of the file system.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you delete a file system, you must make sure that no lifecycle policy is created for the file system.</description></item>
+        /// <item><description>After a file system is deleted, the data on the file system cannot be restored. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFileSystemRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFileSystemResponse
+        /// </returns>
         public async Task<DeleteFileSystemResponse> DeleteFileSystemWithOptionsAsync(DeleteFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5731,48 +7577,83 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteFileSystemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a file system.
-         *
-         * @description *   Before you delete a file system, you must delete all mount targets of the file system.
-         * *   Before you delete a file system, you must make sure that no lifecycle policy is created for the file system.
-         * *   After a file system is deleted, the data on the file system cannot be restored. Proceed with caution.
-         *
-         * @param request DeleteFileSystemRequest
-         * @return DeleteFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you delete a file system, you must delete all mount targets of the file system.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you delete a file system, you must make sure that no lifecycle policy is created for the file system.</description></item>
+        /// <item><description>After a file system is deleted, the data on the file system cannot be restored. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFileSystemRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFileSystemResponse
+        /// </returns>
         public DeleteFileSystemResponse DeleteFileSystem(DeleteFileSystemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteFileSystemWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a file system.
-         *
-         * @description *   Before you delete a file system, you must delete all mount targets of the file system.
-         * *   Before you delete a file system, you must make sure that no lifecycle policy is created for the file system.
-         * *   After a file system is deleted, the data on the file system cannot be restored. Proceed with caution.
-         *
-         * @param request DeleteFileSystemRequest
-         * @return DeleteFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you delete a file system, you must delete all mount targets of the file system.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you delete a file system, you must make sure that no lifecycle policy is created for the file system.</description></item>
+        /// <item><description>After a file system is deleted, the data on the file system cannot be restored. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFileSystemRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFileSystemResponse
+        /// </returns>
         public async Task<DeleteFileSystemResponse> DeleteFileSystemAsync(DeleteFileSystemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteFileSystemWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a fileset.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support fileset deletion. After you delete a fileset, all data in the fileset is deleted and cannot be restored. Proceed with caution.
-         *
-         * @param request DeleteFilesetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteFilesetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a fileset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support fileset deletion. After you delete a fileset, all data in the fileset is deleted and cannot be restored. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFilesetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFilesetResponse
+        /// </returns>
         public DeleteFilesetResponse DeleteFilesetWithOptions(DeleteFilesetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5812,16 +7693,29 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteFilesetResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a fileset.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support fileset deletion. After you delete a fileset, all data in the fileset is deleted and cannot be restored. Proceed with caution.
-         *
-         * @param request DeleteFilesetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteFilesetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a fileset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support fileset deletion. After you delete a fileset, all data in the fileset is deleted and cannot be restored. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFilesetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFilesetResponse
+        /// </returns>
         public async Task<DeleteFilesetResponse> DeleteFilesetWithOptionsAsync(DeleteFilesetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5861,41 +7755,68 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteFilesetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a fileset.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support fileset deletion. After you delete a fileset, all data in the fileset is deleted and cannot be restored. Proceed with caution.
-         *
-         * @param request DeleteFilesetRequest
-         * @return DeleteFilesetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a fileset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support fileset deletion. After you delete a fileset, all data in the fileset is deleted and cannot be restored. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFilesetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFilesetResponse
+        /// </returns>
         public DeleteFilesetResponse DeleteFileset(DeleteFilesetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteFilesetWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a fileset.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support fileset deletion. After you delete a fileset, all data in the fileset is deleted and cannot be restored. Proceed with caution.
-         *
-         * @param request DeleteFilesetRequest
-         * @return DeleteFilesetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a fileset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support fileset deletion. After you delete a fileset, all data in the fileset is deleted and cannot be restored. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFilesetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFilesetResponse
+        /// </returns>
         public async Task<DeleteFilesetResponse> DeleteFilesetAsync(DeleteFilesetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteFilesetWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DeleteLDAPConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteLDAPConfigResponse
-         */
+        /// <param name="request">
+        /// DeleteLDAPConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLDAPConfigResponse
+        /// </returns>
         public DeleteLDAPConfigResponse DeleteLDAPConfigWithOptions(DeleteLDAPConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5923,11 +7844,16 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteLDAPConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DeleteLDAPConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteLDAPConfigResponse
-         */
+        /// <param name="request">
+        /// DeleteLDAPConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLDAPConfigResponse
+        /// </returns>
         public async Task<DeleteLDAPConfigResponse> DeleteLDAPConfigWithOptionsAsync(DeleteLDAPConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5955,35 +7881,52 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteLDAPConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DeleteLDAPConfigRequest
-         * @return DeleteLDAPConfigResponse
-         */
+        /// <param name="request">
+        /// DeleteLDAPConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLDAPConfigResponse
+        /// </returns>
         public DeleteLDAPConfigResponse DeleteLDAPConfig(DeleteLDAPConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteLDAPConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DeleteLDAPConfigRequest
-         * @return DeleteLDAPConfigResponse
-         */
+        /// <param name="request">
+        /// DeleteLDAPConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLDAPConfigResponse
+        /// </returns>
         public async Task<DeleteLDAPConfigResponse> DeleteLDAPConfigAsync(DeleteLDAPConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteLDAPConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a lifecycle policy.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request DeleteLifecyclePolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteLifecyclePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a lifecycle policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteLifecyclePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLifecyclePolicyResponse
+        /// </returns>
         public DeleteLifecyclePolicyResponse DeleteLifecyclePolicyWithOptions(DeleteLifecyclePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6015,15 +7958,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteLifecyclePolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a lifecycle policy.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request DeleteLifecyclePolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteLifecyclePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a lifecycle policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteLifecyclePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLifecyclePolicyResponse
+        /// </returns>
         public async Task<DeleteLifecyclePolicyResponse> DeleteLifecyclePolicyWithOptionsAsync(DeleteLifecyclePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6055,41 +8009,67 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteLifecyclePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a lifecycle policy.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request DeleteLifecyclePolicyRequest
-         * @return DeleteLifecyclePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a lifecycle policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteLifecyclePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLifecyclePolicyResponse
+        /// </returns>
         public DeleteLifecyclePolicyResponse DeleteLifecyclePolicy(DeleteLifecyclePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteLifecyclePolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a lifecycle policy.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request DeleteLifecyclePolicyRequest
-         * @return DeleteLifecyclePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a lifecycle policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteLifecyclePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLifecyclePolicyResponse
+        /// </returns>
         public async Task<DeleteLifecyclePolicyResponse> DeleteLifecyclePolicyAsync(DeleteLifecyclePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteLifecyclePolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Disables log dumping for a General-purpose NAS file system.
-         *
-         * @param request DeleteLogAnalysisRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteLogAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables log dumping for a General-purpose NAS file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLogAnalysisRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLogAnalysisResponse
+        /// </returns>
         public DeleteLogAnalysisResponse DeleteLogAnalysisWithOptions(DeleteLogAnalysisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6121,13 +8101,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteLogAnalysisResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Disables log dumping for a General-purpose NAS file system.
-         *
-         * @param request DeleteLogAnalysisRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteLogAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables log dumping for a General-purpose NAS file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLogAnalysisRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLogAnalysisResponse
+        /// </returns>
         public async Task<DeleteLogAnalysisResponse> DeleteLogAnalysisWithOptionsAsync(DeleteLogAnalysisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6159,39 +8147,62 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteLogAnalysisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Disables log dumping for a General-purpose NAS file system.
-         *
-         * @param request DeleteLogAnalysisRequest
-         * @return DeleteLogAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables log dumping for a General-purpose NAS file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLogAnalysisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLogAnalysisResponse
+        /// </returns>
         public DeleteLogAnalysisResponse DeleteLogAnalysis(DeleteLogAnalysisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteLogAnalysisWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Disables log dumping for a General-purpose NAS file system.
-         *
-         * @param request DeleteLogAnalysisRequest
-         * @return DeleteLogAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables log dumping for a General-purpose NAS file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLogAnalysisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLogAnalysisResponse
+        /// </returns>
         public async Task<DeleteLogAnalysisResponse> DeleteLogAnalysisAsync(DeleteLogAnalysisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteLogAnalysisWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a mount target.
-         *
-         * @description After you delete a mount target, the mount target cannot be restored. Proceed with caution.
-         *
-         * @param request DeleteMountTargetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a mount target.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you delete a mount target, the mount target cannot be restored. Proceed with caution.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMountTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMountTargetResponse
+        /// </returns>
         public DeleteMountTargetResponse DeleteMountTargetWithOptions(DeleteMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6223,15 +8234,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteMountTargetResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a mount target.
-         *
-         * @description After you delete a mount target, the mount target cannot be restored. Proceed with caution.
-         *
-         * @param request DeleteMountTargetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a mount target.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you delete a mount target, the mount target cannot be restored. Proceed with caution.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMountTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMountTargetResponse
+        /// </returns>
         public async Task<DeleteMountTargetResponse> DeleteMountTargetWithOptionsAsync(DeleteMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6263,43 +8285,72 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteMountTargetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a mount target.
-         *
-         * @description After you delete a mount target, the mount target cannot be restored. Proceed with caution.
-         *
-         * @param request DeleteMountTargetRequest
-         * @return DeleteMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a mount target.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you delete a mount target, the mount target cannot be restored. Proceed with caution.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMountTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMountTargetResponse
+        /// </returns>
         public DeleteMountTargetResponse DeleteMountTarget(DeleteMountTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteMountTargetWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a mount target.
-         *
-         * @description After you delete a mount target, the mount target cannot be restored. Proceed with caution.
-         *
-         * @param request DeleteMountTargetRequest
-         * @return DeleteMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a mount target.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you delete a mount target, the mount target cannot be restored. Proceed with caution.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMountTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMountTargetResponse
+        /// </returns>
         public async Task<DeleteMountTargetResponse> DeleteMountTargetAsync(DeleteMountTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteMountTargetWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes an export directory of a protocol service.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request DeleteProtocolMountTargetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteProtocolMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an export directory of a protocol service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProtocolMountTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProtocolMountTargetResponse
+        /// </returns>
         public DeleteProtocolMountTargetResponse DeleteProtocolMountTargetWithOptions(DeleteProtocolMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6343,15 +8394,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteProtocolMountTargetResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an export directory of a protocol service.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request DeleteProtocolMountTargetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteProtocolMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an export directory of a protocol service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProtocolMountTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProtocolMountTargetResponse
+        /// </returns>
         public async Task<DeleteProtocolMountTargetResponse> DeleteProtocolMountTargetWithOptionsAsync(DeleteProtocolMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6395,44 +8457,75 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteProtocolMountTargetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an export directory of a protocol service.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request DeleteProtocolMountTargetRequest
-         * @return DeleteProtocolMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an export directory of a protocol service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProtocolMountTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProtocolMountTargetResponse
+        /// </returns>
         public DeleteProtocolMountTargetResponse DeleteProtocolMountTarget(DeleteProtocolMountTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteProtocolMountTargetWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes an export directory of a protocol service.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request DeleteProtocolMountTargetRequest
-         * @return DeleteProtocolMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an export directory of a protocol service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProtocolMountTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProtocolMountTargetResponse
+        /// </returns>
         public async Task<DeleteProtocolMountTargetResponse> DeleteProtocolMountTargetAsync(DeleteProtocolMountTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteProtocolMountTargetWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a protocol service of a Cloud Parallel File Storage (CPFS) file system.
-         *
-         * @description *   This operation is available only to CPFS file systems on the China site (aliyun.com).
-         * *   When you delete a protocol service, the export directories in the protocol service are also deleted.
-         *
-         * @param request DeleteProtocolServiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteProtocolServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a protocol service of a Cloud Parallel File Storage (CPFS) file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to CPFS file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>When you delete a protocol service, the export directories in the protocol service are also deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProtocolServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProtocolServiceResponse
+        /// </returns>
         public DeleteProtocolServiceResponse DeleteProtocolServiceWithOptions(DeleteProtocolServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6472,16 +8565,29 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteProtocolServiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a protocol service of a Cloud Parallel File Storage (CPFS) file system.
-         *
-         * @description *   This operation is available only to CPFS file systems on the China site (aliyun.com).
-         * *   When you delete a protocol service, the export directories in the protocol service are also deleted.
-         *
-         * @param request DeleteProtocolServiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteProtocolServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a protocol service of a Cloud Parallel File Storage (CPFS) file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to CPFS file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>When you delete a protocol service, the export directories in the protocol service are also deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProtocolServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProtocolServiceResponse
+        /// </returns>
         public async Task<DeleteProtocolServiceResponse> DeleteProtocolServiceWithOptionsAsync(DeleteProtocolServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6521,46 +8627,81 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteProtocolServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a protocol service of a Cloud Parallel File Storage (CPFS) file system.
-         *
-         * @description *   This operation is available only to CPFS file systems on the China site (aliyun.com).
-         * *   When you delete a protocol service, the export directories in the protocol service are also deleted.
-         *
-         * @param request DeleteProtocolServiceRequest
-         * @return DeleteProtocolServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a protocol service of a Cloud Parallel File Storage (CPFS) file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to CPFS file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>When you delete a protocol service, the export directories in the protocol service are also deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProtocolServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProtocolServiceResponse
+        /// </returns>
         public DeleteProtocolServiceResponse DeleteProtocolService(DeleteProtocolServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteProtocolServiceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a protocol service of a Cloud Parallel File Storage (CPFS) file system.
-         *
-         * @description *   This operation is available only to CPFS file systems on the China site (aliyun.com).
-         * *   When you delete a protocol service, the export directories in the protocol service are also deleted.
-         *
-         * @param request DeleteProtocolServiceRequest
-         * @return DeleteProtocolServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a protocol service of a Cloud Parallel File Storage (CPFS) file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to CPFS file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>When you delete a protocol service, the export directories in the protocol service are also deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProtocolServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProtocolServiceResponse
+        /// </returns>
         public async Task<DeleteProtocolServiceResponse> DeleteProtocolServiceAsync(DeleteProtocolServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteProtocolServiceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a snapshot or cancels a snapshot that is being created.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request DeleteSnapshotRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteSnapshotResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a snapshot or cancels a snapshot that is being created.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSnapshotRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSnapshotResponse
+        /// </returns>
         public DeleteSnapshotResponse DeleteSnapshotWithOptions(DeleteSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6588,16 +8729,29 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteSnapshotResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a snapshot or cancels a snapshot that is being created.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request DeleteSnapshotRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteSnapshotResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a snapshot or cancels a snapshot that is being created.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSnapshotRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSnapshotResponse
+        /// </returns>
         public async Task<DeleteSnapshotResponse> DeleteSnapshotWithOptionsAsync(DeleteSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6625,43 +8779,73 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DeleteSnapshotResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a snapshot or cancels a snapshot that is being created.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request DeleteSnapshotRequest
-         * @return DeleteSnapshotResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a snapshot or cancels a snapshot that is being created.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSnapshotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSnapshotResponse
+        /// </returns>
         public DeleteSnapshotResponse DeleteSnapshot(DeleteSnapshotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSnapshotWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a snapshot or cancels a snapshot that is being created.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request DeleteSnapshotRequest
-         * @return DeleteSnapshotResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a snapshot or cancels a snapshot that is being created.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSnapshotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSnapshotResponse
+        /// </returns>
         public async Task<DeleteSnapshotResponse> DeleteSnapshotAsync(DeleteSnapshotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSnapshotWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries permission groups.
-         *
-         * @param request DescribeAccessGroupsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAccessGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries permission groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessGroupsResponse
+        /// </returns>
         public DescribeAccessGroupsResponse DescribeAccessGroupsWithOptions(DescribeAccessGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6705,13 +8889,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeAccessGroupsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries permission groups.
-         *
-         * @param request DescribeAccessGroupsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAccessGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries permission groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessGroupsResponse
+        /// </returns>
         public async Task<DescribeAccessGroupsResponse> DescribeAccessGroupsWithOptionsAsync(DescribeAccessGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6755,39 +8947,62 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeAccessGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries permission groups.
-         *
-         * @param request DescribeAccessGroupsRequest
-         * @return DescribeAccessGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries permission groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessGroupsResponse
+        /// </returns>
         public DescribeAccessGroupsResponse DescribeAccessGroups(DescribeAccessGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAccessGroupsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries permission groups.
-         *
-         * @param request DescribeAccessGroupsRequest
-         * @return DescribeAccessGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries permission groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessGroupsResponse
+        /// </returns>
         public async Task<DescribeAccessGroupsResponse> DescribeAccessGroupsAsync(DescribeAccessGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAccessGroupsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of an access point.
-         *
-         * @description Only General-purpose Network File System (NFS) file systems support this operation.
-         *
-         * @param request DescribeAccessPointRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAccessPointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessPointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessPointResponse
+        /// </returns>
         public DescribeAccessPointResponse DescribeAccessPointWithOptions(DescribeAccessPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6819,15 +9034,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeAccessPointResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of an access point.
-         *
-         * @description Only General-purpose Network File System (NFS) file systems support this operation.
-         *
-         * @param request DescribeAccessPointRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAccessPointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessPointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessPointResponse
+        /// </returns>
         public async Task<DescribeAccessPointResponse> DescribeAccessPointWithOptionsAsync(DescribeAccessPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6859,43 +9085,72 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeAccessPointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of an access point.
-         *
-         * @description Only General-purpose Network File System (NFS) file systems support this operation.
-         *
-         * @param request DescribeAccessPointRequest
-         * @return DescribeAccessPointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessPointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessPointResponse
+        /// </returns>
         public DescribeAccessPointResponse DescribeAccessPoint(DescribeAccessPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAccessPointWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of an access point.
-         *
-         * @description Only General-purpose Network File System (NFS) file systems support this operation.
-         *
-         * @param request DescribeAccessPointRequest
-         * @return DescribeAccessPointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessPointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessPointResponse
+        /// </returns>
         public async Task<DescribeAccessPointResponse> DescribeAccessPointAsync(DescribeAccessPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAccessPointWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about an access point.
-         *
-         * @description Only General-purpose Network File System (NFS) file systems support this operation.
-         *
-         * @param request DescribeAccessPointsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAccessPointsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessPointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessPointsResponse
+        /// </returns>
         public DescribeAccessPointsResponse DescribeAccessPointsWithOptions(DescribeAccessPointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6935,15 +9190,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeAccessPointsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about an access point.
-         *
-         * @description Only General-purpose Network File System (NFS) file systems support this operation.
-         *
-         * @param request DescribeAccessPointsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAccessPointsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessPointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessPointsResponse
+        /// </returns>
         public async Task<DescribeAccessPointsResponse> DescribeAccessPointsWithOptionsAsync(DescribeAccessPointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6983,41 +9249,67 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeAccessPointsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about an access point.
-         *
-         * @description Only General-purpose Network File System (NFS) file systems support this operation.
-         *
-         * @param request DescribeAccessPointsRequest
-         * @return DescribeAccessPointsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessPointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessPointsResponse
+        /// </returns>
         public DescribeAccessPointsResponse DescribeAccessPoints(DescribeAccessPointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAccessPointsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about an access point.
-         *
-         * @description Only General-purpose Network File System (NFS) file systems support this operation.
-         *
-         * @param request DescribeAccessPointsRequest
-         * @return DescribeAccessPointsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessPointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessPointsResponse
+        /// </returns>
         public async Task<DescribeAccessPointsResponse> DescribeAccessPointsAsync(DescribeAccessPointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAccessPointsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about rules in a permission group.
-         *
-         * @param request DescribeAccessRulesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAccessRulesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about rules in a permission group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessRulesResponse
+        /// </returns>
         public DescribeAccessRulesResponse DescribeAccessRulesWithOptions(DescribeAccessRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7061,13 +9353,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeAccessRulesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about rules in a permission group.
-         *
-         * @param request DescribeAccessRulesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAccessRulesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about rules in a permission group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessRulesResponse
+        /// </returns>
         public async Task<DescribeAccessRulesResponse> DescribeAccessRulesWithOptionsAsync(DescribeAccessRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7111,40 +9411,65 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeAccessRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about rules in a permission group.
-         *
-         * @param request DescribeAccessRulesRequest
-         * @return DescribeAccessRulesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about rules in a permission group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessRulesResponse
+        /// </returns>
         public DescribeAccessRulesResponse DescribeAccessRules(DescribeAccessRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAccessRulesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about rules in a permission group.
-         *
-         * @param request DescribeAccessRulesRequest
-         * @return DescribeAccessRulesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about rules in a permission group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessRulesResponse
+        /// </returns>
         public async Task<DescribeAccessRulesResponse> DescribeAccessRulesAsync(DescribeAccessRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAccessRulesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries automatic snapshot policies.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request DescribeAutoSnapshotPoliciesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAutoSnapshotPoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries automatic snapshot policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAutoSnapshotPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAutoSnapshotPoliciesResponse
+        /// </returns>
         public DescribeAutoSnapshotPoliciesResponse DescribeAutoSnapshotPoliciesWithOptions(DescribeAutoSnapshotPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7184,16 +9509,29 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeAutoSnapshotPoliciesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries automatic snapshot policies.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request DescribeAutoSnapshotPoliciesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAutoSnapshotPoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries automatic snapshot policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAutoSnapshotPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAutoSnapshotPoliciesResponse
+        /// </returns>
         public async Task<DescribeAutoSnapshotPoliciesResponse> DescribeAutoSnapshotPoliciesWithOptionsAsync(DescribeAutoSnapshotPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7233,46 +9571,81 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeAutoSnapshotPoliciesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries automatic snapshot policies.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request DescribeAutoSnapshotPoliciesRequest
-         * @return DescribeAutoSnapshotPoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries automatic snapshot policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAutoSnapshotPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAutoSnapshotPoliciesResponse
+        /// </returns>
         public DescribeAutoSnapshotPoliciesResponse DescribeAutoSnapshotPolicies(DescribeAutoSnapshotPoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAutoSnapshotPoliciesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries automatic snapshot policies.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request DescribeAutoSnapshotPoliciesRequest
-         * @return DescribeAutoSnapshotPoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries automatic snapshot policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAutoSnapshotPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAutoSnapshotPoliciesResponse
+        /// </returns>
         public async Task<DescribeAutoSnapshotPoliciesResponse> DescribeAutoSnapshotPoliciesAsync(DescribeAutoSnapshotPoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAutoSnapshotPoliciesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries automatic snapshot tasks.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support the snapshot feature.
-         *
-         * @param request DescribeAutoSnapshotTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAutoSnapshotTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries automatic snapshot tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAutoSnapshotTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAutoSnapshotTasksResponse
+        /// </returns>
         public DescribeAutoSnapshotTasksResponse DescribeAutoSnapshotTasksWithOptions(DescribeAutoSnapshotTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7316,16 +9689,29 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeAutoSnapshotTasksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries automatic snapshot tasks.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support the snapshot feature.
-         *
-         * @param request DescribeAutoSnapshotTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAutoSnapshotTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries automatic snapshot tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAutoSnapshotTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAutoSnapshotTasksResponse
+        /// </returns>
         public async Task<DescribeAutoSnapshotTasksResponse> DescribeAutoSnapshotTasksWithOptionsAsync(DescribeAutoSnapshotTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7369,47 +9755,83 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeAutoSnapshotTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries automatic snapshot tasks.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support the snapshot feature.
-         *
-         * @param request DescribeAutoSnapshotTasksRequest
-         * @return DescribeAutoSnapshotTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries automatic snapshot tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAutoSnapshotTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAutoSnapshotTasksResponse
+        /// </returns>
         public DescribeAutoSnapshotTasksResponse DescribeAutoSnapshotTasks(DescribeAutoSnapshotTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAutoSnapshotTasksWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries automatic snapshot tasks.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support the snapshot feature.
-         *
-         * @param request DescribeAutoSnapshotTasksRequest
-         * @return DescribeAutoSnapshotTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries automatic snapshot tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAutoSnapshotTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAutoSnapshotTasksResponse
+        /// </returns>
         public async Task<DescribeAutoSnapshotTasksResponse> DescribeAutoSnapshotTasksAsync(DescribeAutoSnapshotTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAutoSnapshotTasksWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @deprecated OpenAPI DescribeBlackListClients is deprecated
-         *
-         * @summary 获取CPFS服务中黑名单客户端的状态
-         *
-         * @description The API operation is available only for CPFS file systems.
-         *
-         * @param request DescribeBlackListClientsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBlackListClientsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeBlackListClients is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取CPFS服务中黑名单客户端的状态</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API operation is available only for CPFS file systems.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeBlackListClientsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBlackListClientsResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeBlackListClients is deprecated\n")]
         // Deprecated
         public DescribeBlackListClientsResponse DescribeBlackListClientsWithOptions(DescribeBlackListClientsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7446,17 +9868,31 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeBlackListClientsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @deprecated OpenAPI DescribeBlackListClients is deprecated
-         *
-         * @summary 获取CPFS服务中黑名单客户端的状态
-         *
-         * @description The API operation is available only for CPFS file systems.
-         *
-         * @param request DescribeBlackListClientsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBlackListClientsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeBlackListClients is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取CPFS服务中黑名单客户端的状态</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API operation is available only for CPFS file systems.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeBlackListClientsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBlackListClientsResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeBlackListClients is deprecated\n")]
         // Deprecated
         public async Task<DescribeBlackListClientsResponse> DescribeBlackListClientsWithOptionsAsync(DescribeBlackListClientsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7493,16 +9929,28 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeBlackListClientsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @deprecated OpenAPI DescribeBlackListClients is deprecated
-         *
-         * @summary 获取CPFS服务中黑名单客户端的状态
-         *
-         * @description The API operation is available only for CPFS file systems.
-         *
-         * @param request DescribeBlackListClientsRequest
-         * @return DescribeBlackListClientsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeBlackListClients is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取CPFS服务中黑名单客户端的状态</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API operation is available only for CPFS file systems.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeBlackListClientsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBlackListClientsResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeBlackListClients is deprecated\n")]
         // Deprecated
         public DescribeBlackListClientsResponse DescribeBlackListClients(DescribeBlackListClientsRequest request)
         {
@@ -7510,16 +9958,28 @@ namespace AlibabaCloud.SDK.NAS20170626
             return DescribeBlackListClientsWithOptions(request, runtime);
         }
 
-        /**
-         * @deprecated OpenAPI DescribeBlackListClients is deprecated
-         *
-         * @summary 获取CPFS服务中黑名单客户端的状态
-         *
-         * @description The API operation is available only for CPFS file systems.
-         *
-         * @param request DescribeBlackListClientsRequest
-         * @return DescribeBlackListClientsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeBlackListClients is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取CPFS服务中黑名单客户端的状态</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API operation is available only for CPFS file systems.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeBlackListClientsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBlackListClientsResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeBlackListClients is deprecated\n")]
         // Deprecated
         public async Task<DescribeBlackListClientsResponse> DescribeBlackListClientsAsync(DescribeBlackListClientsRequest request)
         {
@@ -7527,13 +9987,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return await DescribeBlackListClientsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询数据流动子任务
-         *
-         * @param request DescribeDataFlowSubTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDataFlowSubTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据流动子任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataFlowSubTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataFlowSubTasksResponse
+        /// </returns>
         public DescribeDataFlowSubTasksResponse DescribeDataFlowSubTasksWithOptions(DescribeDataFlowSubTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7573,13 +10041,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeDataFlowSubTasksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询数据流动子任务
-         *
-         * @param request DescribeDataFlowSubTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDataFlowSubTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据流动子任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataFlowSubTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataFlowSubTasksResponse
+        /// </returns>
         public async Task<DescribeDataFlowSubTasksResponse> DescribeDataFlowSubTasksWithOptionsAsync(DescribeDataFlowSubTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7619,41 +10095,66 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeDataFlowSubTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询数据流动子任务
-         *
-         * @param request DescribeDataFlowSubTasksRequest
-         * @return DescribeDataFlowSubTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据流动子任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataFlowSubTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataFlowSubTasksResponse
+        /// </returns>
         public DescribeDataFlowSubTasksResponse DescribeDataFlowSubTasks(DescribeDataFlowSubTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDataFlowSubTasksWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询数据流动子任务
-         *
-         * @param request DescribeDataFlowSubTasksRequest
-         * @return DescribeDataFlowSubTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据流动子任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataFlowSubTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataFlowSubTasksResponse
+        /// </returns>
         public async Task<DescribeDataFlowSubTasksResponse> DescribeDataFlowSubTasksAsync(DescribeDataFlowSubTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDataFlowSubTasksWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询数据流动任务
-         *
-         * @description ###
-         * *
-         * *
-         *
-         * @param request DescribeDataFlowTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDataFlowTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据流动任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// <item><description></description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDataFlowTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataFlowTasksResponse
+        /// </returns>
         public DescribeDataFlowTasksResponse DescribeDataFlowTasksWithOptions(DescribeDataFlowTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7693,17 +10194,30 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeDataFlowTasksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询数据流动任务
-         *
-         * @description ###
-         * *
-         * *
-         *
-         * @param request DescribeDataFlowTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDataFlowTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据流动任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// <item><description></description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDataFlowTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataFlowTasksResponse
+        /// </returns>
         public async Task<DescribeDataFlowTasksResponse> DescribeDataFlowTasksWithOptionsAsync(DescribeDataFlowTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7743,49 +10257,84 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeDataFlowTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询数据流动任务
-         *
-         * @description ###
-         * *
-         * *
-         *
-         * @param request DescribeDataFlowTasksRequest
-         * @return DescribeDataFlowTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据流动任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// <item><description></description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDataFlowTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataFlowTasksResponse
+        /// </returns>
         public DescribeDataFlowTasksResponse DescribeDataFlowTasks(DescribeDataFlowTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDataFlowTasksWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询数据流动任务
-         *
-         * @description ###
-         * *
-         * *
-         *
-         * @param request DescribeDataFlowTasksRequest
-         * @return DescribeDataFlowTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据流动任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// <item><description></description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDataFlowTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataFlowTasksResponse
+        /// </returns>
         public async Task<DescribeDataFlowTasksResponse> DescribeDataFlowTasksAsync(DescribeDataFlowTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDataFlowTasksWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the dataflows of a CPFS file system.
-         *
-         * @description *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.
-         * *   In Filters, FsetIds, DataFlowlds, SourceStorage, ThroughputList, and Status support exact match only. FileSystemPath, Description, and SourceStoragePath support fuzzy match.
-         * *   Combined query is supported.
-         *
-         * @param request DescribeDataFlowsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDataFlowsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the dataflows of a CPFS file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</para>
+        /// <list type="bullet">
+        /// <item><description>In Filters, FsetIds, DataFlowlds, SourceStorage, ThroughputList, and Status support exact match only. FileSystemPath, Description, and SourceStoragePath support fuzzy match.</description></item>
+        /// <item><description>Combined query is supported.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDataFlowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataFlowsResponse
+        /// </returns>
         public DescribeDataFlowsResponse DescribeDataFlowsWithOptions(DescribeDataFlowsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7825,17 +10374,30 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeDataFlowsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the dataflows of a CPFS file system.
-         *
-         * @description *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.
-         * *   In Filters, FsetIds, DataFlowlds, SourceStorage, ThroughputList, and Status support exact match only. FileSystemPath, Description, and SourceStoragePath support fuzzy match.
-         * *   Combined query is supported.
-         *
-         * @param request DescribeDataFlowsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDataFlowsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the dataflows of a CPFS file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</para>
+        /// <list type="bullet">
+        /// <item><description>In Filters, FsetIds, DataFlowlds, SourceStorage, ThroughputList, and Status support exact match only. FileSystemPath, Description, and SourceStoragePath support fuzzy match.</description></item>
+        /// <item><description>Combined query is supported.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDataFlowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataFlowsResponse
+        /// </returns>
         public async Task<DescribeDataFlowsResponse> DescribeDataFlowsWithOptionsAsync(DescribeDataFlowsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7875,47 +10437,80 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeDataFlowsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the dataflows of a CPFS file system.
-         *
-         * @description *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.
-         * *   In Filters, FsetIds, DataFlowlds, SourceStorage, ThroughputList, and Status support exact match only. FileSystemPath, Description, and SourceStoragePath support fuzzy match.
-         * *   Combined query is supported.
-         *
-         * @param request DescribeDataFlowsRequest
-         * @return DescribeDataFlowsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the dataflows of a CPFS file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</para>
+        /// <list type="bullet">
+        /// <item><description>In Filters, FsetIds, DataFlowlds, SourceStorage, ThroughputList, and Status support exact match only. FileSystemPath, Description, and SourceStoragePath support fuzzy match.</description></item>
+        /// <item><description>Combined query is supported.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDataFlowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataFlowsResponse
+        /// </returns>
         public DescribeDataFlowsResponse DescribeDataFlows(DescribeDataFlowsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDataFlowsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the dataflows of a CPFS file system.
-         *
-         * @description *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.
-         * *   In Filters, FsetIds, DataFlowlds, SourceStorage, ThroughputList, and Status support exact match only. FileSystemPath, Description, and SourceStoragePath support fuzzy match.
-         * *   Combined query is supported.
-         *
-         * @param request DescribeDataFlowsRequest
-         * @return DescribeDataFlowsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the dataflows of a CPFS file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</para>
+        /// <list type="bullet">
+        /// <item><description>In Filters, FsetIds, DataFlowlds, SourceStorage, ThroughputList, and Status support exact match only. FileSystemPath, Description, and SourceStoragePath support fuzzy match.</description></item>
+        /// <item><description>Combined query is supported.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDataFlowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataFlowsResponse
+        /// </returns>
         public async Task<DescribeDataFlowsResponse> DescribeDataFlowsAsync(DescribeDataFlowsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDataFlowsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the directory quotas of a file system.
-         *
-         * @description Only General-purpose NAS file systems support the directory quota feature.
-         *
-         * @param request DescribeDirQuotasRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDirQuotasResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the directory quotas of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support the directory quota feature.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDirQuotasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDirQuotasResponse
+        /// </returns>
         public DescribeDirQuotasResponse DescribeDirQuotasWithOptions(DescribeDirQuotasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7955,15 +10550,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeDirQuotasResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the directory quotas of a file system.
-         *
-         * @description Only General-purpose NAS file systems support the directory quota feature.
-         *
-         * @param request DescribeDirQuotasRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDirQuotasResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the directory quotas of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support the directory quota feature.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDirQuotasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDirQuotasResponse
+        /// </returns>
         public async Task<DescribeDirQuotasResponse> DescribeDirQuotasWithOptionsAsync(DescribeDirQuotasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8003,41 +10609,67 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeDirQuotasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the directory quotas of a file system.
-         *
-         * @description Only General-purpose NAS file systems support the directory quota feature.
-         *
-         * @param request DescribeDirQuotasRequest
-         * @return DescribeDirQuotasResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the directory quotas of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support the directory quota feature.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDirQuotasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDirQuotasResponse
+        /// </returns>
         public DescribeDirQuotasResponse DescribeDirQuotas(DescribeDirQuotasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDirQuotasWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the directory quotas of a file system.
-         *
-         * @description Only General-purpose NAS file systems support the directory quota feature.
-         *
-         * @param request DescribeDirQuotasRequest
-         * @return DescribeDirQuotasResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the directory quotas of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support the directory quota feature.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDirQuotasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDirQuotasResponse
+        /// </returns>
         public async Task<DescribeDirQuotasResponse> DescribeDirQuotasAsync(DescribeDirQuotasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDirQuotasWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the statistics of file systems that are owned by the current account.
-         *
-         * @param request DescribeFileSystemStatisticsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeFileSystemStatisticsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics of file systems that are owned by the current account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFileSystemStatisticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFileSystemStatisticsResponse
+        /// </returns>
         public DescribeFileSystemStatisticsResponse DescribeFileSystemStatisticsWithOptions(DescribeFileSystemStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8069,13 +10701,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeFileSystemStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the statistics of file systems that are owned by the current account.
-         *
-         * @param request DescribeFileSystemStatisticsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeFileSystemStatisticsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics of file systems that are owned by the current account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFileSystemStatisticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFileSystemStatisticsResponse
+        /// </returns>
         public async Task<DescribeFileSystemStatisticsResponse> DescribeFileSystemStatisticsWithOptionsAsync(DescribeFileSystemStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8107,37 +10747,57 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeFileSystemStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the statistics of file systems that are owned by the current account.
-         *
-         * @param request DescribeFileSystemStatisticsRequest
-         * @return DescribeFileSystemStatisticsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics of file systems that are owned by the current account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFileSystemStatisticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFileSystemStatisticsResponse
+        /// </returns>
         public DescribeFileSystemStatisticsResponse DescribeFileSystemStatistics(DescribeFileSystemStatisticsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeFileSystemStatisticsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the statistics of file systems that are owned by the current account.
-         *
-         * @param request DescribeFileSystemStatisticsRequest
-         * @return DescribeFileSystemStatisticsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics of file systems that are owned by the current account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFileSystemStatisticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFileSystemStatisticsResponse
+        /// </returns>
         public async Task<DescribeFileSystemStatisticsResponse> DescribeFileSystemStatisticsAsync(DescribeFileSystemStatisticsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeFileSystemStatisticsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries file systems.
-         *
-         * @param request DescribeFileSystemsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeFileSystemsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries file systems.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFileSystemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFileSystemsResponse
+        /// </returns>
         public DescribeFileSystemsResponse DescribeFileSystemsWithOptions(DescribeFileSystemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8189,13 +10849,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeFileSystemsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries file systems.
-         *
-         * @param request DescribeFileSystemsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeFileSystemsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries file systems.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFileSystemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFileSystemsResponse
+        /// </returns>
         public async Task<DescribeFileSystemsResponse> DescribeFileSystemsWithOptionsAsync(DescribeFileSystemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8247,42 +10915,67 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeFileSystemsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries file systems.
-         *
-         * @param request DescribeFileSystemsRequest
-         * @return DescribeFileSystemsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries file systems.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFileSystemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFileSystemsResponse
+        /// </returns>
         public DescribeFileSystemsResponse DescribeFileSystems(DescribeFileSystemsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeFileSystemsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries file systems.
-         *
-         * @param request DescribeFileSystemsRequest
-         * @return DescribeFileSystemsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries file systems.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFileSystemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFileSystemsResponse
+        /// </returns>
         public async Task<DescribeFileSystemsResponse> DescribeFileSystemsAsync(DescribeFileSystemsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeFileSystemsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about created filesets.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support filesets. You can view the version information on the file system details page in the console.
-         * *   In Filters, FsetIds supports exact match only. FileSystemPath and Description support fuzzy match.
-         * *   Combined query is supported.
-         *
-         * @param request DescribeFilesetsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeFilesetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about created filesets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support filesets. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>In Filters, FsetIds supports exact match only. FileSystemPath and Description support fuzzy match.</description></item>
+        /// <item><description>Combined query is supported.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeFilesetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFilesetsResponse
+        /// </returns>
         public DescribeFilesetsResponse DescribeFilesetsWithOptions(DescribeFilesetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8322,18 +11015,31 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeFilesetsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about created filesets.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support filesets. You can view the version information on the file system details page in the console.
-         * *   In Filters, FsetIds supports exact match only. FileSystemPath and Description support fuzzy match.
-         * *   Combined query is supported.
-         *
-         * @param request DescribeFilesetsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeFilesetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about created filesets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support filesets. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>In Filters, FsetIds supports exact match only. FileSystemPath and Description support fuzzy match.</description></item>
+        /// <item><description>Combined query is supported.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeFilesetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFilesetsResponse
+        /// </returns>
         public async Task<DescribeFilesetsResponse> DescribeFilesetsWithOptionsAsync(DescribeFilesetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8373,49 +11079,82 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeFilesetsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about created filesets.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support filesets. You can view the version information on the file system details page in the console.
-         * *   In Filters, FsetIds supports exact match only. FileSystemPath and Description support fuzzy match.
-         * *   Combined query is supported.
-         *
-         * @param request DescribeFilesetsRequest
-         * @return DescribeFilesetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about created filesets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support filesets. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>In Filters, FsetIds supports exact match only. FileSystemPath and Description support fuzzy match.</description></item>
+        /// <item><description>Combined query is supported.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeFilesetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFilesetsResponse
+        /// </returns>
         public DescribeFilesetsResponse DescribeFilesets(DescribeFilesetsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeFilesetsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about created filesets.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support filesets. You can view the version information on the file system details page in the console.
-         * *   In Filters, FsetIds supports exact match only. FileSystemPath and Description support fuzzy match.
-         * *   Combined query is supported.
-         *
-         * @param request DescribeFilesetsRequest
-         * @return DescribeFilesetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about created filesets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support filesets. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>In Filters, FsetIds supports exact match only. FileSystemPath and Description support fuzzy match.</description></item>
+        /// <item><description>Combined query is supported.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeFilesetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFilesetsResponse
+        /// </returns>
         public async Task<DescribeFilesetsResponse> DescribeFilesetsAsync(DescribeFilesetsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeFilesetsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries lifecycle policies.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request DescribeLifecyclePoliciesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeLifecyclePoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries lifecycle policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeLifecyclePoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLifecyclePoliciesResponse
+        /// </returns>
         public DescribeLifecyclePoliciesResponse DescribeLifecyclePoliciesWithOptions(DescribeLifecyclePoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8439,15 +11178,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeLifecyclePoliciesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries lifecycle policies.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request DescribeLifecyclePoliciesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeLifecyclePoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries lifecycle policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeLifecyclePoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLifecyclePoliciesResponse
+        /// </returns>
         public async Task<DescribeLifecyclePoliciesResponse> DescribeLifecyclePoliciesWithOptionsAsync(DescribeLifecyclePoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8471,41 +11221,67 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeLifecyclePoliciesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries lifecycle policies.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request DescribeLifecyclePoliciesRequest
-         * @return DescribeLifecyclePoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries lifecycle policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeLifecyclePoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLifecyclePoliciesResponse
+        /// </returns>
         public DescribeLifecyclePoliciesResponse DescribeLifecyclePolicies(DescribeLifecyclePoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeLifecyclePoliciesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries lifecycle policies.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request DescribeLifecyclePoliciesRequest
-         * @return DescribeLifecyclePoliciesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries lifecycle policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeLifecyclePoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLifecyclePoliciesResponse
+        /// </returns>
         public async Task<DescribeLifecyclePoliciesResponse> DescribeLifecyclePoliciesAsync(DescribeLifecyclePoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeLifecyclePoliciesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the log dump information configured in log analysis.
-         *
-         * @param request DescribeLogAnalysisRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeLogAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the log dump information configured in log analysis.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLogAnalysisRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLogAnalysisResponse
+        /// </returns>
         public DescribeLogAnalysisResponse DescribeLogAnalysisWithOptions(DescribeLogAnalysisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8545,13 +11321,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeLogAnalysisResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the log dump information configured in log analysis.
-         *
-         * @param request DescribeLogAnalysisRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeLogAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the log dump information configured in log analysis.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLogAnalysisRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLogAnalysisResponse
+        /// </returns>
         public async Task<DescribeLogAnalysisResponse> DescribeLogAnalysisWithOptionsAsync(DescribeLogAnalysisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8591,37 +11375,57 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeLogAnalysisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the log dump information configured in log analysis.
-         *
-         * @param request DescribeLogAnalysisRequest
-         * @return DescribeLogAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the log dump information configured in log analysis.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLogAnalysisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLogAnalysisResponse
+        /// </returns>
         public DescribeLogAnalysisResponse DescribeLogAnalysis(DescribeLogAnalysisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeLogAnalysisWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the log dump information configured in log analysis.
-         *
-         * @param request DescribeLogAnalysisRequest
-         * @return DescribeLogAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the log dump information configured in log analysis.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLogAnalysisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLogAnalysisResponse
+        /// </returns>
         public async Task<DescribeLogAnalysisResponse> DescribeLogAnalysisAsync(DescribeLogAnalysisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeLogAnalysisWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries mount targets.
-         *
-         * @param request DescribeMountTargetsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMountTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries mount targets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMountTargetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMountTargetsResponse
+        /// </returns>
         public DescribeMountTargetsResponse DescribeMountTargetsWithOptions(DescribeMountTargetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8665,13 +11469,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeMountTargetsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries mount targets.
-         *
-         * @param request DescribeMountTargetsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMountTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries mount targets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMountTargetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMountTargetsResponse
+        /// </returns>
         public async Task<DescribeMountTargetsResponse> DescribeMountTargetsWithOptionsAsync(DescribeMountTargetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8715,40 +11527,65 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeMountTargetsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries mount targets.
-         *
-         * @param request DescribeMountTargetsRequest
-         * @return DescribeMountTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries mount targets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMountTargetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMountTargetsResponse
+        /// </returns>
         public DescribeMountTargetsResponse DescribeMountTargets(DescribeMountTargetsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeMountTargetsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries mount targets.
-         *
-         * @param request DescribeMountTargetsRequest
-         * @return DescribeMountTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries mount targets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMountTargetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMountTargetsResponse
+        /// </returns>
         public async Task<DescribeMountTargetsResponse> DescribeMountTargetsAsync(DescribeMountTargetsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeMountTargetsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the clients on which a file system is mounted.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   This operation returns the clients that have accessed the specified file system within the last minute. If the file system is mounted on a client but the client did not access the file system within the last minute, the client is not included in the returned information.
-         *
-         * @param request DescribeMountedClientsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMountedClientsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the clients on which a file system is mounted.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation returns the clients that have accessed the specified file system within the last minute. If the file system is mounted on a client but the client did not access the file system within the last minute, the client is not included in the returned information.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMountedClientsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMountedClientsResponse
+        /// </returns>
         public DescribeMountedClientsResponse DescribeMountedClientsWithOptions(DescribeMountedClientsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8796,16 +11633,29 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeMountedClientsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the clients on which a file system is mounted.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   This operation returns the clients that have accessed the specified file system within the last minute. If the file system is mounted on a client but the client did not access the file system within the last minute, the client is not included in the returned information.
-         *
-         * @param request DescribeMountedClientsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMountedClientsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the clients on which a file system is mounted.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation returns the clients that have accessed the specified file system within the last minute. If the file system is mounted on a client but the client did not access the file system within the last minute, the client is not included in the returned information.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMountedClientsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMountedClientsResponse
+        /// </returns>
         public async Task<DescribeMountedClientsResponse> DescribeMountedClientsWithOptionsAsync(DescribeMountedClientsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8853,43 +11703,73 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeMountedClientsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the clients on which a file system is mounted.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   This operation returns the clients that have accessed the specified file system within the last minute. If the file system is mounted on a client but the client did not access the file system within the last minute, the client is not included in the returned information.
-         *
-         * @param request DescribeMountedClientsRequest
-         * @return DescribeMountedClientsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the clients on which a file system is mounted.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation returns the clients that have accessed the specified file system within the last minute. If the file system is mounted on a client but the client did not access the file system within the last minute, the client is not included in the returned information.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMountedClientsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMountedClientsResponse
+        /// </returns>
         public DescribeMountedClientsResponse DescribeMountedClients(DescribeMountedClientsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeMountedClientsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the clients on which a file system is mounted.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   This operation returns the clients that have accessed the specified file system within the last minute. If the file system is mounted on a client but the client did not access the file system within the last minute, the client is not included in the returned information.
-         *
-         * @param request DescribeMountedClientsRequest
-         * @return DescribeMountedClientsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the clients on which a file system is mounted.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation returns the clients that have accessed the specified file system within the last minute. If the file system is mounted on a client but the client did not access the file system within the last minute, the client is not included in the returned information.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMountedClientsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMountedClientsResponse
+        /// </returns>
         public async Task<DescribeMountedClientsResponse> DescribeMountedClientsAsync(DescribeMountedClientsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeMountedClientsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries whether the NFS ACL feature is enabled for a file system.
-         *
-         * @param request DescribeNfsAclRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeNfsAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the NFS ACL feature is enabled for a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNfsAclRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNfsAclResponse
+        /// </returns>
         public DescribeNfsAclResponse DescribeNfsAclWithOptions(DescribeNfsAclRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8917,13 +11797,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeNfsAclResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether the NFS ACL feature is enabled for a file system.
-         *
-         * @param request DescribeNfsAclRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeNfsAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the NFS ACL feature is enabled for a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNfsAclRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNfsAclResponse
+        /// </returns>
         public async Task<DescribeNfsAclResponse> DescribeNfsAclWithOptionsAsync(DescribeNfsAclRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8951,39 +11839,62 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeNfsAclResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether the NFS ACL feature is enabled for a file system.
-         *
-         * @param request DescribeNfsAclRequest
-         * @return DescribeNfsAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the NFS ACL feature is enabled for a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNfsAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNfsAclResponse
+        /// </returns>
         public DescribeNfsAclResponse DescribeNfsAcl(DescribeNfsAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeNfsAclWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries whether the NFS ACL feature is enabled for a file system.
-         *
-         * @param request DescribeNfsAclRequest
-         * @return DescribeNfsAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the NFS ACL feature is enabled for a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNfsAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNfsAclResponse
+        /// </returns>
         public async Task<DescribeNfsAclResponse> DescribeNfsAclAsync(DescribeNfsAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeNfsAclWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the export directories of a protocol service.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request DescribeProtocolMountTargetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeProtocolMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the export directories of a protocol service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeProtocolMountTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProtocolMountTargetResponse
+        /// </returns>
         public DescribeProtocolMountTargetResponse DescribeProtocolMountTargetWithOptions(DescribeProtocolMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9027,15 +11938,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeProtocolMountTargetResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the export directories of a protocol service.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request DescribeProtocolMountTargetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeProtocolMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the export directories of a protocol service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeProtocolMountTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProtocolMountTargetResponse
+        /// </returns>
         public async Task<DescribeProtocolMountTargetResponse> DescribeProtocolMountTargetWithOptionsAsync(DescribeProtocolMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9079,43 +12001,72 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeProtocolMountTargetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the export directories of a protocol service.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request DescribeProtocolMountTargetRequest
-         * @return DescribeProtocolMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the export directories of a protocol service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeProtocolMountTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProtocolMountTargetResponse
+        /// </returns>
         public DescribeProtocolMountTargetResponse DescribeProtocolMountTarget(DescribeProtocolMountTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeProtocolMountTargetWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the export directories of a protocol service.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request DescribeProtocolMountTargetRequest
-         * @return DescribeProtocolMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the export directories of a protocol service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeProtocolMountTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProtocolMountTargetResponse
+        /// </returns>
         public async Task<DescribeProtocolMountTargetResponse> DescribeProtocolMountTargetAsync(DescribeProtocolMountTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeProtocolMountTargetWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about protocol services.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request DescribeProtocolServiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeProtocolServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about protocol services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeProtocolServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProtocolServiceResponse
+        /// </returns>
         public DescribeProtocolServiceResponse DescribeProtocolServiceWithOptions(DescribeProtocolServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9167,15 +12118,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeProtocolServiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about protocol services.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request DescribeProtocolServiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeProtocolServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about protocol services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeProtocolServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProtocolServiceResponse
+        /// </returns>
         public async Task<DescribeProtocolServiceResponse> DescribeProtocolServiceWithOptionsAsync(DescribeProtocolServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9227,41 +12189,67 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeProtocolServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about protocol services.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request DescribeProtocolServiceRequest
-         * @return DescribeProtocolServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about protocol services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeProtocolServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProtocolServiceResponse
+        /// </returns>
         public DescribeProtocolServiceResponse DescribeProtocolService(DescribeProtocolServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeProtocolServiceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about protocol services.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request DescribeProtocolServiceRequest
-         * @return DescribeProtocolServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about protocol services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeProtocolServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProtocolServiceResponse
+        /// </returns>
         public async Task<DescribeProtocolServiceResponse> DescribeProtocolServiceAsync(DescribeProtocolServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeProtocolServiceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the regions in which Apsara File Storage NAS is available.
-         *
-         * @param request DescribeRegionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions in which Apsara File Storage NAS is available.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9297,13 +12285,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the regions in which Apsara File Storage NAS is available.
-         *
-         * @param request DescribeRegionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions in which Apsara File Storage NAS is available.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9339,37 +12335,57 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the regions in which Apsara File Storage NAS is available.
-         *
-         * @param request DescribeRegionsRequest
-         * @return DescribeRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions in which Apsara File Storage NAS is available.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRegionsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the regions in which Apsara File Storage NAS is available.
-         *
-         * @param request DescribeRegionsRequest
-         * @return DescribeRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions in which Apsara File Storage NAS is available.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRegionsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.
-         *
-         * @param request DescribeSmbAclRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSmbAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmbAclRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmbAclResponse
+        /// </returns>
         public DescribeSmbAclResponse DescribeSmbAclWithOptions(DescribeSmbAclRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9397,13 +12413,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeSmbAclResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.
-         *
-         * @param request DescribeSmbAclRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSmbAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmbAclRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmbAclResponse
+        /// </returns>
         public async Task<DescribeSmbAclResponse> DescribeSmbAclWithOptionsAsync(DescribeSmbAclRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9431,40 +12455,65 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeSmbAclResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.
-         *
-         * @param request DescribeSmbAclRequest
-         * @return DescribeSmbAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmbAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmbAclResponse
+        /// </returns>
         public DescribeSmbAclResponse DescribeSmbAcl(DescribeSmbAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSmbAclWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.
-         *
-         * @param request DescribeSmbAclRequest
-         * @return DescribeSmbAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmbAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmbAclResponse
+        /// </returns>
         public async Task<DescribeSmbAclResponse> DescribeSmbAclAsync(DescribeSmbAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSmbAclWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about one or more snapshots of a file system.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request DescribeSnapshotsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSnapshotsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about one or more snapshots of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSnapshotsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSnapshotsResponse
+        /// </returns>
         public DescribeSnapshotsResponse DescribeSnapshotsWithOptions(DescribeSnapshotsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9520,16 +12569,29 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeSnapshotsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about one or more snapshots of a file system.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request DescribeSnapshotsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSnapshotsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about one or more snapshots of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSnapshotsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSnapshotsResponse
+        /// </returns>
         public async Task<DescribeSnapshotsResponse> DescribeSnapshotsWithOptionsAsync(DescribeSnapshotsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9585,43 +12647,73 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeSnapshotsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about one or more snapshots of a file system.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request DescribeSnapshotsRequest
-         * @return DescribeSnapshotsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about one or more snapshots of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSnapshotsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSnapshotsResponse
+        /// </returns>
         public DescribeSnapshotsResponse DescribeSnapshots(DescribeSnapshotsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSnapshotsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about one or more snapshots of a file system.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request DescribeSnapshotsRequest
-         * @return DescribeSnapshotsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about one or more snapshots of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSnapshotsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSnapshotsResponse
+        /// </returns>
         public async Task<DescribeSnapshotsResponse> DescribeSnapshotsAsync(DescribeSnapshotsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSnapshotsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary You can call the DescribeStoragePackages operation to query the list of storage plans.
-         *
-         * @param request DescribeStoragePackagesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeStoragePackagesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the DescribeStoragePackages operation to query the list of storage plans.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeStoragePackagesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeStoragePackagesResponse
+        /// </returns>
         public DescribeStoragePackagesResponse DescribeStoragePackagesWithOptions(DescribeStoragePackagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9661,13 +12753,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeStoragePackagesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call the DescribeStoragePackages operation to query the list of storage plans.
-         *
-         * @param request DescribeStoragePackagesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeStoragePackagesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the DescribeStoragePackages operation to query the list of storage plans.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeStoragePackagesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeStoragePackagesResponse
+        /// </returns>
         public async Task<DescribeStoragePackagesResponse> DescribeStoragePackagesWithOptionsAsync(DescribeStoragePackagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9707,37 +12807,57 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeStoragePackagesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call the DescribeStoragePackages operation to query the list of storage plans.
-         *
-         * @param request DescribeStoragePackagesRequest
-         * @return DescribeStoragePackagesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the DescribeStoragePackages operation to query the list of storage plans.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeStoragePackagesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeStoragePackagesResponse
+        /// </returns>
         public DescribeStoragePackagesResponse DescribeStoragePackages(DescribeStoragePackagesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeStoragePackagesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary You can call the DescribeStoragePackages operation to query the list of storage plans.
-         *
-         * @param request DescribeStoragePackagesRequest
-         * @return DescribeStoragePackagesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the DescribeStoragePackages operation to query the list of storage plans.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeStoragePackagesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeStoragePackagesResponse
+        /// </returns>
         public async Task<DescribeStoragePackagesResponse> DescribeStoragePackagesAsync(DescribeStoragePackagesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeStoragePackagesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries all zones in a region and the file system types that are supported in each zone.
-         *
-         * @param request DescribeZonesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeZonesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all zones in a region and the file system types that are supported in each zone.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeZonesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeZonesResponse
+        /// </returns>
         public DescribeZonesResponse DescribeZonesWithOptions(DescribeZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9769,13 +12889,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeZonesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries all zones in a region and the file system types that are supported in each zone.
-         *
-         * @param request DescribeZonesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeZonesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all zones in a region and the file system types that are supported in each zone.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeZonesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeZonesResponse
+        /// </returns>
         public async Task<DescribeZonesResponse> DescribeZonesWithOptionsAsync(DescribeZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9807,41 +12935,66 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeZonesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries all zones in a region and the file system types that are supported in each zone.
-         *
-         * @param request DescribeZonesRequest
-         * @return DescribeZonesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all zones in a region and the file system types that are supported in each zone.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeZonesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeZonesResponse
+        /// </returns>
         public DescribeZonesResponse DescribeZones(DescribeZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeZonesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries all zones in a region and the file system types that are supported in each zone.
-         *
-         * @param request DescribeZonesRequest
-         * @return DescribeZonesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all zones in a region and the file system types that are supported in each zone.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeZonesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeZonesResponse
+        /// </returns>
         public async Task<DescribeZonesResponse> DescribeZonesAsync(DescribeZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeZonesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Disables and empties the recycle bin of a General-purpose NAS file system.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   If you disable the recycle bin, all files in the recycle bin are permanently deleted.
-         * *   If you disable and then enable the recycle bin, the recycle bin is empty. You cannot retrieve the deleted files.
-         *
-         * @param request DisableAndCleanRecycleBinRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DisableAndCleanRecycleBinResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables and empties the recycle bin of a General-purpose NAS file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>If you disable the recycle bin, all files in the recycle bin are permanently deleted.</description></item>
+        /// <item><description>If you disable and then enable the recycle bin, the recycle bin is empty. You cannot retrieve the deleted files.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableAndCleanRecycleBinRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableAndCleanRecycleBinResponse
+        /// </returns>
         public DisableAndCleanRecycleBinResponse DisableAndCleanRecycleBinWithOptions(DisableAndCleanRecycleBinRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9865,17 +13018,30 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DisableAndCleanRecycleBinResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Disables and empties the recycle bin of a General-purpose NAS file system.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   If you disable the recycle bin, all files in the recycle bin are permanently deleted.
-         * *   If you disable and then enable the recycle bin, the recycle bin is empty. You cannot retrieve the deleted files.
-         *
-         * @param request DisableAndCleanRecycleBinRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DisableAndCleanRecycleBinResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables and empties the recycle bin of a General-purpose NAS file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>If you disable the recycle bin, all files in the recycle bin are permanently deleted.</description></item>
+        /// <item><description>If you disable and then enable the recycle bin, the recycle bin is empty. You cannot retrieve the deleted files.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableAndCleanRecycleBinRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableAndCleanRecycleBinResponse
+        /// </returns>
         public async Task<DisableAndCleanRecycleBinResponse> DisableAndCleanRecycleBinWithOptionsAsync(DisableAndCleanRecycleBinRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9899,45 +13065,75 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DisableAndCleanRecycleBinResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Disables and empties the recycle bin of a General-purpose NAS file system.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   If you disable the recycle bin, all files in the recycle bin are permanently deleted.
-         * *   If you disable and then enable the recycle bin, the recycle bin is empty. You cannot retrieve the deleted files.
-         *
-         * @param request DisableAndCleanRecycleBinRequest
-         * @return DisableAndCleanRecycleBinResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables and empties the recycle bin of a General-purpose NAS file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>If you disable the recycle bin, all files in the recycle bin are permanently deleted.</description></item>
+        /// <item><description>If you disable and then enable the recycle bin, the recycle bin is empty. You cannot retrieve the deleted files.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableAndCleanRecycleBinRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableAndCleanRecycleBinResponse
+        /// </returns>
         public DisableAndCleanRecycleBinResponse DisableAndCleanRecycleBin(DisableAndCleanRecycleBinRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableAndCleanRecycleBinWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Disables and empties the recycle bin of a General-purpose NAS file system.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   If you disable the recycle bin, all files in the recycle bin are permanently deleted.
-         * *   If you disable and then enable the recycle bin, the recycle bin is empty. You cannot retrieve the deleted files.
-         *
-         * @param request DisableAndCleanRecycleBinRequest
-         * @return DisableAndCleanRecycleBinResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables and empties the recycle bin of a General-purpose NAS file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>If you disable the recycle bin, all files in the recycle bin are permanently deleted.</description></item>
+        /// <item><description>If you disable and then enable the recycle bin, the recycle bin is empty. You cannot retrieve the deleted files.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableAndCleanRecycleBinRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableAndCleanRecycleBinResponse
+        /// </returns>
         public async Task<DisableAndCleanRecycleBinResponse> DisableAndCleanRecycleBinAsync(DisableAndCleanRecycleBinRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableAndCleanRecycleBinWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Disables the NFS ACL feature for a file system.
-         *
-         * @param request DisableNfsAclRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DisableNfsAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the NFS ACL feature for a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableNfsAclRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableNfsAclResponse
+        /// </returns>
         public DisableNfsAclResponse DisableNfsAclWithOptions(DisableNfsAclRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9965,13 +13161,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DisableNfsAclResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Disables the NFS ACL feature for a file system.
-         *
-         * @param request DisableNfsAclRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DisableNfsAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the NFS ACL feature for a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableNfsAclRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableNfsAclResponse
+        /// </returns>
         public async Task<DisableNfsAclResponse> DisableNfsAclWithOptionsAsync(DisableNfsAclRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9999,37 +13203,57 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DisableNfsAclResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Disables the NFS ACL feature for a file system.
-         *
-         * @param request DisableNfsAclRequest
-         * @return DisableNfsAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the NFS ACL feature for a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableNfsAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableNfsAclResponse
+        /// </returns>
         public DisableNfsAclResponse DisableNfsAcl(DisableNfsAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableNfsAclWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Disables the NFS ACL feature for a file system.
-         *
-         * @param request DisableNfsAclRequest
-         * @return DisableNfsAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the NFS ACL feature for a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableNfsAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableNfsAclResponse
+        /// </returns>
         public async Task<DisableNfsAclResponse> DisableNfsAclAsync(DisableNfsAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableNfsAclWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Disables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.
-         *
-         * @param request DisableSmbAclRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DisableSmbAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableSmbAclRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableSmbAclResponse
+        /// </returns>
         public DisableSmbAclResponse DisableSmbAclWithOptions(DisableSmbAclRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10057,13 +13281,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DisableSmbAclResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Disables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.
-         *
-         * @param request DisableSmbAclRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DisableSmbAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableSmbAclRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableSmbAclResponse
+        /// </returns>
         public async Task<DisableSmbAclResponse> DisableSmbAclWithOptionsAsync(DisableSmbAclRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10091,37 +13323,57 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DisableSmbAclResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Disables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.
-         *
-         * @param request DisableSmbAclRequest
-         * @return DisableSmbAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableSmbAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableSmbAclResponse
+        /// </returns>
         public DisableSmbAclResponse DisableSmbAcl(DisableSmbAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableSmbAclWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Disables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.
-         *
-         * @param request DisableSmbAclRequest
-         * @return DisableSmbAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableSmbAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableSmbAclResponse
+        /// </returns>
         public async Task<DisableSmbAclResponse> DisableSmbAclAsync(DisableSmbAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableSmbAclWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables the NFS ACL feature for a file system.
-         *
-         * @param request EnableNfsAclRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableNfsAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the NFS ACL feature for a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableNfsAclRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableNfsAclResponse
+        /// </returns>
         public EnableNfsAclResponse EnableNfsAclWithOptions(EnableNfsAclRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10149,13 +13401,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<EnableNfsAclResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables the NFS ACL feature for a file system.
-         *
-         * @param request EnableNfsAclRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableNfsAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the NFS ACL feature for a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableNfsAclRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableNfsAclResponse
+        /// </returns>
         public async Task<EnableNfsAclResponse> EnableNfsAclWithOptionsAsync(EnableNfsAclRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10183,39 +13443,62 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<EnableNfsAclResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables the NFS ACL feature for a file system.
-         *
-         * @param request EnableNfsAclRequest
-         * @return EnableNfsAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the NFS ACL feature for a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableNfsAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableNfsAclResponse
+        /// </returns>
         public EnableNfsAclResponse EnableNfsAcl(EnableNfsAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableNfsAclWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables the NFS ACL feature for a file system.
-         *
-         * @param request EnableNfsAclRequest
-         * @return EnableNfsAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the NFS ACL feature for a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableNfsAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableNfsAclResponse
+        /// </returns>
         public async Task<EnableNfsAclResponse> EnableNfsAclAsync(EnableNfsAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableNfsAclWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables the recycle bin feature for a file system.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request EnableRecycleBinRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableRecycleBinResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the recycle bin feature for a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableRecycleBinRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableRecycleBinResponse
+        /// </returns>
         public EnableRecycleBinResponse EnableRecycleBinWithOptions(EnableRecycleBinRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10247,15 +13530,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<EnableRecycleBinResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables the recycle bin feature for a file system.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request EnableRecycleBinRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableRecycleBinResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the recycle bin feature for a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableRecycleBinRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableRecycleBinResponse
+        /// </returns>
         public async Task<EnableRecycleBinResponse> EnableRecycleBinWithOptionsAsync(EnableRecycleBinRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10287,41 +13581,67 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<EnableRecycleBinResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables the recycle bin feature for a file system.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request EnableRecycleBinRequest
-         * @return EnableRecycleBinResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the recycle bin feature for a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableRecycleBinRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableRecycleBinResponse
+        /// </returns>
         public EnableRecycleBinResponse EnableRecycleBin(EnableRecycleBinRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableRecycleBinWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables the recycle bin feature for a file system.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request EnableRecycleBinRequest
-         * @return EnableRecycleBinResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the recycle bin feature for a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableRecycleBinRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableRecycleBinResponse
+        /// </returns>
         public async Task<EnableRecycleBinResponse> EnableRecycleBinAsync(EnableRecycleBinRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableRecycleBinWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.
-         *
-         * @param request EnableSmbAclRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableSmbAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableSmbAclRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableSmbAclResponse
+        /// </returns>
         public EnableSmbAclResponse EnableSmbAclWithOptions(EnableSmbAclRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10357,13 +13677,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<EnableSmbAclResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.
-         *
-         * @param request EnableSmbAclRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableSmbAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableSmbAclRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableSmbAclResponse
+        /// </returns>
         public async Task<EnableSmbAclResponse> EnableSmbAclWithOptionsAsync(EnableSmbAclRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10399,39 +13727,62 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<EnableSmbAclResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.
-         *
-         * @param request EnableSmbAclRequest
-         * @return EnableSmbAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableSmbAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableSmbAclResponse
+        /// </returns>
         public EnableSmbAclResponse EnableSmbAcl(EnableSmbAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableSmbAclWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.
-         *
-         * @param request EnableSmbAclRequest
-         * @return EnableSmbAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableSmbAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableSmbAclResponse
+        /// </returns>
         public async Task<EnableSmbAclResponse> EnableSmbAclAsync(EnableSmbAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableSmbAclWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries whether a directory contains files that are stored in the Infrequent Access (IA) or Archive storage class, or whether a file is stored in the IA or Archive storage class.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request GetDirectoryOrFilePropertiesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDirectoryOrFilePropertiesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether a directory contains files that are stored in the Infrequent Access (IA) or Archive storage class, or whether a file is stored in the IA or Archive storage class.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDirectoryOrFilePropertiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDirectoryOrFilePropertiesResponse
+        /// </returns>
         public GetDirectoryOrFilePropertiesResponse GetDirectoryOrFilePropertiesWithOptions(GetDirectoryOrFilePropertiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10463,15 +13814,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<GetDirectoryOrFilePropertiesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether a directory contains files that are stored in the Infrequent Access (IA) or Archive storage class, or whether a file is stored in the IA or Archive storage class.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request GetDirectoryOrFilePropertiesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDirectoryOrFilePropertiesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether a directory contains files that are stored in the Infrequent Access (IA) or Archive storage class, or whether a file is stored in the IA or Archive storage class.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDirectoryOrFilePropertiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDirectoryOrFilePropertiesResponse
+        /// </returns>
         public async Task<GetDirectoryOrFilePropertiesResponse> GetDirectoryOrFilePropertiesWithOptionsAsync(GetDirectoryOrFilePropertiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10503,41 +13865,72 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<GetDirectoryOrFilePropertiesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether a directory contains files that are stored in the Infrequent Access (IA) or Archive storage class, or whether a file is stored in the IA or Archive storage class.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request GetDirectoryOrFilePropertiesRequest
-         * @return GetDirectoryOrFilePropertiesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether a directory contains files that are stored in the Infrequent Access (IA) or Archive storage class, or whether a file is stored in the IA or Archive storage class.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDirectoryOrFilePropertiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDirectoryOrFilePropertiesResponse
+        /// </returns>
         public GetDirectoryOrFilePropertiesResponse GetDirectoryOrFileProperties(GetDirectoryOrFilePropertiesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDirectoryOrFilePropertiesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries whether a directory contains files that are stored in the Infrequent Access (IA) or Archive storage class, or whether a file is stored in the IA or Archive storage class.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request GetDirectoryOrFilePropertiesRequest
-         * @return GetDirectoryOrFilePropertiesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether a directory contains files that are stored in the Infrequent Access (IA) or Archive storage class, or whether a file is stored in the IA or Archive storage class.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDirectoryOrFilePropertiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDirectoryOrFilePropertiesResponse
+        /// </returns>
         public async Task<GetDirectoryOrFilePropertiesResponse> GetDirectoryOrFilePropertiesAsync(GetDirectoryOrFilePropertiesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDirectoryOrFilePropertiesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the recycle bin configurations of a General-purpose NAS file system.
-         *
-         * @param request GetRecycleBinAttributeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetRecycleBinAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the recycle bin configurations of a General-purpose NAS file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Apsara File Storage NAS (NAS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRecycleBinAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecycleBinAttributeResponse
+        /// </returns>
         public GetRecycleBinAttributeResponse GetRecycleBinAttributeWithOptions(GetRecycleBinAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10561,13 +13954,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<GetRecycleBinAttributeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the recycle bin configurations of a General-purpose NAS file system.
-         *
-         * @param request GetRecycleBinAttributeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetRecycleBinAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the recycle bin configurations of a General-purpose NAS file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Apsara File Storage NAS (NAS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRecycleBinAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecycleBinAttributeResponse
+        /// </returns>
         public async Task<GetRecycleBinAttributeResponse> GetRecycleBinAttributeWithOptionsAsync(GetRecycleBinAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10591,39 +13997,72 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<GetRecycleBinAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the recycle bin configurations of a General-purpose NAS file system.
-         *
-         * @param request GetRecycleBinAttributeRequest
-         * @return GetRecycleBinAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the recycle bin configurations of a General-purpose NAS file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Apsara File Storage NAS (NAS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRecycleBinAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecycleBinAttributeResponse
+        /// </returns>
         public GetRecycleBinAttributeResponse GetRecycleBinAttribute(GetRecycleBinAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetRecycleBinAttributeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the recycle bin configurations of a General-purpose NAS file system.
-         *
-         * @param request GetRecycleBinAttributeRequest
-         * @return GetRecycleBinAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the recycle bin configurations of a General-purpose NAS file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Apsara File Storage NAS (NAS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRecycleBinAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecycleBinAttributeResponse
+        /// </returns>
         public async Task<GetRecycleBinAttributeResponse> GetRecycleBinAttributeAsync(GetRecycleBinAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetRecycleBinAttributeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the infrequently-accessed files in a specified directory of a General-purpose NAS file system and the subdirectories that contain the files.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ListDirectoriesAndFilesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDirectoriesAndFilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the infrequently-accessed files in a specified directory of a General-purpose NAS file system and the subdirectories that contain the files.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDirectoriesAndFilesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDirectoriesAndFilesResponse
+        /// </returns>
         public ListDirectoriesAndFilesResponse ListDirectoriesAndFilesWithOptions(ListDirectoriesAndFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10671,15 +14110,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ListDirectoriesAndFilesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the infrequently-accessed files in a specified directory of a General-purpose NAS file system and the subdirectories that contain the files.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ListDirectoriesAndFilesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDirectoriesAndFilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the infrequently-accessed files in a specified directory of a General-purpose NAS file system and the subdirectories that contain the files.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDirectoriesAndFilesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDirectoriesAndFilesResponse
+        /// </returns>
         public async Task<ListDirectoriesAndFilesResponse> ListDirectoriesAndFilesWithOptionsAsync(ListDirectoriesAndFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10727,43 +14177,72 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ListDirectoriesAndFilesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the infrequently-accessed files in a specified directory of a General-purpose NAS file system and the subdirectories that contain the files.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ListDirectoriesAndFilesRequest
-         * @return ListDirectoriesAndFilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the infrequently-accessed files in a specified directory of a General-purpose NAS file system and the subdirectories that contain the files.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDirectoriesAndFilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDirectoriesAndFilesResponse
+        /// </returns>
         public ListDirectoriesAndFilesResponse ListDirectoriesAndFiles(ListDirectoriesAndFilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDirectoriesAndFilesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the infrequently-accessed files in a specified directory of a General-purpose NAS file system and the subdirectories that contain the files.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ListDirectoriesAndFilesRequest
-         * @return ListDirectoriesAndFilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the infrequently-accessed files in a specified directory of a General-purpose NAS file system and the subdirectories that contain the files.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDirectoriesAndFilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDirectoriesAndFilesResponse
+        /// </returns>
         public async Task<ListDirectoriesAndFilesResponse> ListDirectoriesAndFilesAsync(ListDirectoriesAndFilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDirectoriesAndFilesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries data retrieval tasks.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ListLifecycleRetrieveJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListLifecycleRetrieveJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries data retrieval tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListLifecycleRetrieveJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLifecycleRetrieveJobsResponse
+        /// </returns>
         public ListLifecycleRetrieveJobsResponse ListLifecycleRetrieveJobsWithOptions(ListLifecycleRetrieveJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10807,15 +14286,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ListLifecycleRetrieveJobsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries data retrieval tasks.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ListLifecycleRetrieveJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListLifecycleRetrieveJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries data retrieval tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListLifecycleRetrieveJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLifecycleRetrieveJobsResponse
+        /// </returns>
         public async Task<ListLifecycleRetrieveJobsResponse> ListLifecycleRetrieveJobsWithOptionsAsync(ListLifecycleRetrieveJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10859,43 +14349,72 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ListLifecycleRetrieveJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries data retrieval tasks.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ListLifecycleRetrieveJobsRequest
-         * @return ListLifecycleRetrieveJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries data retrieval tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListLifecycleRetrieveJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLifecycleRetrieveJobsResponse
+        /// </returns>
         public ListLifecycleRetrieveJobsResponse ListLifecycleRetrieveJobs(ListLifecycleRetrieveJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListLifecycleRetrieveJobsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries data retrieval tasks.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ListLifecycleRetrieveJobsRequest
-         * @return ListLifecycleRetrieveJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries data retrieval tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListLifecycleRetrieveJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLifecycleRetrieveJobsResponse
+        /// </returns>
         public async Task<ListLifecycleRetrieveJobsResponse> ListLifecycleRetrieveJobsAsync(ListLifecycleRetrieveJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListLifecycleRetrieveJobsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the directories that are recently deleted.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ListRecentlyRecycledDirectoriesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListRecentlyRecycledDirectoriesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the directories that are recently deleted.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRecentlyRecycledDirectoriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecentlyRecycledDirectoriesResponse
+        /// </returns>
         public ListRecentlyRecycledDirectoriesResponse ListRecentlyRecycledDirectoriesWithOptions(ListRecentlyRecycledDirectoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10919,15 +14438,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ListRecentlyRecycledDirectoriesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the directories that are recently deleted.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ListRecentlyRecycledDirectoriesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListRecentlyRecycledDirectoriesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the directories that are recently deleted.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRecentlyRecycledDirectoriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecentlyRecycledDirectoriesResponse
+        /// </returns>
         public async Task<ListRecentlyRecycledDirectoriesResponse> ListRecentlyRecycledDirectoriesWithOptionsAsync(ListRecentlyRecycledDirectoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10951,44 +14481,75 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ListRecentlyRecycledDirectoriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the directories that are recently deleted.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ListRecentlyRecycledDirectoriesRequest
-         * @return ListRecentlyRecycledDirectoriesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the directories that are recently deleted.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRecentlyRecycledDirectoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecentlyRecycledDirectoriesResponse
+        /// </returns>
         public ListRecentlyRecycledDirectoriesResponse ListRecentlyRecycledDirectories(ListRecentlyRecycledDirectoriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListRecentlyRecycledDirectoriesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the directories that are recently deleted.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ListRecentlyRecycledDirectoriesRequest
-         * @return ListRecentlyRecycledDirectoriesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the directories that are recently deleted.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRecentlyRecycledDirectoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecentlyRecycledDirectoriesResponse
+        /// </returns>
         public async Task<ListRecentlyRecycledDirectoriesResponse> ListRecentlyRecycledDirectoriesAsync(ListRecentlyRecycledDirectoriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListRecentlyRecycledDirectoriesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the jobs of the recycle bin.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   You can query a maximum of 50 jobs that are recently executed.
-         *
-         * @param request ListRecycleBinJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListRecycleBinJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the jobs of the recycle bin.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query a maximum of 50 jobs that are recently executed.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRecycleBinJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecycleBinJobsResponse
+        /// </returns>
         public ListRecycleBinJobsResponse ListRecycleBinJobsWithOptions(ListRecycleBinJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11012,16 +14573,29 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ListRecycleBinJobsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the jobs of the recycle bin.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   You can query a maximum of 50 jobs that are recently executed.
-         *
-         * @param request ListRecycleBinJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListRecycleBinJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the jobs of the recycle bin.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query a maximum of 50 jobs that are recently executed.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRecycleBinJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecycleBinJobsResponse
+        /// </returns>
         public async Task<ListRecycleBinJobsResponse> ListRecycleBinJobsWithOptionsAsync(ListRecycleBinJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11045,45 +14619,78 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ListRecycleBinJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the jobs of the recycle bin.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   You can query a maximum of 50 jobs that are recently executed.
-         *
-         * @param request ListRecycleBinJobsRequest
-         * @return ListRecycleBinJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the jobs of the recycle bin.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query a maximum of 50 jobs that are recently executed.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRecycleBinJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecycleBinJobsResponse
+        /// </returns>
         public ListRecycleBinJobsResponse ListRecycleBinJobs(ListRecycleBinJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListRecycleBinJobsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the jobs of the recycle bin.
-         *
-         * @description *   Only General-purpose NAS file systems support this operation.
-         * *   You can query a maximum of 50 jobs that are recently executed.
-         *
-         * @param request ListRecycleBinJobsRequest
-         * @return ListRecycleBinJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the jobs of the recycle bin.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query a maximum of 50 jobs that are recently executed.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRecycleBinJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecycleBinJobsResponse
+        /// </returns>
         public async Task<ListRecycleBinJobsResponse> ListRecycleBinJobsAsync(ListRecycleBinJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListRecycleBinJobsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries deleted files or directories.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ListRecycledDirectoriesAndFilesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListRecycledDirectoriesAndFilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries deleted files or directories.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRecycledDirectoriesAndFilesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecycledDirectoriesAndFilesResponse
+        /// </returns>
         public ListRecycledDirectoriesAndFilesResponse ListRecycledDirectoriesAndFilesWithOptions(ListRecycledDirectoriesAndFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11107,15 +14714,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ListRecycledDirectoriesAndFilesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries deleted files or directories.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ListRecycledDirectoriesAndFilesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListRecycledDirectoriesAndFilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries deleted files or directories.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRecycledDirectoriesAndFilesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecycledDirectoriesAndFilesResponse
+        /// </returns>
         public async Task<ListRecycledDirectoriesAndFilesResponse> ListRecycledDirectoriesAndFilesWithOptionsAsync(ListRecycledDirectoriesAndFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11139,41 +14757,67 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ListRecycledDirectoriesAndFilesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries deleted files or directories.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ListRecycledDirectoriesAndFilesRequest
-         * @return ListRecycledDirectoriesAndFilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries deleted files or directories.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRecycledDirectoriesAndFilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecycledDirectoriesAndFilesResponse
+        /// </returns>
         public ListRecycledDirectoriesAndFilesResponse ListRecycledDirectoriesAndFiles(ListRecycledDirectoriesAndFilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListRecycledDirectoriesAndFilesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries deleted files or directories.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ListRecycledDirectoriesAndFilesRequest
-         * @return ListRecycledDirectoriesAndFilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries deleted files or directories.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRecycledDirectoriesAndFilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecycledDirectoriesAndFilesResponse
+        /// </returns>
         public async Task<ListRecycledDirectoriesAndFilesResponse> ListRecycledDirectoriesAndFilesAsync(ListRecycledDirectoriesAndFilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListRecycledDirectoriesAndFilesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries tags.
-         *
-         * @param request ListTagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11213,13 +14857,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries tags.
-         *
-         * @param request ListTagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11259,39 +14911,62 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries tags.
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries tags.
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies a permission group.
-         *
-         * @description The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.
-         *
-         * @param request ModifyAccessGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAccessGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a permission group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAccessGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccessGroupResponse
+        /// </returns>
         public ModifyAccessGroupResponse ModifyAccessGroupWithOptions(ModifyAccessGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11327,15 +15002,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyAccessGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a permission group.
-         *
-         * @description The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.
-         *
-         * @param request ModifyAccessGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAccessGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a permission group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAccessGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccessGroupResponse
+        /// </returns>
         public async Task<ModifyAccessGroupResponse> ModifyAccessGroupWithOptionsAsync(ModifyAccessGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11371,43 +15057,72 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyAccessGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a permission group.
-         *
-         * @description The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.
-         *
-         * @param request ModifyAccessGroupRequest
-         * @return ModifyAccessGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a permission group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAccessGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccessGroupResponse
+        /// </returns>
         public ModifyAccessGroupResponse ModifyAccessGroup(ModifyAccessGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAccessGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies a permission group.
-         *
-         * @description The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.
-         *
-         * @param request ModifyAccessGroupRequest
-         * @return ModifyAccessGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a permission group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAccessGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccessGroupResponse
+        /// </returns>
         public async Task<ModifyAccessGroupResponse> ModifyAccessGroupAsync(ModifyAccessGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAccessGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the information about an access point.
-         *
-         * @description Only General-purpose Network File System (NFS) file systems support this operation.
-         *
-         * @param request ModifyAccessPointRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAccessPointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAccessPointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccessPointResponse
+        /// </returns>
         public ModifyAccessPointResponse ModifyAccessPointWithOptions(ModifyAccessPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11451,15 +15166,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyAccessPointResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the information about an access point.
-         *
-         * @description Only General-purpose Network File System (NFS) file systems support this operation.
-         *
-         * @param request ModifyAccessPointRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAccessPointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAccessPointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccessPointResponse
+        /// </returns>
         public async Task<ModifyAccessPointResponse> ModifyAccessPointWithOptionsAsync(ModifyAccessPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11503,43 +15229,72 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyAccessPointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the information about an access point.
-         *
-         * @description Only General-purpose Network File System (NFS) file systems support this operation.
-         *
-         * @param request ModifyAccessPointRequest
-         * @return ModifyAccessPointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAccessPointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccessPointResponse
+        /// </returns>
         public ModifyAccessPointResponse ModifyAccessPoint(ModifyAccessPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAccessPointWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the information about an access point.
-         *
-         * @description Only General-purpose Network File System (NFS) file systems support this operation.
-         *
-         * @param request ModifyAccessPointRequest
-         * @return ModifyAccessPointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAccessPointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccessPointResponse
+        /// </returns>
         public async Task<ModifyAccessPointResponse> ModifyAccessPointAsync(ModifyAccessPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAccessPointWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies a rule in a permission group.
-         *
-         * @description The rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.
-         *
-         * @param request ModifyAccessRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAccessRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a rule in a permission group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAccessRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccessRuleResponse
+        /// </returns>
         public ModifyAccessRuleResponse ModifyAccessRuleWithOptions(ModifyAccessRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11595,15 +15350,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyAccessRuleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a rule in a permission group.
-         *
-         * @description The rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.
-         *
-         * @param request ModifyAccessRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAccessRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a rule in a permission group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAccessRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccessRuleResponse
+        /// </returns>
         public async Task<ModifyAccessRuleResponse> ModifyAccessRuleWithOptionsAsync(ModifyAccessRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11659,44 +15425,75 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyAccessRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a rule in a permission group.
-         *
-         * @description The rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.
-         *
-         * @param request ModifyAccessRuleRequest
-         * @return ModifyAccessRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a rule in a permission group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAccessRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccessRuleResponse
+        /// </returns>
         public ModifyAccessRuleResponse ModifyAccessRule(ModifyAccessRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAccessRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies a rule in a permission group.
-         *
-         * @description The rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.
-         *
-         * @param request ModifyAccessRuleRequest
-         * @return ModifyAccessRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a rule in a permission group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAccessRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccessRuleResponse
+        /// </returns>
         public async Task<ModifyAccessRuleResponse> ModifyAccessRuleAsync(ModifyAccessRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAccessRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary An automatic snapshot policy is modified. After you modify an automatic snapshot policy that is applied to a file system, the modification immediately applies to subsequent snapshots that are created for the file system.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request ModifyAutoSnapshotPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>An automatic snapshot policy is modified. After you modify an automatic snapshot policy that is applied to a file system, the modification immediately applies to subsequent snapshots that are created for the file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAutoSnapshotPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAutoSnapshotPolicyResponse
+        /// </returns>
         public ModifyAutoSnapshotPolicyResponse ModifyAutoSnapshotPolicyWithOptions(ModifyAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11740,16 +15537,29 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyAutoSnapshotPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary An automatic snapshot policy is modified. After you modify an automatic snapshot policy that is applied to a file system, the modification immediately applies to subsequent snapshots that are created for the file system.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request ModifyAutoSnapshotPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>An automatic snapshot policy is modified. After you modify an automatic snapshot policy that is applied to a file system, the modification immediately applies to subsequent snapshots that are created for the file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAutoSnapshotPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAutoSnapshotPolicyResponse
+        /// </returns>
         public async Task<ModifyAutoSnapshotPolicyResponse> ModifyAutoSnapshotPolicyWithOptionsAsync(ModifyAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11793,53 +15603,90 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyAutoSnapshotPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary An automatic snapshot policy is modified. After you modify an automatic snapshot policy that is applied to a file system, the modification immediately applies to subsequent snapshots that are created for the file system.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request ModifyAutoSnapshotPolicyRequest
-         * @return ModifyAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>An automatic snapshot policy is modified. After you modify an automatic snapshot policy that is applied to a file system, the modification immediately applies to subsequent snapshots that are created for the file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAutoSnapshotPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAutoSnapshotPolicyResponse
+        /// </returns>
         public ModifyAutoSnapshotPolicyResponse ModifyAutoSnapshotPolicy(ModifyAutoSnapshotPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAutoSnapshotPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary An automatic snapshot policy is modified. After you modify an automatic snapshot policy that is applied to a file system, the modification immediately applies to subsequent snapshots that are created for the file system.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         *
-         * @param request ModifyAutoSnapshotPolicyRequest
-         * @return ModifyAutoSnapshotPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>An automatic snapshot policy is modified. After you modify an automatic snapshot policy that is applied to a file system, the modification immediately applies to subsequent snapshots that are created for the file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAutoSnapshotPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAutoSnapshotPolicyResponse
+        /// </returns>
         public async Task<ModifyAutoSnapshotPolicyResponse> ModifyAutoSnapshotPolicyAsync(ModifyAutoSnapshotPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAutoSnapshotPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the attributes of a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows.
-         * *   You can modify the attributes only of the dataflows that are in the `Running` state.
-         * *   It generally takes 2 to 5 minutes to modify the attributes of a dataflow. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/336901.html) operation to query the status of the dataflow to be modified.
-         * *   Data flow specifications:
-         *     *   The dataflow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The dataflow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a dataflow.
-         *     *   Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the dataflow whose throughput is changed meet the requirements.
-         * *   Billing
-         *     Changing the dataflow throughput involves the billing of dataflow bandwidth. We recommend that you understand CPFS billing methods in advance. For more information, see [Billing methods and billable items of CPFS](https://help.aliyun.com/document_detail/111858.html).
-         *
-         * @param request ModifyDataFlowRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the attributes of a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows.</description></item>
+        /// <item><description>You can modify the attributes only of the dataflows that are in the <c>Running</c> state.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to modify the attributes of a dataflow. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the status of the dataflow to be modified.</description></item>
+        /// <item><description>Data flow specifications:<list type="bullet">
+        /// <item><description>The dataflow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The dataflow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a dataflow.</description></item>
+        /// <item><description>Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the dataflow whose throughput is changed meet the requirements.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Billing
+        /// Changing the dataflow throughput involves the billing of dataflow bandwidth. We recommend that you understand CPFS billing methods in advance. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing methods and billable items of CPFS</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDataFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDataFlowResponse
+        /// </returns>
         public ModifyDataFlowResponse ModifyDataFlowWithOptions(ModifyDataFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11887,23 +15734,38 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyDataFlowResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the attributes of a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows.
-         * *   You can modify the attributes only of the dataflows that are in the `Running` state.
-         * *   It generally takes 2 to 5 minutes to modify the attributes of a dataflow. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/336901.html) operation to query the status of the dataflow to be modified.
-         * *   Data flow specifications:
-         *     *   The dataflow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The dataflow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a dataflow.
-         *     *   Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the dataflow whose throughput is changed meet the requirements.
-         * *   Billing
-         *     Changing the dataflow throughput involves the billing of dataflow bandwidth. We recommend that you understand CPFS billing methods in advance. For more information, see [Billing methods and billable items of CPFS](https://help.aliyun.com/document_detail/111858.html).
-         *
-         * @param request ModifyDataFlowRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the attributes of a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows.</description></item>
+        /// <item><description>You can modify the attributes only of the dataflows that are in the <c>Running</c> state.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to modify the attributes of a dataflow. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the status of the dataflow to be modified.</description></item>
+        /// <item><description>Data flow specifications:<list type="bullet">
+        /// <item><description>The dataflow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The dataflow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a dataflow.</description></item>
+        /// <item><description>Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the dataflow whose throughput is changed meet the requirements.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Billing
+        /// Changing the dataflow throughput involves the billing of dataflow bandwidth. We recommend that you understand CPFS billing methods in advance. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing methods and billable items of CPFS</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDataFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDataFlowResponse
+        /// </returns>
         public async Task<ModifyDataFlowResponse> ModifyDataFlowWithOptionsAsync(ModifyDataFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11951,62 +15813,101 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyDataFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the attributes of a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows.
-         * *   You can modify the attributes only of the dataflows that are in the `Running` state.
-         * *   It generally takes 2 to 5 minutes to modify the attributes of a dataflow. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/336901.html) operation to query the status of the dataflow to be modified.
-         * *   Data flow specifications:
-         *     *   The dataflow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The dataflow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a dataflow.
-         *     *   Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the dataflow whose throughput is changed meet the requirements.
-         * *   Billing
-         *     Changing the dataflow throughput involves the billing of dataflow bandwidth. We recommend that you understand CPFS billing methods in advance. For more information, see [Billing methods and billable items of CPFS](https://help.aliyun.com/document_detail/111858.html).
-         *
-         * @param request ModifyDataFlowRequest
-         * @return ModifyDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the attributes of a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows.</description></item>
+        /// <item><description>You can modify the attributes only of the dataflows that are in the <c>Running</c> state.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to modify the attributes of a dataflow. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the status of the dataflow to be modified.</description></item>
+        /// <item><description>Data flow specifications:<list type="bullet">
+        /// <item><description>The dataflow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The dataflow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a dataflow.</description></item>
+        /// <item><description>Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the dataflow whose throughput is changed meet the requirements.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Billing
+        /// Changing the dataflow throughput involves the billing of dataflow bandwidth. We recommend that you understand CPFS billing methods in advance. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing methods and billable items of CPFS</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDataFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDataFlowResponse
+        /// </returns>
         public ModifyDataFlowResponse ModifyDataFlow(ModifyDataFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDataFlowWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the attributes of a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows.
-         * *   You can modify the attributes only of the dataflows that are in the `Running` state.
-         * *   It generally takes 2 to 5 minutes to modify the attributes of a dataflow. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/336901.html) operation to query the status of the dataflow to be modified.
-         * *   Data flow specifications:
-         *     *   The dataflow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The dataflow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a dataflow.
-         *     *   Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the dataflow whose throughput is changed meet the requirements.
-         * *   Billing
-         *     Changing the dataflow throughput involves the billing of dataflow bandwidth. We recommend that you understand CPFS billing methods in advance. For more information, see [Billing methods and billable items of CPFS](https://help.aliyun.com/document_detail/111858.html).
-         *
-         * @param request ModifyDataFlowRequest
-         * @return ModifyDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the attributes of a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows.</description></item>
+        /// <item><description>You can modify the attributes only of the dataflows that are in the <c>Running</c> state.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to modify the attributes of a dataflow. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the status of the dataflow to be modified.</description></item>
+        /// <item><description>Data flow specifications:<list type="bullet">
+        /// <item><description>The dataflow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The dataflow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a dataflow.</description></item>
+        /// <item><description>Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the dataflow whose throughput is changed meet the requirements.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Billing
+        /// Changing the dataflow throughput involves the billing of dataflow bandwidth. We recommend that you understand CPFS billing methods in advance. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing methods and billable items of CPFS</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDataFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDataFlowResponse
+        /// </returns>
         public async Task<ModifyDataFlowResponse> ModifyDataFlowAsync(ModifyDataFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDataFlowWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies an AutoRefresh configuration of a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can modify the AutoRefresh configurations only for the dataflows that are in the `Running` or `Stopped` state.
-         * *   It generally takes 2 to 5 minutes to modify an AutoRefresh configuration. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/336901.html) operation to query the task of modifying an AutoRefresh configuration.
-         *
-         * @param request ModifyDataFlowAutoRefreshRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDataFlowAutoRefreshResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an AutoRefresh configuration of a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can modify the AutoRefresh configurations only for the dataflows that are in the <c>Running</c> or <c>Stopped</c> state.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to modify an AutoRefresh configuration. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the task of modifying an AutoRefresh configuration.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDataFlowAutoRefreshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDataFlowAutoRefreshResponse
+        /// </returns>
         public ModifyDataFlowAutoRefreshResponse ModifyDataFlowAutoRefreshWithOptions(ModifyDataFlowAutoRefreshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12054,18 +15955,31 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyDataFlowAutoRefreshResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies an AutoRefresh configuration of a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can modify the AutoRefresh configurations only for the dataflows that are in the `Running` or `Stopped` state.
-         * *   It generally takes 2 to 5 minutes to modify an AutoRefresh configuration. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/336901.html) operation to query the task of modifying an AutoRefresh configuration.
-         *
-         * @param request ModifyDataFlowAutoRefreshRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDataFlowAutoRefreshResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an AutoRefresh configuration of a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can modify the AutoRefresh configurations only for the dataflows that are in the <c>Running</c> or <c>Stopped</c> state.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to modify an AutoRefresh configuration. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the task of modifying an AutoRefresh configuration.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDataFlowAutoRefreshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDataFlowAutoRefreshResponse
+        /// </returns>
         public async Task<ModifyDataFlowAutoRefreshResponse> ModifyDataFlowAutoRefreshWithOptionsAsync(ModifyDataFlowAutoRefreshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12113,47 +16027,77 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyDataFlowAutoRefreshResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies an AutoRefresh configuration of a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can modify the AutoRefresh configurations only for the dataflows that are in the `Running` or `Stopped` state.
-         * *   It generally takes 2 to 5 minutes to modify an AutoRefresh configuration. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/336901.html) operation to query the task of modifying an AutoRefresh configuration.
-         *
-         * @param request ModifyDataFlowAutoRefreshRequest
-         * @return ModifyDataFlowAutoRefreshResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an AutoRefresh configuration of a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can modify the AutoRefresh configurations only for the dataflows that are in the <c>Running</c> or <c>Stopped</c> state.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to modify an AutoRefresh configuration. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the task of modifying an AutoRefresh configuration.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDataFlowAutoRefreshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDataFlowAutoRefreshResponse
+        /// </returns>
         public ModifyDataFlowAutoRefreshResponse ModifyDataFlowAutoRefresh(ModifyDataFlowAutoRefreshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDataFlowAutoRefreshWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies an AutoRefresh configuration of a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can modify the AutoRefresh configurations only for the dataflows that are in the `Running` or `Stopped` state.
-         * *   It generally takes 2 to 5 minutes to modify an AutoRefresh configuration. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/336901.html) operation to query the task of modifying an AutoRefresh configuration.
-         *
-         * @param request ModifyDataFlowAutoRefreshRequest
-         * @return ModifyDataFlowAutoRefreshResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an AutoRefresh configuration of a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can modify the AutoRefresh configurations only for the dataflows that are in the <c>Running</c> or <c>Stopped</c> state.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to modify an AutoRefresh configuration. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the task of modifying an AutoRefresh configuration.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDataFlowAutoRefreshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDataFlowAutoRefreshResponse
+        /// </returns>
         public async Task<ModifyDataFlowAutoRefreshResponse> ModifyDataFlowAutoRefreshAsync(ModifyDataFlowAutoRefreshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDataFlowAutoRefreshWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the description of a file system.
-         *
-         * @param tmpReq ModifyFileSystemRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the description of a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyFileSystemRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFileSystemResponse
+        /// </returns>
         public ModifyFileSystemResponse ModifyFileSystemWithOptions(ModifyFileSystemRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12195,13 +16139,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyFileSystemResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the description of a file system.
-         *
-         * @param tmpReq ModifyFileSystemRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the description of a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyFileSystemRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFileSystemResponse
+        /// </returns>
         public async Task<ModifyFileSystemResponse> ModifyFileSystemWithOptionsAsync(ModifyFileSystemRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12243,40 +16195,65 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyFileSystemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the description of a file system.
-         *
-         * @param request ModifyFileSystemRequest
-         * @return ModifyFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the description of a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyFileSystemRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFileSystemResponse
+        /// </returns>
         public ModifyFileSystemResponse ModifyFileSystem(ModifyFileSystemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyFileSystemWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the description of a file system.
-         *
-         * @param request ModifyFileSystemRequest
-         * @return ModifyFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the description of a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyFileSystemRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFileSystemResponse
+        /// </returns>
         public async Task<ModifyFileSystemResponse> ModifyFileSystemAsync(ModifyFileSystemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyFileSystemWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies a fileset.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support fileset modification.
-         *
-         * @param request ModifyFilesetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyFilesetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a fileset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support fileset modification.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyFilesetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFilesetResponse
+        /// </returns>
         public ModifyFilesetResponse ModifyFilesetWithOptions(ModifyFilesetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12324,16 +16301,29 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyFilesetResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a fileset.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support fileset modification.
-         *
-         * @param request ModifyFilesetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyFilesetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a fileset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support fileset modification.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyFilesetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFilesetResponse
+        /// </returns>
         public async Task<ModifyFilesetResponse> ModifyFilesetWithOptionsAsync(ModifyFilesetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12381,43 +16371,73 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyFilesetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a fileset.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support fileset modification.
-         *
-         * @param request ModifyFilesetRequest
-         * @return ModifyFilesetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a fileset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support fileset modification.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyFilesetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFilesetResponse
+        /// </returns>
         public ModifyFilesetResponse ModifyFileset(ModifyFilesetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyFilesetWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies a fileset.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support fileset modification.
-         *
-         * @param request ModifyFilesetRequest
-         * @return ModifyFilesetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a fileset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support fileset modification.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyFilesetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFilesetResponse
+        /// </returns>
         public async Task<ModifyFilesetResponse> ModifyFilesetAsync(ModifyFilesetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyFilesetWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @description The API operation is available only for Cloud Parallel File Storage (CPFS) file systems.
-         *
-         * @param request ModifyLDAPConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyLDAPConfigResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API operation is available only for Cloud Parallel File Storage (CPFS) file systems.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyLDAPConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLDAPConfigResponse
+        /// </returns>
         public ModifyLDAPConfigResponse ModifyLDAPConfigWithOptions(ModifyLDAPConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12457,13 +16477,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyLDAPConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @description The API operation is available only for Cloud Parallel File Storage (CPFS) file systems.
-         *
-         * @param request ModifyLDAPConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyLDAPConfigResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API operation is available only for Cloud Parallel File Storage (CPFS) file systems.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyLDAPConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLDAPConfigResponse
+        /// </returns>
         public async Task<ModifyLDAPConfigResponse> ModifyLDAPConfigWithOptionsAsync(ModifyLDAPConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12503,39 +16531,62 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyLDAPConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @description The API operation is available only for Cloud Parallel File Storage (CPFS) file systems.
-         *
-         * @param request ModifyLDAPConfigRequest
-         * @return ModifyLDAPConfigResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API operation is available only for Cloud Parallel File Storage (CPFS) file systems.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyLDAPConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLDAPConfigResponse
+        /// </returns>
         public ModifyLDAPConfigResponse ModifyLDAPConfig(ModifyLDAPConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyLDAPConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @description The API operation is available only for Cloud Parallel File Storage (CPFS) file systems.
-         *
-         * @param request ModifyLDAPConfigRequest
-         * @return ModifyLDAPConfigResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API operation is available only for Cloud Parallel File Storage (CPFS) file systems.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyLDAPConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLDAPConfigResponse
+        /// </returns>
         public async Task<ModifyLDAPConfigResponse> ModifyLDAPConfigAsync(ModifyLDAPConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyLDAPConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies a lifecycle policy.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ModifyLifecyclePolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyLifecyclePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a lifecycle policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyLifecyclePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLifecyclePolicyResponse
+        /// </returns>
         public ModifyLifecyclePolicyResponse ModifyLifecyclePolicyWithOptions(ModifyLifecyclePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12579,15 +16630,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyLifecyclePolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a lifecycle policy.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ModifyLifecyclePolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyLifecyclePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a lifecycle policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyLifecyclePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLifecyclePolicyResponse
+        /// </returns>
         public async Task<ModifyLifecyclePolicyResponse> ModifyLifecyclePolicyWithOptionsAsync(ModifyLifecyclePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12631,41 +16693,67 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyLifecyclePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a lifecycle policy.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ModifyLifecyclePolicyRequest
-         * @return ModifyLifecyclePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a lifecycle policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyLifecyclePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLifecyclePolicyResponse
+        /// </returns>
         public ModifyLifecyclePolicyResponse ModifyLifecyclePolicy(ModifyLifecyclePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyLifecyclePolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies a lifecycle policy.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request ModifyLifecyclePolicyRequest
-         * @return ModifyLifecyclePolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a lifecycle policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyLifecyclePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLifecyclePolicyResponse
+        /// </returns>
         public async Task<ModifyLifecyclePolicyResponse> ModifyLifecyclePolicyAsync(ModifyLifecyclePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyLifecyclePolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies a mount target.
-         *
-         * @param request ModifyMountTargetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a mount target.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyMountTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMountTargetResponse
+        /// </returns>
         public ModifyMountTargetResponse ModifyMountTargetWithOptions(ModifyMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12709,13 +16797,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyMountTargetResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a mount target.
-         *
-         * @param request ModifyMountTargetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a mount target.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyMountTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMountTargetResponse
+        /// </returns>
         public async Task<ModifyMountTargetResponse> ModifyMountTargetWithOptionsAsync(ModifyMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12759,39 +16855,62 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyMountTargetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a mount target.
-         *
-         * @param request ModifyMountTargetRequest
-         * @return ModifyMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a mount target.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyMountTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMountTargetResponse
+        /// </returns>
         public ModifyMountTargetResponse ModifyMountTarget(ModifyMountTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyMountTargetWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies a mount target.
-         *
-         * @param request ModifyMountTargetRequest
-         * @return ModifyMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a mount target.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyMountTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMountTargetResponse
+        /// </returns>
         public async Task<ModifyMountTargetResponse> ModifyMountTargetAsync(ModifyMountTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyMountTargetWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the export directory parameters of a protocol service. Only the description can be modified. The virtual private cloud (VPC) ID and vSwitch ID cannot be changed. To change these IDs, you must delete the export directory and create a new one.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request ModifyProtocolMountTargetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyProtocolMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the export directory parameters of a protocol service. Only the description can be modified. The virtual private cloud (VPC) ID and vSwitch ID cannot be changed. To change these IDs, you must delete the export directory and create a new one.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyProtocolMountTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyProtocolMountTargetResponse
+        /// </returns>
         public ModifyProtocolMountTargetResponse ModifyProtocolMountTargetWithOptions(ModifyProtocolMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12839,15 +16958,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyProtocolMountTargetResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the export directory parameters of a protocol service. Only the description can be modified. The virtual private cloud (VPC) ID and vSwitch ID cannot be changed. To change these IDs, you must delete the export directory and create a new one.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request ModifyProtocolMountTargetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyProtocolMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the export directory parameters of a protocol service. Only the description can be modified. The virtual private cloud (VPC) ID and vSwitch ID cannot be changed. To change these IDs, you must delete the export directory and create a new one.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyProtocolMountTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyProtocolMountTargetResponse
+        /// </returns>
         public async Task<ModifyProtocolMountTargetResponse> ModifyProtocolMountTargetWithOptionsAsync(ModifyProtocolMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12895,43 +17025,72 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyProtocolMountTargetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the export directory parameters of a protocol service. Only the description can be modified. The virtual private cloud (VPC) ID and vSwitch ID cannot be changed. To change these IDs, you must delete the export directory and create a new one.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request ModifyProtocolMountTargetRequest
-         * @return ModifyProtocolMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the export directory parameters of a protocol service. Only the description can be modified. The virtual private cloud (VPC) ID and vSwitch ID cannot be changed. To change these IDs, you must delete the export directory and create a new one.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyProtocolMountTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyProtocolMountTargetResponse
+        /// </returns>
         public ModifyProtocolMountTargetResponse ModifyProtocolMountTarget(ModifyProtocolMountTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyProtocolMountTargetWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the export directory parameters of a protocol service. Only the description can be modified. The virtual private cloud (VPC) ID and vSwitch ID cannot be changed. To change these IDs, you must delete the export directory and create a new one.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request ModifyProtocolMountTargetRequest
-         * @return ModifyProtocolMountTargetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the export directory parameters of a protocol service. Only the description can be modified. The virtual private cloud (VPC) ID and vSwitch ID cannot be changed. To change these IDs, you must delete the export directory and create a new one.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyProtocolMountTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyProtocolMountTargetResponse
+        /// </returns>
         public async Task<ModifyProtocolMountTargetResponse> ModifyProtocolMountTargetAsync(ModifyProtocolMountTargetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyProtocolMountTargetWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies a protocol service. You can modify the description of a protocol service.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request ModifyProtocolServiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyProtocolServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a protocol service. You can modify the description of a protocol service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyProtocolServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyProtocolServiceResponse
+        /// </returns>
         public ModifyProtocolServiceResponse ModifyProtocolServiceWithOptions(ModifyProtocolServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12975,15 +17134,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyProtocolServiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a protocol service. You can modify the description of a protocol service.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request ModifyProtocolServiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyProtocolServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a protocol service. You can modify the description of a protocol service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyProtocolServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyProtocolServiceResponse
+        /// </returns>
         public async Task<ModifyProtocolServiceResponse> ModifyProtocolServiceWithOptionsAsync(ModifyProtocolServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13027,41 +17197,67 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifyProtocolServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a protocol service. You can modify the description of a protocol service.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request ModifyProtocolServiceRequest
-         * @return ModifyProtocolServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a protocol service. You can modify the description of a protocol service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyProtocolServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyProtocolServiceResponse
+        /// </returns>
         public ModifyProtocolServiceResponse ModifyProtocolService(ModifyProtocolServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyProtocolServiceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies a protocol service. You can modify the description of a protocol service.
-         *
-         * @description This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         *
-         * @param request ModifyProtocolServiceRequest
-         * @return ModifyProtocolServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a protocol service. You can modify the description of a protocol service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyProtocolServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyProtocolServiceResponse
+        /// </returns>
         public async Task<ModifyProtocolServiceResponse> ModifyProtocolServiceAsync(ModifyProtocolServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyProtocolServiceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Updates the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.
-         *
-         * @param request ModifySmbAclRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifySmbAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySmbAclRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySmbAclResponse
+        /// </returns>
         public ModifySmbAclResponse ModifySmbAclWithOptions(ModifySmbAclRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13117,13 +17313,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifySmbAclResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.
-         *
-         * @param request ModifySmbAclRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifySmbAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySmbAclRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySmbAclResponse
+        /// </returns>
         public async Task<ModifySmbAclResponse> ModifySmbAclWithOptionsAsync(ModifySmbAclRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13179,37 +17383,57 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ModifySmbAclResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.
-         *
-         * @param request ModifySmbAclRequest
-         * @return ModifySmbAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySmbAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySmbAclResponse
+        /// </returns>
         public ModifySmbAclResponse ModifySmbAcl(ModifySmbAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySmbAclWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Updates the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.
-         *
-         * @param request ModifySmbAclRequest
-         * @return ModifySmbAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySmbAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySmbAclResponse
+        /// </returns>
         public async Task<ModifySmbAclResponse> ModifySmbAclAsync(ModifySmbAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySmbAclWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Activates Apsara File Storage NAS.
-         *
-         * @param request OpenNASServiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return OpenNASServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates Apsara File Storage NAS.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenNASServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenNASServiceResponse
+        /// </returns>
         public OpenNASServiceResponse OpenNASServiceWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -13228,13 +17452,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<OpenNASServiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Activates Apsara File Storage NAS.
-         *
-         * @param request OpenNASServiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return OpenNASServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates Apsara File Storage NAS.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenNASServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenNASServiceResponse
+        /// </returns>
         public async Task<OpenNASServiceResponse> OpenNASServiceWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -13253,39 +17485,59 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<OpenNASServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Activates Apsara File Storage NAS.
-         *
-         * @return OpenNASServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates Apsara File Storage NAS.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// OpenNASServiceResponse
+        /// </returns>
         public OpenNASServiceResponse OpenNASService()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return OpenNASServiceWithOptions(runtime);
         }
 
-        /**
-         * @summary Activates Apsara File Storage NAS.
-         *
-         * @return OpenNASServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates Apsara File Storage NAS.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// OpenNASServiceResponse
+        /// </returns>
         public async Task<OpenNASServiceResponse> OpenNASServiceAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await OpenNASServiceWithOptionsAsync(runtime);
         }
 
-        /**
-         * @deprecated OpenAPI RemoveClientFromBlackList is deprecated
-         *
-         * @summary 移除黑名单
-         *
-         * @description The IP address of a client to remove from the blacklist.
-         *
-         * @param request RemoveClientFromBlackListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RemoveClientFromBlackListResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI RemoveClientFromBlackList is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除黑名单</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The IP address of a client to remove from the blacklist.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveClientFromBlackListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveClientFromBlackListResponse
+        /// </returns>
+        [Obsolete("OpenAPI RemoveClientFromBlackList is deprecated\n")]
         // Deprecated
         public RemoveClientFromBlackListResponse RemoveClientFromBlackListWithOptions(RemoveClientFromBlackListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13326,17 +17578,31 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<RemoveClientFromBlackListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @deprecated OpenAPI RemoveClientFromBlackList is deprecated
-         *
-         * @summary 移除黑名单
-         *
-         * @description The IP address of a client to remove from the blacklist.
-         *
-         * @param request RemoveClientFromBlackListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RemoveClientFromBlackListResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI RemoveClientFromBlackList is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除黑名单</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The IP address of a client to remove from the blacklist.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveClientFromBlackListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveClientFromBlackListResponse
+        /// </returns>
+        [Obsolete("OpenAPI RemoveClientFromBlackList is deprecated\n")]
         // Deprecated
         public async Task<RemoveClientFromBlackListResponse> RemoveClientFromBlackListWithOptionsAsync(RemoveClientFromBlackListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13377,16 +17643,28 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<RemoveClientFromBlackListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @deprecated OpenAPI RemoveClientFromBlackList is deprecated
-         *
-         * @summary 移除黑名单
-         *
-         * @description The IP address of a client to remove from the blacklist.
-         *
-         * @param request RemoveClientFromBlackListRequest
-         * @return RemoveClientFromBlackListResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI RemoveClientFromBlackList is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除黑名单</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The IP address of a client to remove from the blacklist.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveClientFromBlackListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveClientFromBlackListResponse
+        /// </returns>
+        [Obsolete("OpenAPI RemoveClientFromBlackList is deprecated\n")]
         // Deprecated
         public RemoveClientFromBlackListResponse RemoveClientFromBlackList(RemoveClientFromBlackListRequest request)
         {
@@ -13394,16 +17672,28 @@ namespace AlibabaCloud.SDK.NAS20170626
             return RemoveClientFromBlackListWithOptions(request, runtime);
         }
 
-        /**
-         * @deprecated OpenAPI RemoveClientFromBlackList is deprecated
-         *
-         * @summary 移除黑名单
-         *
-         * @description The IP address of a client to remove from the blacklist.
-         *
-         * @param request RemoveClientFromBlackListRequest
-         * @return RemoveClientFromBlackListResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI RemoveClientFromBlackList is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除黑名单</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The IP address of a client to remove from the blacklist.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveClientFromBlackListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveClientFromBlackListResponse
+        /// </returns>
+        [Obsolete("OpenAPI RemoveClientFromBlackList is deprecated\n")]
         // Deprecated
         public async Task<RemoveClientFromBlackListResponse> RemoveClientFromBlackListAsync(RemoveClientFromBlackListRequest request)
         {
@@ -13411,18 +17701,34 @@ namespace AlibabaCloud.SDK.NAS20170626
             return await RemoveClientFromBlackListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @deprecated OpenAPI RemoveTags is deprecated, please use NAS::2017-06-26::UntagResources instead.
-         *
-         * @summary Removes one or more tags from a file system.
-         *
-         * @description >  The tag feature has been upgraded and this document will be unpublished. For more information, see UntagResources.
-         * A request ID is returned even if the tag that you want to remove or the associated file system does not exist. For example, if the associated file system does not exist, or the TagKey and TagValue cannot be found, a request ID is still returned.
-         *
-         * @param request RemoveTagsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RemoveTagsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI RemoveTags is deprecated, please use NAS::2017-06-26::UntagResources instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes one or more tags from a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The tag feature has been upgraded and this document will be unpublished. For more information, see UntagResources.
+        /// A request ID is returned even if the tag that you want to remove or the associated file system does not exist. For example, if the associated file system does not exist, or the TagKey and TagValue cannot be found, a request ID is still returned.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveTagsResponse
+        /// </returns>
+        [Obsolete("OpenAPI RemoveTags is deprecated, please use NAS::2017-06-26::UntagResources instead.\n")]
         // Deprecated
         public RemoveTagsResponse RemoveTagsWithOptions(RemoveTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13455,18 +17761,34 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<RemoveTagsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @deprecated OpenAPI RemoveTags is deprecated, please use NAS::2017-06-26::UntagResources instead.
-         *
-         * @summary Removes one or more tags from a file system.
-         *
-         * @description >  The tag feature has been upgraded and this document will be unpublished. For more information, see UntagResources.
-         * A request ID is returned even if the tag that you want to remove or the associated file system does not exist. For example, if the associated file system does not exist, or the TagKey and TagValue cannot be found, a request ID is still returned.
-         *
-         * @param request RemoveTagsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RemoveTagsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI RemoveTags is deprecated, please use NAS::2017-06-26::UntagResources instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes one or more tags from a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The tag feature has been upgraded and this document will be unpublished. For more information, see UntagResources.
+        /// A request ID is returned even if the tag that you want to remove or the associated file system does not exist. For example, if the associated file system does not exist, or the TagKey and TagValue cannot be found, a request ID is still returned.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveTagsResponse
+        /// </returns>
+        [Obsolete("OpenAPI RemoveTags is deprecated, please use NAS::2017-06-26::UntagResources instead.\n")]
         // Deprecated
         public async Task<RemoveTagsResponse> RemoveTagsWithOptionsAsync(RemoveTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13499,17 +17821,31 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<RemoveTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @deprecated OpenAPI RemoveTags is deprecated, please use NAS::2017-06-26::UntagResources instead.
-         *
-         * @summary Removes one or more tags from a file system.
-         *
-         * @description >  The tag feature has been upgraded and this document will be unpublished. For more information, see UntagResources.
-         * A request ID is returned even if the tag that you want to remove or the associated file system does not exist. For example, if the associated file system does not exist, or the TagKey and TagValue cannot be found, a request ID is still returned.
-         *
-         * @param request RemoveTagsRequest
-         * @return RemoveTagsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI RemoveTags is deprecated, please use NAS::2017-06-26::UntagResources instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes one or more tags from a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The tag feature has been upgraded and this document will be unpublished. For more information, see UntagResources.
+        /// A request ID is returned even if the tag that you want to remove or the associated file system does not exist. For example, if the associated file system does not exist, or the TagKey and TagValue cannot be found, a request ID is still returned.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveTagsResponse
+        /// </returns>
+        [Obsolete("OpenAPI RemoveTags is deprecated, please use NAS::2017-06-26::UntagResources instead.\n")]
         // Deprecated
         public RemoveTagsResponse RemoveTags(RemoveTagsRequest request)
         {
@@ -13517,17 +17853,31 @@ namespace AlibabaCloud.SDK.NAS20170626
             return RemoveTagsWithOptions(request, runtime);
         }
 
-        /**
-         * @deprecated OpenAPI RemoveTags is deprecated, please use NAS::2017-06-26::UntagResources instead.
-         *
-         * @summary Removes one or more tags from a file system.
-         *
-         * @description >  The tag feature has been upgraded and this document will be unpublished. For more information, see UntagResources.
-         * A request ID is returned even if the tag that you want to remove or the associated file system does not exist. For example, if the associated file system does not exist, or the TagKey and TagValue cannot be found, a request ID is still returned.
-         *
-         * @param request RemoveTagsRequest
-         * @return RemoveTagsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI RemoveTags is deprecated, please use NAS::2017-06-26::UntagResources instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes one or more tags from a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The tag feature has been upgraded and this document will be unpublished. For more information, see UntagResources.
+        /// A request ID is returned even if the tag that you want to remove or the associated file system does not exist. For example, if the associated file system does not exist, or the TagKey and TagValue cannot be found, a request ID is still returned.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveTagsResponse
+        /// </returns>
+        [Obsolete("OpenAPI RemoveTags is deprecated, please use NAS::2017-06-26::UntagResources instead.\n")]
         // Deprecated
         public async Task<RemoveTagsResponse> RemoveTagsAsync(RemoveTagsRequest request)
         {
@@ -13535,18 +17885,31 @@ namespace AlibabaCloud.SDK.NAS20170626
             return await RemoveTagsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Rolls back a file system to a snapshot of the file system.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         * *   The file system must be in the Running state.
-         * *   To roll back a file system to a snapshot, you must specify the ID of the snapshot that is created from the file system.
-         *
-         * @param request ResetFileSystemRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rolls back a file system to a snapshot of the file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>The file system must be in the Running state.</description></item>
+        /// <item><description>To roll back a file system to a snapshot, you must specify the ID of the snapshot that is created from the file system.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetFileSystemRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetFileSystemResponse
+        /// </returns>
         public ResetFileSystemResponse ResetFileSystemWithOptions(ResetFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13578,18 +17941,31 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ResetFileSystemResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Rolls back a file system to a snapshot of the file system.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         * *   The file system must be in the Running state.
-         * *   To roll back a file system to a snapshot, you must specify the ID of the snapshot that is created from the file system.
-         *
-         * @param request ResetFileSystemRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rolls back a file system to a snapshot of the file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>The file system must be in the Running state.</description></item>
+        /// <item><description>To roll back a file system to a snapshot, you must specify the ID of the snapshot that is created from the file system.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetFileSystemRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetFileSystemResponse
+        /// </returns>
         public async Task<ResetFileSystemResponse> ResetFileSystemWithOptionsAsync(ResetFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13621,49 +17997,82 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<ResetFileSystemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Rolls back a file system to a snapshot of the file system.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         * *   The file system must be in the Running state.
-         * *   To roll back a file system to a snapshot, you must specify the ID of the snapshot that is created from the file system.
-         *
-         * @param request ResetFileSystemRequest
-         * @return ResetFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rolls back a file system to a snapshot of the file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>The file system must be in the Running state.</description></item>
+        /// <item><description>To roll back a file system to a snapshot, you must specify the ID of the snapshot that is created from the file system.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetFileSystemRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetFileSystemResponse
+        /// </returns>
         public ResetFileSystemResponse ResetFileSystem(ResetFileSystemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetFileSystemWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Rolls back a file system to a snapshot of the file system.
-         *
-         * @description *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-         * *   Only advanced Extreme NAS file systems support this feature.
-         * *   The file system must be in the Running state.
-         * *   To roll back a file system to a snapshot, you must specify the ID of the snapshot that is created from the file system.
-         *
-         * @param request ResetFileSystemRequest
-         * @return ResetFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rolls back a file system to a snapshot of the file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <list type="bullet">
+        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>The file system must be in the Running state.</description></item>
+        /// <item><description>To roll back a file system to a snapshot, you must specify the ID of the snapshot that is created from the file system.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetFileSystemRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetFileSystemResponse
+        /// </returns>
         public async Task<ResetFileSystemResponse> ResetFileSystemAsync(ResetFileSystemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetFileSystemWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Retries failed a data retrieval task.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request RetryLifecycleRetrieveJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RetryLifecycleRetrieveJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retries failed a data retrieval task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RetryLifecycleRetrieveJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryLifecycleRetrieveJobResponse
+        /// </returns>
         public RetryLifecycleRetrieveJobResponse RetryLifecycleRetrieveJobWithOptions(RetryLifecycleRetrieveJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13691,15 +18100,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<RetryLifecycleRetrieveJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Retries failed a data retrieval task.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request RetryLifecycleRetrieveJobRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RetryLifecycleRetrieveJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retries failed a data retrieval task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RetryLifecycleRetrieveJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryLifecycleRetrieveJobResponse
+        /// </returns>
         public async Task<RetryLifecycleRetrieveJobResponse> RetryLifecycleRetrieveJobWithOptionsAsync(RetryLifecycleRetrieveJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13727,43 +18147,72 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<RetryLifecycleRetrieveJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Retries failed a data retrieval task.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request RetryLifecycleRetrieveJobRequest
-         * @return RetryLifecycleRetrieveJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retries failed a data retrieval task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RetryLifecycleRetrieveJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryLifecycleRetrieveJobResponse
+        /// </returns>
         public RetryLifecycleRetrieveJobResponse RetryLifecycleRetrieveJob(RetryLifecycleRetrieveJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RetryLifecycleRetrieveJobWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Retries failed a data retrieval task.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request RetryLifecycleRetrieveJobRequest
-         * @return RetryLifecycleRetrieveJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retries failed a data retrieval task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RetryLifecycleRetrieveJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryLifecycleRetrieveJobResponse
+        /// </returns>
         public async Task<RetryLifecycleRetrieveJobResponse> RetryLifecycleRetrieveJobAsync(RetryLifecycleRetrieveJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RetryLifecycleRetrieveJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a directory quota for a file system.
-         *
-         * @description Only General-purpose Apsara File Storage NAS (NAS) file systems support the directory quota feature.
-         *
-         * @param request SetDirQuotaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetDirQuotaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a directory quota for a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Apsara File Storage NAS (NAS) file systems support the directory quota feature.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetDirQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDirQuotaResponse
+        /// </returns>
         public SetDirQuotaResponse SetDirQuotaWithOptions(SetDirQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13815,15 +18264,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<SetDirQuotaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a directory quota for a file system.
-         *
-         * @description Only General-purpose Apsara File Storage NAS (NAS) file systems support the directory quota feature.
-         *
-         * @param request SetDirQuotaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetDirQuotaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a directory quota for a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Apsara File Storage NAS (NAS) file systems support the directory quota feature.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetDirQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDirQuotaResponse
+        /// </returns>
         public async Task<SetDirQuotaResponse> SetDirQuotaWithOptionsAsync(SetDirQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13875,47 +18335,78 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<SetDirQuotaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a directory quota for a file system.
-         *
-         * @description Only General-purpose Apsara File Storage NAS (NAS) file systems support the directory quota feature.
-         *
-         * @param request SetDirQuotaRequest
-         * @return SetDirQuotaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a directory quota for a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Apsara File Storage NAS (NAS) file systems support the directory quota feature.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetDirQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDirQuotaResponse
+        /// </returns>
         public SetDirQuotaResponse SetDirQuota(SetDirQuotaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetDirQuotaWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a directory quota for a file system.
-         *
-         * @description Only General-purpose Apsara File Storage NAS (NAS) file systems support the directory quota feature.
-         *
-         * @param request SetDirQuotaRequest
-         * @return SetDirQuotaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a directory quota for a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose Apsara File Storage NAS (NAS) file systems support the directory quota feature.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetDirQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDirQuotaResponse
+        /// </returns>
         public async Task<SetDirQuotaResponse> SetDirQuotaAsync(SetDirQuotaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetDirQuotaWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can enable the dataflows that are only in the `Stopped` state.
-         * *   If the value of DryRun is `true`, you can check whether sufficient resources are available to enable the specified dataflow. If the resources are insufficient, the dataflow cannot be enabled.
-         * *   It generally takes 2 to 5 minutes to enable a dataflow. You can query the dataflow status by calling the [DescribeDataFlows](https://help.aliyun.com/document_detail/2402270.html) operation.
-         *
-         * @param request StartDataFlowRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can enable the dataflows that are only in the <c>Stopped</c> state.</description></item>
+        /// <item><description>If the value of DryRun is <c>true</c>, you can check whether sufficient resources are available to enable the specified dataflow. If the resources are insufficient, the dataflow cannot be enabled.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to enable a dataflow. You can query the dataflow status by calling the <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartDataFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDataFlowResponse
+        /// </returns>
         public StartDataFlowResponse StartDataFlowWithOptions(StartDataFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13955,19 +18446,32 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<StartDataFlowResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can enable the dataflows that are only in the `Stopped` state.
-         * *   If the value of DryRun is `true`, you can check whether sufficient resources are available to enable the specified dataflow. If the resources are insufficient, the dataflow cannot be enabled.
-         * *   It generally takes 2 to 5 minutes to enable a dataflow. You can query the dataflow status by calling the [DescribeDataFlows](https://help.aliyun.com/document_detail/2402270.html) operation.
-         *
-         * @param request StartDataFlowRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can enable the dataflows that are only in the <c>Stopped</c> state.</description></item>
+        /// <item><description>If the value of DryRun is <c>true</c>, you can check whether sufficient resources are available to enable the specified dataflow. If the resources are insufficient, the dataflow cannot be enabled.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to enable a dataflow. You can query the dataflow status by calling the <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartDataFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDataFlowResponse
+        /// </returns>
         public async Task<StartDataFlowResponse> StartDataFlowWithOptionsAsync(StartDataFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14007,56 +18511,91 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<StartDataFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can enable the dataflows that are only in the `Stopped` state.
-         * *   If the value of DryRun is `true`, you can check whether sufficient resources are available to enable the specified dataflow. If the resources are insufficient, the dataflow cannot be enabled.
-         * *   It generally takes 2 to 5 minutes to enable a dataflow. You can query the dataflow status by calling the [DescribeDataFlows](https://help.aliyun.com/document_detail/2402270.html) operation.
-         *
-         * @param request StartDataFlowRequest
-         * @return StartDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can enable the dataflows that are only in the <c>Stopped</c> state.</description></item>
+        /// <item><description>If the value of DryRun is <c>true</c>, you can check whether sufficient resources are available to enable the specified dataflow. If the resources are insufficient, the dataflow cannot be enabled.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to enable a dataflow. You can query the dataflow status by calling the <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartDataFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDataFlowResponse
+        /// </returns>
         public StartDataFlowResponse StartDataFlow(StartDataFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartDataFlowWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can enable the dataflows that are only in the `Stopped` state.
-         * *   If the value of DryRun is `true`, you can check whether sufficient resources are available to enable the specified dataflow. If the resources are insufficient, the dataflow cannot be enabled.
-         * *   It generally takes 2 to 5 minutes to enable a dataflow. You can query the dataflow status by calling the [DescribeDataFlows](https://help.aliyun.com/document_detail/2402270.html) operation.
-         *
-         * @param request StartDataFlowRequest
-         * @return StartDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can enable the dataflows that are only in the <c>Stopped</c> state.</description></item>
+        /// <item><description>If the value of DryRun is <c>true</c>, you can check whether sufficient resources are available to enable the specified dataflow. If the resources are insufficient, the dataflow cannot be enabled.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to enable a dataflow. You can query the dataflow status by calling the <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartDataFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDataFlowResponse
+        /// </returns>
         public async Task<StartDataFlowResponse> StartDataFlowAsync(StartDataFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartDataFlowWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Disables a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can disable only the dataflows that are in the `Running` state.
-         * *   After a dataflow is disabled, you cannot create a dataflow task for the dataflow. If AutoRefresh is configured, source data updates are not synchronized to CPFS.
-         * *   After a dataflow is disabled, the dataflow throughput is no longer billed because resources are reclaimed. However, the dataflow may fail to be restarted due to insufficient resources.
-         * *   It generally takes 2 to 5 minutes to disable a dataflow. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/2402271.html) operation to query the dataflow status.
-         *
-         * @param request StopDataFlowRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can disable only the dataflows that are in the <c>Running</c> state.</description></item>
+        /// <item><description>After a dataflow is disabled, you cannot create a dataflow task for the dataflow. If AutoRefresh is configured, source data updates are not synchronized to CPFS.</description></item>
+        /// <item><description>After a dataflow is disabled, the dataflow throughput is no longer billed because resources are reclaimed. However, the dataflow may fail to be restarted due to insufficient resources.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to disable a dataflow. You can call the <a href="https://help.aliyun.com/document_detail/2402271.html">DescribeDataFlows</a> operation to query the dataflow status.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopDataFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDataFlowResponse
+        /// </returns>
         public StopDataFlowResponse StopDataFlowWithOptions(StopDataFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14096,20 +18635,33 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<StopDataFlowResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Disables a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can disable only the dataflows that are in the `Running` state.
-         * *   After a dataflow is disabled, you cannot create a dataflow task for the dataflow. If AutoRefresh is configured, source data updates are not synchronized to CPFS.
-         * *   After a dataflow is disabled, the dataflow throughput is no longer billed because resources are reclaimed. However, the dataflow may fail to be restarted due to insufficient resources.
-         * *   It generally takes 2 to 5 minutes to disable a dataflow. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/2402271.html) operation to query the dataflow status.
-         *
-         * @param request StopDataFlowRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can disable only the dataflows that are in the <c>Running</c> state.</description></item>
+        /// <item><description>After a dataflow is disabled, you cannot create a dataflow task for the dataflow. If AutoRefresh is configured, source data updates are not synchronized to CPFS.</description></item>
+        /// <item><description>After a dataflow is disabled, the dataflow throughput is no longer billed because resources are reclaimed. However, the dataflow may fail to be restarted due to insufficient resources.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to disable a dataflow. You can call the <a href="https://help.aliyun.com/document_detail/2402271.html">DescribeDataFlows</a> operation to query the dataflow status.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopDataFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDataFlowResponse
+        /// </returns>
         public async Task<StopDataFlowResponse> StopDataFlowWithOptionsAsync(StopDataFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14149,51 +18701,81 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<StopDataFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Disables a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can disable only the dataflows that are in the `Running` state.
-         * *   After a dataflow is disabled, you cannot create a dataflow task for the dataflow. If AutoRefresh is configured, source data updates are not synchronized to CPFS.
-         * *   After a dataflow is disabled, the dataflow throughput is no longer billed because resources are reclaimed. However, the dataflow may fail to be restarted due to insufficient resources.
-         * *   It generally takes 2 to 5 minutes to disable a dataflow. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/2402271.html) operation to query the dataflow status.
-         *
-         * @param request StopDataFlowRequest
-         * @return StopDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can disable only the dataflows that are in the <c>Running</c> state.</description></item>
+        /// <item><description>After a dataflow is disabled, you cannot create a dataflow task for the dataflow. If AutoRefresh is configured, source data updates are not synchronized to CPFS.</description></item>
+        /// <item><description>After a dataflow is disabled, the dataflow throughput is no longer billed because resources are reclaimed. However, the dataflow may fail to be restarted due to insufficient resources.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to disable a dataflow. You can call the <a href="https://help.aliyun.com/document_detail/2402271.html">DescribeDataFlows</a> operation to query the dataflow status.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopDataFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDataFlowResponse
+        /// </returns>
         public StopDataFlowResponse StopDataFlow(StopDataFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StopDataFlowWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Disables a dataflow.
-         *
-         * @description *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-         * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-         * *   You can disable only the dataflows that are in the `Running` state.
-         * *   After a dataflow is disabled, you cannot create a dataflow task for the dataflow. If AutoRefresh is configured, source data updates are not synchronized to CPFS.
-         * *   After a dataflow is disabled, the dataflow throughput is no longer billed because resources are reclaimed. However, the dataflow may fail to be restarted due to insufficient resources.
-         * *   It generally takes 2 to 5 minutes to disable a dataflow. You can call the [DescribeDataFlows](https://help.aliyun.com/document_detail/2402271.html) operation to query the dataflow status.
-         *
-         * @param request StopDataFlowRequest
-         * @return StopDataFlowResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a dataflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can disable only the dataflows that are in the <c>Running</c> state.</description></item>
+        /// <item><description>After a dataflow is disabled, you cannot create a dataflow task for the dataflow. If AutoRefresh is configured, source data updates are not synchronized to CPFS.</description></item>
+        /// <item><description>After a dataflow is disabled, the dataflow throughput is no longer billed because resources are reclaimed. However, the dataflow may fail to be restarted due to insufficient resources.</description></item>
+        /// <item><description>It generally takes 2 to 5 minutes to disable a dataflow. You can call the <a href="https://help.aliyun.com/document_detail/2402271.html">DescribeDataFlows</a> operation to query the dataflow status.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopDataFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDataFlowResponse
+        /// </returns>
         public async Task<StopDataFlowResponse> StopDataFlowAsync(StopDataFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopDataFlowWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates tags and binds the tags to file systems.
-         *
-         * @param request TagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates tags and binds the tags to file systems.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14229,13 +18811,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates tags and binds the tags to file systems.
-         *
-         * @param request TagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates tags and binds the tags to file systems.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14271,37 +18861,57 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates tags and binds the tags to file systems.
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates tags and binds the tags to file systems.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates tags and binds the tags to file systems.
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates tags and binds the tags to file systems.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Removes tags from a file system.
-         *
-         * @param request UntagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14341,13 +18951,21 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Removes tags from a file system.
-         *
-         * @param request UntagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14387,39 +19005,62 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Removes tags from a file system.
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UntagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Removes tags from a file system.
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from a file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the retention period of data in the recycle bin of a file system.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request UpdateRecycleBinAttributeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateRecycleBinAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the retention period of data in the recycle bin of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRecycleBinAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecycleBinAttributeResponse
+        /// </returns>
         public UpdateRecycleBinAttributeResponse UpdateRecycleBinAttributeWithOptions(UpdateRecycleBinAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14443,15 +19084,26 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<UpdateRecycleBinAttributeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the retention period of data in the recycle bin of a file system.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request UpdateRecycleBinAttributeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateRecycleBinAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the retention period of data in the recycle bin of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRecycleBinAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecycleBinAttributeResponse
+        /// </returns>
         public async Task<UpdateRecycleBinAttributeResponse> UpdateRecycleBinAttributeWithOptionsAsync(UpdateRecycleBinAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14475,44 +19127,75 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<UpdateRecycleBinAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the retention period of data in the recycle bin of a file system.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request UpdateRecycleBinAttributeRequest
-         * @return UpdateRecycleBinAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the retention period of data in the recycle bin of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRecycleBinAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecycleBinAttributeResponse
+        /// </returns>
         public UpdateRecycleBinAttributeResponse UpdateRecycleBinAttribute(UpdateRecycleBinAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateRecycleBinAttributeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the retention period of data in the recycle bin of a file system.
-         *
-         * @description Only General-purpose NAS file systems support this operation.
-         *
-         * @param request UpdateRecycleBinAttributeRequest
-         * @return UpdateRecycleBinAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the retention period of data in the recycle bin of a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRecycleBinAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecycleBinAttributeResponse
+        /// </returns>
         public async Task<UpdateRecycleBinAttributeResponse> UpdateRecycleBinAttributeAsync(UpdateRecycleBinAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateRecycleBinAttributeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Scales up an Extreme NAS file system or a Cloud Parallel File Storage (CPFS) file system.
-         *
-         * @description *   Only Extreme NAS file systems and CPFS file systems can be scaled up. CPFS file systems are available only on the China site (aliyun.com).
-         * *   A General-purpose NAS file system is automatically scaled up. You do not need to call this operation to scale up a General-purpose NAS file system.
-         *
-         * @param request UpgradeFileSystemRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpgradeFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales up an Extreme NAS file system or a Cloud Parallel File Storage (CPFS) file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only Extreme NAS file systems and CPFS file systems can be scaled up. CPFS file systems are available only on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>A General-purpose NAS file system is automatically scaled up. You do not need to call this operation to scale up a General-purpose NAS file system.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeFileSystemRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeFileSystemResponse
+        /// </returns>
         public UpgradeFileSystemResponse UpgradeFileSystemWithOptions(UpgradeFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14552,16 +19235,29 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<UpgradeFileSystemResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Scales up an Extreme NAS file system or a Cloud Parallel File Storage (CPFS) file system.
-         *
-         * @description *   Only Extreme NAS file systems and CPFS file systems can be scaled up. CPFS file systems are available only on the China site (aliyun.com).
-         * *   A General-purpose NAS file system is automatically scaled up. You do not need to call this operation to scale up a General-purpose NAS file system.
-         *
-         * @param request UpgradeFileSystemRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpgradeFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales up an Extreme NAS file system or a Cloud Parallel File Storage (CPFS) file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only Extreme NAS file systems and CPFS file systems can be scaled up. CPFS file systems are available only on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>A General-purpose NAS file system is automatically scaled up. You do not need to call this operation to scale up a General-purpose NAS file system.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeFileSystemRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeFileSystemResponse
+        /// </returns>
         public async Task<UpgradeFileSystemResponse> UpgradeFileSystemWithOptionsAsync(UpgradeFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14601,30 +19297,52 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<UpgradeFileSystemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Scales up an Extreme NAS file system or a Cloud Parallel File Storage (CPFS) file system.
-         *
-         * @description *   Only Extreme NAS file systems and CPFS file systems can be scaled up. CPFS file systems are available only on the China site (aliyun.com).
-         * *   A General-purpose NAS file system is automatically scaled up. You do not need to call this operation to scale up a General-purpose NAS file system.
-         *
-         * @param request UpgradeFileSystemRequest
-         * @return UpgradeFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales up an Extreme NAS file system or a Cloud Parallel File Storage (CPFS) file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only Extreme NAS file systems and CPFS file systems can be scaled up. CPFS file systems are available only on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>A General-purpose NAS file system is automatically scaled up. You do not need to call this operation to scale up a General-purpose NAS file system.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeFileSystemRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeFileSystemResponse
+        /// </returns>
         public UpgradeFileSystemResponse UpgradeFileSystem(UpgradeFileSystemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeFileSystemWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Scales up an Extreme NAS file system or a Cloud Parallel File Storage (CPFS) file system.
-         *
-         * @description *   Only Extreme NAS file systems and CPFS file systems can be scaled up. CPFS file systems are available only on the China site (aliyun.com).
-         * *   A General-purpose NAS file system is automatically scaled up. You do not need to call this operation to scale up a General-purpose NAS file system.
-         *
-         * @param request UpgradeFileSystemRequest
-         * @return UpgradeFileSystemResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales up an Extreme NAS file system or a Cloud Parallel File Storage (CPFS) file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only Extreme NAS file systems and CPFS file systems can be scaled up. CPFS file systems are available only on the China site (aliyun.com).</para>
+        /// <list type="bullet">
+        /// <item><description>A General-purpose NAS file system is automatically scaled up. You do not need to call this operation to scale up a General-purpose NAS file system.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeFileSystemRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeFileSystemResponse
+        /// </returns>
         public async Task<UpgradeFileSystemResponse> UpgradeFileSystemAsync(UpgradeFileSystemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

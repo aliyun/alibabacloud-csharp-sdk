@@ -10,51 +10,65 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeMountTargetsRequest : TeaModel {
         /// <summary>
-        /// The dual-stack (IPv4 and IPv6) domain name of the mount target.
+        /// <para>The dual-stack (IPv4 and IPv6) domain name of the mount target.</para>
+        /// <remarks>
+        /// <para>Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.</para>
+        /// </remarks>
         /// 
-        /// > Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.
+        /// <b>Example:</b>
+        /// <para>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</para>
         /// </summary>
         [NameInMap("DualStackMountTargetDomain")]
         [Validation(Required=false)]
         public string DualStackMountTargetDomain { get; set; }
 
         /// <summary>
-        /// The ID of the file system.
+        /// <para>The ID of the file system.</para>
+        /// <list type="bullet">
+        /// <item><description>Sample ID of a General-purpose NAS file system: 31a8e4\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description>The IDs of Extreme NAS file systems must start with <c>extreme-</c>, for example, extreme-0015\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description>The IDs of Cloud Parallel File Storage (CPFS) file systems must start with <c>cpfs-</c>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Sample ID of a General-purpose NAS file system: 31a8e4\\*\\*\\*\\*.
-        /// *   The IDs of Extreme NAS file systems must start with `extreme-`, for example, extreme-0015\\*\\*\\*\\*.
-        /// *   The IDs of Cloud Parallel File Storage (CPFS) file systems must start with `cpfs-`, for example, cpfs-125487\\*\\*\\*\\*.
-        /// 
-        /// > CPFS file systems are available only on the China site (aliyun.com).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1ca404****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// The domain name of the mount target.
+        /// <para>The domain name of the mount target.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1ca404a666-x****.cn-hangzhou.nas.aliyuncs.com</para>
         /// </summary>
         [NameInMap("MountTargetDomain")]
         [Validation(Required=false)]
         public string MountTargetDomain { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// <para>Pages start from page 1. Default value: 1.</para>
         /// 
-        /// Pages start from page 1. Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Valid values: 1 to 100.
-        /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

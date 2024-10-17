@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ModifyAccessPointResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>70EACC9C-D07A-4A34-ADA4-77506C42****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

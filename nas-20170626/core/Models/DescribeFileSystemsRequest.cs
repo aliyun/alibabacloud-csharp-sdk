@@ -10,88 +10,113 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeFileSystemsRequest : TeaModel {
         /// <summary>
-        /// The ID of the file system.
+        /// <para>The ID of the file system.</para>
+        /// <list type="bullet">
+        /// <item><description>Sample ID of a General-purpose NAS file system: 31a8e4****.</description></item>
+        /// <item><description>The IDs of Extreme NAS file systems must start with extreme-, for example, extreme-0015****.</description></item>
+        /// <item><description>The IDs of Cloud Parallel File Storage (CPFS) file systems must start with cpfs-, for example, cpfs-125487****.<remarks>
+        /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
-        /// - Sample ID of a General-purpose NAS file system: 31a8e4****.
-        /// - The IDs of Extreme NAS file systems must start with extreme-, for example, extreme-0015****.
-        /// - The IDs of Cloud Parallel File Storage (CPFS) file systems must start with cpfs-, for example, cpfs-125487****.
-        /// > CPFS file systems are available only on the China site (aliyun.com).
+        /// <b>Example:</b>
+        /// <para>31a8e4****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// The type of the file system.
+        /// <para>The type of the file system.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>all (default): all types</description></item>
+        /// <item><description>standard: General-purpose NAS file system</description></item>
+        /// <item><description>extreme: Extreme NAS file system</description></item>
+        /// <item><description>cpfs: CPFS file system<remarks>
+        /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// - all (default): all types
-        /// - standard: General-purpose NAS file system
-        /// - extreme: Extreme NAS file system
-        /// - cpfs: CPFS file system
-        /// > CPFS file systems are available only on the China site (aliyun.com).
+        /// <b>Example:</b>
+        /// <para>standard</para>
         /// </summary>
         [NameInMap("FileSystemType")]
         [Validation(Required=false)]
         public string FileSystemType { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// <para>Pages start from page 1. Default value: 1.</para>
         /// 
-        /// Pages start from page 1. Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Valid values: 1 to 100.
-        /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The resource group ID.
+        /// <para>The resource group ID.</para>
+        /// <para>You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a> to view resource group IDs.</para>
         /// 
-        /// You can log on to the [Resource Management console](https://resourcemanager.console.aliyun.com/resource-groups?) to view resource group IDs.
+        /// <b>Example:</b>
+        /// <para>rg-acfmwavnfdf****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The details about the tags.
+        /// <para>The details about the tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeFileSystemsRequestTag> Tag { get; set; }
         public class DescribeFileSystemsRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N to add to the resource.
+            /// <para>The key of tag N to add to the resource.</para>
+            /// <para>Limits:</para>
+            /// <list type="bullet">
+            /// <item><description>Valid values of N: 1 to 20.</description></item>
+            /// <item><description>The tag key must be 1 to 128 characters in length.</description></item>
+            /// <item><description>The tag key cannot start with aliyun or acs:.</description></item>
+            /// <item><description>The tag key cannot contain http:// or https://.</description></item>
+            /// </list>
             /// 
-            /// Limits:
-            /// - Valid values of N: 1 to 20.
-            /// - The tag key must be 1 to 128 characters in length.
-            /// - The tag key cannot start with aliyun or acs:.
-            /// - The tag key cannot contain http:// or https://.
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N to add to the resource.
+            /// <para>The value of tag N to add to the resource.</para>
+            /// <para>Limits:</para>
+            /// <list type="bullet">
+            /// <item><description>Valid values of N: 1 to 20.</description></item>
+            /// <item><description>The tag value must be 1 to 128 characters in length.</description></item>
+            /// <item><description>The tag value cannot start with aliyun or acs:.</description></item>
+            /// <item><description>The tag value cannot contain http:// or https://.</description></item>
+            /// </list>
             /// 
-            /// Limits:
-            /// - Valid values of N: 1 to 20.
-            /// - The tag value must be 1 to 128 characters in length.
-            /// - The tag value cannot start with aliyun or acs:.
-            /// - The tag value cannot contain http:// or https://.
+            /// <b>Example:</b>
+            /// <para>test-value</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -100,9 +125,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC).
+        /// <para>The ID of the virtual private cloud (VPC).</para>
+        /// <para>If you want to mount the file system on an Elastic Compute Service (ECS) instance, the file system and the ECS instance must reside in the same VPC.</para>
         /// 
-        /// If you want to mount the file system on an Elastic Compute Service (ECS) instance, the file system and the ECS instance must reside in the same VPC.
+        /// <b>Example:</b>
+        /// <para>vpc-bp1sevsgtqvk5gxbl****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

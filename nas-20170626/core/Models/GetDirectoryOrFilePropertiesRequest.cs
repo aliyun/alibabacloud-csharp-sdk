@@ -10,20 +10,23 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class GetDirectoryOrFilePropertiesRequest : TeaModel {
         /// <summary>
-        /// The ID of the file system.
+        /// <para>The ID of the file system.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>31a8e4****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// The absolute path of the directory.
+        /// <para>The absolute path of the directory.</para>
+        /// <para>The path must start with a forward slash (/) and must be a path that exists in the mount target.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The path must start with a forward slash (/) and must be a path that exists in the mount target.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>/pathway/to/folder</para>
         /// </summary>
         [NameInMap("Path")]
         [Validation(Required=false)]

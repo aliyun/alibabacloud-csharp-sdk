@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DisableAndCleanRecycleBinResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9E15E394-38A6-457A-A62A-D9797C9A****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

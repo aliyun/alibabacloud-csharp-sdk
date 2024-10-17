@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DeleteLDAPConfigResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5B4511A7-C99E-4071-AA8C-32E2529DA963</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

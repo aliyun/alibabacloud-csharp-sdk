@@ -10,59 +10,73 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MTcyNDU1MTYyNjIxNTMyNzM4NiMzNjExMzQxNw==</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The resource IDs.
+        /// <para>The resource IDs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>03e08484f0</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The resource type. Set the value to filesystem.
+        /// <para>The resource type. Set the value to filesystem.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>filesystem</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The details about the tags.
+        /// <para>The details about the tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// <para>Limits:</para>
+            /// <list type="bullet">
+            /// <item><description>The tag key cannot be left empty.</description></item>
+            /// <item><description>Valid values of N: 1 to 20.</description></item>
+            /// <item><description>The tag key must be 1 to 128 characters in length.</description></item>
+            /// <item><description>The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
+            /// <item><description>The tag key cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// </list>
             /// 
-            /// Limits:
-            /// 
-            /// *   The tag key cannot be left empty.
-            /// *   Valid values of N: 1 to 20.
-            /// *   The tag key must be 1 to 128 characters in length.
-            /// *   The tag key cannot start with `aliyun` or `acs:`.
-            /// *   The tag key cannot contain `http://` or `https://`.
+            /// <b>Example:</b>
+            /// <para>nastest</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// <para>Limits:</para>
+            /// <list type="bullet">
+            /// <item><description>Valid values of N: 1 to 20.</description></item>
+            /// <item><description>The tag value must be 1 to 128 characters in length.</description></item>
+            /// <item><description>The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
+            /// <item><description>The tag value cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// </list>
             /// 
-            /// Limits:
-            /// 
-            /// *   Valid values of N: 1 to 20.
-            /// *   The tag value must be 1 to 128 characters in length.
-            /// *   The tag value cannot start with `aliyun` or `acs:`.
-            /// *   The tag value cannot contain `http://` or `https://`.
+            /// <b>Example:</b>
+            /// <para>filetest</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

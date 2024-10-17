@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CancelRecycleBinJobRequest : TeaModel {
         /// <summary>
-        /// The job ID.
+        /// <para>The job ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rb-15<b><b>ed-r-1625</b></b>2441</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class EnableNfsAclRequest : TeaModel {
         /// <summary>
-        /// The ID of the file system.
+        /// <para>The ID of the file system.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>43f264xxxx</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]

@@ -10,34 +10,43 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateLDAPConfigRequest : TeaModel {
         /// <summary>
-        /// An LDAP entry.
+        /// <para>An LDAP entry.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn=alibaba,dc=com</para>
         /// </summary>
         [NameInMap("BindDN")]
         [Validation(Required=false)]
         public string BindDN { get; set; }
 
         /// <summary>
-        /// The ID of the file system.
+        /// <para>The ID of the file system.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>109c04****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// An LDAP search base.
+        /// <para>An LDAP search base.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dc=example</para>
         /// </summary>
         [NameInMap("SearchBase")]
         [Validation(Required=false)]
         public string SearchBase { get; set; }
 
         /// <summary>
-        /// An LDAP URI.
+        /// <para>An LDAP URI.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ldap://ldap.example.example</para>
         /// </summary>
         [NameInMap("URI")]
         [Validation(Required=false)]

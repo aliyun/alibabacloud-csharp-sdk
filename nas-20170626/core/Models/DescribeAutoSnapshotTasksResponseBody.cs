@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeAutoSnapshotTasksResponseBody : TeaModel {
         /// <summary>
-        /// The queried automatic snapshot tasks.
+        /// <para>The queried automatic snapshot tasks.</para>
         /// </summary>
         [NameInMap("AutoSnapshotTasks")]
         [Validation(Required=false)]
@@ -21,14 +21,20 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public List<DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasksAutoSnapshotTask> AutoSnapshotTask { get; set; }
             public class DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasksAutoSnapshotTask : TeaModel {
                 /// <summary>
-                /// The ID of the automatic snapshot policy.
+                /// <para>The ID of the automatic snapshot policy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>sp-extreme-233e6****</para>
                 /// </summary>
                 [NameInMap("AutoSnapshotPolicyId")]
                 [Validation(Required=false)]
                 public string AutoSnapshotPolicyId { get; set; }
 
                 /// <summary>
-                /// The ID of the file system.
+                /// <para>The ID of the file system.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>extreme-233e6****</para>
                 /// </summary>
                 [NameInMap("SourceFileSystemId")]
                 [Validation(Required=false)]
@@ -39,28 +45,40 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of automatic snapshot tasks.
+        /// <para>The total number of automatic snapshot tasks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeZonesResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A70BEE5D-76D3-49FB-B58F-1F398211****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The queried zones.
+        /// <para>The queried zones.</para>
         /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
@@ -28,7 +31,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public List<DescribeZonesResponseBodyZonesZone> Zone { get; set; }
             public class DescribeZonesResponseBodyZonesZone : TeaModel {
                 /// <summary>
-                /// This parameter is reserved. You can ignore this parameter.
+                /// <para>This parameter is reserved. You can ignore this parameter.</para>
                 /// </summary>
                 [NameInMap("Capacity")]
                 [Validation(Required=false)]
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 }
 
                 /// <summary>
-                /// The details about file system types.
+                /// <para>The details about file system types.</para>
                 /// </summary>
                 [NameInMap("InstanceTypes")]
                 [Validation(Required=false)]
@@ -52,26 +55,36 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                     public List<DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType> InstanceType { get; set; }
                     public class DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType : TeaModel {
                         /// <summary>
-                        /// The protocol type.
+                        /// <para>The protocol type.</para>
+                        /// <list type="bullet">
+                        /// <item><description>If the FileSystemType parameter is set to standard, the protocol type is nfs or smb.</description></item>
+                        /// <item><description>If the FileSystemType parameter is set to extreme, the protocol type is nfs.</description></item>
+                        /// <item><description>If the FileSystemType parameter is set to cpfs, the protocol type is cpfs.</description></item>
+                        /// </list>
+                        /// <remarks>
+                        /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
+                        /// </remarks>
                         /// 
-                        /// *   If the FileSystemType parameter is set to standard, the protocol type is nfs or smb.
-                        /// *   If the FileSystemType parameter is set to extreme, the protocol type is nfs.
-                        /// *   If the FileSystemType parameter is set to cpfs, the protocol type is cpfs.
-                        /// 
-                        /// > CPFS file systems are available only on the China site (aliyun.com).
+                        /// <b>Example:</b>
+                        /// <para>nfs</para>
                         /// </summary>
                         [NameInMap("ProtocolType")]
                         [Validation(Required=false)]
                         public string ProtocolType { get; set; }
 
                         /// <summary>
-                        /// The storage type.
+                        /// <para>The storage type.</para>
+                        /// <list type="bullet">
+                        /// <item><description>If the FileSystemType parameter is set to standard, the storage type is Performance or Capacity.</description></item>
+                        /// <item><description>If the FileSystemType parameter is set to extreme, the storage type is standard or advance.</description></item>
+                        /// <item><description>If the FileSystemType parameter is set to cpfs, the storage type is advance_100 (100 MB/s/TiB baseline) or advance_200 (200 MB/s/TiB baseline).</description></item>
+                        /// </list>
+                        /// <remarks>
+                        /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
+                        /// </remarks>
                         /// 
-                        /// *   If the FileSystemType parameter is set to standard, the storage type is Performance or Capacity.
-                        /// *   If the FileSystemType parameter is set to extreme, the storage type is standard or advance.
-                        /// *   If the FileSystemType parameter is set to cpfs, the storage type is advance_100 (100 MB/s/TiB baseline) or advance_200 (200 MB/s/TiB baseline).
-                        /// 
-                        /// > CPFS file systems are available only on the China site (aliyun.com).
+                        /// <b>Example:</b>
+                        /// <para>Capacity</para>
                         /// </summary>
                         [NameInMap("StorageType")]
                         [Validation(Required=false)]
@@ -82,7 +95,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 }
 
                 /// <summary>
-                /// This parameter is reserved. You can ignore this parameter.
+                /// <para>This parameter is reserved. You can ignore this parameter.</para>
                 /// </summary>
                 [NameInMap("Performance")]
                 [Validation(Required=false)]
@@ -95,7 +108,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 }
 
                 /// <summary>
-                /// The zone ID.
+                /// <para>The zone ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-b</para>
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

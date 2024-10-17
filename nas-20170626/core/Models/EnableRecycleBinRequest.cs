@@ -10,20 +10,23 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class EnableRecycleBinRequest : TeaModel {
         /// <summary>
-        /// The ID of the file system for which you want to enable the recycle bin feature.
+        /// <para>The ID of the file system for which you want to enable the recycle bin feature.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1ca404****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// The retention period of the files in the recycle bin. Unit: days.
+        /// <para>The retention period of the files in the recycle bin. Unit: days.</para>
+        /// <para>Valid values: 1 to 180.</para>
+        /// <para>Default value: 3.</para>
         /// 
-        /// Valid values: 1 to 180.
-        /// 
-        /// Default value: 3.
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("ReservedDays")]
         [Validation(Required=false)]

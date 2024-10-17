@@ -10,51 +10,60 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateAccessGroupRequest : TeaModel {
         /// <summary>
-        /// The name of the permission group.
+        /// <para>The name of the permission group.</para>
+        /// <para>Limits:</para>
+        /// <list type="bullet">
+        /// <item><description>The name must be 3 to 64 characters in length.</description></item>
+        /// <item><description>The name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).</description></item>
+        /// <item><description>The name must be different from the name of the default permission group.</description></item>
+        /// </list>
+        /// <para>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Limits:
-        /// 
-        /// *   The name must be 3 to 64 characters in length.
-        /// *   The name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).
-        /// *   The name must be different from the name of the default permission group.
-        /// 
-        /// The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpc-test</para>
         /// </summary>
         [NameInMap("AccessGroupName")]
         [Validation(Required=false)]
         public string AccessGroupName { get; set; }
 
         /// <summary>
-        /// The network type of the permission group. Valid value: **Vpc**.
+        /// <para>The network type of the permission group. Valid value: <b>Vpc</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Vpc</para>
         /// </summary>
         [NameInMap("AccessGroupType")]
         [Validation(Required=false)]
         public string AccessGroupType { get; set; }
 
         /// <summary>
-        /// The description of the permission group.
+        /// <para>The description of the permission group.</para>
+        /// <para>Limits:</para>
+        /// <list type="bullet">
+        /// <item><description>By default, the description of a permission group is the same as the name of the permission group. The description must be 2 to 128 characters in length.</description></item>
+        /// <item><description>The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The description can contain digits, colons (:), underscores (_), and hyphens (-).</description></item>
+        /// </list>
         /// 
-        /// Limits:
-        /// 
-        /// *   By default, the description of a permission group is the same as the name of the permission group. The description must be 2 to 128 characters in length.
-        /// *   The name must start with a letter and cannot start with `http://` or `https://`.
-        /// *   The description can contain digits, colons (:), underscores (_), and hyphens (-).
+        /// <b>Example:</b>
+        /// <para>vpctestaccessgroup</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The type of the file system.
+        /// <para>The type of the file system.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>standard (default): General-purpose NAS file system</description></item>
+        /// <item><description>extreme: Extreme NAS file system</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   standard (default): General-purpose NAS file system
-        /// *   extreme: Extreme NAS file system
+        /// <b>Example:</b>
+        /// <para>standard</para>
         /// </summary>
         [NameInMap("FileSystemType")]
         [Validation(Required=false)]

@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ResetFileSystemRequest : TeaModel {
         /// <summary>
-        /// The ID of the advanced Extreme NAS file system.
+        /// <para>The ID of the advanced Extreme NAS file system.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>extreme-012dd****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// The snapshot ID.
+        /// <para>The snapshot ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>s-extreme-snapsho****</para>
         /// </summary>
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]

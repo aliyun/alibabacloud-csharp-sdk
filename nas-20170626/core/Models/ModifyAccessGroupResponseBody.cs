@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ModifyAccessGroupResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ED2AE737-9D50-4CA4-B0DA-31BD610C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

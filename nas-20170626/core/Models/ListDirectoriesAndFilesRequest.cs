@@ -10,67 +10,82 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ListDirectoriesAndFilesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to query only directories.
+        /// <para>Specifies whether to query only directories.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false (default): queries both directories and files.</description></item>
+        /// <item><description>true: queries only directories.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.</para>
+        /// </remarks>
         /// 
-        /// Valid values:
-        /// 
-        /// *   false (default): queries both directories and files.
-        /// *   true: queries only directories.
-        /// 
-        /// >  If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DirectoryOnly")]
         [Validation(Required=false)]
         public bool? DirectoryOnly { get; set; }
 
         /// <summary>
-        /// The ID of the file system.
+        /// <para>The ID of the file system.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>31a8e4****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// The maximum number of directories or files to include in the results of each query.
+        /// <para>The maximum number of directories or files to include in the results of each query.</para>
+        /// <para>Valid values: 10 to 128.</para>
+        /// <para>Default value: 100.</para>
         /// 
-        /// Valid values: 10 to 128.
-        /// 
-        /// Default value: 100.
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The absolute path of the directory.
+        /// <para>The absolute path of the directory.</para>
+        /// <para>The path must start with a forward slash (/) and must be a path that exists in the mount target.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The path must start with a forward slash (/) and must be a path that exists in the mount target.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>/pathway/to/folder</para>
         /// </summary>
         [NameInMap("Path")]
         [Validation(Required=false)]
         public string Path { get; set; }
 
         /// <summary>
-        /// The storage class.
+        /// <para>The storage class.</para>
+        /// <list type="bullet">
+        /// <item><description>InfrequentAccess: the Infrequent Access (IA) storage class.</description></item>
+        /// <item><description>Archive: the Archive storage class.</description></item>
+        /// <item><description>All: all stored data.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   InfrequentAccess: the Infrequent Access (IA) storage class.
-        /// *   Archive: the Archive storage class.
-        /// *   All: all stored data.
-        /// 
-        /// >  If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>InfrequentAccess</para>
         /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]

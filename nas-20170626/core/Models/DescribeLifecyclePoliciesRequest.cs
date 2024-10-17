@@ -10,48 +10,64 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeLifecyclePoliciesRequest : TeaModel {
         /// <summary>
-        /// The ID of the file system.
+        /// <para>The ID of the file system.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>31a8e4****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// The name of the lifecycle policy. The name must meet the following conventions:
+        /// <para>The name of the lifecycle policy. The name must meet the following conventions:</para>
+        /// <para>The name must be 3 to 64 characters in length and must start with a letter. It can contain letters, digits, underscores (_), and hyphens (-).</para>
         /// 
-        /// The name must be 3 to 64 characters in length and must start with a letter. It can contain letters, digits, underscores (_), and hyphens (-).
+        /// <b>Example:</b>
+        /// <para>lifecyclepolicy_01</para>
         /// </summary>
         [NameInMap("LifecyclePolicyName")]
         [Validation(Required=false)]
         public string LifecyclePolicyName { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// <para>Pages start from page 1. Default value: 1.</para>
         /// 
-        /// Pages start from page 1. Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Valid values: 1 to 100.
-        /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The storage class.
+        /// <para>The storage class.</para>
+        /// <list type="bullet">
+        /// <item><description>InfrequentAccess: the Infrequent Access (IA) storage class.</description></item>
+        /// <item><description>Archive: the Archive storage class.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If the StorageType parameter is not specified, data retrieval tasks of all types are returned.</para>
+        /// </remarks>
         /// 
-        /// *   InfrequentAccess: the Infrequent Access (IA) storage class.
-        /// *   Archive: the Archive storage class.
+        /// <b>Example:</b>
+        /// <para>InfrequentAccess</para>
         /// 
-        /// >  If the StorageType parameter is not specified, data retrieval tasks of all types are returned.
+        /// <b>if can be null:</b>
+        /// <c>true</c>
         /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]

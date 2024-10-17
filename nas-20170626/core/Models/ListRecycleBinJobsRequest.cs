@@ -10,51 +10,63 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ListRecycleBinJobsRequest : TeaModel {
         /// <summary>
-        /// The ID of the file system.
+        /// <para>The ID of the file system.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1ca404****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// The job ID.
+        /// <para>The job ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rb-15<b><b>ed-r-1625</b></b>2441</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// <para>Pages start from page 1. Default value: 1.</para>
         /// 
-        /// Pages start from page 1. Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Valid values: 1 to 100.
-        /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The job status. Valid values:
+        /// <para>The job status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Running: The job is running.</description></item>
+        /// <item><description>Defragmenting: The job is defragmenting data.</description></item>
+        /// <item><description>PartialSuccess: The job is partially completed.</description></item>
+        /// <item><description>Success: The job is completed.</description></item>
+        /// <item><description>Fail: The job failed.</description></item>
+        /// <item><description>Cancelled: The job is canceled.</description></item>
+        /// <item><description>all (default)</description></item>
+        /// </list>
         /// 
-        /// *   Running: The job is running.
-        /// *   Defragmenting: The job is defragmenting data.
-        /// *   PartialSuccess: The job is partially completed.
-        /// *   Success: The job is completed.
-        /// *   Fail: The job failed.
-        /// *   Cancelled: The job is canceled.
-        /// *   all (default)
+        /// <b>Example:</b>
+        /// <para>All</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

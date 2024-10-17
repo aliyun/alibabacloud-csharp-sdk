@@ -10,17 +10,21 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeNfsAclResponseBody : TeaModel {
         /// <summary>
-        /// The information about the ACL feature.
+        /// <para>The information about the ACL feature.</para>
         /// </summary>
         [NameInMap("Acl")]
         [Validation(Required=false)]
         public DescribeNfsAclResponseBodyAcl Acl { get; set; }
         public class DescribeNfsAclResponseBodyAcl : TeaModel {
             /// <summary>
-            /// Indicates whether the NFS ACL feature is enabled.
+            /// <para>Indicates whether the NFS ACL feature is enabled.</para>
+            /// <list type="bullet">
+            /// <item><description>true: The NFS ACL feature is enabled.</description></item>
+            /// <item><description>false: The NFS ACL feature is disabled.</description></item>
+            /// </list>
             /// 
-            /// *   true: The NFS ACL feature is enabled.
-            /// *   false: The NFS ACL feature is disabled.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Enabled")]
             [Validation(Required=false)]
@@ -29,7 +33,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A1098673-1746-505E-A5F1-08527B7EDBDF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

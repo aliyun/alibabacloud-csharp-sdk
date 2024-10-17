@@ -10,30 +10,37 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DeleteAccessRuleRequest : TeaModel {
         /// <summary>
-        /// The name of the permission group.
+        /// <para>The name of the permission group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpc-test</para>
         /// </summary>
         [NameInMap("AccessGroupName")]
         [Validation(Required=false)]
         public string AccessGroupName { get; set; }
 
         /// <summary>
-        /// The rule ID.
+        /// <para>The rule ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("AccessRuleId")]
         [Validation(Required=false)]
         public string AccessRuleId { get; set; }
 
         /// <summary>
-        /// The type of the file system.
+        /// <para>The type of the file system.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>standard (default): General-purpose NAS file system</description></item>
+        /// <item><description>extreme: Extreme NAS file system</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   standard (default): General-purpose NAS file system
-        /// *   extreme: Extreme NAS file system
+        /// <b>Example:</b>
+        /// <para>standard</para>
         /// </summary>
         [NameInMap("FileSystemType")]
         [Validation(Required=false)]

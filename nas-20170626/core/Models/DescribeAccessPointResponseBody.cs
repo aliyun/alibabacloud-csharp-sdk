@@ -10,98 +10,131 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeAccessPointResponseBody : TeaModel {
         /// <summary>
-        /// The information about the access point.
+        /// <para>The information about the access point.</para>
         /// </summary>
         [NameInMap("AccessPoint")]
         [Validation(Required=false)]
         public DescribeAccessPointResponseBodyAccessPoint AccessPoint { get; set; }
         public class DescribeAccessPointResponseBodyAccessPoint : TeaModel {
             /// <summary>
-            /// The Alibaba Cloud Resource Name (ARN) of the access point.
+            /// <para>The Alibaba Cloud Resource Name (ARN) of the access point.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>acs:nas:cn-hangzhou:178321033379****:accesspoint/ap-ie15yd****</para>
             /// </summary>
             [NameInMap("ARN")]
             [Validation(Required=false)]
             public string ARN { get; set; }
 
             /// <summary>
-            /// The name of the permission group.
+            /// <para>The name of the permission group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("AccessGroup")]
             [Validation(Required=false)]
             public string AccessGroup { get; set; }
 
             /// <summary>
-            /// The ID of the access point.
+            /// <para>The ID of the access point.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ap-ie15yd****</para>
             /// </summary>
             [NameInMap("AccessPointId")]
             [Validation(Required=false)]
             public string AccessPointId { get; set; }
 
             /// <summary>
-            /// The name of the access point.
+            /// <para>The name of the access point.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("AccessPointName")]
             [Validation(Required=false)]
             public string AccessPointName { get; set; }
 
             /// <summary>
-            /// The time when the access point was created.
+            /// <para>The time when the access point was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1709619668276167</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The domain name of the access point.
+            /// <para>The domain name of the access point.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ap-ie15ydanoz.001014****-w****.cn-hangzhou.nas.aliyuncs.com</para>
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
 
             /// <summary>
-            /// Indicates whether the RAM policy is enabled.
+            /// <para>Indicates whether the RAM policy is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("EnabledRam")]
             [Validation(Required=false)]
             public bool? EnabledRam { get; set; }
 
             /// <summary>
-            /// The ID of the file system.
+            /// <para>The ID of the file system.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>31a8e4****</para>
             /// </summary>
             [NameInMap("FileSystemId")]
             [Validation(Required=false)]
             public string FileSystemId { get; set; }
 
             /// <summary>
-            /// The time when the access point was modified.
+            /// <para>The time when the access point was modified.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1709619668276167</para>
             /// </summary>
             [NameInMap("ModifyTime")]
             [Validation(Required=false)]
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// The POSIX user.
+            /// <para>The POSIX user.</para>
             /// </summary>
             [NameInMap("PosixUser")]
             [Validation(Required=false)]
             public DescribeAccessPointResponseBodyAccessPointPosixUser PosixUser { get; set; }
             public class DescribeAccessPointResponseBodyAccessPointPosixUser : TeaModel {
                 /// <summary>
-                /// The ID of the POSIX user group.
+                /// <para>The ID of the POSIX user group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12</para>
                 /// </summary>
                 [NameInMap("PosixGroupId")]
                 [Validation(Required=false)]
                 public int? PosixGroupId { get; set; }
 
                 /// <summary>
-                /// The IDs of the secondary user groups.
+                /// <para>The IDs of the secondary user groups.</para>
                 /// </summary>
                 [NameInMap("PosixSecondaryGroupIds")]
                 [Validation(Required=false)]
                 public List<int?> PosixSecondaryGroupIds { get; set; }
 
                 /// <summary>
-                /// The ID of the POSIX user.
+                /// <para>The ID of the POSIX user.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123</para>
                 /// </summary>
                 [NameInMap("PosixUserId")]
                 [Validation(Required=false)]
@@ -110,42 +143,57 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             }
 
             /// <summary>
-            /// The region ID.
+            /// <para>The region ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The root directory.
+            /// <para>The root directory.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/</para>
             /// </summary>
             [NameInMap("RootPath")]
             [Validation(Required=false)]
             public string RootPath { get; set; }
 
             /// <summary>
-            /// The permissions to create the root directory.
+            /// <para>The permissions to create the root directory.</para>
             /// </summary>
             [NameInMap("RootPathPermission")]
             [Validation(Required=false)]
             public DescribeAccessPointResponseBodyAccessPointRootPathPermission RootPathPermission { get; set; }
             public class DescribeAccessPointResponseBodyAccessPointRootPathPermission : TeaModel {
                 /// <summary>
-                /// The ID of the owner group.
+                /// <para>The ID of the owner group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123</para>
                 /// </summary>
                 [NameInMap("OwnerGroupId")]
                 [Validation(Required=false)]
                 public int? OwnerGroupId { get; set; }
 
                 /// <summary>
-                /// The owner ID.
+                /// <para>The owner ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("OwnerUserId")]
                 [Validation(Required=false)]
                 public int? OwnerUserId { get; set; }
 
                 /// <summary>
-                /// The POSIX permission.
+                /// <para>The POSIX permission.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0755</para>
                 /// </summary>
                 [NameInMap("Permission")]
                 [Validation(Required=false)]
@@ -154,43 +202,54 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             }
 
             /// <summary>
-            /// The status of the root directory.
+            /// <para>The status of the root directory.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: The rootpath status is unknown.</description></item>
+            /// <item><description>1: The rootpath does not exist and may be deleted.</description></item>
+            /// <item><description>2: The rootpath is normal.</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   0: The rootpath status is unknown.
-            /// *   1: The rootpath does not exist and may be deleted.
-            /// *   2: The rootpath is normal.
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("RootPathStatus")]
             [Validation(Required=false)]
             public string RootPathStatus { get; set; }
 
             /// <summary>
-            /// The status of the access point.
+            /// <para>The status of the access point.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Active: The access point is available.</description></item>
+            /// <item><description>Inactive: The access point is unavailable.</description></item>
+            /// <item><description>Pending: The access point is being created.</description></item>
+            /// <item><description>Deleting: The access point is being deleted.</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   Active: The access point is available.
-            /// *   Inactive: The access point is unavailable.
-            /// *   Pending: The access point is being created.
-            /// *   Deleting: The access point is being deleted.
+            /// <b>Example:</b>
+            /// <para>Active</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The vSwitch ID.
+            /// <para>The vSwitch ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vsw-2zevmwkwyztjuoffg****</para>
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// The ID of the virtual private cloud (VPC).
+            /// <para>The ID of the virtual private cloud (VPC).</para>
+            /// <para>You must select the VPC of the Elastic Compute Service (ECS) instance on which you want to mount the file system.</para>
             /// 
-            /// You must select the VPC of the Elastic Compute Service (ECS) instance on which you want to mount the file system.
+            /// <b>Example:</b>
+            /// <para>vpc-2zesj9afh3y518k9o****</para>
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
@@ -199,9 +258,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

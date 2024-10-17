@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DeleteAccessPointRequest : TeaModel {
         /// <summary>
-        /// The ID of the access point.
+        /// <para>The ID of the access point.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ap-ie15yd****</para>
         /// </summary>
         [NameInMap("AccessPointId")]
         [Validation(Required=false)]
         public string AccessPointId { get; set; }
 
         /// <summary>
-        /// The ID of the file system.
+        /// <para>The ID of the file system.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1ca404****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class RetryLifecycleRetrieveJobRequest : TeaModel {
         /// <summary>
-        /// The ID of the data retrieval task.
+        /// <para>The ID of the data retrieval task.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lrj-nfstest-ia-160****853-hshvw</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

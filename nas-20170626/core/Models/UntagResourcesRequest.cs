@@ -10,41 +10,49 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to remove all tags from the file system.
+        /// <para>Specifies whether to remove all tags from the file system.</para>
+        /// <para>This parameter is valid only if the TagKey.N parameter is not specified.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: All tags are removed from the file system. If the file system does not have tags, a success message is returned.</description></item>
+        /// <item><description>false (default): No tags are removed from the file system and a success message is returned.</description></item>
+        /// </list>
         /// 
-        /// This parameter is valid only if the TagKey.N parameter is not specified.
-        /// 
-        /// Valid values:
-        /// 
-        /// *   true: All tags are removed from the file system. If the file system does not have tags, a success message is returned.
-        /// *   false (default): No tags are removed from the file system and a success message is returned.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
 
         /// <summary>
-        /// The resource IDs. Valid values of N: 1 to 50.
+        /// <para>The resource IDs. Valid values of N: 1 to 50.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>03e08484f0</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The resource type.
+        /// <para>The resource type.</para>
+        /// <para>Set the value to filesystem.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Set the value to filesystem.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>filesystem</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tag keys of the resources. Valid values of N: 1 to 20.
+        /// <para>The tag keys of the resources. Valid values of N: 1 to 20.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>nastest</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

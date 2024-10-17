@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DeleteLifecyclePolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the file system.
+        /// <para>The ID of the file system.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>31a8e4****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// The name of the lifecycle policy.
+        /// <para>The name of the lifecycle policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lifecyclepolicy1</para>
         /// </summary>
         [NameInMap("LifecyclePolicyName")]
         [Validation(Required=false)]

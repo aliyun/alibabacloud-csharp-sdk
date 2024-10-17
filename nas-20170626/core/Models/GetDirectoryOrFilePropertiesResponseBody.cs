@@ -10,130 +10,150 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class GetDirectoryOrFilePropertiesResponseBody : TeaModel {
         /// <summary>
-        /// The details about the files or directories.
+        /// <para>The details about the files or directories.</para>
         /// </summary>
         [NameInMap("Entry")]
         [Validation(Required=false)]
         public GetDirectoryOrFilePropertiesResponseBodyEntry Entry { get; set; }
         public class GetDirectoryOrFilePropertiesResponseBodyEntry : TeaModel {
             /// <summary>
-            /// The time when the file was queried.
+            /// <para>The time when the file was queried.</para>
+            /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// <para>This parameter is returned only if the value of the Type parameter is File.</para>
             /// 
-            /// The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
-            /// 
-            /// This parameter is returned only if the value of the Type parameter is File.
+            /// <b>Example:</b>
+            /// <para>2021-02-01T10:08:08Z</para>
             /// </summary>
             [NameInMap("ATime")]
             [Validation(Required=false)]
             public string ATime { get; set; }
 
             /// <summary>
-            /// The time when the raw data was modified.
+            /// <para>The time when the raw data was modified.</para>
+            /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// <para>This parameter is returned only if the value of the Type parameter is File.</para>
             /// 
-            /// The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
-            /// 
-            /// This parameter is returned only if the value of the Type parameter is File.
+            /// <b>Example:</b>
+            /// <para>2021-02-11T10:08:10Z</para>
             /// </summary>
             [NameInMap("CTime")]
             [Validation(Required=false)]
             public string CTime { get; set; }
 
             /// <summary>
-            /// Indicates whether the directory contains files stored in the Archive storage class.
+            /// <para>Indicates whether the directory contains files stored in the Archive storage class.</para>
+            /// <para>This parameter is returned only if the Type parameter is set to Directory.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: The directory contains files stored in the Archive storage class.</description></item>
+            /// <item><description>false: The directory does not contain files stored in the Archive storage class.</description></item>
+            /// </list>
             /// 
-            /// This parameter is returned only if the Type parameter is set to Directory.
-            /// 
-            /// Valid values:
-            /// 
-            /// *   true: The directory contains files stored in the Archive storage class.
-            /// *   false: The directory does not contain files stored in the Archive storage class.
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("HasArchiveFile")]
             [Validation(Required=false)]
             public bool? HasArchiveFile { get; set; }
 
             /// <summary>
-            /// Indicates whether the directory contains files stored in the IA storage medium.
+            /// <para>Indicates whether the directory contains files stored in the IA storage medium.</para>
+            /// <para>This parameter is returned only if the value of the Type parameter is Directory.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: The directory contains files stored in the IA storage medium.</description></item>
+            /// <item><description>false: The directory does not contain files stored in the IA storage medium.</description></item>
+            /// </list>
             /// 
-            /// This parameter is returned only if the value of the Type parameter is Directory.
-            /// 
-            /// Valid values:
-            /// 
-            /// *   true: The directory contains files stored in the IA storage medium.
-            /// *   false: The directory does not contain files stored in the IA storage medium.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("HasInfrequentAccessFile")]
             [Validation(Required=false)]
             public bool? HasInfrequentAccessFile { get; set; }
 
             /// <summary>
-            /// The file or directory inode.
+            /// <para>The file or directory inode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>40</para>
             /// </summary>
             [NameInMap("Inode")]
             [Validation(Required=false)]
             public string Inode { get; set; }
 
             /// <summary>
-            /// The time when the file was modified.
+            /// <para>The time when the file was modified.</para>
+            /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// <para>This parameter is returned only if the value of the Type parameter is File.</para>
             /// 
-            /// The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
-            /// 
-            /// This parameter is returned only if the value of the Type parameter is File.
+            /// <b>Example:</b>
+            /// <para>2021-02-11T10:08:08Z</para>
             /// </summary>
             [NameInMap("MTime")]
             [Validation(Required=false)]
             public string MTime { get; set; }
 
             /// <summary>
-            /// The name of the file or directory.
+            /// <para>The name of the file or directory.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>file.txt</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The time when the last data retrieval task was run.
+            /// <para>The time when the last data retrieval task was run.</para>
+            /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// <para>This parameter is returned only if the value of the Type parameter is File.</para>
             /// 
-            /// The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
-            /// 
-            /// This parameter is returned only if the value of the Type parameter is File.
+            /// <b>Example:</b>
+            /// <para>2021-02-11T10:08:08Z</para>
             /// </summary>
             [NameInMap("RetrieveTime")]
             [Validation(Required=false)]
             public string RetrieveTime { get; set; }
 
             /// <summary>
-            /// The size of the file.
+            /// <para>The size of the file.</para>
+            /// <para>Unit: bytes.</para>
+            /// <para>This parameter is returned only if the value of the Type parameter is File.</para>
             /// 
-            /// Unit: bytes.
-            /// 
-            /// This parameter is returned only if the value of the Type parameter is File.
+            /// <b>Example:</b>
+            /// <para>1024</para>
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
             public long? Size { get; set; }
 
             /// <summary>
-            /// The storage type of the file.
+            /// <para>The storage type of the file.</para>
+            /// <para>This parameter is returned only if the value of the Type parameter is File.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>standard: General-purpose NAS file system</description></item>
+            /// <item><description>InfrequentAccess: IA storage medium</description></item>
+            /// </list>
             /// 
-            /// This parameter is returned only if the value of the Type parameter is File.
-            /// 
-            /// Valid values:
-            /// 
-            /// *   standard: General-purpose NAS file system
-            /// *   InfrequentAccess: IA storage medium
+            /// <b>Example:</b>
+            /// <para>InfrequentAccess</para>
             /// </summary>
             [NameInMap("StorageType")]
             [Validation(Required=false)]
             public string StorageType { get; set; }
 
             /// <summary>
-            /// The type of the query result.
+            /// <para>The type of the query result.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>File</description></item>
+            /// <item><description>Directory</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   File
-            /// *   Directory
+            /// <b>Example:</b>
+            /// <para>File</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -142,7 +162,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2D69A58F-345C-4FDE-88E4-BF518948****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

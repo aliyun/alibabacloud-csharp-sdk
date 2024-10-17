@@ -10,26 +10,31 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeZonesRequest : TeaModel {
         /// <summary>
-        /// The type of the file system.
+        /// <para>The type of the file system.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>standard (default): General-purpose NAS file system</description></item>
+        /// <item><description>extreme: Extreme NAS file system</description></item>
+        /// <item><description>cpfs: Cloud Parallel File Storage (CPFS) file system</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
+        /// </remarks>
         /// 
-        /// Valid values:
-        /// 
-        /// *   standard (default): General-purpose NAS file system
-        /// *   extreme: Extreme NAS file system
-        /// *   cpfs: Cloud Parallel File Storage (CPFS) file system
-        /// 
-        /// > CPFS file systems are available only on the China site (aliyun.com).
+        /// <b>Example:</b>
+        /// <para>standard</para>
         /// </summary>
         [NameInMap("FileSystemType")]
         [Validation(Required=false)]
         public string FileSystemType { get; set; }
 
         /// <summary>
-        /// The ID of the region where you want to query zones.
+        /// <para>The ID of the region where you want to query zones.</para>
+        /// <para>You can call the DescribeRegions operation to query the latest region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the DescribeRegions operation to query the latest region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

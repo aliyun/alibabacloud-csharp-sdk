@@ -10,19 +10,25 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class SetDirQuotaResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5BC5CB97-9F28-42FE-84A4-0CD0DF42****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

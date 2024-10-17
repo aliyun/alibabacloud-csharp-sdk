@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class RetryLifecycleRetrieveJobResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BC7C825C-5F65-4B56-BEF6-98C56C7C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
