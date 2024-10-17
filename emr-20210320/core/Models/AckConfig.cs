@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class AckConfig : TeaModel {
         /// <summary>
-        /// ack集群id
+        /// <para>ack集群id</para>
         /// </summary>
         [NameInMap("AckInstanceId")]
         [Validation(Required=false)]
@@ -36,14 +33,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string DataDiskStorageClass { get; set; }
 
         /// <summary>
-        /// Pod的CPU限制值。
+        /// <para>Pod的CPU限制值。</para>
         /// </summary>
         [NameInMap("LimitCpu")]
         [Validation(Required=false)]
         public float? LimitCpu { get; set; }
 
         /// <summary>
-        /// Pod的内存限制值。
+        /// <para>Pod的内存限制值。</para>
         /// </summary>
         [NameInMap("LimitMemory")]
         [Validation(Required=false)]
@@ -54,39 +51,109 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public bool? MountHostCgroup { get; set; }
 
         /// <summary>
-        /// ack 命名空间
+        /// <para>ack 命名空间</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
+        [NameInMap("NodeAffinity")]
+        [Validation(Required=false)]
+        public string NodeAffinity { get; set; }
+
         /// <summary>
-        /// ack的节点标签限制
+        /// <para>ack的节点标签限制</para>
         /// </summary>
         [NameInMap("NodeSelectors")]
         [Validation(Required=false)]
         public List<Tag> NodeSelectors { get; set; }
 
+        [NameInMap("PodAffinity")]
+        [Validation(Required=false)]
+        public string PodAffinity { get; set; }
+
+        [NameInMap("PodAntiAffinity")]
+        [Validation(Required=false)]
+        public string PodAntiAffinity { get; set; }
+
+        [NameInMap("PreStartCommand")]
+        [Validation(Required=false)]
+        public List<string> PreStartCommand { get; set; }
+
+        [NameInMap("Pvcs")]
+        [Validation(Required=false)]
+        public List<AckConfigPvcs> Pvcs { get; set; }
+        public class AckConfigPvcs : TeaModel {
+            [NameInMap("DataDiskSize")]
+            [Validation(Required=false)]
+            public long? DataDiskSize { get; set; }
+
+            [NameInMap("DataDiskStorageClass")]
+            [Validation(Required=false)]
+            public string DataDiskStorageClass { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Path")]
+            [Validation(Required=false)]
+            public string Path { get; set; }
+
+        }
+
         /// <summary>
-        /// Pod的CPU请求值
+        /// <para>Pod的CPU请求值</para>
         /// </summary>
         [NameInMap("RequestCpu")]
         [Validation(Required=false)]
         public float? RequestCpu { get; set; }
 
         /// <summary>
-        /// Pod的内存请求值。
+        /// <para>Pod的内存请求值。</para>
         /// </summary>
         [NameInMap("RequestMemory")]
         [Validation(Required=false)]
         public float? RequestMemory { get; set; }
 
         /// <summary>
-        /// ack的节点污点容忍
+        /// <para>ack的节点污点容忍</para>
         /// </summary>
         [NameInMap("Tolerations")]
         [Validation(Required=false)]
         public List<Toleration> Tolerations { get; set; }
+
+        [NameInMap("VolumeMounts")]
+        [Validation(Required=false)]
+        public List<AckConfigVolumeMounts> VolumeMounts { get; set; }
+        public class AckConfigVolumeMounts : TeaModel {
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Path")]
+            [Validation(Required=false)]
+            public string Path { get; set; }
+
+        }
+
+        [NameInMap("Volumes")]
+        [Validation(Required=false)]
+        public List<AckConfigVolumes> Volumes { get; set; }
+        public class AckConfigVolumes : TeaModel {
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Path")]
+            [Validation(Required=false)]
+            public string Path { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
 
     }
 

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
-    public class ListInspectionHistoryResponse : TeaModel {
+    public class GetClusterCloneMetaResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ListInspectionHistoryResponseBody Body { get; set; }
+        public GetClusterCloneMetaResponseBody Body { get; set; }
 
     }
 

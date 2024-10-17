@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetClusterRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c-b933c5aac8fe****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which you want to create the instance.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

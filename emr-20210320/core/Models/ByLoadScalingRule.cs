@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ByLoadScalingRule : TeaModel {
         /// <summary>
-        /// 比较符。
+        /// <para>比较符。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>LT</para>
         /// </summary>
         [NameInMap("ComparisonOperator")]
         [Validation(Required=false)]
@@ -23,45 +25,55 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? CoolDownInterval { get; set; }
 
         /// <summary>
-        /// 统计次数。
+        /// <para>统计次数。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("EvaluationCount")]
         [Validation(Required=false)]
         public int? EvaluationCount { get; set; }
 
         /// <summary>
-        /// 指标名称。指标名称需要在 ListAutoScalingMetrics 接口返回的指标名称列表中。
+        /// <para>指标名称。指标名称需要在 ListAutoScalingMetrics 接口返回的指标名称列表中。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>yarn_resourcemanager_root_availablememoryusage</para>
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
         /// <summary>
-        /// 统计量名称。
+        /// <para>统计量名称。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>AVG</para>
         /// </summary>
         [NameInMap("Statistics")]
         [Validation(Required=false)]
         public string Statistics { get; set; }
 
         /// <summary>
-        /// 阈值。
+        /// <para>阈值。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>12.5</para>
         /// </summary>
         [NameInMap("Threshold")]
         [Validation(Required=false)]
         public double? Threshold { get; set; }
 
         /// <summary>
-        /// 统计窗口。单位为秒。
+        /// <para>统计窗口。单位为秒。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("TimeWindow")]
         [Validation(Required=false)]

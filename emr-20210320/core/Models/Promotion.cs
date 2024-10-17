@@ -10,37 +10,51 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class Promotion : TeaModel {
         /// <summary>
-        /// 产品码。
+        /// <para>产品码。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecs</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// 优惠券描述。
+        /// <para>优惠券描述。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5元优惠券（有效期至23年8月11日）</para>
         /// </summary>
         [NameInMap("PromotionDesc")]
         [Validation(Required=false)]
         public string PromotionDesc { get; set; }
 
         /// <summary>
-        /// 优惠券名称。
+        /// <para>优惠券名称。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5元优惠券</para>
         /// </summary>
         [NameInMap("PromotionName")]
         [Validation(Required=false)]
         public string PromotionName { get; set; }
 
         /// <summary>
-        /// 优惠券码。
+        /// <para>优惠券码。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>youhui_quan</para>
         /// </summary>
         [NameInMap("PromotionOptionCode")]
         [Validation(Required=false)]
         public string PromotionOptionCode { get; set; }
 
         /// <summary>
-        /// 优惠券号。
+        /// <para>优惠券号。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ABC123</para>
         /// </summary>
         [NameInMap("PromotionOptionNo")]
         [Validation(Required=false)]

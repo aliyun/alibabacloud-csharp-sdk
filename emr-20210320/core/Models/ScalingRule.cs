@@ -10,56 +10,76 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ScalingRule : TeaModel {
         /// <summary>
-        /// 伸缩活动类型。取值范围：
-        /// - SCALE_OUT：扩容。
-        /// - SCALE_IN：缩容。
+        /// <para>伸缩活动类型。取值范围：</para>
+        /// <list type="bullet">
+        /// <item><description>SCALE_OUT：扩容。</description></item>
+        /// <item><description>SCALE_IN：缩容。</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>SCALE_IN</para>
         /// </summary>
         [NameInMap("ActivityType")]
         [Validation(Required=false)]
         public string ActivityType { get; set; }
 
         /// <summary>
-        /// 调整值。需要为正数，代表需要扩容或者缩容的实例数量。
+        /// <para>调整值。需要为正数，代表需要扩容或者缩容的实例数量。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("AdjustmentValue")]
         [Validation(Required=false)]
         public int? AdjustmentValue { get; set; }
 
         /// <summary>
-        /// 按照负载伸缩描述。
-        /// <p>
+        /// <para>按照负载伸缩描述。</para>
+        /// <para>
         /// </summary>
         [NameInMap("MetricsTrigger")]
         [Validation(Required=false)]
         public MetricsTrigger MetricsTrigger { get; set; }
 
         /// <summary>
-        /// 规则名称。
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("MinAdjustmentValue")]
+        [Validation(Required=false)]
+        public int? MinAdjustmentValue { get; set; }
+
+        /// <summary>
+        /// <para>规则名称。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>scale-out-memory</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// 按照时间伸缩描述。
-        /// <p>
+        /// <para>按照时间伸缩描述。</para>
+        /// <para>
         /// </summary>
         [NameInMap("TimeTrigger")]
         [Validation(Required=false)]
         public TimeTrigger TimeTrigger { get; set; }
 
         /// <summary>
-        /// 伸缩规则类型。 取值范围：
-        /// - TIME_TRIGGER: 按时间伸缩。
-        /// - METRICS_TRIGGER: 按负载伸缩。
+        /// <para>伸缩规则类型。 取值范围：</para>
+        /// <list type="bullet">
+        /// <item><description>TIME_TRIGGER: 按时间伸缩。</description></item>
+        /// <item><description>METRICS_TRIGGER: 按负载伸缩。</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>TIME_TRIGGER</para>
         /// </summary>
         [NameInMap("TriggerType")]
         [Validation(Required=false)]

@@ -10,99 +10,108 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListDoctorReportsResponseBody : TeaModel {
         /// <summary>
-        /// The reports.
+        /// <para>The reports.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListDoctorReportsResponseBodyData> Data { get; set; }
         public class ListDoctorReportsResponseBodyData : TeaModel {
             /// <summary>
-            /// The component types.
+            /// <para>The component types.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>compute</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   compute
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>hive</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>hdfs</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   hive
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>yarn</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>oss</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   hdfs
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>hbase</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   yarn
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   oss
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   hbase
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>null</para>
             /// </summary>
             [NameInMap("ComponentTypes")]
             [Validation(Required=false)]
             public List<string> ComponentTypes { get; set; }
 
             /// <summary>
-            /// The date on which the report was generated.
+            /// <para>The date on which the report was generated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2023-06-29</para>
             /// </summary>
             [NameInMap("DateTime")]
             [Validation(Required=false)]
             public string DateTime { get; set; }
 
             /// <summary>
-            /// The summary of the report.
+            /// <para>The summary of the report.</para>
             /// </summary>
             [NameInMap("SummaryReport")]
             [Validation(Required=false)]
             public ListDoctorReportsResponseBodyDataSummaryReport SummaryReport { get; set; }
             public class ListDoctorReportsResponseBodyDataSummaryReport : TeaModel {
                 /// <summary>
-                /// The score.
+                /// <para>The score.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>88</para>
                 /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public int? Score { get; set; }
 
                 /// <summary>
-                /// The optimization suggestion.
+                /// <para>The optimization suggestion.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>block</para>
                 /// </summary>
                 [NameInMap("Suggestion")]
                 [Validation(Required=false)]
                 public string Suggestion { get; set; }
 
                 /// <summary>
-                /// The summary of the report.
+                /// <para>The summary of the report.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>eastbuy-mse-plugin-auth</para>
                 /// </summary>
                 [NameInMap("Summary")]
                 [Validation(Required=false)]
@@ -113,28 +122,40 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// The maximum number of entries returned.
+        /// <para>The maximum number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// A pagination token.
+        /// <para>A pagination token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

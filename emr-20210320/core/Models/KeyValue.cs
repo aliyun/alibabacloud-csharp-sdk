@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class KeyValue : TeaModel {
         /// <summary>
-        /// 键。
+        /// <para>键。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>key</para>
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// 值。
+        /// <para>值。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>value</para>
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

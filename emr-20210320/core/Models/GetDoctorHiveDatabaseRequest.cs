@@ -10,36 +10,44 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetDoctorHiveDatabaseRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c-b933c5aac8fe****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The database name.
+        /// <para>The database name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>db1</para>
         /// </summary>
         [NameInMap("DatabaseName")]
         [Validation(Required=false)]
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// The query date.
+        /// <para>The query date.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2023-01-01</para>
         /// </summary>
         [NameInMap("DateTime")]
         [Validation(Required=false)]
         public string DateTime { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

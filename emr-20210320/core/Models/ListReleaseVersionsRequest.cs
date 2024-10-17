@@ -10,25 +10,32 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListReleaseVersionsRequest : TeaModel {
         /// <summary>
-        /// The type of the cluster.
+        /// <para>The type of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>DATALAKE</para>
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// The type of the IaaS resource.
+        /// <para>The type of the IaaS resource.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ECS</para>
         /// </summary>
         [NameInMap("IaasType")]
         [Validation(Required=false)]
         public string IaasType { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

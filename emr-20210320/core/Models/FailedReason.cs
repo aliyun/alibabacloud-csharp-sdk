@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class FailedReason : TeaModel {
         /// <summary>
-        /// 错误码。
+        /// <para>错误码。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MissingParameter.InstanceType</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// 错误信息。
+        /// <para>错误信息。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The instance type is required.</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// 请求ID。
+        /// <para>请求ID。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944abcd</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

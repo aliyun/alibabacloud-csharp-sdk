@@ -10,27 +10,38 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetOperationRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster that you want to query.
+        /// <para>The ID of the cluster that you want to query.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c-b933c5aac8fe****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the operation.
+        /// <para>The operation ID.</para>
+        /// <para>References:</para>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/454393.html">CreateCluster</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/454397.html">IncreaseNodes</a></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>op-13c37a77c505****</para>
         /// </summary>
         [NameInMap("OperationId")]
         [Validation(Required=false)]
         public string OperationId { get; set; }
 
         /// <summary>
-        /// The district ID.
+        /// <para>The district ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

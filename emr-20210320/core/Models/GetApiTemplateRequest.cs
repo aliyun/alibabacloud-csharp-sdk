@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetApiTemplateRequest : TeaModel {
         /// <summary>
-        /// 区域ID。
+        /// <para>区域ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// 集群模板id。
+        /// <para>集群模板id。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>at-41b4c6a0fc63****</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

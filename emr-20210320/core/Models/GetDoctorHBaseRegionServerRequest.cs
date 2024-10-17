@@ -10,36 +10,44 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetDoctorHBaseRegionServerRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c-b933c5aac8fe****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The date.
+        /// <para>The date.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2023-01-01</para>
         /// </summary>
         [NameInMap("DateTime")]
         [Validation(Required=false)]
         public string DateTime { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The host of the region server.
+        /// <para>The host of the region server.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>emr-worker-4.cluster-20****</para>
         /// </summary>
         [NameInMap("RegionServerHost")]
         [Validation(Required=false)]

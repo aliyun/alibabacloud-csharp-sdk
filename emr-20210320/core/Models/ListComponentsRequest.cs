@@ -10,57 +10,70 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListComponentsRequest : TeaModel {
         /// <summary>
-        /// 应用名称列表。
+        /// <para>应用名称列表。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;HDFS&quot;]</para>
         /// </summary>
         [NameInMap("ApplicationNames")]
         [Validation(Required=false)]
         public List<string> ApplicationNames { get; set; }
 
         /// <summary>
-        /// 集群ID。
+        /// <para>集群ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c-b933c5aac8fe****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// 组件名称列表。
+        /// <para>组件名称列表。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;DataNode&quot;]</para>
         /// </summary>
         [NameInMap("ComponentNames")]
         [Validation(Required=false)]
         public List<string> ComponentNames { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("ComponentStates")]
         [Validation(Required=false)]
         public List<string> ComponentStates { get; set; }
 
         /// <summary>
-        /// 是否包含过期配置。
-        /// </summary>
-        [NameInMap("IncludeExpiredConfig")]
-        [Validation(Required=false)]
-        public bool? IncludeExpiredConfig { get; set; }
-
-        /// <summary>
-        /// 一次获取的最大记录数。取值范围：1~100。
+        /// <para>一次获取的最大记录数。取值范围：1~100。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 标记当前开始读取的位置，置空表示从头开始。
+        /// <para>标记当前开始读取的位置，置空表示从头开始。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// 地域ID。
+        /// <para>地域ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

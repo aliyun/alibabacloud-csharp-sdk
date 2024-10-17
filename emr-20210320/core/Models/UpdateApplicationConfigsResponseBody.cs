@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class UpdateApplicationConfigsResponseBody : TeaModel {
         /// <summary>
-        /// The operation ID.
+        /// <para>The operation ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>op-13c37a77c505****</para>
         /// </summary>
         [NameInMap("OperationId")]
         [Validation(Required=false)]
         public string OperationId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9E3A7161-EB7B-172B-8D18-FFB06BA3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

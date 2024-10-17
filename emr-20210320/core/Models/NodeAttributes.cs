@@ -10,48 +10,63 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class NodeAttributes : TeaModel {
         /// <summary>
-        /// ECS ssh登录秘钥。
+        /// <para>ECS ssh登录秘钥。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>emr_login</para>
         /// </summary>
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
 
         /// <summary>
-        /// MASTER节点root密码。
+        /// <para>MASTER节点root密码。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Adxefswfd****</para>
         /// </summary>
         [NameInMap("MasterRootPassword")]
         [Validation(Required=false)]
         public string MasterRootPassword { get; set; }
 
         /// <summary>
-        /// ECS访问资源绑定的角色。
+        /// <para>ECS访问资源绑定的角色。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AliyunECSInstanceForEMRRole</para>
         /// </summary>
         [NameInMap("RamRole")]
         [Validation(Required=false)]
         public string RamRole { get; set; }
 
         /// <summary>
-        /// 安全组ID。EMR只支持普通安全组，不支持企业安全组。
+        /// <para>安全组ID。EMR只支持普通安全组，不支持企业安全组。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sg-hp3abbae8lb6lmb1****</para>
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// 专有网络ID。
+        /// <para>专有网络ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpc-bp1tgey2p0ytxmdo5****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
         /// <summary>
-        /// 可用区ID。
+        /// <para>可用区ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-beijing-h</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

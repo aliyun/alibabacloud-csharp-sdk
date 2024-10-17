@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetApplicationRequest : TeaModel {
         /// <summary>
-        /// 应用名称。
+        /// <para>应用名称。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>HDFS</para>
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
 
         /// <summary>
-        /// 集群ID。
+        /// <para>集群ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c-b933c5aac8fe****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// 地域ID。
+        /// <para>地域ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

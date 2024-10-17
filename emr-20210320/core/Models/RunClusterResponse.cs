@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
-    public class ListResourceHealthInspectionsResponse : TeaModel {
+    public class RunClusterResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ListResourceHealthInspectionsResponseBody Body { get; set; }
+        public RunClusterResponseBody Body { get; set; }
 
     }
 

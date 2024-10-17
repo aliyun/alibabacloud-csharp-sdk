@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ConvertNodeGroupParam : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodeGroupId")]
         [Validation(Required=false)]
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PaymentDuration")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string PaymentDurationUnit { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PaymentType")]
         [Validation(Required=false)]

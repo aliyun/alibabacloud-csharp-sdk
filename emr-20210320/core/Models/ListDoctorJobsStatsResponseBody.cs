@@ -10,42 +10,54 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListDoctorJobsStatsResponseBody : TeaModel {
         /// <summary>
-        /// The summary of job information.
+        /// <para>The summary of job information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListDoctorJobsStatsResponseBodyData> Data { get; set; }
         public class ListDoctorJobsStatsResponseBodyData : TeaModel {
             /// <summary>
-            /// The total number of jobs.
+            /// <para>The total number of jobs.</para>
             /// </summary>
             [NameInMap("AppsCount")]
             [Validation(Required=false)]
             public ListDoctorJobsStatsResponseBodyDataAppsCount AppsCount { get; set; }
             public class ListDoctorJobsStatsResponseBodyDataAppsCount : TeaModel {
                 /// <summary>
-                /// The description of the metric.
+                /// <para>The description of the metric.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Total apps count</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The name of the metric.
+                /// <para>The name of the metric.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>appsCount</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The unit of the metric.
+                /// <para>The unit of the metric.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>&quot;&quot;</para>
                 /// </summary>
                 [NameInMap("Unit")]
                 [Validation(Required=false)]
                 public string Unit { get; set; }
 
                 /// <summary>
-                /// The value of the metric.
+                /// <para>The value of the metric.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -54,35 +66,47 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             }
 
             /// <summary>
-            /// The aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running.
+            /// <para>The aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running.</para>
             /// </summary>
             [NameInMap("MemSeconds")]
             [Validation(Required=false)]
             public ListDoctorJobsStatsResponseBodyDataMemSeconds MemSeconds { get; set; }
             public class ListDoctorJobsStatsResponseBodyDataMemSeconds : TeaModel {
                 /// <summary>
-                /// The description of the metric.
+                /// <para>The description of the metric.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Total memory usage over time in seconds</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The name of the metric.
+                /// <para>The name of the metric.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>memSeconds</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The unit of the metric.
+                /// <para>The unit of the metric.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>MB * Sec</para>
                 /// </summary>
                 [NameInMap("Unit")]
                 [Validation(Required=false)]
                 public string Unit { get; set; }
 
                 /// <summary>
-                /// The value of the metric.
+                /// <para>The value of the metric.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12312312</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -91,56 +115,77 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             }
 
             /// <summary>
-            /// The YARN queue to which the job was submitted.
+            /// <para>The YARN queue to which the job was submitted.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>DW</para>
             /// </summary>
             [NameInMap("Queue")]
             [Validation(Required=false)]
             public string Queue { get; set; }
 
             /// <summary>
-            /// The type of the compute engine.
+            /// <para>The type of the compute engine.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SPARK</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The username that is used to submit the job.
+            /// <para>The username that is used to submit the job.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>DW</para>
             /// </summary>
             [NameInMap("User")]
             [Validation(Required=false)]
             public string User { get; set; }
 
             /// <summary>
-            /// The aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running.
+            /// <para>The aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running.</para>
             /// </summary>
             [NameInMap("VcoreSeconds")]
             [Validation(Required=false)]
             public ListDoctorJobsStatsResponseBodyDataVcoreSeconds VcoreSeconds { get; set; }
             public class ListDoctorJobsStatsResponseBodyDataVcoreSeconds : TeaModel {
                 /// <summary>
-                /// The description of the metric.
+                /// <para>The description of the metric.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Total vcore usage over time in seconds</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The name of the metric.
+                /// <para>The name of the metric.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vcoreSeconds</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The unit of the metric.
+                /// <para>The unit of the metric.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>VCores * Sec</para>
                 /// </summary>
                 [NameInMap("Unit")]
                 [Validation(Required=false)]
                 public string Unit { get; set; }
 
                 /// <summary>
-                /// The value of the metric.
+                /// <para>The value of the metric.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>11123</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -151,28 +196,40 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// The maximum number of entries returned.
+        /// <para>The maximum number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// A pagination token.
+        /// <para>A pagination token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

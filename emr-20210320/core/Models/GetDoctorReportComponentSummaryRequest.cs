@@ -10,36 +10,44 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetDoctorReportComponentSummaryRequest : TeaModel {
         /// <summary>
-        /// 集群ID。
+        /// <para>集群ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c-b933c5aac8fe****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// component type
+        /// <para>component type</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>compute</para>
         /// </summary>
         [NameInMap("ComponentType")]
         [Validation(Required=false)]
         public string ComponentType { get; set; }
 
         /// <summary>
-        /// dateTime for specify report
+        /// <para>dateTime for specify report</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2023-01-01</para>
         /// </summary>
         [NameInMap("DateTime")]
         [Validation(Required=false)]
         public string DateTime { get; set; }
 
         /// <summary>
-        /// 区域ID。
+        /// <para>区域ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

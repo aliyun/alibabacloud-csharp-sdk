@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ConfigEffectActions : TeaModel {
         /// <summary>
-        /// 配置生效动作。
+        /// <para>配置生效动作。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>restart</para>
         /// </summary>
         [NameInMap("ConfigEffectAction")]
         [Validation(Required=false)]
         public string ConfigEffectAction { get; set; }
 
         /// <summary>
-        /// 配置生效配置文件。
+        /// <para>配置生效配置文件。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("ConfigFiles")]
         [Validation(Required=false)]

@@ -10,81 +10,103 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class RunApplicationActionRequest : TeaModel {
         /// <summary>
-        /// The name of the action. Valid values:
+        /// <para>The name of the action. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>start</description></item>
+        /// <item><description>stop</description></item>
+        /// <item><description>config</description></item>
+        /// <item><description>restart</description></item>
+        /// <item><description>refresh_queues</description></item>
+        /// <item><description>refresh_labels</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   start
-        /// *   stop
-        /// *   config
-        /// *   restart
-        /// *   refresh_queues
-        /// *   refresh_labels
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>start</para>
         /// </summary>
         [NameInMap("ActionName")]
         [Validation(Required=false)]
         public string ActionName { get; set; }
 
         /// <summary>
-        /// The number of applications in each batch.
+        /// <para>The number of applications in each batch.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("BatchSize")]
         [Validation(Required=false)]
         public int? BatchSize { get; set; }
 
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>C-C95F0A39D8FF****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The operation object.
-        /// 
-        /// This parameter is required.
+        /// <para>The operation object.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ComponentInstanceSelector")]
         [Validation(Required=false)]
         public ComponentInstanceSelector ComponentInstanceSelector { get; set; }
 
         /// <summary>
-        /// The description of the execution.
+        /// <para>The description of the execution.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>运行描述</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The execution policy. Valid values:
+        /// <para>The execution policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>FAILED_BLOCK: The system stops the execution if the execution fails.</description></item>
+        /// <item><description>FAILED_CONTINUE: The system continues the execution if the execution fails.</description></item>
+        /// </list>
         /// 
-        /// *   FAILED_BLOCK: The system stops the execution if the execution fails.
-        /// *   FAILED_CONTINUE: The system continues the execution if the execution fails.
+        /// <b>Example:</b>
+        /// <para>FAILED_CONTINUE</para>
         /// </summary>
         [NameInMap("ExecuteStrategy")]
         [Validation(Required=false)]
         public string ExecuteStrategy { get; set; }
 
         /// <summary>
-        /// The interval for rolling execution. Unit: seconds.
+        /// <para>The interval for rolling execution. Unit: seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
         public long? Interval { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable rolling execution.
+        /// <para>Specifies whether to enable rolling execution.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("RollingExecute")]
         [Validation(Required=false)]

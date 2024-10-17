@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class DiskSize : TeaModel {
         /// <summary>
-        /// 磁盘类型。
+        /// <para>磁盘类型。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cloud_essd</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// 单位GB。
+        /// <para>单位GB。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("Size")]
         [Validation(Required=false)]

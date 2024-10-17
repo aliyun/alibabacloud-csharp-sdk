@@ -10,27 +10,30 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class CreateNodeGroupRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>C-E525E04F3914****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The information about the node group.
-        /// 
-        /// This parameter is required.
+        /// <para>The information about the node group.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodeGroup")]
         [Validation(Required=false)]
         public NodeGroupConfig NodeGroup { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

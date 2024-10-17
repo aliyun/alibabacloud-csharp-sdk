@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class RemoveAutoScalingPolicyRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c-b933c5aac8fe****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the node group.
+        /// <para>The ID of the node group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ng-869471354ecd****</para>
         /// </summary>
         [NameInMap("NodeGroupId")]
         [Validation(Required=false)]
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,45 +10,56 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class UpdateScriptShrinkRequest : TeaModel {
         /// <summary>
-        /// 集群ID。
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c-b933c5aac8fe****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// 区域ID。
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// 集群脚本。
-        /// 
-        /// This parameter is required.
+        /// <para>The script.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Script")]
         [Validation(Required=false)]
         public string ScriptShrink { get; set; }
 
         /// <summary>
-        /// 脚本ID。
+        /// <para>The script ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cs-da7476a7679a4d4c9cede62ebe09****</para>
         /// </summary>
         [NameInMap("ScriptId")]
         [Validation(Required=false)]
         public string ScriptId { get; set; }
 
         /// <summary>
-        /// 集群脚本类型。
+        /// <para>The type of the script. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>BOOTSTRAP: indicates a bootstrap action of the Elastic Compute Service (ECS) instance.</description></item>
+        /// <item><description>NORMAL: indicates a common script.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>BOOTSTRAP</para>
         /// </summary>
         [NameInMap("ScriptType")]
         [Validation(Required=false)]

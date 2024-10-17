@@ -10,43 +10,54 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class CreateApiTemplateRequest : TeaModel {
         /// <summary>
-        /// 接口名。
+        /// <para>The name of the API operation. You can create only a cluster API operation template. Set the value to CreateCluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>CreateCluster</para>
         /// </summary>
         [NameInMap("ApiName")]
         [Validation(Required=false)]
         public string ApiName { get; set; }
 
         /// <summary>
-        /// 接口request内容。
+        /// <para>The content of the cluster API operation template. Set the value to JSON strings of the request parameters of the <a href="https://help.aliyun.com/zh/emr/emr-on-ecs/developer-reference/api-emr-2021-03-20-createcluster">CreateCluster</a> API operation for creating a cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>content</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// 地域ID。
+        /// <para>地域ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// 资源组ID。
+        /// <para>资源组ID。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzabjyop****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// 集群模板名字。
+        /// <para>集群模板名字。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>DATALAKE模板</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

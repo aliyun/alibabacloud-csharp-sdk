@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class UpdateSpecNodeGroup : TeaModel {
         /// <summary>
-        /// 新实例类型。
+        /// <para>新实例类型。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ecs.g7.xlarge</para>
         /// </summary>
         [NameInMap("NewInstanceType")]
         [Validation(Required=false)]
         public string NewInstanceType { get; set; }
 
         /// <summary>
-        /// 节点组ID。
+        /// <para>节点组ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ng-869471354ecd****</para>
         /// </summary>
         [NameInMap("NodeGroupId")]
         [Validation(Required=false)]

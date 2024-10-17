@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class DecreaseNodeGroupParam : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>G-21E39B11837E****</para>
         /// </summary>
         [NameInMap("NodeGroupId")]
         [Validation(Required=false)]
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ReleaseInstanceIds")]
         [Validation(Required=false)]

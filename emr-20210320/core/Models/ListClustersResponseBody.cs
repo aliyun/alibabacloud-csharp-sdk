@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListClustersResponseBody : TeaModel {
         /// <summary>
-        /// The clusters.
+        /// <para>The clusters.</para>
         /// </summary>
         [NameInMap("Clusters")]
         [Validation(Required=false)]
         public List<ClusterSummary> Clusters { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The page number of the next page returned.
+        /// <para>The page number of the next page returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eyJlY21OZXh0VG9rZW4iOiIxIiwidGFpaGFvTmV4dFRva2VuIjoiNTYiLCJ0YWloYW9OZXh0VG9rZW5JbnQiOjU2LCJlY21OZXh0VG9rZW5JbnQiOjF9</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9E3A7161-EB7B-172B-8D18-FFB06BA3896A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of pages.
+        /// <para>The total number of pages.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

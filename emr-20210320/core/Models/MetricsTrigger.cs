@@ -10,48 +10,60 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class MetricsTrigger : TeaModel {
         /// <summary>
-        /// 多指标逻辑关系。默认：Or。取值范围：
-        /// - And:与
-        /// - Or：或
+        /// <para>多指标逻辑关系。默认：Or。取值范围：</para>
+        /// <list type="bullet">
+        /// <item><description>And:与</description></item>
+        /// <item><description>Or：或</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Or</para>
         /// </summary>
         [NameInMap("ConditionLogicOperator")]
         [Validation(Required=false)]
         public string ConditionLogicOperator { get; set; }
 
         /// <summary>
-        /// 指标触发条件列表。
+        /// <para>指标触发条件列表。</para>
         /// </summary>
         [NameInMap("Conditions")]
         [Validation(Required=false)]
         public List<TriggerCondition> Conditions { get; set; }
 
         /// <summary>
-        /// 冷却时间。 单位为秒
+        /// <para>冷却时间。 单位为秒</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>300</para>
         /// </summary>
         [NameInMap("CoolDownInterval")]
         [Validation(Required=false)]
         public int? CoolDownInterval { get; set; }
 
         /// <summary>
-        /// 统计次数。
+        /// <para>统计次数。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("EvaluationCount")]
         [Validation(Required=false)]
         public int? EvaluationCount { get; set; }
 
         /// <summary>
-        /// 时间限制。
+        /// <para>时间限制。</para>
         /// </summary>
         [NameInMap("TimeConstraints")]
         [Validation(Required=false)]
         public List<TimeConstraint> TimeConstraints { get; set; }
 
         /// <summary>
-        /// 统计窗口。单位为秒。
+        /// <para>统计窗口。单位为秒。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("TimeWindow")]
         [Validation(Required=false)]

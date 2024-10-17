@@ -1,3 +1,14 @@
+2024-10-17 Version: 2.1.0
+- Support API GetClusterCloneMeta.
+- Support API RunCluster.
+- Delete API ListInspectionHistory.
+- Delete API ListResourceHealthInspections.
+- Update API CreateCluster: add param Description.
+- Update API ListApplications: update param MaxResults.
+- Update API ListComponents: delete param IncludeExpiredConfig.
+- Update API UpdateApplicationConfigs: update param ApplicationConfigs.
+
+
 2024-07-04 Version: 2.0.0
 - Support API CreateScript.
 - Support API DeleteScript.

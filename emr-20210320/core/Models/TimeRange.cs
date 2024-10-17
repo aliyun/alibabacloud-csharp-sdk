@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class TimeRange : TeaModel {
         /// <summary>
-        /// 结束时间。
+        /// <para>结束时间。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1676441972000</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// 起始时间。
+        /// <para>起始时间。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1676441971000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

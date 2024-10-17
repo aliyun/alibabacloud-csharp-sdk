@@ -10,41 +10,53 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListScriptsRequest : TeaModel {
         /// <summary>
-        /// 集群ID。
+        /// <para>集群ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c-b933c5aac8fe****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// 一次获取的最大记录数。取值范围：1~100。
+        /// <para>一次获取的最大记录数。取值范围：1~100。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 标记当前开始读取的位置，置空表示从头开始。
+        /// <para>标记当前开始读取的位置，置空表示从头开始。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dd6b1b2a-5837-5237-abe4-ff0c89568980</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// 区域ID。
+        /// <para>区域ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// 集群脚本类型。
+        /// <para>集群脚本类型。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>BOOTSTRAP</para>
         /// </summary>
         [NameInMap("ScriptType")]
         [Validation(Required=false)]

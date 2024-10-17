@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ApplicationConfigFile : TeaModel {
         /// <summary>
-        /// 应用名称。
+        /// <para>应用名称。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>HDFS</para>
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
 
         /// <summary>
-        /// 配置文件名称。
+        /// <para>配置文件名称。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>core-site.xml</para>
         /// </summary>
         [NameInMap("ConfigFileName")]
         [Validation(Required=false)]

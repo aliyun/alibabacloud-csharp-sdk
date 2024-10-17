@@ -10,34 +10,43 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetDoctorHBaseRegionRequest : TeaModel {
         /// <summary>
-        /// 集群ID。
+        /// <para>集群ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c-b933c5aac8fe****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-01-01</para>
         /// </summary>
         [NameInMap("DateTime")]
         [Validation(Required=false)]
         public string DateTime { get; set; }
 
         /// <summary>
-        /// Region ID。
+        /// <para>Region ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>67f6808f60a8c357103a3a95fe00610e</para>
         /// </summary>
         [NameInMap("HbaseRegionId")]
         [Validation(Required=false)]
         public string HbaseRegionId { get; set; }
 
         /// <summary>
-        /// 区域ID。
+        /// <para>区域ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetDoctorReportComponentSummaryResponseBody : TeaModel {
         /// <summary>
-        /// The content of the report.
+        /// <para>The content of the report.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDoctorReportComponentSummaryResponseBodyData Data { get; set; }
         public class GetDoctorReportComponentSummaryResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>88</para>
+            /// </summary>
             [NameInMap("Score")]
             [Validation(Required=false)]
             public int? Score { get; set; }
@@ -25,7 +29,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string Suggestion { get; set; }
 
             /// <summary>
-            /// The summary of the report.
+            /// <para>The summary of the report.</para>
             /// </summary>
             [NameInMap("Summary")]
             [Validation(Required=false)]
@@ -34,7 +38,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// 请求ID。
+        /// <para>请求ID。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,74 +10,97 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListDoctorHDFSUGIRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c-b933c5aac8fe****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.
+        /// <para>Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2023-01-01</para>
         /// </summary>
         [NameInMap("DateTime")]
         [Validation(Required=false)]
         public string DateTime { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page.
+        /// <para>The maximum number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The basis on which you want to sort the query results. Valid values:
+        /// <para>The basis on which you want to sort the query results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>totalFileCount: the total number of files</description></item>
+        /// <item><description>totalDataSize: the total data size</description></item>
+        /// <item><description>totalDirCount: the total number of directories</description></item>
+        /// </list>
         /// 
-        /// *   totalFileCount: the total number of files
-        /// *   totalDataSize: the total data size
-        /// *   totalDirCount: the total number of directories
+        /// <b>Example:</b>
+        /// <para>totalFileCount</para>
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// The order in which you want to sort the query results. Valid values:
+        /// <para>The order in which you want to sort the query results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ASC: in ascending order</description></item>
+        /// <item><description>DESC: in descending order</description></item>
+        /// </list>
         /// 
-        /// *   ASC: in ascending order
-        /// *   DESC: in descending order
+        /// <b>Example:</b>
+        /// <para>ASC</para>
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The filter condition. Valid values:
+        /// <para>The filter condition. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>user</description></item>
+        /// <item><description>group</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   user
-        /// *   group
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>group</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

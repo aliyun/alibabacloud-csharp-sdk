@@ -10,41 +10,47 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class PutAutoScalingPolicyRequest : TeaModel {
         /// <summary>
-        /// 集群ID。
+        /// <para>集群ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c-b933c5aac8fe****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The maximum and minimum numbers of nodes in a node group.
+        /// <para>The maximum and minimum numbers of nodes in a node group.</para>
         /// </summary>
         [NameInMap("Constraints")]
         [Validation(Required=false)]
         public ScalingConstraints Constraints { get; set; }
 
         /// <summary>
-        /// 节点组ID。节点组 Id-针对 ACK 集群，此字段为空。
+        /// <para>节点组ID。节点组 Id-针对 ACK 集群，此字段为空。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ng-869471354ecd****</para>
         /// </summary>
         [NameInMap("NodeGroupId")]
         [Validation(Required=false)]
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// 区域ID。
+        /// <para>区域ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The auto scaling rules. Number of elements in the array: 0 to 100.
+        /// <para>The auto scaling rules. Number of elements in the array: 0 to 100.</para>
         /// </summary>
         [NameInMap("ScalingRules")]
         [Validation(Required=false)]

@@ -10,146 +10,178 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class CreateClusterRequest : TeaModel {
         /// <summary>
-        /// The application configurations. You can specify a maximum of 1,000 items.
+        /// <para>The application configurations. You can specify a maximum of 1,000 items.</para>
         /// </summary>
         [NameInMap("ApplicationConfigs")]
         [Validation(Required=false)]
         public List<ApplicationConfig> ApplicationConfigs { get; set; }
 
         /// <summary>
-        /// The applications. You can specify a maximum of 100 items.
-        /// 
-        /// This parameter is required.
+        /// <para>The applications. You can specify a maximum of 100 items.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Applications")]
         [Validation(Required=false)]
         public List<Application> Applications { get; set; }
 
         /// <summary>
-        /// The bootstrap actions. You can specify a maximum of 10 items.
+        /// <para>The bootstrap actions. You can specify a maximum of 10 items.</para>
         /// </summary>
         [NameInMap("BootstrapScripts")]
         [Validation(Required=false)]
         public List<Script> BootstrapScripts { get; set; }
 
         /// <summary>
-        /// The idempotent client token. If you call the same ClientToken multiple times, the returned results are the same. Only one cluster can be created with the same ClientToken.
+        /// <para>The idempotent client token. If you call the same ClientToken multiple times, the returned results are the same. Only one cluster can be created with the same ClientToken.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A7D960FA-6DBA-5E07-8746-A63E3E4D****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The name of the cluster. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).
+        /// <para>The name of the cluster. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>emrtest</para>
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The type of the cluster. Valid values:
+        /// <para>The type of the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DATALAKE: data lake</description></item>
+        /// <item><description>OLAP: online analytical processing (OLAP)</description></item>
+        /// <item><description>DATAFLOW: Dataflow</description></item>
+        /// <item><description>DATASERVING: DataServing</description></item>
+        /// <item><description>CUSTOM: a custom hybrid cluster.</description></item>
+        /// <item><description>HADOOP: the old data lake. We recommend that you use the new data lake.</description></item>
+        /// </list>
+        /// <para>If you create an EMR cluster for the first time after 17:00 (UTC +8) on December 19, 2022, you cannot select the HADOOP, DATA_SCIENCE, PRESTO, or ZOOKEEPER cluster type.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   DATALAKE: data lake
-        /// *   OLAP: online analytical processing (OLAP)
-        /// *   DATAFLOW: Dataflow
-        /// *   DATASERVING: DataServing
-        /// *   CUSTOM: a custom hybrid cluster.
-        /// *   HADOOP: the old data lake. We recommend that you use the new data lake.
-        /// 
-        /// If you create an EMR cluster for the first time after 17:00 (UTC +8) on December 19, 2022, you cannot select the HADOOP, DATA_SCIENCE, PRESTO, or ZOOKEEPER cluster type.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>DATALAKE</para>
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// The deployment mode of master nodes in the cluster. Valid values:
+        /// <para>The deployment mode of master nodes in the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NORMAL: regular mode. This is the default value. A cluster that contains only one master node is created.</description></item>
+        /// <item><description>HA: high availability (HA) mode. A cluster that contains three master nodes is created.</description></item>
+        /// </list>
         /// 
-        /// *   NORMAL: regular mode. This is the default value. A cluster that contains only one master node is created.
-        /// *   HA: high availability (HA) mode. A cluster that contains three master nodes is created.
+        /// <b>Example:</b>
+        /// <para>HA</para>
         /// </summary>
         [NameInMap("DeployMode")]
         [Validation(Required=false)]
         public string DeployMode { get; set; }
 
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         /// <summary>
-        /// The attributes of all ECS instances.
-        /// 
-        /// This parameter is required.
+        /// <para>The attributes of all ECS instances.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodeAttributes")]
         [Validation(Required=false)]
         public NodeAttributes NodeAttributes { get; set; }
 
         /// <summary>
-        /// The node groups. You can specify a maximum of 100 items.
+        /// <para>The node groups. You can specify a maximum of 100 items.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>NORMAL</para>
         /// </summary>
         [NameInMap("NodeGroups")]
         [Validation(Required=false)]
         public List<NodeGroupConfig> NodeGroups { get; set; }
 
         /// <summary>
-        /// The billing cycle of the instance. Valid values:
+        /// <para>The billing cycle of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
+        /// <item><description>Subscription: subscription</description></item>
+        /// </list>
+        /// <para>Default value: PayAsYouGo.</para>
         /// 
-        /// *   PayAsYouGo: pay-as-you-go
-        /// *   Subscription: subscription
-        /// 
-        /// Default value: PayAsYouGo.
+        /// <b>Example:</b>
+        /// <para>PayAsYouGo</para>
         /// </summary>
         [NameInMap("PaymentType")]
         [Validation(Required=false)]
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The version of EMR. You can view the EMR release version on the EMR cluster purchase page.
+        /// <para>The version of EMR. You can view the EMR release version on the EMR cluster purchase page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>EMR-5.8.0</para>
         /// </summary>
         [NameInMap("ReleaseVersion")]
         [Validation(Required=false)]
         public string ReleaseVersion { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which to assign the ENI.
+        /// <para>The ID of the resource group to which to assign the ENI.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzabjyop****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The security mode of the cluster. Valid values:
+        /// <para>The security mode of the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NORMAL: disables Kerberos authentication for the cluster. This is the default value.</description></item>
+        /// <item><description>KERBEROS: enables Kerberos authentication for the cluster.</description></item>
+        /// </list>
         /// 
-        /// *   NORMAL: disables Kerberos authentication for the cluster. This is the default value.
-        /// *   KERBEROS: enables Kerberos authentication for the cluster.
+        /// <b>Example:</b>
+        /// <para>NORMAL</para>
         /// </summary>
         [NameInMap("SecurityMode")]
         [Validation(Required=false)]
         public string SecurityMode { get; set; }
 
         /// <summary>
-        /// The subscription configurations. This parameter is required only if you set the PaymentType parameter to Subscription.
+        /// <para>The subscription configurations. This parameter is required only if you set the PaymentType parameter to Subscription.</para>
         /// </summary>
         [NameInMap("SubscriptionConfig")]
         [Validation(Required=false)]
         public SubscriptionConfig SubscriptionConfig { get; set; }
 
         /// <summary>
-        /// The tags. You can specify a maximum of 20 items.
+        /// <para>The tags. You can specify a maximum of 20 items.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A7D960FA-6DBA-5E07-8746-A63E3E4D****</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

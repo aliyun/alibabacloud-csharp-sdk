@@ -10,34 +10,43 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class RunApiTemplateRequest : TeaModel {
         /// <summary>
-        /// 接口名。
+        /// <para>接口名。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>CreateCluster</para>
         /// </summary>
         [NameInMap("ApiName")]
         [Validation(Required=false)]
         public string ApiName { get; set; }
 
         /// <summary>
-        /// 幂等客户端TOKEN。
+        /// <para>幂等客户端TOKEN。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A7D960FA-6DBA-5E07-8746-A63E3E4D****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// 地域ID。
+        /// <para>地域ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// 集群模板id。
+        /// <para>集群模板id。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>AT-****</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

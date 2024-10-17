@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetDoctorHBaseRegionResponseBody : TeaModel {
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDoctorHBaseRegionResponseBodyData Data { get; set; }
         public class GetDoctorHBaseRegionResponseBodyData : TeaModel {
             /// <summary>
-            /// The metric information.
+            /// <para>The metric information.</para>
             /// </summary>
             [NameInMap("Metrics")]
             [Validation(Required=false)]
@@ -27,18 +27,34 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 [Validation(Required=false)]
                 public GetDoctorHBaseRegionResponseBodyDataMetricsDailyReadRequest DailyReadRequest { get; set; }
                 public class GetDoctorHBaseRegionResponseBodyDataMetricsDailyReadRequest : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Number of read requests per day</para>
+                    /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>dailyReadRequest</para>
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>&quot;&quot;</para>
+                    /// </summary>
                     [NameInMap("Unit")]
                     [Validation(Required=false)]
                     public string Unit { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1000</para>
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public long? Value { get; set; }
@@ -49,18 +65,34 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 [Validation(Required=false)]
                 public GetDoctorHBaseRegionResponseBodyDataMetricsDailyWriteRequest DailyWriteRequest { get; set; }
                 public class GetDoctorHBaseRegionResponseBodyDataMetricsDailyWriteRequest : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Number of write requests per day</para>
+                    /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>dailyWriteRequest</para>
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>&quot;&quot;</para>
+                    /// </summary>
                     [NameInMap("Unit")]
                     [Validation(Required=false)]
                     public string Unit { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1000</para>
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public long? Value { get; set; }
@@ -68,29 +100,43 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The number of StoreFiles.
+                /// <para>The number of StoreFiles.</para>
                 /// </summary>
                 [NameInMap("StoreFileCount")]
                 [Validation(Required=false)]
                 public GetDoctorHBaseRegionResponseBodyDataMetricsStoreFileCount StoreFileCount { get; set; }
                 public class GetDoctorHBaseRegionResponseBodyDataMetricsStoreFileCount : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Number of store file</para>
+                    /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// The name of the metric.
+                    /// <para>The name of the metric.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>storeFileCount</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>&quot;&quot;</para>
+                    /// </summary>
                     [NameInMap("Unit")]
                     [Validation(Required=false)]
                     public string Unit { get; set; }
 
                     /// <summary>
-                    /// The value of the metric.
+                    /// <para>The value of the metric.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>100</para>
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
@@ -102,18 +148,34 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 [Validation(Required=false)]
                 public GetDoctorHBaseRegionResponseBodyDataMetricsTotalReadRequest TotalReadRequest { get; set; }
                 public class GetDoctorHBaseRegionResponseBodyDataMetricsTotalReadRequest : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Total read request</para>
+                    /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>totalReadRequest</para>
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>&quot;&quot;</para>
+                    /// </summary>
                     [NameInMap("Unit")]
                     [Validation(Required=false)]
                     public string Unit { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1000</para>
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public long? Value { get; set; }
@@ -124,18 +186,34 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 [Validation(Required=false)]
                 public GetDoctorHBaseRegionResponseBodyDataMetricsTotalWriteRequest TotalWriteRequest { get; set; }
                 public class GetDoctorHBaseRegionResponseBodyDataMetricsTotalWriteRequest : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Total Write Request</para>
+                    /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>totalWriteRequest</para>
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>&quot;&quot;</para>
+                    /// </summary>
                     [NameInMap("Unit")]
                     [Validation(Required=false)]
                     public string Unit { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1000</para>
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public long? Value { get; set; }
@@ -144,10 +222,18 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>emr-worker-2.cluster-20****</para>
+            /// </summary>
             [NameInMap("RegionServerHost")]
             [Validation(Required=false)]
             public string RegionServerHost { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>tb_item</para>
+            /// </summary>
             [NameInMap("TableName")]
             [Validation(Required=false)]
             public string TableName { get; set; }
@@ -155,7 +241,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// 请求ID。
+        /// <para>请求ID。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

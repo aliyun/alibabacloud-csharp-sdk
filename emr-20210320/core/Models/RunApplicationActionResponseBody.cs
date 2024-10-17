@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class RunApplicationActionResponseBody : TeaModel {
         /// <summary>
-        /// The abnormal nodes.
+        /// <para>The abnormal nodes.</para>
         /// </summary>
         [NameInMap("AbnInstances")]
         [Validation(Required=false)]
         public List<RunApplicationActionResponseBodyAbnInstances> AbnInstances { get; set; }
         public class RunApplicationActionResponseBodyAbnInstances : TeaModel {
             /// <summary>
-            /// The ID of the abnormal node.
+            /// <para>The ID of the abnormal node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-bp1cudc25w2bfwl5****</para>
             /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
             public string NodeId { get; set; }
 
             /// <summary>
-            /// The name of the abnormal node.
+            /// <para>The name of the abnormal node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>core1-1</para>
             /// </summary>
             [NameInMap("NodeName")]
             [Validation(Required=false)]
@@ -33,14 +39,20 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// The operation ID.
+        /// <para>The operation ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>op-13c37a77c505****</para>
         /// </summary>
         [NameInMap("OperationId")]
         [Validation(Required=false)]
         public string OperationId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9E3A7161-EB7B-172B-8D18-FFB06BA3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class AckNodePool : TeaModel {
         /// <summary>
-        /// 节点池ID。
+        /// <para>节点池ID。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>npe76629caa1b14a73bf3e47c6d481****</para>
         /// </summary>
         [NameInMap("NodePoolId")]
         [Validation(Required=false)]
         public string NodePoolId { get; set; }
 
         /// <summary>
-        /// ACK节点选择器。
+        /// <para>ACK节点选择器。</para>
         /// </summary>
         [NameInMap("NodeSelector")]
         [Validation(Required=false)]

@@ -14,93 +14,124 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<ListComponentInstancesResponseBodyComponentInstances> ComponentInstances { get; set; }
         public class ListComponentInstancesResponseBodyComponentInstances : TeaModel {
             /// <summary>
-            /// 应用名称。
+            /// <para>应用名称。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>HDFS</para>
             /// </summary>
             [NameInMap("ApplicationName")]
             [Validation(Required=false)]
             public string ApplicationName { get; set; }
 
             /// <summary>
-            /// 组件服务状态，取值如下：
-            /// - active：主服务
-            /// - standby：备用服务。
+            /// <para>组件服务状态，取值如下：</para>
+            /// <list type="bullet">
+            /// <item><description>active：主服务</description></item>
+            /// <item><description>standby：备用服务。</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>active</para>
             /// </summary>
             [NameInMap("BizState")]
             [Validation(Required=false)]
             public string BizState { get; set; }
 
             /// <summary>
-            /// Commission状态，取值如下：
-            /// - COMMISSIONED：已上线
-            /// - COMMISSIONING：上线中
-            /// - DECOMMISSIONED：已下线
-            /// - DECOMMISSIONINPROGRESS：下线进程中
-            /// - DECOMMISSIONFAILED：下线失败
-            /// - INSERVICE：服务中
-            /// - UNKNOWN：未知状态。
-            /// <p>
+            /// <para>Commission状态，取值如下：</para>
+            /// <list type="bullet">
+            /// <item><description>COMMISSIONED：已上线</description></item>
+            /// <item><description>COMMISSIONING：上线中</description></item>
+            /// <item><description>DECOMMISSIONED：已下线</description></item>
+            /// <item><description>DECOMMISSIONINPROGRESS：下线进程中</description></item>
+            /// <item><description>DECOMMISSIONFAILED：下线失败</description></item>
+            /// <item><description>INSERVICE：服务中</description></item>
+            /// <item><description>UNKNOWN：未知状态。<para></description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>INSERVICE</para>
             /// </summary>
             [NameInMap("CommissionState")]
             [Validation(Required=false)]
             public string CommissionState { get; set; }
 
             /// <summary>
-            /// 组件实例操作状态，取值如下：
-            /// - WAITING：等待中
-            /// - INSTALLING：安装中
-            /// - INSTALLED：已安装
-            /// - INSTALL_FAILED：安装失败
-            /// - STARTING：启动中
-            /// - STARTED：已启动
-            /// - START_FAILED：启动失败
-            /// - STOPPING：停止中
-            /// - STOPPED：已停止
-            /// - STOP_FAILED：停止失败
+            /// <para>组件实例操作状态，取值如下：</para>
+            /// <list type="bullet">
+            /// <item><description>WAITING：等待中</description></item>
+            /// <item><description>INSTALLING：安装中</description></item>
+            /// <item><description>INSTALLED：已安装</description></item>
+            /// <item><description>INSTALL_FAILED：安装失败</description></item>
+            /// <item><description>STARTING：启动中</description></item>
+            /// <item><description>STARTED：已启动</description></item>
+            /// <item><description>START_FAILED：启动失败</description></item>
+            /// <item><description>STOPPING：停止中</description></item>
+            /// <item><description>STOPPED：已停止</description></item>
+            /// <item><description>STOP_FAILED：停止失败</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("ComponentInstanceState")]
             [Validation(Required=false)]
             public string ComponentInstanceState { get; set; }
 
             /// <summary>
-            /// 组件名称。
+            /// <para>组件名称。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>DataNode</para>
             /// </summary>
             [NameInMap("ComponentName")]
             [Validation(Required=false)]
             public string ComponentName { get; set; }
 
             /// <summary>
-            /// 安装时间戳。
+            /// <para>安装时间戳。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1628248947000</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// 期望状态，取值如下：
-            /// - WAITING：等待中
-            /// - INSTALLING：安装中
-            /// - INSTALLED：已安装
-            /// - INSTALL_FAILED：安装失败
-            /// - STARTING：启动中
-            /// - STARTED：已启动
-            /// - START_FAILED：启动失败
-            /// - STOPPING：停止中
-            /// - STOPPED：已停止
-            /// - STOP_FAILED：停止失败。
+            /// <para>期望状态，取值如下：</para>
+            /// <list type="bullet">
+            /// <item><description>WAITING：等待中</description></item>
+            /// <item><description>INSTALLING：安装中</description></item>
+            /// <item><description>INSTALLED：已安装</description></item>
+            /// <item><description>INSTALL_FAILED：安装失败</description></item>
+            /// <item><description>STARTING：启动中</description></item>
+            /// <item><description>STARTED：已启动</description></item>
+            /// <item><description>START_FAILED：启动失败</description></item>
+            /// <item><description>STOPPING：停止中</description></item>
+            /// <item><description>STOPPED：已停止</description></item>
+            /// <item><description>STOP_FAILED：停止失败。</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>STARTED</para>
             /// </summary>
             [NameInMap("DesiredState")]
             [Validation(Required=false)]
             public string DesiredState { get; set; }
 
             /// <summary>
-            /// 节点ID。
+            /// <para>节点ID。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-bp1cudc25w2bfwl5****</para>
             /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
             public string NodeId { get; set; }
 
             /// <summary>
-            /// 节点名称。
+            /// <para>节点名称。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>core1-1</para>
             /// </summary>
             [NameInMap("NodeName")]
             [Validation(Required=false)]
@@ -109,28 +140,40 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// 本次请求所返回的最大记录条数。
+        /// <para>本次请求所返回的最大记录条数。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 返回读取到的数据位置，空代表数据已经读取完毕。
+        /// <para>返回读取到的数据位置，空代表数据已经读取完毕。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// 请求ID。
+        /// <para>请求ID。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 本次请求条件下的数据总量。
+        /// <para>本次请求条件下的数据总量。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

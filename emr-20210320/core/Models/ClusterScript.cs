@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ClusterScript : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>取值:FAILED_CONTINUE, FAILED_BLOCKED</para>
+        /// </summary>
         [NameInMap("ExecutionFailStrategy")]
         [Validation(Required=false)]
         public string ExecutionFailStrategy { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>取值:BEFORE_INSTALL, AFTER_STARTED</para>
+        /// </summary>
         [NameInMap("ExecutionMoment")]
         [Validation(Required=false)]
         public string ExecutionMoment { get; set; }

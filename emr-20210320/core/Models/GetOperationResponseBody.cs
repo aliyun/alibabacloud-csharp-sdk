@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetOperationResponseBody : TeaModel {
         /// <summary>
-        /// The operation that was performed.
+        /// <para>The operation that was performed.</para>
         /// </summary>
         [NameInMap("Operation")]
         [Validation(Required=false)]
         public Operation Operation { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9E3A7161-EB7B-172B-8D18-FFB06BA3896A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

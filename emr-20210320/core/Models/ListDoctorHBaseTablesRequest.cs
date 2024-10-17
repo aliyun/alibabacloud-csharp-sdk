@@ -10,69 +10,91 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListDoctorHBaseTablesRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c-b933c5aac8fe****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The query date.
+        /// <para>The query date.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2023-01-01</para>
         /// </summary>
         [NameInMap("DateTime")]
         [Validation(Required=false)]
         public string DateTime { get; set; }
 
         /// <summary>
-        /// The maximum number of entries that are returned.
+        /// <para>The maximum number of entries that are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// Marks the current position to start reading. If this field is empty, the data is read from the beginning.
+        /// <para>Marks the current position to start reading. If this field is empty, the data is read from the beginning.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The field that you use to sort the query results.
+        /// <para>The field that you use to sort the query results.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>tableSize</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   tableSize
+        /// <b>Example:</b>
+        /// <para>tableSize</para>
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// The order in which you want to sort the query results. Valid value:
+        /// <para>The order in which you want to sort the query results. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>ASC: in ascending order</description></item>
+        /// <item><description>DESC: in descending order</description></item>
+        /// </list>
         /// 
-        /// *   ASC: in ascending order
-        /// *   DESC: in descending order
+        /// <b>Example:</b>
+        /// <para>ASC</para>
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The table names, which are used to filter the query results.
+        /// <para>The table names, which are used to filter the query results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("TableNames")]
         [Validation(Required=false)]
