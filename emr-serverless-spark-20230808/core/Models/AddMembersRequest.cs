@@ -10,23 +10,28 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class AddMembersRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("memberArns")]
         [Validation(Required=false)]
         public List<string> MemberArns { get; set; }
 
         /// <summary>
-        /// The workspace ID.
+        /// <para>The workspace ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>w-975bcfda9625****</para>
         /// </summary>
         [NameInMap("workspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("regionId")]
         [Validation(Required=false)]

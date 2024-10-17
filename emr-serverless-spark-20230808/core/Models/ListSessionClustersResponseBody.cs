@@ -10,56 +10,74 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListSessionClustersResponseBody : TeaModel {
         /// <summary>
-        /// The maximum number of entries returned.
+        /// <para>The maximum number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results.
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The SQL computes.
+        /// <para>The SQL computes.</para>
         /// </summary>
         [NameInMap("sessionClusters")]
         [Validation(Required=false)]
         public List<ListSessionClustersResponseBodySessionClusters> SessionClusters { get; set; }
         public class ListSessionClustersResponseBodySessionClusters : TeaModel {
             /// <summary>
-            /// The SQL Compute configurations, which are equivalent to the configurations of the Spark job.
+            /// <para>The SQL Compute configurations, which are equivalent to the configurations of the Spark job.</para>
             /// </summary>
             [NameInMap("applicationConfigs")]
             [Validation(Required=false)]
             public List<ListSessionClustersResponseBodySessionClustersApplicationConfigs> ApplicationConfigs { get; set; }
             public class ListSessionClustersResponseBodySessionClustersApplicationConfigs : TeaModel {
                 /// <summary>
-                /// The name of the configuration file.
+                /// <para>The name of the configuration file.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>spark-default.conf</para>
                 /// </summary>
                 [NameInMap("configFileName")]
                 [Validation(Required=false)]
                 public string ConfigFileName { get; set; }
 
                 /// <summary>
-                /// The key of the configuration item.
+                /// <para>The key of the configuration item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>spark.app.name</para>
                 /// </summary>
                 [NameInMap("configItemKey")]
                 [Validation(Required=false)]
                 public string ConfigItemKey { get; set; }
 
                 /// <summary>
-                /// The value of the configuration item.
+                /// <para>The value of the configuration item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_application</para>
                 /// </summary>
                 [NameInMap("configItemValue")]
                 [Validation(Required=false)]
@@ -68,14 +86,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// The automatic startup configurations.
+            /// <para>The automatic startup configurations.</para>
             /// </summary>
             [NameInMap("autoStartConfiguration")]
             [Validation(Required=false)]
             public ListSessionClustersResponseBodySessionClustersAutoStartConfiguration AutoStartConfiguration { get; set; }
             public class ListSessionClustersResponseBodySessionClustersAutoStartConfiguration : TeaModel {
                 /// <summary>
-                /// Indicates whether automatic startup is enabled.
+                /// <para>Indicates whether automatic startup is enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("enable")]
                 [Validation(Required=false)]
@@ -84,21 +105,27 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// The automatic termination configurations.
+            /// <para>The automatic termination configurations.</para>
             /// </summary>
             [NameInMap("autoStopConfiguration")]
             [Validation(Required=false)]
             public ListSessionClustersResponseBodySessionClustersAutoStopConfiguration AutoStopConfiguration { get; set; }
             public class ListSessionClustersResponseBodySessionClustersAutoStopConfiguration : TeaModel {
                 /// <summary>
-                /// Indicates whether automatic termination is enabled.
+                /// <para>Indicates whether automatic termination is enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("enable")]
                 [Validation(Required=false)]
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// The idle timeout period. The SQL Compute is automatically terminated if the idle timeout period is exceeded.
+                /// <para>The idle timeout period. The SQL Compute is automatically terminated if the idle timeout period is exceeded.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>45</para>
                 /// </summary>
                 [NameInMap("idleTimeoutMinutes")]
                 [Validation(Required=false)]
@@ -127,14 +154,20 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Kind { get; set; }
 
             /// <summary>
-            /// The name of the SQL Compute.
+            /// <para>The name of the SQL Compute.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>adhoc_query</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The name of the queue on which the SQL Compute runs.
+            /// <para>The name of the queue on which the SQL Compute runs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dev_queue</para>
             /// </summary>
             [NameInMap("queueName")]
             [Validation(Required=false)]
@@ -145,35 +178,47 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ReleaseVersion { get; set; }
 
             /// <summary>
-            /// The SQL Compute ID.
+            /// <para>The SQL Compute ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sc-123131</para>
             /// </summary>
             [NameInMap("sessionClusterId")]
             [Validation(Required=false)]
             public string SessionClusterId { get; set; }
 
             /// <summary>
-            /// The status of the SQL Compute.
+            /// <para>The status of the SQL Compute.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Running</para>
             /// </summary>
             [NameInMap("state")]
             [Validation(Required=false)]
             public string State { get; set; }
 
             /// <summary>
-            /// The details of the last status change of the SQL Compute.
+            /// <para>The details of the last status change of the SQL Compute.</para>
             /// </summary>
             [NameInMap("stateChangeReason")]
             [Validation(Required=false)]
             public ListSessionClustersResponseBodySessionClustersStateChangeReason StateChangeReason { get; set; }
             public class ListSessionClustersResponseBodySessionClustersStateChangeReason : TeaModel {
                 /// <summary>
-                /// The status change code.
+                /// <para>The status change code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>200</para>
                 /// </summary>
                 [NameInMap("code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
                 /// <summary>
-                /// The status change message.
+                /// <para>The status change message.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ok</para>
                 /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]
@@ -182,14 +227,20 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// The user ID.
+            /// <para>The user ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123131</para>
             /// </summary>
             [NameInMap("userId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
 
             /// <summary>
-            /// The name of the user.
+            /// <para>The name of the user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_user</para>
             /// </summary>
             [NameInMap("userName")]
             [Validation(Required=false)]
@@ -200,7 +251,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string WebUI { get; set; }
 
             /// <summary>
-            /// The workspace ID.
+            /// <para>The workspace ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>w-1234abcd</para>
             /// </summary>
             [NameInMap("workspaceId")]
             [Validation(Required=false)]
@@ -209,7 +263,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]

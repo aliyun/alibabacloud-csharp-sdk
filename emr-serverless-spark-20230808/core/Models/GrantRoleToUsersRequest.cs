@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GrantRoleToUsersRequest : TeaModel {
         /// <summary>
-        /// The Alibaba Cloud Resource Name (ARN) of the role.
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the role.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:emr::w-975bcfda9625****:role/Owner</para>
         /// </summary>
         [NameInMap("roleArn")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<string> UserArns { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("regionId")]
         [Validation(Required=false)]

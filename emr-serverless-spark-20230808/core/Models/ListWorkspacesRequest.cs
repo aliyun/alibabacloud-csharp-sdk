@@ -10,35 +10,50 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListWorkspacesRequest : TeaModel {
         /// <summary>
-        /// The maximum number of entries to return.
+        /// <para>The maximum number of entries to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// Fuzzy match is supported.
+        /// <para>Fuzzy match is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_workspace</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("regionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The workspace status.
+        /// <para>The workspace status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>running</para>
         /// </summary>
         [NameInMap("state")]
         [Validation(Required=false)]

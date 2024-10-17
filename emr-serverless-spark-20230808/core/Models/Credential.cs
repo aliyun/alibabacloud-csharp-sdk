@@ -10,49 +10,49 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class Credential : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("accessId")]
         [Validation(Required=false)]
         public string AccessId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("dir")]
         [Validation(Required=false)]
         public string Dir { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("expire")]
         [Validation(Required=false)]
         public string Expire { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("host")]
         [Validation(Required=false)]
         public string Host { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("policy")]
         [Validation(Required=false)]
         public string Policy { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("securityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("signature")]
         [Validation(Required=false)]

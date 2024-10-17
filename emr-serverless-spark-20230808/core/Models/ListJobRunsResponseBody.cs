@@ -10,34 +10,34 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListJobRunsResponseBody : TeaModel {
         /// <summary>
-        /// The list of Spark jobs.
+        /// <para>The list of Spark jobs.</para>
         /// </summary>
         [NameInMap("jobRuns")]
         [Validation(Required=false)]
         public List<ListJobRunsResponseBodyJobRuns> JobRuns { get; set; }
         public class ListJobRunsResponseBodyJobRuns : TeaModel {
             /// <summary>
-            /// The code type of the job. Valid values:
+            /// <para>The code type of the job. Valid values:</para>
+            /// <para>SQL</para>
+            /// <para>JAR</para>
+            /// <para>PYTHON</para>
             /// 
-            /// SQL
-            /// 
-            /// JAR
-            /// 
-            /// PYTHON
+            /// <b>Example:</b>
+            /// <para>SQL</para>
             /// </summary>
             [NameInMap("codeType")]
             [Validation(Required=false)]
             public string CodeType { get; set; }
 
             /// <summary>
-            /// The advanced configurations of Spark.
+            /// <para>The advanced configurations of Spark.</para>
             /// </summary>
             [NameInMap("configurationOverrides")]
             [Validation(Required=false)]
             public ListJobRunsResponseBodyJobRunsConfigurationOverrides ConfigurationOverrides { get; set; }
             public class ListJobRunsResponseBodyJobRunsConfigurationOverrides : TeaModel {
                 /// <summary>
-                /// The SparkConf objects.
+                /// <para>The SparkConf objects.</para>
                 /// </summary>
                 [NameInMap("configurations")]
                 [Validation(Required=false)]
@@ -46,7 +46,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// The ID of the user who created the job.
+            /// <para>The ID of the user who created the job.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1509789347011222</para>
             /// </summary>
             [NameInMap("creator")]
             [Validation(Required=false)]
@@ -57,14 +60,20 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DisplayReleaseVersion { get; set; }
 
             /// <summary>
-            /// The end time of the job.
+            /// <para>The end time of the job.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1684119314000</para>
             /// </summary>
             [NameInMap("endTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// The timeout period of the job.
+            /// <para>The timeout period of the job.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3600</para>
             /// </summary>
             [NameInMap("executionTimeoutSeconds")]
             [Validation(Required=false)]
@@ -75,63 +84,81 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? Fusion { get; set; }
 
             /// <summary>
-            /// The information about Spark Driver.
+            /// <para>The information about Spark Driver.</para>
             /// </summary>
             [NameInMap("jobDriver")]
             [Validation(Required=false)]
             public JobDriver JobDriver { get; set; }
 
             /// <summary>
-            /// The job ID.
+            /// <para>The job ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>jr-231231</para>
             /// </summary>
             [NameInMap("jobRunId")]
             [Validation(Required=false)]
             public string JobRunId { get; set; }
 
             /// <summary>
-            /// The path where the operational logs are stored.
+            /// <para>The path where the operational logs are stored.</para>
             /// </summary>
             [NameInMap("log")]
             [Validation(Required=false)]
             public RunLog Log { get; set; }
 
             /// <summary>
-            /// The job name.
+            /// <para>The job name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>jobName</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The version of Spark on which the jobs run.
+            /// <para>The version of Spark on which the jobs run.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>esr-native-3.4.0</para>
             /// </summary>
             [NameInMap("releaseVersion")]
             [Validation(Required=false)]
             public string ReleaseVersion { get; set; }
 
             /// <summary>
-            /// The job state.
+            /// <para>The job state.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Running</para>
             /// </summary>
             [NameInMap("state")]
             [Validation(Required=false)]
             public string State { get; set; }
 
             /// <summary>
-            /// The reason of the job status change.
+            /// <para>The reason of the job status change.</para>
             /// </summary>
             [NameInMap("stateChangeReason")]
             [Validation(Required=false)]
             public ListJobRunsResponseBodyJobRunsStateChangeReason StateChangeReason { get; set; }
             public class ListJobRunsResponseBodyJobRunsStateChangeReason : TeaModel {
                 /// <summary>
-                /// The error code.
+                /// <para>The error code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
                 /// <summary>
-                /// The error message.
+                /// <para>The error message.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>success</para>
                 /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]
@@ -140,28 +167,37 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// The time when the job was submitted.
+            /// <para>The time when the job was submitted.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1684119314000</para>
             /// </summary>
             [NameInMap("submitTime")]
             [Validation(Required=false)]
             public long? SubmitTime { get; set; }
 
             /// <summary>
-            /// The tags of the job.
+            /// <para>The tags of the job.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<Tag> Tags { get; set; }
 
             /// <summary>
-            /// The web UI of the job.
+            /// <para>The web UI of the job.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://spark-ui">http://spark-ui</a></para>
             /// </summary>
             [NameInMap("webUI")]
             [Validation(Required=false)]
             public string WebUI { get; set; }
 
             /// <summary>
-            /// The workspace ID.
+            /// <para>The workspace ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>w-1234abcd</para>
             /// </summary>
             [NameInMap("workspaceId")]
             [Validation(Required=false)]
@@ -170,28 +206,40 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// The maximum number of entries returned.
+        /// <para>The maximum number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results.
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]

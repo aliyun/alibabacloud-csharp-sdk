@@ -1,3 +1,20 @@
+2024-10-17 Version: 1.5.0
+- Support API StartSessionCluster.
+- Support API StopSessionCluster.
+- Update API ListJobRuns: update param workspaceId.
+- Update API ListJobRuns: update param creator.
+- Update API ListJobRuns: update param endTime.
+- Update API ListJobRuns: update param jobRunDeploymentId.
+- Update API ListJobRuns: update param jobRunId.
+- Update API ListJobRuns: update param maxResults.
+- Update API ListJobRuns: update param name.
+- Update API ListJobRuns: update param nextToken.
+- Update API ListJobRuns: update param resourceQueueId.
+- Update API ListJobRuns: update param startTime.
+- Update API ListJobRuns: update param states.
+- Update API ListJobRuns: update param tags.
+
+
 2024-09-10 Version: 1.4.4
 - Update API ListReleaseVersions: add param workspaceId.
 

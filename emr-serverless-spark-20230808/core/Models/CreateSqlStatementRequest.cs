@@ -10,42 +10,60 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class CreateSqlStatementRequest : TeaModel {
         /// <summary>
-        /// The SQL code. You can specify one or more SQL statements.
+        /// <para>The SQL code. You can specify one or more SQL statements.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SHOW TABLES</para>
         /// </summary>
         [NameInMap("codeContent")]
         [Validation(Required=false)]
         public string CodeContent { get; set; }
 
         /// <summary>
-        /// The default Data Lake Formation (DLF) catalog ID.
+        /// <para>The default Data Lake Formation (DLF) catalog ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default_catalog</para>
         /// </summary>
         [NameInMap("defaultCatalog")]
         [Validation(Required=false)]
         public string DefaultCatalog { get; set; }
 
         /// <summary>
-        /// The name of the default database.
+        /// <para>The name of the default database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("defaultDatabase")]
         [Validation(Required=false)]
         public string DefaultDatabase { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return. Valid values: 1 to 10000.
+        /// <para>The maximum number of entries to return. Valid values: 1 to 10000.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("limit")]
         [Validation(Required=false)]
         public int? Limit { get; set; }
 
         /// <summary>
-        /// The SQL compute ID. You can create an SQL compute in the workspace created in EMR Serverless Spark.
+        /// <para>The SQL compute ID. You can create an SQL compute in the workspace created in EMR Serverless Spark.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sc-dfahdfjafhajd****</para>
         /// </summary>
         [NameInMap("sqlComputeId")]
         [Validation(Required=false)]
         public string SqlComputeId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("regionId")]
         [Validation(Required=false)]

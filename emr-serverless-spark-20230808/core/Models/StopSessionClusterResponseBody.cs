@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
-    public class TerminateSqlStatementResponseBody : TeaModel {
+    public class StopSessionClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>请求ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
@@ -18,6 +18,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// <para>Workspace Id。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>w-******</para>
+        /// </summary>
+        [NameInMap("sessionClusterId")]
+        [Validation(Required=false)]
+        public string SessionClusterId { get; set; }
 
     }
 

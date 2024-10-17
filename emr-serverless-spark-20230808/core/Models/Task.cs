@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ArtifactUrl { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("bizId")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("creator")]
         [Validation(Required=false)]
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public bool? Fusion { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("gmtCreated")]
         [Validation(Required=false)]
         public string GmtCreated { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("gmtModified")]
         [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public bool? HasChanged { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("hasCommited")]
         [Validation(Required=false)]
@@ -113,14 +113,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string LastRunResourceQueueId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("modifier")]
         [Validation(Required=false)]
         public long? Modifier { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -130,6 +130,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public List<string> PyFiles { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("sparkArgs")]
         [Validation(Required=false)]
         public string SparkArgs { get; set; }
@@ -139,14 +143,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<SparkConf> SparkConf { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("sparkDriverCores")]
         [Validation(Required=false)]
         public int? SparkDriverCores { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("sparkDriverMemory")]
         [Validation(Required=false)]
@@ -157,28 +161,28 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string SparkEntrypoint { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("sparkExecutorCores")]
         [Validation(Required=false)]
         public int? SparkExecutorCores { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("sparkExecutorMemory")]
         [Validation(Required=false)]
         public long? SparkExecutorMemory { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("sparkLogLevel")]
         [Validation(Required=false)]
         public string SparkLogLevel { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("sparkLogPath")]
         [Validation(Required=false)]
@@ -189,7 +193,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string SparkSubmitClause { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("sparkVersion")]
         [Validation(Required=false)]
@@ -204,7 +208,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? Timeout { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

@@ -37,14 +37,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary Adds a RAM user or RAM role to a workspace as a member.
-         *
-         * @param request AddMembersRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a RAM user or RAM role to a workspace as a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddMembersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMembersResponse
+        /// </returns>
         public AddMembersResponse AddMembersWithOptions(AddMembersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -83,14 +93,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<AddMembersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Adds a RAM user or RAM role to a workspace as a member.
-         *
-         * @param request AddMembersRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a RAM user or RAM role to a workspace as a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddMembersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMembersResponse
+        /// </returns>
         public async Task<AddMembersResponse> AddMembersWithOptionsAsync(AddMembersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -129,12 +149,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<AddMembersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Adds a RAM user or RAM role to a workspace as a member.
-         *
-         * @param request AddMembersRequest
-         * @return AddMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a RAM user or RAM role to a workspace as a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMembersResponse
+        /// </returns>
         public AddMembersResponse AddMembers(AddMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -142,12 +168,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return AddMembersWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Adds a RAM user or RAM role to a workspace as a member.
-         *
-         * @param request AddMembersRequest
-         * @return AddMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a RAM user or RAM role to a workspace as a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMembersResponse
+        /// </returns>
         public async Task<AddMembersResponse> AddMembersAsync(AddMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -155,14 +187,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return await AddMembersWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Terminates a Spark job.
-         *
-         * @param request CancelJobRunRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelJobRunResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates a Spark job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelJobRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelJobRunResponse
+        /// </returns>
         public CancelJobRunResponse CancelJobRunWithOptions(string workspaceId, string jobRunId, CancelJobRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -191,14 +233,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<CancelJobRunResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Terminates a Spark job.
-         *
-         * @param request CancelJobRunRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelJobRunResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates a Spark job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelJobRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelJobRunResponse
+        /// </returns>
         public async Task<CancelJobRunResponse> CancelJobRunWithOptionsAsync(string workspaceId, string jobRunId, CancelJobRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -227,12 +279,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<CancelJobRunResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Terminates a Spark job.
-         *
-         * @param request CancelJobRunRequest
-         * @return CancelJobRunResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates a Spark job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelJobRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelJobRunResponse
+        /// </returns>
         public CancelJobRunResponse CancelJobRun(string workspaceId, string jobRunId, CancelJobRunRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -240,12 +298,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return CancelJobRunWithOptions(workspaceId, jobRunId, request, headers, runtime);
         }
 
-        /**
-         * @summary Terminates a Spark job.
-         *
-         * @param request CancelJobRunRequest
-         * @return CancelJobRunResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates a Spark job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelJobRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelJobRunResponse
+        /// </returns>
         public async Task<CancelJobRunResponse> CancelJobRunAsync(string workspaceId, string jobRunId, CancelJobRunRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -253,14 +317,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return await CancelJobRunWithOptionsAsync(workspaceId, jobRunId, request, headers, runtime);
         }
 
-        /**
-         * @summary Creates an SQL query task.
-         *
-         * @param request CreateSqlStatementRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSqlStatementResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an SQL query task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSqlStatementRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSqlStatementResponse
+        /// </returns>
         public CreateSqlStatementResponse CreateSqlStatementWithOptions(string workspaceId, CreateSqlStatementRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -311,14 +385,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<CreateSqlStatementResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an SQL query task.
-         *
-         * @param request CreateSqlStatementRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSqlStatementResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an SQL query task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSqlStatementRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSqlStatementResponse
+        /// </returns>
         public async Task<CreateSqlStatementResponse> CreateSqlStatementWithOptionsAsync(string workspaceId, CreateSqlStatementRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -369,12 +453,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<CreateSqlStatementResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an SQL query task.
-         *
-         * @param request CreateSqlStatementRequest
-         * @return CreateSqlStatementResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an SQL query task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSqlStatementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSqlStatementResponse
+        /// </returns>
         public CreateSqlStatementResponse CreateSqlStatement(string workspaceId, CreateSqlStatementRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -382,12 +472,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return CreateSqlStatementWithOptions(workspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Creates an SQL query task.
-         *
-         * @param request CreateSqlStatementRequest
-         * @return CreateSqlStatementResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an SQL query task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSqlStatementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSqlStatementResponse
+        /// </returns>
         public async Task<CreateSqlStatementResponse> CreateSqlStatementAsync(string workspaceId, CreateSqlStatementRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -395,14 +491,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return await CreateSqlStatementWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Obtain the job details.
-         *
-         * @param request GetJobRunRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetJobRunResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the job details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobRunResponse
+        /// </returns>
         public GetJobRunResponse GetJobRunWithOptions(string workspaceId, string jobRunId, GetJobRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -431,14 +537,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<GetJobRunResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtain the job details.
-         *
-         * @param request GetJobRunRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetJobRunResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the job details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobRunResponse
+        /// </returns>
         public async Task<GetJobRunResponse> GetJobRunWithOptionsAsync(string workspaceId, string jobRunId, GetJobRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -467,12 +583,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<GetJobRunResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtain the job details.
-         *
-         * @param request GetJobRunRequest
-         * @return GetJobRunResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the job details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobRunResponse
+        /// </returns>
         public GetJobRunResponse GetJobRun(string workspaceId, string jobRunId, GetJobRunRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -480,12 +602,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return GetJobRunWithOptions(workspaceId, jobRunId, request, headers, runtime);
         }
 
-        /**
-         * @summary Obtain the job details.
-         *
-         * @param request GetJobRunRequest
-         * @return GetJobRunResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the job details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobRunResponse
+        /// </returns>
         public async Task<GetJobRunResponse> GetJobRunAsync(string workspaceId, string jobRunId, GetJobRunRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -493,14 +621,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return await GetJobRunWithOptionsAsync(workspaceId, jobRunId, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the status of an SQL query task.
-         *
-         * @param request GetSqlStatementRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetSqlStatementResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of an SQL query task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSqlStatementRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSqlStatementResponse
+        /// </returns>
         public GetSqlStatementResponse GetSqlStatementWithOptions(string workspaceId, string statementId, GetSqlStatementRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -529,14 +667,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<GetSqlStatementResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the status of an SQL query task.
-         *
-         * @param request GetSqlStatementRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetSqlStatementResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of an SQL query task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSqlStatementRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSqlStatementResponse
+        /// </returns>
         public async Task<GetSqlStatementResponse> GetSqlStatementWithOptionsAsync(string workspaceId, string statementId, GetSqlStatementRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -565,12 +713,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<GetSqlStatementResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the status of an SQL query task.
-         *
-         * @param request GetSqlStatementRequest
-         * @return GetSqlStatementResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of an SQL query task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSqlStatementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSqlStatementResponse
+        /// </returns>
         public GetSqlStatementResponse GetSqlStatement(string workspaceId, string statementId, GetSqlStatementRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -578,12 +732,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return GetSqlStatementWithOptions(workspaceId, statementId, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the status of an SQL query task.
-         *
-         * @param request GetSqlStatementRequest
-         * @return GetSqlStatementResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of an SQL query task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSqlStatementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSqlStatementResponse
+        /// </returns>
         public async Task<GetSqlStatementResponse> GetSqlStatementAsync(string workspaceId, string statementId, GetSqlStatementRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -591,14 +751,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return await GetSqlStatementWithOptionsAsync(workspaceId, statementId, request, headers, runtime);
         }
 
-        /**
-         * @summary Assigns a specified role to users.
-         *
-         * @param request GrantRoleToUsersRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GrantRoleToUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns a specified role to users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantRoleToUsersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantRoleToUsersResponse
+        /// </returns>
         public GrantRoleToUsersResponse GrantRoleToUsersWithOptions(GrantRoleToUsersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -637,14 +807,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<GrantRoleToUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Assigns a specified role to users.
-         *
-         * @param request GrantRoleToUsersRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GrantRoleToUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns a specified role to users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantRoleToUsersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantRoleToUsersResponse
+        /// </returns>
         public async Task<GrantRoleToUsersResponse> GrantRoleToUsersWithOptionsAsync(GrantRoleToUsersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -683,12 +863,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<GrantRoleToUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Assigns a specified role to users.
-         *
-         * @param request GrantRoleToUsersRequest
-         * @return GrantRoleToUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns a specified role to users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantRoleToUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantRoleToUsersResponse
+        /// </returns>
         public GrantRoleToUsersResponse GrantRoleToUsers(GrantRoleToUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -696,12 +882,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return GrantRoleToUsersWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Assigns a specified role to users.
-         *
-         * @param request GrantRoleToUsersRequest
-         * @return GrantRoleToUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns a specified role to users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantRoleToUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantRoleToUsersResponse
+        /// </returns>
         public async Task<GrantRoleToUsersResponse> GrantRoleToUsersAsync(GrantRoleToUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -709,14 +901,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return await GrantRoleToUsersWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Queries a list of Spark jobs.
-         *
-         * @param tmpReq ListJobRunsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListJobRunsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of Spark jobs.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListJobRunsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobRunsResponse
+        /// </returns>
         public ListJobRunsResponse ListJobRunsWithOptions(string workspaceId, ListJobRunsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -807,14 +1009,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<ListJobRunsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of Spark jobs.
-         *
-         * @param tmpReq ListJobRunsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListJobRunsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of Spark jobs.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListJobRunsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobRunsResponse
+        /// </returns>
         public async Task<ListJobRunsResponse> ListJobRunsWithOptionsAsync(string workspaceId, ListJobRunsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -905,12 +1117,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<ListJobRunsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of Spark jobs.
-         *
-         * @param request ListJobRunsRequest
-         * @return ListJobRunsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of Spark jobs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobRunsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobRunsResponse
+        /// </returns>
         public ListJobRunsResponse ListJobRuns(string workspaceId, ListJobRunsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -918,12 +1136,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return ListJobRunsWithOptions(workspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries a list of Spark jobs.
-         *
-         * @param request ListJobRunsRequest
-         * @return ListJobRunsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of Spark jobs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobRunsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobRunsResponse
+        /// </returns>
         public async Task<ListJobRunsResponse> ListJobRunsAsync(string workspaceId, ListJobRunsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -931,14 +1155,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return await ListJobRunsWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.
-         *
-         * @param request ListReleaseVersionsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListReleaseVersionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListReleaseVersionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListReleaseVersionsResponse
+        /// </returns>
         public ListReleaseVersionsResponse ListReleaseVersionsWithOptions(ListReleaseVersionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -983,14 +1217,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<ListReleaseVersionsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.
-         *
-         * @param request ListReleaseVersionsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListReleaseVersionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListReleaseVersionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListReleaseVersionsResponse
+        /// </returns>
         public async Task<ListReleaseVersionsResponse> ListReleaseVersionsWithOptionsAsync(ListReleaseVersionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1035,12 +1279,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<ListReleaseVersionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.
-         *
-         * @param request ListReleaseVersionsRequest
-         * @return ListReleaseVersionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListReleaseVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListReleaseVersionsResponse
+        /// </returns>
         public ListReleaseVersionsResponse ListReleaseVersions(ListReleaseVersionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1048,12 +1298,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return ListReleaseVersionsWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.
-         *
-         * @param request ListReleaseVersionsRequest
-         * @return ListReleaseVersionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListReleaseVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListReleaseVersionsResponse
+        /// </returns>
         public async Task<ListReleaseVersionsResponse> ListReleaseVersionsAsync(ListReleaseVersionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1061,14 +1317,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return await ListReleaseVersionsWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 查询run列表
-         *
-         * @param request ListSessionClustersRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSessionClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询run列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSessionClustersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSessionClustersResponse
+        /// </returns>
         public ListSessionClustersResponse ListSessionClustersWithOptions(string workspaceId, ListSessionClustersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1117,14 +1383,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<ListSessionClustersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询run列表
-         *
-         * @param request ListSessionClustersRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSessionClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询run列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSessionClustersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSessionClustersResponse
+        /// </returns>
         public async Task<ListSessionClustersResponse> ListSessionClustersWithOptionsAsync(string workspaceId, ListSessionClustersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1173,12 +1449,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<ListSessionClustersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询run列表
-         *
-         * @param request ListSessionClustersRequest
-         * @return ListSessionClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询run列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSessionClustersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSessionClustersResponse
+        /// </returns>
         public ListSessionClustersResponse ListSessionClusters(string workspaceId, ListSessionClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1186,12 +1468,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return ListSessionClustersWithOptions(workspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询run列表
-         *
-         * @param request ListSessionClustersRequest
-         * @return ListSessionClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询run列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSessionClustersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSessionClustersResponse
+        /// </returns>
         public async Task<ListSessionClustersResponse> ListSessionClustersAsync(string workspaceId, ListSessionClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1199,14 +1487,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return await ListSessionClustersWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 查看工作空间队列列表
-         *
-         * @param request ListWorkspaceQueuesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListWorkspaceQueuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看工作空间队列列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceQueuesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceQueuesResponse
+        /// </returns>
         public ListWorkspaceQueuesResponse ListWorkspaceQueuesWithOptions(string workspaceId, ListWorkspaceQueuesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1239,14 +1537,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<ListWorkspaceQueuesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查看工作空间队列列表
-         *
-         * @param request ListWorkspaceQueuesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListWorkspaceQueuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看工作空间队列列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceQueuesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceQueuesResponse
+        /// </returns>
         public async Task<ListWorkspaceQueuesResponse> ListWorkspaceQueuesWithOptionsAsync(string workspaceId, ListWorkspaceQueuesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1279,12 +1587,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<ListWorkspaceQueuesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查看工作空间队列列表
-         *
-         * @param request ListWorkspaceQueuesRequest
-         * @return ListWorkspaceQueuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看工作空间队列列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceQueuesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceQueuesResponse
+        /// </returns>
         public ListWorkspaceQueuesResponse ListWorkspaceQueues(string workspaceId, ListWorkspaceQueuesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1292,12 +1606,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return ListWorkspaceQueuesWithOptions(workspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 查看工作空间队列列表
-         *
-         * @param request ListWorkspaceQueuesRequest
-         * @return ListWorkspaceQueuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看工作空间队列列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceQueuesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceQueuesResponse
+        /// </returns>
         public async Task<ListWorkspaceQueuesResponse> ListWorkspaceQueuesAsync(string workspaceId, ListWorkspaceQueuesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1305,14 +1625,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return await ListWorkspaceQueuesWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries a list of workspaces.
-         *
-         * @param request ListWorkspacesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListWorkspacesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of workspaces.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspacesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspacesResponse
+        /// </returns>
         public ListWorkspacesResponse ListWorkspacesWithOptions(ListWorkspacesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1357,14 +1687,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<ListWorkspacesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of workspaces.
-         *
-         * @param request ListWorkspacesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListWorkspacesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of workspaces.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspacesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspacesResponse
+        /// </returns>
         public async Task<ListWorkspacesResponse> ListWorkspacesWithOptionsAsync(ListWorkspacesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1409,12 +1749,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<ListWorkspacesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of workspaces.
-         *
-         * @param request ListWorkspacesRequest
-         * @return ListWorkspacesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of workspaces.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspacesResponse
+        /// </returns>
         public ListWorkspacesResponse ListWorkspaces(ListWorkspacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1422,12 +1768,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return ListWorkspacesWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Queries a list of workspaces.
-         *
-         * @param request ListWorkspacesRequest
-         * @return ListWorkspacesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of workspaces.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspacesResponse
+        /// </returns>
         public async Task<ListWorkspacesResponse> ListWorkspacesAsync(ListWorkspacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1435,14 +1787,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return await ListWorkspacesWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Starts a Spark job.
-         *
-         * @param request StartJobRunRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartJobRunResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a Spark job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartJobRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartJobRunResponse
+        /// </returns>
         public StartJobRunResponse StartJobRunWithOptions(string workspaceId, StartJobRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1521,14 +1883,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<StartJobRunResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Starts a Spark job.
-         *
-         * @param request StartJobRunRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartJobRunResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a Spark job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartJobRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartJobRunResponse
+        /// </returns>
         public async Task<StartJobRunResponse> StartJobRunWithOptionsAsync(string workspaceId, StartJobRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1607,12 +1979,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<StartJobRunResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Starts a Spark job.
-         *
-         * @param request StartJobRunRequest
-         * @return StartJobRunResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a Spark job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartJobRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartJobRunResponse
+        /// </returns>
         public StartJobRunResponse StartJobRun(string workspaceId, StartJobRunRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1620,12 +1998,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return StartJobRunWithOptions(workspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Starts a Spark job.
-         *
-         * @param request StartJobRunRequest
-         * @return StartJobRunResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a Spark job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartJobRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartJobRunResponse
+        /// </returns>
         public async Task<StartJobRunResponse> StartJobRunAsync(string workspaceId, StartJobRunRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1633,14 +2017,324 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return await StartJobRunWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Terminates an SQL query task.
-         *
-         * @param request TerminateSqlStatementRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TerminateSqlStatementResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动session集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartSessionClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartSessionClusterResponse
+        /// </returns>
+        public StartSessionClusterResponse StartSessionClusterWithOptions(string workspaceId, StartSessionClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
+            {
+                body["queueName"] = request.QueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionClusterId))
+            {
+                body["sessionClusterId"] = request.SessionClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartSessionCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/sessionClusters/action/startSessionCluster",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartSessionClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动session集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartSessionClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartSessionClusterResponse
+        /// </returns>
+        public async Task<StartSessionClusterResponse> StartSessionClusterWithOptionsAsync(string workspaceId, StartSessionClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
+            {
+                body["queueName"] = request.QueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionClusterId))
+            {
+                body["sessionClusterId"] = request.SessionClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartSessionCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/sessionClusters/action/startSessionCluster",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartSessionClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动session集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartSessionClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartSessionClusterResponse
+        /// </returns>
+        public StartSessionClusterResponse StartSessionCluster(string workspaceId, StartSessionClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StartSessionClusterWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动session集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartSessionClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartSessionClusterResponse
+        /// </returns>
+        public async Task<StartSessionClusterResponse> StartSessionClusterAsync(string workspaceId, StartSessionClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StartSessionClusterWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动session集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopSessionClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopSessionClusterResponse
+        /// </returns>
+        public StopSessionClusterResponse StopSessionClusterWithOptions(string workspaceId, StopSessionClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
+            {
+                body["queueName"] = request.QueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionClusterId))
+            {
+                body["sessionClusterId"] = request.SessionClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopSessionCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/sessionClusters/action/stopSessionCluster",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopSessionClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动session集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopSessionClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopSessionClusterResponse
+        /// </returns>
+        public async Task<StopSessionClusterResponse> StopSessionClusterWithOptionsAsync(string workspaceId, StopSessionClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
+            {
+                body["queueName"] = request.QueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionClusterId))
+            {
+                body["sessionClusterId"] = request.SessionClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopSessionCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/sessionClusters/action/stopSessionCluster",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopSessionClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动session集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopSessionClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopSessionClusterResponse
+        /// </returns>
+        public StopSessionClusterResponse StopSessionCluster(string workspaceId, StopSessionClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StopSessionClusterWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动session集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopSessionClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopSessionClusterResponse
+        /// </returns>
+        public async Task<StopSessionClusterResponse> StopSessionClusterAsync(string workspaceId, StopSessionClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StopSessionClusterWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates an SQL query task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TerminateSqlStatementRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TerminateSqlStatementResponse
+        /// </returns>
         public TerminateSqlStatementResponse TerminateSqlStatementWithOptions(string workspaceId, string statementId, TerminateSqlStatementRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1669,14 +2363,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<TerminateSqlStatementResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Terminates an SQL query task.
-         *
-         * @param request TerminateSqlStatementRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TerminateSqlStatementResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates an SQL query task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TerminateSqlStatementRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TerminateSqlStatementResponse
+        /// </returns>
         public async Task<TerminateSqlStatementResponse> TerminateSqlStatementWithOptionsAsync(string workspaceId, string statementId, TerminateSqlStatementRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1705,12 +2409,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<TerminateSqlStatementResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Terminates an SQL query task.
-         *
-         * @param request TerminateSqlStatementRequest
-         * @return TerminateSqlStatementResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates an SQL query task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TerminateSqlStatementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TerminateSqlStatementResponse
+        /// </returns>
         public TerminateSqlStatementResponse TerminateSqlStatement(string workspaceId, string statementId, TerminateSqlStatementRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1718,12 +2428,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TerminateSqlStatementWithOptions(workspaceId, statementId, request, headers, runtime);
         }
 
-        /**
-         * @summary Terminates an SQL query task.
-         *
-         * @param request TerminateSqlStatementRequest
-         * @return TerminateSqlStatementResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates an SQL query task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TerminateSqlStatementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TerminateSqlStatementResponse
+        /// </returns>
         public async Task<TerminateSqlStatementResponse> TerminateSqlStatementAsync(string workspaceId, string statementId, TerminateSqlStatementRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

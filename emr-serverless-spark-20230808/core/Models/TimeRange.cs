@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class TimeRange : TeaModel {
         /// <summary>
-        /// 时间范围结束时间。
+        /// <para>时间范围结束时间。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1688370894339</para>
         /// </summary>
         [NameInMap("endTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// 时间范围开始时间。
+        /// <para>时间范围开始时间。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1688370894339</para>
         /// </summary>
         [NameInMap("startTime")]
         [Validation(Required=false)]

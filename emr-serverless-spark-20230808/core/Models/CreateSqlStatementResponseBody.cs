@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class CreateSqlStatementResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateSqlStatementResponseBodyData Data { get; set; }
         public class CreateSqlStatementResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the SQL query.
+            /// <para>The ID of the SQL query.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>st-1231dfafadfa***</para>
             /// </summary>
             [NameInMap("statementId")]
             [Validation(Required=false)]
@@ -26,7 +29,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public List<SqlOutputRows> Rows { get; set; }
         public class SqlOutputRows : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>null</para>
+            /// </summary>
             [NameInMap("values")]
             [Validation(Required=false)]
             public List<string> Values { get; set; }

@@ -10,32 +10,36 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GetJobRunResponseBody : TeaModel {
         /// <summary>
-        /// The details of the job.
+        /// <para>The details of the job.</para>
         /// </summary>
         [NameInMap("jobRun")]
         [Validation(Required=false)]
         public GetJobRunResponseBodyJobRun JobRun { get; set; }
         public class GetJobRunResponseBodyJobRun : TeaModel {
             /// <summary>
-            /// The code type of the job. Valid values:
+            /// <para>The code type of the job. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>SQL</description></item>
+            /// <item><description>JAR</description></item>
+            /// <item><description>PYTHON</description></item>
+            /// </list>
             /// 
-            /// *   SQL
-            /// *   JAR
-            /// *   PYTHON
+            /// <b>Example:</b>
+            /// <para>SQL</para>
             /// </summary>
             [NameInMap("codeType")]
             [Validation(Required=false)]
             public string CodeType { get; set; }
 
             /// <summary>
-            /// The job configurations of Spark.
+            /// <para>The job configurations of Spark.</para>
             /// </summary>
             [NameInMap("configurationOverrides")]
             [Validation(Required=false)]
             public GetJobRunResponseBodyJobRunConfigurationOverrides ConfigurationOverrides { get; set; }
             public class GetJobRunResponseBodyJobRunConfigurationOverrides : TeaModel {
                 /// <summary>
-                /// The configurations.
+                /// <para>The configurations.</para>
                 /// </summary>
                 [NameInMap("configurations")]
                 [Validation(Required=false)]
@@ -48,14 +52,20 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DisplayReleaseVersion { get; set; }
 
             /// <summary>
-            /// The end time of the job.
+            /// <para>The end time of the job.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1684119314000</para>
             /// </summary>
             [NameInMap("endTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// The timeout period of the job.
+            /// <para>The timeout period of the job.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3600</para>
             /// </summary>
             [NameInMap("executionTimeoutSeconds")]
             [Validation(Required=false)]
@@ -66,77 +76,101 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? Fusion { get; set; }
 
             /// <summary>
-            /// The information about Spark Driver.
+            /// <para>The information about Spark Driver.</para>
             /// </summary>
             [NameInMap("jobDriver")]
             [Validation(Required=false)]
             public JobDriver JobDriver { get; set; }
 
             /// <summary>
-            /// The job ID.
+            /// <para>The job ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>jr-231231</para>
             /// </summary>
             [NameInMap("jobRunId")]
             [Validation(Required=false)]
             public string JobRunId { get; set; }
 
             /// <summary>
-            /// The path where the operational logs are stored.
+            /// <para>The path where the operational logs are stored.</para>
             /// </summary>
             [NameInMap("log")]
             [Validation(Required=false)]
             public RunLog Log { get; set; }
 
             /// <summary>
-            /// The job name.
+            /// <para>The job name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>jobName</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The version of the Spark engine on which the job runs.
+            /// <para>The version of the Spark engine on which the job runs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>esr-3.3.1</para>
             /// </summary>
             [NameInMap("releaseVersion")]
             [Validation(Required=false)]
             public string ReleaseVersion { get; set; }
 
             /// <summary>
-            /// The ID of the user who created the job.
+            /// <para>The ID of the user who created the job.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1509789347011222</para>
             /// </summary>
             [NameInMap("resourceOwnerId")]
             [Validation(Required=false)]
             public string ResourceOwnerId { get; set; }
 
             /// <summary>
-            /// The name of the queue on which the job runs.
+            /// <para>The name of the queue on which the job runs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>root_queue</para>
             /// </summary>
             [NameInMap("resourceQueueId")]
             [Validation(Required=false)]
             public string ResourceQueueId { get; set; }
 
             /// <summary>
-            /// The job state.
+            /// <para>The job state.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Running</para>
             /// </summary>
             [NameInMap("state")]
             [Validation(Required=false)]
             public string State { get; set; }
 
             /// <summary>
-            /// The reason of the job status change.
+            /// <para>The reason of the job status change.</para>
             /// </summary>
             [NameInMap("stateChangeReason")]
             [Validation(Required=false)]
             public GetJobRunResponseBodyJobRunStateChangeReason StateChangeReason { get; set; }
             public class GetJobRunResponseBodyJobRunStateChangeReason : TeaModel {
                 /// <summary>
-                /// The error code.
+                /// <para>The error code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ERR-100000</para>
                 /// </summary>
                 [NameInMap("code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
                 /// <summary>
-                /// The error message.
+                /// <para>The error message.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>connection refused</para>
                 /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]
@@ -145,28 +179,37 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// The time when the job was submitted.
+            /// <para>The time when the job was submitted.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1684119314000</para>
             /// </summary>
             [NameInMap("submitTime")]
             [Validation(Required=false)]
             public long? SubmitTime { get; set; }
 
             /// <summary>
-            /// The tags of the job.
+            /// <para>The tags of the job.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<Tag> Tags { get; set; }
 
             /// <summary>
-            /// The web UI of the job.
+            /// <para>The web UI of the job.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://spark-ui">http://spark-ui</a></para>
             /// </summary>
             [NameInMap("webUI")]
             [Validation(Required=false)]
             public string WebUI { get; set; }
 
             /// <summary>
-            /// The workspace ID.
+            /// <para>The workspace ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>w-1234abcd</para>
             /// </summary>
             [NameInMap("workspaceId")]
             [Validation(Required=false)]
@@ -175,7 +218,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
