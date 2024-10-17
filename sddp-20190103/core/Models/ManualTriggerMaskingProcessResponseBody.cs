@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class ManualTriggerMaskingProcessResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>769FB3C1-F4C9-4******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

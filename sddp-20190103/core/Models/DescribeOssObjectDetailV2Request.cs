@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string BucketName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>12300</para>
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>zh_cn</para>
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }

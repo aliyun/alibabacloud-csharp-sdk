@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeEventDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the anomalous event.
+        /// <para>The ID of the anomalous event.</para>
+        /// <remarks>
+        /// <para>You can call the <b>DescribeEvents</b> operation to query the ID of the anomalous event.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the **DescribeEvents** operation to query the ID of the anomalous event.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>13456723343</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

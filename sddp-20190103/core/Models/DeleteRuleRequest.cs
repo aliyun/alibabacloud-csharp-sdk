@@ -10,30 +10,41 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DeleteRuleRequest : TeaModel {
         /// <summary>
-        /// This parameter is deprecated.
+        /// <para>This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("FeatureType")]
         [Validation(Required=false)]
         public int? FeatureType { get; set; }
 
         /// <summary>
-        /// The ID of the sensitive data detection rule.
+        /// <para>The ID of the sensitive data detection rule.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>122300</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values: **zh** and **en**. The value zh indicates Chinese, and the value en indicates English.
+        /// <para>The language of the content within the request and response. Valid values: <b>zh</b> and <b>en</b>. The value zh indicates Chinese, and the value en indicates English.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated.
+        /// <para>This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>39.170.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

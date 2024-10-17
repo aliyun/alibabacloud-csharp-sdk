@@ -10,122 +10,160 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class ModifyRuleRequest : TeaModel {
         /// <summary>
-        /// The content type of the sensitive data detection rule. Valid values:
+        /// <para>The content type of the sensitive data detection rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2</b>: regular expression</description></item>
+        /// <item><description><b>3</b>: algorithm</description></item>
+        /// <item><description><b>5</b>: keyword</description></item>
+        /// </list>
         /// 
-        /// *   **2**: regular expression
-        /// *   **3**: algorithm
-        /// *   **5**: keyword
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public int? Category { get; set; }
 
         /// <summary>
-        /// The content of the sensitive data detection rule. You can specify a regular expression, an algorithm, or keywords that are used to match sensitive fields or text.
+        /// <para>The content of the sensitive data detection rule. You can specify a regular expression, an algorithm, or keywords that are used to match sensitive fields or text.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>(?:\\D|^)((?:(?:25[0-4]|2[0-4]\\d|1\\d{2}|[1-9]\\d{1})\\.)(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d)\\.){2}(?:25[0-5]|2[0-4]\\d|1[0-9]\\d|[1-9]\\d|[1-9]))(?:\\D|$)</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// The ID of the sensitive data detection rule.
+        /// <para>The ID of the sensitive data detection rule.</para>
+        /// <para>You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation to obtain the rule ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRules](~~DescribeRules~~) operation to obtain the rule ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1****</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh_cn**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh_cn</b>: Simplified Chinese</description></item>
+        /// <item><description><b>en_us</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh_cn**: Simplified Chinese
-        /// *   **en_us**: English
+        /// <b>Example:</b>
+        /// <para>zh_cn</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The match type. Valid values:
+        /// <para>The match type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: rule-based match</description></item>
+        /// <item><description><b>2</b>: dictionary-based match</description></item>
+        /// </list>
         /// 
-        /// *   **1**: rule-based match
-        /// *   **2**: dictionary-based match
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("MatchType")]
         [Validation(Required=false)]
         public int? MatchType { get; set; }
 
         /// <summary>
-        /// The name of the sensitive data detection rule.
+        /// <para>The name of the sensitive data detection rule.</para>
+        /// <para>You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation to obtain the rule name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRules](~~DescribeRules~~) operation to obtain the rule name.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>esw</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The service to which the sensitive data detection rule is applied. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
+        /// <para>The service to which the sensitive data detection rule is applied. Valid values include <b>MaxCompute, OSS, ADS, OTS, and RDS</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RDS</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// The ID of the service to which the sensitive data detection rule is applied. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
+        /// <para>The ID of the service to which the sensitive data detection rule is applied. Valid values include <b>1</b>, <b>2</b>, <b>3</b>, <b>4</b>, and <b>5</b>. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("ProductId")]
         [Validation(Required=false)]
         public long? ProductId { get; set; }
 
         /// <summary>
-        /// The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:
+        /// <para>The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: N/A, which indicates that no sensitive data is detected.</description></item>
+        /// <item><description><b>2</b>: S1, which indicates the low sensitivity level.</description></item>
+        /// <item><description><b>3</b>: S2, which indicates the medium sensitivity level.</description></item>
+        /// <item><description><b>4</b>: S3, which indicates the high sensitivity level.</description></item>
+        /// <item><description><b>5</b>: S4, which indicates the highest sensitivity level.</description></item>
+        /// </list>
         /// 
-        /// *   **1**: N/A, which indicates that no sensitive data is detected.
-        /// *   **2**: S1, which indicates the low sensitivity level.
-        /// *   **3**: S2, which indicates the medium sensitivity level.
-        /// *   **4**: S3, which indicates the high sensitivity level.
-        /// *   **5**: S4, which indicates the highest sensitivity level.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("RiskLevelId")]
         [Validation(Required=false)]
         public long? RiskLevelId { get; set; }
 
         /// <summary>
-        /// The type of the sensitive data detection rule. Valid values:
+        /// <para>The type of the sensitive data detection rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: data detection rule</description></item>
+        /// <item><description><b>2</b>: audit rule</description></item>
+        /// <item><description><b>3</b>: anomalous event detection rule</description></item>
+        /// </list>
         /// 
-        /// *   **1**: data detection rule
-        /// *   **2**: audit rule
-        /// *   **3**: anomalous event detection rule
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]
         public int? RuleType { get; set; }
 
         /// <summary>
-        /// The data assets supported by the sensitive data detection rule. Valid values:
+        /// <para>The data assets supported by the sensitive data detection rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: all data assets</description></item>
+        /// <item><description><b>1</b>: structured data assets</description></item>
+        /// <item><description><b>2</b>: unstructured data assets</description></item>
+        /// </list>
         /// 
-        /// *   **0**: all data assets
-        /// *   **1**: structured data assets
-        /// *   **2**: unstructured data assets
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("SupportForm")]
         [Validation(Required=false)]
         public int? SupportForm { get; set; }
 
         /// <summary>
-        /// The risk level of the alert that is triggered by the sensitive data detection rule. Valid values:
+        /// <para>The risk level of the alert that is triggered by the sensitive data detection rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: low level</description></item>
+        /// <item><description><b>2</b>: medium level</description></item>
+        /// <item><description><b>3</b>: high level</description></item>
+        /// </list>
         /// 
-        /// *   **1**: low level
-        /// *   **2**: medium level
-        /// *   **3**: high level
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("WarnLevel")]
         [Validation(Required=false)]

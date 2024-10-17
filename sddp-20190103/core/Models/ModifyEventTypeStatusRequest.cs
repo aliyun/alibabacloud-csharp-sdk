@@ -10,23 +10,33 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class ModifyEventTypeStatusRequest : TeaModel {
         /// <summary>
-        /// This parameter is deprecated.
+        /// <para>This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("FeatureType")]
         [Validation(Required=false)]
         public int? FeatureType { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values: **zh** and **en**. The value zh indicates Chinese, and the value en indicates English.
+        /// <para>The language of the content within the request and response. Valid values: <b>zh</b> and <b>en</b>. The value zh indicates Chinese, and the value en indicates English.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the anomalous event subtype. Separate multiple IDs with commas (,).
+        /// <para>The ID of the anomalous event subtype. Separate multiple IDs with commas (,).</para>
+        /// <remarks>
+        /// <para>You can call the <b>DescribeEventTypes</b> operation to query the ID of anomalous event subtype.</para>
+        /// </remarks>
         /// 
-        /// > You can call the **DescribeEventTypes** operation to query the ID of anomalous event subtype.
+        /// <b>Example:</b>
+        /// <para>020008</para>
         /// </summary>
         [NameInMap("SubTypeIds")]
         [Validation(Required=false)]

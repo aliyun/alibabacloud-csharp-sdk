@@ -10,24 +10,34 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeRiskLevelsRequest : TeaModel {
         /// <summary>
-        /// This parameter is deprecated.
+        /// <para>This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("FeatureType")]
         [Validation(Required=false)]
         public int? FeatureType { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh_cn: Chinese (default)</description></item>
+        /// <item><description>en_us: English</description></item>
+        /// </list>
         /// 
-        /// *   zh_cn: Chinese (default)
-        /// *   en_us: English
+        /// <b>Example:</b>
+        /// <para>zh_cn</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The ID of the industry-specific rule template.
+        /// <para>The ID of the industry-specific rule template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

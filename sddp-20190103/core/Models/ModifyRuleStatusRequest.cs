@@ -10,40 +10,55 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class ModifyRuleStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the sensitive data detection rule.
+        /// <para>The ID of the sensitive data detection rule.</para>
+        /// <remarks>
+        /// <para>You can query the ID of the sensitive data detection rule by calling the <b>DescribeRules</b> operation.</para>
+        /// </remarks>
         /// 
-        /// > You can query the ID of the sensitive data detection rule by calling the **DescribeRules** operation.
+        /// <b>Example:</b>
+        /// <para>12341</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// The ID of the sensitive data detection rule. Separate multiple IDs with commas (,).
+        /// <para>The ID of the sensitive data detection rule. Separate multiple IDs with commas (,).</para>
+        /// <remarks>
+        /// <para>You can query the ID of the sensitive data detection rule by calling the <b>DescribeRules</b> operation.</para>
+        /// </remarks>
         /// 
-        /// > You can query the ID of the sensitive data detection rule by calling the **DescribeRules** operation.
+        /// <b>Example:</b>
+        /// <para>1,2,3,4</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public string Ids { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable or disable the sensitive data detection rule. Valid values:
+        /// <para>Specifies whether to enable or disable the sensitive data detection rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: disables the sensitive data detection rule.</description></item>
+        /// <item><description><b>1</b>: enables the sensitive data detection rule.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **0**: disables the sensitive data detection rule.
-        /// *   **1**: enables the sensitive data detection rule.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
