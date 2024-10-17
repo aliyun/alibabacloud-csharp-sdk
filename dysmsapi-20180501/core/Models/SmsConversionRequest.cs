@@ -10,28 +10,36 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
 {
     public class SmsConversionRequest : TeaModel {
         /// <summary>
-        /// The time when the OTP message was delivered. The value is a UNIX timestamp. Unit: milliseconds.
+        /// <para>The time when the OTP message was delivered. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <list type="bullet">
+        /// <item><description>If you leave the parameter empty, the current timestamp is specified by default.</description></item>
+        /// <item><description>If you specify the parameter, the timestamp must be greater than the message sending time and less than the current timestamp.</description></item>
+        /// </list>
         /// 
-        /// *   If you leave the parameter empty, the current timestamp is specified by default.
-        /// *   If you specify the parameter, the timestamp must be greater than the message sending time and less than the current timestamp.
+        /// <b>Example:</b>
+        /// <para>1349055900000</para>
         /// </summary>
         [NameInMap("ConversionTime")]
         [Validation(Required=false)]
         public long? ConversionTime { get; set; }
 
         /// <summary>
-        /// Specifies whether customers replied to the OTP message. Valid values: true and false.
+        /// <para>Specifies whether customers replied to the OTP message. Valid values: true and false.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Delivered")]
         [Validation(Required=false)]
         public bool? Delivered { get; set; }
 
         /// <summary>
-        /// The ID of the OTP message.
+        /// <para>The ID of the OTP message.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1008030300****</para>
         /// </summary>
         [NameInMap("MessageId")]
         [Validation(Required=false)]

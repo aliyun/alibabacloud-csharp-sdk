@@ -46,24 +46,41 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary Sends a message to multiple recipients in countries or regions outside the Chinese mainland.
-         *
-         * @description *   You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.
-         * *   You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature of the SMS console.
-         * *   For time-sensitive related messages, we recommend that you use the [SendMessageToGlobe](https://www.alibabacloud.com/help/zh/sms/developer-reference/api-dysmsapi-2018-05-01-batchsendmessagetoglobe) operation to ensure that messages are delivered on time.
-         * *   In each request, you can send messages to up to 1,000 mobile phone numbers.
-         * ### [](#qps)QPS limits
-         * You can call this operation only once per second. If the number of calls per second exceeds this limit, throttling will be triggered. This can potentially impact your business operations. Therefore, we recommend that you take note of this limit when making calls to this operation.
-         *
-         * @param request BatchSendMessageToGlobeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchSendMessageToGlobeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a message to multiple recipients in countries or regions outside the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature in the SMS console.</description></item>
+        /// <item><description>For time-sensitive related messages, we recommend that you use the <a href="https://www.alibabacloud.com/help/en/sms/developer-reference/api-dysmsapi-2018-05-01-batchsendmessagetoglobe">SendMessageToGlobe</a> operation to ensure that messages are delivered on time.</description></item>
+        /// <item><description>In each request, you can send messages to up to 1,000 mobile phone numbers.</description></item>
+        /// </list>
+        /// <h3><a href="#qps-"></a>QPS limit</h3>
+        /// <para>You can call this operation only once per second. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchSendMessageToGlobeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchSendMessageToGlobeResponse
+        /// </returns>
         public BatchSendMessageToGlobeResponse BatchSendMessageToGlobeWithOptions(BatchSendMessageToGlobeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                query["ChannelId"] = request.ChannelId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 query["From"] = request.From;
@@ -107,24 +124,41 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
             return TeaModel.ToObject<BatchSendMessageToGlobeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Sends a message to multiple recipients in countries or regions outside the Chinese mainland.
-         *
-         * @description *   You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.
-         * *   You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature of the SMS console.
-         * *   For time-sensitive related messages, we recommend that you use the [SendMessageToGlobe](https://www.alibabacloud.com/help/zh/sms/developer-reference/api-dysmsapi-2018-05-01-batchsendmessagetoglobe) operation to ensure that messages are delivered on time.
-         * *   In each request, you can send messages to up to 1,000 mobile phone numbers.
-         * ### [](#qps)QPS limits
-         * You can call this operation only once per second. If the number of calls per second exceeds this limit, throttling will be triggered. This can potentially impact your business operations. Therefore, we recommend that you take note of this limit when making calls to this operation.
-         *
-         * @param request BatchSendMessageToGlobeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchSendMessageToGlobeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a message to multiple recipients in countries or regions outside the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature in the SMS console.</description></item>
+        /// <item><description>For time-sensitive related messages, we recommend that you use the <a href="https://www.alibabacloud.com/help/en/sms/developer-reference/api-dysmsapi-2018-05-01-batchsendmessagetoglobe">SendMessageToGlobe</a> operation to ensure that messages are delivered on time.</description></item>
+        /// <item><description>In each request, you can send messages to up to 1,000 mobile phone numbers.</description></item>
+        /// </list>
+        /// <h3><a href="#qps-"></a>QPS limit</h3>
+        /// <para>You can call this operation only once per second. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchSendMessageToGlobeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchSendMessageToGlobeResponse
+        /// </returns>
         public async Task<BatchSendMessageToGlobeResponse> BatchSendMessageToGlobeWithOptionsAsync(BatchSendMessageToGlobeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                query["ChannelId"] = request.ChannelId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 query["From"] = request.From;
@@ -168,56 +202,91 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
             return TeaModel.ToObject<BatchSendMessageToGlobeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Sends a message to multiple recipients in countries or regions outside the Chinese mainland.
-         *
-         * @description *   You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.
-         * *   You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature of the SMS console.
-         * *   For time-sensitive related messages, we recommend that you use the [SendMessageToGlobe](https://www.alibabacloud.com/help/zh/sms/developer-reference/api-dysmsapi-2018-05-01-batchsendmessagetoglobe) operation to ensure that messages are delivered on time.
-         * *   In each request, you can send messages to up to 1,000 mobile phone numbers.
-         * ### [](#qps)QPS limits
-         * You can call this operation only once per second. If the number of calls per second exceeds this limit, throttling will be triggered. This can potentially impact your business operations. Therefore, we recommend that you take note of this limit when making calls to this operation.
-         *
-         * @param request BatchSendMessageToGlobeRequest
-         * @return BatchSendMessageToGlobeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a message to multiple recipients in countries or regions outside the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature in the SMS console.</description></item>
+        /// <item><description>For time-sensitive related messages, we recommend that you use the <a href="https://www.alibabacloud.com/help/en/sms/developer-reference/api-dysmsapi-2018-05-01-batchsendmessagetoglobe">SendMessageToGlobe</a> operation to ensure that messages are delivered on time.</description></item>
+        /// <item><description>In each request, you can send messages to up to 1,000 mobile phone numbers.</description></item>
+        /// </list>
+        /// <h3><a href="#qps-"></a>QPS limit</h3>
+        /// <para>You can call this operation only once per second. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchSendMessageToGlobeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchSendMessageToGlobeResponse
+        /// </returns>
         public BatchSendMessageToGlobeResponse BatchSendMessageToGlobe(BatchSendMessageToGlobeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BatchSendMessageToGlobeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Sends a message to multiple recipients in countries or regions outside the Chinese mainland.
-         *
-         * @description *   You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.
-         * *   You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature of the SMS console.
-         * *   For time-sensitive related messages, we recommend that you use the [SendMessageToGlobe](https://www.alibabacloud.com/help/zh/sms/developer-reference/api-dysmsapi-2018-05-01-batchsendmessagetoglobe) operation to ensure that messages are delivered on time.
-         * *   In each request, you can send messages to up to 1,000 mobile phone numbers.
-         * ### [](#qps)QPS limits
-         * You can call this operation only once per second. If the number of calls per second exceeds this limit, throttling will be triggered. This can potentially impact your business operations. Therefore, we recommend that you take note of this limit when making calls to this operation.
-         *
-         * @param request BatchSendMessageToGlobeRequest
-         * @return BatchSendMessageToGlobeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a message to multiple recipients in countries or regions outside the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature in the SMS console.</description></item>
+        /// <item><description>For time-sensitive related messages, we recommend that you use the <a href="https://www.alibabacloud.com/help/en/sms/developer-reference/api-dysmsapi-2018-05-01-batchsendmessagetoglobe">SendMessageToGlobe</a> operation to ensure that messages are delivered on time.</description></item>
+        /// <item><description>In each request, you can send messages to up to 1,000 mobile phone numbers.</description></item>
+        /// </list>
+        /// <h3><a href="#qps-"></a>QPS limit</h3>
+        /// <para>You can call this operation only once per second. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchSendMessageToGlobeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchSendMessageToGlobeResponse
+        /// </returns>
         public async Task<BatchSendMessageToGlobeResponse> BatchSendMessageToGlobeAsync(BatchSendMessageToGlobeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchSendMessageToGlobeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary This API, sends conversion data to the Alibaba SMS service.
-         *
-         * @description Metrics:
-         * *   Requested OTP messages
-         * *   Verified OTP messages
-         * An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.
-         *
-         * @param request ConversionDataRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConversionDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This API, sends conversion data to the Alibaba SMS service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Metrics:</para>
+        /// <list type="bullet">
+        /// <item><description>Requested OTP messages</description></item>
+        /// <item><description>Verified OTP messages
+        /// An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConversionDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConversionDataResponse
+        /// </returns>
         public ConversionDataResponse ConversionDataWithOptions(ConversionDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -249,18 +318,31 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
             return TeaModel.ToObject<ConversionDataResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary This API, sends conversion data to the Alibaba SMS service.
-         *
-         * @description Metrics:
-         * *   Requested OTP messages
-         * *   Verified OTP messages
-         * An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.
-         *
-         * @param request ConversionDataRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConversionDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This API, sends conversion data to the Alibaba SMS service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Metrics:</para>
+        /// <list type="bullet">
+        /// <item><description>Requested OTP messages</description></item>
+        /// <item><description>Verified OTP messages
+        /// An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConversionDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConversionDataResponse
+        /// </returns>
         public async Task<ConversionDataResponse> ConversionDataWithOptionsAsync(ConversionDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -292,50 +374,83 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
             return TeaModel.ToObject<ConversionDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary This API, sends conversion data to the Alibaba SMS service.
-         *
-         * @description Metrics:
-         * *   Requested OTP messages
-         * *   Verified OTP messages
-         * An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.
-         *
-         * @param request ConversionDataRequest
-         * @return ConversionDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This API, sends conversion data to the Alibaba SMS service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Metrics:</para>
+        /// <list type="bullet">
+        /// <item><description>Requested OTP messages</description></item>
+        /// <item><description>Verified OTP messages
+        /// An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConversionDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConversionDataResponse
+        /// </returns>
         public ConversionDataResponse ConversionData(ConversionDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConversionDataWithOptions(request, runtime);
         }
 
-        /**
-         * @summary This API, sends conversion data to the Alibaba SMS service.
-         *
-         * @description Metrics:
-         * *   Requested OTP messages
-         * *   Verified OTP messages
-         * An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.
-         *
-         * @param request ConversionDataRequest
-         * @return ConversionDataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This API, sends conversion data to the Alibaba SMS service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Metrics:</para>
+        /// <list type="bullet">
+        /// <item><description>Requested OTP messages</description></item>
+        /// <item><description>Verified OTP messages
+        /// An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConversionDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConversionDataResponse
+        /// </returns>
         public async Task<ConversionDataResponse> ConversionDataAsync(ConversionDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConversionDataWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the delivery report of a message.
-         *
-         * @description ### QPS limit
-         * You can call this operation up to 300 times per second. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-         *
-         * @param request QueryMessageRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the delivery report of a message.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>You can call this operation up to 300 times per second. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryMessageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMessageResponse
+        /// </returns>
         public QueryMessageResponse QueryMessageWithOptions(QueryMessageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -363,16 +478,27 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
             return TeaModel.ToObject<QueryMessageResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the delivery report of a message.
-         *
-         * @description ### QPS limit
-         * You can call this operation up to 300 times per second. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-         *
-         * @param request QueryMessageRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the delivery report of a message.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>You can call this operation up to 300 times per second. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryMessageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMessageResponse
+        /// </returns>
         public async Task<QueryMessageResponse> QueryMessageWithOptionsAsync(QueryMessageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -400,48 +526,77 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
             return TeaModel.ToObject<QueryMessageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the delivery report of a message.
-         *
-         * @description ### QPS limit
-         * You can call this operation up to 300 times per second. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-         *
-         * @param request QueryMessageRequest
-         * @return QueryMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the delivery report of a message.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>You can call this operation up to 300 times per second. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMessageResponse
+        /// </returns>
         public QueryMessageResponse QueryMessage(QueryMessageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryMessageWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the delivery report of a message.
-         *
-         * @description ### QPS limit
-         * You can call this operation up to 300 times per second. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-         *
-         * @param request QueryMessageRequest
-         * @return QueryMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the delivery report of a message.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>You can call this operation up to 300 times per second. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMessageResponse
+        /// </returns>
         public async Task<QueryMessageResponse> QueryMessageAsync(QueryMessageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryMessageWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Sends a message to regions outside the Chinese mainland.
-         *
-         * @description ### [](#)Usage notes
-         * The SendMessageToGlobe API operation does not support message delivery to the Chinese mainland.
-         * ### [](#qps-)QPS limit
-         * You can call this operation up to 30 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request SendMessageToGlobeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SendMessageToGlobeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a message to regions outside the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <para>The SendMessageToGlobe API operation does not support message delivery to the Chinese mainland.</para>
+        /// <h3><a href="#qps-"></a>QPS limit</h3>
+        /// <para>You can call this operation up to 30 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendMessageToGlobeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendMessageToGlobeResponse
+        /// </returns>
         public SendMessageToGlobeResponse SendMessageToGlobeWithOptions(SendMessageToGlobeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -489,18 +644,29 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
             return TeaModel.ToObject<SendMessageToGlobeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Sends a message to regions outside the Chinese mainland.
-         *
-         * @description ### [](#)Usage notes
-         * The SendMessageToGlobe API operation does not support message delivery to the Chinese mainland.
-         * ### [](#qps-)QPS limit
-         * You can call this operation up to 30 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request SendMessageToGlobeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SendMessageToGlobeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a message to regions outside the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <para>The SendMessageToGlobe API operation does not support message delivery to the Chinese mainland.</para>
+        /// <h3><a href="#qps-"></a>QPS limit</h3>
+        /// <para>You can call this operation up to 30 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendMessageToGlobeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendMessageToGlobeResponse
+        /// </returns>
         public async Task<SendMessageToGlobeResponse> SendMessageToGlobeWithOptionsAsync(SendMessageToGlobeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -548,50 +714,79 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
             return TeaModel.ToObject<SendMessageToGlobeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Sends a message to regions outside the Chinese mainland.
-         *
-         * @description ### [](#)Usage notes
-         * The SendMessageToGlobe API operation does not support message delivery to the Chinese mainland.
-         * ### [](#qps-)QPS limit
-         * You can call this operation up to 30 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request SendMessageToGlobeRequest
-         * @return SendMessageToGlobeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a message to regions outside the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <para>The SendMessageToGlobe API operation does not support message delivery to the Chinese mainland.</para>
+        /// <h3><a href="#qps-"></a>QPS limit</h3>
+        /// <para>You can call this operation up to 30 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendMessageToGlobeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendMessageToGlobeResponse
+        /// </returns>
         public SendMessageToGlobeResponse SendMessageToGlobe(SendMessageToGlobeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SendMessageToGlobeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Sends a message to regions outside the Chinese mainland.
-         *
-         * @description ### [](#)Usage notes
-         * The SendMessageToGlobe API operation does not support message delivery to the Chinese mainland.
-         * ### [](#qps-)QPS limit
-         * You can call this operation up to 30 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-         *
-         * @param request SendMessageToGlobeRequest
-         * @return SendMessageToGlobeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a message to regions outside the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <para>The SendMessageToGlobe API operation does not support message delivery to the Chinese mainland.</para>
+        /// <h3><a href="#qps-"></a>QPS limit</h3>
+        /// <para>You can call this operation up to 30 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendMessageToGlobeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendMessageToGlobeResponse
+        /// </returns>
         public async Task<SendMessageToGlobeResponse> SendMessageToGlobeAsync(SendMessageToGlobeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SendMessageToGlobeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Sends a message to the Chinese mainland by using a message template.
-         *
-         * @description ### Usage notes
-         * You can call the SendMessageWithTemplate operation to send messages only to the Chinese mainland.
-         *
-         * @param request SendMessageWithTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SendMessageWithTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a message to the Chinese mainland by using a message template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>You can call the SendMessageWithTemplate operation to send messages only to the Chinese mainland.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendMessageWithTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendMessageWithTemplateResponse
+        /// </returns>
         public SendMessageWithTemplateResponse SendMessageWithTemplateWithOptions(SendMessageWithTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -643,16 +838,27 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
             return TeaModel.ToObject<SendMessageWithTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Sends a message to the Chinese mainland by using a message template.
-         *
-         * @description ### Usage notes
-         * You can call the SendMessageWithTemplate operation to send messages only to the Chinese mainland.
-         *
-         * @param request SendMessageWithTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SendMessageWithTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a message to the Chinese mainland by using a message template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>You can call the SendMessageWithTemplate operation to send messages only to the Chinese mainland.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendMessageWithTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendMessageWithTemplateResponse
+        /// </returns>
         public async Task<SendMessageWithTemplateResponse> SendMessageWithTemplateWithOptionsAsync(SendMessageWithTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -704,51 +910,86 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
             return TeaModel.ToObject<SendMessageWithTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Sends a message to the Chinese mainland by using a message template.
-         *
-         * @description ### Usage notes
-         * You can call the SendMessageWithTemplate operation to send messages only to the Chinese mainland.
-         *
-         * @param request SendMessageWithTemplateRequest
-         * @return SendMessageWithTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a message to the Chinese mainland by using a message template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>You can call the SendMessageWithTemplate operation to send messages only to the Chinese mainland.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendMessageWithTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendMessageWithTemplateResponse
+        /// </returns>
         public SendMessageWithTemplateResponse SendMessageWithTemplate(SendMessageWithTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SendMessageWithTemplateWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Sends a message to the Chinese mainland by using a message template.
-         *
-         * @description ### Usage notes
-         * You can call the SendMessageWithTemplate operation to send messages only to the Chinese mainland.
-         *
-         * @param request SendMessageWithTemplateRequest
-         * @return SendMessageWithTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a message to the Chinese mainland by using a message template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>You can call the SendMessageWithTemplate operation to send messages only to the Chinese mainland.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendMessageWithTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendMessageWithTemplateResponse
+        /// </returns>
         public async Task<SendMessageWithTemplateResponse> SendMessageWithTemplateAsync(SendMessageWithTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SendMessageWithTemplateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Delivers one-time password (OTP) message statuses to Alibaba Cloud, which calculates and monitors OTP conversion rates.
-         *
-         * @description Metrics:
-         * *   Requested OTP messages
-         * *   Verified OTP messages
-         * An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.
-         * > If you call the SmsConversion operation to query OTP conversion rates, your business may be affected. We recommend that you perform the following operations:
-         * > * Call the SmsConversion operation in an asynchronous manner by configuring queues or events.
-         * > * Manually degrade your services or use a circuit breaker to automatically degrade services.
-         *
-         * @param request SmsConversionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SmsConversionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delivers one-time password (OTP) message statuses to Alibaba Cloud, which calculates and monitors OTP conversion rates.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Metrics:</para>
+        /// <list type="bullet">
+        /// <item><description>Requested OTP messages</description></item>
+        /// <item><description>Verified OTP messages
+        /// An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.<remarks>
+        /// <para>If you call the SmsConversion operation to query OTP conversion rates, your business may be affected. We recommend that you perform the following operations:</para>
+        /// <list type="bullet">
+        /// <item><description>Call the SmsConversion operation in an asynchronous manner by configuring queues or events.</description></item>
+        /// <item><description>Manually degrade your services or use a circuit breaker to automatically degrade services.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SmsConversionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SmsConversionResponse
+        /// </returns>
         public SmsConversionResponse SmsConversionWithOptions(SmsConversionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -784,21 +1025,38 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
             return TeaModel.ToObject<SmsConversionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Delivers one-time password (OTP) message statuses to Alibaba Cloud, which calculates and monitors OTP conversion rates.
-         *
-         * @description Metrics:
-         * *   Requested OTP messages
-         * *   Verified OTP messages
-         * An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.
-         * > If you call the SmsConversion operation to query OTP conversion rates, your business may be affected. We recommend that you perform the following operations:
-         * > * Call the SmsConversion operation in an asynchronous manner by configuring queues or events.
-         * > * Manually degrade your services or use a circuit breaker to automatically degrade services.
-         *
-         * @param request SmsConversionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SmsConversionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delivers one-time password (OTP) message statuses to Alibaba Cloud, which calculates and monitors OTP conversion rates.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Metrics:</para>
+        /// <list type="bullet">
+        /// <item><description>Requested OTP messages</description></item>
+        /// <item><description>Verified OTP messages
+        /// An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.<remarks>
+        /// <para>If you call the SmsConversion operation to query OTP conversion rates, your business may be affected. We recommend that you perform the following operations:</para>
+        /// <list type="bullet">
+        /// <item><description>Call the SmsConversion operation in an asynchronous manner by configuring queues or events.</description></item>
+        /// <item><description>Manually degrade your services or use a circuit breaker to automatically degrade services.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SmsConversionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SmsConversionResponse
+        /// </returns>
         public async Task<SmsConversionResponse> SmsConversionWithOptionsAsync(SmsConversionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -834,40 +1092,70 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
             return TeaModel.ToObject<SmsConversionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Delivers one-time password (OTP) message statuses to Alibaba Cloud, which calculates and monitors OTP conversion rates.
-         *
-         * @description Metrics:
-         * *   Requested OTP messages
-         * *   Verified OTP messages
-         * An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.
-         * > If you call the SmsConversion operation to query OTP conversion rates, your business may be affected. We recommend that you perform the following operations:
-         * > * Call the SmsConversion operation in an asynchronous manner by configuring queues or events.
-         * > * Manually degrade your services or use a circuit breaker to automatically degrade services.
-         *
-         * @param request SmsConversionRequest
-         * @return SmsConversionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delivers one-time password (OTP) message statuses to Alibaba Cloud, which calculates and monitors OTP conversion rates.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Metrics:</para>
+        /// <list type="bullet">
+        /// <item><description>Requested OTP messages</description></item>
+        /// <item><description>Verified OTP messages
+        /// An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.<remarks>
+        /// <para>If you call the SmsConversion operation to query OTP conversion rates, your business may be affected. We recommend that you perform the following operations:</para>
+        /// <list type="bullet">
+        /// <item><description>Call the SmsConversion operation in an asynchronous manner by configuring queues or events.</description></item>
+        /// <item><description>Manually degrade your services or use a circuit breaker to automatically degrade services.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SmsConversionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SmsConversionResponse
+        /// </returns>
         public SmsConversionResponse SmsConversion(SmsConversionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SmsConversionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Delivers one-time password (OTP) message statuses to Alibaba Cloud, which calculates and monitors OTP conversion rates.
-         *
-         * @description Metrics:
-         * *   Requested OTP messages
-         * *   Verified OTP messages
-         * An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.
-         * > If you call the SmsConversion operation to query OTP conversion rates, your business may be affected. We recommend that you perform the following operations:
-         * > * Call the SmsConversion operation in an asynchronous manner by configuring queues or events.
-         * > * Manually degrade your services or use a circuit breaker to automatically degrade services.
-         *
-         * @param request SmsConversionRequest
-         * @return SmsConversionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delivers one-time password (OTP) message statuses to Alibaba Cloud, which calculates and monitors OTP conversion rates.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Metrics:</para>
+        /// <list type="bullet">
+        /// <item><description>Requested OTP messages</description></item>
+        /// <item><description>Verified OTP messages
+        /// An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.<remarks>
+        /// <para>If you call the SmsConversion operation to query OTP conversion rates, your business may be affected. We recommend that you perform the following operations:</para>
+        /// <list type="bullet">
+        /// <item><description>Call the SmsConversion operation in an asynchronous manner by configuring queues or events.</description></item>
+        /// <item><description>Manually degrade your services or use a circuit breaker to automatically degrade services.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SmsConversionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SmsConversionResponse
+        /// </returns>
         public async Task<SmsConversionResponse> SmsConversionAsync(SmsConversionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

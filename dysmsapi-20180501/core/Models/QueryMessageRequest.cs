@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
 {
     public class QueryMessageRequest : TeaModel {
         /// <summary>
-        /// The ID of the message.
+        /// <para>The ID of the message.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1008030xxx3003</para>
         /// </summary>
         [NameInMap("MessageId")]
         [Validation(Required=false)]
