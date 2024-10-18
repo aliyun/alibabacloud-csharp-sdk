@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class UpdateSubscribedCalendarsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>M5MjkxNDUxQHVzZXJzLmRpbmd0YWxrLmNv</para>
         /// </summary>
         [NameInMap("CalendarId")]
         [Validation(Required=false)]

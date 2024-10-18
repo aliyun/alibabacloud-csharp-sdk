@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public string TenantContextShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2a489c68-xxxx-xxxx-xxxx-xxxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("scheduleConferenceId")]
         [Validation(Required=false)]

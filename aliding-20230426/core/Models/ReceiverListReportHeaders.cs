@@ -18,7 +18,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public ReceiverListReportHeadersAccountContext AccountContext { get; set; }
         public class ReceiverListReportHeadersAccountContext : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>012345</para>
             /// </summary>
             [NameInMap("accountId")]
             [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class QueryLiveWatchDetailRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4d38xxxxx</para>
         /// </summary>
         [NameInMap("LiveId")]
         [Validation(Required=false)]
@@ -20,6 +23,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public QueryLiveWatchDetailRequestTenantContext TenantContext { get; set; }
         public class QueryLiveWatchDetailRequestTenantContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }

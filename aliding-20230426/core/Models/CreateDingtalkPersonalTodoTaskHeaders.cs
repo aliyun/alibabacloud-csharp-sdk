@@ -18,7 +18,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public CreateDingtalkPersonalTodoTaskHeadersAccountContext AccountContext { get; set; }
         public class CreateDingtalkPersonalTodoTaskHeadersAccountContext : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>012345</para>
             /// </summary>
             [NameInMap("accountId")]
             [Validation(Required=false)]

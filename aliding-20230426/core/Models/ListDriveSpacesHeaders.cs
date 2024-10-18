@@ -14,14 +14,17 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AccountContext")]
         [Validation(Required=false)]
         public ListDriveSpacesHeadersAccountContext AccountContext { get; set; }
         public class ListDriveSpacesHeadersAccountContext : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>012345</para>
             /// </summary>
             [NameInMap("accountId")]
             [Validation(Required=false)]

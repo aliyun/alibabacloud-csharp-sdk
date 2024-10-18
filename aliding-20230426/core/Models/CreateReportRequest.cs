@@ -10,42 +10,60 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class CreateReportRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("Contents")]
         [Validation(Required=false)]
         public List<CreateReportRequestContents> Contents { get; set; }
         public class CreateReportRequestContents : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <h3>序号1</h3>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>markdown</para>
             /// </summary>
             [NameInMap("ContentType")]
             [Validation(Required=false)]
             public string ContentType { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>今日完成工作</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Sort")]
             [Validation(Required=false)]
             public long? Sort { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -54,14 +72,20 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>client</para>
         /// </summary>
         [NameInMap("DdFrom")]
         [Validation(Required=false)]
         public string DdFrom { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sdfafdsfsafdfsaf</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
@@ -71,6 +95,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public CreateReportRequestTenantContext TenantContext { get; set; }
         public class CreateReportRequestTenantContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
@@ -78,16 +106,27 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ToChat")]
         [Validation(Required=false)]
         public bool? ToChat { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[]</para>
+        /// </summary>
         [NameInMap("ToCids")]
         [Validation(Required=false)]
         public List<string> ToCids { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[123,456]</para>
+        /// </summary>
         [NameInMap("ToUserids")]
         [Validation(Required=false)]
         public List<string> ToUserids { get; set; }

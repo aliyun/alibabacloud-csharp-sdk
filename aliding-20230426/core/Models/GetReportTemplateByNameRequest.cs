@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class GetReportTemplateByNameRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>我管理的模版</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
@@ -20,6 +23,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public GetReportTemplateByNameRequestTenantContext TenantContext { get; set; }
         public class GetReportTemplateByNameRequestTenantContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }

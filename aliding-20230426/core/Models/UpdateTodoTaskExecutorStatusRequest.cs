@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public UpdateTodoTaskExecutorStatusRequestTenantContext TenantContext { get; set; }
         public class UpdateTodoTaskExecutorStatusRequestTenantContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
@@ -23,22 +27,37 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<UpdateTodoTaskExecutorStatusRequestExecutorStatusList> ExecutorStatusList { get; set; }
         public class UpdateTodoTaskExecutorStatusRequestExecutorStatusList : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>userId</para>
+            /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("isDone")]
             [Validation(Required=false)]
             public bool? IsDone { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xxxx</para>
+        /// </summary>
         [NameInMap("operatorId")]
         [Validation(Required=false)]
         public string OperatorId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>15002141</para>
         /// </summary>
         [NameInMap("taskId")]
         [Validation(Required=false)]

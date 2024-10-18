@@ -13,32 +13,49 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public UploadMediaRequestTenantContext TenantContext { get; set; }
         public class UploadMediaRequestTenantContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test.jpg</para>
+        /// </summary>
         [NameInMap("mediaName")]
         [Validation(Required=false)]
         public string MediaName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>image</para>
         /// </summary>
         [NameInMap("mediaType")]
         [Validation(Required=false)]
         public string MediaType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234567</para>
         /// </summary>
         [NameInMap("orgId")]
         [Validation(Required=false)]
         public long? OrgId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://alicdn.com/xxx.jpg">https://alicdn.com/xxx.jpg</a></para>
         /// </summary>
         [NameInMap("url")]
         [Validation(Required=false)]

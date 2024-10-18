@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class QueryMeetingRoomListShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>124L</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public long? NextToken { get; set; }

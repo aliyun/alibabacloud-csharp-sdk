@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class QueryMeetingRoomGroupShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>172</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public StartMinutesRequestTenantContext TenantContext { get; set; }
         public class StartMinutesRequestTenantContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>xxxxxx</para>
+            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
@@ -20,19 +24,29 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>61289fxxx</para>
         /// </summary>
         [NameInMap("conferenceId")]
         [Validation(Required=false)]
         public string ConferenceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>012345</para>
         /// </summary>
         [NameInMap("ownerUserId")]
         [Validation(Required=false)]
         public string OwnerUserId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("recordAudio")]
         [Validation(Required=false)]
         public bool? RecordAudio { get; set; }

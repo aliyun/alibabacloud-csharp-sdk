@@ -10,27 +10,45 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class CreateWorkspaceDocShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DOC</para>
         /// </summary>
         [NameInMap("DocType")]
         [Validation(Required=false)]
         public string DocType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试文档</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>YRBGv0Ye</para>
+        /// </summary>
         [NameInMap("ParentNodeId")]
         [Validation(Required=false)]
         public string ParentNodeId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123243</para>
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>team_template</para>
+        /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]
         public string TemplateType { get; set; }
@@ -40,7 +58,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public string TenantContextShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

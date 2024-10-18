@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class DeleteWorkspaceDocMembersRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Members")]
         [Validation(Required=false)]
         public List<DeleteWorkspaceDocMembersRequestMembers> Members { get; set; }
         public class DeleteWorkspaceDocMembersRequestMembers : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>012345</para>
             /// </summary>
             [NameInMap("MemberId")]
             [Validation(Required=false)]
             public string MemberId { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>USER</para>
             /// </summary>
             [NameInMap("MemberType")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>YRBGv0xxx</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -43,6 +52,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public DeleteWorkspaceDocMembersRequestTenantContext TenantContext { get; set; }
         public class DeleteWorkspaceDocMembersRequestTenantContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
@@ -50,7 +63,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>YRBGvyxxx</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

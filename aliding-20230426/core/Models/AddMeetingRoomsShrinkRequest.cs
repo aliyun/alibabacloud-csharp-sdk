@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class AddMeetingRoomsShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>primary</para>
         /// </summary>
         [NameInMap("CalendarId")]
         [Validation(Required=false)]
         public string CalendarId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>U5Kxxxxx</para>
         /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]
         public string EventId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MeetingRoomsToAdd")]
         [Validation(Required=false)]

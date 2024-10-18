@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public CreateVideoConferenceHeadersAccountContext AccountContext { get; set; }
         public class CreateVideoConferenceHeadersAccountContext : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("accountId")]
             [Validation(Required=false)]

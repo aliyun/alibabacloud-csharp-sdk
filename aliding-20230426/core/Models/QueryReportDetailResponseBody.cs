@@ -21,10 +21,18 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("Sort")]
             [Validation(Required=false)]
             public string Sort { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -35,10 +43,18 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1691980997000</para>
+        /// </summary>
         [NameInMap("createTime")]
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>012345</para>
+        /// </summary>
         [NameInMap("creatorId")]
         [Validation(Required=false)]
         public string CreatorId { get; set; }
@@ -51,6 +67,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string DeptName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1691980997000</para>
+        /// </summary>
         [NameInMap("modifiedTime")]
         [Validation(Required=false)]
         public long? ModifiedTime { get; set; }
@@ -59,10 +79,18 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string Remark { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1231232134</para>
+        /// </summary>
         [NameInMap("reportId")]
         [Validation(Required=false)]
         public string ReportId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -71,10 +99,18 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
+        /// </summary>
         [NameInMap("vendorRequestId")]
         [Validation(Required=false)]
         public string VendorRequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dingtalk</para>
+        /// </summary>
         [NameInMap("vendorType")]
         [Validation(Required=false)]
         public string VendorType { get; set; }

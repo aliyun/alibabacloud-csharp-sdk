@@ -10,12 +10,19 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class UpdateMeetingRoomGroupShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>172</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>测试分组</para>
+        /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }

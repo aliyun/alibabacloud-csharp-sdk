@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class ExpandGroupCapacityShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cidt*****Xa4K10w==</para>
         /// </summary>
         [NameInMap("OpenConversationId")]
         [Validation(Required=false)]

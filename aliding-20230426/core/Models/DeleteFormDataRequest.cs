@@ -10,25 +10,38 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class DeleteFormDataRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>APP_PBKTxxx</para>
         /// </summary>
         [NameInMap("AppType")]
         [Validation(Required=false)]
         public string AppType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FORM_INST_12345</para>
         /// </summary>
         [NameInMap("FormInstanceId")]
         [Validation(Required=false)]
         public string FormInstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>zh_CN</para>
+        /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>hexxxx</para>
         /// </summary>
         [NameInMap("SystemToken")]
         [Validation(Required=false)]

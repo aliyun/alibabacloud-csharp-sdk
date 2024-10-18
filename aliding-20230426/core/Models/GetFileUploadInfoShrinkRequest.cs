@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string OptionShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dentryUuid</para>
+        /// </summary>
         [NameInMap("ParentDentryUuid")]
         [Validation(Required=false)]
         public string ParentDentryUuid { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>HEADER_SIGNATURE</para>
+        /// </summary>
         [NameInMap("Protocol")]
         [Validation(Required=false)]
         public string Protocol { get; set; }

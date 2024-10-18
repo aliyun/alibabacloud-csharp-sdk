@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class DeleteWorkspaceDocMembersShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Members")]
         [Validation(Required=false)]
         public string MembersShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>YRBGv0xxx</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -28,7 +31,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public string TenantContextShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>YRBGvyxxx</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

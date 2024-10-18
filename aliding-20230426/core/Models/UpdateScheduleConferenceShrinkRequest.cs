@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class UpdateScheduleConferenceShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1687928400000L</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2a489xxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("ScheduleConferenceId")]
         [Validation(Required=false)]
         public string ScheduleConferenceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1687924800000L</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -35,7 +44,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public string TenantContextShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>预约会议标题</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

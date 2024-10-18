@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class GetTodoTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OPJpwtxxxx</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

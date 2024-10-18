@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class DeleteRowsResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>stxxxx</para>
+        /// </summary>
         [NameInMap("id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// requestId
+        /// <para>requestId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

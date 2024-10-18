@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class DeleteEventRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>primary</para>
         /// </summary>
         [NameInMap("CalendarId")]
         [Validation(Required=false)]
         public string CalendarId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>iiiP35sJadba8aBSgjrwPRKgiEiF</para>
         /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]

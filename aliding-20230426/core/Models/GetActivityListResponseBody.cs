@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class GetActivityListResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -17,24 +21,44 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<GetActivityListResponseBodyResult> Result { get; set; }
         public class GetActivityListResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0q8gsudxxx</para>
+            /// </summary>
             [NameInMap("ActivityId")]
             [Validation(Required=false)]
             public string ActivityId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>activity123</para>
+            /// </summary>
             [NameInMap("ActivityName")]
             [Validation(Required=false)]
             public string ActivityName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>activity123</para>
+            /// </summary>
             [NameInMap("ActivityNameInEnglish")]
             [Validation(Required=false)]
             public string ActivityNameInEnglish { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
+        /// </summary>
         [NameInMap("vendorRequestId")]
         [Validation(Required=false)]
         public string VendorRequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dingtalk</para>
+        /// </summary>
         [NameInMap("vendorType")]
         [Validation(Required=false)]
         public string VendorType { get; set; }

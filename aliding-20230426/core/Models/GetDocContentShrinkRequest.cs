@@ -10,12 +10,19 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class GetDocContentShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dentry_uuid</para>
         /// </summary>
         [NameInMap("DentryUuid")]
         [Validation(Required=false)]
         public string DentryUuid { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>markdown</para>
+        /// </summary>
         [NameInMap("TargetFormat")]
         [Validation(Required=false)]
         public string TargetFormat { get; set; }
@@ -25,7 +32,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public string TenantContextShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("userToken")]
         [Validation(Required=false)]

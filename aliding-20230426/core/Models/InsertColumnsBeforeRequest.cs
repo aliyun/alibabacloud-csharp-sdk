@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class InsertColumnsBeforeRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Column")]
         [Validation(Required=false)]
         public long? Column { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("ColumnCount")]
         [Validation(Required=false)]
         public long? ColumnCount { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sheet1</para>
         /// </summary>
         [NameInMap("SheetId")]
         [Validation(Required=false)]
@@ -34,6 +43,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public InsertColumnsBeforeRequestTenantContext TenantContext { get; set; }
         public class InsertColumnsBeforeRequestTenantContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
@@ -41,7 +54,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>stxxxx</para>
         /// </summary>
         [NameInMap("WorkbookId")]
         [Validation(Required=false)]

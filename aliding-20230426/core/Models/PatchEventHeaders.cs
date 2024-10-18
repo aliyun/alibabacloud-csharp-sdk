@@ -18,7 +18,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public PatchEventHeadersAccountContext AccountContext { get; set; }
         public class PatchEventHeadersAccountContext : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123456</para>
             /// </summary>
             [NameInMap("accountId")]
             [Validation(Required=false)]

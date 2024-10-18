@@ -10,18 +10,28 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class QueryDentryRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("DentryId")]
         [Validation(Required=false)]
         public string DentryId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("IncludeSpace")]
         [Validation(Required=false)]
         public bool? IncludeSpace { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>space-fxhb96vuddz8htqt</para>
         /// </summary>
         [NameInMap("SpaceId")]
         [Validation(Required=false)]
@@ -31,6 +41,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public QueryDentryRequestTenantContext TenantContext { get; set; }
         public class QueryDentryRequestTenantContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }

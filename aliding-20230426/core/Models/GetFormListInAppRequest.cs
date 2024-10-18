@@ -10,26 +10,44 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class GetFormListInAppRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>APP_PBKT0xxx</para>
         /// </summary>
         [NameInMap("AppType")]
         [Validation(Required=false)]
         public string AppType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>receipt</para>
+        /// </summary>
         [NameInMap("FormTypes")]
         [Validation(Required=false)]
         public string FormTypes { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>hexxxx</para>
         /// </summary>
         [NameInMap("SystemToken")]
         [Validation(Required=false)]

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

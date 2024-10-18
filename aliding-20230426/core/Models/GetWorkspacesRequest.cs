@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public GetWorkspacesRequestOption Option { get; set; }
         public class GetWorkspacesRequestOption : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("WithPermissionRole")]
             [Validation(Required=false)]
             public bool? WithPermissionRole { get; set; }
@@ -23,6 +27,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public GetWorkspacesRequestTenantContext TenantContext { get; set; }
         public class GetWorkspacesRequestTenantContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
@@ -30,7 +38,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>workspace_id</para>
         /// </summary>
         [NameInMap("WorkspaceIds")]
         [Validation(Required=false)]

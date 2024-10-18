@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class GetTemplateListByUserIdShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Offset")]
         [Validation(Required=false)]
         public long? Offset { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Size")]
         [Validation(Required=false)]

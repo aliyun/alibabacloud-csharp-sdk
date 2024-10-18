@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class DeleteMeetingRoomShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0ffb7xxxxx</para>
         /// </summary>
         [NameInMap("RoomId")]
         [Validation(Required=false)]

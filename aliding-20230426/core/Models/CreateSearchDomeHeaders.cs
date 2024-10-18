@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public CreateSearchDomeHeadersAccountContext AccountContext { get; set; }
         public class CreateSearchDomeHeadersAccountContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ba3a9b612345678d8fedf544ef69d19e</para>
+            /// </summary>
             [NameInMap("userToken")]
             [Validation(Required=false)]
             public string UserToken { get; set; }

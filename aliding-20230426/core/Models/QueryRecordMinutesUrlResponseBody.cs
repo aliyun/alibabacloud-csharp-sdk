@@ -13,20 +13,36 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<QueryRecordMinutesUrlResponseBodyRecordMinutesUrls> RecordMinutesUrls { get; set; }
         public class QueryRecordMinutesUrlResponseBodyRecordMinutesUrls : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>url</para>
+            /// </summary>
             [NameInMap("RecordMinutesUrl")]
             [Validation(Required=false)]
             public string RecordMinutesUrl { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
+        /// </summary>
         [NameInMap("vendorRequestId")]
         [Validation(Required=false)]
         public string VendorRequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dingtalk</para>
+        /// </summary>
         [NameInMap("vendorType")]
         [Validation(Required=false)]
         public string VendorType { get; set; }

@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public string TenantContextShrink { get; set; }
 
         /// <summary>
-        /// unionId
+        /// <para>unionId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>****iE</para>
         /// </summary>
         [NameInMap("UnionId")]
         [Validation(Required=false)]

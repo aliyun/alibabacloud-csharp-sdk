@@ -10,18 +10,28 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class SyncDingTypeShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ANT_DING</para>
         /// </summary>
         [NameInMap("DingType")]
         [Validation(Required=false)]
         public string DingType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>y</para>
+        /// </summary>
         [NameInMap("IsDimission")]
         [Validation(Required=false)]
         public string IsDimission { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>antding</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
@@ -32,7 +42,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public string TenantContextShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>012345</para>
         /// </summary>
         [NameInMap("WorkNo")]
         [Validation(Required=false)]

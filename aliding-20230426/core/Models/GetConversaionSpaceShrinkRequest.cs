@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class GetConversaionSpaceShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cidB8Pzg****FIWPv2PMA==</para>
         /// </summary>
         [NameInMap("OpenConversationId")]
         [Validation(Required=false)]

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class QueryRecordMinutesUrlRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>minutes</para>
         /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1dddwrqrq</para>
         /// </summary>
         [NameInMap("ConferenceId")]
         [Validation(Required=false)]
@@ -27,6 +33,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public QueryRecordMinutesUrlRequestTenantContext TenantContext { get; set; }
         public class QueryRecordMinutesUrlRequestTenantContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>xxxxxx</para>
+            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }

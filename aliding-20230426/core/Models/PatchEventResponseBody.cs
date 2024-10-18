@@ -13,28 +13,52 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<PatchEventResponseBodyAttendees> Attendees { get; set; }
         public class PatchEventResponseBodyAttendees : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>tony</para>
+            /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>123456</para>
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("IsOptional")]
             [Validation(Required=false)]
             public bool? IsOptional { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>accepted</para>
+            /// </summary>
             [NameInMap("ResponseStatus")]
             [Validation(Required=false)]
             public string ResponseStatus { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("Self")]
             [Validation(Required=false)]
             public bool? Self { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2022-10-25T02:26:14Z</para>
+        /// </summary>
         [NameInMap("createTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
@@ -47,24 +71,44 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public PatchEventResponseBodyEnd End { get; set; }
         public class PatchEventResponseBodyEnd : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2020-01-01</para>
+            /// </summary>
             [NameInMap("Date")]
             [Validation(Required=false)]
             public string Date { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2020-01-01T10:15:30+08:00</para>
+            /// </summary>
             [NameInMap("DateTime")]
             [Validation(Required=false)]
             public string DateTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Asia/Shanghai</para>
+            /// </summary>
             [NameInMap("TimeZone")]
             [Validation(Required=false)]
             public string TimeZone { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123456</para>
+        /// </summary>
         [NameInMap("id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("isAllDay")]
         [Validation(Required=false)]
         public bool? IsAllDay { get; set; }
@@ -73,6 +117,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public PatchEventResponseBodyLocation Location { get; set; }
         public class PatchEventResponseBodyLocation : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
@@ -87,18 +135,34 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public PatchEventResponseBodyOrganizer Organizer { get; set; }
         public class PatchEventResponseBodyOrganizer : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>tony</para>
+            /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>123456</para>
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>accepted</para>
+            /// </summary>
             [NameInMap("ResponseStatus")]
             [Validation(Required=false)]
             public string ResponseStatus { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("Self")]
             [Validation(Required=false)]
             public bool? Self { get; set; }
@@ -113,22 +177,42 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public PatchEventResponseBodyRecurrencePattern Pattern { get; set; }
             public class PatchEventResponseBodyRecurrencePattern : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>14</para>
+                /// </summary>
                 [NameInMap("DayOfMonth")]
                 [Validation(Required=false)]
                 public int? DayOfMonth { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>sunday</para>
+                /// </summary>
                 [NameInMap("DaysOfWeek")]
                 [Validation(Required=false)]
                 public string DaysOfWeek { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>first</para>
+                /// </summary>
                 [NameInMap("Index")]
                 [Validation(Required=false)]
                 public string Index { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("Interval")]
                 [Validation(Required=false)]
                 public int? Interval { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>daily</para>
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -139,14 +223,26 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public PatchEventResponseBodyRecurrenceRange Range { get; set; }
             public class PatchEventResponseBodyRecurrenceRange : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2020-01-01T10:15:30+08:00</para>
+                /// </summary>
                 [NameInMap("EndDate")]
                 [Validation(Required=false)]
                 public string EndDate { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>5</para>
+                /// </summary>
                 [NameInMap("NumberOfOccurrences")]
                 [Validation(Required=false)]
                 public int? NumberOfOccurrences { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>noEnd</para>
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -159,10 +255,18 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<PatchEventResponseBodyReminders> Reminders { get; set; }
         public class PatchEventResponseBodyReminders : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>dingtalk</para>
+            /// </summary>
             [NameInMap("Method")]
             [Validation(Required=false)]
             public string Method { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>15</para>
+            /// </summary>
             [NameInMap("Minutes")]
             [Validation(Required=false)]
             public string Minutes { get; set; }
@@ -170,7 +274,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         }
 
         /// <summary>
-        /// requestId
+        /// <para>requestId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4248DCC9-785F-5A14-8BE0-830FD52E1261</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
@@ -180,14 +287,26 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public PatchEventResponseBodyStart Start { get; set; }
         public class PatchEventResponseBodyStart : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2020-01-01</para>
+            /// </summary>
             [NameInMap("Date")]
             [Validation(Required=false)]
             public string Date { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2020-01-01T10:15:30+08:00</para>
+            /// </summary>
             [NameInMap("DateTime")]
             [Validation(Required=false)]
             public string DateTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Asia/Shanghai</para>
+            /// </summary>
             [NameInMap("TimeZone")]
             [Validation(Required=false)]
             public string TimeZone { get; set; }
@@ -198,6 +317,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string Summary { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2020-01-01T10:15:30+08:00</para>
+        /// </summary>
         [NameInMap("updateTime")]
         [Validation(Required=false)]
         public string UpdateTime { get; set; }

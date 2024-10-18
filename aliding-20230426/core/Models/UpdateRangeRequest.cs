@@ -9,41 +9,71 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class UpdateRangeRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[[&quot;#ff0000&quot;,&quot;#ff0000&quot;,&quot;#ff0000&quot;]]</para>
+        /// </summary>
         [NameInMap("BackgroundColors")]
         [Validation(Required=false)]
         public List<List<string>> BackgroundColors { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[[&quot;type&quot;: &quot;path&quot;,&quot;link&quot;: &quot;<a href="https://www.dingtalk.com%22,%22text">https://www.dingtalk.com&quot;,&quot;text</a>&quot;: &quot;test&quot;]]</para>
+        /// </summary>
         [NameInMap("Hyperlinks")]
         [Validation(Required=false)]
         public List<List<UpdateRangeRequestHyperlinks>> Hyperlinks { get; set; }
         public class UpdateRangeRequestHyperlinks : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>path</para>
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="https://www.dingtalk.com">https://www.dingtalk.com</a></para>
+            /// </summary>
             [NameInMap("Link")]
             [Validation(Required=false)]
             public string Link { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("Text")]
             [Validation(Required=false)]
             public string Text { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>General</para>
+        /// </summary>
         [NameInMap("NumberFormat")]
         [Validation(Required=false)]
         public string NumberFormat { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A3:C3</para>
         /// </summary>
         [NameInMap("RangeAddress")]
         [Validation(Required=false)]
         public string RangeAddress { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sheet1</para>
         /// </summary>
         [NameInMap("SheetId")]
         [Validation(Required=false)]
@@ -53,18 +83,29 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public UpdateRangeRequestTenantContext TenantContext { get; set; }
         public class UpdateRangeRequestTenantContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]]</para>
+        /// </summary>
         [NameInMap("Values")]
         [Validation(Required=false)]
         public List<List<string>> Values { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>stxxxx</para>
         /// </summary>
         [NameInMap("WorkbookId")]
         [Validation(Required=false)]

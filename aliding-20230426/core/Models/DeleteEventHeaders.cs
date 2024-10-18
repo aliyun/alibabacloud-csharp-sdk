@@ -18,7 +18,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public DeleteEventHeadersAccountContext AccountContext { get; set; }
         public class DeleteEventHeadersAccountContext : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123456</para>
             /// </summary>
             [NameInMap("accountId")]
             [Validation(Required=false)]

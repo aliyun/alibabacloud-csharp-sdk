@@ -14,12 +14,19 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public List<InviteUsersRequestInviteeList> InviteeList { get; set; }
         public class InviteUsersRequestInviteeList : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>测试用户</para>
             /// </summary>
             [NameInMap("Nick")]
             [Validation(Required=false)]
             public string Nick { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>012345</para>
+            /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
@@ -30,6 +37,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public InviteUsersRequestTenantContext TenantContext { get; set; }
         public class InviteUsersRequestTenantContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>xxxxxx</para>
+            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
@@ -37,7 +48,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>61289fxxx</para>
         /// </summary>
         [NameInMap("conferenceId")]
         [Validation(Required=false)]

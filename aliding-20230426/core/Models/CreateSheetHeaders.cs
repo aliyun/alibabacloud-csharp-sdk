@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public CreateSheetHeadersAccountContext AccountContext { get; set; }
         public class CreateSheetHeadersAccountContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>012345</para>
+            /// </summary>
             [NameInMap("accountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }

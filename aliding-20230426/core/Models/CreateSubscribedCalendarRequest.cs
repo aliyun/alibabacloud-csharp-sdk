@@ -18,14 +18,14 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public List<string> Managers { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SubscribeScope")]
         [Validation(Required=false)]

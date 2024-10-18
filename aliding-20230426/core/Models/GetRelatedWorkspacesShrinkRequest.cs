@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class GetRelatedWorkspacesShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("IncludeRecent")]
         [Validation(Required=false)]
         public bool? IncludeRecent { get; set; }

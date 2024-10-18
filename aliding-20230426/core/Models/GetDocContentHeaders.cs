@@ -18,7 +18,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public GetDocContentHeadersAccountContext AccountContext { get; set; }
         public class GetDocContentHeadersAccountContext : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ba3a9b612345678d8fedf544ef69d19e</para>
             /// </summary>
             [NameInMap("accountId")]
             [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class SearchInnerGroupsRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }

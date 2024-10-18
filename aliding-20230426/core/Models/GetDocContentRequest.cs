@@ -10,12 +10,19 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class GetDocContentRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dentry_uuid</para>
         /// </summary>
         [NameInMap("DentryUuid")]
         [Validation(Required=false)]
         public string DentryUuid { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>markdown</para>
+        /// </summary>
         [NameInMap("TargetFormat")]
         [Validation(Required=false)]
         public string TargetFormat { get; set; }
@@ -24,6 +31,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public GetDocContentRequestTenantContext TenantContext { get; set; }
         public class GetDocContentRequestTenantContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>xxxxxx</para>
+            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
@@ -31,7 +42,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("userToken")]
         [Validation(Required=false)]

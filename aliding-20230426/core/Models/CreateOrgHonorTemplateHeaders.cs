@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public CreateOrgHonorTemplateHeadersAccountContext AccountContext { get; set; }
         public class CreateOrgHonorTemplateHeadersAccountContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>208579</para>
+            /// </summary>
             [NameInMap("accountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }

@@ -10,18 +10,28 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class GetRangeRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A3:C3</para>
         /// </summary>
         [NameInMap("RangeAddress")]
         [Validation(Required=false)]
         public string RangeAddress { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>values</para>
+        /// </summary>
         [NameInMap("Select")]
         [Validation(Required=false)]
         public string Select { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sheet1</para>
         /// </summary>
         [NameInMap("SheetId")]
         [Validation(Required=false)]
@@ -31,6 +41,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public GetRangeRequestTenantContext TenantContext { get; set; }
         public class GetRangeRequestTenantContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
@@ -38,7 +52,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>stxxxx</para>
         /// </summary>
         [NameInMap("WorkbookId")]
         [Validation(Required=false)]

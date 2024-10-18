@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class GetReportUnReadCountShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("Request")]
         [Validation(Required=false)]
         public string RequestShrink { get; set; }

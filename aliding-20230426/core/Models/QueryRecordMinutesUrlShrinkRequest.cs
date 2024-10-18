@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class QueryRecordMinutesUrlShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>minutes</para>
         /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1dddwrqrq</para>
         /// </summary>
         [NameInMap("ConferenceId")]
         [Validation(Required=false)]

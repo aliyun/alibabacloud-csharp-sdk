@@ -13,14 +13,26 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<SearchInnerGroupsResponseBodyGroupInfos> GroupInfos { get; set; }
         public class SearchInnerGroupsResponseBodyGroupInfos : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>@lAD*****</para>
+            /// </summary>
             [NameInMap("Icon")]
             [Validation(Required=false)]
             public string Icon { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("MemberAmount")]
             [Validation(Required=false)]
             public string MemberAmount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cid13*****==</para>
+            /// </summary>
             [NameInMap("OpenConversationId")]
             [Validation(Required=false)]
             public string OpenConversationId { get; set; }
@@ -31,14 +43,26 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
+        /// </summary>
         [NameInMap("vendorRequestId")]
         [Validation(Required=false)]
         public string VendorRequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dingtalk</para>
+        /// </summary>
         [NameInMap("vendorType")]
         [Validation(Required=false)]
         public string VendorType { get; set; }

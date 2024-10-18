@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public GetUserIdRequestTenantContext TenantContext { get; set; }
         public class GetUserIdRequestTenantContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>xxxxxx</para>
+            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
@@ -20,7 +24,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         }
 
         /// <summary>
-        /// unionId
+        /// <para>unionId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>****iE</para>
         /// </summary>
         [NameInMap("UnionId")]
         [Validation(Required=false)]

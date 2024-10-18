@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public CheckAlibabaStaffHeadersAccountContext AccountContext { get; set; }
         public class CheckAlibabaStaffHeadersAccountContext : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>012345</para>
+            /// </summary>
             [NameInMap("accountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }

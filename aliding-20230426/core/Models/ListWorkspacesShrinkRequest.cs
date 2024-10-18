@@ -9,18 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class ListWorkspacesShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123123</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>VIEW_TIME_DESC</para>
+        /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>qweqwe</para>
+        /// </summary>
         [NameInMap("TeamId")]
         [Validation(Required=false)]
         public string TeamId { get; set; }
@@ -29,6 +45,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string TenantContextShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("WithPermissionRole")]
         [Validation(Required=false)]
         public bool? WithPermissionRole { get; set; }

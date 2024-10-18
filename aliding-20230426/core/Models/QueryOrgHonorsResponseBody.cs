@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class QueryOrgHonorsResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>15</para>
+        /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -21,10 +25,18 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string HonorDesc { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>21658579</para>
+            /// </summary>
             [NameInMap("honorId")]
             [Validation(Required=false)]
             public long? HonorId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="https://xxxx.ali-cdn.com/jfejfi.jpg">https://xxxx.ali-cdn.com/jfejfi.jpg</a></para>
+            /// </summary>
             [NameInMap("honorImgUrl")]
             [Validation(Required=false)]
             public string HonorImgUrl { get; set; }
@@ -33,6 +45,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string HonorName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="https://xxxx.ali-cdn.com/jfejfi.jpg">https://xxxx.ali-cdn.com/jfejfi.jpg</a></para>
+            /// </summary>
             [NameInMap("honorPendantImgUrl")]
             [Validation(Required=false)]
             public string HonorPendantImgUrl { get; set; }
@@ -40,7 +56,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         }
 
         /// <summary>
-        /// requestId
+        /// <para>requestId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

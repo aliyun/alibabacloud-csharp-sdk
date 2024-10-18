@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class CancelScheduleConferenceShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2a489xxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("ScheduleConferenceId")]
         [Validation(Required=false)]
