@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
         /// </summary>
         [NameInMap("Skip")]
         [Validation(Required=false)]
-        public long? Skip { get; set; }
+        public int? Skip { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
