@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>IP address or domain name.</para>
+        /// <para>Modified IP address or domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>223.5.XX.XX</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string HealthTasksShrink { get; set; }
 
         /// <summary>
-        /// <para>Address name.</para>
+        /// <para>Modified address name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Address-1</para>

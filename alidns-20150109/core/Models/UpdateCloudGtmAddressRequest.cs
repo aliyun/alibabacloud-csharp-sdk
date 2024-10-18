@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>IP address or domain name.</para>
+        /// <para>Modified IP address or domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>223.5.XX.XX</para>
@@ -89,7 +89,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public List<UpdateCloudGtmAddressRequestHealthTasks> HealthTasks { get; set; }
         public class UpdateCloudGtmAddressRequestHealthTasks : TeaModel {
             /// <summary>
-            /// <para>The service port of the address on which health check tasks are performed. If the ping protocol is used for health checks, the configuration of the service port is not supported.</para>
+            /// <para>The target service port for health checks. When the Ping protocol is selected for health checks, configuration of the service port is not supported.</para>
+            /// <list type="bullet">
+            /// <item><description>If the input parameter is empty: Delete the currently configured port number;</description></item>
+            /// <item><description>If the input parameter is not empty: Update the port number based on the input parameter;</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -99,7 +103,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The ID of the health check template associated with the address.</para>
+            /// <para>ID of the health check template associated with the address. This parameter is required if a health check port is configured.</para>
+            /// <list type="bullet">
+            /// <item><description>If the input parameter is empty: Delete the currently configured detection template;</description></item>
+            /// <item><description>If the input parameter is not empty: Update the detection template based on the input parameter;</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>mtp-89518052425100**80</para>
@@ -111,7 +119,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>Address name.</para>
+        /// <para>Modified address name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Address-1</para>
