@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,24 +10,34 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
     public class CheckSmsVerifyCodeRequest : TeaModel {
         /// <summary>
-        /// The verification policy for uppercase and lowercase letters of the verification code. Valid values:
+        /// <para>The verification policy for uppercase and lowercase letters of the verification code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: The verification policy does not distinguish uppercase and lowercase letters.</description></item>
+        /// <item><description>2: The verification policy distinguishes uppercase and lowercase letters.</description></item>
+        /// </list>
         /// 
-        /// *   1: The verification policy does not distinguish uppercase and lowercase letters.
-        /// *   2: The verification policy distinguishes uppercase and lowercase letters.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CaseAuthPolicy")]
         [Validation(Required=false)]
         public long? CaseAuthPolicy { get; set; }
 
         /// <summary>
-        /// The country code of the phone number. Default value: 86.
+        /// <para>The country code of the phone number. Default value: 86.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>86</para>
         /// </summary>
         [NameInMap("CountryCode")]
         [Validation(Required=false)]
         public string CountryCode { get; set; }
 
         /// <summary>
-        /// The external ID.
+        /// <para>The external ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12123231</para>
         /// </summary>
         [NameInMap("OutId")]
         [Validation(Required=false)]
@@ -41,7 +48,11 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The phone number.
+        /// <para>The phone number.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>18653529399</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
@@ -56,14 +67,21 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The verification service name. If this parameter is not specified, the default service is used. The name can be up to 20 characters in length.
+        /// <para>The verification service name. If this parameter is not specified, the default service is used. The name can be up to 20 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Aliyun</para>
         /// </summary>
         [NameInMap("SchemeName")]
         [Validation(Required=false)]
         public string SchemeName { get; set; }
 
         /// <summary>
-        /// The verification code.
+        /// <para>The verification code.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1231</para>
         /// </summary>
         [NameInMap("VerifyCode")]
         [Validation(Required=false)]

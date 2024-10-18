@@ -22,7 +22,11 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The unified verification token that is returned by the client SDKs.
+        /// <para>The unified verification token that is returned by the client SDKs.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LD108enNdlsl*******sFLKCks1==</para>
         /// </summary>
         [NameInMap("VerifyToken")]
         [Validation(Required=false)]

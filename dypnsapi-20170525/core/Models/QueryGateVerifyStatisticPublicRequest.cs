@@ -10,29 +10,42 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
     public class QueryGateVerifyStatisticPublicRequest : TeaModel {
         /// <summary>
-        /// The verification method. Valid values:
+        /// <para>The verification method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: one-click logon</description></item>
+        /// <item><description><b>2</b>: phone number verification, including the verification of the phone number used in HTML5 pages</description></item>
+        /// <item><description><b>3</b>: SMS verification</description></item>
+        /// <item><description><b>4</b>: facial recognition</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **1**: one-click logon
-        /// *   **2**: phone number verification, including the verification of the phone number used in HTML5 pages
-        /// *   **3**: SMS verification
-        /// *   **4**: facial recognition
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("AuthenticationType")]
         [Validation(Required=false)]
         public int? AuthenticationType { get; set; }
 
         /// <summary>
-        /// The end date. Specify this parameter in the YYYYMMDD format. Example: 20220106.
+        /// <para>The end date. Specify this parameter in the YYYYMMDD format. Example: 20220106.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20220106</para>
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
         /// <summary>
-        /// The type of the operating system. Valid values:
+        /// <para>The type of the operating system. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Android</b></description></item>
+        /// <item><description><b>iOS</b></description></item>
+        /// </list>
         /// 
-        /// *   **Android**
-        /// *   **iOS**
+        /// <b>Example:</b>
+        /// <para>Android</para>
         /// </summary>
         [NameInMap("OsType")]
         [Validation(Required=false)]
@@ -47,14 +60,21 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The service code.
+        /// <para>The service code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FC100000038194004</para>
         /// </summary>
         [NameInMap("SceneCode")]
         [Validation(Required=false)]
         public string SceneCode { get; set; }
 
         /// <summary>
-        /// The start date. Specify this parameter in the YYYYMMDD format. Example: 20220101.
+        /// <para>The start date. Specify this parameter in the YYYYMMDD format. Example: 20220101.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20220101</para>
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]

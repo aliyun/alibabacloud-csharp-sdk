@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
     public class GetAuthorizationUrlRequest : TeaModel {
         /// <summary>
-        /// The authorization end date, which is in the yyyy-MM-dd format. This parameter is required for services of contract type.
+        /// <para>The authorization end date, which is in the yyyy-MM-dd format. This parameter is required for services of contract type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2020–12–28</para>
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
@@ -21,7 +24,11 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The phone number.
+        /// <para>The phone number.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1390000****</para>
         /// </summary>
         [NameInMap("PhoneNo")]
         [Validation(Required=false)]
@@ -36,7 +43,11 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the authorization scenario. You can view the ID of the authorization scenario on the **Authorization Scenario Management** page in the **Phone Number Verification Service console**.
+        /// <para>The ID of the authorization scenario. You can view the ID of the authorization scenario on the <b>Authorization Scenario Management</b> page in the <b>Phone Number Verification Service console</b>.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>234****</para>
         /// </summary>
         [NameInMap("SchemeId")]
         [Validation(Required=false)]

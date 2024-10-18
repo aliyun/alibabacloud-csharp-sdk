@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
     public class GetAuthTokenRequest : TeaModel {
         /// <summary>
-        /// The requested domain name.
+        /// <para>The requested domain name.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://www.aliyundoc.com">https://www.aliyundoc.com</a></para>
         /// </summary>
         [NameInMap("Origin")]
         [Validation(Required=false)]
@@ -33,7 +37,11 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         public string SceneCode { get; set; }
 
         /// <summary>
-        /// The URL of the requested web page.
+        /// <para>The URL of the requested web page.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://www.aliyundoc.com/">https://www.aliyundoc.com/</a></para>
         /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]

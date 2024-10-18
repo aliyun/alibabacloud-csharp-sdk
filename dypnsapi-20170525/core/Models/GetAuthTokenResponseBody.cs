@@ -10,49 +10,67 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
     public class GetAuthTokenResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// <list type="bullet">
+        /// <item><description>If OK is returned, the request is successful.</description></item>
+        /// <item><description>For more information about other error codes, see <a href="https://help.aliyun.com/document_detail/85198.html">API response codes</a>.</description></item>
+        /// </list>
         /// 
-        /// *   If OK is returned, the request is successful.
-        /// *   For more information about other error codes, see [API response codes](~~85198~~).
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8906582E-6722</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The response parameters.
+        /// <para>The response parameters.</para>
         /// </summary>
         [NameInMap("TokenInfo")]
         [Validation(Required=false)]
         public GetAuthTokenResponseBodyTokenInfo TokenInfo { get; set; }
         public class GetAuthTokenResponseBodyTokenInfo : TeaModel {
             /// <summary>
-            /// The business authentication token.
+            /// <para>The business authentication token.</para>
+            /// <remarks>
+            /// <para> AccessToken is valid for 10 minutes and can be used repeatedly within its validity period.</para>
+            /// </remarks>
             /// 
-            /// >  AccessToken is valid for 10 minutes and can be used repeatedly within its validity period.
+            /// <b>Example:</b>
+            /// <para>agag****</para>
             /// </summary>
             [NameInMap("AccessToken")]
             [Validation(Required=false)]
             public string AccessToken { get; set; }
 
             /// <summary>
-            /// The API authentication token.
+            /// <para>The API authentication token.</para>
+            /// <remarks>
+            /// <para> JwtToken is valid for 1 hour and can be used repeatedly within its validity period.</para>
+            /// </remarks>
             /// 
-            /// >  JwtToken is valid for 1 hour and can be used repeatedly within its validity period.
+            /// <b>Example:</b>
+            /// <para>aweghd****</para>
             /// </summary>
             [NameInMap("JwtToken")]
             [Validation(Required=false)]

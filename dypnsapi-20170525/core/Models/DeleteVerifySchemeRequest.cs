@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
     public class DeleteVerifySchemeRequest : TeaModel {
         /// <summary>
-        /// The user ID.
+        /// <para>The user ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12345678</para>
         /// </summary>
         [NameInMap("CustomerId")]
         [Validation(Required=false)]
@@ -29,7 +32,11 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The service code.
+        /// <para>The service code.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FC10000014164****</para>
         /// </summary>
         [NameInMap("SchemeCode")]
         [Validation(Required=false)]
