@@ -10,30 +10,41 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class ListGroupsRequest : TeaModel {
         /// <summary>
-        /// The name of the application group.
+        /// <para>The name of the application group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>k8s-test</para>
         /// </summary>
         [NameInMap("AppGroupName")]
         [Validation(Required=false)]
         public string AppGroupName { get; set; }
 
         /// <summary>
-        /// The namespace ID. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.
+        /// <para>The namespace ID. You can obtain the namespace ID on the <b>Namespace</b> page in the SchedulerX console.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1a72ecb1-b4cc-400a-a71b-20cdec9b****</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The source of the namespace. This parameter is required only for a special third party.
+        /// <para>The source of the namespace. This parameter is required only for a special third party.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>schedulerx</para>
         /// </summary>
         [NameInMap("NamespaceSource")]
         [Validation(Required=false)]
         public string NamespaceSource { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

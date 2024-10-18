@@ -9,64 +9,119 @@ using Tea;
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetWorkFlowResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public GetWorkFlowResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
+        public class GetWorkFlowResponseBodyAccessDeniedDetail : TeaModel {
+            [NameInMap("AuthAction")]
+            [Validation(Required=false)]
+            public string AuthAction { get; set; }
+
+            [NameInMap("AuthPrincipalDisplayName")]
+            [Validation(Required=false)]
+            public string AuthPrincipalDisplayName { get; set; }
+
+            [NameInMap("AuthPrincipalOwnerId")]
+            [Validation(Required=false)]
+            public string AuthPrincipalOwnerId { get; set; }
+
+            [NameInMap("AuthPrincipalType")]
+            [Validation(Required=false)]
+            public string AuthPrincipalType { get; set; }
+
+            [NameInMap("EncodedDiagnosticMessage")]
+            [Validation(Required=false)]
+            public string EncodedDiagnosticMessage { get; set; }
+
+            [NameInMap("NoPermissionType")]
+            [Validation(Required=false)]
+            public string NoPermissionType { get; set; }
+
+            [NameInMap("PolicyType")]
+            [Validation(Required=false)]
+            public string PolicyType { get; set; }
+
+        }
+
         /// <summary>
-        /// Error codes
+        /// <para>Error codes</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data of the workflow.
+        /// <para>The data of the workflow.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetWorkFlowResponseBodyData Data { get; set; }
         public class GetWorkFlowResponseBodyData : TeaModel {
             /// <summary>
-            /// The basic information of the workflow.
+            /// <para>The basic information of the workflow.</para>
             /// </summary>
             [NameInMap("WorkFlowInfo")]
             [Validation(Required=false)]
             public GetWorkFlowResponseBodyDataWorkFlowInfo WorkFlowInfo { get; set; }
             public class GetWorkFlowResponseBodyDataWorkFlowInfo : TeaModel {
                 /// <summary>
-                /// The description of the workflow.
+                /// <para>The description of the workflow.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>my first workflow</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The name of the workflow.
+                /// <para>The name of the workflow.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>workflow_111</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The status of the workflow.
+                /// <para>The status of the workflow.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Successful</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The time expression of the workflow.
+                /// <para>The time expression of the workflow.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0 0 2 * * ?</para>
                 /// </summary>
                 [NameInMap("TimeExpression")]
                 [Validation(Required=false)]
                 public string TimeExpression { get; set; }
 
                 /// <summary>
-                /// The time type of the workflow.
+                /// <para>The time type of the workflow.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cron</para>
                 /// </summary>
                 [NameInMap("TimeType")]
                 [Validation(Required=false)]
                 public string TimeType { get; set; }
 
                 /// <summary>
-                /// The ID of the workflow.
+                /// <para>The ID of the workflow.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1234xxx</para>
                 /// </summary>
                 [NameInMap("WorkflowId")]
                 [Validation(Required=false)]
@@ -75,28 +130,34 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             }
 
             /// <summary>
-            /// The node information of the workflow.
+            /// <para>The node information of the workflow.</para>
             /// </summary>
             [NameInMap("WorkFlowNodeInfo")]
             [Validation(Required=false)]
             public GetWorkFlowResponseBodyDataWorkFlowNodeInfo WorkFlowNodeInfo { get; set; }
             public class GetWorkFlowResponseBodyDataWorkFlowNodeInfo : TeaModel {
                 /// <summary>
-                /// The workflow edges.
+                /// <para>The workflow edges.</para>
                 /// </summary>
                 [NameInMap("Edges")]
                 [Validation(Required=false)]
                 public List<GetWorkFlowResponseBodyDataWorkFlowNodeInfoEdges> Edges { get; set; }
                 public class GetWorkFlowResponseBodyDataWorkFlowNodeInfoEdges : TeaModel {
                     /// <summary>
-                    /// The ID of the source job.
+                    /// <para>The ID of the source job.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>100</para>
                     /// </summary>
                     [NameInMap("Source")]
                     [Validation(Required=false)]
                     public long? Source { get; set; }
 
                     /// <summary>
-                    /// The ID of the object job.
+                    /// <para>The ID of the object job.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>200</para>
                     /// </summary>
                     [NameInMap("Target")]
                     [Validation(Required=false)]
@@ -105,28 +166,37 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 }
 
                 /// <summary>
-                /// The list of workflow nodes.
+                /// <para>The list of workflow nodes.</para>
                 /// </summary>
                 [NameInMap("Nodes")]
                 [Validation(Required=false)]
                 public List<GetWorkFlowResponseBodyDataWorkFlowNodeInfoNodes> Nodes { get; set; }
                 public class GetWorkFlowResponseBodyDataWorkFlowNodeInfoNodes : TeaModel {
                     /// <summary>
-                    /// The ID of the job.
+                    /// <para>The ID of the job.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>123456xxx</para>
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// The name of the job.
+                    /// <para>The name of the job.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>job_111</para>
                     /// </summary>
                     [NameInMap("Label")]
                     [Validation(Required=false)]
                     public string Label { get; set; }
 
                     /// <summary>
-                    /// The status of the job.
+                    /// <para>The status of the job.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
@@ -139,21 +209,30 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
-        /// Error message
+        /// <para>Error message</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>workflow is not existed</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>45678xxx</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result of the API call.
+        /// <para>The result of the API call.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

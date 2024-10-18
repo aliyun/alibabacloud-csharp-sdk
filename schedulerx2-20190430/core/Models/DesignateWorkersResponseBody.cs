@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class DesignateWorkersResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned error message.
+        /// <para>The returned error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>job is not existed</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>765xxx</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -9,64 +9,119 @@ using Tea;
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetWorkerListResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public GetWorkerListResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
+        public class GetWorkerListResponseBodyAccessDeniedDetail : TeaModel {
+            [NameInMap("AuthAction")]
+            [Validation(Required=false)]
+            public string AuthAction { get; set; }
+
+            [NameInMap("AuthPrincipalDisplayName")]
+            [Validation(Required=false)]
+            public string AuthPrincipalDisplayName { get; set; }
+
+            [NameInMap("AuthPrincipalOwnerId")]
+            [Validation(Required=false)]
+            public string AuthPrincipalOwnerId { get; set; }
+
+            [NameInMap("AuthPrincipalType")]
+            [Validation(Required=false)]
+            public string AuthPrincipalType { get; set; }
+
+            [NameInMap("EncodedDiagnosticMessage")]
+            [Validation(Required=false)]
+            public string EncodedDiagnosticMessage { get; set; }
+
+            [NameInMap("NoPermissionType")]
+            [Validation(Required=false)]
+            public string NoPermissionType { get; set; }
+
+            [NameInMap("PolicyType")]
+            [Validation(Required=false)]
+            public string PolicyType { get; set; }
+
+        }
+
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// <para>The HTTP status code that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The job information.
+        /// <para>The job information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetWorkerListResponseBodyData Data { get; set; }
         public class GetWorkerListResponseBodyData : TeaModel {
             /// <summary>
-            /// The worker information.
+            /// <para>The worker information.</para>
             /// </summary>
             [NameInMap("WorkerInfos")]
             [Validation(Required=false)]
             public List<GetWorkerListResponseBodyDataWorkerInfos> WorkerInfos { get; set; }
             public class GetWorkerListResponseBodyDataWorkerInfos : TeaModel {
                 /// <summary>
-                /// The IP address of the worker.
+                /// <para>The IP address of the worker.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>30.225.16.49</para>
                 /// </summary>
                 [NameInMap("Ip")]
                 [Validation(Required=false)]
                 public string Ip { get; set; }
 
                 /// <summary>
-                /// The label of the worker.
+                /// <para>The label of the worker.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>gray</para>
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
                 /// <summary>
-                /// The port number of the worker.
+                /// <para>The port number of the worker.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>60831</para>
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// The startup method of the worker.
+                /// <para>The startup method of the worker.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>springboot</para>
                 /// </summary>
                 [NameInMap("Starter")]
                 [Validation(Required=false)]
                 public string Starter { get; set; }
 
                 /// <summary>
-                /// The version of the worker.
+                /// <para>The version of the worker.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1.3.4</para>
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
                 public string Version { get; set; }
 
                 /// <summary>
-                /// The address of the worker. The address is in the format of ${worker_id}@${worker_ip}:${worker_port}.
+                /// <para>The address of the worker. The address is in the format of ${worker_id}@${worker_ip}:${worker_port}.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="mailto:030225016049_11734_25917@30.225.16.49">030225016049_11734_25917@30.225.16.49</a>:60831</para>
                 /// </summary>
                 [NameInMap("WorkerAddress")]
                 [Validation(Required=false)]
@@ -77,24 +132,34 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
-        /// The additional information that is returned.
+        /// <para>The additional information that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Cannot find product according to your domain.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4F68ABED-AC31-4412-9297-D9A8F0401108****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call is successful. Valid values:
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>false</b>: The call fails.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The call is successful.
-        /// *   **false**: The call fails.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

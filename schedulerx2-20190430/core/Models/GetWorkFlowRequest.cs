@@ -10,43 +10,54 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetWorkFlowRequest : TeaModel {
         /// <summary>
-        /// The ID of the application group.
+        /// <para>The ID of the application group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>hxm.test</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the namespace.
+        /// <para>The ID of the namespace.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>4a06d5ea-f576-4326-842c-fb14ea043d8d</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The source of the namespace.
+        /// <para>The source of the namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>source</para>
         /// </summary>
         [NameInMap("NamespaceSource")]
         [Validation(Required=false)]
         public string NamespaceSource { get; set; }
 
         /// <summary>
-        /// The region information.
+        /// <para>The region information.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>public</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the workflow.
+        /// <para>The ID of the workflow.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("WorkflowId")]
         [Validation(Required=false)]

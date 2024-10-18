@@ -9,43 +9,89 @@ using Tea;
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class ListNamespacesResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public ListNamespacesResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
+        public class ListNamespacesResponseBodyAccessDeniedDetail : TeaModel {
+            [NameInMap("AuthAction")]
+            [Validation(Required=false)]
+            public string AuthAction { get; set; }
+
+            [NameInMap("AuthPrincipalDisplayName")]
+            [Validation(Required=false)]
+            public string AuthPrincipalDisplayName { get; set; }
+
+            [NameInMap("AuthPrincipalOwnerId")]
+            [Validation(Required=false)]
+            public string AuthPrincipalOwnerId { get; set; }
+
+            [NameInMap("AuthPrincipalType")]
+            [Validation(Required=false)]
+            public string AuthPrincipalType { get; set; }
+
+            [NameInMap("EncodedDiagnosticMessage")]
+            [Validation(Required=false)]
+            public string EncodedDiagnosticMessage { get; set; }
+
+            [NameInMap("NoPermissionType")]
+            [Validation(Required=false)]
+            public string NoPermissionType { get; set; }
+
+            [NameInMap("PolicyType")]
+            [Validation(Required=false)]
+            public string PolicyType { get; set; }
+
+        }
+
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The information about the namespaces.
+        /// <para>The information about the namespaces.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListNamespacesResponseBodyData Data { get; set; }
         public class ListNamespacesResponseBodyData : TeaModel {
             /// <summary>
-            /// The namespaces and their details.
+            /// <para>The namespaces and their details.</para>
             /// </summary>
             [NameInMap("Namespaces")]
             [Validation(Required=false)]
             public List<ListNamespacesResponseBodyDataNamespaces> Namespaces { get; set; }
             public class ListNamespacesResponseBodyDataNamespaces : TeaModel {
                 /// <summary>
-                /// The description of the namespace.
+                /// <para>The description of the namespace.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The name of the namespace.
+                /// <para>The name of the namespace.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>doc</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The namespace ID.
+                /// <para>The namespace ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1a72ecb1-b4cc-400a-a71b-20cdec9b****</para>
                 /// </summary>
                 [NameInMap("UId")]
                 [Validation(Required=false)]
@@ -56,24 +102,34 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>message</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>71BCC0E3-64B2-4B63-A870-AFB64EBCB58C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,31 +10,44 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class BatchEnableJobsResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned additional information.
+        /// <para>The returned additional information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>message</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>71BCC0E3-64B2-4B63-A870-AFB64EBCB5A7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the jobs were enabled at a time. Valid values:
+        /// <para>Indicates whether the jobs were enabled at a time. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

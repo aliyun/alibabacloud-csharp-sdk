@@ -10,50 +10,64 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetJobInstanceRequest : TeaModel {
         /// <summary>
-        /// The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.
+        /// <para>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testSchedulerx.defaultGroup</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The job ID.
+        /// <para>The job ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>92583</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public long? JobId { get; set; }
 
         /// <summary>
-        /// The job instance ID.
+        /// <para>The job instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>11111111</para>
         /// </summary>
         [NameInMap("JobInstanceId")]
         [Validation(Required=false)]
         public long? JobInstanceId { get; set; }
 
         /// <summary>
-        /// The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+        /// <para>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The source of the namespace. This parameter is required only for a special third party.
+        /// <para>The source of the namespace. This parameter is required only for a special third party.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>schedulerx</para>
         /// </summary>
         [NameInMap("NamespaceSource")]
         [Validation(Required=false)]
         public string NamespaceSource { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

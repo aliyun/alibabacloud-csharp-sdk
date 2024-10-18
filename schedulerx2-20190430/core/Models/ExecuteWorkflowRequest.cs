@@ -10,48 +10,64 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class ExecuteWorkflowRequest : TeaModel {
         /// <summary>
-        /// The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.
+        /// <para>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testSchedulerx.defaultGroup</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The dynamic parameter of the workflow instance. The value of the parameter can be up to 1,000 bytes in length.
+        /// <para>The dynamic parameter of the workflow instance. The value of the parameter can be up to 1,000 bytes in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("InstanceParameters")]
         [Validation(Required=false)]
         public string InstanceParameters { get; set; }
 
         /// <summary>
-        /// The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+        /// <para>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The source of the namespace. This parameter is required only for a special third party.
+        /// <para>The source of the namespace. This parameter is required only for a special third party.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>schedulerx</para>
         /// </summary>
         [NameInMap("NamespaceSource")]
         [Validation(Required=false)]
         public string NamespaceSource { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The region information.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The workflow ID.
+        /// <para>The workflow ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>111</para>
         /// </summary>
         [NameInMap("WorkflowId")]
         [Validation(Required=false)]

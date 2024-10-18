@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class CreateRouteStrategyResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -26,24 +29,34 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
-        /// The additional information, including errors and tips.
+        /// <para>The additional information, including errors and tips.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>strategy name is null or empty.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4F68ABED-AC31-4412-9297-D9A8F0401108</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

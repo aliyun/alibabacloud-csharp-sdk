@@ -9,61 +9,119 @@ using Tea;
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class ListGroupsResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public ListGroupsResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
+        public class ListGroupsResponseBodyAccessDeniedDetail : TeaModel {
+            [NameInMap("AuthAction")]
+            [Validation(Required=false)]
+            public string AuthAction { get; set; }
+
+            [NameInMap("AuthPrincipalDisplayName")]
+            [Validation(Required=false)]
+            public string AuthPrincipalDisplayName { get; set; }
+
+            [NameInMap("AuthPrincipalOwnerId")]
+            [Validation(Required=false)]
+            public string AuthPrincipalOwnerId { get; set; }
+
+            [NameInMap("AuthPrincipalType")]
+            [Validation(Required=false)]
+            public string AuthPrincipalType { get; set; }
+
+            [NameInMap("EncodedDiagnosticMessage")]
+            [Validation(Required=false)]
+            public string EncodedDiagnosticMessage { get; set; }
+
+            [NameInMap("NoPermissionType")]
+            [Validation(Required=false)]
+            public string NoPermissionType { get; set; }
+
+            [NameInMap("PolicyType")]
+            [Validation(Required=false)]
+            public string PolicyType { get; set; }
+
+        }
+
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The information about the applications.
+        /// <para>The information about the applications.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListGroupsResponseBodyData Data { get; set; }
         public class ListGroupsResponseBodyData : TeaModel {
             /// <summary>
-            /// The applications and their details.
+            /// <para>The applications and their details.</para>
             /// </summary>
             [NameInMap("AppGroups")]
             [Validation(Required=false)]
             public List<ListGroupsResponseBodyDataAppGroups> AppGroups { get; set; }
             public class ListGroupsResponseBodyDataAppGroups : TeaModel {
                 /// <summary>
-                /// The application group ID.
+                /// <para>The application group ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("AppGroupId")]
                 [Validation(Required=false)]
                 public long? AppGroupId { get; set; }
 
                 /// <summary>
-                /// The AppKey for the application.
+                /// <para>The AppKey for the application.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>a3G77O6NZxq/lyo1NC****==</para>
                 /// </summary>
                 [NameInMap("AppKey")]
                 [Validation(Required=false)]
                 public string AppKey { get; set; }
 
                 /// <summary>
-                /// The name of the application.
+                /// <para>The name of the application.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>DocTest</para>
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
+                /// <summary>
+                /// <para>The application version. 1: Basic version, 2: Professional version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("AppVersion")]
                 [Validation(Required=false)]
                 public int? AppVersion { get; set; }
 
                 /// <summary>
-                /// The description of the application.
+                /// <para>The description of the application.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Test</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The application ID.
+                /// <para>The application ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>DocTest.Group</para>
                 /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
@@ -74,24 +132,34 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>message</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>71BCC0E3-64B2-4B63-A870-AFB64EBCB58A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
