@@ -2,6 +2,10 @@
 - Update API DescribePdnsRequestStatistic: add param Type.
 
 
+2024-10-18 Version: 3.5.7
+- Update API DescribePdnsRequestStatistic: add param Type.
+
+
 2024-09-27 Version: 3.5.6
 - Update API AddDomainRecord: update param Priority.
 - Update API CreatePdnsAppKey: add param Remark.
