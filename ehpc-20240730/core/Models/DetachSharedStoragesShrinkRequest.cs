@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class DetachSharedStoragesShrinkRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListClusters](https://help.aliyun.com/document_detail/87116.html) operation to query the cluster ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The information about mounted shared storage resources.
-        /// 
-        /// This parameter is required.
+        /// <para>The information about mounted shared storage resources.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SharedStorages")]
         [Validation(Required=false)]

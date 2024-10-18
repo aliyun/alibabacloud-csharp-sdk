@@ -10,28 +10,36 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class ListSharedStoragesRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListClusters](https://help.aliyun.com/document_detail/87116.html) operation to query the cluster ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the attached file system.
+        /// <para>The ID of the attached file system.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0bd504b0**</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// The type of the attached file system. Valid values:
+        /// <para>The type of the attached file system. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>nas</description></item>
+        /// <item><description>cpfs</description></item>
+        /// </list>
         /// 
-        /// *   nas
-        /// *   cpfs
+        /// <b>Example:</b>
+        /// <para>nas</para>
         /// </summary>
         [NameInMap("FileSystemType")]
         [Validation(Required=false)]

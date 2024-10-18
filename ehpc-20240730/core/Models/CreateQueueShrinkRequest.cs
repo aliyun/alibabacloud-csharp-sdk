@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class CreateQueueShrinkRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The configurations of the queue to be created.
+        /// <para>The configurations of the queue to be created.</para>
         /// </summary>
         [NameInMap("Queue")]
         [Validation(Required=false)]

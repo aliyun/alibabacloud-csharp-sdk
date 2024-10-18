@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class ListQueuesRequest : TeaModel {
+        /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The names of the queues that you want to query. You can specify up to eight names.</para>
+        /// </summary>
         [NameInMap("QueueNames")]
         [Validation(Required=false)]
         public List<string> QueueNames { get; set; }

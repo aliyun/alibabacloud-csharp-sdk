@@ -9,61 +9,135 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class DescribeAddonTemplateResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details of the addon template.</para>
+        /// </summary>
         [NameInMap("Addon")]
         [Validation(Required=false)]
         public DescribeAddonTemplateResponseBodyAddon Addon { get; set; }
         public class DescribeAddonTemplateResponseBodyAddon : TeaModel {
+            /// <summary>
+            /// <para>The addon description.</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <para>The addon icon.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/assets/icons/your_icon.svg</para>
+            /// </summary>
             [NameInMap("Icon")]
             [Validation(Required=false)]
             public string Icon { get; set; }
 
+            /// <summary>
+            /// <para>The addon label.</para>
+            /// </summary>
             [NameInMap("Label")]
             [Validation(Required=false)]
             public string Label { get; set; }
 
+            /// <summary>
+            /// <para>The date when the addon template was last updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2024-08-22 18:11:17</para>
+            /// </summary>
             [NameInMap("LastUpdate")]
             [Validation(Required=false)]
             public string LastUpdate { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>The addon name.</para>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Login</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The resource configurations of the addon.</para>
+            /// </summary>
             [NameInMap("ResourcesSpec")]
             [Validation(Required=false)]
             public DescribeAddonTemplateResponseBodyAddonResourcesSpec ResourcesSpec { get; set; }
             public class DescribeAddonTemplateResponseBodyAddonResourcesSpec : TeaModel {
+                /// <summary>
+                /// <para>The Elastic Compute Service (ECS) resource configurations of the addon.</para>
+                /// </summary>
                 [NameInMap("EcsResources")]
                 [Validation(Required=false)]
                 public List<AddonNodeTemplate> EcsResources { get; set; }
 
+                /// <summary>
+                /// <para>The Elastic IP Address (EIP) configurations of the service.</para>
+                /// </summary>
                 [NameInMap("EipResource")]
                 [Validation(Required=false)]
                 public DescribeAddonTemplateResponseBodyAddonResourcesSpecEipResource EipResource { get; set; }
                 public class DescribeAddonTemplateResponseBodyAddonResourcesSpecEipResource : TeaModel {
+                    /// <summary>
+                    /// <para>Indicates whether the EIP is automatically created.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>True</para>
+                    /// </summary>
                     [NameInMap("AutoCreate")]
                     [Validation(Required=false)]
                     public bool? AutoCreate { get; set; }
 
+                    /// <summary>
+                    /// <para>The maximum bandwidth of the EIP. Unit: Mbit/s.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>100</para>
+                    /// </summary>
                     [NameInMap("Bandwidth")]
                     [Validation(Required=false)]
                     public string Bandwidth { get; set; }
 
+                    /// <summary>
+                    /// <para>The EIP ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>eip-bp1jwtsuoiif2qf90****</para>
+                    /// </summary>
                     [NameInMap("EipInstanceId")]
                     [Validation(Required=false)]
                     public string EipInstanceId { get; set; }
 
+                    /// <summary>
+                    /// <para>The billing method of the EIP. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>PostPaid: pay-as-you-go.</description></item>
+                    /// <item><description>PrePaid: subscription.</description></item>
+                    /// </list>
+                    /// <para>Default value: PostPaid</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>PostPaid</para>
+                    /// </summary>
                     [NameInMap("InstanceChargeType")]
                     [Validation(Required=false)]
                     public string InstanceChargeType { get; set; }
 
+                    /// <summary>
+                    /// <para>The metering method of the EIP. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>PayByBandwidth: pay by bandwidth.</description></item>
+                    /// <item><description>PayByTraffic: pay by data transfer.</description></item>
+                    /// </list>
+                    /// <para>Valid values of N: 1 to 10.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>PayByTraffic</para>
+                    /// </summary>
                     [NameInMap("InternetChargeType")]
                     [Validation(Required=false)]
                     public string InternetChargeType { get; set; }
@@ -72,38 +146,62 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 
             }
 
+            /// <summary>
+            /// <para>The addon configurations.</para>
+            /// </summary>
             [NameInMap("ServicesSpec")]
             [Validation(Required=false)]
             public List<DescribeAddonTemplateResponseBodyAddonServicesSpec> ServicesSpec { get; set; }
             public class DescribeAddonTemplateResponseBodyAddonServicesSpec : TeaModel {
+                /// <summary>
+                /// <para>The parameter configurations of the service.</para>
+                /// </summary>
                 [NameInMap("InputParams")]
                 [Validation(Required=false)]
                 public List<DescribeAddonTemplateResponseBodyAddonServicesSpecInputParams> InputParams { get; set; }
                 public class DescribeAddonTemplateResponseBodyAddonServicesSpecInputParams : TeaModel {
+                    /// <summary>
+                    /// <para>The help information of the parameter.</para>
+                    /// </summary>
                     [NameInMap("HelpText")]
                     [Validation(Required=false)]
                     public string HelpText { get; set; }
 
+                    /// <summary>
+                    /// <para>The parameter label.</para>
+                    /// </summary>
                     [NameInMap("Label")]
                     [Validation(Required=false)]
                     public string Label { get; set; }
 
                     /// <summary>
-                    /// This parameter is required.
+                    /// <para>The parameter name.</para>
+                    /// <para>This parameter is required.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>MYSQL_HOME</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// This parameter is required.
+                    /// <para>The parameter type.</para>
+                    /// <para>This parameter is required.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>String</para>
                     /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// This parameter is required.
+                    /// <para>The parameter value.</para>
+                    /// <para>This parameter is required.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>usr/local/mysql</para>
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
@@ -111,26 +209,46 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 
                 }
 
+                /// <summary>
+                /// <para>The security group configurations of the service.</para>
+                /// </summary>
                 [NameInMap("NetworkACL")]
                 [Validation(Required=false)]
                 public List<DescribeAddonTemplateResponseBodyAddonServicesSpecNetworkACL> NetworkACL { get; set; }
                 public class DescribeAddonTemplateResponseBodyAddonServicesSpecNetworkACL : TeaModel {
                     /// <summary>
-                    /// This parameter is required.
+                    /// <para>The protocol type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>TCP</b>: forwards TCP packets.</description></item>
+                    /// <item><description><b>UDP</b>: forwards UDP packets.</description></item>
+                    /// <item><description><b>Any</b>: forwards all packets.</description></item>
+                    /// </list>
+                    /// <para>This parameter is required.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>TCP</para>
                     /// </summary>
                     [NameInMap("IpProtocol")]
                     [Validation(Required=false)]
                     public string IpProtocol { get; set; }
 
                     /// <summary>
-                    /// This parameter is required.
+                    /// <para>The port number.</para>
+                    /// <para>This parameter is required.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3306</para>
                     /// </summary>
                     [NameInMap("Port")]
                     [Validation(Required=false)]
                     public float? Port { get; set; }
 
                     /// <summary>
-                    /// This parameter is required.
+                    /// <para>The source CIDR block.</para>
+                    /// <para>This parameter is required.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>172.16.0.0/12</para>
                     /// </summary>
                     [NameInMap("SourceCidrIp")]
                     [Validation(Required=false)]
@@ -138,16 +256,32 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 
                 }
 
+                /// <summary>
+                /// <para>The service access type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>URL</para>
+                /// </summary>
                 [NameInMap("ServiceAccessType")]
                 [Validation(Required=false)]
                 public string ServiceAccessType { get; set; }
 
+                /// <summary>
+                /// <para>The service access URL.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://47.96.xx.xx:12008">https://47.96.xx.xx:12008</a></para>
+                /// </summary>
                 [NameInMap("ServiceAccessUrl")]
                 [Validation(Required=false)]
                 public string ServiceAccessUrl { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>The service name.</para>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Web Portal</para>
                 /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
@@ -156,7 +290,11 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>The addon version.</para>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.0</para>
             /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
@@ -164,18 +302,42 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 
         }
 
+        /// <summary>
+        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
+        /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE7****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

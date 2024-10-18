@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class GetAddonRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The addon ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Login-1.0-W4g****</para>
         /// </summary>
         [NameInMap("AddonId")]
         [Validation(Required=false)]
         public string AddonId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

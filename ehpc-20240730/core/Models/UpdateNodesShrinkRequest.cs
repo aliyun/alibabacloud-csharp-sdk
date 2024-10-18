@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class UpdateNodesShrinkRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The information about the compute nodes that you want to update.
+        /// <para>The information about the compute nodes that you want to update.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]

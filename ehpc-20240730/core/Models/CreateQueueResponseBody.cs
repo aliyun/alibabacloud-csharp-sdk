@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class CreateQueueResponseBody : TeaModel {
         /// <summary>
-        /// The name of the created queue.
+        /// <para>The name of the created queue.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

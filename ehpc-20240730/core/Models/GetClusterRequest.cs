@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class GetClusterRequest : TeaModel {
+        /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }

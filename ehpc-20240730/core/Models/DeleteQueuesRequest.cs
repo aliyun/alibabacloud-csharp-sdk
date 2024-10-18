@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class DeleteQueuesRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The queues that you want to delete.
+        /// <para>The queues that you want to delete.</para>
         /// </summary>
         [NameInMap("QueueNames")]
         [Validation(Required=false)]

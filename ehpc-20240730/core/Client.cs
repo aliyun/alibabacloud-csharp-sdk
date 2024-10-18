@@ -37,13 +37,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 挂载共享存储
-         *
-         * @param tmpReq AttachSharedStoragesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AttachSharedStoragesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attaches shared storage to an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AttachSharedStoragesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachSharedStoragesResponse
+        /// </returns>
         public AttachSharedStoragesResponse AttachSharedStoragesWithOptions(AttachSharedStoragesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -81,13 +89,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<AttachSharedStoragesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 挂载共享存储
-         *
-         * @param tmpReq AttachSharedStoragesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AttachSharedStoragesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attaches shared storage to an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AttachSharedStoragesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachSharedStoragesResponse
+        /// </returns>
         public async Task<AttachSharedStoragesResponse> AttachSharedStoragesWithOptionsAsync(AttachSharedStoragesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -125,37 +141,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<AttachSharedStoragesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 挂载共享存储
-         *
-         * @param request AttachSharedStoragesRequest
-         * @return AttachSharedStoragesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attaches shared storage to an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachSharedStoragesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachSharedStoragesResponse
+        /// </returns>
         public AttachSharedStoragesResponse AttachSharedStorages(AttachSharedStoragesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AttachSharedStoragesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 挂载共享存储
-         *
-         * @param request AttachSharedStoragesRequest
-         * @return AttachSharedStoragesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attaches shared storage to an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachSharedStoragesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachSharedStoragesResponse
+        /// </returns>
         public async Task<AttachSharedStoragesResponse> AttachSharedStoragesAsync(AttachSharedStoragesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AttachSharedStoragesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建一个按量付费或者预付费（包年包月） 集群	
-         *
-         * @param tmpReq CreateClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个按量付费或者预付费（包年包月） 集群	</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateClusterResponse
+        /// </returns>
         public CreateClusterResponse CreateClusterWithOptions(CreateClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -297,13 +333,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<CreateClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建一个按量付费或者预付费（包年包月） 集群	
-         *
-         * @param tmpReq CreateClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个按量付费或者预付费（包年包月） 集群	</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateClusterResponse
+        /// </returns>
         public async Task<CreateClusterResponse> CreateClusterWithOptionsAsync(CreateClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -445,37 +489,230 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<CreateClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建一个按量付费或者预付费（包年包月） 集群	
-         *
-         * @param request CreateClusterRequest
-         * @return CreateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个按量付费或者预付费（包年包月） 集群	</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateClusterResponse
+        /// </returns>
         public CreateClusterResponse CreateCluster(CreateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateClusterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建一个按量付费或者预付费（包年包月） 集群	
-         *
-         * @param request CreateClusterRequest
-         * @return CreateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个按量付费或者预付费（包年包月） 集群	</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateClusterResponse
+        /// </returns>
         public async Task<CreateClusterResponse> CreateClusterAsync(CreateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateClusterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 集群扩容节点
-         *
-         * @param tmpReq CreateNodesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateNodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a job for a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of E-HPC.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateJobResponse
+        /// </returns>
+        public CreateJobResponse CreateJobWithOptions(CreateJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateJobShrinkRequest request = new CreateJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobSpec))
+            {
+                request.JobSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobSpec, "JobSpec", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                query["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSpecShrink))
+            {
+                query["JobSpec"] = request.JobSpecShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateJob",
+                Version = "2024-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a job for a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of E-HPC.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateJobResponse
+        /// </returns>
+        public async Task<CreateJobResponse> CreateJobWithOptionsAsync(CreateJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateJobShrinkRequest request = new CreateJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobSpec))
+            {
+                request.JobSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobSpec, "JobSpec", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                query["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSpecShrink))
+            {
+                query["JobSpec"] = request.JobSpecShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateJob",
+                Version = "2024-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a job for a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of E-HPC.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateJobResponse
+        /// </returns>
+        public CreateJobResponse CreateJob(CreateJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a job for a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of E-HPC.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateJobResponse
+        /// </returns>
+        public async Task<CreateJobResponse> CreateJobAsync(CreateJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates compute nodes for an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateNodesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNodesResponse
+        /// </returns>
         public CreateNodesResponse CreateNodesWithOptions(CreateNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -545,13 +782,26 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<CreateNodesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 集群扩容节点
-         *
-         * @param tmpReq CreateNodesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateNodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates compute nodes for an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateNodesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNodesResponse
+        /// </returns>
         public async Task<CreateNodesResponse> CreateNodesWithOptionsAsync(CreateNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -621,37 +871,67 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<CreateNodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 集群扩容节点
-         *
-         * @param request CreateNodesRequest
-         * @return CreateNodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates compute nodes for an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNodesResponse
+        /// </returns>
         public CreateNodesResponse CreateNodes(CreateNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateNodesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 集群扩容节点
-         *
-         * @param request CreateNodesRequest
-         * @return CreateNodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates compute nodes for an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNodesResponse
+        /// </returns>
         public async Task<CreateNodesResponse> CreateNodesAsync(CreateNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateNodesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a queue for an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @param tmpReq CreateQueueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateQueueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a queue for an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateQueueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQueueResponse
+        /// </returns>
         public CreateQueueResponse CreateQueueWithOptions(CreateQueueRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -689,13 +969,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<CreateQueueResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a queue for an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @param tmpReq CreateQueueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateQueueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a queue for an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateQueueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQueueResponse
+        /// </returns>
         public async Task<CreateQueueResponse> CreateQueueWithOptionsAsync(CreateQueueRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -733,37 +1021,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<CreateQueueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a queue for an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @param request CreateQueueRequest
-         * @return CreateQueueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a queue for an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateQueueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQueueResponse
+        /// </returns>
         public CreateQueueResponse CreateQueue(CreateQueueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateQueueWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a queue for an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @param request CreateQueueRequest
-         * @return CreateQueueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a queue for an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateQueueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQueueResponse
+        /// </returns>
         public async Task<CreateQueueResponse> CreateQueueAsync(CreateQueueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateQueueWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建集群用户
-         *
-         * @param tmpReq CreateUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds users to an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUsersResponse
+        /// </returns>
         public CreateUsersResponse CreateUsersWithOptions(CreateUsersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -801,13 +1109,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<CreateUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建集群用户
-         *
-         * @param tmpReq CreateUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds users to an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUsersResponse
+        /// </returns>
         public async Task<CreateUsersResponse> CreateUsersWithOptionsAsync(CreateUsersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -845,37 +1161,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<CreateUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建集群用户
-         *
-         * @param request CreateUsersRequest
-         * @return CreateUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds users to an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUsersResponse
+        /// </returns>
         public CreateUsersResponse CreateUsers(CreateUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateUsersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建集群用户
-         *
-         * @param request CreateUsersRequest
-         * @return CreateUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds users to an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUsersResponse
+        /// </returns>
         public async Task<CreateUsersResponse> CreateUsersAsync(CreateUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateUsersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Releases an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @param request DeleteClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteClusterResponse
+        /// </returns>
         public DeleteClusterResponse DeleteClusterWithOptions(DeleteClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -903,13 +1239,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<DeleteClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Releases an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @param request DeleteClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteClusterResponse
+        /// </returns>
         public async Task<DeleteClusterResponse> DeleteClusterWithOptionsAsync(DeleteClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -937,144 +1281,63 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<DeleteClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Releases an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @param request DeleteClusterRequest
-         * @return DeleteClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteClusterResponse
+        /// </returns>
         public DeleteClusterResponse DeleteCluster(DeleteClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteClusterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Releases an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @param request DeleteClusterRequest
-         * @return DeleteClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteClusterResponse
+        /// </returns>
         public async Task<DeleteClusterResponse> DeleteClusterAsync(DeleteClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteClusterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除作业
-         *
-         * @param tmpReq DeleteJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteJobsResponse
-         */
-        public DeleteJobsResponse DeleteJobsWithOptions(DeleteJobsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            DeleteJobsShrinkRequest request = new DeleteJobsShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobSpec))
-            {
-                request.JobSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobSpec, "JobSpec", "json");
-            }
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSpecShrink))
-            {
-                query["JobSpec"] = request.JobSpecShrink;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteJobs",
-                Version = "2024-07-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeleteJobsResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary 删除作业
-         *
-         * @param tmpReq DeleteJobsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteJobsResponse
-         */
-        public async Task<DeleteJobsResponse> DeleteJobsWithOptionsAsync(DeleteJobsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            DeleteJobsShrinkRequest request = new DeleteJobsShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobSpec))
-            {
-                request.JobSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobSpec, "JobSpec", "json");
-            }
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSpecShrink))
-            {
-                query["JobSpec"] = request.JobSpecShrink;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteJobs",
-                Version = "2024-07-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeleteJobsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary 删除作业
-         *
-         * @param request DeleteJobsRequest
-         * @return DeleteJobsResponse
-         */
-        public DeleteJobsResponse DeleteJobs(DeleteJobsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DeleteJobsWithOptions(request, runtime);
-        }
-
-        /**
-         * @summary 删除作业
-         *
-         * @param request DeleteJobsRequest
-         * @return DeleteJobsResponse
-         */
-        public async Task<DeleteJobsResponse> DeleteJobsAsync(DeleteJobsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DeleteJobsWithOptionsAsync(request, runtime);
-        }
-
-        /**
-         * @summary Deletes compute nodes from an Enterprise High Performance Computing (E-HPC) cluster at a time.
-         *
-         * @description ## [](#)Usage notes
-         * Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.
-         *
-         * @param tmpReq DeleteNodesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteNodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes compute nodes from an Enterprise High Performance Computing (E-HPC) cluster at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteNodesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNodesResponse
+        /// </returns>
         public DeleteNodesResponse DeleteNodesWithOptions(DeleteNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1112,16 +1375,27 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<DeleteNodesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes compute nodes from an Enterprise High Performance Computing (E-HPC) cluster at a time.
-         *
-         * @description ## [](#)Usage notes
-         * Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.
-         *
-         * @param tmpReq DeleteNodesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteNodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes compute nodes from an Enterprise High Performance Computing (E-HPC) cluster at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteNodesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNodesResponse
+        /// </returns>
         public async Task<DeleteNodesResponse> DeleteNodesWithOptionsAsync(DeleteNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1159,46 +1433,75 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<DeleteNodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes compute nodes from an Enterprise High Performance Computing (E-HPC) cluster at a time.
-         *
-         * @description ## [](#)Usage notes
-         * Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.
-         *
-         * @param request DeleteNodesRequest
-         * @return DeleteNodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes compute nodes from an Enterprise High Performance Computing (E-HPC) cluster at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNodesResponse
+        /// </returns>
         public DeleteNodesResponse DeleteNodes(DeleteNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteNodesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes compute nodes from an Enterprise High Performance Computing (E-HPC) cluster at a time.
-         *
-         * @description ## [](#)Usage notes
-         * Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.
-         *
-         * @param request DeleteNodesRequest
-         * @return DeleteNodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes compute nodes from an Enterprise High Performance Computing (E-HPC) cluster at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNodesResponse
+        /// </returns>
         public async Task<DeleteNodesResponse> DeleteNodesAsync(DeleteNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteNodesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes queues from an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @description ## [](#)Usage notes
-         * Before you delete a queue, you must delete all compute nodes in the queue.
-         *
-         * @param tmpReq DeleteQueuesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteQueuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes queues from an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Before you delete a queue, you must delete all compute nodes in the queue.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteQueuesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQueuesResponse
+        /// </returns>
         public DeleteQueuesResponse DeleteQueuesWithOptions(DeleteQueuesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1236,16 +1539,27 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<DeleteQueuesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes queues from an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @description ## [](#)Usage notes
-         * Before you delete a queue, you must delete all compute nodes in the queue.
-         *
-         * @param tmpReq DeleteQueuesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteQueuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes queues from an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Before you delete a queue, you must delete all compute nodes in the queue.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteQueuesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQueuesResponse
+        /// </returns>
         public async Task<DeleteQueuesResponse> DeleteQueuesWithOptionsAsync(DeleteQueuesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1283,43 +1597,69 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<DeleteQueuesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes queues from an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @description ## [](#)Usage notes
-         * Before you delete a queue, you must delete all compute nodes in the queue.
-         *
-         * @param request DeleteQueuesRequest
-         * @return DeleteQueuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes queues from an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Before you delete a queue, you must delete all compute nodes in the queue.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteQueuesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQueuesResponse
+        /// </returns>
         public DeleteQueuesResponse DeleteQueues(DeleteQueuesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteQueuesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes queues from an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @description ## [](#)Usage notes
-         * Before you delete a queue, you must delete all compute nodes in the queue.
-         *
-         * @param request DeleteQueuesRequest
-         * @return DeleteQueuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes queues from an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Before you delete a queue, you must delete all compute nodes in the queue.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteQueuesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQueuesResponse
+        /// </returns>
         public async Task<DeleteQueuesResponse> DeleteQueuesAsync(DeleteQueuesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteQueuesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes users from a cluster.
-         *
-         * @param tmpReq DeleteUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes users from a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUsersResponse
+        /// </returns>
         public DeleteUsersResponse DeleteUsersWithOptions(DeleteUsersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1349,13 +1689,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<DeleteUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes users from a cluster.
-         *
-         * @param tmpReq DeleteUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes users from a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUsersResponse
+        /// </returns>
         public async Task<DeleteUsersResponse> DeleteUsersWithOptionsAsync(DeleteUsersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1385,37 +1733,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<DeleteUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes users from a cluster.
-         *
-         * @param request DeleteUsersRequest
-         * @return DeleteUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes users from a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUsersResponse
+        /// </returns>
         public DeleteUsersResponse DeleteUsers(DeleteUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteUsersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes users from a cluster.
-         *
-         * @param request DeleteUsersRequest
-         * @return DeleteUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes users from a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUsersResponse
+        /// </returns>
         public async Task<DeleteUsersResponse> DeleteUsersAsync(DeleteUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteUsersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询Add-on服务组件模板详情。
-         *
-         * @param request DescribeAddonTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAddonTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an addon template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAddonTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAddonTemplateResponse
+        /// </returns>
         public DescribeAddonTemplateResponse DescribeAddonTemplateWithOptions(DescribeAddonTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1463,13 +1831,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<DescribeAddonTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询Add-on服务组件模板详情。
-         *
-         * @param request DescribeAddonTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAddonTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an addon template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAddonTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAddonTemplateResponse
+        /// </returns>
         public async Task<DescribeAddonTemplateResponse> DescribeAddonTemplateWithOptionsAsync(DescribeAddonTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1517,37 +1893,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<DescribeAddonTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询Add-on服务组件模板详情。
-         *
-         * @param request DescribeAddonTemplateRequest
-         * @return DescribeAddonTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an addon template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAddonTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAddonTemplateResponse
+        /// </returns>
         public DescribeAddonTemplateResponse DescribeAddonTemplate(DescribeAddonTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAddonTemplateWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询Add-on服务组件模板详情。
-         *
-         * @param request DescribeAddonTemplateRequest
-         * @return DescribeAddonTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an addon template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAddonTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAddonTemplateResponse
+        /// </returns>
         public async Task<DescribeAddonTemplateResponse> DescribeAddonTemplateAsync(DescribeAddonTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAddonTemplateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Unmounts shared storage from the mount directory of a cluster.
-         *
-         * @param tmpReq DetachSharedStoragesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetachSharedStoragesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unmounts shared storage from the mount directory of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DetachSharedStoragesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachSharedStoragesResponse
+        /// </returns>
         public DetachSharedStoragesResponse DetachSharedStoragesWithOptions(DetachSharedStoragesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1585,13 +1981,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<DetachSharedStoragesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Unmounts shared storage from the mount directory of a cluster.
-         *
-         * @param tmpReq DetachSharedStoragesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetachSharedStoragesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unmounts shared storage from the mount directory of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DetachSharedStoragesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachSharedStoragesResponse
+        /// </returns>
         public async Task<DetachSharedStoragesResponse> DetachSharedStoragesWithOptionsAsync(DetachSharedStoragesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1629,37 +2033,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<DetachSharedStoragesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Unmounts shared storage from the mount directory of a cluster.
-         *
-         * @param request DetachSharedStoragesRequest
-         * @return DetachSharedStoragesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unmounts shared storage from the mount directory of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachSharedStoragesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachSharedStoragesResponse
+        /// </returns>
         public DetachSharedStoragesResponse DetachSharedStorages(DetachSharedStoragesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachSharedStoragesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Unmounts shared storage from the mount directory of a cluster.
-         *
-         * @param request DetachSharedStoragesRequest
-         * @return DetachSharedStoragesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unmounts shared storage from the mount directory of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachSharedStoragesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachSharedStoragesResponse
+        /// </returns>
         public async Task<DetachSharedStoragesResponse> DetachSharedStoragesAsync(DetachSharedStoragesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachSharedStoragesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查看已安装的Add-on服务组件详情。
-         *
-         * @param request GetAddonRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAddonResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an installed addon.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAddonRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAddonResponse
+        /// </returns>
         public GetAddonResponse GetAddonWithOptions(GetAddonRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1691,13 +2115,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<GetAddonResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查看已安装的Add-on服务组件详情。
-         *
-         * @param request GetAddonRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAddonResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an installed addon.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAddonRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAddonResponse
+        /// </returns>
         public async Task<GetAddonResponse> GetAddonWithOptionsAsync(GetAddonRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1729,37 +2161,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<GetAddonResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查看已安装的Add-on服务组件详情。
-         *
-         * @param request GetAddonRequest
-         * @return GetAddonResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an installed addon.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAddonRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAddonResponse
+        /// </returns>
         public GetAddonResponse GetAddon(GetAddonRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAddonWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查看已安装的Add-on服务组件详情。
-         *
-         * @param request GetAddonRequest
-         * @return GetAddonResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an installed addon.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAddonRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAddonResponse
+        /// </returns>
         public async Task<GetAddonResponse> GetAddonAsync(GetAddonRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAddonWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询单个E-HPC集群的详情信息。
-         *
-         * @param request GetClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClusterResponse
+        /// </returns>
         public GetClusterResponse GetClusterWithOptions(GetClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1787,13 +2239,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<GetClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询单个E-HPC集群的详情信息。
-         *
-         * @param request GetClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClusterResponse
+        /// </returns>
         public async Task<GetClusterResponse> GetClusterWithOptionsAsync(GetClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1821,37 +2281,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<GetClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询单个E-HPC集群的详情信息。
-         *
-         * @param request GetClusterRequest
-         * @return GetClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClusterResponse
+        /// </returns>
         public GetClusterResponse GetCluster(GetClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetClusterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询单个E-HPC集群的详情信息。
-         *
-         * @param request GetClusterRequest
-         * @return GetClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClusterResponse
+        /// </returns>
         public async Task<GetClusterResponse> GetClusterAsync(GetClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetClusterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询集群通用日志详细信息
-         *
-         * @param request GetCommonLogDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetCommonLogDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query logs based on a request ID. Logs for specific actions can be queried thanks to an Action-Stage-Method three-layer log splitting structure.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCommonLogDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCommonLogDetailResponse
+        /// </returns>
         public GetCommonLogDetailResponse GetCommonLogDetailWithOptions(GetCommonLogDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1891,13 +2371,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<GetCommonLogDetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询集群通用日志详细信息
-         *
-         * @param request GetCommonLogDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetCommonLogDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query logs based on a request ID. Logs for specific actions can be queried thanks to an Action-Stage-Method three-layer log splitting structure.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCommonLogDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCommonLogDetailResponse
+        /// </returns>
         public async Task<GetCommonLogDetailResponse> GetCommonLogDetailWithOptionsAsync(GetCommonLogDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1937,37 +2425,361 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<GetCommonLogDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询集群通用日志详细信息
-         *
-         * @param request GetCommonLogDetailRequest
-         * @return GetCommonLogDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query logs based on a request ID. Logs for specific actions can be queried thanks to an Action-Stage-Method three-layer log splitting structure.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCommonLogDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCommonLogDetailResponse
+        /// </returns>
         public GetCommonLogDetailResponse GetCommonLogDetail(GetCommonLogDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetCommonLogDetailWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询集群通用日志详细信息
-         *
-         * @param request GetCommonLogDetailRequest
-         * @return GetCommonLogDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query logs based on a request ID. Logs for specific actions can be queried thanks to an Action-Stage-Method three-layer log splitting structure.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCommonLogDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCommonLogDetailResponse
+        /// </returns>
         public async Task<GetCommonLogDetailResponse> GetCommonLogDetailAsync(GetCommonLogDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetCommonLogDetailWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询集群的队列配置信息
-         *
-         * @param request GetQueueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetQueueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取作业详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobResponse
+        /// </returns>
+        public GetJobResponse GetJobWithOptions(GetJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJob",
+                Version = "2024-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取作业详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobResponse
+        /// </returns>
+        public async Task<GetJobResponse> GetJobWithOptionsAsync(GetJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJob",
+                Version = "2024-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取作业详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobResponse
+        /// </returns>
+        public GetJobResponse GetJob(GetJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取作业详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobResponse
+        /// </returns>
+        public async Task<GetJobResponse> GetJobAsync(GetJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the output logs of a job, including standard output logs and error output logs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Currently, only Slurm and PBS Pro schedulers for Standard Edition clusters are supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetJobLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobLogResponse
+        /// </returns>
+        public GetJobLogResponse GetJobLogWithOptions(GetJobLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogType))
+            {
+                query["LogType"] = request.LogType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["Offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["Size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobLog",
+                Version = "2024-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobLogResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the output logs of a job, including standard output logs and error output logs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Currently, only Slurm and PBS Pro schedulers for Standard Edition clusters are supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetJobLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobLogResponse
+        /// </returns>
+        public async Task<GetJobLogResponse> GetJobLogWithOptionsAsync(GetJobLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogType))
+            {
+                query["LogType"] = request.LogType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["Offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["Size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobLog",
+                Version = "2024-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobLogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the output logs of a job, including standard output logs and error output logs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Currently, only Slurm and PBS Pro schedulers for Standard Edition clusters are supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetJobLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobLogResponse
+        /// </returns>
+        public GetJobLogResponse GetJobLog(GetJobLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetJobLogWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the output logs of a job, including standard output logs and error output logs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Currently, only Slurm and PBS Pro schedulers for Standard Edition clusters are supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetJobLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobLogResponse
+        /// </returns>
+        public async Task<GetJobLogResponse> GetJobLogAsync(GetJobLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetJobLogWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a queue in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQueueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQueueResponse
+        /// </returns>
         public GetQueueResponse GetQueueWithOptions(GetQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1999,13 +2811,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<GetQueueResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询集群的队列配置信息
-         *
-         * @param request GetQueueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetQueueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a queue in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQueueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQueueResponse
+        /// </returns>
         public async Task<GetQueueResponse> GetQueueWithOptionsAsync(GetQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2037,37 +2857,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<GetQueueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询集群的队列配置信息
-         *
-         * @param request GetQueueRequest
-         * @return GetQueueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a queue in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQueueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQueueResponse
+        /// </returns>
         public GetQueueResponse GetQueue(GetQueueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetQueueWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询集群的队列配置信息
-         *
-         * @param request GetQueueRequest
-         * @return GetQueueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a queue in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQueueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQueueResponse
+        /// </returns>
         public async Task<GetQueueResponse> GetQueueAsync(GetQueueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetQueueWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Installs an addon.
-         *
-         * @param request InstallAddonRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return InstallAddonResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs an addon.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallAddonRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallAddonResponse
+        /// </returns>
         public InstallAddonResponse InstallAddonWithOptions(InstallAddonRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2111,13 +2951,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<InstallAddonResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Installs an addon.
-         *
-         * @param request InstallAddonRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return InstallAddonResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs an addon.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallAddonRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallAddonResponse
+        /// </returns>
         public async Task<InstallAddonResponse> InstallAddonWithOptionsAsync(InstallAddonRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2161,37 +3009,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<InstallAddonResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Installs an addon.
-         *
-         * @param request InstallAddonRequest
-         * @return InstallAddonResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs an addon.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallAddonRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallAddonResponse
+        /// </returns>
         public InstallAddonResponse InstallAddon(InstallAddonRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return InstallAddonWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Installs an addon.
-         *
-         * @param request InstallAddonRequest
-         * @return InstallAddonResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs an addon.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallAddonRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallAddonResponse
+        /// </returns>
         public async Task<InstallAddonResponse> InstallAddonAsync(InstallAddonRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await InstallAddonWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Installs software for a specified cluster.
-         *
-         * @param tmpReq InstallSoftwaresRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return InstallSoftwaresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs software for a specified cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// InstallSoftwaresRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallSoftwaresResponse
+        /// </returns>
         public InstallSoftwaresResponse InstallSoftwaresWithOptions(InstallSoftwaresRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2221,13 +3089,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<InstallSoftwaresResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Installs software for a specified cluster.
-         *
-         * @param tmpReq InstallSoftwaresRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return InstallSoftwaresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs software for a specified cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// InstallSoftwaresRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallSoftwaresResponse
+        /// </returns>
         public async Task<InstallSoftwaresResponse> InstallSoftwaresWithOptionsAsync(InstallSoftwaresRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2257,37 +3133,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<InstallSoftwaresResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Installs software for a specified cluster.
-         *
-         * @param request InstallSoftwaresRequest
-         * @return InstallSoftwaresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs software for a specified cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallSoftwaresRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallSoftwaresResponse
+        /// </returns>
         public InstallSoftwaresResponse InstallSoftwares(InstallSoftwaresRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return InstallSoftwaresWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Installs software for a specified cluster.
-         *
-         * @param request InstallSoftwaresRequest
-         * @return InstallSoftwaresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs software for a specified cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallSoftwaresRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallSoftwaresResponse
+        /// </returns>
         public async Task<InstallSoftwaresResponse> InstallSoftwaresAsync(InstallSoftwaresRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await InstallSoftwaresWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 支持的Add-on服务组件模板列表查询。
-         *
-         * @param request ListAddonTemplatesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAddonTemplatesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries supported addon templates.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAddonTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAddonTemplatesResponse
+        /// </returns>
         public ListAddonTemplatesResponse ListAddonTemplatesWithOptions(ListAddonTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2331,13 +3227,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListAddonTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 支持的Add-on服务组件模板列表查询。
-         *
-         * @param request ListAddonTemplatesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAddonTemplatesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries supported addon templates.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAddonTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAddonTemplatesResponse
+        /// </returns>
         public async Task<ListAddonTemplatesResponse> ListAddonTemplatesWithOptionsAsync(ListAddonTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2381,37 +3285,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListAddonTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 支持的Add-on服务组件模板列表查询。
-         *
-         * @param request ListAddonTemplatesRequest
-         * @return ListAddonTemplatesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries supported addon templates.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAddonTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAddonTemplatesResponse
+        /// </returns>
         public ListAddonTemplatesResponse ListAddonTemplates(ListAddonTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAddonTemplatesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 支持的Add-on服务组件模板列表查询。
-         *
-         * @param request ListAddonTemplatesRequest
-         * @return ListAddonTemplatesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries supported addon templates.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAddonTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAddonTemplatesResponse
+        /// </returns>
         public async Task<ListAddonTemplatesResponse> ListAddonTemplatesAsync(ListAddonTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAddonTemplatesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查看已安装的Add-on服务组件列表。
-         *
-         * @param tmpReq ListAddonsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAddonsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries installed addons of an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListAddonsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAddonsResponse
+        /// </returns>
         public ListAddonsResponse ListAddonsWithOptions(ListAddonsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2457,13 +3381,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListAddonsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查看已安装的Add-on服务组件列表。
-         *
-         * @param tmpReq ListAddonsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAddonsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries installed addons of an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListAddonsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAddonsResponse
+        /// </returns>
         public async Task<ListAddonsResponse> ListAddonsWithOptionsAsync(ListAddonsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2509,37 +3441,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListAddonsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查看已安装的Add-on服务组件列表。
-         *
-         * @param request ListAddonsRequest
-         * @return ListAddonsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries installed addons of an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAddonsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAddonsResponse
+        /// </returns>
         public ListAddonsResponse ListAddons(ListAddonsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAddonsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查看已安装的Add-on服务组件列表。
-         *
-         * @param request ListAddonsRequest
-         * @return ListAddonsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries installed addons of an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAddonsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAddonsResponse
+        /// </returns>
         public async Task<ListAddonsResponse> ListAddonsAsync(ListAddonsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAddonsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询可用的共享存储
-         *
-         * @param request ListAvailableFileSystemsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAvailableFileSystemsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the file systems that can be attached in a region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAvailableFileSystemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAvailableFileSystemsResponse
+        /// </returns>
         public ListAvailableFileSystemsResponse ListAvailableFileSystemsWithOptions(ListAvailableFileSystemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2571,13 +3523,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListAvailableFileSystemsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询可用的共享存储
-         *
-         * @param request ListAvailableFileSystemsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAvailableFileSystemsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the file systems that can be attached in a region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAvailableFileSystemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAvailableFileSystemsResponse
+        /// </returns>
         public async Task<ListAvailableFileSystemsResponse> ListAvailableFileSystemsWithOptionsAsync(ListAvailableFileSystemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2609,37 +3569,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListAvailableFileSystemsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询可用的共享存储
-         *
-         * @param request ListAvailableFileSystemsRequest
-         * @return ListAvailableFileSystemsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the file systems that can be attached in a region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAvailableFileSystemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAvailableFileSystemsResponse
+        /// </returns>
         public ListAvailableFileSystemsResponse ListAvailableFileSystems(ListAvailableFileSystemsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAvailableFileSystemsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询可用的共享存储
-         *
-         * @param request ListAvailableFileSystemsRequest
-         * @return ListAvailableFileSystemsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the file systems that can be attached in a region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAvailableFileSystemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAvailableFileSystemsResponse
+        /// </returns>
         public async Task<ListAvailableFileSystemsResponse> ListAvailableFileSystemsAsync(ListAvailableFileSystemsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAvailableFileSystemsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取可用镜像列表
-         *
-         * @param tmpReq ListAvailableImagesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAvailableImagesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries images that are available for Elastic High Performance Computing (E-HPC) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListAvailableImagesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAvailableImagesResponse
+        /// </returns>
         public ListAvailableImagesResponse ListAvailableImagesWithOptions(ListAvailableImagesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2673,13 +3653,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListAvailableImagesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取可用镜像列表
-         *
-         * @param tmpReq ListAvailableImagesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAvailableImagesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries images that are available for Elastic High Performance Computing (E-HPC) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListAvailableImagesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAvailableImagesResponse
+        /// </returns>
         public async Task<ListAvailableImagesResponse> ListAvailableImagesWithOptionsAsync(ListAvailableImagesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2713,37 +3701,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListAvailableImagesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取可用镜像列表
-         *
-         * @param request ListAvailableImagesRequest
-         * @return ListAvailableImagesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries images that are available for Elastic High Performance Computing (E-HPC) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAvailableImagesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAvailableImagesResponse
+        /// </returns>
         public ListAvailableImagesResponse ListAvailableImages(ListAvailableImagesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAvailableImagesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取可用镜像列表
-         *
-         * @param request ListAvailableImagesRequest
-         * @return ListAvailableImagesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries images that are available for Elastic High Performance Computing (E-HPC) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAvailableImagesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAvailableImagesResponse
+        /// </returns>
         public async Task<ListAvailableImagesResponse> ListAvailableImagesAsync(ListAvailableImagesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAvailableImagesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询用户账号中在每个地域拥有的所有集群的列表。
-         *
-         * @param tmpReq ListClustersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all clusters of a user in each region.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListClustersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClustersResponse
+        /// </returns>
         public ListClustersResponse ListClustersWithOptions(ListClustersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2793,13 +3801,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListClustersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询用户账号中在每个地域拥有的所有集群的列表。
-         *
-         * @param tmpReq ListClustersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all clusters of a user in each region.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListClustersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClustersResponse
+        /// </returns>
         public async Task<ListClustersResponse> ListClustersWithOptionsAsync(ListClustersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2849,37 +3865,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListClustersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询用户账号中在每个地域拥有的所有集群的列表。
-         *
-         * @param request ListClustersRequest
-         * @return ListClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all clusters of a user in each region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListClustersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClustersResponse
+        /// </returns>
         public ListClustersResponse ListClusters(ListClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListClustersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询用户账号中在每个地域拥有的所有集群的列表。
-         *
-         * @param request ListClustersRequest
-         * @return ListClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all clusters of a user in each region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListClustersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClustersResponse
+        /// </returns>
         public async Task<ListClustersResponse> ListClustersAsync(ListClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListClustersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询集群通用日志列表
-         *
-         * @param tmpReq ListCommonLogsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListCommonLogsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of a cluster that are generated within a time range.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListCommonLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCommonLogsResponse
+        /// </returns>
         public ListCommonLogsResponse ListCommonLogsWithOptions(ListCommonLogsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2957,13 +3993,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListCommonLogsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询集群通用日志列表
-         *
-         * @param tmpReq ListCommonLogsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListCommonLogsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of a cluster that are generated within a time range.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListCommonLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCommonLogsResponse
+        /// </returns>
         public async Task<ListCommonLogsResponse> ListCommonLogsWithOptionsAsync(ListCommonLogsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3041,37 +4085,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListCommonLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询集群通用日志列表
-         *
-         * @param request ListCommonLogsRequest
-         * @return ListCommonLogsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of a cluster that are generated within a time range.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCommonLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCommonLogsResponse
+        /// </returns>
         public ListCommonLogsResponse ListCommonLogs(ListCommonLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListCommonLogsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询集群通用日志列表
-         *
-         * @param request ListCommonLogsRequest
-         * @return ListCommonLogsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of a cluster that are generated within a time range.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCommonLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCommonLogsResponse
+        /// </returns>
         public async Task<ListCommonLogsResponse> ListCommonLogsAsync(ListCommonLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListCommonLogsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the installed software of a cluster.
-         *
-         * @param request ListInstalledSoftwaresRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstalledSoftwaresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the installed software of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstalledSoftwaresRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstalledSoftwaresResponse
+        /// </returns>
         public ListInstalledSoftwaresResponse ListInstalledSoftwaresWithOptions(ListInstalledSoftwaresRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3095,13 +4159,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListInstalledSoftwaresResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the installed software of a cluster.
-         *
-         * @param request ListInstalledSoftwaresRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstalledSoftwaresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the installed software of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstalledSoftwaresRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstalledSoftwaresResponse
+        /// </returns>
         public async Task<ListInstalledSoftwaresResponse> ListInstalledSoftwaresWithOptionsAsync(ListInstalledSoftwaresRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3125,37 +4197,213 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListInstalledSoftwaresResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the installed software of a cluster.
-         *
-         * @param request ListInstalledSoftwaresRequest
-         * @return ListInstalledSoftwaresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the installed software of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstalledSoftwaresRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstalledSoftwaresResponse
+        /// </returns>
         public ListInstalledSoftwaresResponse ListInstalledSoftwares(ListInstalledSoftwaresRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListInstalledSoftwaresWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the installed software of a cluster.
-         *
-         * @param request ListInstalledSoftwaresRequest
-         * @return ListInstalledSoftwaresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the installed software of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstalledSoftwaresRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstalledSoftwaresResponse
+        /// </returns>
         public async Task<ListInstalledSoftwaresResponse> ListInstalledSoftwaresAsync(ListInstalledSoftwaresRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListInstalledSoftwaresWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询节点列表
-         *
-         * @param tmpReq ListNodesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListNodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the jobs in a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobsResponse
+        /// </returns>
+        public ListJobsResponse ListJobsWithOptions(ListJobsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListJobsShrinkRequest request = new ListJobsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobFilter))
+            {
+                request.JobFilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobFilter, "JobFilter", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobFilterShrink))
+            {
+                query["JobFilter"] = request.JobFilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListJobs",
+                Version = "2024-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListJobsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the jobs in a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobsResponse
+        /// </returns>
+        public async Task<ListJobsResponse> ListJobsWithOptionsAsync(ListJobsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListJobsShrinkRequest request = new ListJobsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobFilter))
+            {
+                request.JobFilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobFilter, "JobFilter", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobFilterShrink))
+            {
+                query["JobFilter"] = request.JobFilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListJobs",
+                Version = "2024-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListJobsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the jobs in a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobsResponse
+        /// </returns>
+        public ListJobsResponse ListJobs(ListJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListJobsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the jobs in a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobsResponse
+        /// </returns>
+        public async Task<ListJobsResponse> ListJobsAsync(ListJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListJobsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the nodes of an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListNodesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodesResponse
+        /// </returns>
         public ListNodesResponse ListNodesWithOptions(ListNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3233,13 +4481,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListNodesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询节点列表
-         *
-         * @param tmpReq ListNodesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListNodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the nodes of an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListNodesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodesResponse
+        /// </returns>
         public async Task<ListNodesResponse> ListNodesWithOptionsAsync(ListNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3317,37 +4573,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListNodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询节点列表
-         *
-         * @param request ListNodesRequest
-         * @return ListNodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the nodes of an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodesResponse
+        /// </returns>
         public ListNodesResponse ListNodes(ListNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListNodesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询节点列表
-         *
-         * @param request ListNodesRequest
-         * @return ListNodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the nodes of an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodesResponse
+        /// </returns>
         public async Task<ListNodesResponse> ListNodesAsync(ListNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListNodesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询集群的队列信息。
-         *
-         * @param tmpReq ListQueuesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListQueuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries queues in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListQueuesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListQueuesResponse
+        /// </returns>
         public ListQueuesResponse ListQueuesWithOptions(ListQueuesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3385,13 +4661,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListQueuesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询集群的队列信息。
-         *
-         * @param tmpReq ListQueuesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListQueuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries queues in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListQueuesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListQueuesResponse
+        /// </returns>
         public async Task<ListQueuesResponse> ListQueuesWithOptionsAsync(ListQueuesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3429,37 +4713,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListQueuesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询集群的队列信息。
-         *
-         * @param request ListQueuesRequest
-         * @return ListQueuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries queues in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListQueuesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListQueuesResponse
+        /// </returns>
         public ListQueuesResponse ListQueues(ListQueuesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListQueuesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询集群的队列信息。
-         *
-         * @param request ListQueuesRequest
-         * @return ListQueuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries queues in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListQueuesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListQueuesResponse
+        /// </returns>
         public async Task<ListQueuesResponse> ListQueuesAsync(ListQueuesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListQueuesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the shared storage that is attached to a cluster.
-         *
-         * @param request ListSharedStoragesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSharedStoragesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the shared storage that is attached to a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSharedStoragesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSharedStoragesResponse
+        /// </returns>
         public ListSharedStoragesResponse ListSharedStoragesWithOptions(ListSharedStoragesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3495,13 +4799,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListSharedStoragesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the shared storage that is attached to a cluster.
-         *
-         * @param request ListSharedStoragesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSharedStoragesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the shared storage that is attached to a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSharedStoragesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSharedStoragesResponse
+        /// </returns>
         public async Task<ListSharedStoragesResponse> ListSharedStoragesWithOptionsAsync(ListSharedStoragesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3537,37 +4849,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListSharedStoragesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the shared storage that is attached to a cluster.
-         *
-         * @param request ListSharedStoragesRequest
-         * @return ListSharedStoragesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the shared storage that is attached to a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSharedStoragesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSharedStoragesResponse
+        /// </returns>
         public ListSharedStoragesResponse ListSharedStorages(ListSharedStoragesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSharedStoragesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the shared storage that is attached to a cluster.
-         *
-         * @param request ListSharedStoragesRequest
-         * @return ListSharedStoragesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the shared storage that is attached to a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSharedStoragesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSharedStoragesResponse
+        /// </returns>
         public async Task<ListSharedStoragesResponse> ListSharedStoragesAsync(ListSharedStoragesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListSharedStoragesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the software that can be installed in an Elastic High Performance Computing (E-HPC) cluster.
-         *
-         * @param request ListSoftwaresRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSoftwaresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the software that can be installed in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSoftwaresRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSoftwaresResponse
+        /// </returns>
         public ListSoftwaresResponse ListSoftwaresWithOptions(ListSoftwaresRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3591,13 +4923,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListSoftwaresResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the software that can be installed in an Elastic High Performance Computing (E-HPC) cluster.
-         *
-         * @param request ListSoftwaresRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSoftwaresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the software that can be installed in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSoftwaresRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSoftwaresResponse
+        /// </returns>
         public async Task<ListSoftwaresResponse> ListSoftwaresWithOptionsAsync(ListSoftwaresRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3621,37 +4961,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListSoftwaresResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the software that can be installed in an Elastic High Performance Computing (E-HPC) cluster.
-         *
-         * @param request ListSoftwaresRequest
-         * @return ListSoftwaresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the software that can be installed in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSoftwaresRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSoftwaresResponse
+        /// </returns>
         public ListSoftwaresResponse ListSoftwares(ListSoftwaresRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSoftwaresWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the software that can be installed in an Elastic High Performance Computing (E-HPC) cluster.
-         *
-         * @param request ListSoftwaresRequest
-         * @return ListSoftwaresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the software that can be installed in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSoftwaresRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSoftwaresResponse
+        /// </returns>
         public async Task<ListSoftwaresResponse> ListSoftwaresAsync(ListSoftwaresRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListSoftwaresWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the users of a cluster.
-         *
-         * @param request ListUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the users of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUsersResponse
+        /// </returns>
         public ListUsersResponse ListUsersWithOptions(ListUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3675,13 +5035,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the users of a cluster.
-         *
-         * @param request ListUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the users of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUsersResponse
+        /// </returns>
         public async Task<ListUsersResponse> ListUsersWithOptionsAsync(ListUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3705,37 +5073,197 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<ListUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the users of a cluster.
-         *
-         * @param request ListUsersRequest
-         * @return ListUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the users of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUsersResponse
+        /// </returns>
         public ListUsersResponse ListUsers(ListUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListUsersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the users of a cluster.
-         *
-         * @param request ListUsersRequest
-         * @return ListUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the users of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUsersResponse
+        /// </returns>
         public async Task<ListUsersResponse> ListUsersAsync(ListUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListUsersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Uninstalls an addon.
-         *
-         * @param request UnInstallAddonRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UnInstallAddonResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops uncompleted jobs in a batch in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// StopJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopJobsResponse
+        /// </returns>
+        public StopJobsResponse StopJobsWithOptions(StopJobsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StopJobsShrinkRequest request = new StopJobsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobIds))
+            {
+                request.JobIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobIds, "JobIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobIdsShrink))
+            {
+                query["JobIds"] = request.JobIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopJobs",
+                Version = "2024-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopJobsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops uncompleted jobs in a batch in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// StopJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopJobsResponse
+        /// </returns>
+        public async Task<StopJobsResponse> StopJobsWithOptionsAsync(StopJobsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StopJobsShrinkRequest request = new StopJobsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobIds))
+            {
+                request.JobIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobIds, "JobIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobIdsShrink))
+            {
+                query["JobIds"] = request.JobIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopJobs",
+                Version = "2024-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopJobsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops uncompleted jobs in a batch in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopJobsResponse
+        /// </returns>
+        public StopJobsResponse StopJobs(StopJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopJobsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops uncompleted jobs in a batch in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopJobsResponse
+        /// </returns>
+        public async Task<StopJobsResponse> StopJobsAsync(StopJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopJobsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uninstalls an addon.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnInstallAddonRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnInstallAddonResponse
+        /// </returns>
         public UnInstallAddonResponse UnInstallAddonWithOptions(UnInstallAddonRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3767,13 +5295,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<UnInstallAddonResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Uninstalls an addon.
-         *
-         * @param request UnInstallAddonRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UnInstallAddonResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uninstalls an addon.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnInstallAddonRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnInstallAddonResponse
+        /// </returns>
         public async Task<UnInstallAddonResponse> UnInstallAddonWithOptionsAsync(UnInstallAddonRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3805,37 +5341,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<UnInstallAddonResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Uninstalls an addon.
-         *
-         * @param request UnInstallAddonRequest
-         * @return UnInstallAddonResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uninstalls an addon.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnInstallAddonRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnInstallAddonResponse
+        /// </returns>
         public UnInstallAddonResponse UnInstallAddon(UnInstallAddonRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnInstallAddonWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Uninstalls an addon.
-         *
-         * @param request UnInstallAddonRequest
-         * @return UnInstallAddonResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uninstalls an addon.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnInstallAddonRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnInstallAddonResponse
+        /// </returns>
         public async Task<UnInstallAddonResponse> UnInstallAddonAsync(UnInstallAddonRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UnInstallAddonWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Uninstalls software systems from an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @param tmpReq UninstallSoftwaresRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UninstallSoftwaresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uninstalls software systems from an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UninstallSoftwaresRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallSoftwaresResponse
+        /// </returns>
         public UninstallSoftwaresResponse UninstallSoftwaresWithOptions(UninstallSoftwaresRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3865,13 +5421,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<UninstallSoftwaresResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Uninstalls software systems from an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @param tmpReq UninstallSoftwaresRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UninstallSoftwaresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uninstalls software systems from an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UninstallSoftwaresRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallSoftwaresResponse
+        /// </returns>
         public async Task<UninstallSoftwaresResponse> UninstallSoftwaresWithOptionsAsync(UninstallSoftwaresRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3901,37 +5465,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<UninstallSoftwaresResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Uninstalls software systems from an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @param request UninstallSoftwaresRequest
-         * @return UninstallSoftwaresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uninstalls software systems from an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallSoftwaresRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallSoftwaresResponse
+        /// </returns>
         public UninstallSoftwaresResponse UninstallSoftwares(UninstallSoftwaresRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UninstallSoftwaresWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Uninstalls software systems from an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @param request UninstallSoftwaresRequest
-         * @return UninstallSoftwaresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uninstalls software systems from an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallSoftwaresRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallSoftwaresResponse
+        /// </returns>
         public async Task<UninstallSoftwaresResponse> UninstallSoftwaresAsync(UninstallSoftwaresRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UninstallSoftwaresWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 修改指定集群的基本信息。
-         *
-         * @param tmpReq UpdateClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateClusterResponse
+        /// </returns>
         public UpdateClusterResponse UpdateClusterWithOptions(UpdateClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4009,13 +5593,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<UpdateClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改指定集群的基本信息。
-         *
-         * @param tmpReq UpdateClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateClusterResponse
+        /// </returns>
         public async Task<UpdateClusterResponse> UpdateClusterWithOptionsAsync(UpdateClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4093,40 +5685,63 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<UpdateClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改指定集群的基本信息。
-         *
-         * @param request UpdateClusterRequest
-         * @return UpdateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateClusterResponse
+        /// </returns>
         public UpdateClusterResponse UpdateCluster(UpdateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateClusterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 修改指定集群的基本信息。
-         *
-         * @param request UpdateClusterRequest
-         * @return UpdateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateClusterResponse
+        /// </returns>
         public async Task<UpdateClusterResponse> UpdateClusterAsync(UpdateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateClusterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Updates the configurations of compute nodes in an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @description ## [](#)Usage notes
-         * Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.
-         *
-         * @param tmpReq UpdateNodesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateNodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of compute nodes in an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateNodesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNodesResponse
+        /// </returns>
         public UpdateNodesResponse UpdateNodesWithOptions(UpdateNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4164,16 +5779,27 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<UpdateNodesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the configurations of compute nodes in an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @description ## [](#)Usage notes
-         * Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.
-         *
-         * @param tmpReq UpdateNodesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateNodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of compute nodes in an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateNodesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNodesResponse
+        /// </returns>
         public async Task<UpdateNodesResponse> UpdateNodesWithOptionsAsync(UpdateNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4211,43 +5837,69 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<UpdateNodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the configurations of compute nodes in an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @description ## [](#)Usage notes
-         * Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.
-         *
-         * @param request UpdateNodesRequest
-         * @return UpdateNodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of compute nodes in an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNodesResponse
+        /// </returns>
         public UpdateNodesResponse UpdateNodes(UpdateNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateNodesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Updates the configurations of compute nodes in an Enterprise High Performance Computing (E-HPC) cluster.
-         *
-         * @description ## [](#)Usage notes
-         * Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.
-         *
-         * @param request UpdateNodesRequest
-         * @return UpdateNodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of compute nodes in an Enterprise High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNodesResponse
+        /// </returns>
         public async Task<UpdateNodesResponse> UpdateNodesAsync(UpdateNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateNodesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 更新集群的队列配置信息
-         *
-         * @param tmpReq UpdateQueueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateQueueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a queue in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateQueueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateQueueResponse
+        /// </returns>
         public UpdateQueueResponse UpdateQueueWithOptions(UpdateQueueRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4285,13 +5937,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<UpdateQueueResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新集群的队列配置信息
-         *
-         * @param tmpReq UpdateQueueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateQueueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a queue in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateQueueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateQueueResponse
+        /// </returns>
         public async Task<UpdateQueueResponse> UpdateQueueWithOptionsAsync(UpdateQueueRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4329,37 +5989,57 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<UpdateQueueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新集群的队列配置信息
-         *
-         * @param request UpdateQueueRequest
-         * @return UpdateQueueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a queue in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateQueueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateQueueResponse
+        /// </returns>
         public UpdateQueueResponse UpdateQueue(UpdateQueueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateQueueWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 更新集群的队列配置信息
-         *
-         * @param request UpdateQueueRequest
-         * @return UpdateQueueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a queue in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateQueueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateQueueResponse
+        /// </returns>
         public async Task<UpdateQueueResponse> UpdateQueueAsync(UpdateQueueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateQueueWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 更新集群单个用户属性
-         *
-         * @param request UpdateUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information of a user in an Elastic High Performance Computing (E-HPC) cluster, including the user group and password.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserResponse
+        /// </returns>
         public UpdateUserResponse UpdateUserWithOptions(UpdateUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4399,13 +6079,21 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<UpdateUserResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新集群单个用户属性
-         *
-         * @param request UpdateUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information of a user in an Elastic High Performance Computing (E-HPC) cluster, including the user group and password.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserResponse
+        /// </returns>
         public async Task<UpdateUserResponse> UpdateUserWithOptionsAsync(UpdateUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4445,24 +6133,36 @@ namespace AlibabaCloud.SDK.EHPC20240730
             return TeaModel.ToObject<UpdateUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新集群单个用户属性
-         *
-         * @param request UpdateUserRequest
-         * @return UpdateUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information of a user in an Elastic High Performance Computing (E-HPC) cluster, including the user group and password.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserResponse
+        /// </returns>
         public UpdateUserResponse UpdateUser(UpdateUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateUserWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 更新集群单个用户属性
-         *
-         * @param request UpdateUserRequest
-         * @return UpdateUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information of a user in an Elastic High Performance Computing (E-HPC) cluster, including the user group and password.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserResponse
+        /// </returns>
         public async Task<UpdateUserResponse> UpdateUserAsync(UpdateUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

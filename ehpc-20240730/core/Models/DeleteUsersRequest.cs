@@ -10,29 +10,31 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class DeleteUsersRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The users that you want to delete.
-        /// 
-        /// This parameter is required.
+        /// <para>The users that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]
         public List<DeleteUsersRequestUser> User { get; set; }
         public class DeleteUsersRequestUser : TeaModel {
             /// <summary>
-            /// The name of user N that you want to delete.
+            /// <para>The name of user N that you want to delete.</para>
+            /// <para>Valid values of N: 1 to 100.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// Valid values of N: 1 to 100.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>testuser</para>
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]

@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class UninstallSoftwaresRequest : TeaModel {
         /// <summary>
-        /// The information about the software systems that you want to uninstall.
+        /// <para>The information about the software systems that you want to uninstall.</para>
         /// </summary>
         [NameInMap("AdditionalPackages")]
         [Validation(Required=false)]
         public List<UninstallSoftwaresRequestAdditionalPackages> AdditionalPackages { get; set; }
         public class UninstallSoftwaresRequestAdditionalPackages : TeaModel {
             /// <summary>
-            /// The software name.
+            /// <para>The software name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>gromacs</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The software version.
+            /// <para>The software version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2024.1</para>
             /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
@@ -33,9 +39,11 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         }
 
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</para>
         /// 
-        /// You can call the [ListClusters](https://help.aliyun.com/document_detail/87116.html) operation to query the cluster ID.
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

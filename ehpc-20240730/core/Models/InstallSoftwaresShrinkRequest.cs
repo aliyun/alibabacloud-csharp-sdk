@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class InstallSoftwaresShrinkRequest : TeaModel {
         /// <summary>
-        /// The information about the software systems that you want to install.
+        /// <para>The information about the software systems that you want to install.</para>
         /// </summary>
         [NameInMap("AdditionalPackages")]
         [Validation(Required=false)]
         public string AdditionalPackagesShrink { get; set; }
 
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

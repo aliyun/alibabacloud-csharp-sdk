@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class QueueTemplate : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>PriorityInstanceType</para>
+        /// </summary>
         [NameInMap("AllocationStrategy")]
         [Validation(Required=false)]
         public string AllocationStrategy { get; set; }
@@ -17,14 +21,26 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         [Validation(Required=false)]
         public List<NodeTemplate> ComputeNodes { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("EnableScaleIn")]
         [Validation(Required=false)]
         public bool? EnableScaleIn { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("EnableScaleOut")]
         [Validation(Required=false)]
         public bool? EnableScaleOut { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>compute</para>
+        /// </summary>
         [NameInMap("HostnamePrefix")]
         [Validation(Required=false)]
         public string HostnamePrefix { get; set; }
@@ -33,10 +49,18 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         [Validation(Required=false)]
         public string HostnameSuffix { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("InitialCount")]
         [Validation(Required=false)]
         public int? InitialCount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>erdma</para>
+        /// </summary>
         [NameInMap("InterConnect")]
         [Validation(Required=false)]
         public string InterConnect { get; set; }
@@ -45,25 +69,44 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         [Validation(Required=false)]
         public List<string> KeepAliveNodes { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
         [NameInMap("MaxCount")]
         [Validation(Required=false)]
         public int? MaxCount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>99</para>
+        /// </summary>
         [NameInMap("MaxCountPerCycle")]
         [Validation(Required=false)]
         public long? MaxCountPerCycle { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("MinCount")]
         [Validation(Required=false)]
         public int? MinCount { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>comp</para>
         /// </summary>
         [NameInMap("QueueName")]
         [Validation(Required=false)]
         public string QueueName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>AliyunECSInstanceForEHPCRole</para>
+        /// </summary>
         [NameInMap("RamRole")]
         [Validation(Required=false)]
         public string RamRole { get; set; }

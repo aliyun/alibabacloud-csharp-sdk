@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class ListSoftwaresResponseBody : TeaModel {
         /// <summary>
-        /// The information about the software that can be installed in the cluster.
+        /// <para>The information about the software that can be installed in the cluster.</para>
         /// </summary>
         [NameInMap("AdditionalPackages")]
         [Validation(Required=false)]
@@ -21,35 +21,44 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public List<ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfos> AdditionalPackageInfos { get; set; }
             public class ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfos : TeaModel {
                 /// <summary>
-                /// The application category.
+                /// <para>The application category.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>NWP</para>
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
                 /// <summary>
-                /// The software description.
+                /// <para>The software description.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The URL of the software icon.
+                /// <para>The URL of the software icon.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://gw.alicdn.com/imgextra/i2/O1CN01FIkxZ81LmE0fvrAyR_!!6000000001341-55-tps-6349-1603.svg">https://gw.alicdn.com/imgextra/i2/O1CN01FIkxZ81LmE0fvrAyR_!!6000000001341-55-tps-6349-1603.svg</a></para>
                 /// </summary>
                 [NameInMap("Icon")]
                 [Validation(Required=false)]
                 public string Icon { get; set; }
 
                 /// <summary>
-                /// The software name.
+                /// <para>The software name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>gromacs</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The information about the software versions that can be installed in the cluster.
+                /// <para>The information about the software versions that can be installed in the cluster.</para>
                 /// </summary>
                 [NameInMap("Versions")]
                 [Validation(Required=false)]
@@ -60,14 +69,17 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                     public List<ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfosVersionsVersionInfos> VersionInfos { get; set; }
                     public class ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfosVersionsVersionInfos : TeaModel {
                         /// <summary>
-                        /// Indicates whether the version is the latest.
+                        /// <para>Indicates whether the version is the latest.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
                         /// </summary>
                         [NameInMap("Latest")]
                         [Validation(Required=false)]
                         public string Latest { get; set; }
 
                         /// <summary>
-                        /// The information about the supported OSs.
+                        /// <para>The information about the supported OSs.</para>
                         /// </summary>
                         [NameInMap("SupportOs")]
                         [Validation(Required=false)]
@@ -78,17 +90,24 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                             public List<ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfosVersionsVersionInfosSupportOsSupportOsInfos> SupportOsInfos { get; set; }
                             public class ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfosVersionsVersionInfosSupportOsSupportOsInfos : TeaModel {
                                 /// <summary>
-                                /// The OS architecture. Valid values:
+                                /// <para>The OS architecture. Valid values:</para>
+                                /// <list type="bullet">
+                                /// <item><description>x86_64</description></item>
+                                /// <item><description>arm64</description></item>
+                                /// </list>
                                 /// 
-                                /// *   x86_64
-                                /// *   arm64
+                                /// <b>Example:</b>
+                                /// <para>x86_64</para>
                                 /// </summary>
                                 [NameInMap("Architecture")]
                                 [Validation(Required=false)]
                                 public string Architecture { get; set; }
 
                                 /// <summary>
-                                /// The image tag.
+                                /// <para>The image tag.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>Alibaba Cloud Linux  3.2104 LTS 64 bit ARM Edition</para>
                                 /// </summary>
                                 [NameInMap("OsTag")]
                                 [Validation(Required=false)]
@@ -99,7 +118,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                         }
 
                         /// <summary>
-                        /// The software version.
+                        /// <para>The software version.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2024.1</para>
                         /// </summary>
                         [NameInMap("Version")]
                         [Validation(Required=false)]
@@ -114,28 +136,40 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         }
 
         /// <summary>
-        /// The page number. Pages start from page 1. Default value: 1.
+        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

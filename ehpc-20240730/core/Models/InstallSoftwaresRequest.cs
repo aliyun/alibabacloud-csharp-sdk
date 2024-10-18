@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class InstallSoftwaresRequest : TeaModel {
         /// <summary>
-        /// The information about the software systems that you want to install.
+        /// <para>The information about the software systems that you want to install.</para>
         /// </summary>
         [NameInMap("AdditionalPackages")]
         [Validation(Required=false)]
         public List<InstallSoftwaresRequestAdditionalPackages> AdditionalPackages { get; set; }
         public class InstallSoftwaresRequestAdditionalPackages : TeaModel {
             /// <summary>
-            /// The software name.
+            /// <para>The software name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>gromacs</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The software version.
+            /// <para>The software version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2024.1</para>
             /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         }
 
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

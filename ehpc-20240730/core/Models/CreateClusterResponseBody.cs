@@ -9,18 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class CreateClusterResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr******</para>
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>F6757FA4-8FED-4602-B7F5-3550C0******</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>F6757FA4-8FED-4602-B7F5-3550C0******</para>
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
