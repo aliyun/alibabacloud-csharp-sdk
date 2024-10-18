@@ -240,6 +240,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12312312112***</para>
         /// </summary>
