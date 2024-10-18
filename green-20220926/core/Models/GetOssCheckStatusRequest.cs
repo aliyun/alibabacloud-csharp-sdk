@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetOssCheckStatusRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

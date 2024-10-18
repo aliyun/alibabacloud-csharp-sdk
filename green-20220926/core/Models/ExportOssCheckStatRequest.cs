@@ -8,30 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class ListKeywordsRequest : TeaModel {
+    public class ExportOssCheckStatRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>true</para>
         /// </summary>
-        [NameInMap("CurrentPage")]
+        [NameInMap("ByMonth")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public bool? ByMonth { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>custom_xxxx</para>
+        /// <para>2024-03-11 10:00:00</para>
         /// </summary>
-        [NameInMap("LibId")]
+        [NameInMap("EndDate")]
         [Validation(Required=false)]
-        public string LibId { get; set; }
+        public string EndDate { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>P_UX0K5X</para>
         /// </summary>
-        [NameInMap("PageSize")]
+        [NameInMap("ParentTaskId")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string ParentTaskId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -41,13 +41,13 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("Sort")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2024-03-10 10:00:00</para>
+        /// </summary>
+        [NameInMap("StartDate")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Sort { get; set; }
-
-        [NameInMap("Word")]
-        [Validation(Required=false)]
-        public string Word { get; set; }
+        public string StartDate { get; set; }
 
     }
 

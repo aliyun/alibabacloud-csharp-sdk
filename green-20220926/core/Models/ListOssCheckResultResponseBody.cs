@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ListOssCheckResultResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
@@ -17,18 +21,34 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public List<ListOssCheckResultResponseBodyItems> Items { get; set; }
         public class ListOssCheckResultResponseBodyItems : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>tmp</para>
+            /// </summary>
             [NameInMap("Bucket")]
             [Validation(Required=false)]
             public string Bucket { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>200</para>
+            /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>audio</para>
+            /// </summary>
             [NameInMap("ContentType")]
             [Validation(Required=false)]
             public string ContentType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>audio_media_detection</para>
+            /// </summary>
             [NameInMap("CopyFrom")]
             [Validation(Required=false)]
             public string CopyFrom { get; set; }
@@ -41,14 +61,26 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public string FreezeType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="http://www.aliyuncs.com/test.jpg">http://www.aliyuncs.com/test.jpg</a></para>
+            /// </summary>
             [NameInMap("ImageUrl")]
             [Validation(Required=false)]
             public string ImageUrl { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("IsCopy")]
             [Validation(Required=false)]
             public bool? IsCopy { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>dhT20X2310</para>
+            /// </summary>
             [NameInMap("JobName")]
             [Validation(Required=false)]
             public string JobName { get; set; }
@@ -61,14 +93,26 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public List<string> Labels2 { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>54416c9b159df4a60ae03c04ccb94cb5</para>
+            /// </summary>
             [NameInMap("Md5")]
             [Validation(Required=false)]
             public string Md5 { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>OK</para>
+            /// </summary>
             [NameInMap("Msg")]
             [Validation(Required=false)]
             public string Msg { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1713014531569_958.png.jpeg</para>
+            /// </summary>
             [NameInMap("Object")]
             [Validation(Required=false)]
             public string Object { get; set; }
@@ -85,10 +129,18 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public string RiskLevel2 { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{}</para>
+            /// </summary>
             [NameInMap("ScanResult")]
             [Validation(Required=false)]
             public string ScanResult { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>audio_media_detection_01</para>
+            /// </summary>
             [NameInMap("ServiceCode")]
             [Validation(Required=false)]
             public string ServiceCode { get; set; }
@@ -97,24 +149,44 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public string ServiceName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>EP6TI7_au_Zo25ITvCbkocNuF801QOQX</para>
+            /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="http://www.aliyuncs.com/test.mp3">http://www.aliyuncs.com/test.mp3</a></para>
+            /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]
             public string Url { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>13</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }

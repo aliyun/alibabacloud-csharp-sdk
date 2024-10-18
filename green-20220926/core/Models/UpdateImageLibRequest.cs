@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string Comment { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("FreeInspection")]
         [Validation(Required=false)]
         public int? FreeInspection { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>custom_xxxx</para>
+        /// </summary>
         [NameInMap("LibId")]
         [Validation(Required=false)]
         public string LibId { get; set; }
@@ -25,6 +33,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string LibName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class GetBackupStatusResponseBody : TeaModel {
+    public class ExportOssCheckStatResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>True</para>
+        /// <para><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/console_data/production/scanResult/osscheck/ossCheckStat_aliUf5B3lJfOkLpqozLIn94Uy-1XxKyX.xlsx">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/console_data/production/scanResult/osscheck/ossCheckStat_aliUf5B3lJfOkLpqozLIn94Uy-1XxKyX.xlsx</a></para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public bool? Data { get; set; }
+        public string Data { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

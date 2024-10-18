@@ -9,18 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateScanResultFeedbackRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>missOut</para>
+        /// </summary>
         [NameInMap("Feedback")]
         [Validation(Required=false)]
         public string Feedback { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>46232656-984E-****-A648-B1D0667B6C3E</para>
+        /// </summary>
         [NameInMap("QueryRequestId")]
         [Validation(Required=false)]
         public string QueryRequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>text</para>
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }

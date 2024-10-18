@@ -13,16 +13,28 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public List<GetBucketsListResponseBodyData> Data { get; set; }
         public class GetBucketsListResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>bucket_test</para>
+            /// </summary>
             [NameInMap("Bucket")]
             [Validation(Required=false)]
             public string Bucket { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
+            /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -1,3 +1,8 @@
+2024-10-18 Version: 1.1.0
+- Support API ExportOssCheckStat.
+- Support API GetOssCheckStat.
+
+
 2024-09-05 Version: 1.0.2
 - Update API GetBackupConfig: update response param.
 

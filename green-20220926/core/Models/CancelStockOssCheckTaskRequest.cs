@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class CancelStockOssCheckTaskRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>P_UNYVB</para>
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

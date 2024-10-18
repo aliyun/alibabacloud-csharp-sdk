@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ListServiceConfigsResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>400</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public string Classify { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>nickname_detection</para>
+            /// </summary>
             [NameInMap("CopyFrom")]
             [Validation(Required=false)]
             public string CopyFrom { get; set; }
@@ -29,6 +37,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public ListServiceConfigsResponseBodyDataCustomServiceConf CustomServiceConf { get; set; }
             public class ListServiceConfigsResponseBodyDataCustomServiceConf : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>audio_media_detection</para>
+                /// </summary>
                 [NameInMap("AudioService")]
                 [Validation(Required=false)]
                 public string AudioService { get; set; }
@@ -59,6 +71,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
                     [NameInMap("Index")]
                     [Validation(Required=false)]
                     public int? Index { get; set; }
@@ -81,18 +97,34 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2023-07-11 15:40:04</para>
+            /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{}</para>
+            /// </summary>
             [NameInMap("Option")]
             [Validation(Required=false)]
             public Dictionary<string, object> Option { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>text</para>
+            /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>nickname_detection</para>
+            /// </summary>
             [NameInMap("ServiceCode")]
             [Validation(Required=false)]
             public string ServiceCode { get; set; }
@@ -105,12 +137,19 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public string ServiceName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>plus</para>
+            /// </summary>
             [NameInMap("ServiceType")]
             [Validation(Required=false)]
             public string ServiceType { get; set; }
 
             /// <summary>
-            /// UID。
+            /// <para>UID。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1674*****0071291</para>
             /// </summary>
             [NameInMap("Uid")]
             [Validation(Required=false)]
@@ -122,14 +161,26 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>OK</para>
+        /// </summary>
         [NameInMap("Msg")]
         [Validation(Required=false)]
         public string Msg { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>True</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
