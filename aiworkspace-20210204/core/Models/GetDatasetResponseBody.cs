@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
 
+        [NameInMap("LatestVersion")]
+        [Validation(Required=false)]
+        public DatasetVersion LatestVersion { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>myName</para>
@@ -115,6 +119,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SourceDatasetId")]
+        [Validation(Required=false)]
+        public string SourceDatasetId { get; set; }
+
+        [NameInMap("SourceDatasetVersion")]
+        [Validation(Required=false)]
+        public string SourceDatasetVersion { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>jdnhf***fnrimv</para>
@@ -130,6 +142,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("SourceType")]
         [Validation(Required=false)]
         public string SourceType { get; set; }
+
+        [NameInMap("TagTemplateType")]
+        [Validation(Required=false)]
+        public string TagTemplateType { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

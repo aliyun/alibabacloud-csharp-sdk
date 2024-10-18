@@ -41,14 +41,26 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string DatasetId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Animal images.</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2021-01-30T12:51:33.028Z</para>
+        /// </summary>
         [NameInMap("GmtCreateTime")]
         [Validation(Required=false)]
         public string GmtCreateTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2021-01-30T12:51:33.028Z</para>
+        /// </summary>
         [NameInMap("GmtModifiedTime")]
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
@@ -57,6 +69,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
 
+        [NameInMap("LatestVersion")]
+        [Validation(Required=false)]
+        public DatasetVersion LatestVersion { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>AnimalDataset</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -69,6 +89,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Options { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1004110000006048</para>
+        /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
@@ -91,6 +115,22 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>d-bvfasdf4wxxj8o411</para>
+        /// </summary>
+        [NameInMap("SourceDatasetId")]
+        [Validation(Required=false)]
+        public string SourceDatasetId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>v2</para>
+        /// </summary>
+        [NameInMap("SourceDatasetVersion")]
+        [Validation(Required=false)]
+        public string SourceDatasetVersion { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>Source Id</para>
         /// </summary>
         [NameInMap("SourceId")]
@@ -107,12 +147,24 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>text-classification</para>
+        /// </summary>
+        [NameInMap("TagTemplateType")]
+        [Validation(Required=false)]
+        public string TagTemplateType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>oss://xxx</para>
         /// </summary>
         [NameInMap("Uri")]
         [Validation(Required=false)]
         public string Uri { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2004110000006048</para>
+        /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }

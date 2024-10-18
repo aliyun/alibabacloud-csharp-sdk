@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Accessibility { get; set; }
 
+        [NameInMap("DataCount")]
+        [Validation(Required=false)]
+        public long? DataCount { get; set; }
+
+        [NameInMap("DataSize")]
+        [Validation(Required=false)]
+        public long? DataSize { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -85,6 +93,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string ProviderType { get; set; }
 
+        [NameInMap("SourceDatasetId")]
+        [Validation(Required=false)]
+        public string SourceDatasetId { get; set; }
+
+        [NameInMap("SourceDatasetVersion")]
+        [Validation(Required=false)]
+        public string SourceDatasetVersion { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>jdnhf***fnrimv</para>
@@ -118,6 +134,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
+
+        [NameInMap("VersionDescription")]
+        [Validation(Required=false)]
+        public string VersionDescription { get; set; }
+
+        [NameInMap("VersionLabels")]
+        [Validation(Required=false)]
+        public List<Label> VersionLabels { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

@@ -675,6 +675,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 body["Accessibility"] = request.Accessibility;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataCount))
+            {
+                body["DataCount"] = request.DataCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSize))
+            {
+                body["DataSize"] = request.DataSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceType))
             {
                 body["DataSourceType"] = request.DataSourceType;
@@ -711,6 +719,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 body["ProviderType"] = request.ProviderType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDatasetId))
+            {
+                body["SourceDatasetId"] = request.SourceDatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDatasetVersion))
+            {
+                body["SourceDatasetVersion"] = request.SourceDatasetVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
             {
                 body["SourceId"] = request.SourceId;
@@ -726,6 +742,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 body["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionDescription))
+            {
+                body["VersionDescription"] = request.VersionDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionLabels))
+            {
+                body["VersionLabels"] = request.VersionLabels;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -777,6 +801,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 body["Accessibility"] = request.Accessibility;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataCount))
+            {
+                body["DataCount"] = request.DataCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSize))
+            {
+                body["DataSize"] = request.DataSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceType))
             {
                 body["DataSourceType"] = request.DataSourceType;
@@ -813,6 +845,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 body["ProviderType"] = request.ProviderType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDatasetId))
+            {
+                body["SourceDatasetId"] = request.SourceDatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDatasetVersion))
+            {
+                body["SourceDatasetVersion"] = request.SourceDatasetVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
             {
                 body["SourceId"] = request.SourceId;
@@ -828,6 +868,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 body["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionDescription))
+            {
+                body["VersionDescription"] = request.VersionDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionLabels))
+            {
+                body["VersionLabels"] = request.VersionLabels;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -5827,6 +5875,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 query["Provider"] = request.Provider;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDatasetId))
+            {
+                query["SourceDatasetId"] = request.SourceDatasetId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
             {
                 query["SourceId"] = request.SourceId;
@@ -5916,6 +5968,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Provider))
             {
                 query["Provider"] = request.Provider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDatasetId))
+            {
+                query["SourceDatasetId"] = request.SourceDatasetId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
             {
