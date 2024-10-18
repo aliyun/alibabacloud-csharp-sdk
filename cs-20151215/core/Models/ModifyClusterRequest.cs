@@ -239,6 +239,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        [NameInMap("vswitch_ids")]
+        [Validation(Required=false)]
+        public List<string> VswitchIds { get; set; }
+
     }
 
 }

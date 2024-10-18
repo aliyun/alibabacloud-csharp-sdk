@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterDetailResponseBody : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>cluster.local</para>
+        /// </summary>
+        [NameInMap("cluster_domain")]
+        [Validation(Required=false)]
+        public string ClusterDomain { get; set; }
+
+        /// <summary>
         /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +54,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("cluster_type")]
         [Validation(Required=false)]
         public string ClusterType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>172.20.0.0/16</para>
+        /// </summary>
+        [NameInMap("container_cidr")]
+        [Validation(Required=false)]
+        public string ContainerCidr { get; set; }
 
         /// <summary>
         /// <para>The time when the cluster was created.</para>
@@ -110,6 +126,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string InitVersion { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ipv4</para>
+        /// </summary>
+        [NameInMap("ip_stack")]
+        [Validation(Required=false)]
+        public string IpStack { get; set; }
+
+        /// <summary>
         /// <para>The maintenance window of the cluster. This feature is available only in ACK Pro clusters.</para>
         /// </summary>
         [NameInMap("maintenance_window")]
@@ -163,6 +187,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string NextVersion { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>26</para>
+        /// </summary>
+        [NameInMap("node_cidr_mask")]
+        [Validation(Required=false)]
+        public string NodeCidrMask { get; set; }
+
         [NameInMap("operation_policy")]
         [Validation(Required=false)]
         public DescribeClusterDetailResponseBodyOperationPolicy OperationPolicy { get; set; }
@@ -215,6 +247,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Profile { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ipvs</para>
+        /// </summary>
+        [NameInMap("proxy_mode")]
+        [Validation(Required=false)]
+        public string ProxyMode { get; set; }
+
+        /// <summary>
         /// <para>The region ID of the cluster.</para>
         /// 
         /// <b>Example:</b>
@@ -243,6 +283,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("security_group_id")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>172.21.0.0/20</para>
+        /// </summary>
+        [NameInMap("service_cidr")]
+        [Validation(Required=false)]
+        public string ServiceCidr { get; set; }
 
         /// <summary>
         /// <para>The number of nodes in the cluster. Master nodes and worker nodes are included.</para>
@@ -278,6 +328,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string State { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The pod CIDR block. It must be a valid and private CIDR block, and must be one of the following CIDR blocks or their subnets:</para>
         /// <list type="bullet">
@@ -293,6 +345,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("subnet_cidr")]
         [Validation(Required=false)]
+        [Obsolete]
         public string SubnetCidr { get; set; }
 
         /// <summary>
@@ -301,6 +354,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<Tag> Tags { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Asia/Shanghai</para>
+        /// </summary>
+        [NameInMap("timezone")]
+        [Validation(Required=false)]
+        public string Timezone { get; set; }
 
         /// <summary>
         /// <para>The time when the cluster was updated.</para>
@@ -322,6 +383,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. We recommend that you select vSwitches in different zones to ensure high availability.</para>
         /// 
@@ -330,7 +393,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("vswitch_id")]
         [Validation(Required=false)]
+        [Obsolete]
         public string VswitchId { get; set; }
+
+        [NameInMap("vswitch_ids")]
+        [Validation(Required=false)]
+        public List<string> VswitchIds { get; set; }
 
         /// <summary>
         /// <para>The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage Elastic Compute Service (ECS) instances.</para>
