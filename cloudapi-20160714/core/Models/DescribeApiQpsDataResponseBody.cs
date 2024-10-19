@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiQpsDataResponseBody : TeaModel {
         /// <summary>
-        /// The returned information about failed API calls. It is an array consisting of MonitorItem data.
+        /// <para>The returned information about failed API calls. It is an array consisting of MonitorItem data.</para>
         /// </summary>
         [NameInMap("CallFails")]
         [Validation(Required=false)]
@@ -21,14 +21,20 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiQpsDataResponseBodyCallFailsMonitorItem> MonitorItem { get; set; }
             public class DescribeApiQpsDataResponseBodyCallFailsMonitorItem : TeaModel {
                 /// <summary>
-                /// The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+                /// <para>The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2016-07-28T08:20:00Z</para>
                 /// </summary>
                 [NameInMap("ItemTime")]
                 [Validation(Required=false)]
                 public string ItemTime { get; set; }
 
                 /// <summary>
-                /// The value corresponding to the monitoring metric.
+                /// <para>The value corresponding to the monitoring metric.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("ItemValue")]
                 [Validation(Required=false)]
@@ -39,7 +45,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// The returned information about successful API calls. It is an array consisting of MonitorItem data.
+        /// <para>The returned information about successful API calls. It is an array consisting of MonitorItem data.</para>
         /// </summary>
         [NameInMap("CallSuccesses")]
         [Validation(Required=false)]
@@ -50,14 +56,20 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiQpsDataResponseBodyCallSuccessesMonitorItem> MonitorItem { get; set; }
             public class DescribeApiQpsDataResponseBodyCallSuccessesMonitorItem : TeaModel {
                 /// <summary>
-                /// The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+                /// <para>The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2016-07-28T08:24:00Z</para>
                 /// </summary>
                 [NameInMap("ItemTime")]
                 [Validation(Required=false)]
                 public string ItemTime { get; set; }
 
                 /// <summary>
-                /// The value corresponding to the monitoring metric.
+                /// <para>The value corresponding to the monitoring metric.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>650</para>
                 /// </summary>
                 [NameInMap("ItemValue")]
                 [Validation(Required=false)]
@@ -68,7 +80,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BZ001</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

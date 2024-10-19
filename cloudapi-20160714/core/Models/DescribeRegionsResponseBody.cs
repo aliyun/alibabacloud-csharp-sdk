@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The returned region information. It is an array that consists of Region data.
+        /// <para>The returned region information. It is an array that consists of Region data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-huhehaote</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -21,21 +24,30 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
                 /// <summary>
-                /// The name of the region.
+                /// <para>The name of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>China (Shenzhen)</para>
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// The endpoint of the service for the region.
+                /// <para>The endpoint of the service for the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>apigateway.cn-shenzhen.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("RegionEndpoint")]
                 [Validation(Required=false)]
                 public string RegionEndpoint { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// <para>The ID of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-shenzhen</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -46,7 +58,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>36BBBAD4-1CFB-489F-841A-8CA52EEA787E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

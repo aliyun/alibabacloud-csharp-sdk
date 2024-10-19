@@ -10,31 +10,38 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeInstancePacketsRequest : TeaModel {
         /// <summary>
-        /// The end time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+        /// <para>The end time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2022-05-24T10:14:53Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>apigateway-cn-2r426lavr001</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The statistical metric. Valid values:
+        /// <para>The statistical metric. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Maximum</description></item>
+        /// <item><description>Minimum</description></item>
+        /// <item><description>Average</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Maximum
-        /// *   Minimum
-        /// *   Average
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Maximum</para>
         /// </summary>
         [NameInMap("SbcName")]
         [Validation(Required=false)]
@@ -45,9 +52,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The start time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+        /// <para>The start time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2022-05-18T01:14:26Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

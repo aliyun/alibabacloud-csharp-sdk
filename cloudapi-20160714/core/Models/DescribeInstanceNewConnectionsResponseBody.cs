@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeInstanceNewConnectionsResponseBody : TeaModel {
         /// <summary>
-        /// The list of new connections in the instance.
+        /// <para>The list of new connections in the instance.</para>
         /// </summary>
         [NameInMap("InstanceNewConnections")]
         [Validation(Required=false)]
@@ -21,14 +21,20 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeInstanceNewConnectionsResponseBodyInstanceNewConnectionsMonitorItem> MonitorItem { get; set; }
             public class DescribeInstanceNewConnectionsResponseBodyInstanceNewConnectionsMonitorItem : TeaModel {
                 /// <summary>
-                /// The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+                /// <para>The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-10-08T02:08:00Z</para>
                 /// </summary>
                 [NameInMap("ItemTime")]
                 [Validation(Required=false)]
                 public string ItemTime { get; set; }
 
                 /// <summary>
-                /// The number of new connections in the instance.
+                /// <para>The number of new connections in the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>16</para>
                 /// </summary>
                 [NameInMap("ItemValue")]
                 [Validation(Required=false)]
@@ -39,7 +45,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeAppSecurityRequest : TeaModel {
         /// <summary>
-        /// The ID of the app.
+        /// <para>The ID of the app.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>20112314518278</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -23,23 +25,31 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The tag of objects that match the rule. You can specify multiple tags.
+        /// <para>The tag of objects that match the rule. You can specify multiple tags.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Key， Value</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeAppSecurityRequestTag> Tag { get; set; }
         public class DescribeAppSecurityRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag.
+            /// <para>The key of the tag.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>app</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

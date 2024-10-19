@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteAppCodeRequest : TeaModel {
         /// <summary>
-        /// The application AppCode.
+        /// <para>The application AppCode.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0d13f021c5cd4997831a9717e75b0663</para>
         /// </summary>
         [NameInMap("AppCode")]
         [Validation(Required=false)]
         public string AppCode { get; set; }
 
         /// <summary>
-        /// The application ID.
+        /// <para>The application ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>111265074</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

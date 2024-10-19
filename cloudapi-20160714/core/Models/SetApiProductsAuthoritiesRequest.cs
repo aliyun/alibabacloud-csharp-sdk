@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetApiProductsAuthoritiesRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApiProductIds")]
         [Validation(Required=false)]
         public List<string> ApiProductIds { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>111385984</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

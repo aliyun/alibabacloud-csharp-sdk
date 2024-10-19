@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class CreateIntranetDomainRequest : TeaModel {
         /// <summary>
-        /// The custom domain name.
+        /// <para>The custom domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>927d50c0f2e54b359919923d908bb015</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

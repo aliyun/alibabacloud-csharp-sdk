@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SdkGenerateByAppForRegionResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>UEsDBBQACAAIADdwnFQAAAAAAAAAAAAAAAA2AAAAQ0FTREtfSkFWQV8xMjI3NDY2NjY0MzM0MTMzXzE2NTExMjU3MD......</para>
+        /// </summary>
         [NameInMap("DownloadLink")]
         [Validation(Required=false)]
         public string DownloadLink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>CE5722A6-AE78-4741-A9B0-6C817D360510</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

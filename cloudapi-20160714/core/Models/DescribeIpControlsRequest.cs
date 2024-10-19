@@ -10,38 +10,54 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeIpControlsRequest : TeaModel {
         /// <summary>
-        /// The ID of the ACL. The ID is unique.
+        /// <para>The ID of the ACL. The ID is unique.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7ea91319a34d48a09b5c9c871d9768b1</para>
         /// </summary>
         [NameInMap("IpControlId")]
         [Validation(Required=false)]
         public string IpControlId { get; set; }
 
         /// <summary>
-        /// The name of the ACL.
+        /// <para>The name of the ACL.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ACL test</para>
         /// </summary>
         [NameInMap("IpControlName")]
         [Validation(Required=false)]
         public string IpControlName { get; set; }
 
         /// <summary>
-        /// The type of the ACL. Valid values:
+        /// <para>The type of the ACL. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ALLOW</b>: a whitelist</description></item>
+        /// <item><description><b>REFUSE</b>: a blacklist</description></item>
+        /// </list>
         /// 
-        /// *   **ALLOW**: a whitelist
-        /// *   **REFUSE**: a blacklist
+        /// <b>Example:</b>
+        /// <para>ALLOW</para>
         /// </summary>
         [NameInMap("IpControlType")]
         [Validation(Required=false)]
         public string IpControlType { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1. Default value: 1.
+        /// <para>The number of the page to return. Pages start from page 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 100. Default value: 10.
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

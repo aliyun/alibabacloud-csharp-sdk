@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeSignaturesRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return. Pages start from page 1. Default value: 1.
+        /// <para>The number of the page to return. Pages start from page 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 100. Default value: 10.
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -28,14 +34,20 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The IDs of the keys to query.
+        /// <para>The IDs of the keys to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dd05f1c54d6749eda95f9fa6d491449a</para>
         /// </summary>
         [NameInMap("SignatureId")]
         [Validation(Required=false)]
         public string SignatureId { get; set; }
 
         /// <summary>
-        /// The names of the keys to query.
+        /// <para>The names of the keys to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>backendsignature</para>
         /// </summary>
         [NameInMap("SignatureName")]
         [Validation(Required=false)]

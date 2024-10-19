@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeDatasetItemInfoRequest : TeaModel {
         /// <summary>
-        /// The ID of the dataset.
+        /// <para>The ID of the dataset.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>62b91a790a693238********</para>
         /// </summary>
         [NameInMap("DatasetId")]
         [Validation(Required=false)]
         public string DatasetId { get; set; }
 
         /// <summary>
-        /// The ID of the data entry.
+        /// <para>The ID of the data entry.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5045****</para>
         /// </summary>
         [NameInMap("DatasetItemId")]
         [Validation(Required=false)]
@@ -30,7 +35,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The value of the data entry.
+        /// <para>The value of the data entry.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>106.43.XXX.XXX</para>
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

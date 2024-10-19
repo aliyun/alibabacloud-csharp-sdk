@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteAccessControlListRequest : TeaModel {
         /// <summary>
-        /// The ID of the access control policy.
+        /// <para>The ID of the access control policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>acl-uf6fpfdg3b5muska7uqem</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]

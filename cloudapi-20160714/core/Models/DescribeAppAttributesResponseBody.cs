@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeAppAttributesResponseBody : TeaModel {
         /// <summary>
-        /// The returned app information. It is an array that consists of AppAttribute data.
+        /// <para>The returned app information. It is an array that consists of AppAttribute data.</para>
         /// </summary>
         [NameInMap("Apps")]
         [Validation(Required=false)]
@@ -21,49 +21,67 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeAppAttributesResponseBodyAppsAppAttribute> AppAttribute { get; set; }
             public class DescribeAppAttributesResponseBodyAppsAppAttribute : TeaModel {
                 /// <summary>
-                /// The ID of the app.
+                /// <para>The ID of the app.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20112314518278</para>
                 /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public long? AppId { get; set; }
 
                 /// <summary>
-                /// The name of the app.
+                /// <para>The name of the app.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CreateApptest</para>
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// The creation time (UTC) of the app.
+                /// <para>The creation time (UTC) of the app.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2016-07-31T04:10:19Z</para>
                 /// </summary>
                 [NameInMap("CreatedTime")]
                 [Validation(Required=false)]
                 public string CreatedTime { get; set; }
 
                 /// <summary>
-                /// The description of the app.
+                /// <para>The description of the app.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>App test</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// 扩展信息
+                /// <para>扩展信息</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>110461946884</para>
                 /// </summary>
                 [NameInMap("Extend")]
                 [Validation(Required=false)]
                 public string Extend { get; set; }
 
                 /// <summary>
-                /// The modification time (UTC) of the app.
+                /// <para>The modification time (UTC) of the app.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2016-07-31T04:10:19Z</para>
                 /// </summary>
                 [NameInMap("ModifiedTime")]
                 [Validation(Required=false)]
                 public string ModifiedTime { get; set; }
 
                 /// <summary>
-                /// The tags.
+                /// <para>The tags.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -74,14 +92,20 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                     public List<DescribeAppAttributesResponseBodyAppsAppAttributeTagsTagInfo> TagInfo { get; set; }
                     public class DescribeAppAttributesResponseBodyAppsAppAttributeTagsTagInfo : TeaModel {
                         /// <summary>
-                        /// The key of the tag.
+                        /// <para>The key of the tag.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>appid</para>
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of the tag.
+                        /// <para>The value of the tag.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>123</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -96,28 +120,40 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8883AC74-259D-4C0B-99FC-0B7F9A588B2F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// <para>The total number of returned entries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

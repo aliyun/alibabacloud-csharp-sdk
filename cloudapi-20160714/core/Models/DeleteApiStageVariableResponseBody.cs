@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteApiStageVariableResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>03442A3D-3B7D-434C-8A95-A5FEB969B529</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

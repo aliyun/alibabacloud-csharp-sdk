@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiProductsByAppRequest : TeaModel {
         /// <summary>
-        /// The application ID.
+        /// <para>The application ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>110962435</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public long? AppId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1. Default value: 1.
+        /// <para>The number of the page to return. Pages start from page 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 10.
+        /// <para>The number of entries per page. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

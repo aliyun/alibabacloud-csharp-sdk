@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeAppsResponseBody : TeaModel {
         /// <summary>
-        /// The returned app information. It is an array consisting of AppItem data.
+        /// <para>The returned app information. It is an array consisting of AppItem data.</para>
         /// </summary>
         [NameInMap("Apps")]
         [Validation(Required=false)]
@@ -21,21 +21,30 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeAppsResponseBodyAppsAppItem> AppItem { get; set; }
             public class DescribeAppsResponseBodyAppsAppItem : TeaModel {
                 /// <summary>
-                /// The ID of the app.
+                /// <para>The ID of the app.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20112314518278</para>
                 /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public long? AppId { get; set; }
 
                 /// <summary>
-                /// The name of the app.
+                /// <para>The name of the app.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CreateApptest</para>
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// The description of the app.
+                /// <para>The description of the app.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>App test</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -46,28 +55,40 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// <para>The total number of returned entries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

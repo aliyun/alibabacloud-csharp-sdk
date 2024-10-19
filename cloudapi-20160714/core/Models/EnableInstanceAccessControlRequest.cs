@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class EnableInstanceAccessControlRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acl-bp11escro2et2tioscy52</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>black</para>
         /// </summary>
         [NameInMap("AclType")]
         [Validation(Required=false)]
@@ -28,7 +34,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string AddressIPVersion { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>apigateway-cn-v6419k43xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

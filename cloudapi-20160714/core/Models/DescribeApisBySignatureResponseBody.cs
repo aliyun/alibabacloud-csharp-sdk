@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApisBySignatureResponseBody : TeaModel {
         /// <summary>
-        /// The returned API information. It is an array consisting of ApiInfo data.
+        /// <para>The returned API information. It is an array consisting of ApiInfo data.</para>
         /// </summary>
         [NameInMap("ApiInfos")]
         [Validation(Required=false)]
@@ -21,69 +21,98 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApisBySignatureResponseBodyApiInfosApiInfo> ApiInfo { get; set; }
             public class DescribeApisBySignatureResponseBodyApiInfosApiInfo : TeaModel {
                 /// <summary>
-                /// The ID of the API.
+                /// <para>The ID of the API.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3b81fd160f5645e097cc8855d75a1cf6</para>
                 /// </summary>
                 [NameInMap("ApiId")]
                 [Validation(Required=false)]
                 public string ApiId { get; set; }
 
                 /// <summary>
-                /// The name of the API.
+                /// <para>The name of the API.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testapi</para>
                 /// </summary>
                 [NameInMap("ApiName")]
                 [Validation(Required=false)]
                 public string ApiName { get; set; }
 
                 /// <summary>
-                /// The binding time of the API.
+                /// <para>The binding time of the API.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2016-07-23T08:28:48Z</para>
                 /// </summary>
                 [NameInMap("BoundTime")]
                 [Validation(Required=false)]
                 public string BoundTime { get; set; }
 
                 /// <summary>
-                /// The description of the API.
+                /// <para>The description of the API.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the API group.
+                /// <para>The ID of the API group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0009db9c828549768a200320714b8930</para>
                 /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// The name of the group to which the API belongs.
+                /// <para>The name of the group to which the API belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mygroup</para>
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// The region where the API is located.
+                /// <para>The region where the API is located.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-qingdao</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The name of the runtime environment. Valid values:
+                /// <para>The name of the runtime environment. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>RELEASE</b></description></item>
+                /// <item><description><b>TEST</b></description></item>
+                /// </list>
                 /// 
-                /// *   **RELEASE**
-                /// *   **TEST**
+                /// <b>Example:</b>
+                /// <para>TEST</para>
                 /// </summary>
                 [NameInMap("StageName")]
                 [Validation(Required=false)]
                 public string StageName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the API is public. Valid values:
+                /// <para>Indicates whether the API is public. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>PUBLIC</b></description></item>
+                /// <item><description><b>PRIVATE</b></description></item>
+                /// </list>
                 /// 
-                /// *   **PUBLIC**
-                /// *   **PRIVATE**
+                /// <b>Example:</b>
+                /// <para>PUBLIC</para>
                 /// </summary>
                 [NameInMap("Visibility")]
                 [Validation(Required=false)]
@@ -94,28 +123,40 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// <para>The total number of returned entries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteSignatureRequest : TeaModel {
         /// <summary>
-        /// The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+        /// <para>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9abe3317-3e22-4957-ab9f-dd893d0ac956</para>
         /// </summary>
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of the key to be deleted.
+        /// <para>The ID of the key to be deleted.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dd05f1c54d6749eda95f9fa6d491449a</para>
         /// </summary>
         [NameInMap("SignatureId")]
         [Validation(Required=false)]

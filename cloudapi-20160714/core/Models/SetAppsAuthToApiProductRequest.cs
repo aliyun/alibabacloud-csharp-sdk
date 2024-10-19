@@ -10,19 +10,26 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetAppsAuthToApiProductRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>117b7a64a8b3f064eaa4a47ac62aac5e</para>
         /// </summary>
         [NameInMap("ApiProductId")]
         [Validation(Required=false)]
         public string ApiProductId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AppIds")]
         [Validation(Required=false)]
         public List<long?> AppIds { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2023-05-31T08:15:39Z</para>
+        /// </summary>
         [NameInMap("AuthValidTime")]
         [Validation(Required=false)]
         public string AuthValidTime { get; set; }

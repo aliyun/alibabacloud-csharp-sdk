@@ -10,30 +10,41 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeAppsByApiProductRequest : TeaModel {
         /// <summary>
-        /// The ID of the API product.
+        /// <para>The ID of the API product.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>117b7a64a8b3f064eaa4a47ac62aac5e</para>
         /// </summary>
         [NameInMap("ApiProductId")]
         [Validation(Required=false)]
         public string ApiProductId { get; set; }
 
         /// <summary>
-        /// The application name.
+        /// <para>The application name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testApp</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1. Default value: 1.
+        /// <para>The number of the page to return. Pages start from page 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Maximum value: 100. Default value: 10.
+        /// <para>The number of entries per page. Maximum value: 100. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

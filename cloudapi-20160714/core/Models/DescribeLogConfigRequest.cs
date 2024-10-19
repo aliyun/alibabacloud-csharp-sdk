@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeLogConfigRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>PROVIDER</para>
+        /// </summary>
         [NameInMap("LogType")]
         [Validation(Required=false)]
         public string LogType { get; set; }

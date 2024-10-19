@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyApiGroupVpcWhitelistRequest : TeaModel {
         /// <summary>
-        /// The ID of the API group.
+        /// <para>The ID of the API group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>9b80408147724ddab4c4e2703c6ca019</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -23,9 +25,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of the VPC instance.
+        /// <para>The ID of the VPC instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpc-bp11w979o2s9rcr962w25</para>
         /// </summary>
         [NameInMap("VpcIds")]
         [Validation(Required=false)]

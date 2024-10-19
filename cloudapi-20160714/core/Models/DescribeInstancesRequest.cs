@@ -10,25 +10,35 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeInstancesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether tag authorization is enabled.
+        /// <para>Specifies whether tag authorization is enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("EnableTagAuthorization")]
         [Validation(Required=false)]
         public bool? EnableTagAuthorization { get; set; }
 
         /// <summary>
-        /// The instance ID. If you do not specify this parameter, all instances are returned.
+        /// <para>The instance ID. If you do not specify this parameter, all instances are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>api-shared-vpc-001</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The language in which you want the description of the system policy to be returned. Valid values:
+        /// <para>The language in which you want the description of the system policy to be returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>ja: Japanese</description></item>
+        /// </list>
         /// 
-        /// *   en: English
-        /// *   zh: Chinese
-        /// *   ja: Japanese
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
@@ -39,21 +49,27 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The tag that is bound to the instance.
+        /// <para>The tag that is bound to the instance.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeInstancesRequestTag> Tag { get; set; }
         public class DescribeInstancesRequestTag : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>key1</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

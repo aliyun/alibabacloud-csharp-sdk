@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeBackendListRequest : TeaModel {
         /// <summary>
-        /// The name of the backend service. You can use \\* to perform fuzzy queries.
+        /// <para>The name of the backend service. You can use \* to perform fuzzy queries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("BackendName")]
         [Validation(Required=false)]
         public string BackendName { get; set; }
 
         /// <summary>
-        /// The type of the backend service.
+        /// <para>The type of the backend service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>HTTP</para>
         /// </summary>
         [NameInMap("BackendType")]
         [Validation(Required=false)]
         public string BackendType { get; set; }
 
         /// <summary>
-        /// The number of the current page.
+        /// <para>The number of the current page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -42,21 +54,27 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The list of the tag.
+        /// <para>The list of the tag.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeBackendListRequestTag> Tag { get; set; }
         public class DescribeBackendListRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag.
+            /// <para>The key of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test1</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

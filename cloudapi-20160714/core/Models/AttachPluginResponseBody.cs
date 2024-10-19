@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class AttachPluginResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EF924FE4-2EDD-4CD3-89EC-34E4708574E7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

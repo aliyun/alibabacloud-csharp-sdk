@@ -10,39 +10,52 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyModelRequest : TeaModel {
         /// <summary>
-        /// The description of the new model definition.
+        /// <para>The description of the new model definition.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Model Description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the API group to which the model belongs.
+        /// <para>The ID of the API group to which the model belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>30e792398d6c4569b04c0e53a3494381</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The name of the model.
+        /// <para>The name of the model.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("ModelName")]
         [Validation(Required=false)]
         public string ModelName { get; set; }
 
         /// <summary>
-        /// The new name of the model.
+        /// <para>The new name of the model.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NewTest</para>
         /// </summary>
         [NameInMap("NewModelName")]
         [Validation(Required=false)]
         public string NewModelName { get; set; }
 
         /// <summary>
-        /// The new definition of the model.
+        /// <para>The new definition of the model.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;type\&quot;:\&quot;object\&quot;,\&quot;properties\&quot;:{\&quot;id\&quot;:{\&quot;format\&quot;:\&quot;int64\&quot;,\&quot;maximum\&quot;:100,\&quot;exclusiveMaximum\&quot;:true,\&quot;type\&quot;:\&quot;integer\&quot;},\&quot;name\&quot;:{\&quot;maxLength\&quot;:10,\&quot;type\&quot;:\&quot;string\&quot;}}}</para>
         /// </summary>
         [NameInMap("Schema")]
         [Validation(Required=false)]

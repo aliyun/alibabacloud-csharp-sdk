@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetSignatureApisRequest : TeaModel {
         /// <summary>
-        /// The API IDs.
+        /// <para>The API IDs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3b81fd160f5645e097cc8855d75a1cf6,46fbb52840d146f186e38e8e70fc8c12</para>
         /// </summary>
         [NameInMap("ApiIds")]
         [Validation(Required=false)]
         public string ApiIds { get; set; }
 
         /// <summary>
-        /// The API group ID.
+        /// <para>The API group ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0009db9c828549768a200320714b8930</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -32,22 +36,27 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The signature ID.
+        /// <para>The signature ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dd05f1c54d6749eda95f9fa6d491449a</para>
         /// </summary>
         [NameInMap("SignatureId")]
         [Validation(Required=false)]
         public string SignatureId { get; set; }
 
         /// <summary>
-        /// The environment. Valid values:
+        /// <para>The environment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>RELEASE</b>: the production environment</description></item>
+        /// <item><description><b>PRE</b>: the staging environment</description></item>
+        /// <item><description><b>TEST</b>: the testing environment</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **RELEASE**: the production environment
-        /// *   **PRE**: the staging environment
-        /// *   **TEST**: the testing environment
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>TEST</para>
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

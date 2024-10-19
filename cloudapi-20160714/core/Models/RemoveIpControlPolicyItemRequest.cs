@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class RemoveIpControlPolicyItemRequest : TeaModel {
         /// <summary>
-        /// The ID of the ACL. The ID is unique.
+        /// <para>The ID of the ACL. The ID is unique.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>7ea91319a34d48a09b5c9c871d9768b1</para>
         /// </summary>
         [NameInMap("IpControlId")]
         [Validation(Required=false)]
         public string IpControlId { get; set; }
 
         /// <summary>
-        /// The ID of a policy. Separate multiple IDs with semicolons (;). A maximum of 100 IDs can be entered.
+        /// <para>The ID of a policy. Separate multiple IDs with semicolons (;). A maximum of 100 IDs can be entered.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>P151533572852362;P151533557750260</para>
         /// </summary>
         [NameInMap("PolicyItemIds")]
         [Validation(Required=false)]

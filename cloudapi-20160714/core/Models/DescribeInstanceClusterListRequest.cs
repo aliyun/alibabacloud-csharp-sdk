@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeInstanceClusterListRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>apigateway-cluster-hz-xxxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("InstanceClusterId")]
         [Validation(Required=false)]
         public string InstanceClusterId { get; set; }
 
         /// <summary>
-        /// The cluster name.
+        /// <para>The cluster name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-cluster</para>
         /// </summary>
         [NameInMap("InstanceClusterName")]
         [Validation(Required=false)]
         public string InstanceClusterName { get; set; }
 
         /// <summary>
-        /// The page number of the page to return.
+        /// <para>The page number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

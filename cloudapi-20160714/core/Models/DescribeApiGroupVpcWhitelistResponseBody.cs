@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiGroupVpcWhitelistResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BZ016</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC.
+        /// <para>The ID of the VPC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp11w979o2s9rcr962w25</para>
         /// </summary>
         [NameInMap("VpcIds")]
         [Validation(Required=false)]

@@ -10,18 +10,25 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribePluginTemplatesRequest : TeaModel {
         /// <summary>
-        /// The language that is used to return the description of the system policy. Valid values:
+        /// <para>The language that is used to return the description of the system policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en: English</description></item>
+        /// <item><description>zh-CN: Chinese.</description></item>
+        /// <item><description>ja: Japanese</description></item>
+        /// </list>
         /// 
-        /// *   en: English
-        /// *   zh-CN: Chinese.
-        /// *   ja: Japanese
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
 
         /// <summary>
-        /// The name of the plug-in.
+        /// <para>The name of the plug-in.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>jwtAuth</para>
         /// </summary>
         [NameInMap("PluginName")]
         [Validation(Required=false)]

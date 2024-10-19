@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class RemoveAccessControlListEntryResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>D1B18FFE-4A81-59D8-AA02-1817098977CD</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

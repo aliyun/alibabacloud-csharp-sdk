@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeMarketRemainsQuotaRequest : TeaModel {
         /// <summary>
-        /// The custom domain name.
+        /// <para>The custom domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>*.demo.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

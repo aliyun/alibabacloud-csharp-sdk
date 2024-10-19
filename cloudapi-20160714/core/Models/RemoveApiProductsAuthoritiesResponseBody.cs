@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class RemoveApiProductsAuthoritiesResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CEB6EC62-B6C7-5082-A45A-45A204724AC2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

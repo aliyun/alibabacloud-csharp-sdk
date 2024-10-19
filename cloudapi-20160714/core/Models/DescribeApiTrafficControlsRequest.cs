@@ -10,30 +10,41 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiTrafficControlsRequest : TeaModel {
         /// <summary>
-        /// The IDs of APIs that you want to query. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
+        /// <para>The IDs of APIs that you want to query. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123,234</para>
         /// </summary>
         [NameInMap("ApiIds")]
         [Validation(Required=false)]
         public string ApiIds { get; set; }
 
         /// <summary>
-        /// The ID of the API group that you want to query.
+        /// <para>The ID of the API group that you want to query.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0009db9c828549768a200320714b8930</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1. Default value: 1.
+        /// <para>The number of the page to return. Pages start from page 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 100. Default value: 10.
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -44,12 +55,15 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The runtime environment of the API. Valid values:
+        /// <para>The runtime environment of the API. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>RELEASE</b></description></item>
+        /// <item><description><b>TEST</b>: the test environment</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **RELEASE**
-        /// *   **TEST**: the test environment
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>RELEASE</para>
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

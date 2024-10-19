@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeAppSecuritiesResponseBody : TeaModel {
         /// <summary>
-        /// The associated security policy information.
+        /// <para>The associated security policy information.</para>
         /// </summary>
         [NameInMap("AppSecuritys")]
         [Validation(Required=false)]
@@ -21,35 +21,50 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeAppSecuritiesResponseBodyAppSecuritysAppSecurity> AppSecurity { get; set; }
             public class DescribeAppSecuritiesResponseBodyAppSecuritysAppSecurity : TeaModel {
                 /// <summary>
-                /// The application AppCode.
+                /// <para>The application AppCode.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>d2350ecd62c44cbfbe35a7f182e35105</para>
                 /// </summary>
                 [NameInMap("AppCode")]
                 [Validation(Required=false)]
                 public string AppCode { get; set; }
 
                 /// <summary>
-                /// The application AppKey.
+                /// <para>The application AppKey.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>34379343</para>
                 /// </summary>
                 [NameInMap("AppKey")]
                 [Validation(Required=false)]
                 public string AppKey { get; set; }
 
                 /// <summary>
-                /// The application AppSecret.
+                /// <para>The application AppSecret.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ea5291a7aff343769eb3139a2f6de8c9</para>
                 /// </summary>
                 [NameInMap("AppSecret")]
                 [Validation(Required=false)]
                 public string AppSecret { get; set; }
 
                 /// <summary>
-                /// The time when the AppKey was created.
+                /// <para>The time when the AppKey was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-09-14T18:50:59</para>
                 /// </summary>
                 [NameInMap("CreatedTime")]
                 [Validation(Required=false)]
                 public string CreatedTime { get; set; }
 
                 /// <summary>
-                /// The time when the AppSecret was last modified. The time is displayed in UTC.
+                /// <para>The time when the AppSecret was last modified. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2023-08-14T18:03:00+08:00</para>
                 /// </summary>
                 [NameInMap("ModifiedTime")]
                 [Validation(Required=false)]
@@ -60,7 +75,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EF924FE4-2EDD-4CD3-89EC-34E4708574E7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

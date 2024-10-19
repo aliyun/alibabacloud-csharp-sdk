@@ -10,18 +10,19 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class RemoveApiProductsAuthoritiesRequest : TeaModel {
         /// <summary>
-        /// The API products.
-        /// 
-        /// This parameter is required.
+        /// <para>The API products.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApiProductIds")]
         [Validation(Required=false)]
         public List<string> ApiProductIds { get; set; }
 
         /// <summary>
-        /// The application ID.
+        /// <para>The application ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>110982490</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

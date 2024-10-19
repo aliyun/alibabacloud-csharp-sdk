@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteAppRequest : TeaModel {
         /// <summary>
-        /// The ID of the application.
+        /// <para>The ID of the application.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>110840611</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -23,23 +25,31 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The tags. Up to 20 tags are allowed.
+        /// <para>The tags. Up to 20 tags are allowed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test2</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DeleteAppRequestTag> Tag { get; set; }
         public class DeleteAppRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag.
+            /// <para>The key of the tag.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>appname</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testapp</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

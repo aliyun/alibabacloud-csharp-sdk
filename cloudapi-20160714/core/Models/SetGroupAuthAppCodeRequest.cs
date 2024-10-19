@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetGroupAuthAppCodeRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AuthAppCode")]
         [Validation(Required=false)]
         public string AuthAppCode { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

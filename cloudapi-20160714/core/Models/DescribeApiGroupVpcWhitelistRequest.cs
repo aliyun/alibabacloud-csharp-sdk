@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiGroupVpcWhitelistRequest : TeaModel {
         /// <summary>
-        /// The ID of the API group.
+        /// <para>The ID of the API group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>f6c64214dc27400196eef954575d60d3</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

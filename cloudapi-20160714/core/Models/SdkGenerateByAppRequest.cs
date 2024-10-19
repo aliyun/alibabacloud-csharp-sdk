@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SdkGenerateByAppRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>110797019</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public long? AppId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>java</para>
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]

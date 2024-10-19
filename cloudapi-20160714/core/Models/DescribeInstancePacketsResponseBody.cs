@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeInstancePacketsResponseBody : TeaModel {
         /// <summary>
-        /// The list of inbound and outbound data packets in the instance.
+        /// <para>The list of inbound and outbound data packets in the instance.</para>
         /// </summary>
         [NameInMap("InstancePackets")]
         [Validation(Required=false)]
@@ -21,24 +21,34 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeInstancePacketsResponseBodyInstancePacketsMonitorItem> MonitorItem { get; set; }
             public class DescribeInstancePacketsResponseBodyInstancePacketsMonitorItem : TeaModel {
                 /// <summary>
-                /// The metric. Valid values:
+                /// <para>The metric. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>InstancePacketRX: inbound data packets</description></item>
+                /// <item><description>InstancePacketTX: outbound data packets</description></item>
+                /// </list>
                 /// 
-                /// *   InstancePacketRX: inbound data packets
-                /// *   InstancePacketTX: outbound data packets
+                /// <b>Example:</b>
+                /// <para>InstancePacketRX</para>
                 /// </summary>
                 [NameInMap("Item")]
                 [Validation(Required=false)]
                 public string Item { get; set; }
 
                 /// <summary>
-                /// The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+                /// <para>The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-05-24T10:14:53Z</para>
                 /// </summary>
                 [NameInMap("ItemTime")]
                 [Validation(Required=false)]
                 public string ItemTime { get; set; }
 
                 /// <summary>
-                /// The number of inbound and outbound data packets in the instance.
+                /// <para>The number of inbound and outbound data packets in the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("ItemValue")]
                 [Validation(Required=false)]
@@ -49,7 +59,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

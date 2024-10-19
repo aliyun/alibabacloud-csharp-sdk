@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteApiRequest : TeaModel {
         /// <summary>
-        /// The ID of the API.
+        /// <para>The ID of the API.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>d6f679aeb3be4b91b3688e887ca1fe16</para>
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public string ApiId { get; set; }
 
         /// <summary>
-        /// The ID of the API group.
+        /// <para>The ID of the API group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>08ae4aa0f95e4321849ee57f4e0b3077</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

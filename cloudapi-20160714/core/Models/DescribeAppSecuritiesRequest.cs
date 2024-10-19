@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeAppSecuritiesRequest : TeaModel {
         /// <summary>
-        /// The application ID.
+        /// <para>The application ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>110862931</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

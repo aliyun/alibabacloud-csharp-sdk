@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeDeployApiTaskRequest : TeaModel {
         /// <summary>
-        /// The task ID.
+        /// <para>The task ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>51524fb8f12846d694d0a1de9a0cf274</para>
         /// </summary>
         [NameInMap("OperationUid")]
         [Validation(Required=false)]

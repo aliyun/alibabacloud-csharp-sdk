@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteLogConfigRequest : TeaModel {
         /// <summary>
-        /// The log type. Valid values: **log** and **survey**.
+        /// <para>The log type. Valid values: <b>log</b> and <b>survey</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>log</para>
         /// </summary>
         [NameInMap("LogType")]
         [Validation(Required=false)]

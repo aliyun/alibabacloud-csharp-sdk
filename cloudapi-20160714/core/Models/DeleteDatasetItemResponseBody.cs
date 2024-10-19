@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteDatasetItemResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FF433E09-663A-5F5D-9DBA-A611********</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

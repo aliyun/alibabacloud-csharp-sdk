@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeAbolishApiTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the unpublishing operation.
+        /// <para>The ID of the unpublishing operation.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>fc54<em><em><b>dd4c4</b></em>ad7edd7</em>***39401</para>
         /// </summary>
         [NameInMap("OperationUid")]
         [Validation(Required=false)]

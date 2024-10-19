@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeInstanceHttpCodeResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status codes.
+        /// <para>The HTTP status codes.</para>
         /// </summary>
         [NameInMap("InstanceHttpCode")]
         [Validation(Required=false)]
@@ -21,14 +21,20 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeInstanceHttpCodeResponseBodyInstanceHttpCodeMonitorItem> MonitorItem { get; set; }
             public class DescribeInstanceHttpCodeResponseBodyInstanceHttpCodeMonitorItem : TeaModel {
                 /// <summary>
-                /// The HTTP status code returned.
+                /// <para>The HTTP status code returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>404</para>
                 /// </summary>
                 [NameInMap("ItemTime")]
                 [Validation(Required=false)]
                 public string ItemTime { get; set; }
 
                 /// <summary>
-                /// The corresponding value.
+                /// <para>The corresponding value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("ItemValue")]
                 [Validation(Required=false)]
@@ -39,7 +45,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AD00F8C0-311B-54A9-ADE2-2436771012DA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

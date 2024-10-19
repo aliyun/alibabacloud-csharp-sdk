@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeUpdateVpcInfoTaskRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7d341787517a47afaaef9cc1bdb7acce</para>
         /// </summary>
         [NameInMap("OperationUid")]
         [Validation(Required=false)]

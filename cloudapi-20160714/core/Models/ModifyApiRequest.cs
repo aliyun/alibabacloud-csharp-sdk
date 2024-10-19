@@ -10,58 +10,78 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyApiRequest : TeaModel {
         /// <summary>
-        /// The type of the two-way communication API. Valid values:
+        /// <para>The type of the two-way communication API. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>COMMON</b>: general APIs</description></item>
+        /// <item><description><b>REGISTER</b>: registered APIs</description></item>
+        /// <item><description><b>UNREGISTER</b>: unregistered APIs</description></item>
+        /// <item><description><b>NOTIFY</b>: downstream notification</description></item>
+        /// </list>
         /// 
-        /// *   **COMMON**: general APIs
-        /// *   **REGISTER**: registered APIs
-        /// *   **UNREGISTER**: unregistered APIs
-        /// *   **NOTIFY**: downstream notification
+        /// <b>Example:</b>
+        /// <para>HmacSHA256</para>
         /// </summary>
         [NameInMap("AllowSignatureMethod")]
         [Validation(Required=false)]
         public string AllowSignatureMethod { get; set; }
 
         /// <summary>
-        /// The ID of the API.
+        /// <para>The ID of the API.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>8afff6c8c4c6447abb035812e4d66b65</para>
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public string ApiId { get; set; }
 
         /// <summary>
-        /// The name of the API. The name must be unique within the API group. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (_).
+        /// <para>The name of the API. The name must be unique within the API group. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (_).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ApiName</para>
         /// </summary>
         [NameInMap("ApiName")]
         [Validation(Required=false)]
         public string ApiName { get; set; }
 
         /// <summary>
-        /// The ID of the backend service.
+        /// <para>The ID of the backend service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DEFAULT</para>
         /// </summary>
         [NameInMap("AppCodeAuthType")]
         [Validation(Required=false)]
         public string AppCodeAuthType { get; set; }
 
         /// <summary>
-        /// The configuration items of API requests sent by the consumer to API Gateway.
+        /// <para>The configuration items of API requests sent by the consumer to API Gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>APP</para>
         /// </summary>
         [NameInMap("AuthType")]
         [Validation(Required=false)]
         public string AuthType { get; set; }
 
         /// <summary>
-        /// Configuration Mode
+        /// <para>Configuration Mode</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("BackendEnable")]
         [Validation(Required=false)]
         public bool? BackendEnable { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable backend services.
+        /// <para>Specifies whether to enable backend services.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0d105f80a8f340408bd34954d4e4ff22</para>
         /// </summary>
         [NameInMap("BackendId")]
         [Validation(Required=false)]
@@ -72,19 +92,26 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string ConstantParameters { get; set; }
 
         /// <summary>
-        /// The description of the API. The description can be up to 180 characters in length.
+        /// <para>The description of the API. The description can be up to 180 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Api description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The AppCode authentication type supported. Valid values:
+        /// <para>The AppCode authentication type supported. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DEFAULT: supported after being made available in Alibaba Cloud Marketplace</description></item>
+        /// <item><description>DISABLE: not supported</description></item>
+        /// <item><description>HEADER : supported only in the Header parameter</description></item>
+        /// <item><description>HEADER_QUERY: supported in the Header or Query parameter</description></item>
+        /// </list>
         /// 
-        /// *   DEFAULT: supported after being made available in Alibaba Cloud Marketplace
-        /// *   DISABLE: not supported
-        /// *   HEADER : supported only in the Header parameter
-        /// *   HEADER_QUERY: supported in the Header or Query parameter
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DisableInternet")]
         [Validation(Required=false)]
@@ -99,36 +126,51 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string FailResultSample { get; set; }
 
         /// <summary>
-        /// *   Specifies whether to set DisableInternet to **true** to limit API calls to within the VPC.
-        /// *   If you set DisableInternet to **false**, the limit if lifted.
+        /// <list type="bullet">
+        /// <item><description>Specifies whether to set DisableInternet to <b>true</b> to limit API calls to within the VPC.</description></item>
+        /// <item><description>If you set DisableInternet to <b>false</b>, the limit if lifted.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you do not set this parameter, the original value is used.</para>
+        /// </remarks>
         /// 
-        /// >  If you do not set this parameter, the original value is used.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ForceNonceCheck")]
         [Validation(Required=false)]
         public bool? ForceNonceCheck { get; set; }
 
         /// <summary>
-        /// The ID of the API group.
+        /// <para>The ID of the API group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>927d50c0f2e54b359919923d908bb015</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The client-side request signature method of the API. Valid values:
+        /// <para>The client-side request signature method of the API. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>HmacSHA256</description></item>
+        /// <item><description>HmacSHA1,HmacSHA256</description></item>
+        /// </list>
         /// 
-        /// *   HmacSHA256
-        /// *   HmacSHA1,HmacSHA256
+        /// <b>Example:</b>
+        /// <para>{\&quot;OpenIdApiType\&quot;:\&quot;IDTOKEN\&quot;,\&quot;PublicKey\&quot;:\&quot;lzlj1573\&quot;,\&quot;IdTokenParamName\&quot;:\&quot;\&quot;,\&quot;PublicKeyId\&quot;:\&quot;lzljorders\&quot;}</para>
         /// </summary>
         [NameInMap("OpenIdConnectConfig")]
         [Validation(Required=false)]
         public string OpenIdConnectConfig { get; set; }
 
         /// <summary>
-        /// The configuration items of API requests sent by API Gateway to the backend service.
+        /// <para>The configuration items of API requests sent by API Gateway to the backend service.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>{&quot;RequestProtocol&quot;:&quot;HTTP&quot;,&quot;RequestHttpMethod&quot;:&quot;GET&quot;,&quot;RequestPath&quot;:&quot;/v3/getUserTest/[userId]&quot;,&quot;BodyFormat&quot;:&quot;FORM&quot;,&quot;PostBodyDescription&quot;:&quot;&quot;}</para>
         /// </summary>
         [NameInMap("RequestConfig")]
         [Validation(Required=false)]
@@ -139,8 +181,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string RequestParameters { get; set; }
 
         /// <summary>
-        /// *   Specifies whether to set **ForceNonceCheck** to **true** to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.
-        /// *   If you set **ForceNonceCheck** to **false**, the check is not performed. If you do not set this parameter, the original value is used.
+        /// <list type="bullet">
+        /// <item><description>Specifies whether to set <b>ForceNonceCheck</b> to <b>true</b> to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.</description></item>
+        /// <item><description>If you set <b>ForceNonceCheck</b> to <b>false</b>, the check is not performed. If you do not set this parameter, the original value is used.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("ResultBodyModel")]
         [Validation(Required=false)]
@@ -155,7 +202,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string ResultSample { get; set; }
 
         /// <summary>
-        /// The sample response from the backend service.
+        /// <para>The sample response from the backend service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>HTML</para>
         /// </summary>
         [NameInMap("ResultType")]
         [Validation(Required=false)]
@@ -166,9 +216,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The parameters of API requests sent by the consumer to API Gateway.
+        /// <para>The parameters of API requests sent by the consumer to API Gateway.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>{&quot;ServiceProtocol&quot;:&quot;HTTP&quot;,&quot;ServiceHttpMethod&quot;:&quot;GET&quot;,&quot;ServiceAddress&quot;:&quot;<a href="http://www.customerdomain.com%22,%22ServiceTimeout%22:%221000%22,%22ServicePath%22:%22/v3/getUserTest/%5BuserId%5D%22%7D">http://www.customerdomain.com&quot;,&quot;ServiceTimeout&quot;:&quot;1000&quot;,&quot;ServicePath&quot;:&quot;/v3/getUserTest/[userId]&quot;}</a></para>
         /// </summary>
         [NameInMap("ServiceConfig")]
         [Validation(Required=false)]
@@ -187,19 +239,25 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SystemParameters { get; set; }
 
         /// <summary>
-        /// Specifies whether the API is public. Valid values:
+        /// <para>Specifies whether the API is public. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PUBLIC</b>: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.</description></item>
+        /// <item><description><b>PRIVATE</b>: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **PUBLIC**: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.
-        /// *   **PRIVATE**: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>PUBLIC</para>
         /// </summary>
         [NameInMap("Visibility")]
         [Validation(Required=false)]
         public string Visibility { get; set; }
 
         /// <summary>
-        /// The returned description of the API.
+        /// <para>The returned description of the API.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>COMMON</para>
         /// </summary>
         [NameInMap("WebSocketApiType")]
         [Validation(Required=false)]

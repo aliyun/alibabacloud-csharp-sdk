@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteBackendModelResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the operation.
+        /// <para>The ID of the operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>f7834d74be4e41aa8e607b0fafae9b33</para>
         /// </summary>
         [NameInMap("OperationId")]
         [Validation(Required=false)]
         public string OperationId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D1B18FFE-4A81-59D8-AA02-1817098977CD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

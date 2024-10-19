@@ -10,11 +10,15 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeZonesRequest : TeaModel {
         /// <summary>
-        /// The language in which you want to use to return the description of the system policy. Valid values:
+        /// <para>The language in which you want to use to return the description of the system policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en: English</description></item>
+        /// <item><description>zh-CN: Chinese</description></item>
+        /// <item><description>ja: Japanese</description></item>
+        /// </list>
         /// 
-        /// *   en: English
-        /// *   zh-CN: Chinese
-        /// *   ja: Japanese
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]

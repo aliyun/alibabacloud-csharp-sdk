@@ -14,9 +14,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of the throttling policy.
+        /// <para>The ID of the throttling policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>tf123456</para>
         /// </summary>
         [NameInMap("TrafficControlId")]
         [Validation(Required=false)]

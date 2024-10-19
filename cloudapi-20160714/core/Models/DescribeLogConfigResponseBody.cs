@@ -17,18 +17,34 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeLogConfigResponseBodyLogInfosLogInfo> LogInfo { get; set; }
             public class DescribeLogConfigResponseBodyLogInfosLogInfo : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>PROVIDER</para>
+                /// </summary>
                 [NameInMap("LogType")]
                 [Validation(Required=false)]
                 public string LogType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
+                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>slsstore</para>
+                /// </summary>
                 [NameInMap("SlsLogStore")]
                 [Validation(Required=false)]
                 public string SlsLogStore { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>slsproject</para>
+                /// </summary>
                 [NameInMap("SlsProject")]
                 [Validation(Required=false)]
                 public string SlsProject { get; set; }
@@ -37,6 +53,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>E3BC2706-ABDB-5B64-A12F-08DFD9E3F339</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

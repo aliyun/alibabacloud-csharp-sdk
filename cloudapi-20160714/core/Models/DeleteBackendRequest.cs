@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteBackendRequest : TeaModel {
         /// <summary>
-        /// The ID of the backend service.
+        /// <para>The ID of the backend service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>27be0dd9ebbc467b9e86c0d250d0b92e</para>
         /// </summary>
         [NameInMap("BackendId")]
         [Validation(Required=false)]

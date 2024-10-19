@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeAccessControlListAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the access control policy.
+        /// <para>The ID of the access control policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acl-3nsohdozz0ru8fi5onwz1</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteDatasetRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>a25a6589b2584ff490e891cc********</para>
         /// </summary>
         [NameInMap("DatasetId")]
         [Validation(Required=false)]

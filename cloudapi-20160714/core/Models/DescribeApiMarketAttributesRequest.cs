@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiMarketAttributesRequest : TeaModel {
         /// <summary>
-        /// The ID of the API.
+        /// <para>The ID of the API.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1f9b5e9ba80943099cac52e040b7e160</para>
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public string ApiId { get; set; }
 
         /// <summary>
-        /// The ID of the API group.
+        /// <para>The ID of the API group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>b693252f3f19445e9a01dac177c4454c</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

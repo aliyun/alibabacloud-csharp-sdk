@@ -10,119 +10,156 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class CreateInstanceRequest : TeaModel {
         /// <summary>
-        /// Whether to automatically pay when renewing. Value:
+        /// <para>Whether to automatically pay when renewing. Value:</para>
+        /// <list type="bullet">
+        /// <item><description>True: Automatic payment. Please ensure that your account has sufficient balance.</description></item>
+        /// <item><description>False: Console manual payment. The specific operation is to log in to the console, select Expenses in the upper right corner, enter the Expense Center, and find the target order in Order Management to make payment.</description></item>
+        /// </list>
+        /// <para>Default value: False.</para>
         /// 
-        /// - True: Automatic payment. Please ensure that your account has sufficient balance.
-        /// - False: Console manual payment. The specific operation is to log in to the console, select Expenses in the upper right corner, enter the Expense Center, and find the target order in Order Management to make payment.
-        /// 
-        /// Default value: False.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. Valid values: PostPaid (pay-as-you-go) and PrePaid (subscription).
+        /// <para>The billing method of the instance. Valid values: PostPaid (pay-as-you-go) and PrePaid (subscription).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>PostPaid
+        /// PrePaid</para>
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The subscription duration of the instance.
+        /// <para>The subscription duration of the instance.</para>
+        /// <list type="bullet">
+        /// <item><description>If PricingCycle is set to <b>Month</b>, set this parameter to an integer ranges from <b>1</b> to <b>9</b>.</description></item>
+        /// <item><description>If PricingCycle is set to <b>Year</b>, set this parameter to an integer ranges from <b>1</b> to <b>3</b>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is valid and required only if the ChargeType parameter is set to <b>PrePaid</b>.</para>
+        /// </remarks>
         /// 
-        /// *   If PricingCycle is set to **Month**, set this parameter to an integer ranges from **1** to **9**.
-        /// *   If PricingCycle is set to **Year**, set this parameter to an integer ranges from **1** to **3**.
-        /// 
-        /// >  This parameter is valid and required only if the ChargeType parameter is set to **PrePaid**.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
         /// <summary>
-        /// The HTTPS policy.
+        /// <para>The HTTPS policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>HTTPS2_TLS1_2</para>
         /// </summary>
         [NameInMap("HttpsPolicy")]
         [Validation(Required=false)]
         public string HttpsPolicy { get; set; }
 
         /// <summary>
-        /// The CIDR block of the VPC integration instance.
+        /// <para>The CIDR block of the VPC integration instance.</para>
+        /// <list type="bullet">
+        /// <item><description>192.168.0.0/16</description></item>
+        /// <item><description>172.16.0.0/12</description></item>
+        /// </list>
+        /// <para>**</para>
+        /// <para><b>Warning</b> The VPC integration instance is connected to the specified CIDR block. Plan your CIDR block carefully to prevent overlaps with the private IP addresses of cloud services.</para>
+        /// <remarks>
+        /// <para> This parameter is in invitational preview and not available for public use.</para>
+        /// </remarks>
         /// 
-        /// *   192.168.0.0/16
-        /// *   172.16.0.0/12
-        /// 
-        /// **
-        /// 
-        /// **Warning** The VPC integration instance is connected to the specified CIDR block. Plan your CIDR block carefully to prevent overlaps with the private IP addresses of cloud services.
-        /// 
-        /// >  This parameter is in invitational preview and not available for public use.
+        /// <b>Example:</b>
+        /// <para>172.16.0.0/12</para>
         /// </summary>
         [NameInMap("InstanceCidr")]
         [Validation(Required=false)]
         public string InstanceCidr { get; set; }
 
         /// <summary>
-        /// Instance Name
+        /// <para>Instance Name</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ApigatewayInstance</para>
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// Instance specifications
+        /// <para>Instance specifications</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>api.s1.small</para>
         /// </summary>
         [NameInMap("InstanceSpec")]
         [Validation(Required=false)]
         public string InstanceSpec { get; set; }
 
         /// <summary>
-        /// The type of the dedicated instance. Valid values:
+        /// <para>The type of the dedicated instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>vpc_connect: a VPC integration instance</description></item>
+        /// <item><description>normal: a conventional dedicated instance</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is in invitational preview and not available for public use.</para>
+        /// </remarks>
         /// 
-        /// *   vpc_connect: a VPC integration instance
-        /// *   normal: a conventional dedicated instance
-        /// 
-        /// >  This parameter is in invitational preview and not available for public use.
+        /// <b>Example:</b>
+        /// <para>vpc_connect</para>
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The unit of the subscription duration of the subscription instance. Valid values:
+        /// <para>The unit of the subscription duration of the subscription instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>year</b></description></item>
+        /// <item><description><b>month</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is required if the ChargeType parameter is set to Prepaid.</para>
+        /// </remarks>
         /// 
-        /// *   **year**
-        /// *   **month**
-        /// 
-        /// >  This parameter is required if the ChargeType parameter is set to Prepaid.
+        /// <b>Example:</b>
+        /// <para>Month</para>
         /// </summary>
         [NameInMap("PricingCycle")]
         [Validation(Required=false)]
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// The tags that you want to add to the instance.
+        /// <para>The tags that you want to add to the instance.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateInstanceRequestTag> Tag { get; set; }
         public class CreateInstanceRequestTag : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test1</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v1</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -131,62 +168,84 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// Passwords are used to prevent duplicate requests from being submitted, please do not reuse them.
+        /// <para>Passwords are used to prevent duplicate requests from being submitted, please do not reuse them.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c20d86c4-1eb3-4d0b-afe9-c586df1e2136</para>
         /// </summary>
         [NameInMap("Token")]
         [Validation(Required=false)]
         public string Token { get; set; }
 
         /// <summary>
-        /// The ID of the user\\"s VPC to be connected by the VPC integration instance.
+        /// <para>The ID of the user\&quot;s VPC to be connected by the VPC integration instance.</para>
+        /// <remarks>
+        /// <para> This parameter is in invitational preview and not available for public use.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is in invitational preview and not available for public use.
+        /// <b>Example:</b>
+        /// <para>vpc-m5eo7khlb4h4f8y9egsdg</para>
         /// </summary>
         [NameInMap("UserVpcId")]
         [Validation(Required=false)]
         public string UserVpcId { get; set; }
 
         /// <summary>
-        /// The zone in which you want to create the instance. This parameter is required for a conventional dedicated instance and optional for a virtual private cloud (VPC) integration instance.
+        /// <para>The zone in which you want to create the instance. This parameter is required for a conventional dedicated instance and optional for a virtual private cloud (VPC) integration instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing-MAZ3(c,e)</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// The network information when the instance is a VPC integration instance, such as the zone, vSwitch, and security group.
-        /// 
-        /// >  This parameter is in invitational preview and not available for public use.
+        /// <para>The network information when the instance is a VPC integration instance, such as the zone, vSwitch, and security group.</para>
+        /// <remarks>
+        /// <para> This parameter is in invitational preview and not available for public use.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("ZoneVSwitchSecurityGroup")]
         [Validation(Required=false)]
         public List<CreateInstanceRequestZoneVSwitchSecurityGroup> ZoneVSwitchSecurityGroup { get; set; }
         public class CreateInstanceRequestZoneVSwitchSecurityGroup : TeaModel {
             /// <summary>
-            /// The IPv4 CIDR block for the vSwitch.
+            /// <para>The IPv4 CIDR block for the vSwitch.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.9.0/24</para>
             /// </summary>
             [NameInMap("CidrBlock")]
             [Validation(Required=false)]
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// The ID of the security group. Services in the same security group can access each other.
+            /// <para>The ID of the security group. Services in the same security group can access each other.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sg-2ze2ql9nozv8q7kmlt6e</para>
             /// </summary>
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// The vSwitch ID.
+            /// <para>The vSwitch ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vsw-0xi349n11cxogmvm866tb</para>
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// The zone ID.
+            /// <para>The zone ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-beijing-c</para>
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]

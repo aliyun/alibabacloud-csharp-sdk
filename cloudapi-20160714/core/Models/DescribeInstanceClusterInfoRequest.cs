@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeInstanceClusterInfoRequest : TeaModel {
         /// <summary>
-        /// The name of the dedicated instance cluster.
+        /// <para>The name of the dedicated instance cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testvpc</para>
         /// </summary>
         [NameInMap("InstanceClusterName")]
         [Validation(Required=false)]
