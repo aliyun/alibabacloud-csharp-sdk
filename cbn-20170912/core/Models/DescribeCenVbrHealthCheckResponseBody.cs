@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenVbrHealthCheckResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B8C9702E-304A-4E18-AC89-BE2D91C2C176</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The health check configuration of the VBR.
+        /// <para>The health check configuration of the VBR.</para>
         /// </summary>
         [NameInMap("VbrHealthChecks")]
         [Validation(Required=false)]
@@ -49,71 +61,100 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck> VbrHealthCheck { get; set; }
             public class DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck : TeaModel {
                 /// <summary>
-                /// The ID of the CEN instance.
+                /// <para>The ID of the CEN instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cen-6hpdgj7ni6pz1k****</para>
                 /// </summary>
                 [NameInMap("CenId")]
                 [Validation(Required=false)]
                 public string CenId { get; set; }
 
                 /// <summary>
-                /// The description.
+                /// <para>The description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>healthcheck_description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The time interval at which probe packets are sent during the health check. Unit: seconds.
+                /// <para>The time interval at which probe packets are sent during the health check. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("HealthCheckInterval")]
                 [Validation(Required=false)]
                 public int? HealthCheckInterval { get; set; }
 
                 /// <summary>
-                /// Indicates whether probing is enabled. Valid values:
+                /// <para>Indicates whether probing is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>true</b>: Probing is enabled.</para>
+                /// <pre><c>If you enable probing, the system does not switch to another route if the detected route is not reachable.
+                /// </c></pre>
+                /// </description></item>
+                /// <item><description><para><b>false</b>: Probing is disabled.</para>
+                /// <pre><c>  If probing is disabled and a redundant route is specified, the system switches to the redundant route when the detected route is not reachable.
+                /// </c></pre>
+                /// </description></item>
+                /// </list>
                 /// 
-                /// *   **true**: Probing is enabled.
-                /// 
-                ///         If you enable probing, the system does not switch to another route if the detected route is not reachable.
-                /// 
-                /// *   **false**: Probing is disabled.
-                /// 
-                ///           If probing is disabled and a redundant route is specified, the system switches to the redundant route when the detected route is not reachable.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("HealthCheckOnly")]
                 [Validation(Required=false)]
                 public bool? HealthCheckOnly { get; set; }
 
                 /// <summary>
-                /// The source IP address of the health check.
+                /// <para>The source IP address of the health check.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>172.XX.XX.1</para>
                 /// </summary>
                 [NameInMap("HealthCheckSourceIp")]
                 [Validation(Required=false)]
                 public string HealthCheckSourceIp { get; set; }
 
                 /// <summary>
-                /// The destination IP address of the health check.
+                /// <para>The destination IP address of the health check.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.XX.XX.1</para>
                 /// </summary>
                 [NameInMap("HealthCheckTargetIp")]
                 [Validation(Required=false)]
                 public string HealthCheckTargetIp { get; set; }
 
                 /// <summary>
-                /// The number of probe packets that are sent during the health check.
+                /// <para>The number of probe packets that are sent during the health check.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>8</para>
                 /// </summary>
                 [NameInMap("HealthyThreshold")]
                 [Validation(Required=false)]
                 public int? HealthyThreshold { get; set; }
 
                 /// <summary>
-                /// The VBR ID.
+                /// <para>The VBR ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vbr-bp1kznorjeembsuhl****</para>
                 /// </summary>
                 [NameInMap("VbrInstanceId")]
                 [Validation(Required=false)]
                 public string VbrInstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the region where the VBR is deployed.
+                /// <para>The ID of the region where the VBR is deployed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("VbrInstanceRegionId")]
                 [Validation(Required=false)]

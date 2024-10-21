@@ -10,47 +10,58 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ModifyFlowLogAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the CEN instance.
+        /// <para>The ID of the CEN instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cen-7qthudw0ll6jmc****</para>
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
-        /// 
-        /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-42665544****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The new description of the flow log.
+        /// <para>The new description of the flow log.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</para>
         /// 
-        /// The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.
+        /// <b>Example:</b>
+        /// <para>myFlowlog</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the flow log.
+        /// <para>The ID of the flow log.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>flowlog-m5evbtbpt****</para>
         /// </summary>
         [NameInMap("FlowLogId")]
         [Validation(Required=false)]
         public string FlowLogId { get; set; }
 
         /// <summary>
-        /// The new name of the flow log.
+        /// <para>The new name of the flow log.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
         /// 
-        /// The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.
+        /// <b>Example:</b>
+        /// <para>myFlowlog</para>
         /// </summary>
         [NameInMap("FlowLogName")]
         [Validation(Required=false)]
@@ -65,11 +76,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the flow log is deployed.
+        /// <para>The ID of the region where the flow log is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

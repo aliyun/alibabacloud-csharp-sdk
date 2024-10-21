@@ -10,24 +10,34 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateFlowlogResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the flow log.
+        /// <para>The ID of the flow log.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>flowlog-m5evbtbpt****</para>
         /// </summary>
         [NameInMap("FlowLogId")]
         [Validation(Required=false)]
         public string FlowLogId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>54B48E3D-DF70-471B-AA93-08E683A1B457</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call is successful. Valid values:
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><b>false</b>: no</description></item>
+        /// </list>
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

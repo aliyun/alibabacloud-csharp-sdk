@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenInterRegionBandwidthLimitsResponseBody : TeaModel {
         /// <summary>
-        /// A list of inter-region connections.
+        /// <para>A list of inter-region connections.</para>
         /// </summary>
         [NameInMap("CenInterRegionBandwidthLimits")]
         [Validation(Required=false)]
@@ -21,64 +21,89 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit> CenInterRegionBandwidthLimit { get; set; }
             public class DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit : TeaModel {
                 /// <summary>
-                /// The maximum bandwidth of the inter-region connection. Unit: Mbit/s.
+                /// <para>The maximum bandwidth of the inter-region connection. Unit: Mbit/s.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("BandwidthLimit")]
                 [Validation(Required=false)]
                 public long? BandwidthLimit { get; set; }
 
                 /// <summary>
-                /// The ID of the bandwidth plan.
+                /// <para>The ID of the bandwidth plan.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cenbwp-uenczwb592fnvv****</para>
                 /// </summary>
                 [NameInMap("BandwidthPackageId")]
                 [Validation(Required=false)]
                 public string BandwidthPackageId { get; set; }
 
                 /// <summary>
-                /// The bandwidth allocation method. Valid values:
+                /// <para>The bandwidth allocation method. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>BandwidthPackage</b>: allocates bandwidth from a bandwidth plan.</description></item>
+                /// <item><description><b>DataTransfer</b>: bandwidth is billed based on the pay-by-data-transfer metering method.</description></item>
+                /// </list>
                 /// 
-                /// *   **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
-                /// *   **DataTransfer**: bandwidth is billed based on the pay-by-data-transfer metering method.
+                /// <b>Example:</b>
+                /// <para>BandwidthPackage</para>
                 /// </summary>
                 [NameInMap("BandwidthType")]
                 [Validation(Required=false)]
                 public string BandwidthType { get; set; }
 
                 /// <summary>
-                /// The CEN instance ID.
+                /// <para>The CEN instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cen-pfa6ugf3xl0qsd****</para>
                 /// </summary>
                 [NameInMap("CenId")]
                 [Validation(Required=false)]
                 public string CenId { get; set; }
 
                 /// <summary>
-                /// The IDs of the local and peer regions.
+                /// <para>The IDs of the local and peer regions.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>china_china</para>
                 /// </summary>
                 [NameInMap("GeographicSpanId")]
                 [Validation(Required=false)]
                 public string GeographicSpanId { get; set; }
 
                 /// <summary>
-                /// The ID of the local region.
+                /// <para>The ID of the local region.</para>
+                /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
                 /// 
-                /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
+                /// <b>Example:</b>
+                /// <para>ccn-cn-shanghai</para>
                 /// </summary>
                 [NameInMap("LocalRegionId")]
                 [Validation(Required=false)]
                 public string LocalRegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the peer region.
+                /// <para>The ID of the peer region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("OppositeRegionId")]
                 [Validation(Required=false)]
                 public string OppositeRegionId { get; set; }
 
                 /// <summary>
-                /// The bandwidth status of the inter-region connection. Valid values:
+                /// <para>The bandwidth status of the inter-region connection. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Active</b></description></item>
+                /// <item><description><b>Modifying</b></description></item>
+                /// </list>
                 /// 
-                /// *   **Active**
-                /// *   **Modifying**
+                /// <b>Example:</b>
+                /// <para>Active</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -89,28 +114,40 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7A30C665-8766-5AAA-9274-C97380E2D850</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

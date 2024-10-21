@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class UnroutePrivateZoneInCenToVpcRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("AccessRegionId")]
         [Validation(Required=false)]
         public string AccessRegionId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cen-7qthudw0ll6jmc****</para>
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]

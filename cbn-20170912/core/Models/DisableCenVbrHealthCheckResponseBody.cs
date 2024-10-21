@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DisableCenVbrHealthCheckResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A278B8A6-A5B8-4FDE-9F70-95F0F6A1D68A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

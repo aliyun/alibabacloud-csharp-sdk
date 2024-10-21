@@ -10,19 +10,25 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class UpdateCenInterRegionTrafficQosPolicyAttributeRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run. Valid values:
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -45,27 +51,33 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The new description of the QoS policy.
+        /// <para>The new description of the QoS policy.</para>
+        /// <para>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</para>
         /// 
-        /// The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>desctest</para>
         /// </summary>
         [NameInMap("TrafficQosPolicyDescription")]
         [Validation(Required=false)]
         public string TrafficQosPolicyDescription { get; set; }
 
         /// <summary>
-        /// The ID of the QoS policy.
+        /// <para>The ID of the QoS policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>qos-eczzew0v1kzrb5****</para>
         /// </summary>
         [NameInMap("TrafficQosPolicyId")]
         [Validation(Required=false)]
         public string TrafficQosPolicyId { get; set; }
 
         /// <summary>
-        /// The new name of the QoS policy.
+        /// <para>The new name of the QoS policy.</para>
+        /// <para>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</para>
         /// 
-        /// The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>nametest</para>
         /// </summary>
         [NameInMap("TrafficQosPolicyName")]
         [Validation(Required=false)]

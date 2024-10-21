@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class RemoveTraficMatchRuleFromTrafficMarkingPolicyResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6DF9A765-BCD2-5C7E-8C32-C35C8A361A39</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

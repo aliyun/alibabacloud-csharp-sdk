@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterRouteTablesRequest : TeaModel {
         /// <summary>
-        /// The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. Valid values:
+        /// <para>The token that determines the start point of the query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If this is your first query or no subsequent query is to be sent, ignore this parameter.</description></item>
+        /// <item><description>If a subsequent query is to be sent, set the value to the value of <b>NextToken</b> that is returned from the last call.</description></item>
+        /// </list>
         /// 
-        /// *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
-        /// *   If a subsequent query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
+        /// <b>Example:</b>
+        /// <para>dd20****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -43,17 +50,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The features of the route table.
+        /// <para>The features of the route table.</para>
         /// </summary>
         [NameInMap("RouteTableOptions")]
         [Validation(Required=false)]
         public ListTransitRouterRouteTablesRequestRouteTableOptions RouteTableOptions { get; set; }
         public class ListTransitRouterRouteTablesRequestRouteTableOptions : TeaModel {
             /// <summary>
-            /// Specifies whether to enable equal-cost multi-path (ECMP) routing. Valid values:
+            /// <para>Specifies whether to enable equal-cost multi-path (ECMP) routing. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>disable</b>: disables ECMP routing If you disable ECMP routing, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</description></item>
+            /// <item><description><b>enable</b>: enables ECMP routing. If you enable ECMP routing, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</description></item>
+            /// </list>
             /// 
-            /// *   **disable**: disables ECMP routing If you disable ECMP routing, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
-            /// *   **enable**: enables ECMP routing. If you enable ECMP routing, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+            /// <b>Example:</b>
+            /// <para>disable</para>
             /// </summary>
             [NameInMap("MultiRegionECMP")]
             [Validation(Required=false)]
@@ -62,31 +73,32 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The information about the tags.
-        /// 
-        /// You can specify at most 20 tags in each call.
+        /// <para>The information about the tags.</para>
+        /// <para>You can specify at most 20 tags in each call.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTransitRouterRouteTablesRequestTag> Tag { get; set; }
         public class ListTransitRouterRouteTablesRequestTag : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify at most 20 tag keys.</para>
             /// 
-            /// The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-            /// 
-            /// You can specify at most 20 tag keys.
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// <para>The tag value can be 0 to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</para>
             /// 
-            /// The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-            /// 
-            /// Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -95,48 +107,64 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The ID of the Enterprise Edition transit router.
+        /// <para>The ID of the Enterprise Edition transit router.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tr-uf654ttymmljlvh2x****</para>
         /// </summary>
         [NameInMap("TransitRouterId")]
         [Validation(Required=false)]
         public string TransitRouterId { get; set; }
 
         /// <summary>
-        /// The ID of the route table.
+        /// <para>The ID of the route table.</para>
+        /// <para>You can query multiple route tables in each call. Maximum value of <b>N</b>: <b>20</b>.</para>
         /// 
-        /// You can query multiple route tables in each call. Maximum value of **N**: **20**.
+        /// <b>Example:</b>
+        /// <para>vtb-bp1l8awdb4iuo9uwu****</para>
         /// </summary>
         [NameInMap("TransitRouterRouteTableIds")]
         [Validation(Required=false)]
         public List<string> TransitRouterRouteTableIds { get; set; }
 
         /// <summary>
-        /// The name of the route table.
+        /// <para>The name of the route table.</para>
+        /// <para>You can query multiple route tables in each call. Maximum value of <b>N</b>: <b>20</b>.</para>
+        /// <remarks>
+        /// <para>If you set both <b>TransitRouterRouteTableNames.N</b> and <b>TransitRouterRouteTableIds.N</b>, make sure that the specified name and ID belong to the same route table.</para>
+        /// </remarks>
         /// 
-        /// You can query multiple route tables in each call. Maximum value of **N**: **20**.
-        /// 
-        /// > If you set both **TransitRouterRouteTableNames.N** and **TransitRouterRouteTableIds.N**, make sure that the specified name and ID belong to the same route table.
+        /// <b>Example:</b>
+        /// <para>testname</para>
         /// </summary>
         [NameInMap("TransitRouterRouteTableNames")]
         [Validation(Required=false)]
         public List<string> TransitRouterRouteTableNames { get; set; }
 
         /// <summary>
-        /// The status of the route table. Valid values:
+        /// <para>The status of the route table. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Creating</b>: The route table is being created.</description></item>
+        /// <item><description><b>Deleting</b>: The route table is being deleted.</description></item>
+        /// <item><description><b>Active</b>: The route table is available.</description></item>
+        /// </list>
         /// 
-        /// *   **Creating**: The route table is being created.
-        /// *   **Deleting**: The route table is being deleted.
-        /// *   **Active**: The route table is available.
+        /// <b>Example:</b>
+        /// <para>Active</para>
         /// </summary>
         [NameInMap("TransitRouterRouteTableStatus")]
         [Validation(Required=false)]
         public string TransitRouterRouteTableStatus { get; set; }
 
         /// <summary>
-        /// The type of the route table. Valid values:
+        /// <para>The type of the route table. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Custom</b>: a custom route table</description></item>
+        /// <item><description><b>System</b>: the default route table</description></item>
+        /// </list>
         /// 
-        /// *   **Custom**: a custom route table
-        /// *   **System**: the default route table
+        /// <b>Example:</b>
+        /// <para>Custom</para>
         /// </summary>
         [NameInMap("TransitRouterRouteTableType")]
         [Validation(Required=false)]

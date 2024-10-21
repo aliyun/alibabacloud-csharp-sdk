@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeFlowlogsResponseBody : TeaModel {
         /// <summary>
-        /// The information about the flow log.
+        /// <para>The information about the flow log.</para>
         /// </summary>
         [NameInMap("FlowLogs")]
         [Validation(Required=false)]
@@ -21,37 +21,51 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<DescribeFlowlogsResponseBodyFlowLogsFlowLog> FlowLog { get; set; }
             public class DescribeFlowlogsResponseBodyFlowLogsFlowLog : TeaModel {
                 /// <summary>
-                /// The ID of the Cloud Enterprise Network (CEN) instance.
+                /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cen-7qthudw0ll6jmc****</para>
                 /// </summary>
                 [NameInMap("CenId")]
                 [Validation(Required=false)]
                 public string CenId { get; set; }
 
                 /// <summary>
-                /// The time when the flow log was created.
+                /// <para>The time when the flow log was created.</para>
+                /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
                 /// 
-                /// The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+                /// <b>Example:</b>
+                /// <para>2021-07-24T13:00:52Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The description of the flow log.
+                /// <para>The description of the flow log.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>myFlowlog</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the flow log.
+                /// <para>The ID of the flow log.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>flowlog-m5evbtbpt****</para>
                 /// </summary>
                 [NameInMap("FlowLogId")]
                 [Validation(Required=false)]
                 public string FlowLogId { get; set; }
 
                 /// <summary>
-                /// The name of the flow log.
+                /// <para>The name of the flow log.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>myFlowlog</para>
                 /// </summary>
                 [NameInMap("FlowLogName")]
                 [Validation(Required=false)]
@@ -62,7 +76,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string FlowLogVersion { get; set; }
 
                 /// <summary>
-                /// The time window for collecting log data. Unit: seconds. Valid values: **60** or **600** Default value: **600**.
+                /// <para>The time window for collecting log data. Unit: seconds. Valid values: <b>60</b> or <b>600</b> Default value: <b>600</b>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>60</para>
                 /// </summary>
                 [NameInMap("Interval")]
                 [Validation(Required=false)]
@@ -73,38 +90,51 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string LogFormatString { get; set; }
 
                 /// <summary>
-                /// The Logstore that stores the captured traffic data.
+                /// <para>The Logstore that stores the captured traffic data.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>FlowLogStore</para>
                 /// </summary>
                 [NameInMap("LogStoreName")]
                 [Validation(Required=false)]
                 public string LogStoreName { get; set; }
 
                 /// <summary>
-                /// The name of the project that stores the captured traffic data.
+                /// <para>The name of the project that stores the captured traffic data.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>FlowLogProject</para>
                 /// </summary>
                 [NameInMap("ProjectName")]
                 [Validation(Required=false)]
                 public string ProjectName { get; set; }
 
                 /// <summary>
-                /// The region ID of the flow log.
+                /// <para>The region ID of the flow log.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The status of the flow log. Valid values:
+                /// <para>The status of the flow log. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Active</b>: The flow log is enabled.</description></item>
+                /// <item><description><b>Inactive</b>: The flow log is disabled.</description></item>
+                /// </list>
                 /// 
-                /// *   **Active**: The flow log is enabled.
-                /// *   **Inactive**: The flow log is disabled.
+                /// <b>Example:</b>
+                /// <para>Active</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// A list of tags.
+                /// <para>A list of tags.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -115,14 +145,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     public List<DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag> Tag { get; set; }
                     public class DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// <para>The tag key.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>TagKey</para>
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// <para>The tag value.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>TagValue</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -133,7 +169,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The ID of the network instance connection
+                /// <para>The ID of the network instance connection</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>tr-attach-5x4o4ynzuqbv6g****</para>
                 /// </summary>
                 [NameInMap("TransitRouterAttachmentId")]
                 [Validation(Required=false)]
@@ -148,38 +187,54 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F7DDDC17-FA06-4AC2-8F35-59D2470FCFC1</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call is successful. Valid values:
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><b>false</b>: no</description></item>
+        /// </list>
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

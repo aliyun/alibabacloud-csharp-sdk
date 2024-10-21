@@ -8,14 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
-    public class RefreshTransitRouteTableAggregationRequest : TeaModel {
+    public class ModifyTrafficMatchRuleToTrafficMarkingPolicyRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>02fb3da4-130e-11e9-8e44-001****</para>
+        /// <para>123e4567-e89b-12d3-a456-42665544****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -37,21 +45,37 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.168.53.0/24</para>
+        /// <para>tm-u9nxup5kww5po8****</para>
         /// </summary>
-        [NameInMap("TransitRouteTableAggregationCidr")]
+        [NameInMap("TrafficMarkingPolicyId")]
         [Validation(Required=false)]
-        public string TransitRouteTableAggregationCidr { get; set; }
+        public string TrafficMarkingPolicyId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>descriptiontest</para>
+        /// </summary>
+        [NameInMap("TrafficMatchRuleDescription")]
+        [Validation(Required=false)]
+        public string TrafficMatchRuleDescription { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vtb-iq8qgruq1ry8jc7vt****</para>
+        /// <para>tm-rule-fa9kgq1e90rmhc****</para>
         /// </summary>
-        [NameInMap("TransitRouteTableId")]
+        [NameInMap("TrafficMatchRuleId")]
         [Validation(Required=false)]
-        public string TransitRouteTableId { get; set; }
+        public string TrafficMatchRuleId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>nametest</para>
+        /// </summary>
+        [NameInMap("TrafficMatchRuleName")]
+        [Validation(Required=false)]
+        public string TrafficMatchRuleName { get; set; }
 
     }
 

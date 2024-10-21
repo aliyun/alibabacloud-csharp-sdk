@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class AssociateTransitRouterAttachmentWithRouteTableResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4EC47282-1B74-4534-BD0E-403F3EE64CAF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

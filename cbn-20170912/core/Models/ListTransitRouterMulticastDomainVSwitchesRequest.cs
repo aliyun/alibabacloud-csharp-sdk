@@ -10,16 +10,27 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterMulticastDomainVSwitchesRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cen-44m0p68spvlrqq****</para>
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -45,7 +56,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<string> VSwitchIds { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-p0wr1cd4fcuxy3ui0****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

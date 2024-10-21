@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenRegionDomainRouteEntriesResponseBody : TeaModel {
         /// <summary>
-        /// A list of route entries.
+        /// <para>A list of route entries.</para>
         /// </summary>
         [NameInMap("CenRouteEntries")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry> CenRouteEntry { get; set; }
             public class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry : TeaModel {
                 /// <summary>
-                /// The AS paths of the route.
+                /// <para>The AS paths of the route.</para>
                 /// </summary>
                 [NameInMap("AsPaths")]
                 [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The routing policy that the routes match in the outbound direction.
+                /// <para>The routing policy that the routes match in the outbound direction.</para>
                 /// </summary>
                 [NameInMap("CenOutRouteMapRecords")]
                 [Validation(Required=false)]
@@ -45,14 +45,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     public List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecordsCenOutRouteMapRecord> CenOutRouteMapRecord { get; set; }
                     public class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecordsCenOutRouteMapRecord : TeaModel {
                         /// <summary>
-                        /// The ID of the region where the routing policy is applied.
+                        /// <para>The ID of the region where the routing policy is applied.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>ccn-cn-shanghai</para>
                         /// </summary>
                         [NameInMap("RegionId")]
                         [Validation(Required=false)]
                         public string RegionId { get; set; }
 
                         /// <summary>
-                        /// The ID of the routing policy.
+                        /// <para>The ID of the routing policy.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>cenrmap-dbarzidzp7ek4k****</para>
                         /// </summary>
                         [NameInMap("RouteMapId")]
                         [Validation(Required=false)]
@@ -63,7 +69,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The routing policy that the routes match in the inbound direction.
+                /// <para>The routing policy that the routes match in the inbound direction.</para>
                 /// </summary>
                 [NameInMap("CenRouteMapRecords")]
                 [Validation(Required=false)]
@@ -74,14 +80,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     public List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord> CenRouteMapRecord { get; set; }
                     public class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord : TeaModel {
                         /// <summary>
-                        /// The ID of the region where the routing policy is applied.
+                        /// <para>The ID of the region where the routing policy is applied.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>cn-hangzhou</para>
                         /// </summary>
                         [NameInMap("RegionId")]
                         [Validation(Required=false)]
                         public string RegionId { get; set; }
 
                         /// <summary>
-                        /// The ID of the routing policy.
+                        /// <para>The ID of the routing policy.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>cenrmap-cz5axczdxb7yfu****</para>
                         /// </summary>
                         [NameInMap("RouteMapId")]
                         [Validation(Required=false)]
@@ -92,7 +104,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The communities of the route.
+                /// <para>The communities of the route.</para>
                 /// </summary>
                 [NameInMap("Communities")]
                 [Validation(Required=false)]
@@ -105,75 +117,102 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The destination CIDR block of the route.
+                /// <para>The destination CIDR block of the route.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.168.1.0/24</para>
                 /// </summary>
                 [NameInMap("DestinationCidrBlock")]
                 [Validation(Required=false)]
                 public string DestinationCidrBlock { get; set; }
 
                 /// <summary>
-                /// The ID of the instance specified as the next hop in the route.
+                /// <para>The ID of the instance specified as the next hop in the route.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-bp1j8728mm6pweeod****</para>
                 /// </summary>
                 [NameInMap("NextHopInstanceId")]
                 [Validation(Required=false)]
                 public string NextHopInstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the region to which the network instance specified as the next hop in the route belongs.
+                /// <para>The ID of the region to which the network instance specified as the next hop in the route belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("NextHopRegionId")]
                 [Validation(Required=false)]
                 public string NextHopRegionId { get; set; }
 
                 /// <summary>
-                /// The type of the instance specified as the next hop in the route. Valid values:
+                /// <para>The type of the instance specified as the next hop in the route. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
+                /// <item><description><b>VBR</b>: virtual border router (VBR)</description></item>
+                /// <item><description><b>CCN</b>: Cloud Connect Network (CCN) instance</description></item>
+                /// <item><description><b>local_service</b>: system route. No next hop is specified.</description></item>
+                /// </list>
                 /// 
-                /// *   **VPC**: virtual private cloud (VPC)
-                /// *   **VBR**: virtual border router (VBR)
-                /// *   **CCN**: Cloud Connect Network (CCN) instance
-                /// *   **local_service**: system route. No next hop is specified.
+                /// <b>Example:</b>
+                /// <para>VPC</para>
                 /// </summary>
                 [NameInMap("NextHopType")]
                 [Validation(Required=false)]
                 public string NextHopType { get; set; }
 
                 /// <summary>
-                /// The route priority.
+                /// <para>The route priority.</para>
+                /// <para>A smaller value indicates a higher priority.</para>
                 /// 
-                /// A smaller value indicates a higher priority.
+                /// <b>Example:</b>
+                /// <para>50</para>
                 /// </summary>
                 [NameInMap("Preference")]
                 [Validation(Required=false)]
                 public int? Preference { get; set; }
 
                 /// <summary>
-                /// The route status. Valid values:
+                /// <para>The route status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Active</b>: available</description></item>
+                /// <item><description><b>Candidate</b>: standby</description></item>
+                /// <item><description><b>Rejected</b>: rejected</description></item>
+                /// <item><description><b>Prohibited</b>: prohibited</description></item>
+                /// </list>
                 /// 
-                /// *   **Active**: available
-                /// *   **Candidate**: standby
-                /// *   **Rejected**: rejected
-                /// *   **Prohibited**: prohibited
+                /// <b>Example:</b>
+                /// <para>Active</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// Indicates whether the route can be advertised to other regions. Valid values:
+                /// <para>Indicates whether the route can be advertised to other regions. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Active</b>: The route can be advertised to other regions.</description></item>
+                /// <item><description><b>Prohibited</b>: The route cannot be advertised to other regions.</description></item>
+                /// </list>
                 /// 
-                /// *   **Active**: The route can be advertised to other regions.
-                /// *   **Prohibited**: The route cannot be advertised to other regions.
+                /// <b>Example:</b>
+                /// <para>Active</para>
                 /// </summary>
                 [NameInMap("ToOtherRegionStatus")]
                 [Validation(Required=false)]
                 public string ToOtherRegionStatus { get; set; }
 
                 /// <summary>
-                /// The route type. Valid values:
+                /// <para>The route type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>CEN</b>: route that is advertised through CEN</description></item>
+                /// <item><description><b>Custom</b>: custom route</description></item>
+                /// <item><description><b>System</b>: system route</description></item>
+                /// </list>
                 /// 
-                /// *   **CEN**: route that is advertised through CEN
-                /// *   **Custom**: custom route
-                /// *   **System**: system route
+                /// <b>Example:</b>
+                /// <para>CEN</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -184,28 +223,40 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>004E99FB-E996-5777-888E-BA1D8F215407</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

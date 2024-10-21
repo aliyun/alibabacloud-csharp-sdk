@@ -10,20 +10,23 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteCenRouteMapRequest : TeaModel {
         /// <summary>
-        /// The ID of the Cloud Enterprise Network (CEN) instance.
+        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cen-7qthudw0ll6jm****</para>
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the routing policy is applied.
+        /// <para>The ID of the region in which the routing policy is applied.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("CenRegionId")]
         [Validation(Required=false)]
@@ -46,9 +49,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the routing policy.
+        /// <para>The ID of the routing policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cenrmap-abcdedfghij****</para>
         /// </summary>
         [NameInMap("RouteMapId")]
         [Validation(Required=false)]

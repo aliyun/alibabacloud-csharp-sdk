@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateCenInterRegionTrafficQosQueueResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>qos-queue-irqhi8k5fdyuu5****</para>
+        /// </summary>
         [NameInMap("QosQueueId")]
         [Validation(Required=false)]
         public string QosQueueId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>845F66F6-5C27-53A1-9428-B859086237B2</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

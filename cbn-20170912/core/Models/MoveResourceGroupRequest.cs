@@ -10,30 +10,39 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class MoveResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
-        /// 
-        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>123e456****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run. Valid values:
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false:</b> performs a dry run and sends the request.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   **false:** performs a dry run and sends the request.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which you want to move the CEN instance or bandwidth plan.
+        /// <para>The ID of the resource group to which you want to move the CEN instance or bandwidth plan.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rg-aekzqqurtfg****</para>
         /// </summary>
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
@@ -48,9 +57,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the resource.
+        /// <para>The ID of the resource.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cen-nye53d7p3hzyu4****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -65,12 +76,15 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Valid values:
+        /// <para>The type of the resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>CEN</b>: CEN instance</description></item>
+        /// <item><description><b>bandwidthpackage</b>: bandwidth plan</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **CEN**: CEN instance
-        /// *   **bandwidthpackage**: bandwidth plan
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cen</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

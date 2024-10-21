@@ -10,94 +10,125 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTrafficMarkingPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned on each page.
+        /// <para>The number of entries returned on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query.
+        /// <para>The token that determines the start point of the query.</para>
+        /// <list type="bullet">
+        /// <item><description>If <b>NextToken</b> was not returned in the previous query, it indicates that no additional results exist.</description></item>
+        /// <item><description>If <b>NextToken</b> was returned in the previous query, specify the value to obtain the next set of results.</description></item>
+        /// </list>
         /// 
-        /// *   If **NextToken** was not returned in the previous query, it indicates that no additional results exist.
-        /// *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>699989E4-64A0-5F78-8B93-CDB32D98971F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// <para>The number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The information about the traffic marking policy.
+        /// <para>The information about the traffic marking policy.</para>
         /// </summary>
         [NameInMap("TrafficMarkingPolicies")]
         [Validation(Required=false)]
         public List<ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPolicies> TrafficMarkingPolicies { get; set; }
         public class ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPolicies : TeaModel {
             /// <summary>
-            /// The Differentiated Service Code Point (DSCP) value of the traffic marking policy.
+            /// <para>The Differentiated Service Code Point (DSCP) value of the traffic marking policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("MarkingDscp")]
             [Validation(Required=false)]
             public int? MarkingDscp { get; set; }
 
             /// <summary>
-            /// The priority of the traffic marking policy.
+            /// <para>The priority of the traffic marking policy.</para>
+            /// <para>A lower value indicates a higher priority.</para>
             /// 
-            /// A lower value indicates a higher priority.
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
             /// <summary>
-            /// The description of the traffic marking policy.
+            /// <para>The description of the traffic marking policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>desctest</para>
             /// </summary>
             [NameInMap("TrafficMarkingPolicyDescription")]
             [Validation(Required=false)]
             public string TrafficMarkingPolicyDescription { get; set; }
 
             /// <summary>
-            /// The ID of the traffic marking policy.
+            /// <para>The ID of the traffic marking policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tm-iz5egnyitxiroq****</para>
             /// </summary>
             [NameInMap("TrafficMarkingPolicyId")]
             [Validation(Required=false)]
             public string TrafficMarkingPolicyId { get; set; }
 
             /// <summary>
-            /// The name of the traffic marking policy.
+            /// <para>The name of the traffic marking policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>nametest</para>
             /// </summary>
             [NameInMap("TrafficMarkingPolicyName")]
             [Validation(Required=false)]
             public string TrafficMarkingPolicyName { get; set; }
 
             /// <summary>
-            /// The status of the traffic marking policy. Valid values:
+            /// <para>The status of the traffic marking policy. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Creating</b>: The policy is being created.</description></item>
+            /// <item><description><b>Active</b>: The policy is available.</description></item>
+            /// <item><description><b>Modifying</b>: The policy is being modified.</description></item>
+            /// <item><description><b>Deleting</b>: The policy is being deleted.</description></item>
+            /// </list>
             /// 
-            /// *   **Creating**: The policy is being created.
-            /// *   **Active**: The policy is available.
-            /// *   **Modifying**: The policy is being modified.
-            /// *   **Deleting**: The policy is being deleted.
+            /// <b>Example:</b>
+            /// <para>Creating</para>
             /// </summary>
             [NameInMap("TrafficMarkingPolicyStatus")]
             [Validation(Required=false)]
             public string TrafficMarkingPolicyStatus { get; set; }
 
             /// <summary>
-            /// The traffic classification rules.
+            /// <para>The traffic classification rules.</para>
             /// </summary>
             [NameInMap("TrafficMatchRules")]
             [Validation(Required=false)]
@@ -108,78 +139,105 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string AddressFamily { get; set; }
 
                 /// <summary>
-                /// The destination CIDR block that is used to match packets.
+                /// <para>The destination CIDR block that is used to match packets.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.168.120.0/24</para>
                 /// </summary>
                 [NameInMap("DstCidr")]
                 [Validation(Required=false)]
                 public string DstCidr { get; set; }
 
                 /// <summary>
-                /// The destination port range used to match data packets.
+                /// <para>The destination port range used to match data packets.</para>
                 /// </summary>
                 [NameInMap("DstPortRange")]
                 [Validation(Required=false)]
                 public List<int?> DstPortRange { get; set; }
 
                 /// <summary>
-                /// The DSCP value used to match data packets.
+                /// <para>The DSCP value used to match data packets.</para>
+                /// <remarks>
+                /// <para> If the value of the <b>MatchDscp</b> parameter is -1, data packets are considered a match regardless of the DSCP value.</para>
+                /// </remarks>
                 /// 
-                /// >  If the value of the **MatchDscp** parameter is -1, data packets are considered a match regardless of the DSCP value.
+                /// <b>Example:</b>
+                /// <para>6</para>
                 /// </summary>
                 [NameInMap("MatchDscp")]
                 [Validation(Required=false)]
                 public int? MatchDscp { get; set; }
 
                 /// <summary>
-                /// The protocol that is used to match packets.
+                /// <para>The protocol that is used to match packets.</para>
+                /// <remarks>
+                /// <para> Traffic marking policies support multiple protocols. For more information, see the documentation of CEN.</para>
+                /// </remarks>
                 /// 
-                /// >  Traffic marking policies support multiple protocols. For more information, see the documentation of CEN.
+                /// <b>Example:</b>
+                /// <para>HTTP</para>
                 /// </summary>
                 [NameInMap("Protocol")]
                 [Validation(Required=false)]
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// The source CIDR block that is used to match packets.
+                /// <para>The source CIDR block that is used to match packets.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.168.10.0/24</para>
                 /// </summary>
                 [NameInMap("SrcCidr")]
                 [Validation(Required=false)]
                 public string SrcCidr { get; set; }
 
                 /// <summary>
-                /// The source port range used to match data packets.
+                /// <para>The source port range used to match data packets.</para>
                 /// </summary>
                 [NameInMap("SrcPortRange")]
                 [Validation(Required=false)]
                 public List<int?> SrcPortRange { get; set; }
 
                 /// <summary>
-                /// The description of the traffic classification rule.
+                /// <para>The description of the traffic classification rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>desctest</para>
                 /// </summary>
                 [NameInMap("TrafficMatchRuleDescription")]
                 [Validation(Required=false)]
                 public string TrafficMatchRuleDescription { get; set; }
 
                 /// <summary>
-                /// The ID of the traffic classification rule.
+                /// <para>The ID of the traffic classification rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>tm-rule-fa9kgq1e90rmhc****</para>
                 /// </summary>
                 [NameInMap("TrafficMatchRuleId")]
                 [Validation(Required=false)]
                 public string TrafficMatchRuleId { get; set; }
 
                 /// <summary>
-                /// The name of the traffic classification rule.
+                /// <para>The name of the traffic classification rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>nametest</para>
                 /// </summary>
                 [NameInMap("TrafficMatchRuleName")]
                 [Validation(Required=false)]
                 public string TrafficMatchRuleName { get; set; }
 
                 /// <summary>
-                /// The status of the traffic classification rule. Valid values:
+                /// <para>The status of the traffic classification rule. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Creating</b>: The rule is being created.</description></item>
+                /// <item><description><b>Active</b>: The rule is available.</description></item>
+                /// <item><description><b>Deleting</b>: The rule is being deleted.</description></item>
+                /// </list>
                 /// 
-                /// *   **Creating**: The rule is being created.
-                /// *   **Active**: The rule is available.
-                /// *   **Deleting**: The rule is being deleted.
+                /// <b>Example:</b>
+                /// <para>Creating</para>
                 /// </summary>
                 [NameInMap("TrafficMatchRuleStatus")]
                 [Validation(Required=false)]
@@ -188,7 +246,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             }
 
             /// <summary>
-            /// The ID of the transit router.
+            /// <para>The ID of the transit router.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tr-ccni***</para>
             /// </summary>
             [NameInMap("TransitRouterId")]
             [Validation(Required=false)]

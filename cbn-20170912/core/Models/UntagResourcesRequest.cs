@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class UntagResourcesRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
@@ -21,12 +25,19 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cen-7qthudw0ll6jmc****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -41,12 +52,19 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cen</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>FinanceDept</para>
+        /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public List<string> TagKey { get; set; }

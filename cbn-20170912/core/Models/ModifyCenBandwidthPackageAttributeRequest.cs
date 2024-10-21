@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ModifyCenBandwidthPackageAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the bandwidth plan.
+        /// <para>The ID of the bandwidth plan.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cenbwp-4c2zaavbvh5fx****</para>
         /// </summary>
         [NameInMap("CenBandwidthPackageId")]
         [Validation(Required=false)]
         public string CenBandwidthPackageId { get; set; }
 
         /// <summary>
-        /// The new description of the bandwidth plan.
+        /// <para>The new description of the bandwidth plan.</para>
+        /// <para>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</para>
         /// 
-        /// The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>Bandwidth Plans</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The new name of the bandwidth plan.
+        /// <para>The new name of the bandwidth plan.</para>
+        /// <para>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</para>
         /// 
-        /// The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

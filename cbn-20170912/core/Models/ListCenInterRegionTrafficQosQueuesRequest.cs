@@ -24,17 +24,24 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
+        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <list type="bullet">
+        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
+        /// <item><description>If a value of <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</description></item>
+        /// </list>
         /// 
-        /// *   If **NextToken** is empty, no next page exists.
-        /// *   If a value of **NextToken** is returned, the value indicates the token that is used for the next query.
+        /// <b>Example:</b>
+        /// <para>2ca1ed1573cb****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -57,46 +64,62 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the QoS policy.
+        /// <para>The ID of the QoS policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>qos-rnghap5gc8155x****</para>
         /// </summary>
         [NameInMap("TrafficQosPolicyId")]
         [Validation(Required=false)]
         public string TrafficQosPolicyId { get; set; }
 
         /// <summary>
-        /// The description of the QoS queue.
+        /// <para>The description of the QoS queue.</para>
+        /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</para>
         /// 
-        /// This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.
+        /// <b>Example:</b>
+        /// <para>qosQueueDescription</para>
         /// </summary>
         [NameInMap("TrafficQosQueueDescription")]
         [Validation(Required=false)]
         public string TrafficQosQueueDescription { get; set; }
 
         /// <summary>
-        /// The ID of the queue.
+        /// <para>The ID of the queue.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>qos-queue-siakjb2nn9gz5z****</para>
         /// </summary>
         [NameInMap("TrafficQosQueueId")]
         [Validation(Required=false)]
         public string TrafficQosQueueId { get; set; }
 
         /// <summary>
-        /// The name of the QoS queue.
+        /// <para>The name of the QoS queue.</para>
+        /// <para>The name must be 1 to 128 characters in length, and cannot start with http:// or https://.</para>
         /// 
-        /// The name must be 1 to 128 characters in length, and cannot start with http:// or https://.
+        /// <b>Example:</b>
+        /// <para>qosQueueName</para>
         /// </summary>
         [NameInMap("TrafficQosQueueName")]
         [Validation(Required=false)]
         public string TrafficQosQueueName { get; set; }
 
         /// <summary>
-        /// The ID of the inter-region connection.
+        /// <para>The ID of the inter-region connection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tr-attach-a6p8voaodog5c0****</para>
         /// </summary>
         [NameInMap("TransitRouterAttachmentId")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentId { get; set; }
 
         /// <summary>
-        /// The ID of the transit router.
+        /// <para>The ID of the transit router.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tr-bp1rmwxnk221e3fas****</para>
         /// </summary>
         [NameInMap("TransitRouterId")]
         [Validation(Required=false)]

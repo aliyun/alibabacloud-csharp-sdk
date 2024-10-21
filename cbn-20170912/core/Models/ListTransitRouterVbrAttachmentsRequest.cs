@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterVbrAttachmentsRequest : TeaModel {
         /// <summary>
-        /// The IDs of the CEN instances.
+        /// <para>The IDs of the CEN instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cen-j3jzhw1zpau2km****</para>
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **20**.
+        /// <para>The number of entries to return on each page. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dd20****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -39,9 +48,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the Enterprise Edition transit router.
+        /// <para>The region ID of the Enterprise Edition transit router.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -56,31 +67,32 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The information about the tags.
-        /// 
-        /// You can specify at most 20 tags in each call.
+        /// <para>The information about the tags.</para>
+        /// <para>You can specify at most 20 tags in each call.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTransitRouterVbrAttachmentsRequestTag> Tag { get; set; }
         public class ListTransitRouterVbrAttachmentsRequestTag : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify at most 20 tag keys.</para>
             /// 
-            /// The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-            /// 
-            /// You can specify at most 20 tag keys.
+            /// <b>Example:</b>
+            /// <para>tagtest</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// <para>The tag value can be 0 to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</para>
             /// 
-            /// The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-            /// 
-            /// Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+            /// <b>Example:</b>
+            /// <para>tagtest</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -89,14 +101,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The ID of the VBR connection.
+        /// <para>The ID of the VBR connection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tr-attach-oyf70wfuorwx87****</para>
         /// </summary>
         [NameInMap("TransitRouterAttachmentId")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentId { get; set; }
 
         /// <summary>
-        /// The ID of the Enterprise Edition transit router.
+        /// <para>The ID of the Enterprise Edition transit router.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tr-bp1su1ytdxtataupl****</para>
         /// </summary>
         [NameInMap("TransitRouterId")]
         [Validation(Required=false)]

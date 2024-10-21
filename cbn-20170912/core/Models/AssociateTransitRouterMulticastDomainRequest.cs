@@ -10,19 +10,25 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class AssociateTransitRouterMulticastDomainRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</para>
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether only to precheck the API request. Valid values:
+        /// <para>Specifies whether only to precheck the API request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: prechecks the request but does not associate the vSwitch with the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. The vSwitch is associated with the multicast domain after the request passes the precheck.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: prechecks the request but does not associate the vSwitch with the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): sends the request. The vSwitch is associated with the multicast domain after the request passes the precheck.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -45,27 +51,30 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC connection.
+        /// <para>The ID of the VPC connection.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>tr-attach-g3kz2k3u76amsk****</para>
         /// </summary>
         [NameInMap("TransitRouterAttachmentId")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentId { get; set; }
 
         /// <summary>
-        /// The ID of the multicast domain.
+        /// <para>The ID of the multicast domain.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>tr-mcast-domain-91wpg6wbhchjeq****</para>
         /// </summary>
         [NameInMap("TransitRouterMulticastDomainId")]
         [Validation(Required=false)]
         public string TransitRouterMulticastDomainId { get; set; }
 
         /// <summary>
-        /// The vSwitch IDs.
-        /// 
-        /// You can specify at most five vSwitch IDs in each call.
+        /// <para>The vSwitch IDs.</para>
+        /// <para>You can specify at most five vSwitch IDs in each call.</para>
         /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]

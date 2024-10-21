@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterRouteEntriesRequest : TeaModel {
         /// <summary>
-        /// The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
+        /// <item><description>You must specify the token that is obtained from the previous query as the value of <b>NextToken</b>.</description></item>
+        /// </list>
         /// 
-        /// *   You do not need to specify this parameter for the first request.
-        /// *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
+        /// <b>Example:</b>
+        /// <para>fce19****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -35,7 +42,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The prefix list ID.
+        /// <para>The prefix list ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pl-6ehtn5kqxgeyy08fi****</para>
         /// </summary>
         [NameInMap("PrefixListId")]
         [Validation(Required=false)]
@@ -50,28 +60,31 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The filter conditions for route CIDR blocks.
+        /// <para>The filter conditions for route CIDR blocks.</para>
         /// </summary>
         [NameInMap("RouteFilter")]
         [Validation(Required=false)]
         public List<ListTransitRouterRouteEntriesRequestRouteFilter> RouteFilter { get; set; }
         public class ListTransitRouterRouteEntriesRequestRouteFilter : TeaModel {
             /// <summary>
-            /// The match pattern for filtering CIDR blocks. Valid values:
+            /// <para>The match pattern for filtering CIDR blocks. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>PrefixExactMatchCidrs</b>: exact matching.</description></item>
+            /// <item><description><b>LongestPrefixMatchCidrs</b>: longest prefix matching. The specified IP address and CIDR block are considered a match.</description></item>
+            /// <item><description><b>SubnetOfMatchCidrs</b>: subnet matching. The specified CIDR block is considered a match.</description></item>
+            /// <item><description><b>SupernetOfMatchCidrs</b>: supernet matching. The specified CIDR block is considered a match.</description></item>
+            /// </list>
+            /// <para>By default, the logical operator among filter conditions is <b>AND</b>. Information about a route entry is returned only if the route entry matches all filter conditions. Filter conditions must be unique.</para>
             /// 
-            /// *   **PrefixExactMatchCidrs**: exact matching.
-            /// *   **LongestPrefixMatchCidrs**: longest prefix matching. The specified IP address and CIDR block are considered a match.
-            /// *   **SubnetOfMatchCidrs**: subnet matching. The specified CIDR block is considered a match.
-            /// *   **SupernetOfMatchCidrs**: supernet matching. The specified CIDR block is considered a match.
-            /// 
-            /// By default, the logical operator among filter conditions is **AND**. Information about a route entry is returned only if the route entry matches all filter conditions. Filter conditions must be unique.
+            /// <b>Example:</b>
+            /// <para>PrefixExactMatchCidrs</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The filter value.
+            /// <para>The filter value.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -79,8 +92,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// The destination CIDR block of the route. **This parameter is to be deprecated. We recommend that you use the RouteFilter parameter**.
+        /// <para>The destination CIDR block of the route. <b>This parameter is to be deprecated. We recommend that you use the RouteFilter parameter</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.168.0.0/24</para>
         /// </summary>
         [NameInMap("TransitRouterRouteEntryDestinationCidrBlock")]
         [Validation(Required=false)]
@@ -88,104 +106,140 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteEntryDestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// The route ID.
+        /// <para>The route ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rte-oklkgwmj97z6dn****</para>
         /// </summary>
         [NameInMap("TransitRouterRouteEntryIds")]
         [Validation(Required=false)]
         public List<string> TransitRouterRouteEntryIds { get; set; }
 
         /// <summary>
-        /// The route name.
+        /// <para>The route name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testname</para>
         /// </summary>
         [NameInMap("TransitRouterRouteEntryNames")]
         [Validation(Required=false)]
         public List<string> TransitRouterRouteEntryNames { get; set; }
 
         /// <summary>
-        /// The ID of the network instance connection that you want to specify as the next hop.
+        /// <para>The ID of the network instance connection that you want to specify as the next hop.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tr-attach-nls9fzkfat8934****</para>
         /// </summary>
         [NameInMap("TransitRouterRouteEntryNextHopId")]
         [Validation(Required=false)]
         public string TransitRouterRouteEntryNextHopId { get; set; }
 
         /// <summary>
-        /// The next hop ID.
+        /// <para>The next hop ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-m5ent6du8deaq5*****</para>
         /// </summary>
         [NameInMap("TransitRouterRouteEntryNextHopResourceId")]
         [Validation(Required=false)]
         public string TransitRouterRouteEntryNextHopResourceId { get; set; }
 
         /// <summary>
-        /// The next hop type. Valid values:
+        /// <para>The next hop type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>VPC</b></description></item>
+        /// <item><description><b>VBR</b></description></item>
+        /// <item><description><b>TR</b></description></item>
+        /// <item><description><b>VPN</b></description></item>
+        /// </list>
         /// 
-        /// *   **VPC**
-        /// *   **VBR**
-        /// *   **TR**
-        /// *   **VPN**
+        /// <b>Example:</b>
+        /// <para>VPC</para>
         /// </summary>
         [NameInMap("TransitRouterRouteEntryNextHopResourceType")]
         [Validation(Required=false)]
         public string TransitRouterRouteEntryNextHopResourceType { get; set; }
 
         /// <summary>
-        /// The next hop type. Valid values:
+        /// <para>The next hop type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>BlackHole</b>: routes network traffic to a black hole.</description></item>
+        /// <item><description><b>Attachment</b>: routes network traffic to a network instance connection.</description></item>
+        /// </list>
         /// 
-        /// *   **BlackHole**: routes network traffic to a black hole.
-        /// *   **Attachment**: routes network traffic to a network instance connection.
+        /// <b>Example:</b>
+        /// <para>Attachment</para>
         /// </summary>
         [NameInMap("TransitRouterRouteEntryNextHopType")]
         [Validation(Required=false)]
         public string TransitRouterRouteEntryNextHopType { get; set; }
 
         /// <summary>
-        /// The source instance ID.
+        /// <para>The source instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-m5ent6du8deaq5*****</para>
         /// </summary>
         [NameInMap("TransitRouterRouteEntryOriginResourceId")]
         [Validation(Required=false)]
         public string TransitRouterRouteEntryOriginResourceId { get; set; }
 
         /// <summary>
-        /// The source instance type. Valid values:
+        /// <para>The source instance type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>VPC</b></description></item>
+        /// <item><description><b>VBR</b></description></item>
+        /// <item><description><b>TR</b></description></item>
+        /// <item><description><b>VPN</b></description></item>
+        /// </list>
         /// 
-        /// *   **VPC**
-        /// *   **VBR**
-        /// *   **TR**
-        /// *   **VPN**
+        /// <b>Example:</b>
+        /// <para>VPC</para>
         /// </summary>
         [NameInMap("TransitRouterRouteEntryOriginResourceType")]
         [Validation(Required=false)]
         public string TransitRouterRouteEntryOriginResourceType { get; set; }
 
         /// <summary>
-        /// The status of the route. Valid values:
+        /// <para>The status of the route. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>All</b></description></item>
+        /// <item><description><b>Active</b> (default)</description></item>
+        /// <item><description><b>Rejected</b></description></item>
+        /// <item><description><b>Prohibited</b></description></item>
+        /// <item><description><b>Standby</b></description></item>
+        /// <item><description><b>Candidate</b></description></item>
+        /// </list>
+        /// <para>If you do not specify a value, routes in the active state are queried.</para>
         /// 
-        /// *   **All**
-        /// *   **Active** (default)
-        /// *   **Rejected**
-        /// *   **Prohibited**
-        /// *   **Standby**
-        /// *   **Candidate**
-        /// 
-        /// If you do not specify a value, routes in the active state are queried.
+        /// <b>Example:</b>
+        /// <para>Active</para>
         /// </summary>
         [NameInMap("TransitRouterRouteEntryStatus")]
         [Validation(Required=false)]
         public string TransitRouterRouteEntryStatus { get; set; }
 
         /// <summary>
-        /// The route type. Valid values:
+        /// <para>The route type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Propagated</b>: automatically learned by the route table.</description></item>
+        /// <item><description><b>Static</b>: static routes.</description></item>
+        /// </list>
         /// 
-        /// *   **Propagated**: automatically learned by the route table.
-        /// *   **Static**: static routes.
+        /// <b>Example:</b>
+        /// <para>Propagated</para>
         /// </summary>
         [NameInMap("TransitRouterRouteEntryType")]
         [Validation(Required=false)]
         public string TransitRouterRouteEntryType { get; set; }
 
         /// <summary>
-        /// The ID of the route table of the Enterprise Edition transit router.
+        /// <para>The ID of the route table of the Enterprise Edition transit router.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vtb-bp1dudbh2d5na6b50****</para>
         /// </summary>
         [NameInMap("TransitRouterRouteTableId")]
         [Validation(Required=false)]

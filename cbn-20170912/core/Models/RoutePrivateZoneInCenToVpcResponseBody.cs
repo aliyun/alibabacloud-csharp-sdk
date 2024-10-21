@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class RoutePrivateZoneInCenToVpcResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C0245BEF-52AC-44A8-A776-EF96FD26A5CA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

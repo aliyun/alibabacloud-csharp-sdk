@@ -10,40 +10,46 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class RoutePrivateZoneInCenToVpcRequest : TeaModel {
         /// <summary>
-        /// The ID of the region where PrivateZone is accessed.
+        /// <para>The ID of the region where PrivateZone is accessed.</para>
+        /// <para>This region refers to the region in which PrivateZone is accessed by clients.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This region refers to the region in which PrivateZone is accessed by clients.
-        /// 
-        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("AccessRegionId")]
         [Validation(Required=false)]
         public string AccessRegionId { get; set; }
 
         /// <summary>
-        /// The ID of the CEN instance.
+        /// <para>The ID of the CEN instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cen-7qthudw0ll6jmc****</para>
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
         /// <summary>
-        /// The ID of the region where PrivateZone is deployed.
+        /// <para>The ID of the region where PrivateZone is deployed.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("HostRegionId")]
         [Validation(Required=false)]
         public string HostRegionId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC that is associated with PrivateZone.
+        /// <para>The ID of the VPC that is associated with PrivateZone.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpc-bp1h8vbrbcgohcju5****</para>
         /// </summary>
         [NameInMap("HostVpcId")]
         [Validation(Required=false)]

@@ -10,20 +10,23 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenRegionDomainRouteEntriesRequest : TeaModel {
         /// <summary>
-        /// The CEN instance ID.
+        /// <para>The CEN instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cen-7qthudw0ll6j****</para>
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("CenRegionId")]
         [Validation(Required=false)]
@@ -38,14 +41,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: **1** to **500**. Default value: **10**.
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>500</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -60,13 +69,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The route status. Valid values:
+        /// <para>The route status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Active</b> (default): available</description></item>
+        /// <item><description><b>Candidate</b>: standby</description></item>
+        /// <item><description><b>Rejected</b>: rejected</description></item>
+        /// <item><description><b>Prohibited</b>: prohibited</description></item>
+        /// <item><description><b>All</b> (default value): all routes</description></item>
+        /// </list>
         /// 
-        /// *   **Active** (default): available
-        /// *   **Candidate**: standby
-        /// *   **Rejected**: rejected
-        /// *   **Prohibited**: prohibited
-        /// *   **All** (default value): all routes
+        /// <b>Example:</b>
+        /// <para>Active</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DisableCenVbrHealthCheckRequest : TeaModel {
         /// <summary>
-        /// The ID of the Cloud Enterprise Network (CEN) instance.
+        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cen-sjfoejfghhjgghjghkg****</para>
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -35,29 +37,36 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the VBR.
+        /// <para>The ID of the VBR.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vbr-wz95o9aylj181n5****</para>
         /// </summary>
         [NameInMap("VbrInstanceId")]
         [Validation(Required=false)]
         public string VbrInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the VBR belongs.
+        /// <para>The ID of the Alibaba Cloud account to which the VBR belongs.</para>
+        /// <remarks>
+        /// <para>This parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.</para>
+        /// </remarks>
         /// 
-        /// > This parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.
+        /// <b>Example:</b>
+        /// <para>1250123456123456</para>
         /// </summary>
         [NameInMap("VbrInstanceOwnerId")]
         [Validation(Required=false)]
         public long? VbrInstanceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the VBR is deployed.
+        /// <para>The ID of the region where the VBR is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("VbrInstanceRegionId")]
         [Validation(Required=false)]

@@ -10,71 +10,95 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class UpdateTransitRouterPeerAttachmentAttributeRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable the local Enterprise Edition transit router to automatically advertise the routes of the inter-region connection to the peer transit router. Valid values:
+        /// <para>Specifies whether to enable the local Enterprise Edition transit router to automatically advertise the routes of the inter-region connection to the peer transit router. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b> (default): no</description></item>
+        /// <item><description><b>true</b>: yes</description></item>
+        /// </list>
         /// 
-        /// *   **false** (default): no
-        /// *   **true**: yes
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AutoPublishRouteEnabled")]
         [Validation(Required=false)]
         public bool? AutoPublishRouteEnabled { get; set; }
 
         /// <summary>
-        /// The bandwidth value of the inter-region connection. Unit: Mbit/s.
+        /// <para>The bandwidth value of the inter-region connection. Unit: Mbit/s.</para>
+        /// <list type="bullet">
+        /// <item><description>This parameter specifies the maximum bandwidth value for the inter-region connection if you set <b>BandwidthType</b> to <b>BandwidthPackage</b>.</description></item>
+        /// <item><description>This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set <b>BandwidthType</b> to <b>DataTransfer</b>.</description></item>
+        /// </list>
         /// 
-        /// *   This parameter specifies the maximum bandwidth value for the inter-region connection if you set **BandwidthType** to **BandwidthPackage**.
-        /// *   This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set **BandwidthType** to **DataTransfer**.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// The bandwidth allocation method. Valid values:
+        /// <para>The bandwidth allocation method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>BandwidthPackage</b>: allocates bandwidth from a bandwidth plan.</description></item>
+        /// <item><description><b>DataTransfer</b>: bandwidth is billed based on the pay-by-data-transfer metering method.</description></item>
+        /// </list>
         /// 
-        /// *   **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
-        /// *   **DataTransfer**: bandwidth is billed based on the pay-by-data-transfer metering method.
+        /// <b>Example:</b>
+        /// <para>BandwidthPackage</para>
         /// </summary>
         [NameInMap("BandwidthType")]
         [Validation(Required=false)]
         public string BandwidthType { get; set; }
 
         /// <summary>
-        /// The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.
+        /// <para>The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.</para>
+        /// <remarks>
+        /// <para> If you set <b>BandwidthType</b> to <b>DataTransfer</b>, you do not need to set this parameter.</para>
+        /// </remarks>
         /// 
-        /// >  If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.
+        /// <b>Example:</b>
+        /// <para>cenbwp-3xrxupouolw5ou****</para>
         /// </summary>
         [NameInMap("CenBandwidthPackageId")]
         [Validation(Required=false)]
         public string CenBandwidthPackageId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> for each API request may be different.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+        /// <b>Example:</b>
+        /// <para>02fb3da4-130e-11e9-8e44-001****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The default line type.
+        /// <para>The default line type.</para>
+        /// <para>Valid values: Platinum and Gold.</para>
+        /// <para>Platinum is supported only when BandwidthType is set to DataTransfer.</para>
         /// 
-        /// Valid values: Platinum and Gold.
-        /// 
-        /// Platinum is supported only when BandwidthType is set to DataTransfer.
+        /// <b>Example:</b>
+        /// <para>Gold</para>
         /// </summary>
         [NameInMap("DefaultLinkType")]
         [Validation(Required=false)]
         public string DefaultLinkType { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run to check information such as the permissions and the instance status. Default values:
+        /// <para>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Default values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request.</description></item>
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</description></item>
+        /// </list>
         /// 
-        /// *   **false** (default): performs a dry run and sends the request.
-        /// *   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -97,27 +121,33 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The new description of the inter-region connection.
+        /// <para>The new description of the inter-region connection.</para>
+        /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</para>
         /// 
-        /// This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.
+        /// <b>Example:</b>
+        /// <para>testdesc</para>
         /// </summary>
         [NameInMap("TransitRouterAttachmentDescription")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentDescription { get; set; }
 
         /// <summary>
-        /// The ID of the inter-region connection.
+        /// <para>The ID of the inter-region connection.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>tr-attach-ft94dcrbc3e5taun3x</para>
         /// </summary>
         [NameInMap("TransitRouterAttachmentId")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentId { get; set; }
 
         /// <summary>
-        /// The new name of the inter-region connection.
+        /// <para>The new name of the inter-region connection.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
         /// 
-        /// The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.
+        /// <b>Example:</b>
+        /// <para>testname</para>
         /// </summary>
         [NameInMap("TransitRouterAttachmentName")]
         [Validation(Required=false)]

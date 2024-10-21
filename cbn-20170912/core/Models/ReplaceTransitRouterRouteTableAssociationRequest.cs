@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ReplaceTransitRouterRouteTableAssociationRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> for each API request may be different.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.
-        /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether only to precheck the API request. Valid values:
+        /// <para>Specifies whether only to precheck the API request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: prechecks the request but does not associate the network instance connection with another route table. The system checks whether the required parameters are set, whether the formats of the values are valid, and the service limits. If the request fails to pass the precheck, the corresponding error message is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b>: sends the request. After the request passes the authentication, the network instance connection is associated with the specified route table. This is the default value.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: prechecks the request but does not associate the network instance connection with another route table. The system checks whether the required parameters are set, whether the formats of the values are valid, and the service limits. If the request fails to pass the precheck, the corresponding error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-        /// *   **false**: sends the request. After the request passes the authentication, the network instance connection is associated with the specified route table. This is the default value.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -47,18 +54,22 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the network instance connection.
+        /// <para>The ID of the network instance connection.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>tr-attach-071g5j5tefg4x6****</para>
         /// </summary>
         [NameInMap("TransitRouterAttachmentId")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentId { get; set; }
 
         /// <summary>
-        /// The ID of the route table with which you want to associate the network instance connection.
+        /// <para>The ID of the route table with which you want to associate the network instance connection.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vtb-bp1cprmc6xmzjd66i****</para>
         /// </summary>
         [NameInMap("TransitRouterRouteTableId")]
         [Validation(Required=false)]

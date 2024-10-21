@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class UpdateTrafficMarkingPolicyAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>60BB11B2-7BF4-54DC-BCC9-F706E1EB02AC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

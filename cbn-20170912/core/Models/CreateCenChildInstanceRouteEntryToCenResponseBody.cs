@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateCenChildInstanceRouteEntryToCenResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>437ED236-BE47-5370-8695-15C58C7A8014</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

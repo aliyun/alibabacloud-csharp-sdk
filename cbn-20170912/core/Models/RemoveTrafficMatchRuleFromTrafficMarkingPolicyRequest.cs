@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> for each API request may be different.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.
-        /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run. Valid values:
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): performs a dry run and sends the request.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -47,16 +54,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the traffic classification rule.
+        /// <para>The ID of the traffic classification rule.</para>
         /// </summary>
         [NameInMap("TrafficMarkRuleIds")]
         [Validation(Required=false)]
         public List<string> TrafficMarkRuleIds { get; set; }
 
         /// <summary>
-        /// The ID of the traffic marking policy.
+        /// <para>The ID of the traffic marking policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>tm-d33hdczo3qo8ta****</para>
         /// </summary>
         [NameInMap("TrafficMarkingPolicyId")]
         [Validation(Required=false)]

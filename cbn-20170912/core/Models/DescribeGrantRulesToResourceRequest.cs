@@ -10,18 +10,27 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeGrantRulesToResourceRequest : TeaModel {
         /// <summary>
-        /// *   If you do not specify a value for **MaxResults**, entries are returned in one response. After you send the request, the value of **MaxResults** includes all entries.
-        /// *   If you specify a value for **MaxResults**, entries are returned in batches. The value of **MaxResults** indicates the total number of entries returned per batch. Valid values: **1** to **100**. After you send the request, the value of **MaxResults** indicates the number of entries returned in the current response. We recommend that you set **MaxResults** to **20**.
+        /// <list type="bullet">
+        /// <item><description>If you do not specify a value for <b>MaxResults</b>, entries are returned in one response. After you send the request, the value of <b>MaxResults</b> includes all entries.</description></item>
+        /// <item><description>If you specify a value for <b>MaxResults</b>, entries are returned in batches. The value of <b>MaxResults</b> indicates the total number of entries returned per batch. Valid values: <b>1</b> to <b>100</b>. After you send the request, the value of <b>MaxResults</b> indicates the number of entries returned in the current response. We recommend that you set <b>MaxResults</b> to <b>20</b>.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
+        /// <item><description>You must specify the token that is obtained from the previous query as the value of the <b>NextToken</b> parameter.</description></item>
+        /// </list>
         /// 
-        /// *   You do not need to specify this parameter for the first request.
-        /// *   You must specify the token that is obtained from the previous query as the value of the **NextToken** parameter.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -36,32 +45,39 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The type of network instance. Valid values:
+        /// <para>The type of network instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
+        /// <item><description><b>ExpressConnect</b>: virtual border router (VBR)</description></item>
+        /// <item><description><b>VPN</b>: IPsec-VPN connection</description></item>
+        /// <item><description><b>ECR</b>: Express Connect Router (ECR)</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **VPC**: virtual private cloud (VPC)
-        /// *   **ExpressConnect**: virtual border router (VBR)
-        /// *   **VPN**: IPsec-VPN connection
-        /// *   **ECR**: Express Connect Router (ECR)
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>VPC</para>
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
         /// <summary>
-        /// The region ID of the network instance.
+        /// <para>The region ID of the network instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The network instance ID.
+        /// <para>The network instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpc-p0wfut1iqauelpdpb****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]

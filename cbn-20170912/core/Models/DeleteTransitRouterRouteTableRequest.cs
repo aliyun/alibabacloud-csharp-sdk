@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteTransitRouterRouteTableRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> for each API request may be different.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-        /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+        /// <b>Example:</b>
+        /// <para>02fb3da4-130e-11e9-8e44-001****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run. Valid values:
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request.</description></item>
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// </list>
         /// 
-        /// *   **false** (default): performs a dry run and sends the request.
-        /// *   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -47,9 +54,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the custom route table.
+        /// <para>The ID of the custom route table.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vtb-bp1xbcgpgcz9axl9m****</para>
         /// </summary>
         [NameInMap("TransitRouterRouteTableId")]
         [Validation(Required=false)]

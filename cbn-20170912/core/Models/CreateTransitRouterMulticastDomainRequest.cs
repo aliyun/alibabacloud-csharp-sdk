@@ -10,26 +10,35 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateTransitRouterMulticastDomainRequest : TeaModel {
         /// <summary>
-        /// The ID of the Cloud Enterprise Network (CEN) instance.
+        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cen-a7syd349kne38g****</para>
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</para>
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-4266****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run. Valid values:
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): performs a dry run and sends the request.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -44,9 +53,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the transit router.
+        /// <para>The region ID of the transit router.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -61,31 +72,32 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The information about the tags.
-        /// 
-        /// You can specify at most 20 tags in each call.
+        /// <para>The information about the tags.</para>
+        /// <para>You can specify at most 20 tags in each call.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateTransitRouterMulticastDomainRequestTag> Tag { get; set; }
         public class CreateTransitRouterMulticastDomainRequestTag : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify at most 20 tag keys.</para>
             /// 
-            /// The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-            /// 
-            /// You can specify at most 20 tag keys.
+            /// <b>Example:</b>
+            /// <para>TagKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// <para>The tag value can be 0 to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</para>
             /// 
-            /// The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-            /// 
-            /// Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+            /// <b>Example:</b>
+            /// <para>TagValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -94,25 +106,32 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The ID of the transit router.
+        /// <para>The ID of the transit router.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tr-p0wr9p28r92d598y6****</para>
         /// </summary>
         [NameInMap("TransitRouterId")]
         [Validation(Required=false)]
         public string TransitRouterId { get; set; }
 
         /// <summary>
-        /// The description of the multicast domain.
+        /// <para>The description of the multicast domain.</para>
+        /// <para>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</para>
         /// 
-        /// The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>desctest</para>
         /// </summary>
         [NameInMap("TransitRouterMulticastDomainDescription")]
         [Validation(Required=false)]
         public string TransitRouterMulticastDomainDescription { get; set; }
 
         /// <summary>
-        /// The name of the multicast domain.
+        /// <para>The name of the multicast domain.</para>
+        /// <para>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</para>
         /// 
-        /// The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>nametest</para>
         /// </summary>
         [NameInMap("TransitRouterMulticastDomainName")]
         [Validation(Required=false)]

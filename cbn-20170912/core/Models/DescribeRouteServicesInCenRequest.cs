@@ -10,41 +10,53 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeRouteServicesInCenRequest : TeaModel {
         /// <summary>
-        /// The ID of the region where the cloud service is accessed.
+        /// <para>The ID of the region where the cloud service is accessed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("AccessRegionId")]
         [Validation(Required=false)]
         public string AccessRegionId { get; set; }
 
         /// <summary>
-        /// The ID of the Cloud Enterprise Network (CEN) instance.
+        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cen-pfa6ugf3xl0qsd****</para>
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
         /// <summary>
-        /// The service address of the cloud service.
+        /// <para>The service address of the cloud service.</para>
+        /// <para>You can enter a domain name, an IP address, or a CIDR block.</para>
         /// 
-        /// You can enter a domain name, an IP address, or a CIDR block.
+        /// <b>Example:</b>
+        /// <para>100.118.28.0/24</para>
         /// </summary>
         [NameInMap("Host")]
         [Validation(Required=false)]
         public string Host { get; set; }
 
         /// <summary>
-        /// The region ID of the cloud service.
+        /// <para>The region ID of the cloud service.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("HostRegionId")]
         [Validation(Required=false)]
         public string HostRegionId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC associated with the cloud service.
+        /// <para>The ID of the VPC associated with the cloud service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp1h8vbrbcgohcju5****</para>
         /// </summary>
         [NameInMap("HostVpcId")]
         [Validation(Required=false)]
@@ -59,14 +71,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: **10**. Valid values: **1** to **50**.
+        /// <para>The number of entries per page. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

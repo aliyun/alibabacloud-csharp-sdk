@@ -10,38 +10,51 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListCenInterRegionTrafficQosPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query.
+        /// <para>The token that determines the start point of the query.</para>
+        /// <list type="bullet">
+        /// <item><description>If <b>NextToken</b> was not returned in the previous query, it indicates that no additional results exist.</description></item>
+        /// <item><description>If <b>NextToken</b> was returned in the previous query, specify the value to obtain the next set of results.</description></item>
+        /// </list>
         /// 
-        /// *   If **NextToken** was not returned in the previous query, it indicates that no additional results exist.
-        /// *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>113BFD47-63DF-5D9D-972C-033FB9C360CD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// A list of QoS policies.
+        /// <para>A list of QoS policies.</para>
         /// </summary>
         [NameInMap("TrafficQosPolicies")]
         [Validation(Required=false)]
@@ -52,40 +65,53 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string BandwidthGuaranteeMode { get; set; }
 
             /// <summary>
-            /// The description of the QoS policy.
+            /// <para>The description of the QoS policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>desctest</para>
             /// </summary>
             [NameInMap("TrafficQosPolicyDescription")]
             [Validation(Required=false)]
             public string TrafficQosPolicyDescription { get; set; }
 
             /// <summary>
-            /// The ID of the QoS policy.
+            /// <para>The ID of the QoS policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>qos-rnghap5gc8155x****</para>
             /// </summary>
             [NameInMap("TrafficQosPolicyId")]
             [Validation(Required=false)]
             public string TrafficQosPolicyId { get; set; }
 
             /// <summary>
-            /// The name of the QoS policy.
+            /// <para>The name of the QoS policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>nametest</para>
             /// </summary>
             [NameInMap("TrafficQosPolicyName")]
             [Validation(Required=false)]
             public string TrafficQosPolicyName { get; set; }
 
             /// <summary>
-            /// The status of the QoS policy.
+            /// <para>The status of the QoS policy.</para>
+            /// <list type="bullet">
+            /// <item><description><b>Creating</b>: The QoS policy is being created.</description></item>
+            /// <item><description><b>Active</b>: The QoS policy is available.</description></item>
+            /// <item><description><b>Modifying</b>: The policy is being modified.</description></item>
+            /// <item><description><b>Deleting</b>: The QoS policy is being deleted.</description></item>
+            /// </list>
             /// 
-            /// *   **Creating**: The QoS policy is being created.
-            /// *   **Active**: The QoS policy is available.
-            /// *   **Modifying**: The policy is being modified.
-            /// *   **Deleting**: The QoS policy is being deleted.
+            /// <b>Example:</b>
+            /// <para>Creating</para>
             /// </summary>
             [NameInMap("TrafficQosPolicyStatus")]
             [Validation(Required=false)]
             public string TrafficQosPolicyStatus { get; set; }
 
             /// <summary>
-            /// A list of queues.
+            /// <para>A list of queues.</para>
             /// </summary>
             [NameInMap("TrafficQosQueues")]
             [Validation(Required=false)]
@@ -96,7 +122,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string Bandwidth { get; set; }
 
                 /// <summary>
-                /// The differentiated services code point (DSCP) value that is used to match packets.
+                /// <para>The differentiated services code point (DSCP) value that is used to match packets.</para>
                 /// </summary>
                 [NameInMap("Dscps")]
                 [Validation(Required=false)]
@@ -107,28 +133,40 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string EffectiveBandwidth { get; set; }
 
                 /// <summary>
-                /// The description of the queue.
+                /// <para>The description of the queue.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>desctest</para>
                 /// </summary>
                 [NameInMap("QosQueueDescription")]
                 [Validation(Required=false)]
                 public string QosQueueDescription { get; set; }
 
                 /// <summary>
-                /// The queue ID.
+                /// <para>The queue ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>qos-queue-njcrmr9fiu1jii****</para>
                 /// </summary>
                 [NameInMap("QosQueueId")]
                 [Validation(Required=false)]
                 public string QosQueueId { get; set; }
 
                 /// <summary>
-                /// The name of the queue.
+                /// <para>The name of the queue.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>namtest</para>
                 /// </summary>
                 [NameInMap("QosQueueName")]
                 [Validation(Required=false)]
                 public string QosQueueName { get; set; }
 
                 /// <summary>
-                /// The percentage of the inter-region bandwidth that can be used by the queue.
+                /// <para>The percentage of the inter-region bandwidth that can be used by the queue.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("RemainBandwidthPercent")]
                 [Validation(Required=false)]
@@ -137,14 +175,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             }
 
             /// <summary>
-            /// The ID of the network instance connection.
+            /// <para>The ID of the network instance connection.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tr-attach-q7ct7c06jpw***</para>
             /// </summary>
             [NameInMap("TransitRouterAttachmentId")]
             [Validation(Required=false)]
             public string TransitRouterAttachmentId { get; set; }
 
             /// <summary>
-            /// The ID of the transit router.
+            /// <para>The ID of the transit router.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tr-2ze4ta4v32umj0rb***</para>
             /// </summary>
             [NameInMap("TransitRouterId")]
             [Validation(Required=false)]

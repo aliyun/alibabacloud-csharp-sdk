@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeGeographicRegionMembershipResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -25,6 +33,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId> RegionId { get; set; }
             public class DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>us-west-1</para>
+                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
@@ -33,10 +45,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>DC9EB0C9-60AF-4A09-A36C-608F70130274</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

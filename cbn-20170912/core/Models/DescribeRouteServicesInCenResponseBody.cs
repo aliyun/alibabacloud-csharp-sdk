@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeRouteServicesInCenResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>196C99CA-6997-5951-9721-AE89720DF856</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the cloud services.
+        /// <para>The information about the cloud services.</para>
         /// </summary>
         [NameInMap("RouteServiceEntries")]
         [Validation(Required=false)]
@@ -42,21 +51,27 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry> RouteServiceEntry { get; set; }
             public class DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry : TeaModel {
                 /// <summary>
-                /// The ID of the region where the cloud service is accessed.
+                /// <para>The ID of the region where the cloud service is accessed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("AccessRegionId")]
                 [Validation(Required=false)]
                 public string AccessRegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the CEN instance.
+                /// <para>The ID of the CEN instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cen-pfa6ugf3xl0qsd****</para>
                 /// </summary>
                 [NameInMap("CenId")]
                 [Validation(Required=false)]
                 public string CenId { get; set; }
 
                 /// <summary>
-                /// The service addresses of the cloud service.
+                /// <para>The service addresses of the cloud service.</para>
                 /// </summary>
                 [NameInMap("Cidrs")]
                 [Validation(Required=false)]
@@ -69,39 +84,55 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The description of the cloud service.
+                /// <para>The description of the cloud service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>descname</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The service address of the cloud service.
+                /// <para>The service address of the cloud service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100.118.28.0/24</para>
                 /// </summary>
                 [NameInMap("Host")]
                 [Validation(Required=false)]
                 public string Host { get; set; }
 
                 /// <summary>
-                /// The region ID of the cloud service.
+                /// <para>The region ID of the cloud service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("HostRegionId")]
                 [Validation(Required=false)]
                 public string HostRegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC associated with the cloud service.
+                /// <para>The ID of the VPC associated with the cloud service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-bp1h8vbrbcgohcju5****</para>
                 /// </summary>
                 [NameInMap("HostVpcId")]
                 [Validation(Required=false)]
                 public string HostVpcId { get; set; }
 
                 /// <summary>
-                /// The status of the cloud service. Valid values:
+                /// <para>The status of the cloud service. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Creating</b></description></item>
+                /// <item><description><b>Active</b></description></item>
+                /// <item><description><b>Deleting</b></description></item>
+                /// </list>
                 /// 
-                /// *   **Creating**
-                /// *   **Active**
-                /// *   **Deleting**
+                /// <b>Example:</b>
+                /// <para>Active</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -112,7 +143,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class EnableTransitRouterRouteTablePropagationResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>59CF8BF9-DE61-421E-B903-D56AF46A303C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

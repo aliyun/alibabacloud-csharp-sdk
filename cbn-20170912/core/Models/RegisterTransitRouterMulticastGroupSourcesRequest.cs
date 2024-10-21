@@ -10,39 +10,47 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class RegisterTransitRouterMulticastGroupSourcesRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID is different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID is different for each request.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-4266****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run, without sending the actual request. Default values:
+        /// <para>Specifies whether to perform a dry run, without sending the actual request. Default values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The IP address of the multicast group to which the multicast source belongs. Valid values: **224.0.0.1** to **239.255.255.254**.
+        /// <para>The IP address of the multicast group to which the multicast source belongs. Valid values: <b>224.0.0.1</b> to <b>239.255.255.254</b>.</para>
+        /// <para>If the multicast group does not exist in the multicast domain, the system automatically creates the multicast group in the multicast domain.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// If the multicast group does not exist in the multicast domain, the system automatically creates the multicast group in the multicast domain.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>239.XX.XX.2</para>
         /// </summary>
         [NameInMap("GroupIpAddress")]
         [Validation(Required=false)]
         public string GroupIpAddress { get; set; }
 
         /// <summary>
-        /// The IDs of the ENIs.
+        /// <para>The IDs of the ENIs.</para>
         /// </summary>
         [NameInMap("NetworkInterfaceIds")]
         [Validation(Required=false)]
@@ -65,19 +73,25 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the multicast domain to which the multicast source belongs.
+        /// <para>The ID of the multicast domain to which the multicast source belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>tr-mcast-domain-5mjb5gjb6dgu98****</para>
         /// </summary>
         [NameInMap("TransitRouterMulticastDomainId")]
         [Validation(Required=false)]
         public string TransitRouterMulticastDomainId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC to which the ENI belongs.
+        /// <para>The ID of the VPC to which the ENI belongs.</para>
+        /// <list type="bullet">
+        /// <item><description>If the ENI belongs to the current Alibaba Cloud account, ignore this parameter.</description></item>
+        /// <item><description>If the ENI belongs to a different Alibaba Cloud account, you must set this parameter.</description></item>
+        /// </list>
         /// 
-        /// *   If the ENI belongs to the current Alibaba Cloud account, ignore this parameter.
-        /// *   If the ENI belongs to a different Alibaba Cloud account, you must set this parameter.
+        /// <b>Example:</b>
+        /// <para>vpc-wz9fusm6zq8uy7cfa****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

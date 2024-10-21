@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeChildInstanceRegionsResponseBody : TeaModel {
         /// <summary>
-        /// A list of regions.
+        /// <para>A list of regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -21,14 +21,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<DescribeChildInstanceRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeChildInstanceRegionsResponseBodyRegionsRegion : TeaModel {
                 /// <summary>
-                /// The name of the region.
+                /// <para>The name of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>China (Hangzhou)</para>
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// <para>The ID of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -39,7 +45,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D5CEED59-36AA-47CC-9D81-16F71C46BD80</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

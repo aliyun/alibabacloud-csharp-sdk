@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class TempUpgradeCenBandwidthPackageSpecRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cenbwp-y08yosedeqlpua****</para>
         /// </summary>
         [NameInMap("CenBandwidthPackageId")]
         [Validation(Required=false)]
         public string CenBandwidthPackageId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-07-24T13:00:52Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]

@@ -13,16 +13,24 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? Bandwidth { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426****</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Dscps")]
         [Validation(Required=false)]
@@ -36,14 +44,26 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>desctest</para>
+        /// </summary>
         [NameInMap("QosQueueDescription")]
         [Validation(Required=false)]
         public string QosQueueDescription { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>nametest</para>
+        /// </summary>
         [NameInMap("QosQueueName")]
         [Validation(Required=false)]
         public string QosQueueName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("RemainBandwidthPercent")]
         [Validation(Required=false)]
         public string RemainBandwidthPercent { get; set; }
@@ -57,7 +77,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>qos-qdvybn468kaoxx****</para>
         /// </summary>
         [NameInMap("TrafficQosPolicyId")]
         [Validation(Required=false)]

@@ -10,32 +10,41 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenBandwidthPackagesRequest : TeaModel {
         /// <summary>
-        /// The filter configurations.
+        /// <para>The filter configurations.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<DescribeCenBandwidthPackagesRequestFilter> Filter { get; set; }
         public class DescribeCenBandwidthPackagesRequestFilter : TeaModel {
             /// <summary>
-            /// The filter conditions. You can use filter conditions to filter the bandwidth plans that you want to query. The following filter conditions are supported:
+            /// <para>The filter conditions. You can use filter conditions to filter the bandwidth plans that you want to query. The following filter conditions are supported:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>CenId</b>: CEN instance ID</para>
+            /// </description></item>
+            /// <item><description><para><b>Status</b>: bandwidth plan status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Idle</b>: not associated with a CEN instance.</description></item>
+            /// <item><description><b>InUse</b>: associated with a CEN instance.</description></item>
+            /// </list>
+            /// </description></item>
+            /// <item><description><para><b>CenBandwidthPackageId</b>: bandwidth plan ID</para>
+            /// </description></item>
+            /// <item><description><para><b>Name</b>: bandwidth plan name You can specify one or more filter conditions. The maximum value of <b>N</b> is <b>5</b>.</para>
+            /// </description></item>
+            /// </list>
             /// 
-            /// *   **CenId**: CEN instance ID
-            /// 
-            /// *   **Status**: bandwidth plan status. Valid values:
-            /// 
-            ///     *   **Idle**: not associated with a CEN instance.
-            ///     *   **InUse**: associated with a CEN instance.
-            /// 
-            /// *   **CenBandwidthPackageId**: bandwidth plan ID
-            /// 
-            /// *   **Name**: bandwidth plan name You can specify one or more filter conditions. The maximum value of **N** is **5**.
+            /// <b>Example:</b>
+            /// <para>CenId</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// Specify a filter value based on the **Key** parameter. You can specify multiple filter values for each **Key**. The logical operator between filter values is **OR**. If one filter value is matched, the filter condition is matched.
+            /// <para>Specify a filter value based on the <b>Key</b> parameter. You can specify multiple filter values for each <b>Key</b>. The logical operator between filter values is <b>OR</b>. If one filter value is matched, the filter condition is matched.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Idle</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -44,20 +53,28 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// Specifies whether to include renewal data. Valid values:
+        /// <para>Specifies whether to include renewal data. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IncludeReservationData")]
         [Validation(Required=false)]
         public bool? IncludeReservationData { get; set; }
 
         /// <summary>
-        /// The logical operator between the filter conditions. Valid values:
+        /// <para>The logical operator between the filter conditions. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b> (default): <b>AND</b> Bandwidth plans that meet all filter conditions are returned.</description></item>
+        /// <item><description><b>true</b>: <b>OR</b> Bandwidth plans that meet one of the filter conditions are returned.</description></item>
+        /// </list>
         /// 
-        /// *   **false** (default): **AND** Bandwidth plans that meet all filter conditions are returned.
-        /// *   **true**: **OR** Bandwidth plans that meet one of the filter conditions are returned.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IsOrKey")]
         [Validation(Required=false)]
@@ -72,21 +89,30 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+        /// <para>The number of entries to return on each page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfnwjeo4tv****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -101,31 +127,32 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The information about the tags.
-        /// 
-        /// You can specify at most 20 tags in each call.
+        /// <para>The information about the tags.</para>
+        /// <para>You can specify at most 20 tags in each call.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeCenBandwidthPackagesRequestTag> Tag { get; set; }
         public class DescribeCenBandwidthPackagesRequestTag : TeaModel {
             /// <summary>
-            /// The tag keys.
+            /// <para>The tag keys.</para>
+            /// <para>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify at most 20 tag keys.</para>
             /// 
-            /// The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-            /// 
-            /// You can specify at most 20 tag keys.
+            /// <b>Example:</b>
+            /// <para>TagKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag values.
+            /// <para>The tag values.</para>
+            /// <para>The tag values can be 0 to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of each tag key must be unique. You can specify at most 20 tag values in each call.</para>
             /// 
-            /// The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-            /// 
-            /// The tag value of each tag key must be unique. You can specify at most 20 tag values in each call.
+            /// <b>Example:</b>
+            /// <para>TagValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

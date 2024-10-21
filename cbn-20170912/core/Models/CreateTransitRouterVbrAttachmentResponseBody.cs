@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateTransitRouterVbrAttachmentResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C087A369-82B9-43EF-91F4-4B63A9C6E6B6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the VBR connection.
+        /// <para>The ID of the VBR connection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tr-attach-ia340z7xis7t5s****</para>
         /// </summary>
         [NameInMap("TransitRouterAttachmentId")]
         [Validation(Required=false)]

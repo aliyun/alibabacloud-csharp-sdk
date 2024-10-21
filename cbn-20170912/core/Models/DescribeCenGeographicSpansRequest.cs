@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenGeographicSpansRequest : TeaModel {
         /// <summary>
-        /// The ID of the areas that are connected by the CEN instance.
+        /// <para>The ID of the areas that are connected by the CEN instance.</para>
+        /// <remarks>
+        /// <para>If you do not set this parameter, the system queries the information about all areas supported by CEN.</para>
+        /// </remarks>
         /// 
-        /// > If you do not set this parameter, the system queries the information about all areas supported by CEN.
+        /// <b>Example:</b>
+        /// <para>china_asia-pacific</para>
         /// </summary>
         [NameInMap("GeographicSpanId")]
         [Validation(Required=false)]
@@ -27,14 +31,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: **10**. Valid values: **1** to **50**.
+        /// <para>The number of entries per page. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

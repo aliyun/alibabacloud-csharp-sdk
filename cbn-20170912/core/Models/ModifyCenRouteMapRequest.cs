@@ -10,210 +10,270 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ModifyCenRouteMapRequest : TeaModel {
         /// <summary>
-        /// The match method that is used to match routes against the AS paths. Valid values:
+        /// <para>The match method that is used to match routes against the AS paths. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Include</b>: fuzzy match. A route meets the match condition if the AS path of the route overlaps with the AS paths specified in the match condition.</description></item>
+        /// <item><description><b>Complete</b>: exact match. A route is a match only if the AS path of the route is the same as an AS path specified in the match condition.</description></item>
+        /// </list>
         /// 
-        /// *   **Include**: fuzzy match. A route meets the match condition if the AS path of the route overlaps with the AS paths specified in the match condition.
-        /// *   **Complete**: exact match. A route is a match only if the AS path of the route is the same as an AS path specified in the match condition.
+        /// <b>Example:</b>
+        /// <para>Include</para>
         /// </summary>
         [NameInMap("AsPathMatchMode")]
         [Validation(Required=false)]
         public string AsPathMatchMode { get; set; }
 
         /// <summary>
-        /// The ID of the CEN instance.
+        /// <para>The ID of the CEN instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cen-7qthudw0ll6jmc****</para>
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the routing policy is applied.
+        /// <para>The ID of the region in which the routing policy is applied.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("CenRegionId")]
         [Validation(Required=false)]
         public string CenRegionId { get; set; }
 
         /// <summary>
-        /// The match method that is used to match routes against the prefix list. Valid values:
+        /// <para>The match method that is used to match routes against the prefix list. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Include</b>: fuzzy match. A route is a match if the route prefix is included in the match conditions.</para>
+        /// <para>For example, if you set the match condition to 10.10.0.0/16 and fuzzy match is enabled, the route whose prefix is 10.10.1.0/24 is a match.</para>
+        /// </description></item>
+        /// <item><description><para><b>Complete</b>: exact match. A route is a match only if the route prefix is the same as the prefix specified in the match condition.</para>
+        /// <para>For example, if you set the match condition to 10.10.0.0/16 and exact match is enabled, a route is a match only if the prefix is 10.10.0.0/16.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   **Include**: fuzzy match. A route is a match if the route prefix is included in the match conditions.
-        /// 
-        ///     For example, if you set the match condition to 10.10.0.0/16 and fuzzy match is enabled, the route whose prefix is 10.10.1.0/24 is a match.
-        /// 
-        /// *   **Complete**: exact match. A route is a match only if the route prefix is the same as the prefix specified in the match condition.
-        /// 
-        ///     For example, if you set the match condition to 10.10.0.0/16 and exact match is enabled, a route is a match only if the prefix is 10.10.0.0/16.
+        /// <b>Example:</b>
+        /// <para>Include</para>
         /// </summary>
         [NameInMap("CidrMatchMode")]
         [Validation(Required=false)]
         public string CidrMatchMode { get; set; }
 
         /// <summary>
-        /// The match method that is sed to match routes based on the community. Valid values:
+        /// <para>The match method that is sed to match routes based on the community. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Include</b>: fuzzy match. A route meets the match condition if the community of the route overlaps with the community specified in the match condition.</description></item>
+        /// <item><description><b>Complete</b>: exact match. A route meets the match condition only if the community of the route is the same as the community specified in the match condition.</description></item>
+        /// </list>
         /// 
-        /// *   **Include**: fuzzy match. A route meets the match condition if the community of the route overlaps with the community specified in the match condition.
-        /// *   **Complete**: exact match. A route meets the match condition only if the community of the route is the same as the community specified in the match condition.
+        /// <b>Example:</b>
+        /// <para>Include</para>
         /// </summary>
         [NameInMap("CommunityMatchMode")]
         [Validation(Required=false)]
         public string CommunityMatchMode { get; set; }
 
         /// <summary>
-        /// The action that is performed on the community. Valid values:
+        /// <para>The action that is performed on the community. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Additive</b>: adds the community to the route.</description></item>
+        /// <item><description><b>Replace</b>: replaces the original community of the route.</description></item>
+        /// </list>
+        /// <para>This parameter specifies the action to be performed when a route meets the match condition.</para>
         /// 
-        /// *   **Additive**: adds the community to the route.
-        /// *   **Replace**: replaces the original community of the route.
-        /// 
-        /// This parameter specifies the action to be performed when a route meets the match condition.
+        /// <b>Example:</b>
+        /// <para>Additive</para>
         /// </summary>
         [NameInMap("CommunityOperateMode")]
         [Validation(Required=false)]
         public string CommunityOperateMode { get; set; }
 
         /// <summary>
-        /// The description of the routing policy.
+        /// <para>The description of the routing policy.</para>
+        /// <para>The description cannot start with <c>http://</c> or <c>https://</c>. It must start with a letter and can contain letters, digits, hyphens (-), periods (.), and underscores (_).</para>
         /// 
-        /// The description cannot start with `http://` or `https://`. It must start with a letter and can contain letters, digits, hyphens (-), periods (.), and underscores (_).
+        /// <b>Example:</b>
+        /// <para>desctest</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The types of destination network instance to which the routes belong. The following types of network instances are supported:
+        /// <para>The types of destination network instance to which the routes belong. The following types of network instances are supported:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>VPC</b>: VPC</para>
+        /// </description></item>
+        /// <item><description><para><b>VBR</b>: VBR</para>
+        /// </description></item>
+        /// <item><description><para><b>CCN</b>: CCN instance</para>
+        /// </description></item>
+        /// <item><description><para><b>VPN</b>: IPsec connection</para>
+        /// <remarks>
+        /// <para>This parameter does not take effect if the IPsec-VPN connection or SSL client is associated with a transit router through a VPN gateway and a VPC. This parameter takes effect only if the IPsec connection is directly connected to the transit router.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <para>The destination network instance types are valid only if the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to network instances in the current region.</para>
         /// 
-        /// *   **VPC**: VPC
-        /// 
-        /// *   **VBR**: VBR
-        /// 
-        /// *   **CCN**: CCN instance
-        /// 
-        /// *   **VPN**: IPsec connection
-        /// 
-        ///     > This parameter does not take effect if the IPsec-VPN connection or SSL client is associated with a transit router through a VPN gateway and a VPC. This parameter takes effect only if the IPsec connection is directly connected to the transit router.
-        /// 
-        /// The destination network instance types are valid only if the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to network instances in the current region.
+        /// <b>Example:</b>
+        /// <para>VPC</para>
         /// </summary>
         [NameInMap("DestinationChildInstanceTypes")]
         [Validation(Required=false)]
         public List<string> DestinationChildInstanceTypes { get; set; }
 
         /// <summary>
-        /// The prefix list against which routes are matched.
+        /// <para>The prefix list against which routes are matched.</para>
+        /// <para>You must specify the IP addresses in CIDR notation. You can enter at most 32 CIDR blocks.</para>
         /// 
-        /// You must specify the IP addresses in CIDR notation. You can enter at most 32 CIDR blocks.
+        /// <b>Example:</b>
+        /// <para>10.10.10.0/24</para>
         /// </summary>
         [NameInMap("DestinationCidrBlocks")]
         [Validation(Required=false)]
         public List<string> DestinationCidrBlocks { get; set; }
 
         /// <summary>
-        /// The IDs of the destination network instances to which the routes belong. The following network instance types are supported:
+        /// <para>The IDs of the destination network instances to which the routes belong. The following network instance types are supported:</para>
+        /// <list type="bullet">
+        /// <item><description>VPC</description></item>
+        /// <item><description>VBR</description></item>
+        /// <item><description>CCN instance</description></item>
+        /// <item><description>SAG instance</description></item>
+        /// <item><description>The ID of the IPsec-VPN connection.</description></item>
+        /// </list>
+        /// <para>You can enter at most 32 IDs.</para>
+        /// <remarks>
+        /// <para>The destination instance IDs take effect only when Direction is set to Export from Regional Gateway and the destination instances are deployed in the current region.</para>
+        /// </remarks>
         /// 
-        /// *   VPC
-        /// *   VBR
-        /// *   CCN instance
-        /// *   SAG instance
-        /// *   The ID of the IPsec-VPN connection.
-        /// 
-        /// You can enter at most 32 IDs.
-        /// 
-        /// > The destination instance IDs take effect only when Direction is set to Export from Regional Gateway and the destination instances are deployed in the current region.
+        /// <b>Example:</b>
+        /// <para>vpc-avcdsg34ds****</para>
         /// </summary>
         [NameInMap("DestinationInstanceIds")]
         [Validation(Required=false)]
         public List<string> DestinationInstanceIds { get; set; }
 
         /// <summary>
-        /// Specifies whether to exclude the destination network instance IDs. Valid values:
+        /// <para>Specifies whether to exclude the destination network instance IDs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b> (default value): A route is a match if its destination network instance ID is in the list specified by <b>DestinationInstanceIds.N</b>.</description></item>
+        /// <item><description><b>true</b>: A route meets the match condition if its destination network instance ID is not in the list specified by <b>DestinationInstanceIds.N</b>.</description></item>
+        /// </list>
         /// 
-        /// *   **false** (default value): A route is a match if its destination network instance ID is in the list specified by **DestinationInstanceIds.N**.
-        /// *   **true**: A route meets the match condition if its destination network instance ID is not in the list specified by **DestinationInstanceIds.N**.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DestinationInstanceIdsReverseMatch")]
         [Validation(Required=false)]
         public bool? DestinationInstanceIdsReverseMatch { get; set; }
 
+        [NameInMap("DestinationRegionIds")]
+        [Validation(Required=false)]
+        public List<string> DestinationRegionIds { get; set; }
+
         /// <summary>
-        /// The IDs of the destination route tables to which the routes belong. You can enter at most 32 route table IDs.
+        /// <para>The IDs of the destination route tables to which the routes belong. You can enter at most 32 route table IDs.</para>
+        /// <remarks>
+        /// <para>The destination route table IDs take effect only when Direction is set to Export from Regional Gateway and the destination route tables belong to network instances deployed in the current region.</para>
+        /// </remarks>
         /// 
-        /// > The destination route table IDs take effect only when Direction is set to Export from Regional Gateway and the destination route tables belong to network instances deployed in the current region.
+        /// <b>Example:</b>
+        /// <para>vtb-adfg53c322v****</para>
         /// </summary>
         [NameInMap("DestinationRouteTableIds")]
         [Validation(Required=false)]
         public List<string> DestinationRouteTableIds { get; set; }
 
         /// <summary>
-        /// The action to be performed on a route that meets all match conditions. Valid values:
+        /// <para>The action to be performed on a route that meets all match conditions. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Permit</b>: the route is permitted.</description></item>
+        /// <item><description><b>Deny</b>: the route is denied.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **Permit**: the route is permitted.
-        /// *   **Deny**: the route is denied.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Permit</para>
         /// </summary>
         [NameInMap("MapResult")]
         [Validation(Required=false)]
         public string MapResult { get; set; }
 
         /// <summary>
-        /// The type of IP address in the match condition. Valid values:
+        /// <para>The type of IP address in the match condition. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>IPv4</b>: IPv4 address</description></item>
+        /// <item><description><b>IPv6</b>: IPv6 address</description></item>
+        /// </list>
+        /// <para>This parameter can be empty. If no value is specified, all types of IP address are a match.</para>
         /// 
-        /// *   **IPv4**: IPv4 address
-        /// *   **IPv6**: IPv6 address
-        /// 
-        /// This parameter can be empty. If no value is specified, all types of IP address are a match.
+        /// <b>Example:</b>
+        /// <para>IPv4</para>
         /// </summary>
         [NameInMap("MatchAddressType")]
         [Validation(Required=false)]
         public string MatchAddressType { get; set; }
 
         /// <summary>
-        /// The AS paths against which routes are matched.
+        /// <para>The AS paths against which routes are matched.</para>
+        /// <remarks>
+        /// <para>Only the AS-SEQUENCE parameter is supported. The AS-SET, AS-CONFED-SEQUENCE, and AS-CONFED-SET parameters are not supported. In other words, only the AS number list is supported. Sets and sub-lists are not supported.</para>
+        /// </remarks>
         /// 
-        /// > Only the AS-SEQUENCE parameter is supported. The AS-SET, AS-CONFED-SEQUENCE, and AS-CONFED-SET parameters are not supported. In other words, only the AS number list is supported. Sets and sub-lists are not supported.
+        /// <b>Example:</b>
+        /// <para>65501</para>
         /// </summary>
         [NameInMap("MatchAsns")]
         [Validation(Required=false)]
         public List<int?> MatchAsns { get; set; }
 
         /// <summary>
-        /// The community against which routes are matched.
+        /// <para>The community against which routes are matched.</para>
+        /// <para>Specify the community in the format of n:m. Valid values of n and m: <b>1</b> to <b>65535</b>. Each community must comply with the RFC 1997 standard. The RFC 8092 standard that defines BGP large communities is not supported.</para>
+        /// <para>You can specify at most 32 communities.</para>
+        /// <remarks>
+        /// <para>If the configurations of the communities are incorrect, routes may fail to be advertised to your data center.</para>
+        /// </remarks>
         /// 
-        /// Specify the community in the format of n:m. Valid values of n and m: **1** to **65535**. Each community must comply with the RFC 1997 standard. The RFC 8092 standard that defines BGP large communities is not supported.
-        /// 
-        /// You can specify at most 32 communities.
-        /// 
-        /// > If the configurations of the communities are incorrect, routes may fail to be advertised to your data center.
+        /// <b>Example:</b>
+        /// <para>65501:1</para>
         /// </summary>
         [NameInMap("MatchCommunitySet")]
         [Validation(Required=false)]
         public List<string> MatchCommunitySet { get; set; }
 
         /// <summary>
-        /// The priority of the routing policy that you want to associate with the current one.
+        /// <para>The priority of the routing policy that you want to associate with the current one.</para>
+        /// <list type="bullet">
+        /// <item><description>This parameter takes effect only when the <b>MapResult</b> parameter is set to <b>Permit</b>. This way, the permitted route is matched against the next routing policy.</description></item>
+        /// <item><description>The region and direction of the routing policy to be associated must be the same as those of the current routing policy.</description></item>
+        /// <item><description>The priority of the routing policy to be associated must be lower than the priority of the current routing policy.</description></item>
+        /// </list>
         /// 
-        /// *   This parameter takes effect only when the **MapResult** parameter is set to **Permit**. This way, the permitted route is matched against the next routing policy.
-        /// *   The region and direction of the routing policy to be associated must be the same as those of the current routing policy.
-        /// *   The priority of the routing policy to be associated must be lower than the priority of the current routing policy.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("NextPriority")]
         [Validation(Required=false)]
         public int? NextPriority { get; set; }
 
         /// <summary>
-        /// The community set on which actions are performed.
+        /// <para>The community set on which actions are performed.</para>
+        /// <para>Specify the community in the format of n:m. Valid values of n and m: <b>1</b> to <b>65535</b>. Each community must comply with RFC 1997. The RFC 8092 standard that defines BGP large communities is not supported.</para>
+        /// <para>You can specify at most 32 communities.</para>
+        /// <remarks>
+        /// <para>If the configurations of the communities are incorrect, routes may fail to be advertised to your data center.</para>
+        /// </remarks>
         /// 
-        /// Specify the community in the format of n:m. Valid values of n and m: **1** to **65535**. Each community must comply with RFC 1997. The RFC 8092 standard that defines BGP large communities is not supported.
-        /// 
-        /// You can specify at most 32 communities.
-        /// 
-        /// > If the configurations of the communities are incorrect, routes may fail to be advertised to your data center.
+        /// <b>Example:</b>
+        /// <para>65501:1</para>
         /// </summary>
         [NameInMap("OperateCommunitySet")]
         [Validation(Required=false)]
@@ -228,36 +288,42 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The new priority of the route.
+        /// <para>The new priority of the route.</para>
+        /// <para>Valid values: <b>1</b> to <b>100</b>. The default priority is <b>50</b>. A smaller value indicates a higher priority.</para>
+        /// <para>This parameter specifies the action to be performed when a route meets the match condition.</para>
         /// 
-        /// Valid values: **1** to **100**. The default priority is **50**. A smaller value indicates a higher priority.
-        /// 
-        /// This parameter specifies the action to be performed when a route meets the match condition.
+        /// <b>Example:</b>
+        /// <para>22</para>
         /// </summary>
         [NameInMap("Preference")]
         [Validation(Required=false)]
         public int? Preference { get; set; }
 
         /// <summary>
-        /// The AS paths that are prepended by using an action statement when regional gateways receive or advertise routes.
+        /// <para>The AS paths that are prepended by using an action statement when regional gateways receive or advertise routes.</para>
+        /// <para>The AS paths vary based on the direction in which the routing policy is applied:</para>
+        /// <list type="bullet">
+        /// <item><description>If AS paths are prepended to a routing policy that is applied in the inbound direction, you must specify source network instance IDs and the source region in the match condition. In addition, the source region must be the same as the region where the routing policy is applied.</description></item>
+        /// <item><description>If AS paths are prepended to a routing policy that is applied in the outbound direction, you must specify destination network instance IDs in the match condition.</description></item>
+        /// </list>
+        /// <para>This parameter specifies the action to be performed when a route meets the match condition.</para>
         /// 
-        /// The AS paths vary based on the direction in which the routing policy is applied:
-        /// 
-        /// *   If AS paths are prepended to a routing policy that is applied in the inbound direction, you must specify source network instance IDs and the source region in the match condition. In addition, the source region must be the same as the region where the routing policy is applied.
-        /// *   If AS paths are prepended to a routing policy that is applied in the outbound direction, you must specify destination network instance IDs in the match condition.
-        /// 
-        /// This parameter specifies the action to be performed when a route meets the match condition.
+        /// <b>Example:</b>
+        /// <para>65501</para>
         /// </summary>
         [NameInMap("PrependAsPath")]
         [Validation(Required=false)]
         public List<long?> PrependAsPath { get; set; }
 
         /// <summary>
-        /// The priority of the routing policy. Valid values: **1** to **100**. A smaller value indicates a higher priority.
+        /// <para>The priority of the routing policy. Valid values: <b>1</b> to <b>100</b>. A smaller value indicates a higher priority.</para>
+        /// <remarks>
+        /// <para>You cannot specify the same priority for routing policies that apply in the same region and direction. The system matches routes against the match conditions of routing policies in descending order of priority. A smaller value indicates a higher priority. You must set the priorities to proper values.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You cannot specify the same priority for routing policies that apply in the same region and direction. The system matches routes against the match conditions of routing policies in descending order of priority. A smaller value indicates a higher priority. You must set the priorities to proper values.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
@@ -272,79 +338,103 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the routing policy.
+        /// <para>The ID of the routing policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cenrmap-abcdedfghij****</para>
         /// </summary>
         [NameInMap("RouteMapId")]
         [Validation(Required=false)]
         public string RouteMapId { get; set; }
 
         /// <summary>
-        /// The type of route to be matched against the match condition. The following route types are supported:
+        /// <para>The type of route to be matched against the match condition. The following route types are supported:</para>
+        /// <list type="bullet">
+        /// <item><description><b>System</b>: system routes that are automatically generated by the system.</description></item>
+        /// <item><description><b>Custom</b>: custom routes that are manually added.</description></item>
+        /// <item><description><b>BGP</b>: routes that are advertised over BGP.</description></item>
+        /// </list>
         /// 
-        /// *   **System**: system routes that are automatically generated by the system.
-        /// *   **Custom**: custom routes that are manually added.
-        /// *   **BGP**: routes that are advertised over BGP.
+        /// <b>Example:</b>
+        /// <para>System</para>
         /// </summary>
         [NameInMap("RouteTypes")]
         [Validation(Required=false)]
         public List<string> RouteTypes { get; set; }
 
         /// <summary>
-        /// The types of source network instance to which the routes belong. The following types of network instances are supported:
+        /// <para>The types of source network instance to which the routes belong. The following types of network instances are supported:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>VPC</b>: VPC</para>
+        /// </description></item>
+        /// <item><description><para><b>VBR</b>: VBR</para>
+        /// </description></item>
+        /// <item><description><para><b>CCN</b>: CCN instance</para>
+        /// </description></item>
+        /// <item><description><para><b>VPN</b> :VPN gateway or IPsec-VPN connection</para>
+        /// <list type="bullet">
+        /// <item><description>If the IPsec-VPN connection or SSL client is associated with a VPN gateway, the VPC associated with the VPN gateway must be connected to a transit router, and the VPN gateway must use Border Gateway Protocol (BGP) dynamic routing. Otherwise, this parameter cannot take effect.</description></item>
+        /// <item><description>This parameter takes effect if the IPsec connection is directly connected to a transit router.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   **VPC**: VPC
-        /// 
-        /// *   **VBR**: VBR
-        /// 
-        /// *   **CCN**: CCN instance
-        /// 
-        /// *   **VPN** :VPN gateway or IPsec-VPN connection
-        /// 
-        ///     *   If the IPsec-VPN connection or SSL client is associated with a VPN gateway, the VPC associated with the VPN gateway must be connected to a transit router, and the VPN gateway must use Border Gateway Protocol (BGP) dynamic routing. Otherwise, this parameter cannot take effect.
-        ///     *   This parameter takes effect if the IPsec connection is directly connected to a transit router.
+        /// <b>Example:</b>
+        /// <para>VPC</para>
         /// </summary>
         [NameInMap("SourceChildInstanceTypes")]
         [Validation(Required=false)]
         public List<string> SourceChildInstanceTypes { get; set; }
 
         /// <summary>
-        /// The IDs of the source network instances to which the routes belong. The following network instance types are supported:
+        /// <para>The IDs of the source network instances to which the routes belong. The following network instance types are supported:</para>
+        /// <list type="bullet">
+        /// <item><description>Virtual private cloud (VPC)</description></item>
+        /// <item><description>Virtual border router (VBR)</description></item>
+        /// <item><description>Cloud Connect Network (CCN) instance</description></item>
+        /// <item><description>Smart Access Gateway (SAG) instance</description></item>
+        /// <item><description>The ID of the IPsec-VPN connection.</description></item>
+        /// </list>
+        /// <para>You can enter at most 32 IDs.</para>
         /// 
-        /// *   Virtual private cloud (VPC)
-        /// *   Virtual border router (VBR)
-        /// *   Cloud Connect Network (CCN) instance
-        /// *   Smart Access Gateway (SAG) instance
-        /// *   The ID of the IPsec-VPN connection.
-        /// 
-        /// You can enter at most 32 IDs.
+        /// <b>Example:</b>
+        /// <para>vpc-afsfdf5435vcvc****</para>
         /// </summary>
         [NameInMap("SourceInstanceIds")]
         [Validation(Required=false)]
         public List<string> SourceInstanceIds { get; set; }
 
         /// <summary>
-        /// Specifies whether to exclude the source network instance IDs. Valid values:
+        /// <para>Specifies whether to exclude the source network instance IDs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b> (default value): A route is a match if its source network instance ID is in the list specified by <b>SourceInstanceIds.N</b>.</description></item>
+        /// <item><description><b>true</b>: A route is a match if its source network instance ID is not in the list specified by <b>SourceInstanceIds.N</b>.</description></item>
+        /// </list>
         /// 
-        /// *   **false** (default value): A route is a match if its source network instance ID is in the list specified by **SourceInstanceIds.N**.
-        /// *   **true**: A route is a match if its source network instance ID is not in the list specified by **SourceInstanceIds.N**.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("SourceInstanceIdsReverseMatch")]
         [Validation(Required=false)]
         public bool? SourceInstanceIdsReverseMatch { get; set; }
 
         /// <summary>
-        /// The IDs of the source regions to which the routes belong. You can enter at most 32 region IDs.
+        /// <para>The IDs of the source regions to which the routes belong. You can enter at most 32 region IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
         /// </summary>
         [NameInMap("SourceRegionIds")]
         [Validation(Required=false)]
         public List<string> SourceRegionIds { get; set; }
 
         /// <summary>
-        /// The IDs of the source route tables to which the routes belong. You can enter at most 32 route table IDs.
+        /// <para>The IDs of the source route tables to which the routes belong. You can enter at most 32 route table IDs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vtb-acdbvtbr342cd****</para>
         /// </summary>
         [NameInMap("SourceRouteTableIds")]
         [Validation(Required=false)]

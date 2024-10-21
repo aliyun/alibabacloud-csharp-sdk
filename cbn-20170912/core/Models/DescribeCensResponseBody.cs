@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCensResponseBody : TeaModel {
         /// <summary>
-        /// The information about the CEN instance.
+        /// <para>The information about the CEN instance.</para>
         /// </summary>
         [NameInMap("Cens")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<DescribeCensResponseBodyCensCen> Cen { get; set; }
             public class DescribeCensResponseBodyCensCen : TeaModel {
                 /// <summary>
-                /// The IDs of the bandwidth plans that are associated with the CEN instance.
+                /// <para>The IDs of the bandwidth plans that are associated with the CEN instance.</para>
                 /// </summary>
                 [NameInMap("CenBandwidthPackageIds")]
                 [Validation(Required=false)]
@@ -34,74 +34,98 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The CEN instance ID.
+                /// <para>The CEN instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cen-0xyeagctz5sfg9****</para>
                 /// </summary>
                 [NameInMap("CenId")]
                 [Validation(Required=false)]
                 public string CenId { get; set; }
 
                 /// <summary>
-                /// The time when the CEN instance was created.
+                /// <para>The time when the CEN instance was created.</para>
+                /// <para>The time follows the ISO8601 standard in the <c>YYYY-MM-DDThh:mmZ</c> format. The time is displayed in UTC.</para>
                 /// 
-                /// The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.
+                /// <b>Example:</b>
+                /// <para>2019-10-22T07:44Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The description of the CEN instance.
+                /// <para>The description of the CEN instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>desctest</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// Indicates whether IPv6 is enabled for the CEN instance.
+                /// <para>Indicates whether IPv6 is enabled for the CEN instance.</para>
+                /// <list type="bullet">
+                /// <item><description><b>ENABLE</b></description></item>
+                /// <item><description><b>DISABLED</b></description></item>
+                /// </list>
                 /// 
-                /// *   **ENABLE**
-                /// *   **DISABLED**
+                /// <b>Example:</b>
+                /// <para>DISABLED</para>
                 /// </summary>
                 [NameInMap("Ipv6Level")]
                 [Validation(Required=false)]
                 public string Ipv6Level { get; set; }
 
                 /// <summary>
-                /// The CEN instance name.
+                /// <para>The CEN instance name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>nametest</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The level of CIDR block overlapping.
+                /// <para>The level of CIDR block overlapping.</para>
+                /// <para><b>REDUCED</b>: Overlapped CIDR blocks are allowed. This value specifies that CIDR blocks can overlap but CIDR blocks cannot be duplicates.</para>
                 /// 
-                /// **REDUCED**: Overlapped CIDR blocks are allowed. This value specifies that CIDR blocks can overlap but CIDR blocks cannot be duplicates.
+                /// <b>Example:</b>
+                /// <para>REDUCED</para>
                 /// </summary>
                 [NameInMap("ProtectionLevel")]
                 [Validation(Required=false)]
                 public string ProtectionLevel { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group to which the CEN instance belongs.
+                /// <para>The ID of the resource group to which the CEN instance belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-acfm3unpnuw****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The status of the CEN instance.
+                /// <para>The status of the CEN instance.</para>
+                /// <list type="bullet">
+                /// <item><description><b>Creating</b></description></item>
+                /// <item><description><b>Active</b></description></item>
+                /// <item><description><b>Deleting</b></description></item>
+                /// </list>
                 /// 
-                /// *   **Creating**
-                /// *   **Active**
-                /// *   **Deleting**
+                /// <b>Example:</b>
+                /// <para>Active</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The IDs of the tags that are added to the CEN instance.
+                /// <para>The IDs of the tags that are added to the CEN instance.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -112,14 +136,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     public List<DescribeCensResponseBodyCensCenTagsTag> Tag { get; set; }
                     public class DescribeCensResponseBodyCensCenTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// <para>The tag key.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>tagtest</para>
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// <para>The tag value.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>tagtest</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -134,28 +164,40 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The number of the page returned.
+        /// <para>The number of the page returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2BFA6822-240E-4E27-B4C8-AA400EF7474D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteCenBandwidthPackageRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cenbwp-4c2zaavbvh5f42****</para>
         /// </summary>
         [NameInMap("CenBandwidthPackageId")]
         [Validation(Required=false)]

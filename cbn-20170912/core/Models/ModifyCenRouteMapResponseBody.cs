@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ModifyCenRouteMapResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>54B48E3D-DF70-471B-AA93-08E683A1B457</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

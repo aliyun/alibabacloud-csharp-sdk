@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeGeographicRegionMembershipRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>china</para>
         /// </summary>
         [NameInMap("GeographicRegionId")]
         [Validation(Required=false)]
@@ -24,10 +27,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }

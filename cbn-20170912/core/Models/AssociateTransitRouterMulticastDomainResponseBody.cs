@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class AssociateTransitRouterMulticastDomainResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F88AC12C-943B-50E9-A344-4F8820BB07A7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

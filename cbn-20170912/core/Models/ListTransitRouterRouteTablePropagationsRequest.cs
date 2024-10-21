@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterRouteTablePropagationsRequest : TeaModel {
         /// <summary>
-        /// The number of entries to return on each page. Default value: **50**.
+        /// <para>The number of entries to return on each page. Default value: <b>50</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query.
+        /// <para>The token that determines the start point of the query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dd20****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -40,46 +46,62 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The status of the route learning correlation. Valid values:
+        /// <para>The status of the route learning correlation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Active</b>: available</description></item>
+        /// <item><description><b>Enabling</b>: being enabled</description></item>
+        /// <item><description><b>Disabling</b>: being disabled</description></item>
+        /// </list>
         /// 
-        /// *   **Active**: available
-        /// *   **Enabling**: being enabled
-        /// *   **Disabling**: being disabled
+        /// <b>Example:</b>
+        /// <para>Active</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The ID of the network instance connection.
+        /// <para>The ID of the network instance connection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tr-attach-vx6iwhjr1x1j78****</para>
         /// </summary>
         [NameInMap("TransitRouterAttachmentId")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentId { get; set; }
 
         /// <summary>
-        /// The ID of the network instance.
+        /// <para>The ID of the network instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp1h8vbrbcgohcju5****</para>
         /// </summary>
         [NameInMap("TransitRouterAttachmentResourceId")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentResourceId { get; set; }
 
         /// <summary>
-        /// The type of the network instance. Valid values:
+        /// <para>The type of the network instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
+        /// <item><description><b>VBR</b>: virtual border router (VBR)</description></item>
+        /// <item><description><b>TR</b>: transit router</description></item>
+        /// <item><description><b>VPN</b>: VPN connection</description></item>
+        /// </list>
         /// 
-        /// *   **VPC**: virtual private cloud (VPC)
-        /// *   **VBR**: virtual border router (VBR)
-        /// *   **TR**: transit router
-        /// *   **VPN**: VPN connection
+        /// <b>Example:</b>
+        /// <para>VPC</para>
         /// </summary>
         [NameInMap("TransitRouterAttachmentResourceType")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentResourceType { get; set; }
 
         /// <summary>
-        /// The ID of the route table of the Enterprise Edition transit router.
+        /// <para>The ID of the route table of the Enterprise Edition transit router.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vtb-bp1dudbh2d5na6b50****</para>
         /// </summary>
         [NameInMap("TransitRouterRouteTableId")]
         [Validation(Required=false)]

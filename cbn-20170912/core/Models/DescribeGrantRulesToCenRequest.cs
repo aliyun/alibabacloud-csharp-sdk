@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeGrantRulesToCenRequest : TeaModel {
         /// <summary>
-        /// The CEN instance ID.
+        /// <para>The CEN instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cen-nye53d7p3hzyu4****</para>
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
         /// <summary>
-        /// The ID of the network instance that you want to query.
+        /// <para>The ID of the network instance that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-rj9gt5nll27onu7****</para>
         /// </summary>
         [NameInMap("ChildInstanceId")]
         [Validation(Required=false)]
         public string ChildInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the network instance belongs.
+        /// <para>The ID of the Alibaba Cloud account to which the network instance belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>125012345612****</para>
         /// </summary>
         [NameInMap("ChildInstanceOwnerId")]
         [Validation(Required=false)]
@@ -37,18 +45,27 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? EnabledIpv6 { get; set; }
 
         /// <summary>
-        /// *   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** in the response indicates the total number of entries returned.
-        /// *   If you specify a value for **MaxResults**, it indicates that you need to query results in batches. The value of **MaxResults** indicates the number of entries to return in each batch. Valid values: **1** to **100**. The value of **MaxResults** in the response indicates the number of entries in the current batch. We recommend that you set **MaxResults** to **20**.
+        /// <list type="bullet">
+        /// <item><description>If you do not set <b>MaxResults</b>, it indicates that you do not need to query results in batches. The value of <b>MaxResults</b> in the response indicates the total number of entries returned.</description></item>
+        /// <item><description>If you specify a value for <b>MaxResults</b>, it indicates that you need to query results in batches. The value of <b>MaxResults</b> indicates the number of entries to return in each batch. Valid values: <b>1</b> to <b>100</b>. The value of <b>MaxResults</b> in the response indicates the number of entries in the current batch. We recommend that you set <b>MaxResults</b> to <b>20</b>.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
+        /// <item><description>You must specify the token that is obtained from the previous query as the value of <b>NextToken</b>.</description></item>
+        /// </list>
         /// 
-        /// *   You do not need to specify this parameter for the first request.
-        /// *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -63,23 +80,28 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The type of the network instance. Valid values:
+        /// <para>The type of the network instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>VPC</b></description></item>
+        /// <item><description><b>VBR</b></description></item>
+        /// <item><description><b>CCN</b></description></item>
+        /// <item><description><b>VPN</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **VPC**
-        /// *   **VBR**
-        /// *   **CCN**
-        /// *   **VPN**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>VPC</para>
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
         /// <summary>
-        /// The region ID of the network instance.
+        /// <para>The region ID of the network instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
