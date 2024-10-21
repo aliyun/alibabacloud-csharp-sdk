@@ -1777,6 +1777,134 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await DeepfakeDetectWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>金融级服务敏感数据删除接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaceVerifyResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaceVerifyResultResponse
+        /// </returns>
+        public DeleteFaceVerifyResultResponse DeleteFaceVerifyResultWithOptions(DeleteFaceVerifyResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertifyId))
+            {
+                query["CertifyId"] = request.CertifyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteAfterQuery))
+            {
+                query["DeleteAfterQuery"] = request.DeleteAfterQuery;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFaceVerifyResult",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFaceVerifyResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>金融级服务敏感数据删除接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaceVerifyResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaceVerifyResultResponse
+        /// </returns>
+        public async Task<DeleteFaceVerifyResultResponse> DeleteFaceVerifyResultWithOptionsAsync(DeleteFaceVerifyResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertifyId))
+            {
+                query["CertifyId"] = request.CertifyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteAfterQuery))
+            {
+                query["DeleteAfterQuery"] = request.DeleteAfterQuery;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFaceVerifyResult",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFaceVerifyResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>金融级服务敏感数据删除接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaceVerifyResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaceVerifyResultResponse
+        /// </returns>
+        public DeleteFaceVerifyResultResponse DeleteFaceVerifyResult(DeleteFaceVerifyResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteFaceVerifyResultWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>金融级服务敏感数据删除接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaceVerifyResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaceVerifyResultResponse
+        /// </returns>
+        public async Task<DeleteFaceVerifyResultResponse> DeleteFaceVerifyResultAsync(DeleteFaceVerifyResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteFaceVerifyResultWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// DescribeDeviceInfoRequest
         /// </param>
