@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingActivitiesRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ir-a12ds234fasd*****</para>
+        /// </summary>
         [NameInMap("InstanceRefreshTaskId")]
         [Validation(Required=false)]
         public string InstanceRefreshTaskId { get; set; }
@@ -22,7 +26,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page 1.</para>
+        /// <para>The page number. Pages start from page 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +37,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: 50.</para>
+        /// <para>The number of entries per page. Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +69,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>The IDs of the scaling activities that you want to query.</para>
         /// <remarks>
-        /// <para>When you call this operation, you must specify one of the <c>ScalingGroupId</c> and <c>ScalingActivityId.N</c> parameters. Otherwise, an error is reported.</para>
+        /// <para> When you call this operation, you must specify one of the following parameters: <c>ScalingGroupId</c> and <c>ScalingActivityIds</c>. You cannot specify both of them at the same time. If you specify neither of them, an error is reported.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ScalingActivityIds")]
@@ -75,7 +79,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>The ID of the scaling group.</para>
         /// <remarks>
-        /// <para>When you call this operation, you must specify one of the <c>ScalingGroupId</c> and <c>ScalingActivityId.N</c> parameters. Otherwise, an error is reported.</para>
+        /// <para> When you call this operation, you must specify one of the following parameters: <c>ScalingGroupId</c> and <c>ScalingActivityIds</c>. You cannot specify both of them at the same time. If you specify neither of them, an error is reported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -157,20 +157,22 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <para>The predefined metric. This parameter is required only if you create a target tracking scaling rule or predictive scaling rule.</para>
         /// <para>Valid values if you create a target tracking scaling rule:</para>
         /// <list type="bullet">
+        /// <item><description>CpuUtilizationAgent (recommended): the CPU utilization.</description></item>
+        /// <item><description>MemoryUtilization (recommended): the memory usage.</description></item>
         /// <item><description>CpuUtilization: the average CPU utilization.</description></item>
-        /// <item><description>IntranetTx: the outbound traffic over an internal network.</description></item>
-        /// <item><description>IntranetRx: the inbound traffic over an internal network.</description></item>
-        /// <item><description>VpcInternetTx: the outbound traffic from a virtual private cloud (VPC) to the Internet.</description></item>
-        /// <item><description>VpcInternetRx: the inbound traffic from the Internet to a VPC.</description></item>
-        /// <item><description>MemoryUtilization: the memory usage.</description></item>
+        /// <item><description>IntranetTx: the average outbound traffic over an internal network.</description></item>
+        /// <item><description>IntranetRx: the average inbound traffic over an internal network.</description></item>
+        /// <item><description>VpcInternetTx: the average outbound traffic from a virtual private cloud (VPC) to the Internet.</description></item>
+        /// <item><description>VpcInternetRx: the average inbound traffic from the Internet to a VPC.</description></item>
         /// <item><description>LoadBalancerRealServerAverageQps: the queries per second (QPS) per Application Load Balancer (ALB) server group.</description></item>
         /// </list>
         /// <para>Valid values if you create a predictive scaling rule:</para>
         /// <list type="bullet">
         /// <item><description>CpuUtilization: the average CPU utilization.</description></item>
-        /// <item><description>IntranetRx: the inbound traffic over an internal network.</description></item>
-        /// <item><description>IntranetTx: the outbound traffic over an internal network.</description></item>
+        /// <item><description>IntranetRx: the average inbound traffic over an internal network.</description></item>
+        /// <item><description>IntranetTx: the average outbound traffic over an internal network.</description></item>
         /// </list>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">Event-triggered tasks of the system monitoring type</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CpuUtilization</para>

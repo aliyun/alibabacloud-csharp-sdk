@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page 1.</para>
+        /// <para>The page number. Pages start from page 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: 50.</para>
+        /// <para>The number of entries per page. Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingRuleType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return CloudMonitor event-triggered tasks associated with scaling rules. Valid values:</para>
+        /// <para>Specifies whether to return the event-triggered tasks that are associated with the scaling rule. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>

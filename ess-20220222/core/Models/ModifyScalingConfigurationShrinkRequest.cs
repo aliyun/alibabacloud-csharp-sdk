@@ -1122,7 +1122,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to overwrite existing data. Valid values:</para>
+        /// <para>Specifies whether to override existing data. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -1245,6 +1245,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public ModifyScalingConfigurationShrinkRequestSecurityOptions SecurityOptions { get; set; }
         public class ModifyScalingConfigurationShrinkRequestSecurityOptions : TeaModel {
+            /// <summary>
+            /// <para>The confidential computing mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Enclave: An enclave-based confidential computing environment is built on the instance. For more information, see <a href="https://help.aliyun.com/document_detail/203433.html">Build a confidential computing environment by using Enclave</a>.</description></item>
+            /// <item><description>TDX: A Trust Domain Extensions (TDX) confidential computing environment is built on the instance. For more information, see <a href="https://help.aliyun.com/document_detail/479090.html">Build a TDX confidential computing environment</a>.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TDX</para>
+            /// </summary>
             [NameInMap("ConfidentialComputingMode")]
             [Validation(Required=false)]
             public string ConfidentialComputingMode { get; set; }

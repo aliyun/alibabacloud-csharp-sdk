@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the scaling activities.</para>
+        /// <para>The scaling activities.</para>
         /// </summary>
         [NameInMap("ScalingActivities")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ActivityMetadata { get; set; }
 
             /// <summary>
-            /// <para>The total number of instances that are manually added to the scaling group after the scaling activity was complete.</para>
+            /// <para>The total number of instances that are manually added to the scaling group after the scaling activity is complete.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -170,6 +170,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ir-asdf12adsxg*****</para>
+            /// </summary>
             [NameInMap("InstanceRefreshTaskId")]
             [Validation(Required=false)]
             public string InstanceRefreshTaskId { get; set; }
@@ -182,7 +186,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext LifecycleHookContext { get; set; }
             public class DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether all lifecycle hooks are disabled. Valid values:</para>
+                /// <para>Indicates whether all lifecycle hooks are disabled when the scaling activity is triggered. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true</description></item>
                 /// <item><description>false</description></item>
@@ -235,8 +239,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ScalingGroupId { get; set; }
 
             /// <summary>
-            /// <para>If you query a scale-out activity, the value of this parameter indicates the number of instances that are created or the number of instances that are started from the Economical Mode during the scale-out event.</para>
-            /// <para>If you query a scale-in activity, the value of this parameter indicates the number of instances that are deleted or the number of instances that are stopped in the Economical Mode during the scale-in event.</para>
+            /// <list type="bullet">
+            /// <item><description>If you query a scale-out activity, the value of this parameter indicates the number of instances that are created or the number of instances that are started from Economical Mode.</description></item>
+            /// <item><description>If you query a scale-in activity, the value of this parameter indicates the number of instances that are deleted or the number of instances that are stopped in Economical Mode.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -327,11 +333,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string TotalCapacity { get; set; }
 
             /// <summary>
-            /// <para>The ID of the trigger source of the scaling activity.</para>
+            /// <para>The ID of the trigger source of the scaling activity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If TriggerSourceType is set to Cms, the ID of the trigger source is the ID of an event-triggered task.</description></item>
-            /// <item><description>If TriggerSourceType is set to Api, the ID of the trigger source is the ID of an Alibaba Cloud account or a RAM user.</description></item>
-            /// <item><description>If TriggerSourceType is set to Api, the ID of the trigger source is null.</description></item>
+            /// <item><description>If the scaling activity is triggered by an event-triggered task, the ID of the trigger source is the ID of the event-triggered task.</description></item>
+            /// <item><description>If the scaling activity is triggered by calling an API operation, the ID of the trigger source is the ID of the Alibaba Cloud account or Resource Access Management (RAM) user that you use to call the API operation.</description></item>
+            /// <item><description>If the scaling activity is triggered by Auto Scaling, the ID of the trigger source is null.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -342,11 +348,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string TriggerSourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the trigger source of the scaling activity.</para>
+            /// <para>The type of the trigger source of the scaling activity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Cms: triggered by an event-triggered task</description></item>
-            /// <item><description>APIs: triggered by API calling</description></item>
-            /// <item><description>Ess: triggered by a system task</description></item>
+            /// <item><description>Cms: The scaling activity is triggered by an event-triggered task.</description></item>
+            /// <item><description>APIs: The scaling activity is triggered by calling an API operation.</description></item>
+            /// <item><description>Ess: The scaling activity is triggered by Auto Scaling.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

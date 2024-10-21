@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the scaling groups.</para>
+        /// <para>The scaling group.</para>
         /// </summary>
         [NameInMap("ScalingGroup")]
         [Validation(Required=false)]
@@ -264,8 +264,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>The health check mode of the scaling group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NONE: Auto Scaling does not perform health checks in the scaling group.</description></item>
-            /// <item><description>ECS: Auto Scaling performs health checks on ECS instances in the scaling group.</description></item>
+            /// <item><description>NONE: Auto Scaling does not perform health checks.</description></item>
+            /// <item><description>ECS: Auto Scaling checks the health status of instances in the scaling group. If you want to enable instance health check, you can set the value to ECS, regardless of whether the scaling group is of ECS type or Elastic Container Instance type.</description></item>
+            /// <item><description>LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of Classic Load Balancer (CLB) instances are not supported as the health check basis for instances in the scaling group.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -276,7 +277,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string HealthCheckType { get; set; }
 
             /// <summary>
-            /// <para>The health check types.</para>
+            /// <para>The health check mode of the scaling group. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NONE: Auto Scaling does not perform health checks.</description></item>
+            /// <item><description>ECS: Auto Scaling checks the health status of instances in the scaling group. If you want to enable instance health check, you can set the value to ECS, regardless of whether the scaling group is of ECS type or Elastic Container Instance type.</description></item>
+            /// <item><description>LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of CLB instances are not supported as the health check basis for instances in the scaling group.</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("HealthCheckTypes")]
             [Validation(Required=false)]

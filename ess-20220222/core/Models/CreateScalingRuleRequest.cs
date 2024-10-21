@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? Cooldown { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable scale-in. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule.</para>
+        /// <para>Specifies whether to disable scale-in. This parameter is available only if you set ScalingRuleType to TargetTrackingScalingRule.</para>
         /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
@@ -157,14 +157,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? InitialMaxSize { get; set; }
 
         /// <summary>
-        /// <para>The predefined metric of the scaling rule. If you set ScalingRuleType to TargetTrackingScalingRule or PredictiveScalingRule, you must specify this parameter.</para>
+        /// <para>The predefined metric that you want to monitor. If you set ScalingRuleType to TargetTrackingScalingRule or PredictiveScalingRule, you must specify this parameter.</para>
         /// <para>Valid values if you set ScalingRuleType to TargetTrackingScalingRule:</para>
         /// <list type="bullet">
         /// <item><description>CpuUtilizationAgent (recommended): the CPU utilization.</description></item>
         /// <item><description>MemoryUtilization (recommended): the memory usage.</description></item>
         /// <item><description>CpuUtilization: the average CPU utilization.</description></item>
         /// <item><description>IntranetTx: the outbound traffic over an internal network.</description></item>
-        /// <item><description>IntranetRx: the inbound traffic over an internal network.</description></item>
+        /// <item><description>IntranetRx: the average inbound traffic over an internal network.</description></item>
         /// <item><description>VpcInternetTx: the outbound traffic from a virtual private cloud (VPC) to the Internet.</description></item>
         /// <item><description>VpcInternetRx: the inbound traffic from the Internet to a VPC.</description></item>
         /// <item><description>LoadBalancerRealServerAverageQps:the queries per second (QPS) per Application Load Balancer (ALB) server group.</description></item>
@@ -172,10 +172,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <para>Valid values if you set ScalingRuleType to PredictiveScalingRule:</para>
         /// <list type="bullet">
         /// <item><description>CpuUtilization: the average CPU utilization.</description></item>
-        /// <item><description>IntranetRx: the inbound traffic over an internal network.</description></item>
-        /// <item><description>IntranetTx: the outbound traffic over an internal network.</description></item>
+        /// <item><description>IntranetRx: the average inbound traffic over an internal network.</description></item>
+        /// <item><description>IntranetTx: the average outbound traffic over an internal network.</description></item>
         /// </list>
-        /// <para>For more information, see <a href="https://www.alibabacloud.com/help/zh/auto-scaling/user-guide/event-triggered-tasks-of-the-system-monitoring-type">Event-triggered tasks of the system monitoring type</a>.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">Event-triggered tasks of the system monitoring type</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CpuUtilization</para>
@@ -321,12 +321,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>The type of the scaling rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SimpleScalingRule: a simple scaling rule. Once a simple scaling rule is executed, Auto Scaling adjusts the number of ECS instances or elastic container instances in the scaling group based on the values of AdjustmentType and AdjustmentValue.</description></item>
-        /// <item><description>TargetTrackingScalingRule: a target tracking scaling rule. Once a target tracking scaling rule is executed, Auto Scaling dynamically calculates the number of ECS instances or elastic container instances to scale based on the predefined metric (MetricName) and attempts to maintain the metric value close to the specified target value (TargetValue).</description></item>
-        /// <item><description>StepScalingRule: a step scaling rule. Once a step scaling rule is executed, Auto Scaling scales instances step by step based on the predefined thresholds and metric values.</description></item>
-        /// <item><description>PredictiveScalingRule: a predictive scaling rule. Once a predictive scaling rule is executed, Auto Scaling analyzes the historical monitoring data based on the machine learning technology and predicts the trends of metric data. Auto Scaling also creates scheduled tasks to enable dynamic adjustment of the boundary values for the scaling group.</description></item>
+        /// <item><description>SimpleScalingRule: a simple scaling rule. After you execute a simple scaling rule, Auto Scaling adjusts the number of ECS instances or elastic container instances in the scaling group based on the values of AdjustmentType and AdjustmentValue.</description></item>
+        /// <item><description>TargetTrackingScalingRule: a target tracking scaling rule. After you execute a target tracking scaling rule, Auto Scaling dynamically calculates the number of ECS instances or elastic container instances to scale based on the predefined metric (MetricName) and attempts to maintain the metric value close to the expected value (TargetValue).</description></item>
+        /// <item><description>StepScalingRule: a step scaling rule. After you execute a step scaling rule, Auto Scaling scales instances step by step based on the predefined thresholds and metric values.</description></item>
+        /// <item><description>PredictiveScalingRule: uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of metrics. In addition, Auto Scaling automatically creates scheduled tasks to specify the value range for the scaling group.</description></item>
         /// </list>
-        /// <para>Default value: SimpleScalingRule.</para>
+        /// <para>Default value: SimpleScalingRule</para>
         /// 
         /// <b>Example:</b>
         /// <para>SimpleScalingRule</para>

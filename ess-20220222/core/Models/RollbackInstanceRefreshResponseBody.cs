@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class RollbackInstanceRefreshResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B13527BF-1FBD-4334-A512-20F5E9D3****</para>
         /// </summary>

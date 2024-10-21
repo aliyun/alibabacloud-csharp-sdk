@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class RollbackInstanceRefreshRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance refresh task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the scaling group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +40,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
+        /// <para>The ID of the scaling group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

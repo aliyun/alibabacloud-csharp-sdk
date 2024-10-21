@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class StartInstanceRefreshResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance refresh task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ir-a12ds234fasd*****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string InstanceRefreshTaskId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>

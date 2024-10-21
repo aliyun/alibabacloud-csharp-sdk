@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class AttachDBInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The mode in which you want to attach the ApsaraDB RDS instance to the scaling group. Valid values:</para>
+        /// <para>The mode in which you want to attach the database to the scaling group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SecurityIp: the SecurityIp mode. Auto Scaling automatically adds the private IP addresses of the scaled out instances to the IP address whitelist of the ApsaraDB RDS instance. You can select this mode only when you attach an ApsaraDB RDS instance to a scaling group.</description></item>
-        /// <item><description>SecurityGroup: the security group mode. Auto Scaling adds the security group of the scaling configuration to the security group whitelist for registration and association.</description></item>
+        /// <item><description>SecurityIp: adds the private IP addresses of scaled out ECS instances to the IP address whitelist of the database. Take note that you can choose this mode only when the database that you want to attach is an ApsaraDB RDS instance.</description></item>
+        /// <item><description>SecurityGroup: adds the security group of the scaling configuration based on which ECS instances are created in the scaling group to the security group whitelist of the database for registration.</description></item>
         /// </list>
+        /// <para>Default value: SecurityIp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SecurityIp</para>
@@ -35,7 +36,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraDB RDS instance.</para>
+        /// <para>The IDs of the ApsaraDB RDS instances that you want to attach to the scaling group.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DBInstances")]
@@ -43,7 +44,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<string> DBInstances { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to add the private IP addresses of all instances in the scaling group to the IP address whitelist of the ApsaraDB RDS instance. Valid values:</para>
+        /// <para>Specifies whether to add the private IP addresses of all ECS instances in the scaling group to the IP address whitelist of an ApsaraDB RDS instance when you attach the ApsaraDB RDS instance to the scaling group. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -89,9 +90,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>The type of the database that you want to attach to the scaling group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ApsaraDB RDS</description></item>
-        /// <item><description>ApsaraDB for Redis</description></item>
-        /// <item><description>ApsaraDB for MongoDB</description></item>
+        /// <item><description>RDS</description></item>
+        /// <item><description>Redis</description></item>
+        /// <item><description>MongoDB</description></item>
         /// </list>
         /// <para>Default value: RDS.</para>
         /// 
