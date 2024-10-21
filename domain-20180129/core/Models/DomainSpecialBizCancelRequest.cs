@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class DomainSpecialBizCancelRequest : TeaModel {
         /// <summary>
-        /// The business ID.
+        /// <para>The business ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3666</para>
         /// </summary>
         [NameInMap("BizId")]
         [Validation(Required=false)]
         public long? BizId { get; set; }
 
         /// <summary>
-        /// The IP address of the client.
+        /// <para>The IP address of the client.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127.0.0.1</para>
         /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]

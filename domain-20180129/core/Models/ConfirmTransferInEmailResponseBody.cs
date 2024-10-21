@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>40F46D3D-F4F3-4CCB-AC30-2DD20E32E528</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

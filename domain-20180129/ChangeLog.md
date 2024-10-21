@@ -1,3 +1,9 @@
+2024-10-21 Version: 4.0.0
+- Support API SaveBatchTaskForTransferOutByAuthorizationCode.
+- Support API SaveSingleTaskForTransferOutByAuthorizationCode.
+- Update API QueryIntlFixedPriceOrderList: update response param.
+
+
 2024-08-30 Version: 3.16.0
 - Support API CheckIntlFixPriceDomainStatus.
 - Support API CreateIntlFixedPriceDomainOrder.

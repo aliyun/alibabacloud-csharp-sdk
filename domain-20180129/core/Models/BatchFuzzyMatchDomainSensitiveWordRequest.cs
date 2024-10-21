@@ -10,16 +10,27 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class BatchFuzzyMatchDomainSensitiveWordRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com,aliyundoc.com</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>en</para>
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>127.0.0.1</para>
+        /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }

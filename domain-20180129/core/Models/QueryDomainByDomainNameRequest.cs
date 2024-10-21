@@ -10,28 +10,36 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryDomainByDomainNameRequest : TeaModel {
         /// <summary>
-        /// The domain name.
+        /// <para>The domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The language of the error message to return if the request fails. Valid values:
+        /// <para>The language of the error message to return if the request fails. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
+        /// <para>Default value: <b>en</b>.</para>
         /// 
-        /// *   **zh**: Chinese.
-        /// *   **en**: English.
-        /// 
-        /// Default value: **en**.
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The IP address of the client.
+        /// <para>The IP address of the client.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127.0.0.1</para>
         /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]

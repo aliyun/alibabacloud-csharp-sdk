@@ -9,26 +9,50 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class VerifyContactFieldRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Rd. xitucheng</para>
+        /// </summary>
         [NameInMap("Address")]
         [Validation(Required=false)]
         public string Address { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Bei jing</para>
+        /// </summary>
         [NameInMap("City")]
         [Validation(Required=false)]
         public string City { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>CN</para>
+        /// </summary>
         [NameInMap("Country")]
         [Validation(Required=false)]
         public string Country { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>example.com</para>
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="mailto:username@example.com">username@example.com</a></para>
+        /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]
         public string Email { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>en</para>
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
@@ -37,34 +61,66 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string PostalCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Bei jing</para>
+        /// </summary>
         [NameInMap("Province")]
         [Validation(Required=false)]
         public string Province { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>wang xian sheng</para>
+        /// </summary>
         [NameInMap("RegistrantName")]
         [Validation(Required=false)]
         public string RegistrantName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>wang xian sheng</para>
+        /// </summary>
         [NameInMap("RegistrantOrganization")]
         [Validation(Required=false)]
         public string RegistrantOrganization { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("RegistrantType")]
         [Validation(Required=false)]
         public string RegistrantType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>86</para>
+        /// </summary>
         [NameInMap("TelArea")]
         [Validation(Required=false)]
         public string TelArea { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>01</para>
+        /// </summary>
         [NameInMap("TelExt")]
         [Validation(Required=false)]
         public string TelExt { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1390000****</para>
+        /// </summary>
         [NameInMap("Telephone")]
         [Validation(Required=false)]
         public string Telephone { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>127.0.0.1</para>
+        /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }

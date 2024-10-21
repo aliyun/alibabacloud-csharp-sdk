@@ -9,40 +9,70 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class PollTaskResultRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>example.com</para>
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>S20181T0WLI85212</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>en</para>
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>75addb07-28a3-450e-b5ec-test</para>
+        /// </summary>
         [NameInMap("TaskNo")]
         [Validation(Required=false)]
         public string TaskNo { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("TaskResultStatus")]
         [Validation(Required=false)]
         public int? TaskResultStatus { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>127.0.0.1</para>
+        /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }

@@ -10,294 +10,393 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryDomainSpecialBizInfoByDomainResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether retries are allowed.
+        /// <para>Indicates whether retries are allowed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>False</para>
         /// </summary>
         [NameInMap("AllowRetry")]
         [Validation(Required=false)]
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// The name of the application for which the error code is returned.
+        /// <para>The name of the application for which the error code is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-com</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// The dynamic error code.
+        /// <para>The dynamic error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
         /// </summary>
         [NameInMap("DynamicCode")]
         [Validation(Required=false)]
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// The dynamic error message.
+        /// <para>The dynamic error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// The array of error parameters that are returned.
+        /// <para>The array of error parameters that are returned.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>110001</para>
         /// </summary>
         [NameInMap("ErrorMsg")]
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// The HTTP status code that is directly returned.
+        /// <para>The HTTP status code that is directly returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public QueryDomainSpecialBizInfoByDomainResponseBodyModule Module { get; set; }
         public class QueryDomainSpecialBizInfoByDomainResponseBodyModule : TeaModel {
             /// <summary>
-            /// The review information.
+            /// <para>The review information.</para>
             /// </summary>
             [NameInMap("AuditMsg")]
             [Validation(Required=false)]
             public string AuditMsg { get; set; }
 
             /// <summary>
-            /// The business name.
+            /// <para>The business name.</para>
             /// </summary>
             [NameInMap("BizName")]
             [Validation(Required=false)]
             public string BizName { get; set; }
 
             /// <summary>
-            /// The business ID.
+            /// <para>The business ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>A83E1D74-E46B-505C-947A-8C6B7E41C012</para>
             /// </summary>
             [NameInMap("BizNo")]
             [Validation(Required=false)]
             public string BizNo { get; set; }
 
             /// <summary>
-            /// The business status.
+            /// <para>The business status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>REGISTRANT_VSP_AUDIT_SUCCESS</para>
             /// </summary>
             [NameInMap("BizStatus")]
             [Validation(Required=false)]
             public string BizStatus { get; set; }
 
             /// <summary>
-            /// The business type.
+            /// <para>The business type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>govRegister</para>
             /// </summary>
             [NameInMap("BizType")]
             [Validation(Required=false)]
             public string BizType { get; set; }
 
             /// <summary>
-            /// The time when the business was created.
+            /// <para>The time when the business was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2023-01-17 11:31:10</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// The domain name.
+            /// <para>The domain name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test003.cn</para>
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
 
             /// <summary>
-            /// The contact information.
+            /// <para>The contact information.</para>
             /// </summary>
             [NameInMap("DomainSpecialBizContact")]
             [Validation(Required=false)]
             public QueryDomainSpecialBizInfoByDomainResponseBodyModuleDomainSpecialBizContact DomainSpecialBizContact { get; set; }
             public class QueryDomainSpecialBizInfoByDomainResponseBodyModuleDomainSpecialBizContact : TeaModel {
                 /// <summary>
-                /// The business ID.
+                /// <para>The business ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>258</para>
                 /// </summary>
                 [NameInMap("BizId")]
                 [Validation(Required=false)]
                 public long? BizId { get; set; }
 
                 /// <summary>
-                /// The city.
+                /// <para>The city.</para>
                 /// </summary>
                 [NameInMap("CCity")]
                 [Validation(Required=false)]
                 public string CCity { get; set; }
 
                 /// <summary>
-                /// The organization name.
+                /// <para>The organization name.</para>
                 /// </summary>
                 [NameInMap("CCompany")]
                 [Validation(Required=false)]
                 public string CCompany { get; set; }
 
                 /// <summary>
-                /// The country code.
+                /// <para>The country code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CN</para>
                 /// </summary>
                 [NameInMap("CCountry")]
                 [Validation(Required=false)]
                 public string CCountry { get; set; }
 
                 /// <summary>
-                /// The contact name.
+                /// <para>The contact name.</para>
                 /// </summary>
                 [NameInMap("CName")]
                 [Validation(Required=false)]
                 public string CName { get; set; }
 
                 /// <summary>
-                /// The province.
+                /// <para>The province.</para>
                 /// </summary>
                 [NameInMap("CProvince")]
                 [Validation(Required=false)]
                 public string CProvince { get; set; }
 
                 /// <summary>
-                /// The address.
+                /// <para>The address.</para>
                 /// </summary>
                 [NameInMap("CVenu")]
                 [Validation(Required=false)]
                 public string CVenu { get; set; }
 
                 /// <summary>
-                /// The city in English.
+                /// <para>The city in English.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>an shan Shi</para>
                 /// </summary>
                 [NameInMap("ECity")]
                 [Validation(Required=false)]
                 public string ECity { get; set; }
 
                 /// <summary>
-                /// The organization name in English.
+                /// <para>The organization name in English.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>hebeihuiheguandaozhizaoyouxiangongsi</para>
                 /// </summary>
                 [NameInMap("ECompany")]
                 [Validation(Required=false)]
                 public string ECompany { get; set; }
 
                 /// <summary>
-                /// The contact name in English.
+                /// <para>The contact name in English.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>tong da wei</para>
                 /// </summary>
                 [NameInMap("EName")]
                 [Validation(Required=false)]
                 public string EName { get; set; }
 
                 /// <summary>
-                /// The province in English.
+                /// <para>The province in English.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>liao ning</para>
                 /// </summary>
                 [NameInMap("EProvince")]
                 [Validation(Required=false)]
                 public string EProvince { get; set; }
 
                 /// <summary>
-                /// The address in English.
+                /// <para>The address in English.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>tie xi qu xin kai jie 59-4 hao</para>
                 /// </summary>
                 [NameInMap("EVenu")]
                 [Validation(Required=false)]
                 public string EVenu { get; set; }
 
                 /// <summary>
-                /// The email address.
+                /// <para>The email address.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="mailto:username@example.com">username@example.com</a></para>
                 /// </summary>
                 [NameInMap("Email")]
                 [Validation(Required=false)]
                 public string Email { get; set; }
 
                 /// <summary>
-                /// The extended information.
+                /// <para>The extended information.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <list type="bullet">
+                /// <item><description></description></item>
+                /// </list>
                 /// </summary>
                 [NameInMap("Extend")]
                 [Validation(Required=false)]
                 public string Extend { get; set; }
 
                 /// <summary>
-                /// The fax country code.
+                /// <para>The fax country code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>86</para>
                 /// </summary>
                 [NameInMap("FaxArea")]
                 [Validation(Required=false)]
                 public string FaxArea { get; set; }
 
                 /// <summary>
-                /// The fax extension number.
+                /// <para>The fax extension number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>61284565</para>
                 /// </summary>
                 [NameInMap("FaxExt")]
                 [Validation(Required=false)]
                 public string FaxExt { get; set; }
 
                 /// <summary>
-                /// The fax number with an area code or mobile number.
+                /// <para>The fax number with an area code or mobile number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>16604121234</para>
                 /// </summary>
                 [NameInMap("FaxMain")]
                 [Validation(Required=false)]
                 public string FaxMain { get; set; }
 
                 /// <summary>
-                /// The mobile number.
+                /// <para>The mobile number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>156********</para>
                 /// </summary>
                 [NameInMap("Mobile")]
                 [Validation(Required=false)]
                 public string Mobile { get; set; }
 
                 /// <summary>
-                /// The zip code.
+                /// <para>The zip code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100000</para>
                 /// </summary>
                 [NameInMap("Postalcode")]
                 [Validation(Required=false)]
                 public string Postalcode { get; set; }
 
                 /// <summary>
-                /// The contact type. Valid values: 1: individual. 2: enterprise.
+                /// <para>The contact type. Valid values: 1: individual. 2: enterprise.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("RegType")]
                 [Validation(Required=false)]
                 public int? RegType { get; set; }
 
                 /// <summary>
-                /// The registrant ID.
+                /// <para>The registrant ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>121000002****</para>
                 /// </summary>
                 [NameInMap("RegistrantId")]
                 [Validation(Required=false)]
                 public string RegistrantId { get; set; }
 
                 /// <summary>
-                /// The calling code of the country or region where the domain name contact is located.
+                /// <para>The calling code of the country or region where the domain name contact is located.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>86</para>
                 /// </summary>
                 [NameInMap("TelArea")]
                 [Validation(Required=false)]
                 public string TelArea { get; set; }
 
                 /// <summary>
-                /// The telephone extension number.
+                /// <para>The telephone extension number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2756</para>
                 /// </summary>
                 [NameInMap("TelExt")]
                 [Validation(Required=false)]
                 public string TelExt { get; set; }
 
                 /// <summary>
-                /// The landline number with an area code or mobile number.
+                /// <para>The landline number with an area code or mobile number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>16604121234</para>
                 /// </summary>
                 [NameInMap("TelMain")]
                 [Validation(Required=false)]
                 public string TelMain { get; set; }
 
                 /// <summary>
-                /// The VSP contact ID.
+                /// <para>The VSP contact ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>121000001****</para>
                 /// </summary>
                 [NameInMap("VspContactId")]
                 [Validation(Required=false)]
@@ -306,56 +405,77 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             }
 
             /// <summary>
-            /// The certificate information.
+            /// <para>The certificate information.</para>
             /// </summary>
             [NameInMap("DomainSpecialBizCredentials")]
             [Validation(Required=false)]
             public List<QueryDomainSpecialBizInfoByDomainResponseBodyModuleDomainSpecialBizCredentials> DomainSpecialBizCredentials { get; set; }
             public class QueryDomainSpecialBizInfoByDomainResponseBodyModuleDomainSpecialBizCredentials : TeaModel {
                 /// <summary>
-                /// The ID of the associated workflow.
+                /// <para>The ID of the associated workflow.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>T20220831150014000001</para>
                 /// </summary>
                 [NameInMap("BizId")]
                 [Validation(Required=false)]
                 public long? BizId { get; set; }
 
                 /// <summary>
-                /// The certificate number.
+                /// <para>The certificate number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4111111111111110**</para>
                 /// </summary>
                 [NameInMap("CredentialNo")]
                 [Validation(Required=false)]
                 public string CredentialNo { get; set; }
 
                 /// <summary>
-                /// The certificate type.
+                /// <para>The certificate type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>SFZ</para>
                 /// </summary>
                 [NameInMap("CredentialType")]
                 [Validation(Required=false)]
                 public string CredentialType { get; set; }
 
                 /// <summary>
-                /// The certificate URL.
+                /// <para>The certificate URL.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://test.oss-cn-hangzhou.aliyuncs.com/20170522/1219541161213057_070445190.jpg">http://test.oss-cn-hangzhou.aliyuncs.com/20170522/1219541161213057_070445190.jpg</a></para>
                 /// </summary>
                 [NameInMap("CredentialUrl")]
                 [Validation(Required=false)]
                 public string CredentialUrl { get; set; }
 
                 /// <summary>
-                /// The domain name.
+                /// <para>The domain name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test003.cn</para>
                 /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the certificate belongs to the registrant.
+                /// <para>Indicates whether the certificate belongs to the registrant.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("HolderCert")]
                 [Validation(Required=false)]
                 public int? HolderCert { get; set; }
 
                 /// <summary>
-                /// The instance ID.
+                /// <para>The instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>S20172315BJ37809</para>
                 /// </summary>
                 [NameInMap("SaleId")]
                 [Validation(Required=false)]
@@ -364,70 +484,97 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             }
 
             /// <summary>
-            /// The time when the business was created.
+            /// <para>The time when the business was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2023-03-21 15:10:04.0</para>
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The time when the business was modified.
+            /// <para>The time when the business was modified.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2023-03-21 15:10:04.0</para>
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// The primary key.
+            /// <para>The primary key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>34083</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// The order ID.
+            /// <para>The order ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123</para>
             /// </summary>
             [NameInMap("OrderId")]
             [Validation(Required=false)]
             public string OrderId { get; set; }
 
             /// <summary>
-            /// The service ID.
+            /// <para>The service ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ProductId")]
             [Validation(Required=false)]
             public string ProductId { get; set; }
 
             /// <summary>
-            /// The instance ID.
+            /// <para>The instance ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>S20172315BJ37809</para>
             /// </summary>
             [NameInMap("SaleId")]
             [Validation(Required=false)]
             public string SaleId { get; set; }
 
             /// <summary>
-            /// The business status.
+            /// <para>The business status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// The description of business status.
+            /// <para>The description of business status.</para>
             /// </summary>
             [NameInMap("StatusDesc")]
             [Validation(Required=false)]
             public string StatusDesc { get; set; }
 
             /// <summary>
-            /// The time when the business was updated.
+            /// <para>The time when the business was updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-11-17 18:11:15</para>
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// The user ID.
+            /// <para>The user ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>121000000****</para>
             /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
@@ -436,21 +583,30 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>97663DFF-D24D-55AE-A577-6CC5AF20B732</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values: true and false
+        /// <para>Indicates whether the request is successful. Valid values: true and false</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// Indicates whether to perform synchronous processing.
+        /// <para>Indicates whether to perform synchronous processing.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Synchro")]
         [Validation(Required=false)]

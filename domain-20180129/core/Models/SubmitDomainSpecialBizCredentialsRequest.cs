@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SubmitDomainSpecialBizCredentialsRequest : TeaModel {
         /// <summary>
-        /// The business ID.
+        /// <para>The business ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>219</para>
         /// </summary>
         [NameInMap("BizId")]
         [Validation(Required=false)]
         public long? BizId { get; set; }
 
         /// <summary>
-        /// The certificate information.
+        /// <para>The certificate information.</para>
         /// </summary>
         [NameInMap("Credentials")]
         [Validation(Required=false)]
         public string Credentials { get; set; }
 
         /// <summary>
-        /// The extended information.
+        /// <para>The extended information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;addTransferLock\&quot;:true}</para>
         /// </summary>
         [NameInMap("Extend")]
         [Validation(Required=false)]
         public string Extend { get; set; }
 
         /// <summary>
-        /// The IP address of the client.
+        /// <para>The IP address of the client.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127.0.0.1</para>
         /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public List<QueryDnsHostResponseBodyDnsHostList> DnsHostList { get; set; }
         public class QueryDnsHostResponseBodyDnsHostList : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ns3</para>
+            /// </summary>
             [NameInMap("DnsName")]
             [Validation(Required=false)]
             public string DnsName { get; set; }
@@ -23,6 +27,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>18A313DD-3AF3-40AA-84F9-56BA45DC511F</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

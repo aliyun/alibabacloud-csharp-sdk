@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SetupDomainAutoRenewRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>S2019270W570xxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SET</para>
         /// </summary>
         [NameInMap("Operation")]
         [Validation(Required=false)]

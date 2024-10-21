@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public List<QueryFailReasonForRegistrantProfileRealNameVerificationResponseBodyData> Data { get; set; }
         public class QueryFailReasonForRegistrantProfileRealNameVerificationResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2017-03-17 11:08:02</para>
+            /// </summary>
             [NameInMap("Date")]
             [Validation(Required=false)]
             public string Date { get; set; }
@@ -23,6 +27,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>548C407F-AEA2-4B5D-90DF-EC11EBB1D76F</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

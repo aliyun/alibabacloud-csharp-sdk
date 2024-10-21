@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryDomainSpecialBizDetailRequest : TeaModel {
         /// <summary>
-        /// The business ID.
+        /// <para>The business ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("BizId")]
         [Validation(Required=false)]
         public long? BizId { get; set; }
 
         /// <summary>
-        /// The IP address of the client.
+        /// <para>The IP address of the client.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127.0.0.1</para>
         /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]

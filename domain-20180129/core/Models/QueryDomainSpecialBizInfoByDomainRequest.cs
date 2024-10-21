@@ -10,25 +10,32 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryDomainSpecialBizInfoByDomainRequest : TeaModel {
         /// <summary>
-        /// The business type.
+        /// <para>The business type.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>govRegister</para>
         /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }
 
         /// <summary>
-        /// The domain name.
+        /// <para>The domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test003.cn</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The IP address of the client.
+        /// <para>The IP address of the client.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127.0.0.1</para>
         /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]

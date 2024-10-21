@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public List<string> DomainName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IdentityCredential")]
         [Validation(Required=false)]
         public string IdentityCredential { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IdentityCredentialNo")]
         [Validation(Required=false)]
         public string IdentityCredentialNo { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IdentityCredentialType")]
         [Validation(Required=false)]

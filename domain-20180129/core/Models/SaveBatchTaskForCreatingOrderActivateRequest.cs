@@ -9,108 +9,203 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveBatchTaskForCreatingOrderActivateRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123456</para>
+        /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>en</para>
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OrderActivateParam")]
         [Validation(Required=false)]
         public List<SaveBatchTaskForCreatingOrderActivateRequestOrderActivateParam> OrderActivateParam { get; set; }
         public class SaveBatchTaskForCreatingOrderActivateRequestOrderActivateParam : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>chao yan qu *** dasha *** hao</para>
+            /// </summary>
             [NameInMap("Address")]
             [Validation(Required=false)]
             public string Address { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("AliyunDns")]
             [Validation(Required=false)]
             public bool? AliyunDns { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>bei jing shi</para>
+            /// </summary>
             [NameInMap("City")]
             [Validation(Required=false)]
             public string City { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>CN</para>
+            /// </summary>
             [NameInMap("Country")]
             [Validation(Required=false)]
             public string Country { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ns2.aliyun.com</para>
+            /// </summary>
             [NameInMap("Dns1")]
             [Validation(Required=false)]
             public string Dns1 { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ns1.aliyun.com</para>
+            /// </summary>
             [NameInMap("Dns2")]
             [Validation(Required=false)]
             public string Dns2 { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example.com</para>
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="mailto:username@example.com">username@example.com</a></para>
+            /// </summary>
             [NameInMap("Email")]
             [Validation(Required=false)]
             public string Email { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("EnableDomainProxy")]
             [Validation(Required=false)]
             public bool? EnableDomainProxy { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("PermitPremiumActivation")]
             [Validation(Required=false)]
             public bool? PermitPremiumActivation { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>102629</para>
+            /// </summary>
             [NameInMap("PostalCode")]
             [Validation(Required=false)]
             public string PostalCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>bei jing</para>
+            /// </summary>
             [NameInMap("Province")]
             [Validation(Required=false)]
             public string Province { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>zhang san</para>
+            /// </summary>
             [NameInMap("RegistrantName")]
             [Validation(Required=false)]
             public string RegistrantName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>zhang san</para>
+            /// </summary>
             [NameInMap("RegistrantOrganization")]
             [Validation(Required=false)]
             public string RegistrantOrganization { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>000000</para>
+            /// </summary>
             [NameInMap("RegistrantProfileId")]
             [Validation(Required=false)]
             public long? RegistrantProfileId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("RegistrantType")]
             [Validation(Required=false)]
             public string RegistrantType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>rg-XX</para>
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("SubscriptionDuration")]
             [Validation(Required=false)]
             public int? SubscriptionDuration { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>86</para>
+            /// </summary>
             [NameInMap("TelArea")]
             [Validation(Required=false)]
             public string TelArea { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1234</para>
+            /// </summary>
             [NameInMap("TelExt")]
             [Validation(Required=false)]
             public string TelExt { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1820000****</para>
+            /// </summary>
             [NameInMap("Telephone")]
             [Validation(Required=false)]
             public string Telephone { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("TrademarkDomainActivation")]
             [Validation(Required=false)]
             public bool? TrademarkDomainActivation { get; set; }
@@ -137,18 +232,34 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123124</para>
+        /// </summary>
         [NameInMap("PromotionNo")]
         [Validation(Required=false)]
         public string PromotionNo { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("UseCoupon")]
         [Validation(Required=false)]
         public bool? UseCoupon { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("UsePromotion")]
         [Validation(Required=false)]
         public bool? UsePromotion { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>127.0.0.1</para>
+        /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }

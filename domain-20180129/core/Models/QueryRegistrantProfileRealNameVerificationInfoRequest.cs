@@ -9,21 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryRegistrantProfileRealNameVerificationInfoRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("FetchImage")]
         [Validation(Required=false)]
         public bool? FetchImage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>en</para>
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234567</para>
         /// </summary>
         [NameInMap("RegistrantProfileId")]
         [Validation(Required=false)]
         public long? RegistrantProfileId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>127.0.0.1</para>
+        /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }
