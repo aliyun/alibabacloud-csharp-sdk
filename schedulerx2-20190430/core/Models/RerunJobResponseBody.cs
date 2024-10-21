@@ -9,6 +9,40 @@ using Tea;
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class RerunJobResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public RerunJobResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
+        public class RerunJobResponseBodyAccessDeniedDetail : TeaModel {
+            [NameInMap("AuthAction")]
+            [Validation(Required=false)]
+            public string AuthAction { get; set; }
+
+            [NameInMap("AuthPrincipalDisplayName")]
+            [Validation(Required=false)]
+            public string AuthPrincipalDisplayName { get; set; }
+
+            [NameInMap("AuthPrincipalOwnerId")]
+            [Validation(Required=false)]
+            public string AuthPrincipalOwnerId { get; set; }
+
+            [NameInMap("AuthPrincipalType")]
+            [Validation(Required=false)]
+            public string AuthPrincipalType { get; set; }
+
+            [NameInMap("EncodedDiagnosticMessage")]
+            [Validation(Required=false)]
+            public string EncodedDiagnosticMessage { get; set; }
+
+            [NameInMap("NoPermissionType")]
+            [Validation(Required=false)]
+            public string NoPermissionType { get; set; }
+
+            [NameInMap("PolicyType")]
+            [Validation(Required=false)]
+            public string PolicyType { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// 
