@@ -10,43 +10,60 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateAppInstanceGroupRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>img-8z4nztpaqvay4****</para>
         /// </summary>
         [NameInMap("AppCenterImageId")]
         [Validation(Required=false)]
         public string AppCenterImageId { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
         [NameInMap("AppInstanceGroupName")]
         [Validation(Required=false)]
         public string AppInstanceGroupName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("BizRegionId")]
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Node</para>
         /// </summary>
         [NameInMap("ChargeResourceMode")]
         [Validation(Required=false)]
         public string ChargeResourceMode { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PrePaid</para>
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -70,27 +87,51 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>60</para>
+            /// </summary>
             [NameInMap("IpExpireMinutes")]
             [Validation(Required=false)]
             public int? IpExpireMinutes { get; set; }
+
+            [NameInMap("OfficeSiteId")]
+            [Validation(Required=false)]
+            public string OfficeSiteId { get; set; }
 
             [NameInMap("Routes")]
             [Validation(Required=false)]
             public List<CreateAppInstanceGroupRequestNetworkRoutes> Routes { get; set; }
             public class CreateAppInstanceGroupRequestNetworkRoutes : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>139.196.XX.XX/32</para>
+                /// </summary>
                 [NameInMap("Destination")]
                 [Validation(Required=false)]
                 public string Destination { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Shared</para>
+                /// </summary>
                 [NameInMap("Mode")]
                 [Validation(Required=false)]
                 public string Mode { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Shared</para>
+            /// </summary>
             [NameInMap("StrategyType")]
             [Validation(Required=false)]
             public string StrategyType { get; set; }
+
+            [NameInMap("VSwitchIds")]
+            [Validation(Required=false)]
+            public List<string> VSwitchIds { get; set; }
 
         }
 
@@ -102,14 +143,26 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public int? MaxIdleAppInstanceAmount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("MaxScalingAmount")]
             [Validation(Required=false)]
             public int? MaxScalingAmount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("NodeAmount")]
             [Validation(Required=false)]
             public int? NodeAmount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("NodeCapacity")]
             [Validation(Required=false)]
             public int? NodeCapacity { get; set; }
@@ -122,6 +175,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public List<CreateAppInstanceGroupRequestNodePoolRecurrenceSchedules> RecurrenceSchedules { get; set; }
             public class CreateAppInstanceGroupRequestNodePoolRecurrenceSchedules : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>weekly</para>
+                /// </summary>
                 [NameInMap("RecurrenceType")]
                 [Validation(Required=false)]
                 public string RecurrenceType { get; set; }
@@ -134,14 +191,26 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 [Validation(Required=false)]
                 public List<CreateAppInstanceGroupRequestNodePoolRecurrenceSchedulesTimerPeriods> TimerPeriods { get; set; }
                 public class CreateAppInstanceGroupRequestNodePoolRecurrenceSchedulesTimerPeriods : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>2</para>
+                    /// </summary>
                     [NameInMap("Amount")]
                     [Validation(Required=false)]
                     public int? Amount { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>15:00</para>
+                    /// </summary>
                     [NameInMap("EndTime")]
                     [Validation(Required=false)]
                     public string EndTime { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>12:00</para>
+                    /// </summary>
                     [NameInMap("StartTime")]
                     [Validation(Required=false)]
                     public string StartTime { get; set; }
@@ -150,30 +219,58 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("ScalingDownAfterIdleMinutes")]
             [Validation(Required=false)]
             public int? ScalingDownAfterIdleMinutes { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("ScalingStep")]
             [Validation(Required=false)]
             public int? ScalingStep { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>85</para>
+            /// </summary>
             [NameInMap("ScalingUsageThreshold")]
             [Validation(Required=false)]
             public string ScalingUsageThreshold { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2022-09-08</para>
+            /// </summary>
             [NameInMap("StrategyDisableDate")]
             [Validation(Required=false)]
             public string StrategyDisableDate { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2022-08-01</para>
+            /// </summary>
             [NameInMap("StrategyEnableDate")]
             [Validation(Required=false)]
             public string StrategyEnableDate { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>NODE_FIXED</para>
+            /// </summary>
             [NameInMap("StrategyType")]
             [Validation(Required=false)]
             public string StrategyType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("WarmUp")]
             [Validation(Required=false)]
             public bool? WarmUp { get; set; }
@@ -181,30 +278,44 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cag-b2ron*******</para>
+        /// </summary>
         [NameInMap("PreOpenAppId")]
         [Validation(Required=false)]
         public string PreOpenAppId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CloudApp</para>
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>17440009****</para>
+        /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]
         public string PromotionId { get; set; }
@@ -218,7 +329,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string DebugMode { get; set; }
 
             /// <summary>
-            /// 会话类型。
+            /// <para>会话类型。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>NORMAL</para>
             /// </summary>
             [NameInMap("SessionType")]
             [Validation(Required=false)]
@@ -230,10 +344,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public CreateAppInstanceGroupRequestSecurityPolicy SecurityPolicy { get; set; }
         public class CreateAppInstanceGroupRequestSecurityPolicy : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("ResetAfterUnbind")]
             [Validation(Required=false)]
             public bool? ResetAfterUnbind { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("SkipUserAuthCheck")]
             [Validation(Required=false)]
             public bool? SkipUserAuthCheck { get; set; }
@@ -241,7 +363,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>15</para>
         /// </summary>
         [NameInMap("SessionTimeout")]
         [Validation(Required=false)]
@@ -271,6 +396,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public CreateAppInstanceGroupRequestUserInfo UserInfo { get; set; }
         public class CreateAppInstanceGroupRequestUserInfo : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Simple</para>
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }

@@ -10,22 +10,33 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateAccessPageRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AccessPageName")]
         [Validation(Required=false)]
         public string AccessPageName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>c-e-06gdesdaxez****</para>
+        /// </summary>
         [NameInMap("CloudEnvId")]
         [Validation(Required=false)]
         public string CloudEnvId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>7</para>
+        /// </summary>
         [NameInMap("EffectTime")]
         [Validation(Required=false)]
         public int? EffectTime { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>p-065zdecaer07h****</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -35,6 +46,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Day</para>
+        /// </summary>
         [NameInMap("Unit")]
         [Validation(Required=false)]
         public string Unit { get; set; }

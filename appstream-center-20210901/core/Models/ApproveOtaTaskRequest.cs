@@ -10,37 +10,51 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ApproveOtaTaskRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aig-9ciijz60n4xsv****</para>
         /// </summary>
         [NameInMap("AppInstanceGroupId")]
         [Validation(Required=false)]
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("BizRegionId")]
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Fota</para>
         /// </summary>
         [NameInMap("OtaType")]
         [Validation(Required=false)]
         public string OtaType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
-        /// Use the UTC time format: yyyy-MM-ddTHH:mmZ
+        /// <b>Example:</b>
+        /// <para>2022-08-04T14:36:00+08:00</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ota-be7jzm29wrrz5****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

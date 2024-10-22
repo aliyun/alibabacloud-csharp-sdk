@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
-    public class DeleteAppInstancesRequest : TeaModel {
+    public class AuthorizeInstanceGroupShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -19,15 +19,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string AppInstanceGroupId { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>if can be null:</b>
-        /// <c>false</c>
-        /// </summary>
-        [NameInMap("AppInstanceIds")]
+        [NameInMap("AuthorizeUserIds")]
         [Validation(Required=false)]
-        public List<string> AppInstanceIds { get; set; }
+        public List<string> AuthorizeUserIds { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -38,6 +32,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
+
+        [NameInMap("UnAuthorizeUserIds")]
+        [Validation(Required=false)]
+        public List<string> UnAuthorizeUserIds { get; set; }
+
+        [NameInMap("UserMeta")]
+        [Validation(Required=false)]
+        public string UserMetaShrink { get; set; }
 
     }
 

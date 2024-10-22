@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class AuthorizeInstanceGroupRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aig-9ciijz60n4xsv****</para>
         /// </summary>
         [NameInMap("AppInstanceGroupId")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AuthorizeUserIds { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CloudApp</para>
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
@@ -30,6 +36,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("UnAuthorizeUserIds")]
         [Validation(Required=false)]
         public List<string> UnAuthorizeUserIds { get; set; }
+
+        [NameInMap("UserMeta")]
+        [Validation(Required=false)]
+        public AuthorizeInstanceGroupRequestUserMeta UserMeta { get; set; }
+        public class AuthorizeInstanceGroupRequestUserMeta : TeaModel {
+            [NameInMap("AdDomain")]
+            [Validation(Required=false)]
+            public string AdDomain { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
 
     }
 

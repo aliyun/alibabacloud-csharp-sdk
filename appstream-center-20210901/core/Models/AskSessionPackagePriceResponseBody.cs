@@ -17,18 +17,34 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public AskSessionPackagePriceResponseBodyDataPrice Price { get; set; }
             public class AskSessionPackagePriceResponseBodyDataPrice : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>CNY</para>
+                /// </summary>
                 [NameInMap("Currency")]
                 [Validation(Required=false)]
                 public string Currency { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.0</para>
+                /// </summary>
                 [NameInMap("DiscountPrice")]
                 [Validation(Required=false)]
                 public float? DiscountPrice { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2000.0</para>
+                /// </summary>
                 [NameInMap("OriginalPrice")]
                 [Validation(Required=false)]
                 public float? OriginalPrice { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2000.0</para>
+                /// </summary>
                 [NameInMap("TradePrice")]
                 [Validation(Required=false)]
                 public float? TradePrice { get; set; }
@@ -37,6 +53,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2C64D9E5-DFCD-10A5-A911-xxxxxxx</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
