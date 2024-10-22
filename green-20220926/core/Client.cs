@@ -1778,6 +1778,10 @@ namespace AlibabaCloud.SDK.Green20220926
                 query["RegionId"] = request.RegionId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeywordIdList))
+            {
+                body["KeywordIdList"] = request.KeywordIdList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeywordIds))
             {
                 body["KeywordIds"] = request.KeywordIds;
@@ -1830,6 +1834,10 @@ namespace AlibabaCloud.SDK.Green20220926
                 query["RegionId"] = request.RegionId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeywordIdList))
+            {
+                body["KeywordIdList"] = request.KeywordIdList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeywordIds))
             {
                 body["KeywordIds"] = request.KeywordIds;

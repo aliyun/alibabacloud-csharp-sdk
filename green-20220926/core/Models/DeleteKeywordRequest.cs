@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class DeleteKeywordRequest : TeaModel {
+        [NameInMap("KeywordIdList")]
+        [Validation(Required=false)]
+        public string KeywordIdList { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>[16754493]</para>
