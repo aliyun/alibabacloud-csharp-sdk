@@ -449,6 +449,20 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string ShortDescription { get; set; }
 
+            [NameInMap("Softwares")]
+            [Validation(Required=false)]
+            public List<UpdateServiceRequestServiceInfoSoftwares> Softwares { get; set; }
+            public class UpdateServiceRequestServiceInfoSoftwares : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("Version")]
+                [Validation(Required=false)]
+                public string Version { get; set; }
+
+            }
+
         }
 
         /// <summary>

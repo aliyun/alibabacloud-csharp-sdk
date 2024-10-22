@@ -1,3 +1,9 @@
+2024-10-22 Version: 2.4.1
+- Update API CreateService: update param ServiceInfo.
+- Update API GetService: update response param.
+- Update API UpdateService: update param ServiceInfo.
+
+
 2024-09-25 Version: 2.4.0
 - Support API LaunchService.
 - Support API PreLaunchService.
