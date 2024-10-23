@@ -10,38 +10,51 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class CreateAccessKeyResponseBody : TeaModel {
         /// <summary>
-        /// The information of the AccessKey pair.
+        /// <para>The information of the AccessKey pair.</para>
         /// </summary>
         [NameInMap("AccessKey")]
         [Validation(Required=false)]
         public CreateAccessKeyResponseBodyAccessKey AccessKey { get; set; }
         public class CreateAccessKeyResponseBodyAccessKey : TeaModel {
             /// <summary>
-            /// The AccessKey ID provided to you by Alibaba Cloud.
+            /// <para>The AccessKey ID provided to you by Alibaba Cloud.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>LTAI4G3HaMmeHpay2gcq****</para>
             /// </summary>
             [NameInMap("AccessKeyId")]
             [Validation(Required=false)]
             public string AccessKeyId { get; set; }
 
             /// <summary>
-            /// The AccessKey secret provided to you by Alibaba Cloud.
+            /// <para>The AccessKey secret provided to you by Alibaba Cloud.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Y3MSLE6OgizS4qrz5LVFDoyZEL****</para>
             /// </summary>
             [NameInMap("AccessKeySecret")]
             [Validation(Required=false)]
             public string AccessKeySecret { get; set; }
 
             /// <summary>
-            /// The time when the AccessKey pair was created.
+            /// <para>The time when the AccessKey pair was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-10-15T08:08:54Z</para>
             /// </summary>
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// The status of the AccessKey pair. Valid values:
+            /// <para>The status of the AccessKey pair. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Active</description></item>
+            /// <item><description>Inactive</description></item>
+            /// </list>
             /// 
-            /// *   Active
-            /// *   Inactive
+            /// <b>Example:</b>
+            /// <para>Active</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -50,7 +63,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>19DDD9F7-AFCC-4D72-8CBA-CCE5A142E7AB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UnbindMFADeviceRequest : TeaModel {
         /// <summary>
-        /// The logon name of the RAM user.
+        /// <para>The logon name of the RAM user.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></para>
         /// </summary>
         [NameInMap("UserPrincipalName")]
         [Validation(Required=false)]

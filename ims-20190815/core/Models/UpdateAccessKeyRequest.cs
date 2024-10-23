@@ -10,26 +10,37 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UpdateAccessKeyRequest : TeaModel {
         /// <summary>
-        /// The status of the AccessKey pair. Valid values:
+        /// <para>The status of the AccessKey pair. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Active</description></item>
+        /// <item><description>Inactive</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Active
-        /// *   Inactive
+        /// <b>Example:</b>
+        /// <para>Active</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The AccessKey ID of the AccessKey pair for which you want to modify the status.
+        /// <para>The AccessKey ID of the AccessKey pair for which you want to modify the status.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LTAI4GFTgcR8m8cZQDTH****</para>
         /// </summary>
         [NameInMap("UserAccessKeyId")]
         [Validation(Required=false)]
         public string UserAccessKeyId { get; set; }
 
         /// <summary>
-        /// The logon name of the RAM user.
+        /// <para>The logon name of the RAM user.</para>
+        /// <para>If this parameter is empty, the status of the AccessKey pair for the current user is modified.</para>
         /// 
-        /// If this parameter is empty, the status of the AccessKey pair for the current user is modified.
+        /// <b>Example:</b>
+        /// <para><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></para>
         /// </summary>
         [NameInMap("UserPrincipalName")]
         [Validation(Required=false)]

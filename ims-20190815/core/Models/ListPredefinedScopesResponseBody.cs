@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ListPredefinedScopesResponseBody : TeaModel {
         /// <summary>
-        /// The information of application permissions.
+        /// <para>The information of application permissions.</para>
         /// </summary>
         [NameInMap("PredefinedScopes")]
         [Validation(Required=false)]
@@ -21,14 +21,20 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public List<ListPredefinedScopesResponseBodyPredefinedScopesPredefinedScope> PredefinedScope { get; set; }
             public class ListPredefinedScopesResponseBodyPredefinedScopesPredefinedScope : TeaModel {
                 /// <summary>
-                /// The description of the permission scope.
+                /// <para>The description of the permission scope.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Obtain the OpenID of the user. This is the default permission that you cannot remove.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The name of the scope.
+                /// <para>The name of the scope.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>openid</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -39,7 +45,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>955C096D-EC99-480B-AF37-3921109107D0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

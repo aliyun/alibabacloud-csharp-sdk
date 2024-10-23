@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ListApplicationsResponseBody : TeaModel {
         /// <summary>
-        /// The information about the application.
+        /// <para>The information about the application.</para>
         /// </summary>
         [NameInMap("Applications")]
         [Validation(Required=false)]
@@ -21,60 +21,79 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public List<ListApplicationsResponseBodyApplicationsApplication> Application { get; set; }
             public class ListApplicationsResponseBodyApplicationsApplication : TeaModel {
                 /// <summary>
-                /// The validity period of the access token. Unit: seconds.
+                /// <para>The validity period of the access token. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3600</para>
                 /// </summary>
                 [NameInMap("AccessTokenValidity")]
                 [Validation(Required=false)]
                 public int? AccessTokenValidity { get; set; }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud account to which the application belongs.
+                /// <para>The ID of the Alibaba Cloud account to which the application belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>177242285274****</para>
                 /// </summary>
                 [NameInMap("AccountId")]
                 [Validation(Required=false)]
                 public string AccountId { get; set; }
 
                 /// <summary>
-                /// The ID of the application.
+                /// <para>The ID of the application.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>441442900344560****</para>
                 /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// The application name.
+                /// <para>The application name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>myapp</para>
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// The application type. Valid values:
+                /// <para>The application type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>WebApp: a web application.</description></item>
+                /// <item><description>NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</description></item>
+                /// <item><description>ServerApp: an application that can access Alibaba Cloud services without the need for user logon. Only applications that synchronize user information based on the System for Cross-domain Identity Management (SCIM) protocol are supported.</description></item>
+                /// </list>
                 /// 
-                /// *   WebApp: a web application.
-                /// *   NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.
-                /// *   ServerApp: an application that can access Alibaba Cloud services without the need for user logon. Only applications that synchronize user information based on the System for Cross-domain Identity Management (SCIM) protocol are supported.
+                /// <b>Example:</b>
+                /// <para>WebApp</para>
                 /// </summary>
                 [NameInMap("AppType")]
                 [Validation(Required=false)]
                 public string AppType { get; set; }
 
                 /// <summary>
-                /// The creation time.
+                /// <para>The creation time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2020-10-23T09:33:22Z</para>
                 /// </summary>
                 [NameInMap("CreateDate")]
                 [Validation(Required=false)]
                 public string CreateDate { get; set; }
 
                 /// <summary>
-                /// The information about the permissions that are granted on the application.
+                /// <para>The information about the permissions that are granted on the application.</para>
                 /// </summary>
                 [NameInMap("DelegatedScope")]
                 [Validation(Required=false)]
                 public ListApplicationsResponseBodyApplicationsApplicationDelegatedScope DelegatedScope { get; set; }
                 public class ListApplicationsResponseBodyApplicationsApplicationDelegatedScope : TeaModel {
                     /// <summary>
-                    /// The information about the permissions that are granted on the application.
+                    /// <para>The information about the permissions that are granted on the application.</para>
                     /// </summary>
                     [NameInMap("PredefinedScopes")]
                     [Validation(Required=false)]
@@ -85,26 +104,35 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                         public List<ListApplicationsResponseBodyApplicationsApplicationDelegatedScopePredefinedScopesPredefinedScope> PredefinedScope { get; set; }
                         public class ListApplicationsResponseBodyApplicationsApplicationDelegatedScopePredefinedScopesPredefinedScope : TeaModel {
                             /// <summary>
-                            /// The description of the permission.
+                            /// <para>The description of the permission.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>Obtain the OpenID of the user. This is the default permission that you cannot remove.</para>
                             /// </summary>
                             [NameInMap("Description")]
                             [Validation(Required=false)]
                             public string Description { get; set; }
 
                             /// <summary>
-                            /// The name of the permission.
+                            /// <para>The name of the permission.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>openid</para>
                             /// </summary>
                             [NameInMap("Name")]
                             [Validation(Required=false)]
                             public string Name { get; set; }
 
                             /// <summary>
-                            /// Indicates whether the permission is automatically selected by default when you install the application. Valid values:
+                            /// <para>Indicates whether the permission is automatically selected by default when you install the application. Valid values:</para>
+                            /// <list type="bullet">
+                            /// <item><description>true</description></item>
+                            /// <item><description>false</description></item>
+                            /// </list>
+                            /// <para><c>openid</c> is required by default.</para>
                             /// 
-                            /// *   true
-                            /// *   false
-                            /// 
-                            /// `openid` is required by default.
+                            /// <b>Example:</b>
+                            /// <para>true</para>
                             /// </summary>
                             [NameInMap("Required")]
                             [Validation(Required=false)]
@@ -117,21 +145,27 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 }
 
                 /// <summary>
-                /// The display name of the application.
+                /// <para>The display name of the application.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>myapp</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the application can be installed by using other Alibaba Cloud accounts.
+                /// <para>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("IsMultiTenant")]
                 [Validation(Required=false)]
                 public bool? IsMultiTenant { get; set; }
 
                 /// <summary>
-                /// The callback URLs.
+                /// <para>The callback URLs.</para>
                 /// </summary>
                 [NameInMap("RedirectUris")]
                 [Validation(Required=false)]
@@ -144,21 +178,30 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 }
 
                 /// <summary>
-                /// The validity period of the refresh token. Unit: seconds.
+                /// <para>The validity period of the refresh token. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>7776000</para>
                 /// </summary>
                 [NameInMap("RefreshTokenValidity")]
                 [Validation(Required=false)]
                 public int? RefreshTokenValidity { get; set; }
 
                 /// <summary>
-                /// Indicates whether a secret is required.
+                /// <para>Indicates whether a secret is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("SecretRequired")]
                 [Validation(Required=false)]
                 public bool? SecretRequired { get; set; }
 
                 /// <summary>
-                /// The update time.
+                /// <para>The update time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2020-10-23T09:33:22Z</para>
                 /// </summary>
                 [NameInMap("UpdateDate")]
                 [Validation(Required=false)]
@@ -169,7 +212,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CE458B58-8C40-46F7-A9D4-CB85136B0C06</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

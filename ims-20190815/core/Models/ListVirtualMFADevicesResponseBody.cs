@@ -10,31 +10,44 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ListVirtualMFADevicesResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the response is truncated. Valid values:
+        /// <para>Indicates whether the response is truncated. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsTruncated")]
         [Validation(Required=false)]
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <remarks>
+        /// <para> This parameter is returned only when <c>IsTruncated</c> is <c>true</c>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EXAMPLE</para>
         /// </summary>
         [NameInMap("Marker")]
         [Validation(Required=false)]
         public string Marker { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>32272612-DF82-485E-8BA9-AFA4E0C3D0BA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information of the MFA device.
+        /// <para>The information about the MFA device.</para>
         /// </summary>
         [NameInMap("VirtualMFADevices")]
         [Validation(Required=false)]
@@ -45,42 +58,57 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public List<ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice> VirtualMFADevice { get; set; }
             public class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice : TeaModel {
                 /// <summary>
-                /// The time when the MFA device was activated.
+                /// <para>The time when the MFA device was activated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2020-10-16T06:02:09Z</para>
                 /// </summary>
                 [NameInMap("ActivateDate")]
                 [Validation(Required=false)]
                 public string ActivateDate { get; set; }
 
                 /// <summary>
-                /// The serial number of the MFA device.
+                /// <para>The serial number of the MFA device.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>acs:ram::177242285274****:mfa/test</para>
                 /// </summary>
                 [NameInMap("SerialNumber")]
                 [Validation(Required=false)]
                 public string SerialNumber { get; set; }
 
                 /// <summary>
-                /// The information of the RAM user that has an MFA device bound.
+                /// <para>The information of the RAM user that has an MFA device bound.</para>
                 /// </summary>
                 [NameInMap("User")]
                 [Validation(Required=false)]
                 public ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser User { get; set; }
                 public class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser : TeaModel {
                     /// <summary>
-                    /// The display name of the RAM user.
+                    /// <para>The display name of the RAM user.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>test</para>
                     /// </summary>
                     [NameInMap("DisplayName")]
                     [Validation(Required=false)]
                     public string DisplayName { get; set; }
 
                     /// <summary>
-                    /// The ID of the RAM user.
+                    /// <para>The ID of the RAM user.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>20732900249392****</para>
                     /// </summary>
                     [NameInMap("UserId")]
                     [Validation(Required=false)]
                     public string UserId { get; set; }
 
                     /// <summary>
-                    /// The logon name of the RAM user.
+                    /// <para>The logon name of the RAM user.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>test@177242285274****.onaliyun.com</para>
                     /// </summary>
                     [NameInMap("UserPrincipalName")]
                     [Validation(Required=false)]

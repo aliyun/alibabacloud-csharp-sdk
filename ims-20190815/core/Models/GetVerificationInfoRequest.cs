@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetVerificationInfoRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></para>
+        /// </summary>
         [NameInMap("UserPrincipalName")]
         [Validation(Required=false)]
         public string UserPrincipalName { get; set; }

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class RemoveFingerprintFromOIDCProviderRequest : TeaModel {
         /// <summary>
-        /// The fingerprint that you want to remove.
+        /// <para>The fingerprint that you want to remove.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6938fd4d98bab03faadb97b34396831e3780****</para>
         /// </summary>
         [NameInMap("Fingerprint")]
         [Validation(Required=false)]
         public string Fingerprint { get; set; }
 
         /// <summary>
-        /// The name of the OIDC IdP.
+        /// <para>The name of the OIDC IdP.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TestOIDCProvider</para>
         /// </summary>
         [NameInMap("OIDCProviderName")]
         [Validation(Required=false)]

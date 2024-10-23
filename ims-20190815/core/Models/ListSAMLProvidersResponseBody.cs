@@ -10,31 +10,41 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ListSAMLProvidersResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the response is truncated. Valid values:
+        /// <para>Indicates whether the response is truncated. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsTruncated")]
         [Validation(Required=false)]
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.
+        /// <para>The <c>marker</c>. This parameter is returned only if the value of <c>IsTruncated</c> is <c>true</c>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EXAMPLE</para>
         /// </summary>
         [NameInMap("Marker")]
         [Validation(Required=false)]
         public string Marker { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2D8B70D3-E194-41C9-93C5-F6A10D716D24</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information of the IdP.
+        /// <para>The information of the IdP.</para>
         /// </summary>
         [NameInMap("SAMLProviders")]
         [Validation(Required=false)]
@@ -45,35 +55,50 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public List<ListSAMLProvidersResponseBodySAMLProvidersSAMLProvider> SAMLProvider { get; set; }
             public class ListSAMLProvidersResponseBodySAMLProvidersSAMLProvider : TeaModel {
                 /// <summary>
-                /// The Alibaba Cloud Resource Name (ARN) of the IdP.
+                /// <para>The Alibaba Cloud Resource Name (ARN) of the IdP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>acs:ram::177242285274****:saml-provider/test-provider</para>
                 /// </summary>
                 [NameInMap("Arn")]
                 [Validation(Required=false)]
                 public string Arn { get; set; }
 
                 /// <summary>
-                /// The creation time.
+                /// <para>The creation time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2020-10-22T06:26:15Z</para>
                 /// </summary>
                 [NameInMap("CreateDate")]
                 [Validation(Required=false)]
                 public string CreateDate { get; set; }
 
                 /// <summary>
-                /// The description.
+                /// <para>The description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>This is a provider.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The name of the IdP.
+                /// <para>The name of the IdP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test-provider</para>
                 /// </summary>
                 [NameInMap("SAMLProviderName")]
                 [Validation(Required=false)]
                 public string SAMLProviderName { get; set; }
 
                 /// <summary>
-                /// The update time.
+                /// <para>The update time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2020-10-22T06:26:15Z</para>
                 /// </summary>
                 [NameInMap("UpdateDate")]
                 [Validation(Required=false)]

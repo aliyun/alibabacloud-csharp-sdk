@@ -10,25 +10,37 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UpdateSAMLProviderRequest : TeaModel {
         /// <summary>
-        /// The new description.
+        /// <para>The new description.</para>
+        /// <remarks>
+        /// <para> You must specify at least one of the <c>NewDescription</c> and <c>NewEncodedSAMLMetadataDocument</c> parameters.</para>
+        /// </remarks>
         /// 
-        /// >  You must specify at least one of the `NewDescription` and `NewEncodedSAMLMetadataDocument` parameters.
+        /// <b>Example:</b>
+        /// <para>This is a new provider.</para>
         /// </summary>
         [NameInMap("NewDescription")]
         [Validation(Required=false)]
         public string NewDescription { get; set; }
 
         /// <summary>
-        /// The new metadata file.
+        /// <para>The new metadata file.</para>
+        /// <remarks>
+        /// <para> You must specify at least one of the <c>NewDescription</c> and <c>NewEncodedSAMLMetadataDocument</c> parameters.</para>
+        /// </remarks>
         /// 
-        /// >  You must specify at least one of the `NewDescription` and `NewEncodedSAMLMetadataDocument` parameters.
+        /// <b>Example:</b>
+        /// <para>PD94bWwgdmVy****</para>
         /// </summary>
         [NameInMap("NewEncodedSAMLMetadataDocument")]
         [Validation(Required=false)]
         public string NewEncodedSAMLMetadataDocument { get; set; }
 
         /// <summary>
-        /// The name of the IdP whose information you want to modify.
+        /// <para>The name of the IdP whose information you want to modify.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-provider</para>
         /// </summary>
         [NameInMap("SAMLProviderName")]
         [Validation(Required=false)]

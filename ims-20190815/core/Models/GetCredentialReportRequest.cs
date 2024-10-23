@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetCredentialReportRequest : TeaModel {
         /// <summary>
-        /// The number of entries per page. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be true.
+        /// <para>The number of entries per page. If a response is truncated because it reaches the value of <c>MaxItems</c>, the value of <c>IsTruncated</c> will be true.</para>
+        /// <para>Valid values: 1 to 3501. Default value: 3501.</para>
         /// 
-        /// Valid values: 1 to 3501. Default value: 3501.
+        /// <b>Example:</b>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("MaxItems")]
         [Validation(Required=false)]
         public string MaxItems { get; set; }
 
         /// <summary>
-        /// The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.``
+        /// <para>The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.``</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EXAMPLE</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

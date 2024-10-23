@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetOIDCProviderRequest : TeaModel {
         /// <summary>
-        /// The name of the OIDC IdP.
+        /// <para>The name of the OIDC IdP.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TestOIDCProvider</para>
         /// </summary>
         [NameInMap("OIDCProviderName")]
         [Validation(Required=false)]

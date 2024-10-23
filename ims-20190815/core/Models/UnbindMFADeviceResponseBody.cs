@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UnbindMFADeviceResponseBody : TeaModel {
         /// <summary>
-        /// The information of the MFA device.
+        /// <para>The information of the MFA device.</para>
         /// </summary>
         [NameInMap("MFADevice")]
         [Validation(Required=false)]
         public UnbindMFADeviceResponseBodyMFADevice MFADevice { get; set; }
         public class UnbindMFADeviceResponseBodyMFADevice : TeaModel {
             /// <summary>
-            /// The serial number of the MFA device.
+            /// <para>The serial number of the MFA device.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>acs:ram::151298381312****:mfa/device001</para>
             /// </summary>
             [NameInMap("SerialNumber")]
             [Validation(Required=false)]
@@ -26,7 +29,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A26CB3E9-1021-452A-AC57-3134B3BA0E4C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

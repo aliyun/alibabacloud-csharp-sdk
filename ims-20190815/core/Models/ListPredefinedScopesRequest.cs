@@ -10,13 +10,16 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ListPredefinedScopesRequest : TeaModel {
         /// <summary>
-        /// The type of the application. Valid values:
+        /// <para>The type of the application. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>WebApp</description></item>
+        /// <item><description>NativeApp</description></item>
+        /// <item><description>ServerApp</description></item>
+        /// </list>
+        /// <para>If this parameter is empty, the permissions on all types of applications are queried.</para>
         /// 
-        /// *   WebApp
-        /// *   NativeApp
-        /// *   ServerApp
-        /// 
-        /// If this parameter is empty, the permissions on all types of applications are queried.
+        /// <b>Example:</b>
+        /// <para>WebApp</para>
         /// </summary>
         [NameInMap("AppType")]
         [Validation(Required=false)]

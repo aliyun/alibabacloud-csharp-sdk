@@ -10,52 +10,63 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to remove all tags from the resource. Valid values:
+        /// <para>Specifies whether to remove all tags from the resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: remove all tags from the resources.</description></item>
+        /// <item><description>false (default): does not remove all tags from the resources.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter takes effect only when TagKey.N is not set in the request.</para>
+        /// </remarks>
         /// 
-        /// *   true: remove all tags from the resources.
-        /// *   false (default): does not remove all tags from the resources.
-        /// 
-        /// > This parameter takes effect only when TagKey.N is not set in the request.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
 
         /// <summary>
-        /// The IDs of resources.
+        /// <para>The IDs of resources.</para>
+        /// <para>Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource ID is the ID of the RAM user.</para>
+        /// <remarks>
+        /// <para>You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</para>
+        /// </remarks>
         /// 
-        /// Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource ID is the ID of the RAM user.
-        /// 
-        /// > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
+        /// <b>Example:</b>
+        /// <para>UntagResources</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The names of resources.
-        /// 
-        /// Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource name is the name of the RAM user.
-        /// 
-        /// > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
+        /// <para>The names of resources.</para>
+        /// <para>Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource name is the name of the RAM user.</para>
+        /// <remarks>
+        /// <para>You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("ResourcePrincipalName")]
         [Validation(Required=false)]
         public List<string> ResourcePrincipalName { get; set; }
 
         /// <summary>
-        /// The type of the resource. Valid value:
+        /// <para>The type of the resource. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>user: a RAM user</description></item>
+        /// </list>
         /// 
-        /// *   user: a RAM user
+        /// <b>Example:</b>
+        /// <para>user</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tag keys of resources.
-        /// 
-        /// Valid values of N: 1 to 20. N must be consecutive.
+        /// <para>The tag keys of resources.</para>
+        /// <para>Valid values of N: 1 to 20. N must be consecutive.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

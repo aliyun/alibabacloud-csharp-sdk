@@ -10,65 +10,80 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class CreateUserRequest : TeaModel {
         /// <summary>
-        /// The description.
+        /// <para>The description.</para>
+        /// <para>The description must be 1 to 128 characters in length.</para>
         /// 
-        /// The description must be 1 to 128 characters in length.
+        /// <b>Example:</b>
+        /// <para>This is a cloud computing engineer.</para>
         /// </summary>
         [NameInMap("Comments")]
         [Validation(Required=false)]
         public string Comments { get; set; }
 
         /// <summary>
-        /// The display name of the RAM user.
+        /// <para>The display name of the RAM user.</para>
+        /// <para>The name must be 1 to 24 characters in length.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The name must be 1 to 24 characters in length.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// The email address of the RAM user.
+        /// <para>The email address of the RAM user.</para>
+        /// <remarks>
+        /// <para>This parameter is valid only on the China site (aliyun.com).</para>
+        /// </remarks>
         /// 
-        /// > This parameter is valid only on the China site (aliyun.com).
+        /// <b>Example:</b>
+        /// <para><a href="mailto:alice@example.com">alice@example.com</a></para>
         /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]
         public string Email { get; set; }
 
         /// <summary>
-        /// The mobile number of the RAM user.
+        /// <para>The mobile number of the RAM user.</para>
+        /// <para>Format: Country code-Mobile phone number.</para>
+        /// <remarks>
+        /// <para>This parameter is valid only on the China site (aliyun.com).</para>
+        /// </remarks>
         /// 
-        /// Format: Country code-Mobile phone number.
-        /// 
-        /// > This parameter is valid only on the China site (aliyun.com).
+        /// <b>Example:</b>
+        /// <para>86-1868888****</para>
         /// </summary>
         [NameInMap("MobilePhone")]
         [Validation(Required=false)]
         public string MobilePhone { get; set; }
 
         /// <summary>
-        /// The tag value.
-        /// 
-        /// Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.
+        /// <para>The tag value.</para>
+        /// <para>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c>.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateUserRequestTag> Tag { get; set; }
         public class CreateUserRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N.
+            /// <para>The key of tag N.</para>
+            /// <para>Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
             /// 
-            /// Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+            /// <b>Example:</b>
+            /// <para>operator</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N.
+            /// <para>The value of tag N.</para>
+            /// <para>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c>.</para>
             /// 
-            /// Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.
+            /// <b>Example:</b>
+            /// <para>alice</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -77,11 +92,13 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// The logon name of the RAM user.
+        /// <para>The logon name of the RAM user.</para>
+        /// <para>The name is in the format of <c>&lt;username&gt;@&lt;AccountAlias&gt;.onaliyun.com</c>. <c>&lt;username&gt;</c> indicates the name of the RAM user. <c>&lt;AccountAlias&gt;.onaliyun.com</c> indicates the default domain name. For more information about how to obtain the default domain name, see <a href="https://help.aliyun.com/document_detail/186720.html">GetDefaultDomain</a>.</para>
+        /// <para>The value of <c>UserPrincipalName</c> must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The value of <c>&lt;username&gt;</c> must be 1 to 64 characters in length.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The name is in the format of `<username>@<AccountAlias>.onaliyun.com`. `<username>` indicates the name of the RAM user. `<AccountAlias>.onaliyun.com` indicates the default domain name. For more information about how to obtain the default domain name, see [GetDefaultDomain](~~186720~~).
-        /// 
-        /// The value of `UserPrincipalName` must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_). The value of `<username>` must be 1 to 64 characters in length.
+        /// <b>Example:</b>
+        /// <para><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></para>
         /// </summary>
         [NameInMap("UserPrincipalName")]
         [Validation(Required=false)]

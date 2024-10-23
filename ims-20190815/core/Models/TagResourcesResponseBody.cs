@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class TagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3687BD52-49FD-585B-AB14-CD05B7C76963</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

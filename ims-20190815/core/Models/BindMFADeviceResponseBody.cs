@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class BindMFADeviceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B9AF80E4-1565-42D9-9256-0B8B0D9FD3EC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

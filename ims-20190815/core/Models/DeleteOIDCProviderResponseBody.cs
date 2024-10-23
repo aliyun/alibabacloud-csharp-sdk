@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class DeleteOIDCProviderResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>85836703-8D4F-485F-9726-4D1C730F957E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

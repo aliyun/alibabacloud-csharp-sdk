@@ -10,56 +10,67 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// The ID of resource N.
-        /// 
-        /// Valid values of N: 1 to 50. If ResourceType is set to user, the resource ID is the ID of the RAM user.
-        /// 
-        /// > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
+        /// <para>The ID of resource N.</para>
+        /// <para>Valid values of N: 1 to 50. If ResourceType is set to user, the resource ID is the ID of the RAM user.</para>
+        /// <remarks>
+        /// <para>You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The name of resource N.
+        /// <para>The name of resource N.</para>
+        /// <para>Valid values of N: 1 to 50. If ResourceType is set to user, the resource name is the name of the RAM user.</para>
+        /// <remarks>
+        /// <para>You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</para>
+        /// </remarks>
         /// 
-        /// Valid values of N: 1 to 50. If ResourceType is set to user, the resource name is the name of the RAM user.
-        /// 
-        /// > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
+        /// <b>Example:</b>
+        /// <para>TagResources</para>
         /// </summary>
         [NameInMap("ResourcePrincipalName")]
         [Validation(Required=false)]
         public List<string> ResourcePrincipalName { get; set; }
 
         /// <summary>
-        /// The type of the resource. Valid value:
+        /// <para>The type of the resource. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>user: a RAM user</description></item>
+        /// </list>
         /// 
-        /// *   user: a RAM user
+        /// <b>Example:</b>
+        /// <para>user</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tag value.
+        /// <para>The tag value.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N.
+            /// <para>The key of tag N.</para>
+            /// <para>Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
             /// 
-            /// Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+            /// <b>Example:</b>
+            /// <para>operator</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N.
+            /// <para>The value of tag N.</para>
+            /// <para>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be a up to128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
-            /// Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be a up to128 characters in length and cannot contain `http://` or `https://`.
+            /// <b>Example:</b>
+            /// <para>alice</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
