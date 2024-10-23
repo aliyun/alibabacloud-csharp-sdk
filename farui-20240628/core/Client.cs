@@ -37,14 +37,24 @@ namespace AlibabaCloud.SDK.FaRui20240628
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 上传合同文件
-         *
-         * @param request CreateTextFileRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTextFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传合同文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTextFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTextFileResponse
+        /// </returns>
         public CreateTextFileResponse CreateTextFileWithOptions(string WorkspaceId, CreateTextFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -85,14 +95,24 @@ namespace AlibabaCloud.SDK.FaRui20240628
             return TeaModel.ToObject<CreateTextFileResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 上传合同文件
-         *
-         * @param request CreateTextFileRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTextFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传合同文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTextFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTextFileResponse
+        /// </returns>
         public async Task<CreateTextFileResponse> CreateTextFileWithOptionsAsync(string WorkspaceId, CreateTextFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -133,12 +153,18 @@ namespace AlibabaCloud.SDK.FaRui20240628
             return TeaModel.ToObject<CreateTextFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 上传合同文件
-         *
-         * @param request CreateTextFileRequest
-         * @return CreateTextFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传合同文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTextFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTextFileResponse
+        /// </returns>
         public CreateTextFileResponse CreateTextFile(string WorkspaceId, CreateTextFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -146,12 +172,18 @@ namespace AlibabaCloud.SDK.FaRui20240628
             return CreateTextFileWithOptions(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 上传合同文件
-         *
-         * @param request CreateTextFileRequest
-         * @return CreateTextFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传合同文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTextFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTextFileResponse
+        /// </returns>
         public async Task<CreateTextFileResponse> CreateTextFileAsync(string WorkspaceId, CreateTextFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -323,14 +355,24 @@ namespace AlibabaCloud.SDK.FaRui20240628
             return createTextFileResp;
         }
 
-        /**
-         * @summary 生成合同审查结果
-         *
-         * @param tmpReq RunContractResultGenerationRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RunContractResultGenerationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成合同审查结果</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RunContractResultGenerationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunContractResultGenerationResponse
+        /// </returns>
         public RunContractResultGenerationResponse RunContractResultGenerationWithOptions(string workspaceId, RunContractResultGenerationRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -373,14 +415,24 @@ namespace AlibabaCloud.SDK.FaRui20240628
             return TeaModel.ToObject<RunContractResultGenerationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 生成合同审查结果
-         *
-         * @param tmpReq RunContractResultGenerationRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RunContractResultGenerationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成合同审查结果</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RunContractResultGenerationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunContractResultGenerationResponse
+        /// </returns>
         public async Task<RunContractResultGenerationResponse> RunContractResultGenerationWithOptionsAsync(string workspaceId, RunContractResultGenerationRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -423,12 +475,18 @@ namespace AlibabaCloud.SDK.FaRui20240628
             return TeaModel.ToObject<RunContractResultGenerationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 生成合同审查结果
-         *
-         * @param request RunContractResultGenerationRequest
-         * @return RunContractResultGenerationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成合同审查结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunContractResultGenerationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunContractResultGenerationResponse
+        /// </returns>
         public RunContractResultGenerationResponse RunContractResultGeneration(string workspaceId, RunContractResultGenerationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -436,12 +494,18 @@ namespace AlibabaCloud.SDK.FaRui20240628
             return RunContractResultGenerationWithOptions(workspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 生成合同审查结果
-         *
-         * @param request RunContractResultGenerationRequest
-         * @return RunContractResultGenerationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成合同审查结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunContractResultGenerationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunContractResultGenerationResponse
+        /// </returns>
         public async Task<RunContractResultGenerationResponse> RunContractResultGenerationAsync(string workspaceId, RunContractResultGenerationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -449,14 +513,24 @@ namespace AlibabaCloud.SDK.FaRui20240628
             return await RunContractResultGenerationWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 生成合同审查规则
-         *
-         * @param tmpReq RunContractRuleGenerationRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RunContractRuleGenerationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成合同审查规则</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RunContractRuleGenerationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunContractRuleGenerationResponse
+        /// </returns>
         public RunContractRuleGenerationResponse RunContractRuleGenerationWithOptions(string workspaceId, RunContractRuleGenerationRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -499,14 +573,24 @@ namespace AlibabaCloud.SDK.FaRui20240628
             return TeaModel.ToObject<RunContractRuleGenerationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 生成合同审查规则
-         *
-         * @param tmpReq RunContractRuleGenerationRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RunContractRuleGenerationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成合同审查规则</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RunContractRuleGenerationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunContractRuleGenerationResponse
+        /// </returns>
         public async Task<RunContractRuleGenerationResponse> RunContractRuleGenerationWithOptionsAsync(string workspaceId, RunContractRuleGenerationRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -549,12 +633,18 @@ namespace AlibabaCloud.SDK.FaRui20240628
             return TeaModel.ToObject<RunContractRuleGenerationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 生成合同审查规则
-         *
-         * @param request RunContractRuleGenerationRequest
-         * @return RunContractRuleGenerationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成合同审查规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunContractRuleGenerationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunContractRuleGenerationResponse
+        /// </returns>
         public RunContractRuleGenerationResponse RunContractRuleGeneration(string workspaceId, RunContractRuleGenerationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -562,12 +652,18 @@ namespace AlibabaCloud.SDK.FaRui20240628
             return RunContractRuleGenerationWithOptions(workspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 生成合同审查规则
-         *
-         * @param request RunContractRuleGenerationRequest
-         * @return RunContractRuleGenerationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成合同审查规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunContractRuleGenerationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunContractRuleGenerationResponse
+        /// </returns>
         public async Task<RunContractRuleGenerationResponse> RunContractRuleGenerationAsync(string workspaceId, RunContractRuleGenerationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -575,14 +671,24 @@ namespace AlibabaCloud.SDK.FaRui20240628
             return await RunContractRuleGenerationWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 法律咨询
-         *
-         * @param tmpReq RunLegalAdviceConsultationRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RunLegalAdviceConsultationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>法律咨询</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RunLegalAdviceConsultationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunLegalAdviceConsultationResponse
+        /// </returns>
         public RunLegalAdviceConsultationResponse RunLegalAdviceConsultationWithOptions(string workspaceId, RunLegalAdviceConsultationRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -633,14 +739,24 @@ namespace AlibabaCloud.SDK.FaRui20240628
             return TeaModel.ToObject<RunLegalAdviceConsultationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 法律咨询
-         *
-         * @param tmpReq RunLegalAdviceConsultationRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RunLegalAdviceConsultationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>法律咨询</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RunLegalAdviceConsultationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunLegalAdviceConsultationResponse
+        /// </returns>
         public async Task<RunLegalAdviceConsultationResponse> RunLegalAdviceConsultationWithOptionsAsync(string workspaceId, RunLegalAdviceConsultationRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -691,12 +807,18 @@ namespace AlibabaCloud.SDK.FaRui20240628
             return TeaModel.ToObject<RunLegalAdviceConsultationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 法律咨询
-         *
-         * @param request RunLegalAdviceConsultationRequest
-         * @return RunLegalAdviceConsultationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>法律咨询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunLegalAdviceConsultationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunLegalAdviceConsultationResponse
+        /// </returns>
         public RunLegalAdviceConsultationResponse RunLegalAdviceConsultation(string workspaceId, RunLegalAdviceConsultationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -704,12 +826,18 @@ namespace AlibabaCloud.SDK.FaRui20240628
             return RunLegalAdviceConsultationWithOptions(workspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 法律咨询
-         *
-         * @param request RunLegalAdviceConsultationRequest
-         * @return RunLegalAdviceConsultationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>法律咨询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunLegalAdviceConsultationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunLegalAdviceConsultationResponse
+        /// </returns>
         public async Task<RunLegalAdviceConsultationResponse> RunLegalAdviceConsultationAsync(string workspaceId, RunLegalAdviceConsultationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.FaRui20240628.Models
 {
     public class RunContractResultGenerationResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -33,10 +41,18 @@ namespace AlibabaCloud.SDK.FaRui20240628.Models
                 [Validation(Required=false)]
                 public string ExamineResult { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>high</para>
+                /// </summary>
                 [NameInMap("riskLevel")]
                 [Validation(Required=false)]
                 public string RiskLevel { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1.1</para>
+                /// </summary>
                 [NameInMap("ruleSequence")]
                 [Validation(Required=false)]
                 public string RuleSequence { get; set; }
@@ -81,16 +97,28 @@ namespace AlibabaCloud.SDK.FaRui20240628.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>eaa56e1e-e205-4f5e-926e-5e2269ae7f68</para>
+            /// </summary>
             [NameInMap("resultTaskId")]
             [Validation(Required=false)]
             public string ResultTaskId { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>744419D0-671A-5997-9840-E8AE48356194</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>True</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
@@ -99,16 +127,28 @@ namespace AlibabaCloud.SDK.FaRui20240628.Models
         [Validation(Required=false)]
         public RunContractResultGenerationResponseBodyUsage Usage { get; set; }
         public class RunContractResultGenerationResponseBodyUsage : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("input")]
             [Validation(Required=false)]
             public long? Input { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>page</para>
+            /// </summary>
             [NameInMap("unit")]
             [Validation(Required=false)]
             public string Unit { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("httpStatusCode")]
         [Validation(Required=false)]
         public string HttpStatusCode { get; set; }
