@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Params { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Jaeger</para>
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }

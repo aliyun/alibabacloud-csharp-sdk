@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PutConcurrencyInput : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("reservedConcurrency")]
         [Validation(Required=false)]

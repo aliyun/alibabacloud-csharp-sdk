@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class CreateAliasRequest : TeaModel {
         /// <summary>
-        /// The request parameters for creating an alias.
-        /// 
-        /// This parameter is required.
+        /// <para>The request parameters for creating an alias.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public List<Layer> Layers { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>next-layer-name</para>
+        /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }

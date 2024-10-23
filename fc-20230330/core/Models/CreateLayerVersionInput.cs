@@ -17,10 +17,18 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public List<string> CompatibleRuntime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>my first layer</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Apache</para>
+        /// </summary>
         [NameInMap("license")]
         [Validation(Required=false)]
         public string License { get; set; }

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public List<ConcurrencyConfig> Configs { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>next_token</para>
+        /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }

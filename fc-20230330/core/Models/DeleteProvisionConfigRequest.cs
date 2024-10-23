@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class DeleteProvisionConfigRequest : TeaModel {
         /// <summary>
-        /// The function alias or LATEST.
+        /// <para>The function alias or LATEST.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LATEST</para>
         /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]

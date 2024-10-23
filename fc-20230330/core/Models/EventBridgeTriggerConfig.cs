@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public bool? AsyncInvocationType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("eventRuleFilterPattern")]
         [Validation(Required=false)]
         public string EventRuleFilterPattern { get; set; }
@@ -29,6 +33,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public RunOptions RunOptions { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("triggerEnable")]
         [Validation(Required=false)]
         public bool? TriggerEnable { get; set; }

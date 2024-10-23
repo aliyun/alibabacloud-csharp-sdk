@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class WildcardRule : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/api/*</para>
         /// </summary>
         [NameInMap("match")]
         [Validation(Required=false)]
         public string Match { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/$1</para>
         /// </summary>
         [NameInMap("replacement")]
         [Validation(Required=false)]

@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PutConcurrencyConfigRequest : TeaModel {
         /// <summary>
-        /// The concurrency configurations.
-        /// 
-        /// This parameter is required.
+        /// <para>The concurrency configurations.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

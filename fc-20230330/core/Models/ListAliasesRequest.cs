@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListAliasesRequest : TeaModel {
         /// <summary>
-        /// The number of aliases returned.
+        /// <para>The number of aliases returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("limit")]
         [Validation(Required=false)]
         public int? Limit { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MTIzNCNhYmM=</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The alias prefix.
+        /// <para>The alias prefix.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-alias</para>
         /// </summary>
         [NameInMap("prefix")]
         [Validation(Required=false)]

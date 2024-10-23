@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class CreateVpcBindingInput : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-8vb8x8dggvr0axxxxxxxx</para>
         /// </summary>
         [NameInMap("vpcId")]
         [Validation(Required=false)]

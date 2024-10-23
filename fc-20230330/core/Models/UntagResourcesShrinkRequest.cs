@@ -10,32 +10,36 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class UntagResourcesShrinkRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to delete all tags.
+        /// <para>Specifies whether to delete all tags.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
 
         /// <summary>
-        /// The resource identifiers.
-        /// 
-        /// This parameter is required.
+        /// <para>The resource identifiers.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceIdShrink { get; set; }
 
         /// <summary>
-        /// The resource type.
+        /// <para>The resource type.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>function</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tag to remove. You can specify a maximum of 50 tags.
+        /// <para>The tag to remove. You can specify a maximum of 50 tags.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

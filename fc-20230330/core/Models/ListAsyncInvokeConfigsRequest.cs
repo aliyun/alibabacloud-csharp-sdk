@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListAsyncInvokeConfigsRequest : TeaModel {
         /// <summary>
-        /// The function name. If you do not configure this parameter, the asynchronous invocation configurations of all functions are displayed.
+        /// <para>The function name. If you do not configure this parameter, the asynchronous invocation configurations of all functions are displayed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-func</para>
         /// </summary>
         [NameInMap("functionName")]
         [Validation(Required=false)]
         public string FunctionName { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to be returned.
+        /// <para>The maximum number of entries to be returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("limit")]
         [Validation(Required=false)]
         public int? Limit { get; set; }
 
         /// <summary>
-        /// The paging information. This parameter specifies the start point of the query.
+        /// <para>The paging information. This parameter specifies the start point of the query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MTIzNCNhYmM=</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]

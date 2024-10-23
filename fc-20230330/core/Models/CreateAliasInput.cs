@@ -14,18 +14,28 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public Dictionary<string, float?> AdditionalVersionWeight { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>prod</para>
         /// </summary>
         [NameInMap("aliasName")]
         [Validation(Required=false)]
         public string AliasName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>my alias</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("versionId")]
         [Validation(Required=false)]

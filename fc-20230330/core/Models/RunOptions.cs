@@ -17,10 +17,18 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public DeadLetterQueue DeadLetterQueue { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ALL</para>
+        /// </summary>
         [NameInMap("errorsTolerance")]
         [Validation(Required=false)]
         public string ErrorsTolerance { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>event-streaming</para>
+        /// </summary>
         [NameInMap("mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }

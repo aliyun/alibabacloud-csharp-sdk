@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class CertConfig : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-cert</para>
         /// </summary>
         [NameInMap("certName")]
         [Validation(Required=false)]
         public string CertName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PEM format</para>
         /// </summary>
         [NameInMap("certificate")]
         [Validation(Required=false)]
         public string Certificate { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PEM format</para>
         /// </summary>
         [NameInMap("privateKey")]
         [Validation(Required=false)]

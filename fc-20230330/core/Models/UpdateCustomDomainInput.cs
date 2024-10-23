@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public CertConfig CertConfig { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>HTTP</para>
+        /// </summary>
         [NameInMap("protocol")]
         [Validation(Required=false)]
         public string Protocol { get; set; }

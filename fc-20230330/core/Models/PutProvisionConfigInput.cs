@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PutProvisionConfigInput : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("alwaysAllocateCPU")]
         [Validation(Required=false)]
         public bool? AlwaysAllocateCPU { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("alwaysAllocateGPU")]
         [Validation(Required=false)]
         public bool? AlwaysAllocateGPU { get; set; }
@@ -22,7 +30,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public List<ScheduledAction> ScheduledActions { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("target")]
         [Validation(Required=false)]

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public CustomHealthCheckConfig HealthCheckConfig { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>9000</para>
+        /// </summary>
         [NameInMap("port")]
         [Validation(Required=false)]
         public int? Port { get; set; }

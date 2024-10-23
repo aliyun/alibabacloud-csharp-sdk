@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public List<CustomDomain> CustomDomains { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>next_domain_name</para>
+        /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }

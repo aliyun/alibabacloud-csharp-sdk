@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class TagResourceInput : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:fc:cn-shanghai:xxx:functions/f1</para>
         /// </summary>
         [NameInMap("resourceArn")]
         [Validation(Required=false)]
         public string ResourceArn { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

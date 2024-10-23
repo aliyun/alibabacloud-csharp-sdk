@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class BatchWindow : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("CountBasedWindow")]
         [Validation(Required=false)]
         public int? CountBasedWindow { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("TimeBasedWindow")]
         [Validation(Required=false)]
         public int? TimeBasedWindow { get; set; }

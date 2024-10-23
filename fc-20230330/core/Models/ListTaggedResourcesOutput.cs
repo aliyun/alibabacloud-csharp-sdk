@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListTaggedResourcesOutput : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>next_token</para>
+        /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }

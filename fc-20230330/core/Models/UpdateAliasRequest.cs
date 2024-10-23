@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class UpdateAliasRequest : TeaModel {
         /// <summary>
-        /// The alias information to be updated.
-        /// 
-        /// This parameter is required.
+        /// <para>The alias information to be updated.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

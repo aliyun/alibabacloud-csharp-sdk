@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PublishFunctionVersionRequest : TeaModel {
         /// <summary>
-        /// The information about the function version.
-        /// 
-        /// This parameter is required.
+        /// <para>The information about the function version.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

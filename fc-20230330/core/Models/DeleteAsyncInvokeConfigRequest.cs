@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class DeleteAsyncInvokeConfigRequest : TeaModel {
         /// <summary>
-        /// The version or alias of the function.
+        /// <para>The version or alias of the function.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LATEST</para>
         /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]
