@@ -30071,7 +30071,7 @@ namespace AlibabaCloud.SDK.Aliding20230426
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播信息</para>
+        /// <para>查询群直播详情</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30102,16 +30102,15 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
             }
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnchorUnionId))
             {
-                query["AnchorUnionId"] = request.AnchorUnionId;
+                body["AnchorUnionId"] = request.AnchorUnionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiveUuid))
             {
-                query["LiveUuid"] = request.LiveUuid;
+                body["LiveUuid"] = request.LiveUuid;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
             {
                 body["TenantContext"] = request.TenantContextShrink;
@@ -30128,7 +30127,6 @@ namespace AlibabaCloud.SDK.Aliding20230426
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = realHeaders,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -30137,7 +30135,7 @@ namespace AlibabaCloud.SDK.Aliding20230426
                 Version = "2023-04-26",
                 Protocol = "HTTPS",
                 Pathname = "/dingtalk/v1/ysp/queryGroupLiveInfo",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "formData",
@@ -30148,7 +30146,7 @@ namespace AlibabaCloud.SDK.Aliding20230426
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播信息</para>
+        /// <para>查询群直播详情</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30179,16 +30177,15 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
             }
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnchorUnionId))
             {
-                query["AnchorUnionId"] = request.AnchorUnionId;
+                body["AnchorUnionId"] = request.AnchorUnionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiveUuid))
             {
-                query["LiveUuid"] = request.LiveUuid;
+                body["LiveUuid"] = request.LiveUuid;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
             {
                 body["TenantContext"] = request.TenantContextShrink;
@@ -30205,7 +30202,6 @@ namespace AlibabaCloud.SDK.Aliding20230426
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = realHeaders,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -30214,7 +30210,7 @@ namespace AlibabaCloud.SDK.Aliding20230426
                 Version = "2023-04-26",
                 Protocol = "HTTPS",
                 Pathname = "/dingtalk/v1/ysp/queryGroupLiveInfo",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "formData",
@@ -30225,7 +30221,7 @@ namespace AlibabaCloud.SDK.Aliding20230426
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播信息</para>
+        /// <para>查询群直播详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30244,7 +30240,7 @@ namespace AlibabaCloud.SDK.Aliding20230426
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播信息</para>
+        /// <para>查询群直播详情</para>
         /// </summary>
         /// 
         /// <param name="request">

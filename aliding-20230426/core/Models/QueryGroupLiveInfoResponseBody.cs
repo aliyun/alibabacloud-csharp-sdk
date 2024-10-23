@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("staffId")]
+        [Validation(Required=false)]
+        public string StaffId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1687924800000</para>
@@ -103,10 +107,18 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public int? Uv { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
+        /// </summary>
         [NameInMap("vendorRequestId")]
         [Validation(Required=false)]
         public string VendorRequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dingtalk</para>
+        /// </summary>
         [NameInMap("vendorType")]
         [Validation(Required=false)]
         public string VendorType { get; set; }
