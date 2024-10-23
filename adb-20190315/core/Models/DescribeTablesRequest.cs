@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeTablesRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>am-bp1xxxxxxxx47</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -25,9 +29,13 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the cluster.
+        /// <para>The region ID of the cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -42,7 +50,11 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The name of the database.
+        /// <para>The name of the database.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>adb_demo</para>
         /// </summary>
         [NameInMap("SchemaName")]
         [Validation(Required=false)]

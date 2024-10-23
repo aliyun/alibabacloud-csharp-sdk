@@ -10,101 +10,122 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAvailableResourceResponseBody : TeaModel {
         /// <summary>
-        /// The supported zones.
+        /// <para>The supported zones.</para>
         /// </summary>
         [NameInMap("AvailableZoneList")]
         [Validation(Required=false)]
         public List<DescribeAvailableResourceResponseBodyAvailableZoneList> AvailableZoneList { get; set; }
         public class DescribeAvailableResourceResponseBodyAvailableZoneList : TeaModel {
             /// <summary>
-            /// A reserved parameter.
+            /// <para>A reserved parameter.</para>
             /// </summary>
             [NameInMap("SupportedComputeResource")]
             [Validation(Required=false)]
             public List<string> SupportedComputeResource { get; set; }
 
             /// <summary>
-            /// The supported modes.
+            /// <para>The supported modes.</para>
             /// </summary>
             [NameInMap("SupportedMode")]
             [Validation(Required=false)]
             public List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedMode> SupportedMode { get; set; }
             public class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedMode : TeaModel {
                 /// <summary>
-                /// The supported mode. Valid values:
+                /// <para>The supported mode. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>flexible</b>: elastic mode.</description></item>
+                /// <item><description><b>reserver</b>: reserved mode.</description></item>
+                /// </list>
                 /// 
-                /// *   **flexible**: elastic mode.
-                /// *   **reserver**: reserved mode.
+                /// <b>Example:</b>
+                /// <para>flexible</para>
                 /// </summary>
                 [NameInMap("Mode")]
                 [Validation(Required=false)]
                 public string Mode { get; set; }
 
                 /// <summary>
-                /// The supported editions.
+                /// <para>The supported editions.</para>
                 /// </summary>
                 [NameInMap("SupportedSerialList")]
                 [Validation(Required=false)]
                 public List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialList> SupportedSerialList { get; set; }
                 public class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialList : TeaModel {
                     /// <summary>
-                    /// The supported edition. Valid values:
+                    /// <para>The supported edition. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>basic</b>: Basic Edition.</description></item>
+                    /// <item><description><b>cluster</b>: Cluster Edition.</description></item>
+                    /// <item><description><b>mixed_storage</b>: elastic mode for Cluster Edition.</description></item>
+                    /// </list>
                     /// 
-                    /// *   **basic**: Basic Edition.
-                    /// *   **cluster**: Cluster Edition.
-                    /// *   **mixed_storage**: elastic mode for Cluster Edition.
+                    /// <b>Example:</b>
+                    /// <para>mixed_storage</para>
                     /// </summary>
                     [NameInMap("Serial")]
                     [Validation(Required=false)]
                     public string Serial { get; set; }
 
                     /// <summary>
-                    /// The supported resources in elastic mode.
+                    /// <para>The supported resources in elastic mode.</para>
                     /// </summary>
                     [NameInMap("SupportedFlexibleResource")]
                     [Validation(Required=false)]
                     public List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedFlexibleResource> SupportedFlexibleResource { get; set; }
                     public class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedFlexibleResource : TeaModel {
                         /// <summary>
-                        /// The disk storage type. Valid values:
+                        /// <para>The disk storage type. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>hdd</b></description></item>
+                        /// <item><description><b>ssd</b></description></item>
+                        /// </list>
                         /// 
-                        /// *   **hdd**
-                        /// *   **ssd**
+                        /// <b>Example:</b>
+                        /// <para>hdd</para>
                         /// </summary>
                         [NameInMap("StorageType")]
                         [Validation(Required=false)]
                         public string StorageType { get; set; }
 
                         /// <summary>
-                        /// The supported computing resources.
+                        /// <para>The supported computing resources.</para>
                         /// </summary>
                         [NameInMap("SupportedComputeResource")]
                         [Validation(Required=false)]
                         public List<string> SupportedComputeResource { get; set; }
 
                         /// <summary>
-                        /// The supported elastic I/O resources.
+                        /// <para>The supported elastic I/O resources.</para>
                         /// </summary>
                         [NameInMap("SupportedElasticIOResource")]
                         [Validation(Required=false)]
                         public DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedFlexibleResourceSupportedElasticIOResource SupportedElasticIOResource { get; set; }
                         public class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedFlexibleResourceSupportedElasticIOResource : TeaModel {
                             /// <summary>
-                            /// The maximum amount of elastic I/O resources.
+                            /// <para>The maximum amount of elastic I/O resources.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>200</para>
                             /// </summary>
                             [NameInMap("MaxCount")]
                             [Validation(Required=false)]
                             public string MaxCount { get; set; }
 
                             /// <summary>
-                            /// The minimum amount of elastic I/O resources.
+                            /// <para>The minimum amount of elastic I/O resources.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>0</para>
                             /// </summary>
                             [NameInMap("MinCount")]
                             [Validation(Required=false)]
                             public string MinCount { get; set; }
 
                             /// <summary>
-                            /// The step size.
+                            /// <para>The step size.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>1</para>
                             /// </summary>
                             [NameInMap("Step")]
                             [Validation(Required=false)]
@@ -113,7 +134,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                         }
 
                         /// <summary>
-                        /// The supported storage resources.
+                        /// <para>The supported storage resources.</para>
                         /// </summary>
                         [NameInMap("SupportedStorageResource")]
                         [Validation(Required=false)]
@@ -122,49 +143,61 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                     }
 
                     /// <summary>
-                    /// The supported resources in reserved mode.
+                    /// <para>The supported resources in reserved mode.</para>
                     /// </summary>
                     [NameInMap("SupportedInstanceClassList")]
                     [Validation(Required=false)]
                     public List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassList> SupportedInstanceClassList { get; set; }
                     public class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassList : TeaModel {
                         /// <summary>
-                        /// The supported instance type.
+                        /// <para>The supported instance type.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>C32</para>
                         /// </summary>
                         [NameInMap("InstanceClass")]
                         [Validation(Required=false)]
                         public string InstanceClass { get; set; }
 
                         /// <summary>
-                        /// A reserved parameter.
+                        /// <para>A reserved parameter.</para>
                         /// </summary>
                         [NameInMap("SupportedExecutorList")]
                         [Validation(Required=false)]
                         public List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassListSupportedExecutorList> SupportedExecutorList { get; set; }
                         public class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassListSupportedExecutorList : TeaModel {
                             /// <summary>
-                            /// The information about the supported compute nodes.
+                            /// <para>The information about the supported compute nodes.</para>
                             /// </summary>
                             [NameInMap("NodeCount")]
                             [Validation(Required=false)]
                             public DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassListSupportedExecutorListNodeCount NodeCount { get; set; }
                             public class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassListSupportedExecutorListNodeCount : TeaModel {
                                 /// <summary>
-                                /// A reserved parameter.
+                                /// <para>A reserved parameter.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>N/A</para>
                                 /// </summary>
                                 [NameInMap("MaxCount")]
                                 [Validation(Required=false)]
                                 public string MaxCount { get; set; }
 
                                 /// <summary>
-                                /// A reserved parameter.
+                                /// <para>A reserved parameter.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>N/A</para>
                                 /// </summary>
                                 [NameInMap("MinCount")]
                                 [Validation(Required=false)]
                                 public string MinCount { get; set; }
 
                                 /// <summary>
-                                /// A reserved parameter.
+                                /// <para>A reserved parameter.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>N/A</para>
                                 /// </summary>
                                 [NameInMap("Step")]
                                 [Validation(Required=false)]
@@ -175,35 +208,44 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                         }
 
                         /// <summary>
-                        /// The supported compute nodes.
+                        /// <para>The supported compute nodes.</para>
                         /// </summary>
                         [NameInMap("SupportedNodeCountList")]
                         [Validation(Required=false)]
                         public List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassListSupportedNodeCountList> SupportedNodeCountList { get; set; }
                         public class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassListSupportedNodeCountList : TeaModel {
                             /// <summary>
-                            /// The number of the supported compute nodes.
+                            /// <para>The number of the supported compute nodes.</para>
                             /// </summary>
                             [NameInMap("NodeCount")]
                             [Validation(Required=false)]
                             public DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassListSupportedNodeCountListNodeCount NodeCount { get; set; }
                             public class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassListSupportedNodeCountListNodeCount : TeaModel {
                                 /// <summary>
-                                /// The maximum number of compute nodes.
+                                /// <para>The maximum number of compute nodes.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>200</para>
                                 /// </summary>
                                 [NameInMap("MaxCount")]
                                 [Validation(Required=false)]
                                 public string MaxCount { get; set; }
 
                                 /// <summary>
-                                /// The minimum number of compute nodes.
+                                /// <para>The minimum number of compute nodes.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>1</para>
                                 /// </summary>
                                 [NameInMap("MinCount")]
                                 [Validation(Required=false)]
                                 public string MinCount { get; set; }
 
                                 /// <summary>
-                                /// The step size.
+                                /// <para>The step size.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>1</para>
                                 /// </summary>
                                 [NameInMap("Step")]
                                 [Validation(Required=false)]
@@ -212,7 +254,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                             }
 
                             /// <summary>
-                            /// The support storage capacity. Unit: GB.
+                            /// <para>The support storage capacity. Unit: GB.</para>
                             /// </summary>
                             [NameInMap("StorageSize")]
                             [Validation(Required=false)]
@@ -221,7 +263,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                         }
 
                         /// <summary>
-                        /// The description of the instance type.
+                        /// <para>The description of the instance type.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>C32</para>
                         /// </summary>
                         [NameInMap("Tips")]
                         [Validation(Required=false)]
@@ -234,14 +279,17 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             }
 
             /// <summary>
-            /// A reserved parameter.
+            /// <para>A reserved parameter.</para>
             /// </summary>
             [NameInMap("SupportedStorageResource")]
             [Validation(Required=false)]
             public List<string> SupportedStorageResource { get; set; }
 
             /// <summary>
-            /// The zone ID.
+            /// <para>The zone ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-h</para>
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
@@ -250,18 +298,20 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The resources available in the supported editions.
+        /// <para>The resources available in the supported editions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The supported edition. Valid values:
+        /// <para>The ID of the request.</para>
         /// 
-        /// *   **basic**: Basic Edition
-        /// *   **cluster**: Cluster Edition
-        /// *   **mixed_storage**: elastic mode for Cluster Edition
+        /// <b>Example:</b>
+        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

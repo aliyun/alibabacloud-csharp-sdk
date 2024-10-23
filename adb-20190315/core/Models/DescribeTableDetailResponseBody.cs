@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeTableDetailResponseBody : TeaModel {
         /// <summary>
-        /// The average number of rows in partitions.
+        /// <para>The average number of rows in partitions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("AvgSize")]
         [Validation(Required=false)]
         public long? AvgSize { get; set; }
 
         /// <summary>
-        /// The list of partitions.
+        /// <para>The list of partitions.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -27,16 +30,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public List<DescribeTableDetailResponseBodyItemsShard> Shard { get; set; }
             public class DescribeTableDetailResponseBodyItemsShard : TeaModel {
-                /// <summary>
-                /// The ID of the partition. Only the numeric part of the partition name is returned.
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public int? Id { get; set; }
 
-                /// <summary>
-                /// The number of rows in the table.
-                /// </summary>
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public long? Size { get; set; }
@@ -46,7 +43,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

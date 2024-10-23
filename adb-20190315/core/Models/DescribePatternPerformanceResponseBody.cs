@@ -9,71 +9,95 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribePatternPerformanceResponseBody : TeaModel {
+        [NameInMap("AccessIp")]
+        [Validation(Required=false)]
+        public string AccessIp { get; set; }
+
         /// <summary>
-        /// The end time of the query. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
+        /// <para>The end time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-11-18T18:05Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("FailedCount")]
+        [Validation(Required=false)]
+        public long? FailedCount { get; set; }
+
         /// <summary>
-        /// The queried performance metrics.
+        /// <para>The queried performance metrics.</para>
         /// </summary>
         [NameInMap("Performances")]
         [Validation(Required=false)]
         public List<DescribePatternPerformanceResponseBodyPerformances> Performances { get; set; }
         public class DescribePatternPerformanceResponseBodyPerformances : TeaModel {
             /// <summary>
-            /// The performance metric that was queried. Valid values:
+            /// <para>The performance metric that was queried. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>AnalyticDB_PatternQueryCount</b>: the total number of queries executed in association with the SQL pattern.</description></item>
+            /// <item><description><b>AnalyticDB_PatternQueryTime</b>: the total amount of time consumed by the queries executed in association with the SQL pattern.</description></item>
+            /// <item><description><b>AnalyticDB_PatternExecutionTime</b>: the total execution duration of the queries executed in association with the SQL pattern.</description></item>
+            /// <item><description><b>AnalyticDB_PatternPeakMemory</b>: the peak memory usage of the queries executed in association with the SQL pattern.</description></item>
+            /// <item><description><b>AnalyticDB_PatternScanSize</b>: the amount of data scanned in the queries executed in association with the SQL pattern.</description></item>
+            /// </list>
             /// 
-            /// *   **AnalyticDB_PatternQueryCount**: the total number of queries executed in association with the SQL pattern.
-            /// *   **AnalyticDB_PatternQueryTime**: the total amount of time consumed by the queries executed in association with the SQL pattern.
-            /// *   **AnalyticDB_PatternExecutionTime**: the total execution duration of the queries executed in association with the SQL pattern.
-            /// *   **AnalyticDB_PatternPeakMemory**: the peak memory usage of the queries executed in association with the SQL pattern.
-            /// *   **AnalyticDB_PatternScanSize**: the amount of data scanned in the queries executed in association with the SQL pattern.
+            /// <b>Example:</b>
+            /// <para>AnalyticDB_PatternQueryCount</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The queried performance metrics.
+            /// <para>The queried performance metrics.</para>
             /// </summary>
             [NameInMap("Series")]
             [Validation(Required=false)]
             public List<DescribePatternPerformanceResponseBodyPerformancesSeries> Series { get; set; }
             public class DescribePatternPerformanceResponseBodyPerformancesSeries : TeaModel {
                 /// <summary>
-                /// The name of the performance metric value. Valid values:
+                /// <para>The name of the performance metric value. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>When the <c>Key</c> parameter is set to <c>AnalyticDB_PatternQueryCount</c>, <c>pattern_query_count</c> is returned, which indicates the number of executions of the SQL statements in association with the SQL pattern.</para>
+                /// </description></item>
+                /// <item><description><para>When the <c>Key</c> parameter is set to <c>AnalyticDB_PatternQueryTime</c>, the following values are returned:</para>
+                /// <list type="bullet">
+                /// <item><description><c>average_query_time</c>, which indicates the average total amount of time consumed by the SQL statements in association with the SQL pattern.</description></item>
+                /// <item><description><c>max_query_time</c>, which indicates the maximum total amount of time consumed by the SQL statements in association with the SQL pattern.</description></item>
+                /// </list>
+                /// </description></item>
+                /// <item><description><para>When the <c>Key</c> parameter is set to <c>AnalyticDB_PatternExecutionTime</c>, the following values are returned:</para>
+                /// <list type="bullet">
+                /// <item><description><c>average_execution_time</c>, which indicates the average execution duration of the SQL statements in association with the SQL pattern.</description></item>
+                /// <item><description><c>max_execution_time</c>, which indicates the maximum execution duration of the SQL statements in association with the SQL pattern.</description></item>
+                /// </list>
+                /// </description></item>
+                /// <item><description><para>When the <c>Key</c> parameter is set to <c>AnalyticDB_PatternPeakMemory</c>, the following values are returned:</para>
+                /// <list type="bullet">
+                /// <item><description><c>average_peak_memory</c>, which indicates the average peak memory usage of the SQL statements in association with the SQL pattern.</description></item>
+                /// <item><description><c>max_peak_memory</c>, which indicates the maximum peak memory usage of the SQL statements in association with the SQL pattern.</description></item>
+                /// </list>
+                /// </description></item>
+                /// <item><description><para>When the <c>Key</c> parameter is set <c>AnalyticDB_PatternScanSize</c>, the following values are returned:</para>
+                /// <list type="bullet">
+                /// <item><description><c>average_scan_size</c>, which indicates the average amount of data scanned by the SQL statements in association with the SQL pattern.</description></item>
+                /// <item><description><c>max_scan_size</c>, which indicates the maximum amount of data scanned by the SQL statements in association with the SQL pattern.</description></item>
+                /// </list>
+                /// </description></item>
+                /// </list>
                 /// 
-                /// *   When the `Key` parameter is set to `AnalyticDB_PatternQueryCount`, `pattern_query_count` is returned, which indicates the number of executions of the SQL statements in association with the SQL pattern.
-                /// 
-                /// *   When the `Key` parameter is set to `AnalyticDB_PatternQueryTime`, the following values are returned:
-                /// 
-                ///     *   `average_query_time`, which indicates the average total amount of time consumed by the SQL statements in association with the SQL pattern.
-                ///     *   `max_query_time`, which indicates the maximum total amount of time consumed by the SQL statements in association with the SQL pattern.
-                /// 
-                /// *   When the `Key` parameter is set to `AnalyticDB_PatternExecutionTime`, the following values are returned:
-                /// 
-                ///     *   `average_execution_time`, which indicates the average execution duration of the SQL statements in association with the SQL pattern.
-                ///     *   `max_execution_time`, which indicates the maximum execution duration of the SQL statements in association with the SQL pattern.
-                /// 
-                /// *   When the `Key` parameter is set to `AnalyticDB_PatternPeakMemory`, the following values are returned:
-                /// 
-                ///     *   `average_peak_memory`, which indicates the average peak memory usage of the SQL statements in association with the SQL pattern.
-                ///     *   `max_peak_memory`, which indicates the maximum peak memory usage of the SQL statements in association with the SQL pattern.
-                /// 
-                /// *   When the `Key` parameter is set `AnalyticDB_PatternScanSize`, the following values are returned:
-                /// 
-                ///     *   `average_scan_size`, which indicates the average amount of data scanned by the SQL statements in association with the SQL pattern.
-                ///     *   `max_scan_size`, which indicates the maximum amount of data scanned by the SQL statements in association with the SQL pattern.
+                /// <b>Example:</b>
+                /// <para>max_query_time</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The queried performance metrics.
+                /// <para>The queried performance metrics.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -82,12 +106,16 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             }
 
             /// <summary>
-            /// The unit of the performance metric. Valid values:
+            /// <para>The unit of the performance metric. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>When the performance metric is related to the query duration (the <c>Key</c> value is <c>AnalyticDB_PatternQueryTime</c> or <c>AnalyticDB_PatternExecutionTime</c>), <b>ms</b> is returned.</description></item>
+            /// <item><description>When the performance metric is related to the memory usage (the <c>Key</c> value is <c>AnalyticDB_PatternPeakMemory</c>), <b>MB</b> is returned.</description></item>
+            /// <item><description>When the performance metric is related to the amount of data scanned (the <c>Key</c> value is <c>AnalyticDB_PatternScanSize</c>), <b>MB</b> is returned.</description></item>
+            /// <item><description>When the performance metric is related to the number of queries (the <c>Key</c> value is <c>AnalyticDB_PatternQueryCount</c>), this parameter is empty.</description></item>
+            /// </list>
             /// 
-            /// *   When the performance metric is related to the query duration (the `Key` value is `AnalyticDB_PatternQueryTime` or `AnalyticDB_PatternExecutionTime`), **ms** is returned.
-            /// *   When the performance metric is related to the memory usage (the `Key` value is `AnalyticDB_PatternPeakMemory`), **MB** is returned.
-            /// *   When the performance metric is related to the amount of data scanned (the `Key` value is `AnalyticDB_PatternScanSize`), **MB** is returned.
-            /// *   When the performance metric is related to the number of queries (the `Key` value is `AnalyticDB_PatternQueryCount`), this parameter is empty.
+            /// <b>Example:</b>
+            /// <para>ms</para>
             /// </summary>
             [NameInMap("Unit")]
             [Validation(Required=false)]
@@ -95,19 +123,41 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 
         }
 
+        [NameInMap("QueryCount")]
+        [Validation(Required=false)]
+        public long? QueryCount { get; set; }
+
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>210f47011634026610213529******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SQLPattern")]
+        [Validation(Required=false)]
+        public string SQLPattern { get; set; }
+
         /// <summary>
-        /// The start time of the query. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
+        /// <para>The start time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-11-18T00:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
+
+        [NameInMap("Tables")]
+        [Validation(Required=false)]
+        public string Tables { get; set; }
+
+        [NameInMap("User")]
+        [Validation(Required=false)]
+        public string User { get; set; }
 
     }
 

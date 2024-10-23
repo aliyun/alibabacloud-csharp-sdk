@@ -10,9 +10,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DetachUserENIRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query cluster IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBClusters](~~129857~~) operation to query cluster IDs.
+        /// <b>Example:</b>
+        /// <para>am-bp11q28kvl688****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

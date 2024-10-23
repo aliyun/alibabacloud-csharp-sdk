@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeSchemasRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>am-bp1xxxxxxxx47</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

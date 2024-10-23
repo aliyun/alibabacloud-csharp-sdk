@@ -10,23 +10,34 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeComputeResourceRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>am-bp1r053byu48p****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The version of the AnalyticDB for MySQL Data Warehouse Edition cluster. Set the value to **3**.
+        /// <para>The version of the AnalyticDB for MySQL Data Warehouse Edition cluster. Set the value to <b>3</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3.0</para>
         /// </summary>
         [NameInMap("DBClusterVersion")]
         [Validation(Required=false)]
         public string DBClusterVersion { get; set; }
 
         /// <summary>
-        /// The available computing resources for migrating AnalyticDB MySQL Data Warehouse Edition to AnalyticDB MySQL Lakehouse Edition. Possible values are:
-        /// - **true**
-        /// - **false**(default value)
+        /// <para>The available computing resources for migrating AnalyticDB MySQL Data Warehouse Edition to AnalyticDB MySQL Lakehouse Edition. Possible values are:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b>(default value)</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Migrate")]
         [Validation(Required=false)]
@@ -41,9 +52,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the cluster.
+        /// <para>The region ID of the cluster.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -58,9 +74,13 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The zone ID of the cluster.
+        /// <para>The zone ID of the cluster.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeRegions</a> operation to query the most recent zone list.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeRegions](~~129857~~) operation to query the most recent zone list.
+        /// <b>Example:</b>
+        /// <para>cn-beijing-f</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

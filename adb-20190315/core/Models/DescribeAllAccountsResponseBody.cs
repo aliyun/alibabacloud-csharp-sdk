@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAllAccountsResponseBody : TeaModel {
         /// <summary>
-        /// The list of accounts.
+        /// <para>The queried database accounts.</para>
         /// </summary>
         [NameInMap("AccountList")]
         [Validation(Required=false)]
         public List<DescribeAllAccountsResponseBodyAccountList> AccountList { get; set; }
         public class DescribeAllAccountsResponseBodyAccountList : TeaModel {
             /// <summary>
-            /// The name of the account.
+            /// <para>The name of the database account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rdsdt_dts_adb</para>
             /// </summary>
             [NameInMap("User")]
             [Validation(Required=false)]
@@ -26,7 +29,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

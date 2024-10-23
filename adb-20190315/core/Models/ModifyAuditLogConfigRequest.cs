@@ -10,17 +10,26 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyAuditLogConfigRequest : TeaModel {
         /// <summary>
-        /// The status of SQL audit. Valid values:
+        /// <para>The status of SQL audit. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b>: SQL audit is enabled.</description></item>
+        /// <item><description><b>off</b>: SQL audit is disabled.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **on**: SQL audit is enabled.
-        /// *   **off**: SQL audit is disabled.
+        /// <b>Example:</b>
+        /// <para>on</para>
         /// </summary>
         [NameInMap("AuditLogStatus")]
         [Validation(Required=false)]
         public string AuditLogStatus { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>am-t4nj8619bz2w3****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -35,7 +44,11 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

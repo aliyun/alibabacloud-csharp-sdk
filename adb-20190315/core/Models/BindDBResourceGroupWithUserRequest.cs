@@ -10,23 +10,36 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class BindDBResourceGroupWithUserRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
+        /// <b>Example:</b>
+        /// <para>am-bp1ub9grke1****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The name of the resource group.
+        /// <para>The name of the resource group.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The database account with which to associate the resource group. It can be a standard account or a privileged account.
+        /// <para>The database account with which to associate the resource group. It can be a standard account or a privileged account.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>accout</para>
         /// </summary>
         [NameInMap("GroupUser")]
         [Validation(Required=false)]

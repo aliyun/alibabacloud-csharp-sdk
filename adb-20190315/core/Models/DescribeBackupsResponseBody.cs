@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeBackupsResponseBody : TeaModel {
+        [NameInMap("FreeBackupSize")]
+        [Validation(Required=false)]
+        public long? FreeBackupSize { get; set; }
+
         /// <summary>
-        /// The queried backup sets.
+        /// <para>The queried backup sets.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,52 +25,78 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public List<DescribeBackupsResponseBodyItemsBackup> Backup { get; set; }
             public class DescribeBackupsResponseBodyItemsBackup : TeaModel {
                 /// <summary>
-                /// The end time of the backup.
+                /// <para>The end time of the backup.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-06-02T16:00Z</para>
                 /// </summary>
                 [NameInMap("BackupEndTime")]
                 [Validation(Required=false)]
                 public string BackupEndTime { get; set; }
 
+                [NameInMap("BackupExpiredTime")]
+                [Validation(Required=false)]
+                public string BackupExpiredTime { get; set; }
+
                 /// <summary>
-                /// The backup set ID.
+                /// <para>The backup set ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>32732****</para>
                 /// </summary>
                 [NameInMap("BackupId")]
                 [Validation(Required=false)]
                 public string BackupId { get; set; }
 
                 /// <summary>
-                /// The backup method. Only Snapshot is returned.
+                /// <para>The backup method. Only Snapshot is returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Snapshot</para>
                 /// </summary>
                 [NameInMap("BackupMethod")]
                 [Validation(Required=false)]
                 public string BackupMethod { get; set; }
 
                 /// <summary>
-                /// The size of the backup set. Unit: bytes.
+                /// <para>The size of the backup set. Unit: bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2167808</para>
                 /// </summary>
                 [NameInMap("BackupSize")]
                 [Validation(Required=false)]
                 public long? BackupSize { get; set; }
 
                 /// <summary>
-                /// The start time of the backup.
+                /// <para>The start time of the backup.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-06-01T16:00Z</para>
                 /// </summary>
                 [NameInMap("BackupStartTime")]
                 [Validation(Required=false)]
                 public string BackupStartTime { get; set; }
 
                 /// <summary>
-                /// The backup type. Valid values:
+                /// <para>The backup type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>FullBackup</b></description></item>
+                /// <item><description><b>IncrementalBackup</b></description></item>
+                /// </list>
                 /// 
-                /// *   **FullBackup**
-                /// *   **IncrementalBackup**
+                /// <b>Example:</b>
+                /// <para>FullBackup</para>
                 /// </summary>
                 [NameInMap("BackupType")]
                 [Validation(Required=false)]
                 public string BackupType { get; set; }
 
                 /// <summary>
-                /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+                /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>am-bp18934i73vb5****</para>
                 /// </summary>
                 [NameInMap("DBClusterId")]
                 [Validation(Required=false)]
@@ -77,28 +107,44 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("TotalBackupSize")]
+        [Validation(Required=false)]
+        public long? TotalBackupSize { get; set; }
+
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>300</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

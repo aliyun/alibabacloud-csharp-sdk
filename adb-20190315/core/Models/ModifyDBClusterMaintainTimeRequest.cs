@@ -10,18 +10,28 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyDBClusterMaintainTimeRequest : TeaModel {
         /// <summary>
-        /// The ID of cluster.
+        /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBClusters](~~129857~~) operation to query the details of all AnalyticDB for MySQL clusters within a specific region, including cluster IDs.
+        /// <b>Example:</b>
+        /// <para>am-bp111m2cfrdl****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The maintenance window of the cluster. It is in the hh:mmZ-hh:mmZ format.
+        /// <para>The maintenance window of the cluster. Specify the maintenance window in the hh:mmZ-hh:mmZ format.</para>
+        /// <remarks>
+        /// <para> The time range must be 1 hour and start and end at the beginning of an hour.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  The maintenance window lasts only 1 hour. Specify the beginning and end of the time range on the hour.
+        /// <b>Example:</b>
+        /// <para>22:00Z-23:00Z</para>
         /// </summary>
         [NameInMap("MaintainTime")]
         [Validation(Required=false)]

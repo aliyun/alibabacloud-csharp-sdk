@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAccountsResponseBody : TeaModel {
         /// <summary>
-        /// The queried database accounts.
+        /// <para>The queried database accounts.</para>
         /// </summary>
         [NameInMap("AccountList")]
         [Validation(Required=false)]
@@ -21,35 +21,49 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public List<DescribeAccountsResponseBodyAccountListDBAccount> DBAccount { get; set; }
             public class DescribeAccountsResponseBodyAccountListDBAccount : TeaModel {
                 /// <summary>
-                /// The description of the database account.
+                /// <para>The description of the database account.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>C@test</para>
                 /// </summary>
                 [NameInMap("AccountDescription")]
                 [Validation(Required=false)]
                 public string AccountDescription { get; set; }
 
                 /// <summary>
-                /// The name of the database account.
+                /// <para>The name of the database account.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test1</para>
                 /// </summary>
                 [NameInMap("AccountName")]
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// The state of the database account. Valid values:
+                /// <para>The state of the database account. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Creating</b></description></item>
+                /// <item><description><b>Available</b></description></item>
+                /// <item><description><b>Deleting</b></description></item>
+                /// </list>
                 /// 
-                /// *   **Creating**
-                /// *   **Available**
-                /// *   **Deleting**
+                /// <b>Example:</b>
+                /// <para>Available</para>
                 /// </summary>
                 [NameInMap("AccountStatus")]
                 [Validation(Required=false)]
                 public string AccountStatus { get; set; }
 
                 /// <summary>
-                /// The type of the database account. Valid values:
+                /// <para>The type of the database account. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Normal</b>: standard account.</description></item>
+                /// <item><description><b>Super</b>: privileged account.</description></item>
+                /// </list>
                 /// 
-                /// *   **Normal**: standard account.
-                /// *   **Super**: privileged account.
+                /// <b>Example:</b>
+                /// <para>Normal</para>
                 /// </summary>
                 [NameInMap("AccountType")]
                 [Validation(Required=false)]
@@ -60,7 +74,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>64E37E6F-C363-41F3-867A-70EF5DC60EA4</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

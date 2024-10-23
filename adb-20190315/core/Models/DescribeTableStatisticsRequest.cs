@@ -10,27 +10,44 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeTableStatisticsRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query a list of cluster IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBClusters](~~129857~~) operation to query details about all AnalyticDB for MySQL clusters in a specific region, including cluster IDs.
+        /// <b>Example:</b>
+        /// <para>am-****************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The keyword that is used to query information by table name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>you_table_name</para>
+        /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The order in which to sort the retrieved records by field. Specify this value in the JSON format. The value is an ordered array that uses the order of the input array and contains `Field` and `Type`. Example: `[{ "Field":"TableName", "Type":"Asc" }]`.
+        /// <para>The order in which to sort the queried information. Specify this parameter as an ordered JSON array that consists of the <c>Field</c> and <c>Type</c> fields. Example: <c>[{ &quot;Field&quot;:&quot;TableName&quot;, &quot;Type&quot;:&quot;Asc&quot; }]</c>.</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>Field</c> specifies the field that is used to sort the queried information. The following fields are supported: <c>TableName</c>, ColdDataSize, DataSize, PrimaryKeyIndexSize, RowCount, IndexSize, SchemaName, and PartitionCount.</para>
+        /// </description></item>
+        /// <item><description><para><c>Type</c> specifies the sorting order. Valid values (case-insensitive):</para>
+        /// <list type="bullet">
+        /// <item><description><b>Desc</b>: descending order.</description></item>
+        /// <item><description><b>Asc</b>: ascending order.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   In the example, `Field` indicates the field that is used to sort the retrieved records. Set the value of Field to `TableName`.
-        /// 
-        /// *   `Type` indicates the sort type. Valid values (case-insensitive):
-        /// 
-        ///     *   **Desc**: The entries are sorted in descending order.
-        ///     *   **Asc**: The entries are sorted in ascending order.
+        /// <b>Example:</b>
+        /// <para>[ { &quot;Field&quot;:&quot;TableName&quot;, &quot;Type&quot;:&quot;Asc&quot; } ]</para>
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
@@ -45,23 +62,38 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+        /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: 30.
+        /// <para>The number of entries per page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the cluster.
+        /// <para>The region ID of the cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

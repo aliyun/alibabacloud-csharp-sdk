@@ -10,34 +10,51 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ResetAccountPasswordRequest : TeaModel {
         /// <summary>
-        /// The account of the database.
+        /// <para>The name of the database account.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_accout</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The account and password of the database.
+        /// <para>The password of the database account.</para>
+        /// <list type="bullet">
+        /// <item><description>The password can contain uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>Special characters include ! @ # $ % ^ &amp; \* ( ) _ + - =</description></item>
+        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   The password must contain uppercase letters, lowercase letters, digits, and special characters.
-        /// *   Special characters include ! @ # $ % ^ & \* () \_ + - and =
-        /// *   A password must be 8 to 32 characters in length.
+        /// <b>Example:</b>
+        /// <para>Test_accout1</para>
         /// </summary>
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// Normal: standard account
+        /// <ol>
+        /// <item><description>Normal: the standard account.</description></item>
+        /// <item><description>Super: the privileged account.</description></item>
+        /// </ol>
         /// 
-        /// Super: privileged account
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("AccountType")]
         [Validation(Required=false)]
         public string AccountType { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

@@ -10,9 +10,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeSQLPlanRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.
+        /// <b>Example:</b>
+        /// <para>am-****************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -27,9 +32,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The query ID.
+        /// <para>The query ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612277.html">DescribeProcessList</a> operation to query the IDs of queries that are being executed.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeProcessList](~~143382~~) operation to query the IDs of queries that are being executed.
+        /// <b>Example:</b>
+        /// <para>202105271604431720161662490345*******</para>
         /// </summary>
         [NameInMap("ProcessId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyAutoRenewAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4CE6DF97-AEA4-484F-906F-C407EE3770EB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

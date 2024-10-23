@@ -18,9 +18,13 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -39,25 +43,36 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The virtual private cloud (VPC) ID.
+        /// <para>The virtual private cloud (VPC) ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the VPC ID.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeDBClusters](~~129857~~) operation to query the VPC ID.
+        /// <b>Example:</b>
+        /// <para>vpc-bp13h7uzhulpuxvnp****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The vSwitch ID.
+        /// <para>The vSwitch ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-8vbpu1teend1qcosfojlz</para>
         /// </summary>
         [NameInMap("VswId")]
         [Validation(Required=false)]
         public string VswId { get; set; }
 
         /// <summary>
-        /// The zone ID.
+        /// <para>The zone ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeRegions</a> operation to query the most recent zone list.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeRegions](~~129857~~) operation to query the most recent zone list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-h</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

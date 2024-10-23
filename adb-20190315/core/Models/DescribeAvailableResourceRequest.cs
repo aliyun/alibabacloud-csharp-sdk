@@ -10,24 +10,34 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAvailableResourceRequest : TeaModel {
         /// <summary>
-        /// The language of query results. Valid values:
+        /// <para>The language of query results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh-CN</b> (default): Chinese.</description></item>
+        /// <item><description><b>en-US</b>: English.</description></item>
+        /// </list>
         /// 
-        /// *   **zh-CN** (default): Chinese.
-        /// *   **en-US**: English.
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The resources available in the supported modes.
+        /// <para>The resources available in the supported modes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PostPaid</para>
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The version of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+        /// <para>The version of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3.0</para>
         /// </summary>
         [NameInMap("DBClusterVersion")]
         [Validation(Required=false)]
@@ -42,9 +52,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -59,9 +74,13 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The zone ID.
+        /// <para>The zone ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent zone list.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent zone list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-k</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

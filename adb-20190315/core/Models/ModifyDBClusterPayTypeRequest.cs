@@ -10,45 +10,69 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyDBClusterPayTypeRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>am-bp11q28kvl688****</para>
         /// </summary>
         [NameInMap("DbClusterId")]
         [Validation(Required=false)]
         public string DbClusterId { get; set; }
 
         /// <summary>
-        /// The billing method. Valid values:
+        /// <para>The billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
+        /// <item><description><b>Prepaid</b>: subscription.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **Postpaid**: pay-as-you-go.
-        /// *   **Prepaid**: subscription.
+        /// <b>Example:</b>
+        /// <para>Prepaid</para>
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
 
         /// <summary>
-        /// The subscription type of the subscription cluster. Valid values:
+        /// <para>The subscription type of the subscription cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Year</b>: subscription on a yearly basis.</description></item>
+        /// <item><description><b>Month</b>: subscription on a monthly basis.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter must be specified when PayType is set to Prepaid.</para>
+        /// </remarks>
         /// 
-        /// *   **Year**: subscription on a yearly basis.
-        /// *   **Month**: subscription on a monthly basis.
-        /// 
-        /// > This parameter must be specified when PayType is set to Prepaid.
+        /// <b>Example:</b>
+        /// <para>Year</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         /// <summary>
-        /// The subscription duration of the subscription cluster.
+        /// <para>The subscription duration of the subscription cluster.</para>
+        /// <list type="bullet">
+        /// <item><description>Valid values when Period is set to Year: 1, 2, 3, and 5 (integer).</description></item>
+        /// <item><description>Valid values when Period is set to Month: 1 to 11 (integer).</description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter must be specified when PayType is set to Prepaid.</para>
+        /// </description></item>
+        /// <item><description><para>Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   Valid values when Period is set to Year: 1, 2, 3, and 5 (integer).
-        /// *   Valid values when Period is set to Month: 1 to 11 (integer).
-        /// 
-        /// > 
-        /// 
-        /// *   This parameter must be specified when PayType is set to Prepaid.
-        /// 
-        /// *   Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("UsedTime")]
         [Validation(Required=false)]

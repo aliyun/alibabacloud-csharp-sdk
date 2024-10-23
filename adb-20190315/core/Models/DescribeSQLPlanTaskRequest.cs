@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeSQLPlanTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>am-bp1xxxxxxxx47</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -25,7 +29,11 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the task.
+        /// <para>The ID of the task.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>201907241445301720211111570315107****</para>
         /// </summary>
         [NameInMap("ProcessId")]
         [Validation(Required=false)]
@@ -40,7 +48,11 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The stage of the task.
+        /// <para>The stage of the task.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1785135913****</para>
         /// </summary>
         [NameInMap("StageId")]
         [Validation(Required=false)]

@@ -10,42 +10,57 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeTableAccessCountResponseBody : TeaModel {
         /// <summary>
-        /// Details about the table usage.
+        /// <para>Details about the table usage.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeTableAccessCountResponseBodyItems> Items { get; set; }
         public class DescribeTableAccessCountResponseBodyItems : TeaModel {
             /// <summary>
-            /// The number of accesses to the table.
+            /// <para>The number of accesses to the table.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6</para>
             /// </summary>
             [NameInMap("AccessCount")]
             [Validation(Required=false)]
             public string AccessCount { get; set; }
 
             /// <summary>
-            /// The ID of the cluster to which the table belongs.
+            /// <para>The ID of the cluster to which the table belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>am-bp1r053byu48p****</para>
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The date when the table was used.
+            /// <para>The date when the table was used.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-08-30</para>
             /// </summary>
             [NameInMap("ReportDate")]
             [Validation(Required=false)]
             public string ReportDate { get; set; }
 
             /// <summary>
-            /// The name of the table.
+            /// <para>The name of the table.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CUSTOMER</para>
             /// </summary>
             [NameInMap("TableName")]
             [Validation(Required=false)]
             public string TableName { get; set; }
 
             /// <summary>
-            /// The database to which the table belongs.
+            /// <para>The database to which the table belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tpch</para>
             /// </summary>
             [NameInMap("TableSchema")]
             [Validation(Required=false)]
@@ -54,28 +69,40 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned on the current page.
+        /// <para>The number of entries returned on the current page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C242707A-01D1-54DA-A5F6-671557******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries.
+        /// <para>The total number of entries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeMaintenanceActionRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to return the information about pending or historical O\&M events. Valid values:
+        /// <para>Specifies whether to return the information about pending or historical O\&amp;M events. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: returns the information about pending O\&amp;M event.</description></item>
+        /// <item><description><b>1</b>: returns the information about historical O\&amp;M event.</description></item>
+        /// </list>
+        /// <para>If you do not specify this parameter, the information about pending O\&amp;M event are returned.</para>
         /// 
-        /// *   **0**: returns the information about pending O\&M event.
-        /// *   **1**: returns the information about historical O\&M event.
-        /// 
-        /// If you do not specify this parameter, the information about pending O\&M event are returned.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("IsHistory")]
         [Validation(Required=false)]
@@ -30,33 +33,49 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Pages start from page 1. Default value: **1**.
+        /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: **30**, **50**, and **100**. Default value: 30.
+        /// <para>The number of entries per page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>. Default value: 30.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID. Valid values:
+        /// <para>The region ID. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>The ID of the region where the O\&amp;M event occurs. Example: <c>cn-hangzhou</c>. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</description></item>
+        /// <item><description>You can also set Region to <c>all</c> to query the O\&amp;M events in all regions. If you set <c>Region</c> to <c>all</c>, you must set <c>TaskType</c> to <c>all</c>.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   The ID of the region where the O\&M event occurs. Example: `cn-hangzhou`. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
-        /// *   You can also set Region to `all` to query the O\&M events in all regions. If you set `Region` to `all`, you must set `TaskType` to `all`.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// The ID of the region where the O\&M event occurs.
+        /// <para>The ID of the region where the O\&amp;M event occurs.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -71,10 +90,15 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the O\&M event. Valid values:
+        /// <para>The type of the O\&amp;M event. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>rds_apsaradb_upgrade</b>: database software upgrades.</description></item>
+        /// <item><description><b>all</b>: all the O\&amp;M events in all regions within the current account. If you set <c>Region</c> to <c>all</c>, you must set <c>TaskType</c> to <c>all</c>.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **rds_apsaradb_upgrade**: database software upgrades.
-        /// *   **all**: all the O\&M events in all regions within the current account. If you set `Region` to `all`, you must set `TaskType` to `all`.
+        /// <b>Example:</b>
+        /// <para>rds_apsaradb_upgrade</para>
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

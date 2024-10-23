@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class KillProcessRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>am-bp1xxxxxxxx47</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -25,7 +29,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The unique ID of the process. You can call the [DescribeProcessList](~~190092~~) operation to obtain the ID.
+        /// <para>The unique ID of the query. You can call the <a href="https://help.aliyun.com/document_detail/190092.html">DescribeProcessList</a> operation to obtain the unique ID of a query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>202011191048151921681492420315100****</para>
         /// </summary>
         [NameInMap("ProcessId")]
         [Validation(Required=false)]

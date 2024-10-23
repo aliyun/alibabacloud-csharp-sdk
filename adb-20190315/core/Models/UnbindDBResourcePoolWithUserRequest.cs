@@ -10,7 +10,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class UnbindDBResourcePoolWithUserRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>am-bpxxxxxxxx47</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -25,14 +32,22 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The name of the resource pool. You cannot unbind users from the default resource pool named USER_DEFAULT.
+        /// <para>The name of the resource group.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("PoolName")]
         [Validation(Required=false)]
         public string PoolName { get; set; }
 
         /// <summary>
-        /// The user bound to the resource pool.
+        /// <para>The database account with which the resource group is associated.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testb</para>
         /// </summary>
         [NameInMap("PoolUser")]
         [Validation(Required=false)]

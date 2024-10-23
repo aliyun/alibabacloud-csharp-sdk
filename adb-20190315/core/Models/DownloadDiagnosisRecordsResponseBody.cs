@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DownloadDiagnosisRecordsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the download task.
+        /// <para>The ID of the download task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>68</para>
         /// </summary>
         [NameInMap("DownloadId")]
         [Validation(Required=false)]
         public int? DownloadId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D4ACF4E0-2952-3A87-9A2C-474058******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

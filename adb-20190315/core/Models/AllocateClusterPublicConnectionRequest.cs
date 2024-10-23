@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,20 +10,27 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class AllocateClusterPublicConnectionRequest : TeaModel {
         /// <summary>
-        /// The prefix of the public endpoint.
+        /// <para>The prefix of the public endpoint.</para>
+        /// <list type="bullet">
+        /// <item><description>The prefix must contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.</description></item>
+        /// <item><description>The prefix can be up to 30 characters in length.</description></item>
+        /// <item><description>By default, the cluster name is used as the prefix of the public endpoint.</description></item>
+        /// </list>
         /// 
-        /// *   The prefix must contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.
-        /// *   The prefix can be up to 30 characters in length.
-        /// *   By default, the cluster name is used as the prefix of the public endpoint.
+        /// <b>Example:</b>
+        /// <para>am-bp278jg9****.ads.aliyuncs.com</para>
         /// </summary>
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
+        /// <b>Example:</b>
+        /// <para>am-bp278jg9****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

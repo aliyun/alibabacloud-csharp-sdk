@@ -10,11 +10,58 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeTablePartitionDiagnoseRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>am-bp1xxxxxxxx47</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
+
+        /// <summary>
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
+        /// </summary>
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
+        /// <summary>
+        /// <para>The order by which to sort query results. Specify the parameter value in the JSON string format. Example: <c>[{&quot;Field&quot;:&quot;TotalSize&quot;,&quot;Type&quot;:&quot;Desc&quot;}]</c>.</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>Field</c> specifies the field by which to sort the query results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>SchemaName</c>: the name of the database to which the table belongs.</description></item>
+        /// <item><description><c>TableName</c>: the name of the table.</description></item>
+        /// <item><description><c>TotalSize</c>: the total data size of the table.</description></item>
+        /// <item><description><c>SpaceRatio</c>: the storage percentage of the table.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><c>Type</c> specifies the sorting order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>Asc</c>: ascending order.</description></item>
+        /// <item><description><c>Desc</c>: descending order.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the query results are sorted by the TotalSize field in descending order.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{\&quot;Field\&quot;:\&quot;TotalSize\&quot;,\&quot;Type\&quot;:\&quot;Desc\&quot;}]</para>
+        /// </summary>
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -25,25 +72,35 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1. Default value: 1.
+        /// <para>The number of the page to return. Pages start from page 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 30. Valid values:
+        /// <para>The number of entries to return on each page. Default value: 30. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>30</description></item>
+        /// <item><description>50</description></item>
+        /// <item><description>100</description></item>
+        /// </list>
         /// 
-        /// *   30
-        /// *   50
-        /// *   100
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

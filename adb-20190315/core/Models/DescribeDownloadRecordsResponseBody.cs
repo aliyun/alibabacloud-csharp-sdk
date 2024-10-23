@@ -10,46 +10,59 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeDownloadRecordsResponseBody : TeaModel {
         /// <summary>
-        /// Details about the download tasks.
+        /// <para>Details about the download tasks.</para>
         /// </summary>
         [NameInMap("Records")]
         [Validation(Required=false)]
         public List<DescribeDownloadRecordsResponseBodyRecords> Records { get; set; }
         public class DescribeDownloadRecordsResponseBodyRecords : TeaModel {
             /// <summary>
-            /// The ID of the download task.
+            /// <para>The ID of the download task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>69</para>
             /// </summary>
             [NameInMap("DownloadId")]
             [Validation(Required=false)]
             public long? DownloadId { get; set; }
 
             /// <summary>
-            /// The error message returned when the download task has failed.
+            /// <para>The error message returned when the download task has failed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The query result is empty.</para>
             /// </summary>
             [NameInMap("ExceptionMsg")]
             [Validation(Required=false)]
             public string ExceptionMsg { get; set; }
 
             /// <summary>
-            /// The name of the downloaded file.
+            /// <para>The name of the downloaded file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20210806094635-20210806095135</para>
             /// </summary>
             [NameInMap("FileName")]
             [Validation(Required=false)]
             public string FileName { get; set; }
 
             /// <summary>
-            /// The status of the download task.
+            /// <para>The status of the download task.</para>
+            /// <list type="bullet">
+            /// <item><description><b>running</b>: The download task is currently in progress.</description></item>
+            /// <item><description><b>finished</b>: The download task is complete.</description></item>
+            /// <item><description><b>failed</b>: The download task has failed.</description></item>
+            /// </list>
             /// 
-            /// *   **running**: The download task is currently in progress.
-            /// *   **finished**: The download task is complete.
-            /// *   **failed**: The download task has failed.
+            /// <b>Example:</b>
+            /// <para>finished</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The download URL of the file.
+            /// <para>The download URL of the file.</para>
             /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]
@@ -58,7 +71,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>987F51BE-C4CB-332A-B159-63CE87******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

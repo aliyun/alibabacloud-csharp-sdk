@@ -10,63 +10,87 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeDBResourcePoolResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>am-bp11q28kvl688****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Details of the resource group.
+        /// <para>Details of the resource group.</para>
         /// </summary>
         [NameInMap("PoolsInfo")]
         [Validation(Required=false)]
         public List<DescribeDBResourcePoolResponseBodyPoolsInfo> PoolsInfo { get; set; }
         public class DescribeDBResourcePoolResponseBodyPoolsInfo : TeaModel {
             /// <summary>
-            /// The time when the resource group was created.
+            /// <para>The time when the resource group was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-03-09 16:57:35.241</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The number of nodes.
+            /// <para>The number of nodes.</para>
+            /// <remarks>
+            /// <para> Each node consumes 16 cores and 64 GB memory.</para>
+            /// </remarks>
             /// 
-            /// >  Each node consumes 16 cores and 64 GB memory.
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("NodeNum")]
             [Validation(Required=false)]
             public int? NodeNum { get; set; }
 
             /// <summary>
-            /// The name of the resource group.
+            /// <para>The name of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>USER_DEFAULT</para>
             /// </summary>
             [NameInMap("PoolName")]
             [Validation(Required=false)]
             public string PoolName { get; set; }
 
             /// <summary>
-            /// The database accounts that are associated with the resource group.
+            /// <para>The database accounts that are associated with the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testb,testc</para>
             /// </summary>
             [NameInMap("PoolUsers")]
             [Validation(Required=false)]
             public string PoolUsers { get; set; }
 
             /// <summary>
-            /// The mode in which SQL statements are executed.
+            /// <para>The mode in which SQL statements are executed.</para>
+            /// <list type="bullet">
+            /// <item><description><b>batch</b></description></item>
+            /// <item><description><b>interactive</b></description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/189502.html">Query execution modes</a>.</para>
+            /// </remarks>
             /// 
-            /// *   **batch**
-            /// *   **interactive**
-            /// 
-            /// >  For more information, see [Query execution modes](~~189502~~).
+            /// <b>Example:</b>
+            /// <para>default_type</para>
             /// </summary>
             [NameInMap("QueryType")]
             [Validation(Required=false)]
             public string QueryType { get; set; }
 
             /// <summary>
-            /// The time when the resource group was updated.
+            /// <para>The time when the resource group was updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-03-09 16:57:35.241</para>
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -75,7 +99,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,13 +10,18 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// Th language of the `LocalName` response parameter. Valid values:
+        /// <para>Th language of the <c>LocalName</c> response parameter. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh-CN</b>: Chinese.</description></item>
+        /// <item><description><b>en-US</b>: English.</description></item>
+        /// <item><description><b>ja</b>: Japanese.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, the Chinese language is used.</para>
+        /// </remarks>
         /// 
-        /// *   **zh-CN**: Chinese.
-        /// *   **en-US**: English.
-        /// *   **ja**: Japanese.
-        /// 
-        /// > If you do not specify this parameter, the Chinese language is used.
+        /// <b>Example:</b>
+        /// <para>en-US</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -29,6 +34,19 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        /// <summary>
+        /// <para>The region ID of the cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shenzhen</para>
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

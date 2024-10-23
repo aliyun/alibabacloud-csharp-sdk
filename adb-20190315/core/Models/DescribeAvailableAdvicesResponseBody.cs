@@ -10,77 +10,126 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAvailableAdvicesResponseBody : TeaModel {
         /// <summary>
-        /// The queried suggestions.
+        /// <para>The queried suggestions.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeAvailableAdvicesResponseBodyItems> Items { get; set; }
         public class DescribeAvailableAdvicesResponseBodyItems : TeaModel {
             /// <summary>
-            /// The time when the suggestion was generated. The time follows the ISO 8601 standard in the yyyyMMdd format. The time is displayed in UTC.
+            /// <para>The time when the suggestion was generated. The time follows the ISO 8601 standard in the yyyyMMdd format. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20221124</para>
             /// </summary>
             [NameInMap("AdviceDate")]
             [Validation(Required=false)]
             public string AdviceDate { get; set; }
 
             /// <summary>
-            /// The suggestion ID.
+            /// <para>The suggestion ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dcd04135-0925-4aed-a5a7-e7d92cb1****</para>
             /// </summary>
             [NameInMap("AdviceId")]
             [Validation(Required=false)]
             public string AdviceId { get; set; }
 
             /// <summary>
-            /// The type of the suggestion. Valid values:
+            /// <para>The type of the suggestion. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Index</b>: index optimization.</description></item>
+            /// <item><description><b>Tiering</b>: hot and cold data optimization.</description></item>
+            /// </list>
             /// 
-            /// *   **Index**: index optimization.
-            /// *   **Tiering**: hot and cold data optimization.
+            /// <b>Example:</b>
+            /// <para>Index</para>
             /// </summary>
             [NameInMap("AdviceType")]
             [Validation(Required=false)]
             public string AdviceType { get; set; }
 
             /// <summary>
-            /// The benefit of the suggestion.
+            /// <para>The benefit of the suggestion.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.4 GB of storage saved</para>
             /// </summary>
             [NameInMap("Benefit")]
             [Validation(Required=false)]
             public string Benefit { get; set; }
 
             /// <summary>
-            /// The page number. Pages start from 1. Default value: 1.
+            /// <para>The page number. Pages start from 1. Default value: 1.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries per page. Valid values:
+            /// <para>The number of entries per page. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>30</b> (default)</description></item>
+            /// <item><description><b>50</b></description></item>
+            /// <item><description><b>100</b></description></item>
+            /// </list>
             /// 
-            /// *   **30** (default)
-            /// *   **50**
-            /// *   **100**
+            /// <b>Example:</b>
+            /// <para>30</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// The reason why the suggestion was generated.
+            /// <para>The reason why the suggestion was generated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Unused for 15 days, historical usage less than 1%</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
 
             /// <summary>
-            /// The SQL statement that is used to apply the suggestion.
+            /// <para>The SQL statement that is used to apply the suggestion.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>alter table <c>schema1</c>.<c>table1</c> drop key col1_1_idx</para>
             /// </summary>
             [NameInMap("SQL")]
             [Validation(Required=false)]
             public string SQL { get; set; }
 
             /// <summary>
-            /// The total number of entries returned. Minimum value: 0. Default value: 0.
+            /// <para>The name of the schema.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>adb_demo</para>
+            /// </summary>
+            [NameInMap("SchemaName")]
+            [Validation(Required=false)]
+            public string SchemaName { get; set; }
+
+            /// <summary>
+            /// <para>The name of the table.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_table</para>
+            /// </summary>
+            [NameInMap("TableName")]
+            [Validation(Required=false)]
+            public string TableName { get; set; }
+
+            /// <summary>
+            /// <para>The total number of entries returned. Minimum value: 0. Default value: 0.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -89,32 +138,52 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.
+        /// <para>The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page. Default value: 30. Valid values:
+        /// <para>The number of entries returned per page. Default value: 30. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>30</b></description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
+        /// </list>
         /// 
-        /// *   **30**
-        /// *   **50**
-        /// *   **100**
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>96A55627-28E9-5E47-B8F6-D786BE551349</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned. The value must be an integer that is greater than or equal to 0. Default value: 0.
+        /// <para>The name of the table in the DatabaseName.TableName format.</para>
+        /// </summary>
+        [NameInMap("SchemaTableNames")]
+        [Validation(Required=false)]
+        public List<string> SchemaTableNames { get; set; }
+
+        /// <summary>
+        /// <para>The total number of entries returned. The value must be an integer that is greater than or equal to 0. Default value: 0.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

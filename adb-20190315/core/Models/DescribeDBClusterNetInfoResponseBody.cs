@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeDBClusterNetInfoResponseBody : TeaModel {
         /// <summary>
-        /// The network type of the cluster.
+        /// <para>The network type of the cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>VPC</para>
         /// </summary>
         [NameInMap("ClusterNetworkType")]
         [Validation(Required=false)]
         public string ClusterNetworkType { get; set; }
 
         /// <summary>
-        /// The network information of the cluster.
+        /// <para>The queried network information about the cluster.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -28,56 +31,80 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public List<DescribeDBClusterNetInfoResponseBodyItemsAddress> Address { get; set; }
             public class DescribeDBClusterNetInfoResponseBodyItemsAddress : TeaModel {
                 /// <summary>
-                /// The endpoint of the cluster.
+                /// <para>The endpoint of the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>am-bpxxxxxxxx.ads.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
 
                 /// <summary>
-                /// The prefix of the cluster endpoint.
+                /// <para>The prefix of the cluster endpoint.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>am-bpxxxxxxxx89k51380</para>
                 /// </summary>
                 [NameInMap("ConnectionStringPrefix")]
                 [Validation(Required=false)]
                 public string ConnectionStringPrefix { get; set; }
 
                 /// <summary>
-                /// The IP address.
+                /// <para>The IP address.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.168.x.x</para>
                 /// </summary>
                 [NameInMap("IPAddress")]
                 [Validation(Required=false)]
                 public string IPAddress { get; set; }
 
                 /// <summary>
-                /// The network type of the endpoint. Valid values:
+                /// <para>The network type of the cluster. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Public</b>: public endpoint.</description></item>
+                /// <item><description><b>VPC</b>: Virtual Private Cloud (VPC) endpoint.</description></item>
+                /// </list>
                 /// 
-                /// *   **Public**: public endpoint
-                /// *   **VPC**: Virtual Private Cloud (VPC) endpoint
+                /// <b>Example:</b>
+                /// <para>VPC</para>
                 /// </summary>
                 [NameInMap("NetType")]
                 [Validation(Required=false)]
                 public string NetType { get; set; }
 
                 /// <summary>
-                /// The port number that is used to connect to the cluster.
+                /// <para>The port number that is used to connect to the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3306</para>
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC.
+                /// <para>The VPC ID.</para>
+                /// <remarks>
+                /// <para> If NetType is set to Public, an empty string is returned for this parameter.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is empty when Public is returned for NetType.
+                /// <b>Example:</b>
+                /// <para>vpc-xxxxxxxxx</para>
                 /// </summary>
                 [NameInMap("VPCId")]
                 [Validation(Required=false)]
                 public string VPCId { get; set; }
 
                 /// <summary>
-                /// The ID of the vSwitch.
+                /// <para>The vSwitch ID.</para>
+                /// <remarks>
+                /// <para> If NetType is set to Public, an empty string is returned for this parameter.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is empty when Public is returned for NetType.
+                /// <b>Example:</b>
+                /// <para>vsw-xxxxxx</para>
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
@@ -88,7 +115,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

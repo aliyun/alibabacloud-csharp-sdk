@@ -10,17 +10,26 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyDBClusterDescriptionRequest : TeaModel {
         /// <summary>
-        /// The description of the cluster.
+        /// <para>The description of the cluster.</para>
+        /// <list type="bullet">
+        /// <item><description>The description cannot start with <c>http://</c> or <c>https</c>.</description></item>
+        /// <item><description>The description must be 2 to 256 characters in length.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   The description cannot start with `http://` or `https`.
-        /// *   The description must be 2 to 256 characters in length.
+        /// <b>Example:</b>
+        /// <para>adb_test</para>
         /// </summary>
         [NameInMap("DBClusterDescription")]
         [Validation(Required=false)]
         public string DBClusterDescription { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>am-bp11q28kvl688****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

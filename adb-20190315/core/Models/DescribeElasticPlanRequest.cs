@@ -10,31 +10,45 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeElasticPlanRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
+        /// <b>Example:</b>
+        /// <para>am-bp278jg9****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether the scaling plan takes effect. Valid values:
+        /// <para>Specifies whether the scaling plan takes effect. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b> (default)</description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true** (default)
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ElasticPlanEnable")]
         [Validation(Required=false)]
         public bool? ElasticPlanEnable { get; set; }
 
         /// <summary>
-        /// The name of the scaling plan.
+        /// <para>The name of the scaling plan.</para>
+        /// <list type="bullet">
+        /// <item><description>The name must be 2 to 30 characters in length.</description></item>
+        /// <item><description>The name can contain letters, digits, and underscores (_).</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, the information about all scaling plans for the specified cluster is returned.</para>
+        /// </remarks>
         /// 
-        /// *   The name must be 2 to 30 characters in length.
-        /// *   The name can contain letters, digits, and underscores (\_).
-        /// 
-        /// > If you do not specify this parameter, the information about all scaling plans for the specified cluster is returned.
+        /// <b>Example:</b>
+        /// <para>realtime</para>
         /// </summary>
         [NameInMap("ElasticPlanName")]
         [Validation(Required=false)]
@@ -57,9 +71,13 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The name of the resource group.
+        /// <para>The name of the resource group.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/466685.html">DescribeDBResourceGroup</a> operation to query the resource group name.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeDBResourceGroup](~~466685~~) operation to query the resource group name.
+        /// <b>Example:</b>
+        /// <para>USER_DEFAULT</para>
         /// </summary>
         [NameInMap("ResourcePoolName")]
         [Validation(Required=false)]

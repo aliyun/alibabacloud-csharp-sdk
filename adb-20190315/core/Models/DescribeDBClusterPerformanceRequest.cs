@@ -10,65 +10,93 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeDBClusterPerformanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL cluster.
+        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.
+        /// <b>Example:</b>
+        /// <para>am-************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The end time of the query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.
+        /// <para>The end time of the query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para>The end time must be later than the start time. The maximum time range that can be specified is two days.</para>
+        /// </remarks>
         /// 
-        /// > The end time must be later than the start time. The maximum time range that can be specified is two days.
+        /// <b>Example:</b>
+        /// <para>2021-05-03T15:01Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The performance metrics to be queried. Separate multiple values with commas (,). Valid values:
+        /// <para>The performance metrics to be queried. Separate multiple values with commas (,). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>CPU</para>
+        /// <list type="bullet">
+        /// <item><description><b>AnalyticDB_CPU</b>: the average CPU utilization.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>Connections</para>
+        /// <list type="bullet">
+        /// <item><description><b>AnalyticDB_Connections</b>: the number of connections of the cluster.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>Writes</para>
+        /// <list type="bullet">
+        /// <item><description><b>AnalyticDB_TPS</b>: the write transactions per second (TPS).</description></item>
+        /// <item><description><b>AnalyticDB_InsertRT</b>: the write response time.</description></item>
+        /// <item><description><b>AnalyticDB_InsertBytes</b>: the write throughput.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>Updates</para>
+        /// <list type="bullet">
+        /// <item><description><b>AnalyticDB_UpdateRT</b>: the update response time.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>Deletes</para>
+        /// <list type="bullet">
+        /// <item><description><b>AnalyticDB_DeleteRT</b>: the delete response time.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>Queries</para>
+        /// <list type="bullet">
+        /// <item><description><b>AnalyticDB_QPS</b>: the queries per second (QPS).</description></item>
+        /// <item><description><b>AnalyticDB_QueryRT</b>: the query response time.</description></item>
+        /// <item><description><b>AnalyticDB_QueryWaitTime</b>: the query wait time.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>Disks</para>
+        /// <list type="bullet">
+        /// <item><description><b>AnalyticDB_IO</b>: the disk I/O throughput.</description></item>
+        /// <item><description><b>AnalyticDB_IO_UTIL</b>: the disk I/O usage.</description></item>
+        /// <item><description><b>AnalyticDB_IO_WAIT</b>: the disk I/O wait time.</description></item>
+        /// <item><description><b>AnalyticDB_IOPS</b>: the disk IOPS.</description></item>
+        /// <item><description><b>AnalyticDB_DiskUsage</b>: the disk space that is used.</description></item>
+        /// <item><description><b>AnalyticDB_HotDataDiskUsage</b>: the disk space that is used by hot data.</description></item>
+        /// <item><description><b>AnalyticDB_ColdDataDiskUsage</b>: the disk space that is used by cold data.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>Other</para>
+        /// <list type="bullet">
+        /// <item><description><b>AnalyticDB_BuildTaskCount</b>: the number of BUILD jobs.</description></item>
+        /// <item><description><b>AnalyticDB_ComputeMemoryUsedRatio</b>: the compute memory usage.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you leave this parameter empty, the values of all the preceding performance metrics are returned.</para>
+        /// </remarks>
         /// 
-        /// *   CPU
-        /// 
-        ///     *   **AnalyticDB_CPU**: the average CPU utilization.
-        /// 
-        /// *   Connections
-        /// 
-        ///     *   **AnalyticDB_Connections**: the number of database connections.
-        /// 
-        /// *   Writes
-        /// 
-        ///     *   **AnalyticDB_TPS**: the write transactions per second (TPS).
-        ///     *   **AnalyticDB_InsertRT**: the write response time.
-        ///     *   **AnalyticDB_InsertBytes**: the write throughput.
-        /// 
-        /// *   Updates
-        /// 
-        ///     *   **AnalyticDB_UpdateRT**: the update response time.
-        /// 
-        /// *   Deletion
-        /// 
-        ///     *   **AnalyticDB_DeleteRT**: the delete response time.
-        /// 
-        /// *   Queries
-        /// 
-        ///     *   **AnalyticDB_QPS**: the queries per second (QPS).
-        ///     *   **AnalyticDB_QueryRT**: the query response time.
-        ///     *   **AnalyticDB_QueryWaitTime**: the query wait time.
-        /// 
-        /// *   Disks
-        /// 
-        ///     *   **AnalyticDB_IO**: the disk I/O throughput.
-        ///     *   **AnalyticDB_IO_UTIL**: the I/O utilization.
-        ///     *   **AnalyticDB_IO_WAIT**: the I/O wait time.
-        ///     *   **AnalyticDB_IOPS**: the disk input/output operations per second (IOPS).
-        ///     *   **AnalyticDB_DiskUsage**: the disk space that is used.
-        ///     *   **AnalyticDB_HotDataDiskUsage**: the disk space that is used by hot data.
-        ///     *   **AnalyticDB_ColdDataDiskUsage**: the disk space that is used by cold data.
-        /// 
-        /// >  If you leave this parameter empty, the values of all the preceding performance metrics are returned.
+        /// <b>Example:</b>
+        /// <para>AnalyticDB_CPU</para>
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
@@ -83,7 +111,11 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the cluster.
+        /// <para>The region ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -98,14 +130,20 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The name of the resource group.
+        /// <para>The name of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("ResourcePools")]
         [Validation(Required=false)]
         public string ResourcePools { get; set; }
 
         /// <summary>
-        /// The start time of the query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.
+        /// <para>The start time of the query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-05-03T15:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

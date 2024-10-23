@@ -10,28 +10,41 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAccountsRequest : TeaModel {
         /// <summary>
-        /// The name of the database account.
+        /// <para>The name of the database account.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the information about all database accounts is returned.</para>
+        /// </remarks>
         /// 
-        /// >  If you do not specify this parameter, the information about all database accounts is returned.
+        /// <b>Example:</b>
+        /// <para>test_accout</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The type of the database account. If you do not specify this parameter, the information about all account types is returned. Valid values:
+        /// <para>The type of the database account. If you do not specify this parameter, the information about all account types is returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Normal</b>: standard account.</description></item>
+        /// <item><description><b>Super</b>: privileged account.</description></item>
+        /// </list>
         /// 
-        /// *   **Normal**: standard account.
-        /// *   **Super**: privileged account.
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("AccountType")]
         [Validation(Required=false)]
         public string AccountType { get; set; }
 
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

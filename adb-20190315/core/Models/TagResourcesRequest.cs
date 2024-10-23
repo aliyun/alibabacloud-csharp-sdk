@@ -18,20 +18,30 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the cluster. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+        /// <para>The region ID of the cluster. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the cluster to which to add a tag. If you want to add a tag to multiple clusters, click **Add** and enter the cluster IDs.
+        /// <para>The ID of the cluster to which to add a tag. If you want to add a tag to multiple clusters, click <b>Add</b> and enter the cluster IDs.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>You can add tags to up to 50 clusters at a time.</para>
+        /// </description></item>
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > 
-        /// 
-        /// *   You can add tags to up to 50 clusters at a time.
-        /// 
-        /// *   You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.
+        /// <b>Example:</b>
+        /// <para>am-bp1xxx.1</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -46,32 +56,45 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the cluster. Set the value to **ALIYUN::ADB::CLUSTER**.
+        /// <para>The type of the cluster. Set the value to <b>ALIYUN::ADB::CLUSTER</b>.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ALIYUN::ADB::CLUSTER</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags to add to the cluster.
+        /// <para>The tags to add to the cluster.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag. If you want to add multiple tags to a single cluster at a time, click **Add** and enter tag keys and values.
+            /// <para>The key of the tag. If you want to add multiple tags to a single cluster at a time, click <b>Add</b> and enter tag keys and values.</para>
+            /// <remarks>
+            /// <para>You can add up to 20 tags at a time.</para>
+            /// </remarks>
             /// 
-            /// > You can add up to 20 tags at a time.
+            /// <b>Example:</b>
+            /// <para>testkey1</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag. If you want to add multiple tags to a single cluster at a time, click **Add** and enter tag keys and values.
+            /// <para>The value of the tag. If you want to add multiple tags to a single cluster at a time, click <b>Add</b> and enter tag keys and values.</para>
+            /// <remarks>
+            /// <para>You can add up to 20 tags at a time.</para>
+            /// </remarks>
             /// 
-            /// > You can add up to 20 tags at a time.
+            /// <b>Example:</b>
+            /// <para>testvalue1</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

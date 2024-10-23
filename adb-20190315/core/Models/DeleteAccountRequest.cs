@@ -10,22 +10,35 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DeleteAccountRequest : TeaModel {
         /// <summary>
-        /// The account of the database.
+        /// <para>The account of the database.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_accout</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// *   Normal: standard account
-        /// *   Super: privileged account
+        /// <list type="bullet">
+        /// <item><description>Normal: standard account</description></item>
+        /// <item><description>Super: privileged account</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("AccountType")]
         [Validation(Required=false)]
         public string AccountType { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

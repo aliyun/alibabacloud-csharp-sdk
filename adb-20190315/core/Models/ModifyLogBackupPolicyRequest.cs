@@ -10,26 +10,39 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyLogBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>am-bp1xxxxxxxx47</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable log backup. Valid values:
+        /// <para>Specifies whether to enable log backup. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enable</b></description></item>
+        /// <item><description><b>Disable</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **Enable**
-        /// *   **Disable**
+        /// <b>Example:</b>
+        /// <para>Enable</para>
         /// </summary>
         [NameInMap("EnableBackupLog")]
         [Validation(Required=false)]
         public string EnableBackupLog { get; set; }
 
         /// <summary>
-        /// The number of days for which to retain backup files. Valid values: 7 to 730.
+        /// <para>The number of days for which to retain backup files. Valid values: 7 to 730.</para>
+        /// <remarks>
+        /// <para>The default value is 7.</para>
+        /// </remarks>
         /// 
-        /// > The default value is 7.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("LogBackupRetentionPeriod")]
         [Validation(Required=false)]
@@ -44,7 +57,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The resource group ID.
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfm4f7oger****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
-    public class DescribeSlowLogTrendResponse : TeaModel {
+    public class DescribeExcessivePrimaryKeysResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public DescribeSlowLogTrendResponseBody Body { get; set; }
+        public DescribeExcessivePrimaryKeysResponseBody Body { get; set; }
 
     }
 

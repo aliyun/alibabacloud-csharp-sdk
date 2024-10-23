@@ -10,21 +10,31 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyAutoRenewAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
+        /// <b>Example:</b>
+        /// <para>am-bp1u389j9zjh5****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The renewal duration. Default value: **1**.
+        /// <para>The renewal duration. Default value: <b>1</b>.</para>
+        /// <list type="bullet">
+        /// <item><description>Valid values when PeriodUnit is set to <b>Month</b>: 1 to 11. Data type: INTEGER.</description></item>
+        /// <item><description>Valid values when PeriodUnit is set to <b>Year</b>: 1, 2, 3, and 5. Data type: INTEGER.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</para>
+        /// </remarks>
         /// 
-        /// *   Valid values when PeriodUnit is set to **Month**: 1 to 11. Data type: INTEGER.
-        /// *   Valid values when PeriodUnit is set to **Year**: 1, 2, 3, and 5. Data type: INTEGER.
-        /// 
-        /// > Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
@@ -39,30 +49,43 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The unit of the renewal period. Default value: **Month**. Valid values:
+        /// <para>The unit of the renewal period. Default value: <b>Month</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Year</b></description></item>
+        /// <item><description><b>Month</b></description></item>
+        /// </list>
         /// 
-        /// *   **Year**
-        /// *   **Month**
+        /// <b>Example:</b>
+        /// <para>Year</para>
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The region ID of the cluster.
+        /// <para>The region ID of the cluster.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The renewal status of the cluster. Valid values:
+        /// <para>The renewal status of the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>AutoRenewal</b>: The cluster is automatically renewed.</description></item>
+        /// <item><description><b>Normal</b>: The cluster is manually renewed.</description></item>
+        /// <item><description><b>NotRenewal</b>: The cluster is not renewed.</description></item>
+        /// </list>
         /// 
-        /// *   **AutoRenewal**: The cluster is automatically renewed.
-        /// *   **Normal**: The cluster is manually renewed.
-        /// *   **NotRenewal**: The cluster is not renewed.
+        /// <b>Example:</b>
+        /// <para>AutoRenewal</para>
         /// </summary>
         [NameInMap("RenewalStatus")]
         [Validation(Required=false)]

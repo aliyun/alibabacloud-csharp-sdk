@@ -10,106 +10,162 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class CreateElasticPlanRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
+        /// <b>Example:</b>
+        /// <para>am-bp1d8lbdj22rx****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether the scaling plan takes effect. Valid values:
+        /// <para>Specifies whether the scaling plan takes effect. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b> (default)</description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true** (default)
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ElasticPlanEnable")]
         [Validation(Required=false)]
         public bool? ElasticPlanEnable { get; set; }
 
         /// <summary>
-        /// The end date of the scaling plan. Specify the date in the yyyy-MM-dd format.
+        /// <para>The end date of the scaling plan. Specify the date in the yyyy-MM-dd format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-12-09</para>
         /// </summary>
         [NameInMap("ElasticPlanEndDay")]
         [Validation(Required=false)]
         public string ElasticPlanEndDay { get; set; }
 
+        /// <summary>
+        /// <para>The dates of the month when you want to execute the scaling plan. A number specifies a date of the month. Separate multiple values with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1,15,25</para>
+        /// </summary>
         [NameInMap("ElasticPlanMonthlyRepeat")]
         [Validation(Required=false)]
         public string ElasticPlanMonthlyRepeat { get; set; }
 
         /// <summary>
-        /// The name of the scaling plan.
+        /// <para>The name of the scaling plan.</para>
+        /// <list type="bullet">
+        /// <item><description>The name must be 2 to 30 characters in length.</description></item>
+        /// <item><description>The name can contain letters, digits, and underscores (_).</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   The name must be 2 to 30 characters in length.
-        /// *   The name can contain letters, digits, and underscores (\_).
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("ElasticPlanName")]
         [Validation(Required=false)]
         public string ElasticPlanName { get; set; }
 
         /// <summary>
-        /// The number of nodes that are involved in the scaling plan.
+        /// <para>The number of nodes that are involved in the scaling plan.</para>
+        /// <list type="bullet">
+        /// <item><description>If ElasticPlanType is set to <b>worker</b>, you can set this parameter to 0 or leave this parameter empty.</description></item>
+        /// <item><description>If ElasticPlanType is set to <b>executorcombineworker</b> or <b>executor</b>, you must set this parameter to a value that is greater than 0.</description></item>
+        /// </list>
         /// 
-        /// *   If ElasticPlanType is set to **worker**, you can set this parameter to 0 or leave this parameter empty.
-        /// *   If ElasticPlanType is set to **executorcombineworker** or **executor**, you must set this parameter to a value that is greater than 0.
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>false</c>
         /// </summary>
         [NameInMap("ElasticPlanNodeNum")]
         [Validation(Required=false)]
         public int? ElasticPlanNodeNum { get; set; }
 
         /// <summary>
-        /// The start date of the scaling plan. Specify the date in the yyyy-MM-dd format.
+        /// <para>The start date of the scaling plan. Specify the date in the yyyy-MM-dd format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-12-02</para>
         /// </summary>
         [NameInMap("ElasticPlanStartDay")]
         [Validation(Required=false)]
         public string ElasticPlanStartDay { get; set; }
 
         /// <summary>
-        /// The restoration time of the scaling plan. Specify the time on the hour in the HH:mm:ss format. The interval between the scale-up time and the restoration time cannot be more than 24 hours.
+        /// <para>The restoration time of the scaling plan. Specify the time on the hour in the HH:mm:ss format. The interval between the scale-up time and the restoration time cannot be more than 24 hours.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10:00:00</para>
         /// </summary>
         [NameInMap("ElasticPlanTimeEnd")]
         [Validation(Required=false)]
         public string ElasticPlanTimeEnd { get; set; }
 
         /// <summary>
-        /// The scale-up time of the scaling plan. Specify the time on the hour in the HH:mm:ss format.
+        /// <para>The scale-up time of the scaling plan. Specify the time on the hour in the HH:mm:ss format.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>08:00:00</para>
         /// </summary>
         [NameInMap("ElasticPlanTimeStart")]
         [Validation(Required=false)]
         public string ElasticPlanTimeStart { get; set; }
 
         /// <summary>
-        /// The type of the scaling plan. Valid values:
+        /// <para>The type of the scaling plan. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>worker</b>: scales only elastic I/O resources.</description></item>
+        /// <item><description><b>executor</b>: scales only computing resources.</description></item>
+        /// <item><description><b>executorcombineworker</b> (default): scales both elastic I/O resources and computing resources by proportion.<remarks>
+        /// <list type="bullet">
+        /// <item><description>If you want to set this parameter to <b>executorcombineworker</b>, make sure that the cluster runs a minor version of 3.1.3.2 or later.</description></item>
+        /// <item><description>If you want to set this parameter to <b>worker</b> or <b>executor</b>, make sure that the cluster runs a minor version of 3.1.6.1 or later and a ticket is submitted. After your request is approved, you can set this parameter to <b>worker</b> or <b>executor</b>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   **worker**: scales only elastic I/O resources.
-        /// *   **executor**: scales only computing resources.
-        /// *   **executorcombineworker** (default): scales both elastic I/O resources and computing resources by proportion.
-        /// > - If you want to set this parameter to **executorcombineworker**, make sure that the cluster runs a minor version of 3.1.3.2 or later.
-        /// > - If you want to set this parameter to **worker** or **executor**, make sure that the cluster runs a minor version of 3.1.6.1 or later and a ticket is submitted. After your request is approved, you can set this parameter to **worker** or **executor**.
+        /// <b>Example:</b>
+        /// <para>worker</para>
         /// </summary>
         [NameInMap("ElasticPlanType")]
         [Validation(Required=false)]
         public string ElasticPlanType { get; set; }
 
         /// <summary>
-        /// The days of the week when you want to execute the scaling plan. Valid values: 0 to 6, which indicates Sunday to Saturday. Separate multiple values with commas (,).
+        /// <para>The days of the week when you want to execute the scaling plan. Valid values: 0 to 6 (Sunday to Saturday). Separate multiple values with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1,2,3,4,5</para>
         /// </summary>
         [NameInMap("ElasticPlanWeeklyRepeat")]
         [Validation(Required=false)]
         public string ElasticPlanWeeklyRepeat { get; set; }
 
         /// <summary>
-        /// The resource specifications that can be scaled up by the scaling plan. Valid values:
+        /// <para>The resource specifications that can be scaled up by the scaling plan. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>8 Core 64 GB (default)</description></item>
+        /// <item><description>16 Core 64 GB</description></item>
+        /// <item><description>32 Core 64 GB</description></item>
+        /// <item><description>64 Core 128 GB</description></item>
+        /// <item><description>12 Core 96 GB</description></item>
+        /// <item><description>24 Core 96 GB</description></item>
+        /// <item><description>52 Core 86 GB</description></item>
+        /// </list>
         /// 
-        /// *   8 Core 64 GB (default)
-        /// *   16 Core 64 GB
-        /// *   32 Core 64 GB
-        /// *   64 Core 128 GB
-        /// *   12 Core 96 GB
-        /// *   24 Core 96 GB
-        /// *   52 Core 86 GB
+        /// <b>Example:</b>
+        /// <para>32 Core 64 GB</para>
         /// </summary>
         [NameInMap("ElasticPlanWorkerSpec")]
         [Validation(Required=false)]
@@ -132,9 +188,13 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The name of the resource group.
+        /// <para>The name of the resource group.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/466685.html">DescribeDBResourceGroup</a> operation to query the resource group name.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeDBResourceGroup](~~466685~~) operation to query the resource group name.
+        /// <b>Example:</b>
+        /// <para>realtime</para>
         /// </summary>
         [NameInMap("ResourcePoolName")]
         [Validation(Required=false)]
