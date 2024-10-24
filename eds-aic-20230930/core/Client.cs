@@ -673,6 +673,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["InstanceGroupSpec"] = request.InstanceGroupSpec;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairId))
+            {
+                query["KeyPairId"] = request.KeyPairId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumberOfInstances))
             {
                 query["NumberOfInstances"] = request.NumberOfInstances;
@@ -774,6 +778,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceGroupSpec))
             {
                 query["InstanceGroupSpec"] = request.InstanceGroupSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairId))
+            {
+                query["KeyPairId"] = request.KeyPairId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumberOfInstances))
             {

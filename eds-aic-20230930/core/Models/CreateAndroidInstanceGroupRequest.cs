@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string InstanceGroupSpec { get; set; }
 
+        [NameInMap("KeyPairId")]
+        [Validation(Required=false)]
+        public string KeyPairId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
