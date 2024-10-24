@@ -21,14 +21,26 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public QuotaConfig QuotaConfig { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>quotamtl37ge7gkvdz</para>
+        /// </summary>
         [NameInMap("QuotaId")]
         [Validation(Required=false)]
         public string QuotaId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dlc-quota</para>
+        /// </summary>
         [NameInMap("QuotaName")]
         [Validation(Required=false)]
         public string QuotaName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>asiquota</para>
+        /// </summary>
         [NameInMap("QuotaType")]
         [Validation(Required=false)]
         public string QuotaType { get; set; }

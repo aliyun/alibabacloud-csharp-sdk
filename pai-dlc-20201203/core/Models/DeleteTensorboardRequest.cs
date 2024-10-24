@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class DeleteTensorboardRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>46099</para>
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

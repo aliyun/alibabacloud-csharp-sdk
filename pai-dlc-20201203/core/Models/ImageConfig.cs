@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Auth { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>registry.cn-hangzhou.aliyuncs.com</para>
+        /// </summary>
         [NameInMap("DockerRegistry")]
         [Validation(Required=false)]
         public string DockerRegistry { get; set; }

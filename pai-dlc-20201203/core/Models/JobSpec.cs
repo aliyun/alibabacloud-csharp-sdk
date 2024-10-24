@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public AssignNodeSpec AssignNodeSpec { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ecs.c6.large</para>
+        /// </summary>
         [NameInMap("EcsSpec")]
         [Validation(Required=false)]
         public string EcsSpec { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public ExtraPodSpec ExtraPodSpec { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>registry.cn-hangzhou.aliyuncs.com/pai-dlc/tensorflow-training:1.12.2PAI-cpu-py27-ubuntu16.04</para>
+        /// </summary>
         [NameInMap("Image")]
         [Validation(Required=false)]
         public string Image { get; set; }
@@ -29,6 +37,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public ImageConfig ImageConfig { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PodCount")]
         [Validation(Required=false)]
         public long? PodCount { get; set; }
@@ -41,10 +53,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public SpotSpec SpotSpec { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Worker</para>
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("UseSpotInstance")]
         [Validation(Required=false)]
         public bool? UseSpotInstance { get; set; }

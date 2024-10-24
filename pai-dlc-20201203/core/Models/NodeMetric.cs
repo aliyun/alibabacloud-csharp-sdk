@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public List<Metric> Metrics { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>asi_xxx</para>
+        /// </summary>
         [NameInMap("NodeName")]
         [Validation(Required=false)]
         public string NodeName { get; set; }

@@ -10,12 +10,19 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetJobSanityCheckResultRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("SanityCheckNumber")]
         [Validation(Required=false)]
         public int? SanityCheckNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>DeviceCheck</para>
+        /// </summary>
         [NameInMap("SanityCheckPhase")]
         [Validation(Required=false)]
         public string SanityCheckPhase { get; set; }

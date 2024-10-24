@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string PodUid { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>stderr, stdout</para>
+        /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }

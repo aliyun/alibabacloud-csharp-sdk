@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public bool? EnableFreeResource { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>frcc-whateversth</para>
+        /// </summary>
         [NameInMap("FreeResourceClusterControlId")]
         [Validation(Required=false)]
         public string FreeResourceClusterControlId { get; set; }

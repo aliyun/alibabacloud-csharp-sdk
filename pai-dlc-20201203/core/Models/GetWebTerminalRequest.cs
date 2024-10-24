@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? IsShared { get; set; }
 
         /// <summary>
-        /// Pod UID。
+        /// <para>Pod UID。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>94a7cc7c-0033-48b5-85bd-71c63592c268</para>
         /// </summary>
         [NameInMap("PodUid")]
         [Validation(Required=false)]
