@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eais20190624.Models
 {
-    public class DeleteEaiResponseBody : TeaModel {
+    public class UntagResourcesResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>F23AEEC7-4D98-4657-A104-0269270*****</para>
+        /// <para>1E23D585-BBD8-436F-9615-54CACD67****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

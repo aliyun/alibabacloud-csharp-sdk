@@ -8,26 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eais20190624.Models
 {
-    public class ChangeResourceGroupRequest : TeaModel {
+    public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmvpuy4a5****</para>
+        /// <para>false</para>
         /// </summary>
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("All")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>eais-hzs4h26yyt5xkcke****</para>
-        /// </summary>
-        [NameInMap("ResourceId")]
-        [Validation(Required=false)]
-        public string ResourceId { get; set; }
+        public bool? All { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -35,9 +23,30 @@ namespace AlibabaCloud.SDK.Eais20190624.Models
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
-        [NameInMap("ResourceRegionId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string ResourceRegionId { get; set; }
+        public string RegionId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public List<string> ResourceId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>instance</para>
+        /// </summary>
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
+        [NameInMap("TagKey")]
+        [Validation(Required=false)]
+        public List<string> TagKey { get; set; }
 
     }
 

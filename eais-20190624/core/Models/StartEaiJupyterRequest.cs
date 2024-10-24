@@ -8,24 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eais20190624.Models
 {
-    public class DeleteEaisEiRequest : TeaModel {
+    public class StartEaiJupyterRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>eais-hzu00xufs1c8j5nn****</para>
+        /// <para>eais-hze3x2gv9wimdj0k****</para>
         /// </summary>
-        [NameInMap("EiInstanceId")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string EiInstanceId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
-        [NameInMap("Force")]
-        [Validation(Required=false)]
-        public bool? Force { get; set; }
+        public string InstanceId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

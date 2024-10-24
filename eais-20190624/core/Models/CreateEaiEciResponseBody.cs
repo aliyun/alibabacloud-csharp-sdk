@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Eais20190624.Models
 {
     public class CreateEaiEciResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>eci-2zeh03ygxlrzmfi6****</para>
+        /// </summary>
         [NameInMap("ClientInstanceId")]
         [Validation(Required=false)]
         public string ClientInstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>eais-sz8t15a7gt7z7j7i****</para>
+        /// </summary>
         [NameInMap("ElasticAcceleratedInstanceId")]
         [Validation(Required=false)]
         public string ElasticAcceleratedInstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>F5FEB9AA-C108-577C-AB3D-D13524AF****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

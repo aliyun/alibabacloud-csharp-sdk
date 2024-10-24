@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eais20190624.Models
 {
-    public class CreateEaiAllResponse : TeaModel {
+    public class StopEaiJupyterResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
-        public CreateEaiAllResponseBody Body { get; set; }
+        [Validation(Required=false)]
+        public StopEaiJupyterResponseBody Body { get; set; }
 
     }
 
