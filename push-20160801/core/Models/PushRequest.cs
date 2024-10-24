@@ -169,6 +169,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Validation(Required=false)]
         public int? AndroidNotificationNotifyId { get; set; }
 
+        [NameInMap("AndroidNotificationThreadId")]
+        [Validation(Required=false)]
+        public string AndroidNotificationThreadId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>classification</para>
