@@ -98,6 +98,20 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string FileSystemPath { get; set; }
 
+        [NameInMap("Quota")]
+        [Validation(Required=false)]
+        public CreateFilesetRequestQuota Quota { get; set; }
+        public class CreateFilesetRequestQuota : TeaModel {
+            [NameInMap("FileCountLimit")]
+            [Validation(Required=false)]
+            public long? FileCountLimit { get; set; }
+
+            [NameInMap("SizeLimit")]
+            [Validation(Required=false)]
+            public long? SizeLimit { get; set; }
+
+        }
+
     }
 
 }

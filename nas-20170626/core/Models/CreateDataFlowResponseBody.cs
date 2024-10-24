@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The dataflow ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dfid-194433a5be31****</para>
+        /// <para>df-194433a5be31****</para>
         /// </summary>
         [NameInMap("DataFlowId")]
         [Validation(Required=false)]

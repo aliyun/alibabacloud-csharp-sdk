@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dfid-194433a5be31****</para>
+        /// <para>df-194433a5be31****</para>
         /// </summary>
         [NameInMap("DataFlowId")]
         [Validation(Required=false)]
@@ -52,6 +52,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The ID of the file system.</para>
+        /// <list type="bullet">
+        /// <item><description>The IDs of CPFS file systems must start with <c>cpfs-</c>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description>The IDs of CPFS for LINGJUN file systems must start with <c>bmcpfs-</c>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> CPFS is not supported on the international site.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +73,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>taskId-1345768****</para>
+        /// <para>task-38aa8e890f45****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

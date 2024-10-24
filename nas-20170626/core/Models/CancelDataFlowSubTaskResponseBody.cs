@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CancelDataFlowSubTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>

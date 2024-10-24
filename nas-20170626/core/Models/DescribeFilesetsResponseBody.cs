@@ -58,6 +58,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                [NameInMap("FileCountUsage")]
+                [Validation(Required=false)]
+                public long? FileCountUsage { get; set; }
+
+                [NameInMap("FileSystemId")]
+                [Validation(Required=false)]
+                public string FileSystemId { get; set; }
+
                 /// <summary>
                 /// <para>The fileset path.</para>
                 /// 
@@ -77,6 +85,24 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [NameInMap("FsetId")]
                 [Validation(Required=false)]
                 public string FsetId { get; set; }
+
+                [NameInMap("Quota")]
+                [Validation(Required=false)]
+                public DescribeFilesetsResponseBodyEntriesEntrieQuota Quota { get; set; }
+                public class DescribeFilesetsResponseBodyEntriesEntrieQuota : TeaModel {
+                    [NameInMap("FileCountLimit")]
+                    [Validation(Required=false)]
+                    public long? FileCountLimit { get; set; }
+
+                    [NameInMap("SizeLimit")]
+                    [Validation(Required=false)]
+                    public long? SizeLimit { get; set; }
+
+                }
+
+                [NameInMap("SpaceUsage")]
+                [Validation(Required=false)]
+                public long? SpaceUsage { get; set; }
 
                 /// <summary>
                 /// <para>The fileset status. Valid values:</para>
@@ -109,6 +135,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The ID of the file system.</para>
         /// 
@@ -117,6 +145,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string FileSystemId { get; set; }
 
         /// <summary>

@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <item><description>The IDs of CPFS for LINGJUN file systems must start with <c>bmcpfs-</c>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> CPFS file systems are available only on the China site (aliyun.com).</para>
+        /// <para> CPFS is not supported on the international site.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -190,22 +190,31 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string SourceSecurityType { get; set; }
 
         /// <summary>
-        /// <para>The access path of the source storage. Format: <c>&lt;storage type&gt;://&lt;path&gt;</c>.</para>
+        /// <para>The access path of the source storage. Format: <c>&lt;storage type&gt;://[&lt;account id&gt;:]&lt;path&gt;</c>.</para>
         /// <para>Parameters:</para>
         /// <list type="bullet">
         /// <item><description><para>storage type: Only OSS is supported.</para>
         /// </description></item>
+        /// <item><description><para>account id (optional): the UID of the account of the source storage.</para>
+        /// </description></item>
         /// <item><description><para>path: the name of the OSS bucket. Limits:</para>
         /// <list type="bullet">
-        /// <item><description>The path can contain only lowercase letters, digits, and hyphens (-). The path must start and end with a lowercase letter or digit.</description></item>
-        /// <item><description>The path can be up to 128 characters in length.</description></item>
-        /// <item><description>The path must be encoded in UTF-8.</description></item>
+        /// <item><description>The name can contain only lowercase letters, digits, and hyphens (-). The name must start and end with a lowercase letter or digit.</description></item>
+        /// <item><description>The name can be up to 128 characters in length.</description></item>
+        /// <item><description>The name must be encoded in UTF-8.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The OSS bucket must be an existing bucket in the region.</para>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>The OSS bucket must be an existing bucket in the region.</para>
+        /// </description></item>
+        /// <item><description><para>Only CPFS for LINGJUN V2.6.0 and later support the account id parameter.</para>
+        /// </description></item>
+        /// <item><description><para>The account id parameter is optional. This parameter is required when you use OSS buckets across accounts.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
