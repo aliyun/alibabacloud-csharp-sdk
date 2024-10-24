@@ -10,60 +10,76 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class GetMediaResourceIdRequest : TeaModel {
         /// <summary>
-        /// The extended fields.
+        /// <para>The extended fields.</para>
+        /// <remarks>
+        /// <para>If you set the ResourceType parameter to <b>2</b>, this parameter is required.</para>
+        /// </remarks>
         /// 
-        /// > If you set the ResourceType parameter to **2**, this parameter is required.
+        /// <b>Example:</b>
+        /// <para>{\&quot;img_rate\&quot;:\&quot;oneToOne\&quot;}</para>
         /// </summary>
         [NameInMap("ExtendInfo")]
         [Validation(Required=false)]
         public string ExtendInfo { get; set; }
 
         /// <summary>
-        /// The size of the resource. Unit: bytes.
+        /// <para>The size of the resource. Unit: bytes.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>12</para>
         /// </summary>
         [NameInMap("FileSize")]
         [Validation(Required=false)]
         public long? FileSize { get; set; }
 
         /// <summary>
-        /// The description of the resource.
+        /// <para>The description of the resource.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>remark</para>
         /// </summary>
         [NameInMap("Memo")]
         [Validation(Required=false)]
         public string Memo { get; set; }
 
         /// <summary>
-        /// The address of the resource.
+        /// <para>The address of the resource.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>oss://alicom-fc-media/1947741454322274/alicom-fc-media/pic/202205191526575398603697152.png</para>
         /// </summary>
         [NameInMap("OssKey")]
         [Validation(Required=false)]
         public string OssKey { get; set; }
 
         /// <summary>
-        /// The type of the resource.
+        /// <para>The type of the resource.</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: text.</description></item>
+        /// <item><description><b>2</b>: image. A small image cannot exceed 100 KB in size, and a large image cannot exceed 2 MB in size. The image must be clear. Supported format: JPG, JPEG, and PNG.</description></item>
+        /// <item><description><b>3</b>: audio.</description></item>
+        /// <item><description><b>4</b>: video. Supported format: MP4.</description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If you set the ResourceType parameter to 2, the <b>img_rate</b> required is required. Valid values:</para>
+        /// </description></item>
+        /// <item><description><para>1:1</para>
+        /// </description></item>
+        /// <item><description><para>16:9</para>
+        /// </description></item>
+        /// <item><description><para>3:1</para>
+        /// </description></item>
+        /// <item><description><para>48:65</para>
+        /// </description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **1**: text.
-        /// *   **2**: image. A small image cannot exceed 100 KB in size, and a large image cannot exceed 2 MB in size. The image must be clear. Supported format: JPG, JPEG, and PNG.
-        /// *   **3**: audio.
-        /// *   **4**: video. Supported format: MP4.
-        /// 
-        /// > 
-        /// 
-        /// *   If you set the ResourceType parameter to 2, the **img_rate** required is required. Valid values:
-        /// 
-        /// *   1:1
-        /// 
-        /// *   16:9
-        /// 
-        /// *   3:1
-        /// 
-        /// *   48:65
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

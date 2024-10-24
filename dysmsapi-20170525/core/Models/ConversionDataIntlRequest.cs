@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class ConversionDataIntlRequest : TeaModel {
         /// <summary>
-        /// The conversion rate.
+        /// <para>The conversion rate.</para>
+        /// <remarks>
+        /// <para>The value of this parameter is a double, and ranges from 0 to 1.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > The value of this parameter is a double, and ranges from 0 to 1.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0.53</para>
         /// </summary>
         [NameInMap("ConversionRate")]
         [Validation(Required=false)]
@@ -25,9 +28,13 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The time point at which the conversion rate is monitored. The value is a UNIX timestamp. Unit: milliseconds.
+        /// <para>The time point at which the conversion rate is monitored. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, the current timestamp is used by default.</para>
+        /// </remarks>
         /// 
-        /// > If you do not specify this parameter, the current timestamp is used by default.
+        /// <b>Example:</b>
+        /// <para>1349055900000</para>
         /// </summary>
         [NameInMap("ReportTime")]
         [Validation(Required=false)]

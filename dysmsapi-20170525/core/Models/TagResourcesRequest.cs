@@ -14,23 +14,31 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The name of the cloud service. Set the value to **dysms**.
+        /// <para>The name of the cloud service. Set the value to <b>dysms</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dysms</para>
         /// </summary>
         [NameInMap("ProdCode")]
         [Validation(Required=false)]
         public string ProdCode { get; set; }
 
         /// <summary>
-        /// The region ID. Set the value to **cn-hangzhou**.
+        /// <para>The region ID. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The code of the message template.
+        /// <para>The code of the message template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SMS_23423423</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -45,32 +53,39 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Set the value to **TEMPLATE**.
+        /// <para>The type of the resource. Set the value to <b>TEMPLATE</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>TEMPLATE</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tag.
-        /// 
-        /// This parameter is required.
+        /// <para>The tag.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The array of tag keys. Valid values of N: 1 to 20.
+            /// <para>The array of tag keys. Valid values of N: 1 to 20.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The array of tag values. Valid values of N: 1 to 20.
+            /// <para>The array of tag values. Valid values of N: 1 to 20.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

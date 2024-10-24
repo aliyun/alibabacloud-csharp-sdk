@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QueryPageSmartShortUrlLogRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20181225</para>
         /// </summary>
         [NameInMap("CreateDateEnd")]
         [Validation(Required=false)]
         public long? CreateDateEnd { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20181225</para>
         /// </summary>
         [NameInMap("CreateDateStart")]
         [Validation(Required=false)]
@@ -28,19 +34,29 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1390000****</para>
+        /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
         public string PhoneNumber { get; set; }
@@ -53,6 +69,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="http://ays.cn/">http://ays.cn/</a>****</para>
+        /// </summary>
         [NameInMap("ShortUrl")]
         [Validation(Required=false)]
         public string ShortUrl { get; set; }

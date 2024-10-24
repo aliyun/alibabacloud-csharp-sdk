@@ -10,31 +10,44 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class AddSmsTemplateResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// <list type="bullet">
+        /// <item><description>The value OK indicates that the request was successful.</description></item>
+        /// <item><description>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</description></item>
+        /// </list>
         /// 
-        /// *   The value OK indicates that the request was successful.
-        /// *   For more information about other response codes, see [API error codes](https://help.aliyun.com/document_detail/101346.html).
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F655A8D5-B967-440B-8683-DAD6FF8DE990</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The code of the message template.
+        /// <para>The code of the message template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SMS_15255****</para>
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class CreateSmartShortUrlRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值示例值</para>
+        /// </summary>
         [NameInMap("OutId")]
         [Validation(Required=false)]
         public string OutId { get; set; }
@@ -18,7 +22,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>15900195***</para>
         /// </summary>
         [NameInMap("PhoneNumbers")]
         [Validation(Required=false)]
@@ -33,7 +40,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("SourceUrl")]
         [Validation(Required=false)]

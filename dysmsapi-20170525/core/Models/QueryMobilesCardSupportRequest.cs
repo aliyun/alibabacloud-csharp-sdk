@@ -10,20 +10,22 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QueryMobilesCardSupportRequest : TeaModel {
         /// <summary>
-        /// The list of mobile phone numbers.
-        /// 
-        /// This parameter is required.
+        /// <para>The list of mobile phone numbers.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Mobiles")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Mobiles { get; set; }
 
         /// <summary>
-        /// The code of the message template. You can view the template code in the **Template Code** column on the **Templates** tab of the **Go China** page in the Alibaba Cloud SMS console.
+        /// <para>The code of the message template. You can view the template code in the <b>Template Code</b> column on the <b>Templates</b> tab of the <b>Go China</b> page in the Alibaba Cloud SMS console.</para>
+        /// <remarks>
+        /// <para>Make sure that the message template has been approved.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > Make sure that the message template has been approved.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>CARD_SMS_0000</para>
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]

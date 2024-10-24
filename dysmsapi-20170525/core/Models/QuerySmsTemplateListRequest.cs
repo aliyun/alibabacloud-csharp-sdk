@@ -14,14 +14,20 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageIndex")]
         [Validation(Required=false)]
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// The number of templates per page. Valid values: **1 to 50**.
+        /// <para>The number of templates per page. Valid values: <b>1 to 50</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,9 +10,11 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class AddShortUrlRequest : TeaModel {
         /// <summary>
-        /// The validity period of the short URL. Unit: days. The maximum validity period is 90 days.
+        /// <para>The validity period of the short URL. Unit: days. The maximum validity period is 90 days.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>7</para>
         /// </summary>
         [NameInMap("EffectiveDays")]
         [Validation(Required=false)]
@@ -34,18 +33,22 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The service name of the short URL. The name cannot exceed 13 characters in length.
+        /// <para>The service name of the short URL. The name cannot exceed 13 characters in length.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>The Alibaba Cloud Short Link service.</para>
         /// </summary>
         [NameInMap("ShortUrlName")]
         [Validation(Required=false)]
         public string ShortUrlName { get; set; }
 
         /// <summary>
-        /// The source URL. The URL cannot exceed 1,000 characters in length.
+        /// <para>The source URL. The URL cannot exceed 1,000 characters in length.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para><a href="https://www.****.com/product/sms">https://www.****.com/product/sms</a></para>
         /// </summary>
         [NameInMap("SourceUrl")]
         [Validation(Required=false)]

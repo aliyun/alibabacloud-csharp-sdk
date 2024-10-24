@@ -10,31 +10,44 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class DeleteSmsSignResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// <list type="bullet">
+        /// <item><description>If OK is returned, the request is successful.</description></item>
+        /// <item><description>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</description></item>
+        /// </list>
         /// 
-        /// *   If OK is returned, the request is successful.
-        /// *   Other values indicate that the request fails. For more information, see [Error codes](https://help.aliyun.com/document_detail/101346.html).
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F655A8D5-B967-440B-8683-DAD6FF8D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The signature.
+        /// <para>The signature.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Aliyun</para>
         /// </summary>
         [NameInMap("SignName")]
         [Validation(Required=false)]

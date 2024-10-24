@@ -22,11 +22,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The code of the message template.
+        /// <para>The code of the message template.</para>
+        /// <para>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm">Alibaba Cloud SMS console</a> and obtain the message template code on the <b>Message Templates</b> tab. You can also obtain the message template code by calling the <a href="https://help.aliyun.com/document_detail/121208.html">AddSmsTemplate</a> operation.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can log on to the [Alibaba Cloud SMS console](https://dysms.console.aliyun.com/dysms.htm) and obtain the message template code on the **Message Templates** tab. You can also obtain the message template code by calling the [AddSmsTemplate](https://help.aliyun.com/document_detail/121208.html) operation.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>SMS_152550****</para>
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
