@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>task IDs</para>
+        /// 
         /// <b>Example:</b>
         /// <para>T-655ace947e0e6603af000004</para>
         /// </summary>

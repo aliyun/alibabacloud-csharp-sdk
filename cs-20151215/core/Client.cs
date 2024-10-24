@@ -705,7 +705,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CancelOperationPlan operation to cancel a pending auto O\\\&amp;M plan.</para>
+        /// <para>You can call the CancelOperationPlan operation to cancel a pending auto O\\\\\\&amp;M plan.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -741,7 +741,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CancelOperationPlan operation to cancel a pending auto O\\\&amp;M plan.</para>
+        /// <para>You can call the CancelOperationPlan operation to cancel a pending auto O\\\\\\&amp;M plan.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -777,7 +777,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CancelOperationPlan operation to cancel a pending auto O\\\&amp;M plan.</para>
+        /// <para>You can call the CancelOperationPlan operation to cancel a pending auto O\\\\\\&amp;M plan.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -792,7 +792,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CancelOperationPlan operation to cancel a pending auto O\\\&amp;M plan.</para>
+        /// <para>You can call the CancelOperationPlan operation to cancel a pending auto O\\\\\\&amp;M plan.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4115,7 +4115,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DeleteClusterNodepool operation to delete a node pool by node pool ID.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4161,7 +4161,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DeleteClusterNodepool operation to delete a node pool by node pool ID.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4207,7 +4207,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DeleteClusterNodepool operation to delete a node pool by node pool ID.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4226,7 +4226,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DeleteClusterNodepool operation to delete a node pool by node pool ID.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <param name="request">

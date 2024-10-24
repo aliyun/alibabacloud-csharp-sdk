@@ -129,6 +129,36 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string PolicyAction { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            [NameInMap("Created")]
+            [Validation(Required=false)]
+            [Obsolete]
+            public string Created { get; set; }
+
+            /// <term><b>Obsolete</b></term>
+            [NameInMap("Updated")]
+            [Validation(Required=false)]
+            [Obsolete]
+            public string Updated { get; set; }
+
+            /// <term><b>Obsolete</b></term>
+            [NameInMap("resource_id")]
+            [Validation(Required=false)]
+            [Obsolete]
+            public string ResourceId { get; set; }
+
+            /// <term><b>Obsolete</b></term>
+            [NameInMap("total_violations")]
+            [Validation(Required=false)]
+            [Obsolete]
+            public long? TotalViolations { get; set; }
+
+            /// <term><b>Obsolete</b></term>
+            [NameInMap("is_deleted")]
+            [Validation(Required=false)]
+            [Obsolete]
+            public long? IsDeleted { get; set; }
+
         }
 
     }
