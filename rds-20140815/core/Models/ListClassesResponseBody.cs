@@ -129,10 +129,40 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string ReferencePrice { get; set; }
 
+            /// <summary>
+            /// <para>The RDS edition of the instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Regular instance</para>
+            /// <list type="bullet">
+            /// <item><description><b>Basic</b>: RDS Basic Edition</description></item>
+            /// <item><description><b>HighAvailability</b>: RDS High-availability Edition</description></item>
+            /// <item><description><b>cluster</b>: RDS Cluster Edition for ApsaraDB RDS for MySQL or PostgreSQL</description></item>
+            /// <item><description><b>AlwaysOn</b>: RDS Cluster Edition for ApsaraDB RDS for SQL Server</description></item>
+            /// <item><description><b>Finance</b>: RDS Basic Edition for serverless instances</description></item>
+            /// </list>
+            /// </description></item>
+            /// <item><description><para>Serverless instance</para>
+            /// <list type="bullet">
+            /// <item><description><b>serverless_basic</b>: RDS Basic Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</description></item>
+            /// <item><description><b>serverless_standard</b>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</description></item>
+            /// <item><description><b>serverless_ha</b>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run SQL Server.</description></item>
+            /// </list>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Basic</para>
+            /// </summary>
             [NameInMap("category")]
             [Validation(Required=false)]
             public string Category { get; set; }
 
+            /// <summary>
+            /// <para>The storage type of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cloud_essd</para>
+            /// </summary>
             [NameInMap("storageType")]
             [Validation(Required=false)]
             public string StorageType { get; set; }

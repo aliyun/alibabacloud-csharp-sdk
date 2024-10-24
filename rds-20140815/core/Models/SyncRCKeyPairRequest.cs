@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("SyncMode")]
+        [Validation(Required=false)]
+        public bool? SyncMode { get; set; }
+
     }
 
 }

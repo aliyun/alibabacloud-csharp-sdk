@@ -123,6 +123,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
 
+        /// <summary>
+        /// <para>The instance name. The value must be 2 to 255 characters in length The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.</para>
+        /// <remarks>
+        /// <para> The value cannot start with http:// or https://.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testInstance</para>
+        /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }

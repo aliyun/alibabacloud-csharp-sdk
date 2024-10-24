@@ -231,6 +231,38 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyInstanceType { get; set; }
 
+        [NameInMap("DBProxyKindCode")]
+        [Validation(Required=false)]
+        public string DBProxyKindCode { get; set; }
+
+        [NameInMap("DBProxyNodes")]
+        [Validation(Required=false)]
+        public DescribeDBProxyResponseBodyDBProxyNodes DBProxyNodes { get; set; }
+        public class DescribeDBProxyResponseBodyDBProxyNodes : TeaModel {
+            [NameInMap("DBProxyNodes")]
+            [Validation(Required=false)]
+            public List<DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes> DBProxyNodes { get; set; }
+            public class DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes : TeaModel {
+                [NameInMap("cpuCores")]
+                [Validation(Required=false)]
+                public string CpuCores { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>pn-xxxxxxx01</para>
+                /// </summary>
+                [NameInMap("nodeId")]
+                [Validation(Required=false)]
+                public string NodeId { get; set; }
+
+                [NameInMap("zoneId")]
+                [Validation(Required=false)]
+                public string ZoneId { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>Connection Persistence State. </para>
         /// <para>Valid values:</para>

@@ -49,6 +49,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The database engine of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>MySQL</b></description></item>
+        /// <item><description><b>SQLServer</b></description></item>
+        /// <item><description><b>PostgreSQL</b></description></item>
+        /// <item><description><b>MariaDB</b></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MySQL</para>
+        /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }

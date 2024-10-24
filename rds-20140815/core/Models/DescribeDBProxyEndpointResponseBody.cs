@@ -82,6 +82,30 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyFeatures { get; set; }
 
+        [NameInMap("DBProxyNodes")]
+        [Validation(Required=false)]
+        public DescribeDBProxyEndpointResponseBodyDBProxyNodes DBProxyNodes { get; set; }
+        public class DescribeDBProxyEndpointResponseBodyDBProxyNodes : TeaModel {
+            [NameInMap("DBProxyNodes")]
+            [Validation(Required=false)]
+            public List<DescribeDBProxyEndpointResponseBodyDBProxyNodesDBProxyNodes> DBProxyNodes { get; set; }
+            public class DescribeDBProxyEndpointResponseBodyDBProxyNodesDBProxyNodes : TeaModel {
+                [NameInMap("cpuCores")]
+                [Validation(Required=false)]
+                public string CpuCores { get; set; }
+
+                [NameInMap("nodeId")]
+                [Validation(Required=false)]
+                public string NodeId { get; set; }
+
+                [NameInMap("zoneId")]
+                [Validation(Required=false)]
+                public string ZoneId { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>The description of the proxy terminal.</para>
         /// 
@@ -105,6 +129,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("DbProxyEndpointReadWriteMode")]
         [Validation(Required=false)]
         public string DbProxyEndpointReadWriteMode { get; set; }
+
+        [NameInMap("DbProxyEndpointVswitchId")]
+        [Validation(Required=false)]
+        public string DbProxyEndpointVswitchId { get; set; }
+
+        [NameInMap("DbProxyEndpointZoneId")]
+        [Validation(Required=false)]
+        public string DbProxyEndpointZoneId { get; set; }
 
         /// <summary>
         /// <para>An array that consists of the information about the proxy endpoint.</para>

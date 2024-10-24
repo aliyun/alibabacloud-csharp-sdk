@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class ModifyDBProxyInstanceRequest : TeaModel {
+    public class ModifyDBProxyInstanceShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
@@ -61,33 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         [NameInMap("DBProxyNodes")]
         [Validation(Required=false)]
-        public List<ModifyDBProxyInstanceRequestDBProxyNodes> DBProxyNodes { get; set; }
-        public class ModifyDBProxyInstanceRequestDBProxyNodes : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
-            [NameInMap("cpuCores")]
-            [Validation(Required=false)]
-            public string CpuCores { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2</para>
-            /// </summary>
-            [NameInMap("nodeCounts")]
-            [Validation(Required=false)]
-            public string NodeCounts { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>cn-hagnzhou-c</para>
-            /// </summary>
-            [NameInMap("zoneId")]
-            [Validation(Required=false)]
-            public string ZoneId { get; set; }
-
-        }
+        public string DBProxyNodesShrink { get; set; }
 
         /// <summary>
         /// <para>The point in time that you want to specify. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
@@ -120,17 +94,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         [NameInMap("MigrateAZ")]
         [Validation(Required=false)]
-        public List<ModifyDBProxyInstanceRequestMigrateAZ> MigrateAZ { get; set; }
-        public class ModifyDBProxyInstanceRequestMigrateAZ : TeaModel {
-            [NameInMap("dbProxyEndpointId")]
-            [Validation(Required=false)]
-            public string DbProxyEndpointId { get; set; }
-
-            [NameInMap("destVSwitchId")]
-            [Validation(Required=false)]
-            public string DestVSwitchId { get; set; }
-
-        }
+        public string MigrateAZShrink { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]

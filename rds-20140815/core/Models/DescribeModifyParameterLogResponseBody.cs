@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of parameter modification log entries.</para>
+        /// <para>The log entries.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string ParameterName { get; set; }
 
                 /// <summary>
-                /// <para>The status of the new value specified for the parameter. Valid values:</para>
+                /// <para>The status. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>Applied:</b> The new value has taken effect.</description></item>
                 /// <item><description><b>Syncing:</b> The new value is being applied and has not taken effect.</description></item>

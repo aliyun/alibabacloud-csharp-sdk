@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class ModifyDBProxyRequest : TeaModel {
+    public class ModifyDBProxyShrinkRequest : TeaModel {
         /// <summary>
         /// <para>Specifies whether to enable or disable the database proxy feature. Valid values:</para>
         /// <list type="bullet">
@@ -70,33 +70,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         [NameInMap("DBProxyNodes")]
         [Validation(Required=false)]
-        public List<ModifyDBProxyRequestDBProxyNodes> DBProxyNodes { get; set; }
-        public class ModifyDBProxyRequestDBProxyNodes : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
-            [NameInMap("cpuCores")]
-            [Validation(Required=false)]
-            public string CpuCores { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2</para>
-            /// </summary>
-            [NameInMap("nodeCounts")]
-            [Validation(Required=false)]
-            public string NodeCounts { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>cn-hagnzhou-c</para>
-            /// </summary>
-            [NameInMap("zoneId")]
-            [Validation(Required=false)]
-            public string ZoneId { get; set; }
-
-        }
+        public string DBProxyNodesShrink { get; set; }
 
         /// <summary>
         /// <para>The network type of the instance. Set the value to <b>VPC</b>.</para>

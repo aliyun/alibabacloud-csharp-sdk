@@ -259,6 +259,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string PayType { get; set; }
 
+        [NameInMap("ReadOnlyDBInstanceClass")]
+        [Validation(Required=false)]
+        public string ReadOnlyDBInstanceClass { get; set; }
+
         /// <summary>
         /// <para>The ID of the resource group.</para>
         /// 

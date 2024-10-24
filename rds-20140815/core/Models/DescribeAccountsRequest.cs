@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid value: <b>30 to 200</b>. Default value: <b>30</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>30 to 200</b>. Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

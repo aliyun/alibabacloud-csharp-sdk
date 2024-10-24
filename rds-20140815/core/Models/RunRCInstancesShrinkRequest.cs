@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RunRCInstancesShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The number of RDS Custom instances that you want to create. The parameter is available if you want to create multiple RDS Custom instances at a time.</para>
+        /// <para>Valid values: <b>1</b> to <b>10</b>. Default value: <b>1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +22,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Amount { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable the automatic payment feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b> (default): enables the feature. Make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>false</b>: disables the feature. An unpaid order is generated.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If your account balance is insufficient, you can set the AutoPay parameter to false. In this case, an unpaid order is generated. You can complete the payment in the Expenses and Costs console.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -28,6 +39,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b> (default)</description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -36,6 +53,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
@@ -43,11 +62,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("CreateMode")]
+        [Validation(Required=false)]
+        public string CreateMode { get; set; }
+
+        /// <summary>
+        /// <para>The information about the data disks.</para>
+        /// </summary>
         [NameInMap("DataDisk")]
         [Validation(Required=false)]
         public string DataDiskShrink { get; set; }
 
         /// <summary>
+        /// <para>The deployment set ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ds-uf6670sipmph5j5b6ke4</para>
         /// </summary>
@@ -56,6 +84,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DeploymentSetId { get; set; }
 
         /// <summary>
+        /// <para>The instance description. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Instance_Description</para>
         /// </summary>
@@ -64,6 +94,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and insufficient inventory errors.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, the instance is directly created.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -71,7 +107,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        [NameInMap("HostName")]
+        [Validation(Required=false)]
+        public string HostName { get; set; }
+
         /// <summary>
+        /// <para>The ID of the image used by the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>image-dsvjzw2ii8n4fvr6de</para>
         /// </summary>
@@ -80,6 +122,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ImageId { get; set; }
 
         /// <summary>
+        /// <para>The billing method of the instance. Set the value to <b>Prepaid</b>, which indicates the subscription billing method.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Prepaid</para>
         /// </summary>
@@ -88,6 +132,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
+        /// <para>The instance name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ceshi</para>
         /// </summary>
@@ -96,6 +142,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The instance type. For more information about the instance types that are supported by RDS Custom instances, see <a href="https://help.aliyun.com/document_detail/2844823.html">Instance types for RDS Custom instances</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -106,6 +153,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceType { get; set; }
 
         /// <summary>
+        /// <para>The reserved parameter. This parameter is not supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -114,6 +163,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InternetChargeType { get; set; }
 
         /// <summary>
+        /// <para>The reserved parameter. This parameter is not supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -122,6 +173,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? InternetMaxBandwidthOut { get; set; }
 
         /// <summary>
+        /// <para>The reserved parameter. This parameter is not supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -130,6 +183,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string IoOptimized { get; set; }
 
         /// <summary>
+        /// <para>The name of the AccessKey pair. You can specify only one name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dell5502</para>
         /// </summary>
@@ -138,6 +193,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string KeyPairName { get; set; }
 
         /// <summary>
+        /// <para>The password of the account that is used to log on to the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2F9e9@a69c!e18b569c8</para>
         /// </summary>
@@ -146,6 +203,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Password { get; set; }
 
         /// <summary>
+        /// <para>The subscription duration of the instance. Default value: <b>1</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -154,6 +213,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Period { get; set; }
 
         /// <summary>
+        /// <para>The unit of the subscription duration. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Year</b></description></item>
+        /// <item><description><b>Month</b> (default)</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Year</para>
         /// </summary>
@@ -162,6 +227,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -171,7 +237,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
+        /// <para>The reserved parameter. This parameter is not supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -180,6 +252,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityEnhancementStrategy { get; set; }
 
         /// <summary>
+        /// <para>The ID of the security group to which you want to add the new instance. Instances in the same security group can communicate with each other. The maximum number of instances allowed in a security group varies based on the type of the security group. For more information, see the &quot;Security group limits&quot; section in <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</para>
+        /// <remarks>
+        /// <para> The network type of the instance is determined by the security group specified by the SecurityGroupId parameter. For example, if the network type of the specified security group is VPC, the instance is a VPC-type instance. In this case, you must specify the VSwitchId parameter.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>sg-uf6av412xaxixuezol6w</para>
         /// </summary>
@@ -187,11 +264,32 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The specification of the system disk.</para>
+        /// </summary>
         [NameInMap("SystemDisk")]
         [Validation(Required=false)]
         public string SystemDiskShrink { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<RunRCInstancesShrinkRequestTag> Tag { get; set; }
+        public class RunRCInstancesShrinkRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
+        /// <para>The vSwitch ID of the instance. You must specify this parameter when you create an instance of the virtual private cloud (VPC) type. The specified vSwitch and security group must belong to the same VPC.</para>
+        /// <remarks>
+        /// <para> If you specify the VSwitchId parameter, the zone specified by the ZoneId parameter must be the same as the zone in which the specified vSwitch resides. You can leave the ZoneId parameter empty. In this case, the system uses the zone in which the specified vSwitch resides.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -202,6 +300,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
+        /// <para>The zone ID of the instance. You can call the DescribeZones operation to query the zone IDs.</para>
+        /// <remarks>
+        /// <para> If you specify the VSwitchId parameter, the zone specified by the ZoneId parameter must be the same as the zone in which the specified vSwitch resides. You can leave the ZoneId parameter empty. In this case, the system uses the zone in which the specified vSwitch resides.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing-f</para>
         /// </summary>

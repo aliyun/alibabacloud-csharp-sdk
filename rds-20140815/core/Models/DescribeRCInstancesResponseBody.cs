@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string ClusterName { get; set; }
 
+            [NameInMap("CreateMode")]
+            [Validation(Required=false)]
+            public string CreateMode { get; set; }
+
             /// <summary>
             /// <para>The database type.</para>
             /// 
@@ -95,6 +99,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("HostName")]
             [Validation(Required=false)]
             public string HostName { get; set; }
+
+            [NameInMap("InstanceChargeType")]
+            [Validation(Required=false)]
+            public string InstanceChargeType { get; set; }
 
             /// <summary>
             /// <para>The instance ID.</para>

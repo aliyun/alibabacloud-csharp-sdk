@@ -324,6 +324,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        [NameInMap("InstanceChargeType")]
+        [Validation(Required=false)]
+        public string InstanceChargeType { get; set; }
+
         /// <summary>
         /// <para>The instance ID.</para>
         /// 
@@ -503,6 +507,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         /// <summary>
         /// <para>The security groups.</para>

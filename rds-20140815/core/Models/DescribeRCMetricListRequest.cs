@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Length { get; set; }
 
         /// <summary>
-        /// <para>The metric that you want to use. For more information, see <a href="javascript:void%5C(0%5C)">CloudMonitor metrics</a>.</para>
+        /// <para>The metric that you want to use. For more information, see <a href="https://cms.console.aliyun.com/metric-meta/acs_ecs_dashboard/ecs">CloudMonitor metrics</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

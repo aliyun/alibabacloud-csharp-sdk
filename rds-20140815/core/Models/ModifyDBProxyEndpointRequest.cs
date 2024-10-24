@@ -125,6 +125,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DbEndpointType { get; set; }
 
+        [NameInMap("EffectiveSpecificTime")]
+        [Validation(Required=false)]
+        public string EffectiveSpecificTime { get; set; }
+
+        [NameInMap("EffectiveTime")]
+        [Validation(Required=false)]
+        public string EffectiveTime { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -197,6 +205,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>vsw-uf6adz52c2p****</para>
+        /// </summary>
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
 
     }
 

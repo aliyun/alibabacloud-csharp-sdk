@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public string Tag { get; set; }
+
         /// <summary>
         /// <para>The virtual private cloud (VPC) ID.</para>
         /// 

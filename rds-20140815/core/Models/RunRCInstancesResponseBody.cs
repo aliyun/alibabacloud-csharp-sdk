@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RunRCInstancesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The instance IDs (InstanceIdSet).</para>
+        /// </summary>
         [NameInMap("InstanceIdSets")]
         [Validation(Required=false)]
         public RunRCInstancesResponseBodyInstanceIdSets InstanceIdSets { get; set; }
@@ -20,6 +23,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
+        /// <para>The order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>237850846720798</para>
         /// </summary>
@@ -28,6 +33,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>535BD857-E88F-5B4F-A18C-FAF59A74741F</para>
         /// </summary>

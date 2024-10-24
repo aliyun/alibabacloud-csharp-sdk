@@ -1,3 +1,29 @@
+2024-10-24 Version: 7.3.0
+- Support API CancelActiveOperationTasks.
+- Update API DescribeDBInstanceAttribute: update response param.
+- Update API DescribeDBProxy: update response param.
+- Update API DescribeDBProxyEndpoint: update response param.
+- Update API DescribeModifyParameterLog: update response param.
+- Update API DescribeRCImageList: update param Type.
+- Update API DescribeRCInstanceAttribute: update response param.
+- Update API DescribeRCInstances: add param AccessKeyId.
+- Update API DescribeRCInstances: add param Tag.
+- Update API DescribeRCInstances: update response param.
+- Update API ModifyDBInstanceSpec: add param ReadOnlyDBInstanceClass.
+- Update API ModifyDBProxy: add param DBProxyNodes.
+- Update API ModifyDBProxyEndpoint: add param EffectiveSpecificTime.
+- Update API ModifyDBProxyEndpoint: add param EffectiveTime.
+- Update API ModifyDBProxyEndpoint: add param VSwitchId.
+- Update API ModifyDBProxyInstance: add param DBProxyNodes.
+- Update API ModifyDBProxyInstance: add param MigrateAZ.
+- Update API RunRCInstances: add param CreateMode.
+- Update API RunRCInstances: add param HostName.
+- Update API RunRCInstances: add param ResourceGroupId.
+- Update API RunRCInstances: add param Tag.
+- Update API RunRCInstances: update param InstanceChargeType.
+- Update API SyncRCKeyPair: add param SyncMode.
+
+
 2024-09-26 Version: 7.2.3
 - Update API CloneDBInstance: add param DBInstanceDescription.
 - Update API CreateDBInstance: update param Period.

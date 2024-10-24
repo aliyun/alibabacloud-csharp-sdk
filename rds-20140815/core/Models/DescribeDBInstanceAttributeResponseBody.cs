@@ -822,6 +822,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public int? MaxIOPS { get; set; }
 
+                [NameInMap("MultipleTempUpgrade")]
+                [Validation(Required=false)]
+                public bool? MultipleTempUpgrade { get; set; }
+
                 /// <summary>
                 /// <para>Indicates whether PgBouncer is enabled.</para>
                 /// <remarks>
