@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDestinationPortEventResponseBody : TeaModel {
         /// <summary>
-        /// The ports.
+        /// <para>The ports.</para>
         /// </summary>
         [NameInMap("PortList")]
         [Validation(Required=false)]
         public List<DescribeDestinationPortEventResponseBodyPortList> PortList { get; set; }
         public class DescribeDestinationPortEventResponseBodyPortList : TeaModel {
             /// <summary>
-            /// The destination port.
+            /// <para>The destination port.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
             /// </summary>
             [NameInMap("DstPort")]
             [Validation(Required=false)]
             public string DstPort { get; set; }
 
             /// <summary>
-            /// The number of request packets received by the destination port.
+            /// <para>The number of request packets received by the destination port.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8760950</para>
             /// </summary>
             [NameInMap("InPkts")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9E7F6B2C-03F2-462F-9076-B782CF0DD502</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

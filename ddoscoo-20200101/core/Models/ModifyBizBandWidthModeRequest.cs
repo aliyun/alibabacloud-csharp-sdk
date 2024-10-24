@@ -10,23 +10,29 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ModifyBizBandWidthModeRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ddoscoo-cn-zvp2ay9b****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The metering method of the burstable clean bandwidth feature. Valid values:
+        /// <para>The metering method of the burstable clean bandwidth feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>month</b>: the metering method of monthly 95th percentile</description></item>
+        /// <item><description><b>day</b>: the metering method of daily 95th percentile</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **month**: the metering method of monthly 95th percentile
-        /// *   **day**: the metering method of daily 95th percentile
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>month</para>
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]

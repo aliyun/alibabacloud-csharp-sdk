@@ -10,32 +10,40 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ModifyWebCacheSwitchRequest : TeaModel {
         /// <summary>
-        /// The domain name for which you want to configure the Static Page Caching policy.
+        /// <para>The domain name for which you want to configure the Static Page Caching policy.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable or disable the Static Page Caching policy for a website. Valid values:
+        /// <para>Specifies whether to enable or disable the Static Page Caching policy for a website. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: enables the policy.</description></item>
+        /// <item><description><b>0</b>: disables the policy.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **1**: enables the policy.
-        /// *   **0**: disables the policy.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public int? Enable { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instance belongs in Resource Management.
+        /// <para>The ID of the resource group to which the instance belongs in Resource Management.</para>
+        /// <para>If you do not configure this parameter, the instance belongs to the default resource group.</para>
         /// 
-        /// If you do not configure this parameter, the instance belongs to the default resource group.
+        /// <b>Example:</b>
+        /// <para>rg-acfm2pz25js****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

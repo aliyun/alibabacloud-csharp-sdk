@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDomainOverviewResponseBody : TeaModel {
         /// <summary>
-        /// The peak queries per second (QPS) during HTTP traffic scrubbing. Unit: QPS.
+        /// <para>The peak queries per second (QPS) during HTTP traffic scrubbing. Unit: QPS.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>41652</para>
         /// </summary>
         [NameInMap("MaxHttp")]
         [Validation(Required=false)]
         public long? MaxHttp { get; set; }
 
         /// <summary>
-        /// The peak QPS during HTTPS traffic scrubbing. Unit: QPS.
+        /// <para>The peak QPS during HTTPS traffic scrubbing. Unit: QPS.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("MaxHttps")]
         [Validation(Required=false)]
         public long? MaxHttps { get; set; }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

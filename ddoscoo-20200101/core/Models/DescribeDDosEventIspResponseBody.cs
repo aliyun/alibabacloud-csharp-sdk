@@ -10,40 +10,47 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDDosEventIspResponseBody : TeaModel {
         /// <summary>
-        /// The ISPs for the volumetric attack.
+        /// <para>The ISPs for the volumetric attack.</para>
         /// </summary>
         [NameInMap("Isps")]
         [Validation(Required=false)]
         public List<DescribeDDosEventIspResponseBodyIsps> Isps { get; set; }
         public class DescribeDDosEventIspResponseBodyIsps : TeaModel {
             /// <summary>
-            /// The number of request packets that were sent from the ISP.
+            /// <para>The number of request packets that were sent from the ISP.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>230</para>
             /// </summary>
             [NameInMap("InPkts")]
             [Validation(Required=false)]
             public long? InPkts { get; set; }
 
             /// <summary>
-            /// The code of the ISP. Valid values:
+            /// <para>The code of the ISP. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>100017</b>: China Telecom</description></item>
+            /// <item><description><b>100026</b>: China Unicom</description></item>
+            /// <item><description><b>100025</b>: China Mobile</description></item>
+            /// <item><description><b>100027</b>: China Education and Research Network</description></item>
+            /// <item><description><b>100020</b>: China Mobile Tietong</description></item>
+            /// <item><description><b>1000143</b>: Dr.Peng Telecom &amp; Media Group</description></item>
+            /// <item><description><b>100080</b>: Beijing Gehua CATV Network</description></item>
+            /// <item><description><b>1000139</b>: National Radio and Television Administration</description></item>
+            /// <item><description><b>100023</b>: Oriental Cable Network</description></item>
+            /// <item><description><b>100063</b>: Founder Broadband</description></item>
+            /// <item><description><b>1000337</b>: China Internet Exchange</description></item>
+            /// <item><description><b>100021</b>: 21Vianet Group</description></item>
+            /// <item><description><b>1000333</b>: Wasu Media Holding</description></item>
+            /// <item><description><b>100093</b>: Wangsu Science &amp; Technology</description></item>
+            /// <item><description><b>1000401</b>: Tencent</description></item>
+            /// <item><description><b>100099</b>: Baidu</description></item>
+            /// <item><description><b>1000323</b>: Alibaba Cloud</description></item>
+            /// <item><description><b>100098</b>: Alibaba</description></item>
+            /// </list>
             /// 
-            /// *   **100017**: China Telecom
-            /// *   **100026**: China Unicom
-            /// *   **100025**: China Mobile
-            /// *   **100027**: China Education and Research Network
-            /// *   **100020**: China Mobile Tietong
-            /// *   **1000143**: Dr.Peng Telecom & Media Group
-            /// *   **100080**: Beijing Gehua CATV Network
-            /// *   **1000139**: National Radio and Television Administration
-            /// *   **100023**: Oriental Cable Network
-            /// *   **100063**: Founder Broadband
-            /// *   **1000337**: China Internet Exchange
-            /// *   **100021**: 21Vianet Group
-            /// *   **1000333**: Wasu Media Holding
-            /// *   **100093**: Wangsu Science & Technology
-            /// *   **1000401**: Tencent
-            /// *   **100099**: Baidu
-            /// *   **1000323**: Alibaba Cloud
-            /// *   **100098**: Alibaba
+            /// <b>Example:</b>
+            /// <para>1000323</para>
             /// </summary>
             [NameInMap("Isp")]
             [Validation(Required=false)]
@@ -52,7 +59,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C4A3BCD1-4A32-4342-941A-4745AE69508C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

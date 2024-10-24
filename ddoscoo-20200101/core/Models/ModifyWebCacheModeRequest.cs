@@ -10,31 +10,40 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ModifyWebCacheModeRequest : TeaModel {
         /// <summary>
-        /// The domain name of the website.
+        /// <para>The domain name of the website.</para>
+        /// <remarks>
+        /// <para>A forwarding rule must be configured for the domain name, and the domain name must be associated with an instance that uses the Enhanced function plan. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > A forwarding rule must be configured for the domain name, and the domain name must be associated with an instance that uses the Enhanced function plan. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all domain names.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para><a href="http://www.aliyun.com">www.aliyun.com</a></para>
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// The cache mode of the Static Page Caching policy. Valid values:
+        /// <para>The cache mode of the Static Page Caching policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>standard</b>: uses the standard cache mode.</description></item>
+        /// <item><description><b>aggressive</b>: uses the enhanced cache mode.</description></item>
+        /// <item><description><b>bypass</b>: caches no data.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **standard**: uses the standard cache mode.
-        /// *   **aggressive**: uses the enhanced cache mode.
-        /// *   **bypass**: caches no data.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>standard</para>
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+        /// <para>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeAsyncTasksRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instance belongs in Resource Management.
+        /// <para>The ID of the resource group to which the instance belongs in Resource Management.</para>
+        /// <para>If you do not configure this parameter, the instance belongs to the default resource group.</para>
         /// 
-        /// If you do not configure this parameter, the instance belongs to the default resource group.
+        /// <b>Example:</b>
+        /// <para>rg-acfm2pz25js****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

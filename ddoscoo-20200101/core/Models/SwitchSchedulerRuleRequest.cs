@@ -10,46 +10,58 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class SwitchSchedulerRuleRequest : TeaModel {
         /// <summary>
-        /// The name of the scheduling rule to manage.
+        /// <para>The name of the scheduling rule to manage.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/157481.html">DescribeSchedulerRules</a> operation to query the names of all scheduling rules.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeSchedulerRules](https://help.aliyun.com/document_detail/157481.html) operation to query the names of all scheduling rules.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testrule</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The type of the scheduling rule. Valid values:
+        /// <para>The type of the scheduling rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2</b>: tiered protection rule</description></item>
+        /// <item><description><b>3</b>: network acceleration rule</description></item>
+        /// <item><description><b>5</b>: Alibaba Cloud CDN (CDN) interaction rule</description></item>
+        /// <item><description><b>6</b>: cloud service interaction rule</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **2**: tiered protection rule
-        /// *   **3**: network acceleration rule
-        /// *   **5**: Alibaba Cloud CDN (CDN) interaction rule
-        /// *   **6**: cloud service interaction rule
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>6</para>
         /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]
         public int? RuleType { get; set; }
 
         /// <summary>
-        /// The configuration that is used to switch service traffic. This parameter is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that includes the following parameters:
+        /// <para>The configuration that is used to switch service traffic. This parameter is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that includes the following parameters:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Value</b>: required. The IP address of the associated resource. Data type: string.</para>
+        /// </description></item>
+        /// <item><description><para><b>State</b>: required. The operation type. Data type: integer. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: switches service traffic from the associated resource to your Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing.</description></item>
+        /// <item><description><b>1</b>: switches service traffic back to the associated cloud resource.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>Interval</b>: optional. The waiting time that is required before the service traffic is switched back. Unit: minutes. Data type: integer. Usage notes:</para>
+        /// <list type="bullet">
+        /// <item><description>If the <b>State</b> parameter is set to <b>0</b>, you must set this parameter to \<em>\</em>-1\<em>\</em>. Otherwise, the call fails.</description></item>
+        /// <item><description>If the <b>State</b> parameter is set to <b>1</b>, you do not need to set this parameter.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **Value**: required. The IP address of the associated resource. Data type: string.
-        /// 
-        /// *   **State**: required. The operation type. Data type: integer. Valid values:
-        /// 
-        ///     *   **0**: switches service traffic from the associated resource to your Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing.
-        ///     *   **1**: switches service traffic back to the associated cloud resource.
-        /// 
-        /// *   **Interval**: optional. The waiting time that is required before the service traffic is switched back. Unit: minutes. Data type: integer. Usage notes:
-        /// 
-        ///     *   If the **State** parameter is set to **0**, you must set this parameter to \\*\\*-1\\*\\*. Otherwise, the call fails.
-        ///     *   If the **State** parameter is set to **1**, you do not need to set this parameter.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[{&quot;Value&quot;:&quot;39.104.XX.XX&quot;,&quot;State&quot;:0,&quot;Interval&quot;:-1}]</para>
         /// </summary>
         [NameInMap("SwitchData")]
         [Validation(Required=false)]

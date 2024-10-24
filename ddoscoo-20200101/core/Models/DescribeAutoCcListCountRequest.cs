@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeAutoCcListCountRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <remarks>
+        /// <para>You can call the <b>DescribeInstanceIds</b> operation to query the IDs of all instances.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the **DescribeInstanceIds** operation to query the IDs of all instances.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ddoscoo-cn-mp91j1ao****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The mode of how an IP address is added to the whitelist or blacklist. Valid values:
+        /// <para>The mode of how an IP address is added to the whitelist or blacklist. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>manual</b>: manually added</description></item>
+        /// <item><description><b>auto</b>: automatically added</description></item>
+        /// </list>
         /// 
-        /// *   **manual**: manually added
-        /// *   **auto**: automatically added
+        /// <b>Example:</b>
+        /// <para>manual</para>
         /// </summary>
         [NameInMap("QueryType")]
         [Validation(Required=false)]

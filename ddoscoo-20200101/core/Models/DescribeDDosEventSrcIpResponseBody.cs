@@ -10,47 +10,57 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDDosEventSrcIpResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of information about the source IP address of the volumetric attack.
+        /// <para>An array that consists of information about the source IP address of the volumetric attack.</para>
         /// </summary>
         [NameInMap("Ips")]
         [Validation(Required=false)]
         public List<DescribeDDosEventSrcIpResponseBodyIps> Ips { get; set; }
         public class DescribeDDosEventSrcIpResponseBodyIps : TeaModel {
             /// <summary>
-            /// The code or ID of the source region. For more information, see [Codes of administrative regions in China and codes of countries and areas](https://help.aliyun.com/document_detail/167926.html). For example, **110000** indicates Beijing, China, and **us** indicates the United States.
+            /// <para>The code or ID of the source region. For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">Codes of administrative regions in China and codes of countries and areas</a>. For example, <b>110000</b> indicates Beijing, China, and <b>us</b> indicates the United States.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>110000</para>
             /// </summary>
             [NameInMap("AreaId")]
             [Validation(Required=false)]
             public string AreaId { get; set; }
 
             /// <summary>
-            /// The Internet service provider (ISP) for the volumetric attack. Valid values:
+            /// <para>The Internet service provider (ISP) for the volumetric attack. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>100017</b>: China Telecom</description></item>
+            /// <item><description><b>100026</b>: China Unicom</description></item>
+            /// <item><description><b>100025</b>: China Mobile</description></item>
+            /// <item><description><b>100027</b>: China Education and Research Network</description></item>
+            /// <item><description><b>100020</b>: China Mobile Tietong</description></item>
+            /// <item><description><b>1000143</b>: Dr.Peng Telecom &amp; Media Group</description></item>
+            /// <item><description><b>100080</b>: Beijing Gehua CATV Network</description></item>
+            /// <item><description><b>1000139</b>: National Radio and Television Administration</description></item>
+            /// <item><description><b>100023</b>: Oriental Cable Network</description></item>
+            /// <item><description><b>100063</b>: Founder Broadband</description></item>
+            /// <item><description><b>1000337</b>: China Internet Exchange</description></item>
+            /// <item><description><b>100021</b>: 21Vianet Group</description></item>
+            /// <item><description><b>1000333</b>: Wasu Media Holding</description></item>
+            /// <item><description><b>100093</b>: Wangsu Science &amp; Technology</description></item>
+            /// <item><description><b>1000401</b>: Tencent</description></item>
+            /// <item><description><b>100099</b>: Baidu</description></item>
+            /// <item><description><b>1000323</b>: Alibaba Cloud</description></item>
+            /// <item><description><b>100098</b>: Alibaba</description></item>
+            /// </list>
             /// 
-            /// *   **100017**: China Telecom
-            /// *   **100026**: China Unicom
-            /// *   **100025**: China Mobile
-            /// *   **100027**: China Education and Research Network
-            /// *   **100020**: China Mobile Tietong
-            /// *   **1000143**: Dr.Peng Telecom & Media Group
-            /// *   **100080**: Beijing Gehua CATV Network
-            /// *   **1000139**: National Radio and Television Administration
-            /// *   **100023**: Oriental Cable Network
-            /// *   **100063**: Founder Broadband
-            /// *   **1000337**: China Internet Exchange
-            /// *   **100021**: 21Vianet Group
-            /// *   **1000333**: Wasu Media Holding
-            /// *   **100093**: Wangsu Science & Technology
-            /// *   **1000401**: Tencent
-            /// *   **100099**: Baidu
-            /// *   **1000323**: Alibaba Cloud
-            /// *   **100098**: Alibaba
+            /// <b>Example:</b>
+            /// <para>100026</para>
             /// </summary>
             [NameInMap("Isp")]
             [Validation(Required=false)]
             public string Isp { get; set; }
 
             /// <summary>
-            /// The source IP address of the volumetric attack.
+            /// <para>The source IP address of the volumetric attack.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>218.<em><b>.</b></em>.24</para>
             /// </summary>
             [NameInMap("SrcIp")]
             [Validation(Required=false)]
@@ -59,7 +69,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>38A0224E-FDBC-4733-A362-B391827FC1E9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

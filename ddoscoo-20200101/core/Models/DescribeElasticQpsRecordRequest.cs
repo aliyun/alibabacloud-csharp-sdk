@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeElasticQpsRecordRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query. The value is a timestamp. Unit: milliseconds.
+        /// <para>The end of the time range to query. The value is a timestamp. Unit: milliseconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1688140799999</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The IP address of the Anti-DDoS Proxy instance to query.
+        /// <para>The IP address of the Anti-DDoS Proxy instance to query.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>203.107.XX.XX</para>
         /// </summary>
         [NameInMap("Ip")]
         [Validation(Required=false)]
         public string Ip { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. The value is a timestamp. Unit: milliseconds.
+        /// <para>The beginning of the time range to query. The value is a timestamp. Unit: milliseconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1684252800000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

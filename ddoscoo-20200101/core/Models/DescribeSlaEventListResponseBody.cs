@@ -10,45 +10,61 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeSlaEventListResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CF33B4C3-196E-4015-AADD-5CAD00057B80</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The destination rate limit events.
+        /// <para>The destination rate limit events.</para>
         /// </summary>
         [NameInMap("SlaEvent")]
         [Validation(Required=false)]
         public List<DescribeSlaEventListResponseBodySlaEvent> SlaEvent { get; set; }
         public class DescribeSlaEventListResponseBodySlaEvent : TeaModel {
             /// <summary>
-            /// The end of the time range. Unit: seconds.
+            /// <para>The end of the time range. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1671886740</para>
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// The IP address of the instance.
+            /// <para>The IP address of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>203.107.XX.XX</para>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
             /// <summary>
-            /// The region to which the destination IP address belongs. Valid values:
+            /// <para>The region to which the destination IP address belongs. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>cn</b>: a region in the Chinese mainland</description></item>
+            /// <item><description><b>cn-hongkong</b>: China (Hong Kong)</description></item>
+            /// </list>
             /// 
-            /// *   **cn**: a region in the Chinese mainland
-            /// *   **cn-hongkong**: China (Hong Kong)
+            /// <b>Example:</b>
+            /// <para>cn</para>
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
             /// <summary>
-            /// The beginning of the time range. Unit: seconds.
+            /// <para>The beginning of the time range. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1678080840</para>
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
@@ -57,7 +73,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

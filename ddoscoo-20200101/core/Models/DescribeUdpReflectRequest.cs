@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeUdpReflectRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance to query.
+        /// <para>The ID of the instance to query.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ddoscoo-cn-i7m25564****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. Valid values:
+        /// <para>The region ID of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cn-hangzhou</b>: indicates an Anti-DDoS Proxy (Chinese Mainland) instance. This is the default value.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: indicates an Anti-DDoS Proxy (Outside Chinese Mainland) instance.</description></item>
+        /// </list>
         /// 
-        /// *   **cn-hangzhou**: indicates an Anti-DDoS Proxy (Chinese Mainland) instance. This is the default value.
-        /// *   **ap-southeast-1**: indicates an Anti-DDoS Proxy (Outside Chinese Mainland) instance.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

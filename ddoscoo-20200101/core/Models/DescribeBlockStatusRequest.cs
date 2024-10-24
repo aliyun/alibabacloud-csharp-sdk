@@ -10,20 +10,25 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeBlockStatusRequest : TeaModel {
         /// <summary>
-        /// An array consisting of information about the IDs of the instances that you want to query.
+        /// <para>An array consisting of information about the IDs of the instances that you want to query.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ddoscoo-cn-mp91j1ao****</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instance belongs in Resource Management.
+        /// <para>The ID of the resource group to which the instance belongs in Resource Management.</para>
+        /// <para>If you do not configure this parameter, the instance belongs to the default resource group.</para>
         /// 
-        /// If you do not configure this parameter, the instance belongs to the default resource group.
+        /// <b>Example:</b>
+        /// <para>rg-acfm2pz25js****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

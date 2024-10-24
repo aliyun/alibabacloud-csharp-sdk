@@ -10,31 +10,41 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeWebAccessLogDispatchStatusResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CF33B4C3-196E-4015-AADD-5CAD00057B80</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the log analysis feature is enabled for domain names.
+        /// <para>Indicates whether the log analysis feature is enabled for domain names.</para>
         /// </summary>
         [NameInMap("SlsConfigStatus")]
         [Validation(Required=false)]
         public List<DescribeWebAccessLogDispatchStatusResponseBodySlsConfigStatus> SlsConfigStatus { get; set; }
         public class DescribeWebAccessLogDispatchStatusResponseBodySlsConfigStatus : TeaModel {
             /// <summary>
-            /// The domain name.
+            /// <para>The domain name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
             /// </summary>
             [NameInMap("Domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
             /// <summary>
-            /// Indicates whether the log analysis feature is enabled. Valid values:
+            /// <para>Indicates whether the log analysis feature is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: yes</description></item>
+            /// <item><description><b>false</b>: no</description></item>
+            /// </list>
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Enable")]
             [Validation(Required=false)]
@@ -43,7 +53,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

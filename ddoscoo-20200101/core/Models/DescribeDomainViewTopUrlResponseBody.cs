@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDomainViewTopUrlResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array consisting of the URLs that receive the most requests.
+        /// <para>An array consisting of the URLs that receive the most requests.</para>
         /// </summary>
         [NameInMap("UrlList")]
         [Validation(Required=false)]
         public List<DescribeDomainViewTopUrlResponseBodyUrlList> UrlList { get; set; }
         public class DescribeDomainViewTopUrlResponseBodyUrlList : TeaModel {
             /// <summary>
-            /// The total number of requests.
+            /// <para>The total number of requests.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3390671</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public long? Count { get; set; }
 
             /// <summary>
-            /// The domain name of the website.
+            /// <para>The domain name of the website.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://www.aliyun.com">www.aliyun.com</a></para>
             /// </summary>
             [NameInMap("Domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
             /// <summary>
-            /// The URL that is Base64-encoded.
+            /// <para>The URL that is Base64-encoded.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Lw==</para>
             /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]

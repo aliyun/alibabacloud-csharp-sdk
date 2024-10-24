@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ModifyBizBandWidthModeResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CF33B4C3-196E-4015-AADD-5CAD00057B80</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

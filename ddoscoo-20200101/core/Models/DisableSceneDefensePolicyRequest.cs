@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DisableSceneDefensePolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the policy that you want to disable.
+        /// <para>The ID of the policy that you want to disable.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/159382.html">DescribeSceneDefensePolicies</a> operation to query the IDs of all policies.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeSceneDefensePolicies](https://help.aliyun.com/document_detail/159382.html) operation to query the IDs of all policies.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>321a-fd31-df51-****</para>
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]

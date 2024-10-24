@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDomainSecurityProfileRequest : TeaModel {
         /// <summary>
-        /// The domain name of the website.
+        /// <para>The domain name of the website.</para>
+        /// <remarks>
+        /// <para>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all domain names.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.aliyundoc.com</para>
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ReleaseInstanceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ddoscoo-cn-mp91j1ao****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

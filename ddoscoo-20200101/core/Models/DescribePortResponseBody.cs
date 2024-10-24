@@ -10,55 +10,72 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribePortResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of port forwarding rules.
+        /// <para>An array that consists of port forwarding rules.</para>
         /// </summary>
         [NameInMap("NetworkRules")]
         [Validation(Required=false)]
         public List<DescribePortResponseBodyNetworkRules> NetworkRules { get; set; }
         public class DescribePortResponseBodyNetworkRules : TeaModel {
             /// <summary>
-            /// The port of the origin server.
+            /// <para>The port of the origin server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>55</para>
             /// </summary>
             [NameInMap("BackendPort")]
             [Validation(Required=false)]
             public int? BackendPort { get; set; }
 
             /// <summary>
-            /// The forwarding port.
+            /// <para>The forwarding port.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>55</para>
             /// </summary>
             [NameInMap("FrontendPort")]
             [Validation(Required=false)]
             public int? FrontendPort { get; set; }
 
             /// <summary>
-            /// The type of the protocol. Valid values:
+            /// <para>The type of the protocol. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>tcp</b></description></item>
+            /// <item><description><b>udp</b></description></item>
+            /// </list>
             /// 
-            /// *   **tcp**
-            /// *   **udp**
+            /// <b>Example:</b>
+            /// <para>tcp</para>
             /// </summary>
             [NameInMap("FrontendProtocol")]
             [Validation(Required=false)]
             public string FrontendProtocol { get; set; }
 
             /// <summary>
-            /// The ID of the instance to which the port forwarding rule is applied.
+            /// <para>The ID of the instance to which the port forwarding rule is applied.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ddoscoo-cn-7e225i41****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// Indicates whether the port forwarding rule is automatically created by the instance. Valid values:
+            /// <para>Indicates whether the port forwarding rule is automatically created by the instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: yes</description></item>
+            /// <item><description><b>false</b>: no</description></item>
+            /// </list>
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("IsAutoCreate")]
             [Validation(Required=false)]
             public bool? IsAutoCreate { get; set; }
 
             /// <summary>
-            /// An array that consists of IP addresses of origin servers.
+            /// <para>An array that consists of IP addresses of origin servers.</para>
             /// </summary>
             [NameInMap("RealServers")]
             [Validation(Required=false)]
@@ -67,14 +84,20 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>39499F01-19D9-4EA4-A0E9-C6014BA5CDBE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of port forwarding rules returned.
+        /// <para>The number of port forwarding rules returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

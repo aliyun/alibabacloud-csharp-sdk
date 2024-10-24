@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeUnBlackholeCountResponseBody : TeaModel {
         /// <summary>
-        /// The remaining quota that you can deactivate blackhole filtering.
+        /// <para>The remaining quota that you can deactivate blackhole filtering.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("RemainCount")]
         [Validation(Required=false)]
         public int? RemainCount { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>232929FA-40B6-4C53-9476-EE335ABA44CD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total quota that you can deactivate blackhole filtering.
+        /// <para>The total quota that you can deactivate blackhole filtering.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

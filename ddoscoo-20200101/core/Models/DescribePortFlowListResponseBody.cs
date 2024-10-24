@@ -10,72 +10,98 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribePortFlowListResponseBody : TeaModel {
         /// <summary>
-        /// The returned traffic data.
+        /// <para>The returned traffic data.</para>
         /// </summary>
         [NameInMap("PortFlowList")]
         [Validation(Required=false)]
         public List<DescribePortFlowListResponseBodyPortFlowList> PortFlowList { get; set; }
         public class DescribePortFlowListResponseBodyPortFlowList : TeaModel {
             /// <summary>
-            /// The bandwidth of attack traffic. Unit: bit/s.
+            /// <para>The bandwidth of attack traffic. Unit: bit/s.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("AttackBps")]
             [Validation(Required=false)]
             public long? AttackBps { get; set; }
 
             /// <summary>
-            /// The packet forwarding rate of attack traffic. Unit: pps.
+            /// <para>The packet forwarding rate of attack traffic. Unit: pps.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("AttackPps")]
             [Validation(Required=false)]
             public long? AttackPps { get; set; }
 
             /// <summary>
-            /// The inbound bandwidth. Unit: bit/s.
+            /// <para>The inbound bandwidth. Unit: bit/s.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2176000</para>
             /// </summary>
             [NameInMap("InBps")]
             [Validation(Required=false)]
             public long? InBps { get; set; }
 
             /// <summary>
-            /// The packet forwarding rate of inbound traffic. Unit: packets per second.
+            /// <para>The packet forwarding rate of inbound traffic. Unit: packets per second.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2934</para>
             /// </summary>
             [NameInMap("InPps")]
             [Validation(Required=false)]
             public long? InPps { get; set; }
 
             /// <summary>
-            /// The index number of the returned data.
+            /// <para>The index number of the returned data.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Index")]
             [Validation(Required=false)]
             public long? Index { get; set; }
 
             /// <summary>
-            /// The outbound bandwidth. Unit: bit/s.
+            /// <para>The outbound bandwidth. Unit: bit/s.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4389</para>
             /// </summary>
             [NameInMap("OutBps")]
             [Validation(Required=false)]
             public long? OutBps { get; set; }
 
             /// <summary>
-            /// The packet forwarding rate of outbound traffic. Unit: packets per second (pps).
+            /// <para>The packet forwarding rate of outbound traffic. Unit: packets per second (pps).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("OutPps")]
             [Validation(Required=false)]
             public long? OutPps { get; set; }
 
             /// <summary>
-            /// The source region of the traffic. Valid values:
+            /// <para>The source region of the traffic. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>cn</b>: mainland China</description></item>
+            /// <item><description><b>alb-ap-northeast-1-gf-x</b>: Japan (Tokyo)</description></item>
+            /// <item><description><b>alb-ap-southeast-gf-x</b>: Singapore</description></item>
+            /// <item><description><b>alb-cn-hongkong-gf-x</b>: Hong Kong (China)</description></item>
+            /// <item><description><b>alb-eu-central-1-gf-x</b>: Germany (Frankfurt)</description></item>
+            /// <item><description><b>alb-us-west-1-gf-x</b>: US (Silicon Valley)</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>The values except <b>cn</b> are returned only when <b>RegionId</b> is set to <b>ap-southeast-1</b>.</para>
+            /// </remarks>
             /// 
-            /// *   **cn**: mainland China
-            /// *   **alb-ap-northeast-1-gf-x**: Japan (Tokyo)
-            /// *   **alb-ap-southeast-gf-x**: Singapore
-            /// *   **alb-cn-hongkong-gf-x**: Hong Kong (China)
-            /// *   **alb-eu-central-1-gf-x**: Germany (Frankfurt)
-            /// *   **alb-us-west-1-gf-x**: US (Silicon Valley)
-            /// 
-            /// > The values except **cn** are returned only when **RegionId** is set to **ap-southeast-1**.
+            /// <b>Example:</b>
+            /// <para>cn</para>
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -114,7 +140,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public long? SlaPpsDropPps { get; set; }
 
             /// <summary>
-            /// The time when the data was collected. The value is a UNIX timestamp. Unit: seconds.
+            /// <para>The time when the data was collected. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1582992000</para>
             /// </summary>
             [NameInMap("Time")]
             [Validation(Required=false)]
@@ -123,7 +152,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FFC77501-BDF8-4BC8-9BF5-B295FBC3189B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

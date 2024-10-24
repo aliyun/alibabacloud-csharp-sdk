@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ConfigLayer4RealLimitResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CFCF71BD-680E-5A20-8847-174CEC62E67D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

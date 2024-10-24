@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DeleteNetworkRuleResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>49AD2F34-694A-4024-9B0E-DDCFC59CCC13</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

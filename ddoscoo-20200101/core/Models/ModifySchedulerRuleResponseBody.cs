@@ -10,23 +10,33 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ModifySchedulerRuleResponseBody : TeaModel {
         /// <summary>
-        /// The CNAME that is assigned by Sec-Traffic Manager for the scheduling rule.
+        /// <para>The CNAME that is assigned by Sec-Traffic Manager for the scheduling rule.</para>
+        /// <remarks>
+        /// <para>To enable the scheduling rule, you must map the domain name of the service to the CNAME.</para>
+        /// </remarks>
         /// 
-        /// > To enable the scheduling rule, you must map the domain name of the service to the CNAME.
+        /// <b>Example:</b>
+        /// <para>48k7b372gpl4****.aliyunddos0001.com</para>
         /// </summary>
         [NameInMap("Cname")]
         [Validation(Required=false)]
         public string Cname { get; set; }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FFC77501-BDF8-4BC8-9BF5-B295FBC3189B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The name of the rule.
+        /// <para>The name of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testrule</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]

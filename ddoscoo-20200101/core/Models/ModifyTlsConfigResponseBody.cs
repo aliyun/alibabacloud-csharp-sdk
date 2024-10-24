@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ModifyTlsConfigResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

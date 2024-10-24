@@ -10,35 +10,43 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDomainSecurityProfileResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned results.
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<DescribeDomainSecurityProfileResponseBodyResult> Result { get; set; }
         public class DescribeDomainSecurityProfileResponseBodyResult : TeaModel {
             /// <summary>
-            /// Indicates whether the global mitigation policy is enabled. Valid values:
+            /// <para>Indicates whether the global mitigation policy is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("GlobalEnable")]
             [Validation(Required=false)]
             public bool? GlobalEnable { get; set; }
 
             /// <summary>
-            /// The mode of the global mitigation policy. Valid values:
+            /// <para>The mode of the global mitigation policy. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>weak</b>: the Low mode</description></item>
+            /// <item><description><b>default</b>: the Normal mode</description></item>
+            /// <item><description><b>hard</b>: the Strict mode</description></item>
+            /// </list>
             /// 
-            /// *   **weak**: the Low mode
-            /// *   **default**: the Normal mode
-            /// *   **hard**: the Strict mode
+            /// <b>Example:</b>
+            /// <para>default</para>
             /// </summary>
             [NameInMap("GlobalMode")]
             [Validation(Required=false)]

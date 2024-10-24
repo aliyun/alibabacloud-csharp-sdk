@@ -10,38 +10,51 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeBlackholeStatusResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the blackhole filtering status of the instance.
+        /// <para>An array that consists of the blackhole filtering status of the instance.</para>
         /// </summary>
         [NameInMap("BlackholeStatus")]
         [Validation(Required=false)]
         public List<DescribeBlackholeStatusResponseBodyBlackholeStatus> BlackholeStatus { get; set; }
         public class DescribeBlackholeStatusResponseBodyBlackholeStatus : TeaModel {
             /// <summary>
-            /// Indicates whether blackhole filtering is triggered for the instance. Valid values:
+            /// <para>Indicates whether blackhole filtering is triggered for the instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>blackhole</b>: yes</description></item>
+            /// <item><description><b>normal</b>: no</description></item>
+            /// </list>
             /// 
-            /// *   **blackhole**: yes
-            /// *   **normal**: no
+            /// <b>Example:</b>
+            /// <para>blackhole</para>
             /// </summary>
             [NameInMap("BlackStatus")]
             [Validation(Required=false)]
             public string BlackStatus { get; set; }
 
             /// <summary>
-            /// The end time of blackhole filtering. The value is a UNIX timestamp. Unit: seconds.
+            /// <para>The end time of blackhole filtering. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1540196323</para>
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// The IP address of the instance.
+            /// <para>The IP address of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>203.<em><b>.</b></em>.132</para>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
             /// <summary>
-            /// The start time of blackhole filtering. The value is a UNIX timestamp. Unit: seconds.
+            /// <para>The start time of blackhole filtering. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1540195323</para>
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
@@ -50,7 +63,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

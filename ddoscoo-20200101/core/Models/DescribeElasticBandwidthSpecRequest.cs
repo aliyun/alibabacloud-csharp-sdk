@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeElasticBandwidthSpecRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ddoscoo-cn-mp91j1ao****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -10,76 +10,105 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeWebCCRulesResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EAED912D-909E-45F0-AF74-AC0CCDCAE314</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of custom frequency control rules.
+        /// <para>The total number of custom frequency control rules.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// The custom frequency control rule.
+        /// <para>The custom frequency control rule.</para>
         /// </summary>
         [NameInMap("WebCCRules")]
         [Validation(Required=false)]
         public List<DescribeWebCCRulesResponseBodyWebCCRules> WebCCRules { get; set; }
         public class DescribeWebCCRulesResponseBodyWebCCRules : TeaModel {
             /// <summary>
-            /// The action triggered if the rule is matched. Valid values:
+            /// <para>The action triggered if the rule is matched. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>close</b>: The requests that match the rule are blocked.</description></item>
+            /// <item><description><b>captcha</b>: Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule is implemented.</description></item>
+            /// </list>
             /// 
-            /// *   **close**: The requests that match the rule are blocked.
-            /// *   **captcha**: Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule is implemented.
+            /// <b>Example:</b>
+            /// <para>close</para>
             /// </summary>
             [NameInMap("Act")]
             [Validation(Required=false)]
             public string Act { get; set; }
 
             /// <summary>
-            /// The number of requests that are allowed from a single IP address. Valid values: **2** to **2000**.
+            /// <para>The number of requests that are allowed from a single IP address. Valid values: <b>2</b> to <b>2000</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The check interval. Valid values: **5** to **10800**. Unit: seconds.
+            /// <para>The check interval. Valid values: <b>5</b> to <b>10800</b>. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("Interval")]
             [Validation(Required=false)]
             public int? Interval { get; set; }
 
             /// <summary>
-            /// The match mode. Valid values:
+            /// <para>The match mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>prefix</b>: prefix match.</description></item>
+            /// <item><description><b>match</b>: exact match.</description></item>
+            /// </list>
             /// 
-            /// *   **prefix**: prefix match.
-            /// *   **match**: exact match.
+            /// <b>Example:</b>
+            /// <para>prefix</para>
             /// </summary>
             [NameInMap("Mode")]
             [Validation(Required=false)]
             public string Mode { get; set; }
 
             /// <summary>
-            /// The name of the rule.
+            /// <para>The name of the rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>wq</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The validity period. Valid values: **1** to **1440**. Unit: minutes.
+            /// <para>The validity period. Valid values: <b>1</b> to <b>1440</b>. Unit: minutes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>60</para>
             /// </summary>
             [NameInMap("Ttl")]
             [Validation(Required=false)]
             public int? Ttl { get; set; }
 
             /// <summary>
-            /// The check path.
+            /// <para>The check path.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/hello</para>
             /// </summary>
             [NameInMap("Uri")]
             [Validation(Required=false)]

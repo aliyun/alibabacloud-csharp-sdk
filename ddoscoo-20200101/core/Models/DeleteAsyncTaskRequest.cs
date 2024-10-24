@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DeleteAsyncTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+        /// <para>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the task that you want to delete.
+        /// <para>The ID of the task that you want to delete.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeAsyncTasks~~">DescribeAsyncTasks</a> operation to query the IDs of all asynchronous export tasks.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeAsyncTasks](~~DescribeAsyncTasks~~) operation to query the IDs of all asynchronous export tasks.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

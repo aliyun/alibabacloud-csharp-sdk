@@ -10,57 +10,71 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class CreateTagResourcesRequest : TeaModel {
         /// <summary>
-        /// The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Proxy (Chinese Mainland) instance.
+        /// <para>The region ID of the instance. Set the value to <b>cn-hangzhou</b>, which indicates an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instance belongs in Resource Management.
+        /// <para>The ID of the resource group to which the instance belongs in Resource Management.</para>
+        /// <para>If you do not specify this parameter, the instance belongs to the default resource group.</para>
         /// 
-        /// If you do not specify this parameter, the instance belongs to the default resource group.
+        /// <b>Example:</b>
+        /// <para>rg-acfm2pz25js****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The IDs of the Anti-DDoS Proxy (Chinese Mainland) instances to which you want to add the tag.
+        /// <para>The IDs of the Anti-DDoS Proxy (Chinese Mainland) instances to which you want to add the tag.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ddoscoo-cn-mp91j1ao****</para>
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
-        /// The type of the resource to which the tag belongs. Set the value to **INSTANCE**, which indicates an Anti-DDoS Pro instance.
+        /// <para>The type of the resource to which the tag belongs. Set the value to <b>INSTANCE</b>, which indicates an Anti-DDoS Pro instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>INSTANCE</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// An array that consists of the tags to add.
+        /// <para>An array that consists of the tags to add.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateTagResourcesRequestTags> Tags { get; set; }
         public class CreateTagResourcesRequestTags : TeaModel {
             /// <summary>
-            /// The key of the tag to add.
+            /// <para>The key of the tag to add.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testkey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag to add.
+            /// <para>The value of the tag to add.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testvalue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

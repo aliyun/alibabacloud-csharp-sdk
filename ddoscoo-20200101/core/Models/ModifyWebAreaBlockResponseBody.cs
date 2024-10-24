@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ModifyWebAreaBlockResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5AA2BD65-E289-4E91-9DD9-3E1FB2140D17</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

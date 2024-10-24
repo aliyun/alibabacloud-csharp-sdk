@@ -10,28 +10,38 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DeleteWebCCRuleV2Request : TeaModel {
         /// <summary>
-        /// The domain name of the website.
+        /// <para>The domain name of the website.</para>
+        /// <remarks>
+        /// <para> A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all domain names.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com">www.example.com</a></para>
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// The source of the rule. Valid values:
+        /// <para>The source of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>manual</b> (default): manually created.</description></item>
+        /// <item><description><b>clover</b>: automatically created. Specify this value when you want to delete intelligent protection rules.</description></item>
+        /// </list>
         /// 
-        /// *   **manual** (default): manually created.
-        /// *   **clover**: automatically created. Specify this value when you want to delete intelligent protection rules.
+        /// <b>Example:</b>
+        /// <para>manual</para>
         /// </summary>
         [NameInMap("Owner")]
         [Validation(Required=false)]
         public string Owner { get; set; }
 
         /// <summary>
-        /// The names of the rules that you want to delete.
+        /// <para>The names of the rules that you want to delete.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[\&quot;trdsss\&quot;]</para>
         /// </summary>
         [NameInMap("RuleNames")]
         [Validation(Required=false)]
