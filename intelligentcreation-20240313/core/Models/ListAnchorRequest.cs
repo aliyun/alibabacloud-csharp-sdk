@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("resSpecType")]
+        [Validation(Required=false)]
+        public string ResSpecType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>offlineSynthesis</para>

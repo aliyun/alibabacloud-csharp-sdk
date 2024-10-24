@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class StartAvatarSessionRequest : TeaModel {
+        [NameInMap("customPushUrl")]
+        [Validation(Required=false)]
+        public string CustomPushUrl { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>13534711288320</para>

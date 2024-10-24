@@ -25,6 +25,70 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
 
+        [NameInMap("frames")]
+        [Validation(Required=false)]
+        public List<QueryAvatarProjectResponseBodyFrames> Frames { get; set; }
+        public class QueryAvatarProjectResponseBodyFrames : TeaModel {
+            [NameInMap("layers")]
+            [Validation(Required=false)]
+            public List<QueryAvatarProjectResponseBodyFramesLayers> Layers { get; set; }
+            public class QueryAvatarProjectResponseBodyFramesLayers : TeaModel {
+                [NameInMap("height")]
+                [Validation(Required=false)]
+                public int? Height { get; set; }
+
+                [NameInMap("material")]
+                [Validation(Required=false)]
+                public QueryAvatarProjectResponseBodyFramesLayersMaterial Material { get; set; }
+                public class QueryAvatarProjectResponseBodyFramesLayersMaterial : TeaModel {
+                    [NameInMap("format")]
+                    [Validation(Required=false)]
+                    public string Format { get; set; }
+
+                    [NameInMap("id")]
+                    [Validation(Required=false)]
+                    public string Id { get; set; }
+
+                    [NameInMap("url")]
+                    [Validation(Required=false)]
+                    public string Url { get; set; }
+
+                }
+
+                [NameInMap("positionX")]
+                [Validation(Required=false)]
+                public int? PositionX { get; set; }
+
+                [NameInMap("positionY")]
+                [Validation(Required=false)]
+                public int? PositionY { get; set; }
+
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                [NameInMap("width")]
+                [Validation(Required=false)]
+                public int? Width { get; set; }
+
+            }
+
+            [NameInMap("videoScript")]
+            [Validation(Required=false)]
+            public QueryAvatarProjectResponseBodyFramesVideoScript VideoScript { get; set; }
+            public class QueryAvatarProjectResponseBodyFramesVideoScript : TeaModel {
+                [NameInMap("speedRate")]
+                [Validation(Required=false)]
+                public string SpeedRate { get; set; }
+
+                [NameInMap("voiceTemplateId")]
+                [Validation(Required=false)]
+                public string VoiceTemplateId { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>doc_test_3</para>
@@ -40,6 +104,14 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("resSpecType")]
+        [Validation(Required=false)]
+        public string ResSpecType { get; set; }
+
+        [NameInMap("scaleType")]
+        [Validation(Required=false)]
+        public string ScaleType { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

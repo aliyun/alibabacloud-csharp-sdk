@@ -8,42 +8,38 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
-    public class ListVoiceModelsRequest : TeaModel {
+    public class OperateAvatarProjectRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>DELETE</para>
+        /// </summary>
+        [NameInMap("operateType")]
+        [Validation(Required=false)]
+        public string OperateType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>812907463682949120</para>
+        /// </summary>
+        [NameInMap("projectId")]
+        [Validation(Required=false)]
+        public string ProjectId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
-        [NameInMap("pageNumber")]
+        [NameInMap("resChannelNumber")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? ResChannelNumber { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>FREE</para>
         /// </summary>
-        [NameInMap("pageSize")]
+        [NameInMap("resType")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("resSpecType")]
-        [Validation(Required=false)]
-        public string ResSpecType { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>offlineSynthesis</para>
-        /// </summary>
-        [NameInMap("useScene")]
-        [Validation(Required=false)]
-        public string UseScene { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>PRIVATE_VOICE</para>
-        /// </summary>
-        [NameInMap("voiceType")]
-        [Validation(Required=false)]
-        public string VoiceType { get; set; }
+        public string ResType { get; set; }
 
     }
 

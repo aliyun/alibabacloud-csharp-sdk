@@ -64,6 +64,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
                     [Validation(Required=false)]
                     public string Id { get; set; }
 
+                    [NameInMap("speed")]
+                    [Validation(Required=false)]
+                    public string Speed { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para><a href="https://meeting.dingtalk.com/j/1COFppy0POR">https://meeting.dingtalk.com/j/1COFppy0POR</a></para>

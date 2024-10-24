@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
-    public class ListVoiceModelsRequest : TeaModel {
+    public class QuerySessionInfoShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
-        [NameInMap("pageNumber")]
+        [NameInMap("pageNo")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? PageNo { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -25,25 +25,17 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("resSpecType")]
-        [Validation(Required=false)]
-        public string ResSpecType { get; set; }
-
         /// <summary>
         /// <b>Example:</b>
-        /// <para>offlineSynthesis</para>
+        /// <para>805800890535673856</para>
         /// </summary>
-        [NameInMap("useScene")]
+        [NameInMap("projectId")]
         [Validation(Required=false)]
-        public string UseScene { get; set; }
+        public string ProjectId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>PRIVATE_VOICE</para>
-        /// </summary>
-        [NameInMap("voiceType")]
+        [NameInMap("statusList")]
         [Validation(Required=false)]
-        public string VoiceType { get; set; }
+        public string StatusListShrink { get; set; }
 
     }
 
