@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
     public class GetAuthTokenRequest : TeaModel {
+        [NameInMap("BizType")]
+        [Validation(Required=false)]
+        public int? BizType { get; set; }
+
+        [NameInMap("CmApiCode")]
+        [Validation(Required=false)]
+        public int? CmApiCode { get; set; }
+
+        [NameInMap("CtApiCode")]
+        [Validation(Required=false)]
+        public int? CtApiCode { get; set; }
+
+        [NameInMap("CuApiCode")]
+        [Validation(Required=false)]
+        public int? CuApiCode { get; set; }
+
         /// <summary>
         /// <para>The requested domain name.</para>
         /// <para>This parameter is required.</para>
@@ -46,6 +62,10 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }
+
+        [NameInMap("Version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
 
     }
 
