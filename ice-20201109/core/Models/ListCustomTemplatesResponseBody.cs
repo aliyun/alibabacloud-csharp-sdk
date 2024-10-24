@@ -21,6 +21,22 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("FrontendHint")]
+            [Validation(Required=false)]
+            public ListCustomTemplatesResponseBodyCustomTemplateListFrontendHint FrontendHint { get; set; }
+            public class ListCustomTemplatesResponseBodyCustomTemplateListFrontendHint : TeaModel {
+                [NameInMap("TranscodeTemplateHint")]
+                [Validation(Required=false)]
+                public ListCustomTemplatesResponseBodyCustomTemplateListFrontendHintTranscodeTemplateHint TranscodeTemplateHint { get; set; }
+                public class ListCustomTemplatesResponseBodyCustomTemplateListFrontendHintTranscodeTemplateHint : TeaModel {
+                    [NameInMap("BitrateControlType")]
+                    [Validation(Required=false)]
+                    public string BitrateControlType { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>true</para>
