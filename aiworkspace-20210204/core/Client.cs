@@ -1071,6 +1071,338 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建数据集版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatasetVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatasetVersionResponse
+        /// </returns>
+        public CreateDatasetVersionResponse CreateDatasetVersionWithOptions(string DatasetId, CreateDatasetVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataCount))
+            {
+                body["DataCount"] = request.DataCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSize))
+            {
+                body["DataSize"] = request.DataSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceType))
+            {
+                body["DataSourceType"] = request.DataSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                body["Labels"] = request.Labels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                body["Options"] = request.Options;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Property))
+            {
+                body["Property"] = request.Property;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                body["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uri))
+            {
+                body["Uri"] = request.Uri;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDatasetVersion",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/datasets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DatasetId) + "/versions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDatasetVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据集版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatasetVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatasetVersionResponse
+        /// </returns>
+        public async Task<CreateDatasetVersionResponse> CreateDatasetVersionWithOptionsAsync(string DatasetId, CreateDatasetVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataCount))
+            {
+                body["DataCount"] = request.DataCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSize))
+            {
+                body["DataSize"] = request.DataSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceType))
+            {
+                body["DataSourceType"] = request.DataSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                body["Labels"] = request.Labels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                body["Options"] = request.Options;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Property))
+            {
+                body["Property"] = request.Property;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                body["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uri))
+            {
+                body["Uri"] = request.Uri;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDatasetVersion",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/datasets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DatasetId) + "/versions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDatasetVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据集版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatasetVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatasetVersionResponse
+        /// </returns>
+        public CreateDatasetVersionResponse CreateDatasetVersion(string DatasetId, CreateDatasetVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateDatasetVersionWithOptions(DatasetId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据集版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatasetVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatasetVersionResponse
+        /// </returns>
+        public async Task<CreateDatasetVersionResponse> CreateDatasetVersionAsync(string DatasetId, CreateDatasetVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateDatasetVersionWithOptionsAsync(DatasetId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据集版本的标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatasetVersionLabelsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatasetVersionLabelsResponse
+        /// </returns>
+        public CreateDatasetVersionLabelsResponse CreateDatasetVersionLabelsWithOptions(string DatasetId, string VersionName, CreateDatasetVersionLabelsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                body["Labels"] = request.Labels;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDatasetVersionLabels",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/datasets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DatasetId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(VersionName) + "/labels",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDatasetVersionLabelsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据集版本的标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatasetVersionLabelsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatasetVersionLabelsResponse
+        /// </returns>
+        public async Task<CreateDatasetVersionLabelsResponse> CreateDatasetVersionLabelsWithOptionsAsync(string DatasetId, string VersionName, CreateDatasetVersionLabelsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                body["Labels"] = request.Labels;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDatasetVersionLabels",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/datasets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DatasetId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(VersionName) + "/labels",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDatasetVersionLabelsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据集版本的标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatasetVersionLabelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatasetVersionLabelsResponse
+        /// </returns>
+        public CreateDatasetVersionLabelsResponse CreateDatasetVersionLabels(string DatasetId, string VersionName, CreateDatasetVersionLabelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateDatasetVersionLabelsWithOptions(DatasetId, VersionName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据集版本的标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatasetVersionLabelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatasetVersionLabelsResponse
+        /// </returns>
+        public async Task<CreateDatasetVersionLabelsResponse> CreateDatasetVersionLabelsAsync(string DatasetId, string VersionName, CreateDatasetVersionLabelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateDatasetVersionLabelsWithOptionsAsync(DatasetId, VersionName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建实验</para>
         /// </summary>
         /// 
@@ -3025,6 +3357,238 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除指定版本的数据集信息，如果删除的版本是该数据集的仅存版本，版本删除后会联动删除dataset 表中的数据集信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatasetVersionResponse
+        /// </returns>
+        public DeleteDatasetVersionResponse DeleteDatasetVersionWithOptions(string DatasetId, string VersionName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDatasetVersion",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/datasets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DatasetId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(VersionName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDatasetVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定版本的数据集信息，如果删除的版本是该数据集的仅存版本，版本删除后会联动删除dataset 表中的数据集信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatasetVersionResponse
+        /// </returns>
+        public async Task<DeleteDatasetVersionResponse> DeleteDatasetVersionWithOptionsAsync(string DatasetId, string VersionName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDatasetVersion",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/datasets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DatasetId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(VersionName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDatasetVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定版本的数据集信息，如果删除的版本是该数据集的仅存版本，版本删除后会联动删除dataset 表中的数据集信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteDatasetVersionResponse
+        /// </returns>
+        public DeleteDatasetVersionResponse DeleteDatasetVersion(string DatasetId, string VersionName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteDatasetVersionWithOptions(DatasetId, VersionName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定版本的数据集信息，如果删除的版本是该数据集的仅存版本，版本删除后会联动删除dataset 表中的数据集信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteDatasetVersionResponse
+        /// </returns>
+        public async Task<DeleteDatasetVersionResponse> DeleteDatasetVersionAsync(string DatasetId, string VersionName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteDatasetVersionWithOptionsAsync(DatasetId, VersionName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据集版本的标签。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatasetVersionLabelsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatasetVersionLabelsResponse
+        /// </returns>
+        public DeleteDatasetVersionLabelsResponse DeleteDatasetVersionLabelsWithOptions(string DatasetId, string VersionName, DeleteDatasetVersionLabelsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keys))
+            {
+                query["Keys"] = request.Keys;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDatasetVersionLabels",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/datasets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DatasetId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(VersionName) + "/labels",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDatasetVersionLabelsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据集版本的标签。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatasetVersionLabelsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatasetVersionLabelsResponse
+        /// </returns>
+        public async Task<DeleteDatasetVersionLabelsResponse> DeleteDatasetVersionLabelsWithOptionsAsync(string DatasetId, string VersionName, DeleteDatasetVersionLabelsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keys))
+            {
+                query["Keys"] = request.Keys;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDatasetVersionLabels",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/datasets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DatasetId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(VersionName) + "/labels",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDatasetVersionLabelsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据集版本的标签。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatasetVersionLabelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatasetVersionLabelsResponse
+        /// </returns>
+        public DeleteDatasetVersionLabelsResponse DeleteDatasetVersionLabels(string DatasetId, string VersionName, DeleteDatasetVersionLabelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteDatasetVersionLabelsWithOptions(DatasetId, VersionName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据集版本的标签。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatasetVersionLabelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatasetVersionLabelsResponse
+        /// </returns>
+        public async Task<DeleteDatasetVersionLabelsResponse> DeleteDatasetVersionLabelsAsync(string DatasetId, string VersionName, DeleteDatasetVersionLabelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteDatasetVersionLabelsWithOptionsAsync(DatasetId, VersionName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>删除实验</para>
         /// </summary>
         /// 
@@ -4503,6 +5067,108 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取指定版本的数据集信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatasetVersionResponse
+        /// </returns>
+        public GetDatasetVersionResponse GetDatasetVersionWithOptions(string DatasetId, string VersionName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDatasetVersion",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/datasets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DatasetId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(VersionName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDatasetVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定版本的数据集信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatasetVersionResponse
+        /// </returns>
+        public async Task<GetDatasetVersionResponse> GetDatasetVersionWithOptionsAsync(string DatasetId, string VersionName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDatasetVersion",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/datasets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DatasetId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(VersionName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDatasetVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定版本的数据集信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetDatasetVersionResponse
+        /// </returns>
+        public GetDatasetVersionResponse GetDatasetVersion(string DatasetId, string VersionName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetDatasetVersionWithOptions(DatasetId, VersionName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定版本的数据集信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetDatasetVersionResponse
+        /// </returns>
+        public async Task<GetDatasetVersionResponse> GetDatasetVersionAsync(string DatasetId, string VersionName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetDatasetVersionWithOptionsAsync(DatasetId, VersionName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取默认工作空间</para>
         /// </summary>
         /// 
@@ -5815,6 +6481,208 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListCodeSourcesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集版本列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatasetVersionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatasetVersionsResponse
+        /// </returns>
+        public ListDatasetVersionsResponse ListDatasetVersionsWithOptions(string DatasetId, ListDatasetVersionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourcesTypes))
+            {
+                query["DataSourcesTypes"] = request.DataSourcesTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelKeys))
+            {
+                query["LabelKeys"] = request.LabelKeys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LableValues))
+            {
+                query["LableValues"] = request.LableValues;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Properties))
+            {
+                query["Properties"] = request.Properties;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypes))
+            {
+                query["SourceTypes"] = request.SourceTypes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDatasetVersions",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/datasets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DatasetId) + "/versions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDatasetVersionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集版本列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatasetVersionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatasetVersionsResponse
+        /// </returns>
+        public async Task<ListDatasetVersionsResponse> ListDatasetVersionsWithOptionsAsync(string DatasetId, ListDatasetVersionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourcesTypes))
+            {
+                query["DataSourcesTypes"] = request.DataSourcesTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelKeys))
+            {
+                query["LabelKeys"] = request.LabelKeys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LableValues))
+            {
+                query["LableValues"] = request.LableValues;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Properties))
+            {
+                query["Properties"] = request.Properties;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypes))
+            {
+                query["SourceTypes"] = request.SourceTypes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDatasetVersions",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/datasets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DatasetId) + "/versions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDatasetVersionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集版本列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatasetVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatasetVersionsResponse
+        /// </returns>
+        public ListDatasetVersionsResponse ListDatasetVersions(string DatasetId, ListDatasetVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListDatasetVersionsWithOptions(DatasetId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集版本列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatasetVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatasetVersionsResponse
+        /// </returns>
+        public async Task<ListDatasetVersionsResponse> ListDatasetVersionsAsync(string DatasetId, ListDatasetVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListDatasetVersionsWithOptionsAsync(DatasetId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9599,6 +10467,160 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateDatasetWithOptionsAsync(DatasetId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新指定版本的数据集信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDatasetVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDatasetVersionResponse
+        /// </returns>
+        public UpdateDatasetVersionResponse UpdateDatasetVersionWithOptions(string DatasetId, string VersionName, UpdateDatasetVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataCount))
+            {
+                body["DataCount"] = request.DataCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSize))
+            {
+                body["DataSize"] = request.DataSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                body["Options"] = request.Options;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDatasetVersion",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/datasets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DatasetId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(VersionName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDatasetVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新指定版本的数据集信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDatasetVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDatasetVersionResponse
+        /// </returns>
+        public async Task<UpdateDatasetVersionResponse> UpdateDatasetVersionWithOptionsAsync(string DatasetId, string VersionName, UpdateDatasetVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataCount))
+            {
+                body["DataCount"] = request.DataCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSize))
+            {
+                body["DataSize"] = request.DataSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                body["Options"] = request.Options;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDatasetVersion",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/datasets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DatasetId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(VersionName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDatasetVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新指定版本的数据集信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDatasetVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDatasetVersionResponse
+        /// </returns>
+        public UpdateDatasetVersionResponse UpdateDatasetVersion(string DatasetId, string VersionName, UpdateDatasetVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateDatasetVersionWithOptions(DatasetId, VersionName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新指定版本的数据集信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDatasetVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDatasetVersionResponse
+        /// </returns>
+        public async Task<UpdateDatasetVersionResponse> UpdateDatasetVersionAsync(string DatasetId, string VersionName, UpdateDatasetVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateDatasetVersionWithOptionsAsync(DatasetId, VersionName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
