@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string ImageCategory { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>m-2ze74g5mvy4pjg*****</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]

@@ -13,12 +13,19 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public string DeploymentPolicyShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Demo</para>
+        /// </summary>
         [NameInMap("JobDescription")]
         [Validation(Required=false)]
         public string JobDescription { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testjob</para>
         /// </summary>
         [NameInMap("JobName")]
         [Validation(Required=false)]
@@ -29,7 +36,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string JobScheduler { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]

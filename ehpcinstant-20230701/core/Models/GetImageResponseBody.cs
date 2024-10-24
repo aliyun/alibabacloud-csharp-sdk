@@ -21,10 +21,18 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public GetImageResponseBodyImageContainerImageSpec ContainerImageSpec { get; set; }
             public class GetImageResponseBodyImageContainerImageSpec : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>True</para>
+                /// </summary>
                 [NameInMap("IsACREnterprise")]
                 [Validation(Required=false)]
                 public bool? IsACREnterprise { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>True</para>
+                /// </summary>
                 [NameInMap("IsACRRegistry")]
                 [Validation(Required=false)]
                 public bool? IsACRRegistry { get; set; }
@@ -33,30 +41,54 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 [Validation(Required=false)]
                 public GetImageResponseBodyImageContainerImageSpecRegistryCredential RegistryCredential { get; set; }
                 public class GetImageResponseBodyImageContainerImageSpecRegistryCredential : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>userpassword</para>
+                    /// </summary>
                     [NameInMap("Password")]
                     [Validation(Required=false)]
                     public string Password { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>registry-vpc.cn-hangzhou.aliyuncs.com</para>
+                    /// </summary>
                     [NameInMap("Server")]
                     [Validation(Required=false)]
                     public string Server { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>username</para>
+                    /// </summary>
                     [NameInMap("UserName")]
                     [Validation(Required=false)]
                     public string UserName { get; set; }
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cri-xyz795ygf8k9****</para>
+                /// </summary>
                 [NameInMap("RegistryCriId")]
                 [Validation(Required=false)]
                 public string RegistryCriId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>registry-vpc.cn-hangzhou.aliyuncs.com/ehpc_open/nginx:latest</para>
+                /// </summary>
                 [NameInMap("RegistryUrl")]
                 [Validation(Required=false)]
                 public string RegistryUrl { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2022-12-23T09:51:39Z</para>
+            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
@@ -66,16 +98,27 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>VM</para>
             /// </summary>
             [NameInMap("ImageType")]
             [Validation(Required=false)]
             public string ImageType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>app-image</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>40 GiB</para>
+            /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
             public string Size { get; set; }
@@ -88,38 +131,70 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public GetImageResponseBodyImageVMImageSpec VMImageSpec { get; set; }
             public class GetImageResponseBodyImageVMImageSpec : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>x86_64</para>
+                /// </summary>
                 [NameInMap("Architecture")]
                 [Validation(Required=false)]
                 public string Architecture { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>m-uf60twafjtaart******</para>
+                /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>CentOS  7.6 64 bit</para>
+                /// </summary>
                 [NameInMap("OsTag")]
                 [Validation(Required=false)]
                 public string OsTag { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>CentOS</para>
+                /// </summary>
                 [NameInMap("Platform")]
                 [Validation(Required=false)]
                 public string Platform { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>v1.0</para>
+            /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

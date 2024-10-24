@@ -47,14 +47,26 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public List<ListJobExecutorsResponseBodyExecutors> Executors { get; set; }
         public class ListJobExecutorsResponseBodyExecutors : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("ArrayIndex")]
             [Validation(Required=false)]
             public int? ArrayIndex { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2024-02-20 10:04:10</para>
+            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2024-02-20 10:04:18</para>
+            /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
@@ -62,6 +74,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [NameInMap("ExecutorId")]
             [Validation(Required=false)]
             public string ExecutorId { get; set; }
+
+            [NameInMap("ExternalIpAddress")]
+            [Validation(Required=false)]
+            public List<string> ExternalIpAddress { get; set; }
 
             [NameInMap("HostName")]
             [Validation(Required=false)]
@@ -71,36 +87,68 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public List<string> IpAddress { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Running</para>
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Creating executor</para>
+            /// </summary>
             [NameInMap("StatusReason")]
             [Validation(Required=false)]
             public string StatusReason { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>job-xxxx</para>
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>896D338C-E4F4-41EC-A154-D605E5DE****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>task0</para>
+        /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>50</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public string TotalCount { get; set; }

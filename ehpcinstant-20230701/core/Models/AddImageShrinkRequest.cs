@@ -17,12 +17,23 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("ImageType")]
+        [Validation(Required=false)]
+        public string ImageType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>V1.0</para>
+        /// </summary>
         [NameInMap("ImageVersion")]
         [Validation(Required=false)]
         public string ImageVersion { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>app-image</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

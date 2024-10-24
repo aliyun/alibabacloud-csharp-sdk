@@ -13,14 +13,26 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public List<int?> ArrayIndex { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>job-xxxxx</para>
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cpu_utilization</para>
+        /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Task0</para>
+        /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }

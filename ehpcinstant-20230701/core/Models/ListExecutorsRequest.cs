@@ -21,24 +21,48 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public List<string> IpAddresses { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>testJob</para>
+            /// </summary>
             [NameInMap("JobName")]
             [Validation(Required=false)]
             public string JobName { get; set; }
 
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public List<string> Status { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1703819914</para>
+            /// </summary>
             [NameInMap("TimeCreatedAfter")]
             [Validation(Required=false)]
             public int? TimeCreatedAfter { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1703820113</para>
+            /// </summary>
             [NameInMap("TimeCreatedBefore")]
             [Validation(Required=false)]
             public int? TimeCreatedBefore { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>50</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }

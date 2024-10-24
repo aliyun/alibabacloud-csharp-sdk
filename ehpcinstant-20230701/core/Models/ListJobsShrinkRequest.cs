@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public string FilterShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>50</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }

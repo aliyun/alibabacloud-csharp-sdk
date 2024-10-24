@@ -25,10 +25,18 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public string ImageType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
