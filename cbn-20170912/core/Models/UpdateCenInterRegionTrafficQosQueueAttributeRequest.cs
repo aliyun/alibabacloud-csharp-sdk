@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class UpdateCenInterRegionTrafficQosQueueAttributeRequest : TeaModel {
+        /// <summary>
+        /// <para>按带宽绝对值模式分配时，当前队列可使用的跨地域带宽的绝对值，单位Mbps。</para>
+        /// <para>输入数字即可，无需输入单位。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public long? Bandwidth { get; set; }

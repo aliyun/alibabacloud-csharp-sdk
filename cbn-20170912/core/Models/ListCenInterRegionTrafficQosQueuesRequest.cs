@@ -9,14 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListCenInterRegionTrafficQosQueuesRequest : TeaModel {
+        /// <summary>
+        /// <para>按照实际的生效带宽值进行过滤，只允许输入正整数，单位Mbps。</para>
+        /// </summary>
         [NameInMap("EffectiveBandwidthFilter")]
         [Validation(Required=false)]
         public ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter EffectiveBandwidthFilter { get; set; }
         public class ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter : TeaModel {
+            /// <summary>
+            /// <para>实际生效带宽大于或等于指定带宽值。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>50</para>
+            /// </summary>
             [NameInMap("Gte")]
             [Validation(Required=false)]
             public long? Gte { get; set; }
 
+            /// <summary>
+            /// <para>实际生效带宽小于或等于指定带宽值。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("Lte")]
             [Validation(Required=false)]
             public long? Lte { get; set; }

@@ -133,7 +133,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The prefix list against which routes are matched.</para>
-        /// <para>You must specify the IP addresses in CIDR notation. You can enter at most 32 CIDR blocks.</para>
+        /// <para>Specify IP addresses in CIDR notations. You can specify at most 32 CIDR blocks.</para>
+        /// <para>IPv4 and IPv4 addresses are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.10.10.0/24</para>
@@ -177,6 +178,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public bool? DestinationInstanceIdsReverseMatch { get; set; }
 
+        /// <summary>
+        /// <para>The destination region IDs of the route. You can specify at most 32 region IDs.</para>
+        /// </summary>
         [NameInMap("DestinationRegionIds")]
         [Validation(Required=false)]
         public List<string> DestinationRegionIds { get; set; }

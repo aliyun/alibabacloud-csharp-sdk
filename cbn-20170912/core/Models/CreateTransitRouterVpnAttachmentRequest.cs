@@ -193,7 +193,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The ID of the zone in the current region.</para>
         /// <para>Resources are deployed in the specified zone.</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Zone")]
         [Validation(Required=false)]
@@ -202,7 +201,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The zone ID of the read-only instance.</para>
             /// <para>You can call the <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> operation to query the most recent zone list.</para>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-h</para>

@@ -72,6 +72,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public List<AddTrafficMatchRuleToTrafficMarkingPolicyRequestTrafficMatchRules> TrafficMatchRules { get; set; }
         public class AddTrafficMatchRuleToTrafficMarkingPolicyRequestTrafficMatchRules : TeaModel {
+            /// <summary>
+            /// <para>The address family. You can set the value to IPv4 or IPv6, or leave the value empty.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>IPv4</para>
+            /// </summary>
             [NameInMap("AddressFamily")]
             [Validation(Required=false)]
             public string AddressFamily { get; set; }
@@ -92,7 +98,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <para>Packets whose destination ports fall into the specified destination port range are considered a match. If you do not specify destination port range, packets are considered a match regardless of the destination port.</para>
             /// <para>You can specify at most two port numbers for this parameter. Take note of the following rules:</para>
             /// <list type="bullet">
-            /// <item><description>If you enter only one port number, such as 1, packets whose destination port is 1 are considered a match.</description></item>
+            /// <item><description>If you enter only one port number, such as 1, packets whose destination port is 1 are considered a match. A value of -1 specifies all destination ports.</description></item>
             /// <item><description>If you enter two port numbers, such as 1 and 200, packets whose destination ports fall into 1 and 200 are considered a match.</description></item>
             /// <item><description>If you enter two port numbers and one of them is -1, the other port must also be -1. In this case, packets are considered a match regardless of the destination port.</description></item>
             /// </list>
@@ -157,7 +163,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <para>Packets whose source ports fall into the specified source port range are considered a match. If you do not specify a source port range, packets are considered a match regardless of the source port.</para>
             /// <para>You can enter at most two port numbers. Take note of the following rules:</para>
             /// <list type="bullet">
-            /// <item><description>If you enter only one port number, such as 1, packets whose source port is 1 are considered a match.</description></item>
+            /// <item><description>If you enter only one port number, such as 1, packets whose source port is 1 are considered a match. A value of -1 specifies all source ports.</description></item>
             /// <item><description>If you enter two port numbers, such as 1 and 200, packets whose source ports fall into 1 and 200 are considered a match.</description></item>
             /// <item><description>If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets are considered a match regardless of the source port.</description></item>
             /// </list>
@@ -179,7 +185,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The name of the traffic classification rule.</para>
-            /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
+            /// <para>The name is optional. If you enter a name, it must be 1 to 128 characters in length, and cannot start with http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nametest</para>

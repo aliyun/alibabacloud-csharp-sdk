@@ -108,12 +108,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public List<CreateTrafficMarkingPolicyRequestTrafficMatchRules> TrafficMatchRules { get; set; }
         public class CreateTrafficMarkingPolicyRequestTrafficMatchRules : TeaModel {
+            /// <summary>
+            /// <para>The address family. You can set the value to IPv4 or IPv6, or leave the value empty.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>IPv4</para>
+            /// </summary>
             [NameInMap("AddressFamily")]
             [Validation(Required=false)]
             public string AddressFamily { get; set; }
 
             /// <summary>
-            /// <para>The destination CIDR block that is used to match packets.</para>
+            /// <para>The destination CIDR block of packets. IPv4 and IPv6 addresses are supported.</para>
             /// <para>Packets whose destination IP addresses fall into the specified destination CIDR block meet the traffic classification rule. If you do not specify a destination CIDR block, all packets meet the traffic classification rule.</para>
             /// <para>You can create up to 50 traffic classification rules in each call You can specify a destination CIDR block for each traffic classification rule.</para>
             /// 
@@ -129,7 +135,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <para>Packets whose destination ports fall within the destination port range meet the traffic classification rule. If you do not specify destination port range, all packets meet the traffic classification rule.</para>
             /// <para>You can enter up to two port numbers. Take note of the following rules:</para>
             /// <list type="bullet">
-            /// <item><description>If you enter only one port number, such as 1, packets whose destination port is 1 meet the traffic classification rule.</description></item>
+            /// <item><description>If you enter only one port number, such as 1, packets whose destination port is 1 meet the traffic classification rule. A value of -1 specifies all destination ports.</description></item>
             /// <item><description>If you enter two port numbers, such as 1 and 200, packets whose destination ports fall into 1 and 200 meet the traffic classification rule.</description></item>
             /// <item><description>If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, all packets meet the traffic classification rule.</description></item>
             /// </list>
@@ -140,7 +146,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<int?> DstPortRange { get; set; }
 
             /// <summary>
-            /// <para>The DSCP value that is used to match packets. Valid values: <b>0</b> to <b>63</b>.</para>
+            /// <para>The Differentiated Service Code Point (DSCP) value that is used to match packets. Valid values: <b>0</b> to <b>63</b>.</para>
             /// <para>Packets that carry the specified DSCP value meet the traffic classification rule. If you do not specify a DSCP value, all packets meet the traffic classification rule.</para>
             /// <remarks>
             /// <para> The DSCP value that you specify for this parameter is the DSCP value that packets carry before they are transmitted over the inter-region connection.</para>
@@ -157,7 +163,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The protocol that is used to match packets.</para>
             /// <para>Traffic classification rules support the following protocols: <b>HTTP</b>, <b>HTTPS</b>, <b>TCP</b>, <b>UDP</b>, <b>SSH</b>, and <b>Telnet</b>. For more information, log on to the <a href="https://cen.console.aliyun.com/cen/list">CEN console</a>.</para>
-            /// <para><b>Some protocols use a fixed port. Click to view protocols and ports.</b></para>
+            /// <para><b>Some protocols use a fixed port. Click to view the protocols and ports.</b></para>
             /// <list type="bullet">
             /// <item><description>If the protocol is <b>ICMP</b>, the destination port must be <b>-1</b>.</description></item>
             /// <item><description>If the protocol is <b>GRE</b>, the destination port must be <b>1</b>.</description></item>
@@ -182,7 +188,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The source CIDR block that is used to match packets.</para>
+            /// <para>The source CIDR block of packets. IPv6 and IPv4 addresses are supported.</para>
             /// <para>Packets whose source IP addresses fall into the specified source CIDR block meet the traffic classification rule. If you do not specify a source CIDR block, all packets meet the traffic classification rule.</para>
             /// <para>You can create up to 50 traffic classification rules in each call. You can specify a source CIDR block for each traffic classification rule.</para>
             /// 
@@ -195,10 +201,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The source port range that is used to match packets. Valid values: <b>-1</b> and <b>1</b> to <b>65535</b>.</para>
-            /// <para>Packets whose source ports fall into the source port range meet the traffic classification rule. If you do not specify a source port range, all packets meet the traffic classification rule.</para>
+            /// <para>Packets whose source ports fall within the source port range meet the traffic classification rule. If you do not specify a source port range, all packets meet the traffic classification rule.</para>
             /// <para>You can enter up to two port numbers. Take note of the following rules:</para>
             /// <list type="bullet">
-            /// <item><description>If you enter only one port number, such as 1, packets whose source port is 1 meet the traffic classification rule.</description></item>
+            /// <item><description>If you enter only one port number, such as 1, packets whose source port is 1 meet the traffic classification rule. A value of -1 specifies all source ports.</description></item>
             /// <item><description>If you enter two port numbers, such as 1 and 200, packets whose source ports fall into 1 and 200 meet the traffic classification rule.</description></item>
             /// <item><description>If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, all packets meet the traffic classification rule.</description></item>
             /// </list>
@@ -211,7 +217,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The description of the traffic classification rule.</para>
             /// <para>You can create up to 50 traffic classification rules in each call. You can specify a description for each traffic classification rule.</para>
-            /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</para>
+            /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>desctest</para>

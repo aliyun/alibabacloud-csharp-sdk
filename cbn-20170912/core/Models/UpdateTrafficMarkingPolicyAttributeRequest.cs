@@ -17,12 +17,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public List<UpdateTrafficMarkingPolicyAttributeRequestAddTrafficMatchRules> AddTrafficMatchRules { get; set; }
         public class UpdateTrafficMarkingPolicyAttributeRequestAddTrafficMatchRules : TeaModel {
+            /// <summary>
+            /// <para>The address family. Valid values: You can set the value to IPv4 or IPv6, or leave the value empty.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>IPv4</para>
+            /// </summary>
             [NameInMap("AddressFamily")]
             [Validation(Required=false)]
             public string AddressFamily { get; set; }
 
             /// <summary>
-            /// <para>The destination CIDR block that is used to match packets.</para>
+            /// <para>The destination CIDR block of packets. IPv4 and IPv6 addresses are supported.</para>
             /// <para>Packets whose destination IP addresses fall into the specified destination CIDR block meet the traffic classification rule. If you do not specify a destination CIDR block, all packets meet the traffic classification rule.</para>
             /// <para>You can create up to 50 traffic classification rules in each call. You can specify a destination CIDR block for each traffic classification rule.</para>
             /// 
@@ -91,7 +97,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The source CIDR block that is used to match packets.</para>
+            /// <para>The source CIDR block of packets. IPv4 and IPv6 addresses are supported.</para>
             /// <para>Packets whose source IP addresses fall into the specified source CIDR block meet the traffic classification rule. If you do not specify a source CIDR block, all packets meet the traffic classification rule.</para>
             /// <para>You can create up to 50 traffic classification rules in each call. You can specify a source CIDR block for each traffic classification rule.</para>
             /// 
@@ -164,12 +170,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public List<UpdateTrafficMarkingPolicyAttributeRequestDeleteTrafficMatchRules> DeleteTrafficMatchRules { get; set; }
         public class UpdateTrafficMarkingPolicyAttributeRequestDeleteTrafficMatchRules : TeaModel {
+            /// <summary>
+            /// <para>The address family. Valid values: You can set the value to IPv4 or IPv6, or leave the value empty.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>IPv6</para>
+            /// </summary>
             [NameInMap("AddressFamily")]
             [Validation(Required=false)]
             public string AddressFamily { get; set; }
 
             /// <summary>
-            /// <para>The destination CIDR block that is used to match packets.</para>
+            /// <para>The destination CIDR block of packets. IPv4 and IPv6 addresses are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.200.3/32</para>
@@ -207,7 +219,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The source CIDR block that is used to match packets.</para>
+            /// <para>The source CIDR block of packets. IPv4 and IPv6 addresses are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.72.0.0/16</para>
@@ -225,7 +237,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The description of the traffic classification rule.</para>
-            /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</para>
+            /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Hangzhou-to-Qingdao CAT</para>

@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string CenId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable IPv6. true: enables IPv6. false: disables IPv6. If you do not specify a value, vSwitches are not filtered based on this attribute.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("EnabledIpv6")]
         [Validation(Required=false)]
         public bool? EnabledIpv6 { get; set; }

@@ -38,7 +38,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the multicast group to which the multicast source belongs. Valid values: <b>224.0.0.1</b> to <b>239.255.255.254</b>.</para>
+        /// <para>The IP address of the multicast group to which the multicast source belongs. Valid values: <b>224.0.1.0</b> to <b>239.255.255.254</b>.</para>
+        /// <remarks>
+        /// <para>224.0.0.0 to 224.0.0.255 are reserved by the system and cannot be used by multicast groups.</para>
+        /// </remarks>
         /// <para>If the multicast group does not exist in the multicast domain, the system automatically creates the multicast group in the multicast domain.</para>
         /// <para>This parameter is required.</para>
         /// 

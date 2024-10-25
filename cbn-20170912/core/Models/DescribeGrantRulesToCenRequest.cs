@@ -40,6 +40,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ChildInstanceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable IPv6.</para>
+        /// <ol>
+        /// <item><description>This parameter takes effect only if ProductType is set to VPC.</description></item>
+        /// <item><description>true: enables IPv6. false: disables IPv6. If you do not specify a value, network instances are not filtered based on this parameter.</description></item>
+        /// </ol>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("EnabledIpv6")]
         [Validation(Required=false)]
         public bool? EnabledIpv6 { get; set; }

@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterRouteEntryDescription { get; set; }
 
             /// <summary>
-            /// <para>The destination CIDR block of the route.</para>
+            /// <para>The destination CIDR block of the route entry. An IPv4 or IPv6 CIDR block is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.0.0/24</para>

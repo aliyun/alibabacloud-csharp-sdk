@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class CreateTransitRouterPrefixListAssociationRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> for each API request may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,11 +24,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
         /// <item><description><b>false</b> (default): performs a dry run and sends the request.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> This parameter is not in use.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -38,10 +41,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the next hop.</para>
-        /// <remarks>
-        /// <para>If <b>NextHopType</b> is set to <b>BlackHole</b>, you must set this parameter to <b>BlackHole</b>.</para>
-        /// </remarks>
+        /// <para>The ID of the next hop connection.</para>
+        /// <para>To specify all CIDR blocks in the prefix list as blackhole routes, set this parameter to <b>BlackHole</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,9 +56,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <para>The type of the next hop. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>BlackHole</b>: specifies that all the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.</description></item>
-        /// <item><description><b>VPC</b>: specifies that the next hop of the CIDR blocks in the prefix list is a virtual private cloud (VPC) connection.</description></item>
-        /// <item><description><b>VBR</b>: specifies that the next hop of the CIDR blocks in the prefix list is a virtual border router (VBR) connection.</description></item>
-        /// <item><description><b>TR</b>: specifies that the next hop of the CIDR blocks in the prefix list is an inter-region connection.</description></item>
+        /// <item><description><b>VPC</b>: specifies a virtual private cloud (VPC) connection as the next hop.</description></item>
+        /// <item><description><b>VBR</b>: specifies a virtual border router (VBR) connection as the next hop.</description></item>
+        /// <item><description><b>TR</b>: specifies an inter-region connection as the next hop.</description></item>
+        /// <item><description><b>ECR</b>: specifies an Express Connect Router (ECR) connection as the next hop.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

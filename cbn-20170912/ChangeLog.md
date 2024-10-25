@@ -1,3 +1,8 @@
+2024-10-25 Version: 1.2.1
+- Update API CreateTransitRouterVpnAttachment: update param Zone.
+- Update API DescribeCenChildInstanceRouteEntries: update response param.
+
+
 2024-10-21 Version: 1.2.0
 - Support API ModifyTrafficMatchRuleToTrafficMarkingPolicy.
 - Update API CreateCenRouteMap: add param DestinationRegionIds.

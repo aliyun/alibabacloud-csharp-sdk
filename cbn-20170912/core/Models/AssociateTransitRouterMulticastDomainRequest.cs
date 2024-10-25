@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether only to precheck the API request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run, without sending the actual request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: prechecks the request but does not associate the vSwitch with the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends the request. The vSwitch is associated with the multicast domain after the request passes the precheck.</description></item>
+        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,8 +73,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterMulticastDomainId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch IDs.</para>
-        /// <para>You can specify at most five vSwitch IDs in each call.</para>
+        /// <para>The IDs of vSwitches.</para>
         /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]

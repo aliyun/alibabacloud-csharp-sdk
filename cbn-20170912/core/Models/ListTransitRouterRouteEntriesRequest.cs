@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The filter conditions for route CIDR blocks.</para>
+        /// <para>The filter conditions.</para>
         /// </summary>
         [NameInMap("RouteFilter")]
         [Validation(Required=false)]
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <para>The match pattern for filtering CIDR blocks. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>PrefixExactMatchCidrs</b>: exact matching.</description></item>
-            /// <item><description><b>LongestPrefixMatchCidrs</b>: longest prefix matching. The specified IP address and CIDR block are considered a match.</description></item>
-            /// <item><description><b>SubnetOfMatchCidrs</b>: subnet matching. The specified CIDR block is considered a match.</description></item>
-            /// <item><description><b>SupernetOfMatchCidrs</b>: supernet matching. The specified CIDR block is considered a match.</description></item>
+            /// <item><description><b>LongestPrefixMatchCidrs</b>: longest prefix matching. You can specify IP addresses and CIDR blocks.</description></item>
+            /// <item><description><b>SubnetOfMatchCidrs</b>: subnet matching. The subnets of the specified CIDR blocks, including the CIDR block, are matches against the match conditions.</description></item>
+            /// <item><description><b>SupernetOfMatchCidrs</b>: supernet matching. The supernets of the CIDR block, including the CIDR block, are matched against the match conditions.</description></item>
             /// </list>
             /// <para>By default, the logical operator among filter conditions is <b>AND</b>. Information about a route entry is returned only if the route entry matches all filter conditions. Filter conditions must be unique.</para>
             /// 

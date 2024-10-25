@@ -60,6 +60,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public List<ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies> TrafficQosPolicies { get; set; }
         public class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies : TeaModel {
+            /// <summary>
+            /// <para>带宽保障类型。</para>
+            /// <list type="bullet">
+            /// <item><description><b>byBandwidth</b>：按带宽绝对值模式配置QoS队列。</description></item>
+            /// <item><description><b>byBandwidthPercent</b>：按带宽百分比模式配置QoS队列。</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>byBandwidthPercent</para>
+            /// </summary>
             [NameInMap("BandwidthGuaranteeMode")]
             [Validation(Required=false)]
             public string BandwidthGuaranteeMode { get; set; }
@@ -117,6 +127,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues> TrafficQosQueues { get; set; }
             public class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues : TeaModel {
+                /// <summary>
+                /// <para>带宽保障类型为按绝对值模式时，当前队列分配的跨地域带宽的值。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("Bandwidth")]
                 [Validation(Required=false)]
                 public string Bandwidth { get; set; }
@@ -128,6 +144,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 [Validation(Required=false)]
                 public List<int?> Dscps { get; set; }
 
+                /// <summary>
+                /// <para>当前队列实际生效的带宽值。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1.35</para>
+                /// </summary>
                 [NameInMap("EffectiveBandwidth")]
                 [Validation(Required=false)]
                 public string EffectiveBandwidth { get; set; }

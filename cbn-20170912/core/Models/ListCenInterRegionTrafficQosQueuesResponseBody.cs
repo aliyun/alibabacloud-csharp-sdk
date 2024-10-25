@@ -40,6 +40,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public List<ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues> TrafficQosQueues { get; set; }
         public class ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues : TeaModel {
+            /// <summary>
+            /// <para>带宽保障类型为按绝对值模式时，当前队列分配跨地域带宽的值。</para>
+            /// <para>例如，<b>1</b>表示符合当前队列的流量报文最多只能使用1Mbps的跨地域带宽。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
             public string Bandwidth { get; set; }
@@ -51,6 +58,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<int?> Dscps { get; set; }
 
+            /// <summary>
+            /// <para>当前队列实际生效的带宽值。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.35</para>
+            /// </summary>
             [NameInMap("EffectiveBandwidth")]
             [Validation(Required=false)]
             public string EffectiveBandwidth { get; set; }

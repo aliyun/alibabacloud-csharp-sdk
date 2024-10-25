@@ -164,7 +164,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// <para>The prefixes of the routes.</para>
+                /// <para>The prefix list against which routes are matched.</para>
+                /// <para>IPv4 and IPv6 addresses are supported.</para>
                 /// </summary>
                 [NameInMap("DestinationCidrBlocks")]
                 [Validation(Required=false)]
@@ -206,6 +207,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 [Validation(Required=false)]
                 public bool? DestinationInstanceIdsReverseMatch { get; set; }
 
+                /// <summary>
+                /// <para>The IDs of the destination regions for the routing policy.</para>
+                /// </summary>
                 [NameInMap("DestinationRegionIds")]
                 [Validation(Required=false)]
                 public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRegionIds DestinationRegionIds { get; set; }
