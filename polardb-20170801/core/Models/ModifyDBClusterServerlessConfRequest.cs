@@ -23,6 +23,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string AllowShutDown { get; set; }
 
+        /// <summary>
+        /// <para>Cycle policy ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>143f8e9f-2566-4dff-be47-bed79f28fc78</para>
+        /// </summary>
         [NameInMap("CrontabJobId")]
         [Validation(Required=false)]
         public string CrontabJobId { get; set; }
@@ -170,18 +176,43 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string SecondsUntilAutoPause { get; set; }
 
+        /// <summary>
+        /// <para>CPU burst threshold</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>80</para>
+        /// </summary>
         [NameInMap("ServerlessRuleCpuEnlargeThreshold")]
         [Validation(Required=false)]
         public string ServerlessRuleCpuEnlargeThreshold { get; set; }
 
+        /// <summary>
+        /// <para>CPU downscale threshold</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
+        /// </summary>
         [NameInMap("ServerlessRuleCpuShrinkThreshold")]
         [Validation(Required=false)]
         public string ServerlessRuleCpuShrinkThreshold { get; set; }
 
+        /// <summary>
+        /// <para>Elastic sensitivity. Values: - normal: standard - flexible: sensitive</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>normal
+        /// flexible</para>
+        /// </summary>
         [NameInMap("ServerlessRuleMode")]
         [Validation(Required=false)]
         public string ServerlessRuleMode { get; set; }
 
+        /// <summary>
+        /// <para>Asynchronous task ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>143f8e9f-2566-4dff-be47-bed79f28fc78</para>
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

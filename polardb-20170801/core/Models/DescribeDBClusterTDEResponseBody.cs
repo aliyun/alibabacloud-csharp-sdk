@@ -9,6 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterTDEResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Indicates whether automatic key rotation is allowed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enabled</b>: Automatic key rotation is allowed.</description></item>
+        /// <item><description><b>Disabled</b>: Automatic key rotation is not allowed.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is returned only for a PolarDB for PostgreSQL or PolarDB for PostgreSQL (Compatible with Oracle) cluster.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Enabled</para>
+        /// </summary>
         [NameInMap("AutomaticRotation")]
         [Validation(Required=false)]
         public string AutomaticRotation { get; set; }
@@ -29,6 +42,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <item><description><b>ON</b></description></item>
         /// <item><description><b>OFF</b></description></item>
         /// </list>
+        /// <remarks>
+        /// <para> This parameter is returned only for a PolarDB for MySQL cluster.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ON</para>
@@ -57,6 +73,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The automatic key rotation period configured in Key Management Service (KMS). If no automatic key rotation period is configured, 0s is returned. Unit: seconds.</para>
+        /// <para>For example, if the rotation period is set to 7 days, 604800s is returned.</para>
+        /// <remarks>
+        /// <para> This parameter is returned only for a PolarDB for PostgreSQL or PolarDB for PostgreSQL (Compatible with Oracle) cluster whose AutomaticRotation parameter is set to Enabled.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>604800s</para>
+        /// </summary>
         [NameInMap("RotationInterval")]
         [Validation(Required=false)]
         public string RotationInterval { get; set; }

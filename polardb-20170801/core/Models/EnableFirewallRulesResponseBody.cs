@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class EnableFirewallRulesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The message that is returned for the request.</para>
+        /// <remarks>
+        /// <para>If the request was successful, Successful is returned. If the request failed, an error message that contains information such as an error code is returned.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>Message</para>
         /// </summary>
@@ -28,6 +33,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

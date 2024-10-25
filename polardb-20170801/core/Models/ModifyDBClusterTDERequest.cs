@@ -21,6 +21,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to allow the TDE key of the cluster to be automatically rotated within the next maintenance window after a lapse of the rotation period when a change in the KMS key version is detected. This parameter is supported only for custom keys. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is supported only for a PolarDB for PostgreSQL or PolarDB for PostgreSQL (Compatible with Oracle) cluster.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -34,6 +43,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <item><description><b>ON</b></description></item>
         /// <item><description><b>OFF</b></description></item>
         /// </list>
+        /// <remarks>
+        /// <para> This parameter takes effect only for a PolarDB for MySQL cluster.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ON</para>

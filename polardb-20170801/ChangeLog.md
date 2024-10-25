@@ -1,3 +1,22 @@
+2024-10-25 Version: 5.2.0
+- Support API CreateActivationCode.
+- Support API CreateOrGetVirtualLicenseOrder.
+- Support API DescribeActivationCodeDetails.
+- Support API DescribeActivationCodes.
+- Support API DescribeLicenseOrderDetails.
+- Support API DescribeLicenseOrders.
+- Update API DescribeAutoRenewAttribute: update param AccessKeyId.
+- Update API DescribeDBClusterAccessWhitelist: update param AccessKeyId.
+- Update API DescribeDBClusterAttribute: update param AccessKeyId.
+- Update API DescribeDBClusterAttribute: update response param.
+- Update API DescribeDBClusterMigration: update param AccessKeyId.
+- Update API DescribeDBClusters: update param AccessKeyId.
+- Update API DescribeRegions: update param AccessKeyId.
+- Update API ModifyDBCluster: add param ImciAutoIndex.
+- Update API ModifyDBCluster: update param AccessKeyId.
+- Update API RefreshDBClusterStorageUsage: update param AccessKeyId.
+
+
 2024-09-26 Version: 5.1.14
 - Update API CreateDBCluster: update param AccessKeyId.
 - Update API DescribeDBClusterTDE: update param AccessKeyId.

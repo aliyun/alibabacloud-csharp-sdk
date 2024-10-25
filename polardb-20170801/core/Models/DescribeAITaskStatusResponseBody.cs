@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The state description of the PolarDB for AI feature.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Closed State</para>
         /// </summary>
         [NameInMap("StatusName")]
         [Validation(Required=false)]

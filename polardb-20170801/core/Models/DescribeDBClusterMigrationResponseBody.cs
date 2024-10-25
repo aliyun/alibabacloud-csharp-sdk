@@ -324,7 +324,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The type of the source database.</para>
+            /// <para>The role of the source database instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ReadOnly
+            /// Maxscale
+            /// Primary</para>
             /// </summary>
             [NameInMap("CustinsType")]
             [Validation(Required=false)]

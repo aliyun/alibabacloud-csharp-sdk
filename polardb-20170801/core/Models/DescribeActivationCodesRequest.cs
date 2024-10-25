@@ -8,30 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class DescribeDBClusterAttributeRequest : TeaModel {
+    public class DescribeActivationCodesRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID.</para>
-        /// <remarks>
-        /// <para>You can view detailed information about all clusters under your account, including the cluster ID, through the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> interface.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pc-*****************</para>
+        /// <para>2233****445566</para>
         /// </summary>
-        [NameInMap("DBClusterId")]
+        [NameInMap("AliyunOrderId")]
         [Validation(Required=false)]
-        public string DBClusterId { get; set; }
-
-        /// <summary>
-        /// <para>Whether to obtain information about AI-related nodes.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>AI</para>
-        /// </summary>
-        [NameInMap("DescribeType")]
-        [Validation(Required=false)]
-        public string DescribeType { get; set; }
+        public string AliyunOrderId { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -40,6 +26,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

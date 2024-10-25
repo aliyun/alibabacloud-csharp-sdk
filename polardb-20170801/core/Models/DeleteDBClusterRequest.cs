@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteDBClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The retention policy for the backup sets when you delete the cluster. Valid values:</para>
+        /// <para>The retention policy applied to the backup sets when the cluster is released. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ALL</b>: permanently retains all backups.</description></item>
-        /// <item><description><b>LATEST</b>: permanently retains the most recent backup. A backup is automatically created before you delete the cluster.</description></item>
-        /// <item><description><b>NONE</b>: No backup sets are retained after you delete the cluster.</description></item>
+        /// <item><description><b>ALL</b>: permanently retains all backup sets.</description></item>
+        /// <item><description><b>LATEST</b>: permanently retains the most recent backup set that is automatically created before the cluster is released.</description></item>
+        /// <item><description><b>NONE</b>: does not retain backup sets.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

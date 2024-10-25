@@ -10,12 +10,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateDBClusterEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically associate newly added nodes with the cluster endpoint. Valid values:</para>
+        /// <para>Specifies whether to enable automatic association of newly added nodes with the cluster endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b>: Newly added nodes are automatically associated with the cluster endpoint.</description></item>
-        /// <item><description><b>Disable</b>: Newly added nodes are not automatically associated with the cluster endpoint.</description></item>
+        /// <item><description><b>Enable</b>: enables automatic association of newly added nodes with the cluster endpoint.</description></item>
+        /// <item><description><b>Disable</b> (default): disables automatic association of newly added nodes with the cluster endpoint.</description></item>
         /// </list>
-        /// <para>Default value: <b>Disable</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Disable</para>
@@ -141,10 +140,26 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Global consistency timeout strategy. The value range is as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: Send the request to the primary node</description></item>
+        /// <item><description><b>2</b>: Timeout degradation, when a global consistency read times out, the query operation will automatically degrade to an inconsistent read, and the client will not receive an error message</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("PolarSccTimeoutAction")]
         [Validation(Required=false)]
         public string PolarSccTimeoutAction { get; set; }
 
+        /// <summary>
+        /// <para>Global consistency timeout</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("PolarSccWaitTimeout")]
         [Validation(Required=false)]
         public string PolarSccWaitTimeout { get; set; }
@@ -172,6 +187,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Whether the node has enabled the global consistency (high-performance mode) feature. The value range is as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ON</b>: Enabled - <b>OFF</b>: Disabled</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>on</para>
+        /// </summary>
         [NameInMap("SccMode")]
         [Validation(Required=false)]
         public string SccMode { get; set; }

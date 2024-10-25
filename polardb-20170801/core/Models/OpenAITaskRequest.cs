@@ -21,6 +21,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The node type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>DLNode</b>: This node is an AI node.</description></item>
+        /// <item><description><b>SearchNode</b>: This node is a node for which the PolarDB for AI feature is enabled.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>DLNode</para>
         /// </summary>

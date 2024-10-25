@@ -75,9 +75,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModifyType { get; set; }
 
         /// <summary>
-        /// <para>The type of operation performed on the cluster. Valid values:</para>
+        /// <para>The operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Modify</b>: temporarily upgrade the configuration of the cluster.</description></item>
+        /// <item><description><b>Modify</b>: temporarily upgrades the configuration of the cluster.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

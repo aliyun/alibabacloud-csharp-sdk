@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to unbinds all tags from the cluster. Valid values: <b>true</b> and <b>false</b>. Default value: <b>false</b>.</para>
+        /// <para>Specifies whether to detach all tags from the cluster. Valid values: <b>true</b> and <b>false</b>. Default value: <b>false</b>.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only when the value of the <c>TagKey.n</c> parameter is empty.</para>
+        /// <para> This parameter takes effect only if <c>TagKey.n</c> is empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

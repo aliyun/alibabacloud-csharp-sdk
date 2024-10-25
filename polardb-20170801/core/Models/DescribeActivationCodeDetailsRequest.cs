@@ -8,30 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class DescribeDBClusterAttributeRequest : TeaModel {
+    public class DescribeActivationCodeDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID.</para>
-        /// <remarks>
-        /// <para>You can view detailed information about all clusters under your account, including the cluster ID, through the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> interface.</para>
-        /// </remarks>
+        /// <b>Example:</b>
+        /// <para>123</para>
+        /// </summary>
+        [NameInMap("ActivationCodeId")]
+        [Validation(Required=false)]
+        public int? ActivationCodeId { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pc-*****************</para>
+        /// <para>2233****445566</para>
         /// </summary>
-        [NameInMap("DBClusterId")]
+        [NameInMap("AliyunOrderId")]
         [Validation(Required=false)]
-        public string DBClusterId { get; set; }
-
-        /// <summary>
-        /// <para>Whether to obtain information about AI-related nodes.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>AI</para>
-        /// </summary>
-        [NameInMap("DescribeType")]
-        [Validation(Required=false)]
-        public string DescribeType { get; set; }
+        public string AliyunOrderId { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

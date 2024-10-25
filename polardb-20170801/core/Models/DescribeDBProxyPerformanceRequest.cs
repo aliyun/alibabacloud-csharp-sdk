@@ -30,6 +30,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBEndpointId { get; set; }
 
+        /// <summary>
+        /// <para>Database instance node ID.</para>
+        /// <remarks>
+        /// <para>It is used to query the metrics of Proxy on different DB nodes, supporting metrics such as PolarProxy_DBConns, PolarProxy_DBQps, and PolarProxy_DBActionOps.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pi-******************</para>
+        /// </summary>
         [NameInMap("DBNodeId")]
         [Validation(Required=false)]
         public string DBNodeId { get; set; }

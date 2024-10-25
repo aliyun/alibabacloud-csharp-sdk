@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeScheduleTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result data that is returned.</para>
+        /// <para>The result data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The details of the scheduled task.</para>
+            /// <para>The details of the scheduled tasks.</para>
             /// </summary>
             [NameInMap("TimerInfos")]
             [Validation(Required=false)]
@@ -53,6 +53,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string Action { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the scheduled task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>86293c29-a03d-4872-b625-***********</para>
+                /// </summary>
                 [NameInMap("CrontabJobId")]
                 [Validation(Required=false)]
                 public string CrontabJobId { get; set; }

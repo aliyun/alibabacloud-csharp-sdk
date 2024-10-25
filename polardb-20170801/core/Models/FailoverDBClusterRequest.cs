@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to fail back to the original primary zone after a failover. Valid values:</para>
+        /// <para>Specifies whether to switch back services to the original primary zone when the original primary zone recovers.</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -76,6 +76,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string TargetDBNodeId { get; set; }
 
+        /// <summary>
+        /// <para>Whether it is a primary-standby switch within the primary availability zone, with the following values:</para>
+        /// <para>Primary: Primary-standby switch within the primary availability zone.
+        /// Standby: Switch to the storage hot backup cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Primary</para>
+        /// </summary>
         [NameInMap("TargetZoneType")]
         [Validation(Required=false)]
         public string TargetZoneType { get; set; }

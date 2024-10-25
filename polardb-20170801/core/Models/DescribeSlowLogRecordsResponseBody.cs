@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeSlowLogRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of cluster.</para>
+        /// <para>Cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-*****************</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The type of the database engine.</para>
+        /// <para>Database engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>polardb_mysql</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>Details about slow query logs.</para>
+        /// <para>List of slow log details.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord> SQLSlowRecord { get; set; }
             public class DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord : TeaModel {
                 /// <summary>
-                /// <para>The name of the database.</para>
+                /// <para>Database name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testdb</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DBName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the node.</para>
+                /// <para>Node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pi-*****************</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DBNodeId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the SQL statement was executed. The time is in the <c>yyyy-MM-ddTHH:mmZ</c> format. The time is displayed in UTC.</para>
+                /// <para>Time when the SQL starts execution. The format is <c>YYYY-MM-DDThh:mmZ</c> (UTC time).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-04-07T03:47Z</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string ExecutionStartTime { get; set; }
 
                 /// <summary>
-                /// <para>The IP address of the client that is used to connect to the database.</para>
+                /// <para>Client address connecting to the database.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testdb[testdb] @  [100.<b>.</b>.242]</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string HostAddress { get; set; }
 
                 /// <summary>
-                /// <para>The period of time during which the SQL statement was locked. Unit: seconds.</para>
+                /// <para>SQL lock duration in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public long? LockTimes { get; set; }
 
                 /// <summary>
-                /// <para>The number of rows parsed by the SQL statement.</para>
+                /// <para>Number of rows parsed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public long? ParseRowCounts { get; set; }
 
                 /// <summary>
-                /// <para>The time range for the query. Unit: milliseconds.</para>
+                /// <para>Query time. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public long? QueryTimeMS { get; set; }
 
                 /// <summary>
-                /// <para>The amount of time that was consumed to execute the SQL statement. Unit: seconds.</para>
+                /// <para>SQL execution duration, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public long? QueryTimes { get; set; }
 
                 /// <summary>
-                /// <para>The number of rows returned by the SQL statement.</para>
+                /// <para>Number of rows returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -130,12 +130,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public long? ReturnRowCounts { get; set; }
 
+                /// <summary>
+                /// <para>Unique identifier for the SQL statement in slow log statistics.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>U2FsdGVk****</para>
+                /// </summary>
                 [NameInMap("SQLHash")]
                 [Validation(Required=false)]
                 public string SQLHash { get; set; }
 
                 /// <summary>
-                /// <para>The SQL statement that is executed in the query.</para>
+                /// <para>Query statement.</para>
                 /// </summary>
                 [NameInMap("SQLText")]
                 [Validation(Required=false)]
@@ -146,7 +152,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The number of the returned page.</para>
+        /// <para>Page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -156,7 +162,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>Number of records on this page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -166,7 +172,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</para>
@@ -176,7 +182,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of SQL statements.</para>
+        /// <para>Total number of SQL statements.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

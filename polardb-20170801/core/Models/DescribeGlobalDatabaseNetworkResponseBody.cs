@@ -75,6 +75,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public List<DescribeGlobalDatabaseNetworkResponseBodyDBClusters> DBClusters { get; set; }
         public class DescribeGlobalDatabaseNetworkResponseBodyDBClusters : TeaModel {
+            /// <summary>
+            /// <para>The edition of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Normal</para>
+            /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
@@ -424,6 +430,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string GDNStatus { get; set; }
 
+        /// <summary>
+        /// <para>The global domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[gdnid].gdn.rds.aliyuncs.com</para>
+        /// </summary>
         [NameInMap("GlobalDomainName")]
         [Validation(Required=false)]
         public string GlobalDomainName { get; set; }

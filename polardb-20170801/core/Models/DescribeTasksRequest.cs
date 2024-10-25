@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <item><description><b>Running</b>: The task is running.</description></item>
         /// <item><description><b>Finished</b>: The task is completed.</description></item>
         /// <item><description><b>Closed</b>: The task is closed.</description></item>
-        /// <item><description><b>Pause</b>: The task is suspended.</description></item>
+        /// <item><description><b>Pause</b>: The task is paused.</description></item>
         /// <item><description><b>Stop</b>: The task is interrupted.</description></item>
         /// </list>
         /// <remarks>

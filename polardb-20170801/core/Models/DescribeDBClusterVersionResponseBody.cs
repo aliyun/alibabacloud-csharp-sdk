@@ -61,6 +61,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBRevisionVersion { get; set; }
 
+        /// <summary>
+        /// <para>The versions to which the cluster can be upgraded.</para>
+        /// </summary>
         [NameInMap("DBRevisionVersionList")]
         [Validation(Required=false)]
         public List<DescribeDBClusterVersionResponseBodyDBRevisionVersionList> DBRevisionVersionList { get; set; }

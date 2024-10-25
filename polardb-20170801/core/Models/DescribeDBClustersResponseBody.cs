@@ -326,6 +326,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string Expired { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether the hot standby storage cluster feature is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>ON</description></item>
+                /// <item><description>OFF</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>OFF</para>
+                /// </summary>
                 [NameInMap("HotStandbyCluster")]
                 [Validation(Required=false)]
                 public string HotStandbyCluster { get; set; }

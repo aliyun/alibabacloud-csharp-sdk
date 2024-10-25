@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID. To query the tags of multiple clusters, click <b>Add</b> to add cluster IDs.</para>
+        /// <para>The IDs of the clusters. To query the tags of multiple clusters, click <b>Add</b> to add cluster IDs.</para>
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. To query the details of clusters to which multiple tags are bound, click <b>Add</b> to add tags.</para>
+            /// <para>The tag key. To query the details of clusters to which multiple tags are added, click <b>Add</b> to add tags.</para>
             /// <remarks>
             /// </remarks>
             /// <list type="bullet">

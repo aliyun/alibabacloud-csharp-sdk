@@ -59,18 +59,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The permissions that are granted to the account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ReadWrite</b>: read and write permissions</description></item>
-        /// <item><description><b>ReadOnly</b>: read-only permissions</description></item>
-        /// <item><description><b>DMLOnly</b>: the permissions to execute only DML statements</description></item>
-        /// <item><description><b>DDLOnly</b>: the permissions to execute only DDL statements</description></item>
-        /// <item><description><b>ReadIndex</b>: the read and index permissions</description></item>
+        /// <item><description><b>ReadWrite</b>: read and write permissions.</description></item>
+        /// <item><description><b>ReadOnly</b>: read-only permissions.</description></item>
+        /// <item><description><b>DMLOnly</b>: the permissions to execute only DML statements.</description></item>
+        /// <item><description><b>DDLOnly</b>: the permissions to execute only DDL statements.</description></item>
+        /// <item><description><b>ReadIndex</b>: the read-only and index permissions.</description></item>
         /// </list>
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The <c>AccountPrivilege</c> parameter is valid only after you specify the <c>DBName</c> parameter.</para>
+        /// <item><description><para><c>AccountPrivilege</c> is valid only after you specify <c>DBName</c>.</para>
         /// </description></item>
-        /// <item><description><para>If multiple database names are specified by the <c>DBName</c> parameter, you must grant permissions on the databases. Separate multiple permissions with commas (,). For example, if you want to grant the account the read and write permissions on DB1 and the read-only permissions on DB2, set <c>DBName</c> to <c>DB1,DB2</c>, and set <c>AccountPrivilege</c> to <c>ReadWrite,ReadOnly</c>.</para>
+        /// <item><description><para>If multiple database names are specified by the <c>DBName</c> parameter, you must grant permissions on the databases. Separate multiple permissions with commas (,), and make sure that the length of the value of <c>AccountPrivilege</c> does not exceed 900. For example, if you want to grant the account the read and write permissions on DB1 and the read-only permissions on DB2, set <c>DBName</c> to <c>DB1,DB2</c> and set <c>AccountPrivilege</c> to <c>ReadWrite,ReadOnly</c>.</para>
         /// </description></item>
         /// <item><description><para>This parameter is valid only for standard accounts of PolarDB for MySQL clusters.</para>
         /// </description></item>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The name of the database that can be accessed by the account. To enter multiple database names, separate the names with commas (,).</para>
         /// <remarks>
-        /// <para>This parameter is valid only for standard accounts of PolarDB for MySQL clusters.</para>
+        /// <para> This parameter is valid only for standard accounts of PolarDB for MySQL clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -149,6 +149,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to grant the specified account required permissions on all existing databases in the current cluster and databases that will be further created for the current cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0 or unspecified</b>: does not grant required permissions.</description></item>
+        /// <item><description><b>1</b>: grants required permissions.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("PrivForAllDB")]
         [Validation(Required=false)]
         public string PrivForAllDB { get; set; }

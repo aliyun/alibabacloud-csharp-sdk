@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterEndpointsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the endpoints.</para>
+        /// <para>The information about the endpoints.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]

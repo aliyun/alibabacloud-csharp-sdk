@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BackupFrequency { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to retain backups when you delete a cluster. Valid values:</para>
+        /// <para>Specifies whether to retain backups when a cluster is deleted. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ALL</b>: permanently retains all backups.</description></item>
-        /// <item><description><b>LATEST</b>: permanently retains only the last backup.</description></item>
+        /// <item><description><b>LATEST</b>: permanently retains the most recent backup.</description></item>
         /// <item><description><b>NONE</b>: does not retain backups.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The default value is NONE.</para>
+        /// <para> The default value of the parameter is NONE.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <item><description><b>1</b>: Cross-region level-2 backups are permanently retained.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The default value is <b>0</b>. By default, the cross-region level-2 backup feature is disabled when you create a cluster.</para>
+        /// <para> The default value of the parameter is <b>0</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -196,11 +196,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The retention period of level-2 backups. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: The level-2 backup feature is disabled.</description></item>
-        /// <item><description><b>30 to 7300</b>: Cross-region level-2 backups are retained for 30 to 7,300 days.</description></item>
-        /// <item><description><b>1</b>: Cross-region level-2 backups are permanently retained.</description></item>
+        /// <item><description><b>30 to 7300</b>: Level-2 backups are retained for 30 to 7,300 days.</description></item>
+        /// <item><description><b>1</b>: Level-2 backups are permanently retained.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The default value is <b>0</b>. By default, the level-2 backup feature is disabled when you create a cluster.</para>
+        /// <para> The default value of this parameter is <b>0</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
