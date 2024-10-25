@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public string Statistics { get; set; }
 
                         /// <summary>
-                        /// <para>The resource for which alerts are triggered.</para>
+                        /// <para>The resources for which alerts are triggered.</para>
                         /// </summary>
                         [NameInMap("TargetList")]
                         [Validation(Required=false)]
@@ -168,7 +168,26 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                             public class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetListTarget : TeaModel {
                                 /// <summary>
                                 /// <para>The Alibaba Cloud Resource Name (ARN) of the resource. Format: acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message. Example: acs:mns:cn-hangzhou:120886317861\<em>\</em>\<em>\</em>:/queues/test123/message. Fields:</para>
-                                /// <para>{Service name abbreviation}: the abbreviation of the service name. Valid value: mns. {userId}: the ID of the Alibaba Cloud account. {regionId}: the region ID of the message queue or topic. {Resource type}: the type of the resource that triggers the alert. Valid values: - <b>queues</b> - <b>topics</b> - {Resource name}: the resource name. - If the resource type is set to <b>queues</b>, the resource name is the name of the message queue. - If the resource type is set to <b>topics</b>, the resource name is the name of the topic.</para>
+                                /// <list type="bullet">
+                                /// <item><description><para>{Service name abbreviation}: the abbreviation of the service name. Set the value to Simple Message Queue (formerly MNS) (SMQ).</para>
+                                /// </description></item>
+                                /// <item><description><para>{userId}: the ID of the Alibaba Cloud account.</para>
+                                /// </description></item>
+                                /// <item><description><para>{regionId}: the region ID of the SMQ queue or topic.</para>
+                                /// </description></item>
+                                /// <item><description><para>{Resource type}: the type of the resource for which alerts are triggered. Valid values:</para>
+                                /// <list type="bullet">
+                                /// <item><description><b>queues</b></description></item>
+                                /// <item><description><b>topics</b></description></item>
+                                /// </list>
+                                /// </description></item>
+                                /// <item><description><para>{Resource name}: the resource name.</para>
+                                /// <list type="bullet">
+                                /// <item><description>If the resource type is <b>queues</b>, the resource name is the queue name.</description></item>
+                                /// <item><description>If the resource type is <b>topics</b>, the resource name is the topic name.</description></item>
+                                /// </list>
+                                /// </description></item>
+                                /// </list>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>acs:mns:cn-hangzhou:120886317861****:/queues/test/message</para>
@@ -198,8 +217,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                                 public string JsonParmas { get; set; }
 
                                 /// <summary>
-                                /// <para>The level of the alert. Valid values:</para>
-                                /// <para>INFO WARN CRITICAL</para>
+                                /// <para>The alert level. Valid values:</para>
+                                /// <list type="bullet">
+                                /// <item><description>INFO</description></item>
+                                /// <item><description>WARN</description></item>
+                                /// <item><description>CRITICAL</description></item>
+                                /// </list>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>CRITICAL</para>

@@ -375,6 +375,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public string IspName { get; set; }
 
+                    /// <summary>
+                    /// <para>探测点网络类型。取值：
+                    /// IDC: IDC机房
+                    /// LASTMILE: 网民家宽
+                    /// MOBILE: 移动蜂窝网</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>IDC</para>
+                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
@@ -873,9 +882,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public int? RetryDelay { get; set; }
 
+                /// <summary>
+                /// <para>是否开启页面截图</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("screen_shot")]
                 [Validation(Required=false)]
                 public bool? ScreenShot { get; set; }
+
+                [NameInMap("scroll_end")]
+                [Validation(Required=false)]
+                public bool? ScrollEnd { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -991,18 +1010,36 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig VpcConfig { get; set; }
             public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig : TeaModel {
+                /// <summary>
+                /// <para>内网拨测任务的目标站点所在地域。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-beijing</para>
+                /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>sg-xxxxxx</para>
+                /// </summary>
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>vpc-xxxxxx</para>
+                /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>vsw-xxxxxx</para>
+                /// </summary>
                 [NameInMap("VswitchId")]
                 [Validation(Required=false)]
                 public string VswitchId { get; set; }
