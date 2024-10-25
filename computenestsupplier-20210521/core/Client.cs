@@ -702,7 +702,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         /// <para>Creates a service.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateServiceRequest
         /// </param>
         /// <param name="runtime">
@@ -712,9 +712,15 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         /// <returns>
         /// CreateServiceResponse
         /// </returns>
-        public CreateServiceResponse CreateServiceWithOptions(CreateServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateServiceResponse CreateServiceWithOptions(CreateServiceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateServiceShrinkRequest request = new CreateServiceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ComplianceMetadata))
+            {
+                request.ComplianceMetadataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ComplianceMetadata, "ComplianceMetadata", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmMetadata))
             {
@@ -731,6 +737,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComplianceMetadataShrink))
+            {
+                query["ComplianceMetadata"] = request.ComplianceMetadataShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployMetadata))
             {
@@ -848,7 +858,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         /// <para>Creates a service.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateServiceRequest
         /// </param>
         /// <param name="runtime">
@@ -858,9 +868,15 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         /// <returns>
         /// CreateServiceResponse
         /// </returns>
-        public async Task<CreateServiceResponse> CreateServiceWithOptionsAsync(CreateServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateServiceResponse> CreateServiceWithOptionsAsync(CreateServiceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateServiceShrinkRequest request = new CreateServiceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ComplianceMetadata))
+            {
+                request.ComplianceMetadataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ComplianceMetadata, "ComplianceMetadata", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmMetadata))
             {
@@ -877,6 +893,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComplianceMetadataShrink))
+            {
+                query["ComplianceMetadata"] = request.ComplianceMetadataShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployMetadata))
             {
@@ -2228,6 +2248,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             {
                 query["ServiceId"] = request.ServiceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceId))
+            {
+                query["ServiceInstanceId"] = request.ServiceInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
+            {
+                query["ServiceName"] = request.ServiceName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceVersion))
             {
                 query["ServiceVersion"] = request.ServiceVersion;
@@ -2289,6 +2317,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
             {
                 query["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceId))
+            {
+                query["ServiceInstanceId"] = request.ServiceInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
+            {
+                query["ServiceName"] = request.ServiceName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceVersion))
             {
@@ -5987,6 +6023,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             {
                 request.CommodityShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Commodity, "Commodity", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ComplianceMetadata))
+            {
+                request.ComplianceMetadataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ComplianceMetadata, "ComplianceMetadata", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateOption))
             {
                 request.UpdateOptionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateOption, "UpdateOption", "json");
@@ -6007,6 +6047,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityShrink))
             {
                 query["Commodity"] = request.CommodityShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComplianceMetadataShrink))
+            {
+                query["ComplianceMetadata"] = request.ComplianceMetadataShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployMetadata))
             {
@@ -6135,6 +6179,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             {
                 request.CommodityShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Commodity, "Commodity", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ComplianceMetadata))
+            {
+                request.ComplianceMetadataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ComplianceMetadata, "ComplianceMetadata", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateOption))
             {
                 request.UpdateOptionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateOption, "UpdateOption", "json");
@@ -6155,6 +6203,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityShrink))
             {
                 query["Commodity"] = request.CommodityShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComplianceMetadataShrink))
+            {
+                query["ComplianceMetadata"] = request.ComplianceMetadataShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployMetadata))
             {

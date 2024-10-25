@@ -1,3 +1,14 @@
+2024-10-25 Version: 2.4.2
+- Update API CreateService: add param ComplianceMetadata.
+- Update API CreateService: update param ServiceInfo.
+- Update API GetService: add param ServiceInstanceId.
+- Update API GetService: add param ServiceName.
+- Update API GetService: update param ServiceId.
+- Update API GetService: update response param.
+- Update API UpdateService: add param ComplianceMetadata.
+- Update API UpdateService: update param ServiceInfo.
+
+
 2024-10-22 Version: 2.4.1
 - Update API CreateService: update param ServiceInfo.
 - Update API GetService: update response param.

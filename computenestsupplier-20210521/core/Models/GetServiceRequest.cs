@@ -31,7 +31,6 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
         /// <summary>
         /// <para>The service ID.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>service-4ee86df83fd948******</para>
@@ -39,6 +38,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }
+
+        [NameInMap("ServiceInstanceId")]
+        [Validation(Required=false)]
+        public string ServiceInstanceId { get; set; }
+
+        [NameInMap("ServiceName")]
+        [Validation(Required=false)]
+        public string ServiceName { get; set; }
 
         /// <summary>
         /// <para>The service version.</para>

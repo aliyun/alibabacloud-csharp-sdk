@@ -69,6 +69,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("ComplianceMetadata")]
+        [Validation(Required=false)]
+        public CreateServiceRequestComplianceMetadata ComplianceMetadata { get; set; }
+        public class CreateServiceRequestComplianceMetadata : TeaModel {
+            [NameInMap("CompliancePacks")]
+            [Validation(Required=false)]
+            public List<string> CompliancePacks { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</para>
         /// 

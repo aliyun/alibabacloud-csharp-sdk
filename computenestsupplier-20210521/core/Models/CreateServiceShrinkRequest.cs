@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
-    public class UpdateServiceShrinkRequest : TeaModel {
+    public class CreateServiceShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The alert configurations of the service.</para>
         /// <remarks>
@@ -16,7 +16,20 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;CmsTemplateId\&quot;:1162921,\&quot;TemplateUrl\&quot;:\&quot;<a href="https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1760465342xxxxxx/template/c072ef50-6c03-4d9c-8f0e-d1c440xxxxxx.json%5C%5C%22%7D">https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1760465342xxxxxx/template/c072ef50-6c03-4d9c-8f0e-d1c440xxxxxx.json\\&quot;}</a></para>
+        /// <para>{
+        ///   &quot;TemplateUrl&quot;: &quot;<a href="http://template.file.url">http://template.file.url</a>&quot;,
+        ///   // 应用分组级别告警元数据
+        ///   &quot;ApplicationGroups&quot;: [
+        ///     {
+        ///       &quot;Name&quot;: &quot;applicationGroup1&quot;,
+        ///       &quot;TemplateUrl&quot;: &quot;url1&quot;
+        ///     },
+        ///     {
+        ///       &quot;Name&quot;: &quot;applicationGroup2&quot;,
+        ///       &quot;TemplateUrl&quot;: &quot;url2&quot;
+        ///     }
+        ///   ]
+        /// }</para>
         /// </summary>
         [NameInMap("AlarmMetadata")]
         [Validation(Required=false)]
@@ -37,21 +50,24 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ApprovalType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The parameters for building the service</para>
         /// 
         /// <b>Example:</b>
-        /// <para>788E7CP0EN9D51P</para>
+        /// <para>{ &quot;ServiceTemplateId&quot;: &quot;st-xxxxx&quot;}</para>
+        /// </summary>
+        [NameInMap("BuildParameters")]
+        [Validation(Required=false)]
+        public string BuildParameters { get; set; }
+
+        /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10CM943JP0EN9D51H</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
-
-        /// <summary>
-        /// <para>Bind Commodity Information</para>
-        /// </summary>
-        [NameInMap("Commodity")]
-        [Validation(Required=false)]
-        public string CommodityShrink { get; set; }
 
         [NameInMap("ComplianceMetadata")]
         [Validation(Required=false)]
@@ -61,7 +77,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;EstimateTime\&quot;:null,\&quot;SupplierDeployMetadata\&quot;:{\&quot;DeployTimeout\&quot;:7200},\&quot;EnableVnc\&quot;:false}</para>
+        /// <para>{\&quot;TemplateConfigs\&quot;:[{\&quot;Name\&quot;:\&quot;模板1\&quot;,\&quot;Url\&quot;:\&quot;oss://computenest-test/template&quot; 
+        ///             + &quot;.json?RegionId=cn-beijing\&quot;,\&quot;PredefinedParameters\&quot;:[{\&quot;Name\&quot;:\&quot;低配版\&quot;,&quot; 
+        ///             + &quot;\&quot;Parameters\&quot;:{\&quot;InstanceType\&quot;:\&quot;ecs.g5.large\&quot;,\&quot;DataDiskSize\&quot;:40}},{\&quot;Name\&quot;:\&quot;高配版\&quot;,&quot; 
+        ///             + &quot;\&quot;Parameters\&quot;:{\&quot;InstanceType\&quot;:\&quot;ecs.g5.large\&quot;,\&quot;DataDiskSize\&quot;:200}}]}]}</para>
         /// </summary>
         [NameInMap("DeployMetadata")]
         [Validation(Required=false)]
@@ -72,11 +91,11 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <list type="bullet">
         /// <item><description>ros: The service is deployed by using Resource Orchestration Service (ROS).</description></item>
         /// <item><description>terraform: The service is deployed by using Terraform.</description></item>
+        /// <item><description>ack: The service is deployed by using Container Service for Kubernetes (ACK).</description></item>
         /// <item><description>spi: The service is deployed by calling a service provider interface (SPI).</description></item>
         /// <item><description>operation: The service is deployed by using a hosted O\&amp;M service.</description></item>
-        /// <item><description>container: The service is deployed by using a container.</description></item>
-        /// <item><description>pkg: The service is deployed by using a package.</description></item>
         /// </list>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ros</para>
@@ -93,7 +112,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>The duration for which hosted O\&amp;M is implemented. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>259200</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
@@ -140,7 +159,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>The hosted O\&amp;M configurations.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;PrometheusConfigMap\&quot;:{\&quot;Custom_Image_Ecs\&quot;:{\&quot;EnablePrometheus\&quot;:false}}}</para>
+        /// <para>{\&quot;PrometheusConfigMap\&quot;:{\&quot;New_Vpc_Ack_And_Jumpserver\&quot;:{}}}</para>
         /// </summary>
         [NameInMap("OperationMetadata")]
         [Validation(Required=false)]
@@ -168,11 +187,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to support distribution. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>false</description></item>
-        /// <item><description>true</description></item>
-        /// </list>
+        /// <para>Whether resell is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -182,11 +197,20 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public bool? Resellable { get; set; }
 
         /// <summary>
-        /// <para>The service ID.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>service-1dda29c3eca648xxxxxx</para>
+        /// <para>rg-aek25refu7r3opq</para>
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
+        /// <para>The service ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>service-0e6fca6a51a544xxxxxx</para>
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
@@ -197,15 +221,15 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// </summary>
         [NameInMap("ServiceInfo")]
         [Validation(Required=false)]
-        public List<UpdateServiceShrinkRequestServiceInfo> ServiceInfo { get; set; }
-        public class UpdateServiceShrinkRequestServiceInfo : TeaModel {
+        public List<CreateServiceShrinkRequestServiceInfo> ServiceInfo { get; set; }
+        public class CreateServiceShrinkRequestServiceInfo : TeaModel {
             /// <summary>
             /// <para>Protocol document information about the service.</para>
             /// </summary>
             [NameInMap("Agreements")]
             [Validation(Required=false)]
-            public List<UpdateServiceShrinkRequestServiceInfoAgreements> Agreements { get; set; }
-            public class UpdateServiceShrinkRequestServiceInfoAgreements : TeaModel {
+            public List<CreateServiceShrinkRequestServiceInfoAgreements> Agreements { get; set; }
+            public class CreateServiceShrinkRequestServiceInfoAgreements : TeaModel {
                 /// <summary>
                 /// <para>Protocol name.</para>
                 /// 
@@ -244,6 +268,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             /// <item><description>zh-CN: Chinese</description></item>
             /// <item><description>en-US: English</description></item>
             /// </list>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh-CN</para>
@@ -264,9 +289,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
             /// <summary>
             /// <para>The service name.</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>kodbox-fc</para>
+            /// <para>TiDB Database</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -276,7 +302,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             /// <para>The description of the service.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>B是A公司自主设计并研发的开源分布式的关系型数据库</para>
+            /// <para>TiDB是A公司自主设计、研发的开源分布式关系型数据库。</para>
             /// </summary>
             [NameInMap("ShortDescription")]
             [Validation(Required=false)]
@@ -284,8 +310,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
             [NameInMap("Softwares")]
             [Validation(Required=false)]
-            public List<UpdateServiceShrinkRequestServiceInfoSoftwares> Softwares { get; set; }
-            public class UpdateServiceShrinkRequestServiceInfoSoftwares : TeaModel {
+            public List<CreateServiceShrinkRequestServiceInfoSoftwares> Softwares { get; set; }
+            public class CreateServiceShrinkRequestServiceInfoSoftwares : TeaModel {
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -315,16 +341,6 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>The service version.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
-        [NameInMap("ServiceVersion")]
-        [Validation(Required=false)]
-        public string ServiceVersion { get; set; }
-
-        /// <summary>
         /// <para>The permission type of the deployment URL. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Public: All users can go to the URL to create a service instance or a trial service instance.</description></item>
@@ -340,6 +356,55 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("ShareType")]
         [Validation(Required=false)]
         public string ShareType { get; set; }
+
+        /// <summary>
+        /// <para>The source service ID for resell。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>service-70a3b15bb62643xxxxxx</para>
+        /// </summary>
+        [NameInMap("SourceServiceId")]
+        [Validation(Required=false)]
+        public string SourceServiceId { get; set; }
+
+        /// <summary>
+        /// <para>The source service version for resell。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("SourceServiceVersion")]
+        [Validation(Required=false)]
+        public string SourceServiceVersion { get; set; }
+
+        /// <summary>
+        /// <para>The custom tags.</para>
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateServiceShrinkRequestTag> Tag { get; set; }
+        public class CreateServiceShrinkRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Usage</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Web</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The type of the tenant. Valid values:</para>
@@ -363,14 +428,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// </summary>
         [NameInMap("TrialDuration")]
         [Validation(Required=false)]
-        public int? TrialDuration { get; set; }
-
-        /// <summary>
-        /// <para>The options for update the service.</para>
-        /// </summary>
-        [NameInMap("UpdateOption")]
-        [Validation(Required=false)]
-        public string UpdateOptionShrink { get; set; }
+        public long? TrialDuration { get; set; }
 
         /// <summary>
         /// <para>The metadata about the upgrade.</para>
