@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeCloudDiskTypesResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>77990CEE-B714-5702-BDE6-943F702277DD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The specifications of resources that you can purchase.
+        /// <para>The specifications of resources that you can purchase.</para>
         /// </summary>
         [NameInMap("SupportResources")]
         [Validation(Required=false)]
@@ -28,19 +31,26 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeCloudDiskTypesResponseBodySupportResourcesSupportResource> SupportResource { get; set; }
             public class DescribeCloudDiskTypesResponseBodySupportResourcesSupportResource : TeaModel {
                 /// <summary>
-                /// The category of the disk.
+                /// <para>The category of the disk.</para>
+                /// <list type="bullet">
+                /// <item><description>cloud_efficiency: ultra disk.</description></item>
+                /// <item><description>cloud_ssd: all-flash disk.</description></item>
+                /// <item><description>local_hdd: local HDD.</description></item>
+                /// <item><description>local_ssd: local SSD.</description></item>
+                /// </list>
                 /// 
-                /// *   cloud_efficiency: ultra disk.
-                /// *   cloud_ssd: all-flash disk.
-                /// *   local_hdd: local HDD.
-                /// *   local_ssd: local SSD.
+                /// <b>Example:</b>
+                /// <para>cloud_efficiency</para>
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
                 /// <summary>
-                /// The ID of the edge node.
+                /// <para>The ID of the edge node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-guangzhou-10</para>
                 /// </summary>
                 [NameInMap("EnsRegionId")]
                 [Validation(Required=false)]

@@ -10,34 +10,37 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class PreloadRegionSDGRequest : TeaModel {
         /// <summary>
-        /// The IDs of the destination nodes.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of the destination nodes.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DestinationRegionIds")]
         [Validation(Required=false)]
         public List<string> DestinationRegionIds { get; set; }
 
         /// <summary>
-        /// The namespaces.
+        /// <para>The namespaces.</para>
         /// </summary>
         [NameInMap("Namespaces")]
         [Validation(Required=false)]
         public List<string> Namespaces { get; set; }
 
         /// <summary>
-        /// The number of redundant replicas to support rapid deployment.
+        /// <para>The number of redundant replicas to support rapid deployment.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("RedundantNum")]
         [Validation(Required=false)]
         public int? RedundantNum { get; set; }
 
         /// <summary>
-        /// The ID of the SDG for which data is preloaded.
+        /// <para>The ID of the SDG for which data is preloaded.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sdg-xxxx</para>
         /// </summary>
         [NameInMap("SDGId")]
         [Validation(Required=false)]

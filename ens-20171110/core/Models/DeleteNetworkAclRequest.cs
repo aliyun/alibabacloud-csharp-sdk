@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteNetworkAclRequest : TeaModel {
         /// <summary>
-        /// The ID of the network ACL.
+        /// <para>The ID of the network ACL.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>nacl-bp1lhl0taikrbgnh****</para>
         /// </summary>
         [NameInMap("NetworkAclId")]
         [Validation(Required=false)]

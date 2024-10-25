@@ -10,20 +10,25 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyLoadBalancerAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the ELB instance.
+        /// <para>The ID of the ELB instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-5q73cv04zeyh43lh74lp4gtm8</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// The name of the ELB instance. The name must be **2** to **128** characters in length.
+        /// <para>The name of the ELB instance. The name must be <b>2</b> to <b>128</b> characters in length.</para>
+        /// <remarks>
+        /// <para> The value cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  The value cannot start with `http://` or `https://`.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("LoadBalancerName")]
         [Validation(Required=false)]

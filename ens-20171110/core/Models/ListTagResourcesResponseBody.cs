@@ -10,49 +10,67 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The token of the first page to query.
+        /// <para>The token of the first page to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>abcfeg368547ccdef</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C78D9B61-69D8-5655-A312-A15DA5EA5D5E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The tags that are added to specified one or more resources.
+        /// <para>The tags that are added to specified one or more resources.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// The ID of the associated resources.
+            /// <para>The ID of the associated resources.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-5zy93g7z1hnkdmav84joxyzgn</para>
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The type of the resource.
+            /// <para>The type of the resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>instance</para>
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The tag key of the instance.
+            /// <para>The tag key of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_tag_key-2</para>
             /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CLUSTER</para>
             /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]

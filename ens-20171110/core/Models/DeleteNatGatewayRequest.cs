@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteNatGatewayRequest : TeaModel {
         /// <summary>
-        /// The ID of the NAT gateway that you want to delete.
+        /// <para>The ID of the NAT gateway that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>nat-5t7nh1cfm6kxiszlttr38****</para>
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]

@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeExportImageInfoRequest : TeaModel {
         /// <summary>
-        /// The ID of the image.
+        /// <para>The ID of the image.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>m-xxxxx</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// The name of the image.
+        /// <para>The name of the image.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testImageName</para>
         /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
         public string ImageName { get; set; }
 
         /// <summary>
-        /// The page number. Pages start from page **1**. Default value: **1**.
+        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Maximum value: **50**. Default value: **10**.
+        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

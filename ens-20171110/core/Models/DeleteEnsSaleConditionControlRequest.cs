@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AliUidAccount { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
@@ -25,28 +25,28 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string CustomAccount { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SaleControls")]
         [Validation(Required=false)]
         public List<DeleteEnsSaleConditionControlRequestSaleControls> SaleControls { get; set; }
         public class DeleteEnsSaleConditionControlRequestSaleControls : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("ConditionControls")]
             [Validation(Required=false)]
             public List<DeleteEnsSaleConditionControlRequestSaleControlsConditionControls> ConditionControls { get; set; }
             public class DeleteEnsSaleConditionControlRequestSaleControlsConditionControls : TeaModel {
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("ConditionControlModuleCode")]
                 [Validation(Required=false)]
                 public string ConditionControlModuleCode { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("ConditionControlModuleValue")]
                 [Validation(Required=false)]
@@ -55,14 +55,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("ModuleCode")]
             [Validation(Required=false)]
             public string ModuleCode { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("OrderType")]
             [Validation(Required=false)]

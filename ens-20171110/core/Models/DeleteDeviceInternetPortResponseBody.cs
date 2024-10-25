@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteDeviceInternetPortResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>51F57D60-7946-5EE1-A973-A3CCCCF2EF5B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of rules.
+        /// <para>The list of rules.</para>
         /// </summary>
         [NameInMap("RuleIds")]
         [Validation(Required=false)]

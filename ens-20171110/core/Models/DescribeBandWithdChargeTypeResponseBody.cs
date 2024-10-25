@@ -10,38 +10,54 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeBandWithdChargeTypeResponseBody : TeaModel {
         /// <summary>
-        /// The information about the metering method.
+        /// <para>The information about the metering method.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{ &quot;BandWidthName&quot;: &quot;Monthly peak bandwidth of 95&quot;, 			&quot;BandWidthType&quot;: &quot;95BandwidthByMonth&quot; 		}</para>
         /// </summary>
         [NameInMap("BandWithTypeInfo")]
         [Validation(Required=false)]
         public string BandWithTypeInfo { get; set; }
 
         /// <summary>
-        /// The metering type.
+        /// <para>The metering type.</para>
+        /// <list type="bullet">
+        /// <item><description>ChargeByUnified: unified metering.</description></item>
+        /// <item><description>ChargeByGrade: differential metering.</description></item>
+        /// </list>
         /// 
-        /// *   ChargeByUnified: unified metering.
-        /// *   ChargeByGrade: differential metering.
+        /// <b>Example:</b>
+        /// <para>ChargeByGrade</para>
         /// </summary>
         [NameInMap("ChargeContractType")]
         [Validation(Required=false)]
         public string ChargeContractType { get; set; }
 
         /// <summary>
-        /// The metering cycle. Currently, this parameter is empty in the response.
+        /// <para>The metering cycle. Currently, this parameter is empty in the response.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{null}</para>
         /// </summary>
         [NameInMap("ChargeCycleInfo")]
         [Validation(Required=false)]
         public string ChargeCycleInfo { get; set; }
 
         /// <summary>
-        /// The returned service code. A value of 0 indicates that the operation was successful.
+        /// <para>The returned service code. A value of 0 indicates that the operation was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>791049FD-49CE-4667-BD6C-F23094DEDA7A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

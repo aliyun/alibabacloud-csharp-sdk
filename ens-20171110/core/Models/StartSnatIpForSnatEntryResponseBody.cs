@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class StartSnatIpForSnatEntryResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>85BBD491-CE05-5BDA-979E-843FE52B74CF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

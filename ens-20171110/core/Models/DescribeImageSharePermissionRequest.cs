@@ -10,34 +10,43 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeImageSharePermissionRequest : TeaModel {
         /// <summary>
-        /// The ID of the Alibaba Cloud account.
+        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>171710408091****</para>
         /// </summary>
         [NameInMap("AliyunId")]
         [Validation(Required=false)]
         public long? AliyunId { get; set; }
 
         /// <summary>
-        /// The ID of the image.
+        /// <para>The ID of the image.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>m-5s7qotzavwbrnzaqh4unm****</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// The page number. Pages start from page **1**.
+        /// <para>The page number. Pages start from page <b>1</b>.</para>
+        /// <para>Default value: <b>1</b>.</para>
         /// 
-        /// Default value: **1**.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Maximum value: **100**.
+        /// <para>The number of entries per page. Maximum value: <b>100</b>.</para>
+        /// <para>Default value: <b>10</b>.</para>
         /// 
-        /// Default value: **10**.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

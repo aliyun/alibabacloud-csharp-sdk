@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeNetworksResponseBody : TeaModel {
         /// <summary>
-        /// The list of networks.
+        /// <para>The list of networks.</para>
         /// </summary>
         [NameInMap("Networks")]
         [Validation(Required=false)]
@@ -21,73 +21,101 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeNetworksResponseBodyNetworksNetwork> Network { get; set; }
             public class DescribeNetworksResponseBodyNetworksNetwork : TeaModel {
                 /// <summary>
-                /// The IPv4 CIDR block of the network.
+                /// <para>The IPv4 CIDR block of the network.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10.0.xx.xx/24</para>
                 /// </summary>
                 [NameInMap("CidrBlock")]
                 [Validation(Required=false)]
                 public string CidrBlock { get; set; }
 
                 /// <summary>
-                /// The timestamp when the instance was created. Unit: milliseconds.
+                /// <para>The timestamp when the instance was created. Unit: milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2020-06-16T06:33:15Z</para>
                 /// </summary>
                 [NameInMap("CreatedTime")]
                 [Validation(Required=false)]
                 public string CreatedTime { get; set; }
 
                 /// <summary>
-                /// The description of the network.
+                /// <para>The description of the network.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>exampleDescription</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the edge node.
+                /// <para>The ID of the edge node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-beijing</para>
                 /// </summary>
                 [NameInMap("EnsRegionId")]
                 [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the network access control list (ACL).
+                /// <para>The ID of the network access control list (ACL).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>nacl-a2do9e413e0spxscd****</para>
                 /// </summary>
                 [NameInMap("NetworkAclId")]
                 [Validation(Required=false)]
                 public string NetworkAclId { get; set; }
 
                 /// <summary>
-                /// The ID of the network.
+                /// <para>The ID of the network.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>n-5***</para>
                 /// </summary>
                 [NameInMap("NetworkId")]
                 [Validation(Required=false)]
                 public string NetworkId { get; set; }
 
                 /// <summary>
-                /// The name of the network.
+                /// <para>The name of the network.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example</para>
                 /// </summary>
                 [NameInMap("NetworkName")]
                 [Validation(Required=false)]
                 public string NetworkName { get; set; }
 
                 /// <summary>
-                /// The route table ID.
+                /// <para>The route table ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rtb-5**</para>
                 /// </summary>
                 [NameInMap("RouterTableId")]
                 [Validation(Required=false)]
                 public string RouterTableId { get; set; }
 
                 /// <summary>
-                /// The status of the network. Valid values:
+                /// <para>The status of the network. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Pending</description></item>
+                /// <item><description>Available</description></item>
+                /// </list>
                 /// 
-                /// *   Pending
-                /// *   Available
+                /// <b>Example:</b>
+                /// <para>Available</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The list of vSwitches in the network.
+                /// <para>The list of vSwitches in the network.</para>
                 /// </summary>
                 [NameInMap("VSwitchIds")]
                 [Validation(Required=false)]
@@ -104,28 +132,40 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned on each page.
+        /// <para>The number of entries returned on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries in the list.
+        /// <para>The total number of entries in the list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteForwardEntryRequest : TeaModel {
         /// <summary>
-        /// The ID of the DNAT entry that you want to delete.
+        /// <para>The ID of the DNAT entry that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>fwd-5tfk8qgepr9ijjkqxt8do****</para>
         /// </summary>
         [NameInMap("ForwardEntryId")]
         [Validation(Required=false)]

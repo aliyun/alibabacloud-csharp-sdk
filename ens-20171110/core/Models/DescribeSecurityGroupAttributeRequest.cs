@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSecurityGroupAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the security group.
+        /// <para>The ID of the security group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sg-bp67acfmxazb4ph***</para>
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]

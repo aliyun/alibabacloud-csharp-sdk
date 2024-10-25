@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UnAssociateEnsEipAddressRequest : TeaModel {
         /// <summary>
-        /// The ID of the EIP.
+        /// <para>The ID of the EIP.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>eip-5sqa431nx3vee8heqxfxp****</para>
         /// </summary>
         [NameInMap("AllocationId")]
         [Validation(Required=false)]

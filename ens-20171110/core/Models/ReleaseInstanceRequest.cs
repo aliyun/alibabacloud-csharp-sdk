@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ReleaseInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the EIP.
+        /// <para>The ID of the EIP.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>eip-****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

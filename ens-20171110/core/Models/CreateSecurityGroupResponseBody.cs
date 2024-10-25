@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateSecurityGroupResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>760bad53276431c499e30dc36f6b26be</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the security group.
+        /// <para>The ID of the security group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sg-bp1fg655nh68xyz9i***</para>
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]

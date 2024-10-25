@@ -10,19 +10,25 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RebootInstanceRequest : TeaModel {
         /// <summary>
-        /// Indicates whether to stop the instance forcibly before you reboot it. Default value: false. Valid values:
+        /// <para>Indicates whether to stop the instance forcibly before you reboot it. Default value: false. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ForceStop")]
         [Validation(Required=false)]
         public string ForceStop { get; set; }
 
         /// <summary>
-        /// The ID of the instance that you want to reboot. You can specify only one instance ID.
+        /// <para>The ID of the instance that you want to reboot. You can specify only one instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>i-instanceid****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

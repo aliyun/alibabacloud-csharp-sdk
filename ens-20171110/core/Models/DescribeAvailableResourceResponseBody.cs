@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeAvailableResourceResponseBody : TeaModel {
         /// <summary>
-        /// The returned service code. 0 indicates that the request was successful.
+        /// <para>The returned service code. 0 indicates that the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The details of the images.
+        /// <para>The details of the images.</para>
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
@@ -28,14 +31,20 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeAvailableResourceResponseBodyImagesImage> Image { get; set; }
             public class DescribeAvailableResourceResponseBodyImagesImage : TeaModel {
                 /// <summary>
-                /// The ID of the image.
+                /// <para>The ID of the image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>centos_6_08_64_20G_alibase_20171208</para>
                 /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// The name of the image.
+                /// <para>The name of the image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>centos_6_08_64_20G_alibase_****</para>
                 /// </summary>
                 [NameInMap("ImageName")]
                 [Validation(Required=false)]
@@ -46,14 +55,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The ID of the request. This is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+        /// <para>The ID of the request. This is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The specifications of resources that you can purchase.
+        /// <para>The specifications of resources that you can purchase.</para>
         /// </summary>
         [NameInMap("SupportResources")]
         [Validation(Required=false)]
@@ -64,35 +76,50 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeAvailableResourceResponseBodySupportResourcesSupportResource> SupportResource { get; set; }
             public class DescribeAvailableResourceResponseBodySupportResourcesSupportResource : TeaModel {
                 /// <summary>
-                /// The size of the data disk. Unit: GB.
+                /// <para>The size of the data disk. Unit: GB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>500</para>
                 /// </summary>
                 [NameInMap("DataDiskSize")]
                 [Validation(Required=false)]
                 public string DataDiskSize { get; set; }
 
                 /// <summary>
-                /// The ID of the edge node.
+                /// <para>The ID of the edge node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-beijing-cmcc</para>
                 /// </summary>
                 [NameInMap("EnsRegionId")]
                 [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
 
                 /// <summary>
-                /// The specifications of the resource plan.
+                /// <para>The specifications of the resource plan.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ens.sn1.stiny</para>
                 /// </summary>
                 [NameInMap("InstanceSpec")]
                 [Validation(Required=false)]
                 public string InstanceSpec { get; set; }
 
                 /// <summary>
-                /// The number of resources that you can purchase.
+                /// <para>The number of resources that you can purchase.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>9</para>
                 /// </summary>
                 [NameInMap("SupportResourcesCount")]
                 [Validation(Required=false)]
                 public string SupportResourcesCount { get; set; }
 
                 /// <summary>
-                /// The size of the system disk. Unit: GiB.
+                /// <para>The size of the system disk. Unit: GiB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20</para>
                 /// </summary>
                 [NameInMap("SystemDiskSize")]
                 [Validation(Required=false)]

@@ -10,60 +10,82 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ListBucketsResponseBody : TeaModel {
         /// <summary>
-        /// The list of bucket information.
+        /// <para>The list of bucket information.</para>
         /// </summary>
         [NameInMap("BucketInfos")]
         [Validation(Required=false)]
         public List<ListBucketsResponseBodyBucketInfos> BucketInfos { get; set; }
         public class ListBucketsResponseBodyBucketInfos : TeaModel {
             /// <summary>
-            /// The access control list (ACL) of the bucket.
+            /// <para>The access control list (ACL) of the bucket.</para>
+            /// <list type="bullet">
+            /// <item><description><b>public-read-write</b></description></item>
+            /// <item><description><b>public-read</b></description></item>
+            /// <item><description><b>private</b> (default)</description></item>
+            /// </list>
             /// 
-            /// *   **public-read-write**
-            /// *   **public-read**
-            /// *   **private** (default)
+            /// <b>Example:</b>
+            /// <para>private</para>
             /// </summary>
             [NameInMap("BucketAcl")]
             [Validation(Required=false)]
             public string BucketAcl { get; set; }
 
             /// <summary>
-            /// The name of the bucket.
+            /// <para>The name of the bucket.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("BucketName")]
             [Validation(Required=false)]
             public string BucketName { get; set; }
 
             /// <summary>
-            /// The remarks.
+            /// <para>The remarks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>numb</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
-            /// The time when the bucket was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// <para>The time when the bucket was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-10-12T05:45:00Z</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The ID of the region where the node is located.
+            /// <para>The ID of the region where the node is located.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-dalian-unicom</para>
             /// </summary>
             [NameInMap("EnsRegionId")]
             [Validation(Required=false)]
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// The type of the single-node storage. Set the value to sink.
+            /// <para>The type of the single-node storage. Set the value to sink.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sink</para>
             /// </summary>
             [NameInMap("LogicalBucketType")]
             [Validation(Required=false)]
             public string LogicalBucketType { get; set; }
 
             /// <summary>
-            /// The time when the bucket was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// <para>The time when the bucket was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-10-12T06:45:00Z</para>
             /// </summary>
             [NameInMap("ModifyTime")]
             [Validation(Required=false)]
@@ -72,14 +94,20 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>435769C7-AA6F-4DC5-B3DB-A3DC0DE7E853</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of buckets that match the conditions.
+        /// <para>The total number of buckets that match the conditions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

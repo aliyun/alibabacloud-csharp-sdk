@@ -10,39 +10,47 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class SetBackendServersRequest : TeaModel {
         /// <summary>
-        /// The list of backend servers that you want to add. You can modify at most 20 backend servers.
-        /// 
-        /// This parameter is required.
+        /// <para>The list of backend servers that you want to add. You can modify at most 20 backend servers.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BackendServers")]
         [Validation(Required=false)]
         public List<SetBackendServersRequestBackendServers> BackendServers { get; set; }
         public class SetBackendServersRequestBackendServers : TeaModel {
             /// <summary>
-            /// The ID of the instance that you want to use as the backend server.
+            /// <para>The ID of the instance that you want to use as the backend server.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>i-5ze0o05xccvbljtn****</para>
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
             public string ServerId { get; set; }
 
             /// <summary>
-            /// The type of the backend server. Valid values:
+            /// <para>The type of the backend server. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ens</b>: ENS instance.</description></item>
+            /// <item><description><b>eni</b>: Elastic Network Interface (ENI) instance.</description></item>
+            /// </list>
             /// 
-            /// *   **ens**: ENS instance.
-            /// *   **eni**: Elastic Network Interface (ENI) instance.
+            /// <b>Example:</b>
+            /// <para>ens</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The weight of the backend server. Default value: 100. Valid values: **0** to **100**.
+            /// <para>The weight of the backend server. Default value: 100. Valid values: <b>0</b> to <b>100</b>.</para>
+            /// <remarks>
+            /// <para> The value 0 indicates that requests are not forwarded to the backend server.</para>
+            /// </remarks>
+            /// <para>This parameter is required.</para>
             /// 
-            /// >  The value 0 indicates that requests are not forwarded to the backend server.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("Weight")]
             [Validation(Required=false)]
@@ -51,9 +59,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The ID of the Edge Load Balancer (ELB) instance.
+        /// <para>The ID of the Edge Load Balancer (ELB) instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-5s7crik3yo3bp03gqrbp5****</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]

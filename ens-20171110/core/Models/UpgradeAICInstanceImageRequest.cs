@@ -10,25 +10,29 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UpgradeAICInstanceImageRequest : TeaModel {
         /// <summary>
-        /// The ID of the AIC image.
+        /// <para>The ID of the AIC image.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>m-****</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// The IDs of the servers.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of the servers.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ServerIds")]
         [Validation(Required=false)]
         public List<string> ServerIds { get; set; }
 
         /// <summary>
-        /// The timeout period of the update. Unit: seconds.
+        /// <para>The timeout period of the update. Unit: seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1800</para>
         /// </summary>
         [NameInMap("Timeout")]
         [Validation(Required=false)]

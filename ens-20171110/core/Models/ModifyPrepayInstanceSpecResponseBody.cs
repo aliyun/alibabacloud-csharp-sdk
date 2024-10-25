@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyPrepayInstanceSpecResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FD94C8E8-128E-525C-A0C3-60E063B70330</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

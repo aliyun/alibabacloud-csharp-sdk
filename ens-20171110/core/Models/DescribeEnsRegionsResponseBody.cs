@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The service code. 0 is returned for a successful request. An error code is returned for a failed request.
+        /// <para>The service code. 0 is returned for a successful request. An error code is returned for a failed request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The information about the regions.
+        /// <para>The information about the regions.</para>
         /// </summary>
         [NameInMap("EnsRegions")]
         [Validation(Required=false)]
@@ -28,35 +31,50 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeEnsRegionsResponseBodyEnsRegionsEnsRegions> EnsRegions { get; set; }
             public class DescribeEnsRegionsResponseBodyEnsRegionsEnsRegions : TeaModel {
                 /// <summary>
-                /// The code of the region.
+                /// <para>The code of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>NorthEastChina</para>
                 /// </summary>
                 [NameInMap("Area")]
                 [Validation(Required=false)]
                 public string Area { get; set; }
 
                 /// <summary>
-                /// The name of the node.
+                /// <para>The name of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>NorthChina</para>
                 /// </summary>
                 [NameInMap("EnName")]
                 [Validation(Required=false)]
                 public string EnName { get; set; }
 
                 /// <summary>
-                /// The ID of the node.
+                /// <para>The ID of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-dalian-unicom</para>
                 /// </summary>
                 [NameInMap("EnsRegionId")]
                 [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
 
                 /// <summary>
-                /// The name of the node.
+                /// <para>The name of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Dalian Unicom</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The province where the node is deployed.
+                /// <para>The province where the node is deployed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Liaoning Province</para>
                 /// </summary>
                 [NameInMap("Province")]
                 [Validation(Required=false)]
@@ -67,7 +85,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

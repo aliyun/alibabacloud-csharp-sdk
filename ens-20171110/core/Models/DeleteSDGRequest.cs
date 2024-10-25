@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteSDGRequest : TeaModel {
         /// <summary>
-        /// The IDs of the SDGs that you want to delete.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of the SDGs that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SDGId")]
         [Validation(Required=false)]

@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeCloudDiskAvailableResourceInfoResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0AE4F26E-7527-569F-A987-E3CF269A3C11</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The specifications of resources that you can purchase.
+        /// <para>The specifications of resources that you can purchase.</para>
         /// </summary>
         [NameInMap("SupportResources")]
         [Validation(Required=false)]
@@ -28,54 +31,76 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResource> SupportResource { get; set; }
             public class DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResource : TeaModel {
                 /// <summary>
-                /// The number of disks that you can purchase.
+                /// <para>The number of disks that you can purchase.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("CanBuyCount")]
                 [Validation(Required=false)]
                 public long? CanBuyCount { get; set; }
 
                 /// <summary>
-                /// The type of the disk.
+                /// <para>The type of the disk.</para>
+                /// <list type="bullet">
+                /// <item><description>cloud_efficiency: ultra disk.</description></item>
+                /// <item><description>cloud_ssd: all-flash disk.</description></item>
+                /// <item><description>local_hdd: local HDD.</description></item>
+                /// <item><description>local_ssd: local SSD.</description></item>
+                /// </list>
                 /// 
-                /// *   cloud_efficiency: ultra disk.
-                /// *   cloud_ssd: all-flash disk.
-                /// *   local_hdd: local HDD.
-                /// *   local_ssd: local SSD.
+                /// <b>Example:</b>
+                /// <para>cloud_ssd</para>
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
                 /// <summary>
-                /// The default size of the disk. Unit: GiB.
+                /// <para>The default size of the disk. Unit: GiB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20</para>
                 /// </summary>
                 [NameInMap("DefaultDiskSize")]
                 [Validation(Required=false)]
                 public long? DefaultDiskSize { get; set; }
 
                 /// <summary>
-                /// The maximum size of the disk. Unit: GiB.
+                /// <para>The maximum size of the disk. Unit: GiB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>80</para>
                 /// </summary>
                 [NameInMap("DiskMaxSize")]
                 [Validation(Required=false)]
                 public long? DiskMaxSize { get; set; }
 
                 /// <summary>
-                /// The minimum size of the disk size. Unit: GiB.
+                /// <para>The minimum size of the disk size. Unit: GiB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20</para>
                 /// </summary>
                 [NameInMap("DiskMinSize")]
                 [Validation(Required=false)]
                 public long? DiskMinSize { get; set; }
 
                 /// <summary>
-                /// The ID of the edge node.
+                /// <para>The ID of the edge node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-beijing-cmcc</para>
                 /// </summary>
                 [NameInMap("EnsRegionId")]
                 [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
 
                 /// <summary>
-                /// The name of the task node.
+                /// <para>The name of the task node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Beijing Mobile</para>
                 /// </summary>
                 [NameInMap("EnsRegionName")]
                 [Validation(Required=false)]

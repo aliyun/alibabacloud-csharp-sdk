@@ -10,19 +10,25 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class StopInstanceRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to forcibly stop the servers.
+        /// <para>Specifies whether to forcibly stop the servers.</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: forcibly stops the instance.</description></item>
+        /// <item><description><b>false</b>: normally stops the servers. This is the default value.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: forcibly stops the instance.
-        /// *   **false**: normally stops the servers. This is the default value.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ForceStop")]
         [Validation(Required=false)]
         public string ForceStop { get; set; }
 
         /// <summary>
-        /// The ID of the instance that you want to stop. You can specify only one instance ID.
+        /// <para>The ID of the instance that you want to stop. You can specify only one instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>i-instanceid****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

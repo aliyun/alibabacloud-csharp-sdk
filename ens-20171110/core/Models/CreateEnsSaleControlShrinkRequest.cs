@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AliUidAccount { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string CustomAccount { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SaleControls")]
         [Validation(Required=false)]

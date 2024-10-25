@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteEpnInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the EPN instance.
+        /// <para>The ID of the EPN instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>epn-****</para>
         /// </summary>
         [NameInMap("EPNInstanceId")]
         [Validation(Required=false)]

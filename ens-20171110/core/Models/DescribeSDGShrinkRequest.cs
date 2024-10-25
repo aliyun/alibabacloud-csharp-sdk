@@ -10,23 +10,28 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSDGShrinkRequest : TeaModel {
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <para>Default value: 10</para>
         /// 
-        /// Default value: 10
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The IDs of SDGs that you want to query. By default, all SDGs are queried.
+        /// <para>The IDs of SDGs that you want to query. By default, all SDGs are queried.</para>
         /// </summary>
         [NameInMap("SDGIds")]
         [Validation(Required=false)]

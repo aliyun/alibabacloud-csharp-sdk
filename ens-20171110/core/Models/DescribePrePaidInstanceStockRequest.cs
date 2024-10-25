@@ -10,36 +10,44 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribePrePaidInstanceStockRequest : TeaModel {
         /// <summary>
-        /// The size of the data disk. Unit: GB.
+        /// <para>The size of the data disk. Unit: GB.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("DataDiskSize")]
         [Validation(Required=false)]
         public int? DataDiskSize { get; set; }
 
         /// <summary>
-        /// The ID of the edge node.
+        /// <para>The ID of the edge node.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-suzhou-telecom</para>
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// The specification of the instance.
+        /// <para>The specification of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ens.sn1.stiny</para>
         /// </summary>
         [NameInMap("InstanceSpec")]
         [Validation(Required=false)]
         public string InstanceSpec { get; set; }
 
         /// <summary>
-        /// The size of the system disk. Unit: GB.
+        /// <para>The size of the system disk. Unit: GB.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("SystemDiskSize")]
         [Validation(Required=false)]

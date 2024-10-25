@@ -10,34 +10,42 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteLoadBalancerListenerRequest : TeaModel {
         /// <summary>
-        /// The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: **1** to **65535**.
+        /// <para>The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: <b>1</b> to <b>65535</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>8080</para>
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }
 
         /// <summary>
-        /// The frontend protocol that is used by the ELB instance.
+        /// <para>The frontend protocol that is used by the ELB instance.</para>
+        /// <remarks>
+        /// <para> This parameter is required if the same port is used by listeners that use different protocols.</para>
+        /// </remarks>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>tcp</description></item>
+        /// <item><description>udp</description></item>
+        /// <item><description>http</description></item>
+        /// <item><description>https</description></item>
+        /// </list>
         /// 
-        /// >  This parameter is required if the same port is used by listeners that use different protocols.
-        /// 
-        /// Valid values:
-        /// 
-        /// *   tcp
-        /// *   udp
-        /// *   http
-        /// *   https
+        /// <b>Example:</b>
+        /// <para>tcp</para>
         /// </summary>
         [NameInMap("ListenerProtocol")]
         [Validation(Required=false)]
         public string ListenerProtocol { get; set; }
 
         /// <summary>
-        /// The ID of the ELB instance.
+        /// <para>The ID of the ELB instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-5snthcyu1x10g7tywj7iu****</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]

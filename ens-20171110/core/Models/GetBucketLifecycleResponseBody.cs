@@ -10,35 +10,44 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class GetBucketLifecycleResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A2583E8B-B930-4F59-ADC0-0E209A90C46E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The detailed information about the rule.
+        /// <para>The detailed information about the rule.</para>
         /// </summary>
         [NameInMap("Rule")]
         [Validation(Required=false)]
         public List<GetBucketLifecycleResponseBodyRule> Rule { get; set; }
         public class GetBucketLifecycleResponseBodyRule : TeaModel {
             /// <summary>
-            /// The expiration time.
+            /// <para>The expiration time.</para>
             /// </summary>
             [NameInMap("Expiration")]
             [Validation(Required=false)]
             public GetBucketLifecycleResponseBodyRuleExpiration Expiration { get; set; }
             public class GetBucketLifecycleResponseBodyRuleExpiration : TeaModel {
                 /// <summary>
-                /// The expiration date.
+                /// <para>The expiration date.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>yyy-MM-DDThh:mm:ssZ</para>
                 /// </summary>
                 [NameInMap("CreatedBeforeDate")]
                 [Validation(Required=false)]
                 public string CreatedBeforeDate { get; set; }
 
                 /// <summary>
-                /// The validity period, in days.
+                /// <para>The validity period, in days.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
                 /// </summary>
                 [NameInMap("Days")]
                 [Validation(Required=false)]
@@ -47,24 +56,34 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// The unique ID of the rule.
+            /// <para>The unique ID of the rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ID")]
             [Validation(Required=false)]
             public string ID { get; set; }
 
             /// <summary>
-            /// The prefix that is applied to the rule.
+            /// <para>The prefix that is applied to the rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>image</para>
             /// </summary>
             [NameInMap("Prefix")]
             [Validation(Required=false)]
             public string Prefix { get; set; }
 
             /// <summary>
-            /// The status of the rule. Valid values:
+            /// <para>The status of the rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Enabled</b>: The rule is periodically executed.</description></item>
+            /// <item><description><b>Disabled</b>: The rule is ignored.</description></item>
+            /// </list>
             /// 
-            /// *   **Enabled**: The rule is periodically executed.
-            /// *   **Disabled**: The rule is ignored.
+            /// <b>Example:</b>
+            /// <para>Enabled</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

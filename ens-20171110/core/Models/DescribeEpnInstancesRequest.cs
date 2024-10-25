@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEpnInstancesRequest : TeaModel {
         /// <summary>
-        /// The version number.
+        /// <para>The version number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2017-11-10</para>
         /// </summary>
         [NameInMap("EPNInstanceId")]
         [Validation(Required=false)]
         public string EPNInstanceId { get; set; }
 
         /// <summary>
-        /// The name of the EPN instance.
+        /// <para>The name of the EPN instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testEPNInstanceName</para>
         /// </summary>
         [NameInMap("EPNInstanceName")]
         [Validation(Required=false)]
         public string EPNInstanceName { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: **1 to 50**. Default value: **10**.
+        /// <para>The number of entries per page. Valid values: <b>1 to 50</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

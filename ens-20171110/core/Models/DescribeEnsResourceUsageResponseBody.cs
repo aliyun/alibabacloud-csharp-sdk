@@ -10,88 +10,122 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsResourceUsageResponseBody : TeaModel {
         /// <summary>
-        /// The resource usage data.
+        /// <para>The resource usage data.</para>
         /// </summary>
         [NameInMap("EnsResourceUsage")]
         [Validation(Required=false)]
         public List<DescribeEnsResourceUsageResponseBodyEnsResourceUsage> EnsResourceUsage { get; set; }
         public class DescribeEnsResourceUsageResponseBodyEnsResourceUsage : TeaModel {
             /// <summary>
-            /// The number of edge services. This parameter is available only when you set the ServiceType parameter to 2.
+            /// <para>The number of edge services. This parameter is available only when you set the ServiceType parameter to 2.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("ComputeResourceCount")]
             [Validation(Required=false)]
             public int? ComputeResourceCount { get; set; }
 
             /// <summary>
-            /// The CPU usage. Unit: cores.
+            /// <para>The CPU usage. Unit: cores.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("CpuSum")]
             [Validation(Required=false)]
             public long? CpuSum { get; set; }
 
             /// <summary>
-            /// The number of data disks.
+            /// <para>The number of data disks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
             /// </summary>
             [NameInMap("DiskCount")]
             [Validation(Required=false)]
             public int? DiskCount { get; set; }
 
             /// <summary>
-            /// The number of stopped VMs.
+            /// <para>The number of stopped VMs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>7</para>
             /// </summary>
             [NameInMap("DownCount")]
             [Validation(Required=false)]
             public int? DownCount { get; set; }
 
             /// <summary>
-            /// The number of expired VM instances.
+            /// <para>The number of expired VM instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ExpiredCount")]
             [Validation(Required=false)]
             public int? ExpiredCount { get; set; }
 
             /// <summary>
-            /// The number of VM instances that are about to expire.
+            /// <para>The number of VM instances that are about to expire.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("ExpiringCount")]
             [Validation(Required=false)]
             public int? ExpiringCount { get; set; }
 
             /// <summary>
-            /// The number of GPUs.
+            /// <para>The number of GPUs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6</para>
             /// </summary>
             [NameInMap("GpuSum")]
             [Validation(Required=false)]
             public long? GpuSum { get; set; }
 
             /// <summary>
-            /// The number of instances.
+            /// <para>The number of instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("InstanceCount")]
             [Validation(Required=false)]
             public int? InstanceCount { get; set; }
 
             /// <summary>
-            /// The number of running instances.
+            /// <para>The number of running instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>19</para>
             /// </summary>
             [NameInMap("RunningCount")]
             [Validation(Required=false)]
             public int? RunningCount { get; set; }
 
             /// <summary>
-            /// The type of the service. Valid values:
+            /// <para>The type of the service. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: subscription instance.</description></item>
+            /// <item><description>2: edge service instance.</description></item>
+            /// <item><description>3: pay-as-you-go instance.</description></item>
+            /// </list>
             /// 
-            /// *   1: subscription instance.
-            /// *   2: edge service instance.
-            /// *   3: pay-as-you-go instance.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ServiceType")]
             [Validation(Required=false)]
             public string ServiceType { get; set; }
 
             /// <summary>
-            /// The total disk size.
+            /// <para>The total disk size.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5000</para>
             /// </summary>
             [NameInMap("StorageSum")]
             [Validation(Required=false)]
@@ -100,7 +134,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E	 Request ID.</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

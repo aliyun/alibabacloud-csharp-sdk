@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ReleaseARMServerInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the server.
+        /// <para>The ID of the server.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>yourInstance ID</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

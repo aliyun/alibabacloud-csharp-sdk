@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RemoveInstanceSDGShrinkRequest : TeaModel {
         /// <summary>
-        /// The IDs of the instances. The value is a JSON array that consists of up to 100 IDs.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of the instances. The value is a JSON array that consists of up to 100 IDs.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

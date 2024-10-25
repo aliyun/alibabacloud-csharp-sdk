@@ -10,49 +10,61 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeploySDGResponseBody : TeaModel {
         /// <summary>
-        /// The returned data object.
+        /// <para>The returned data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeploySDGResponseBodyData Data { get; set; }
         public class DeploySDGResponseBodyData : TeaModel {
             /// <summary>
-            /// The response message. Success is returned for a successful request.
+            /// <para>The response message. Success is returned for a successful request.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>success</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// The task result.
+            /// <para>The task result.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public DeploySDGResponseBodyDataResult Result { get; set; }
             public class DeploySDGResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// The number of failed tasks.
+                /// <para>The number of failed tasks.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("FailedCount")]
                 [Validation(Required=false)]
                 public long? FailedCount { get; set; }
 
                 /// <summary>
-                /// Details of failed tasks.
+                /// <para>Details of failed tasks.</para>
                 /// </summary>
                 [NameInMap("FailedItems")]
                 [Validation(Required=false)]
                 public List<DeploySDGResponseBodyDataResultFailedItems> FailedItems { get; set; }
                 public class DeploySDGResponseBodyDataResultFailedItems : TeaModel {
                     /// <summary>
-                    /// The error message.
+                    /// <para>The error message.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>sdg not found</para>
                     /// </summary>
                     [NameInMap("ErrMessage")]
                     [Validation(Required=false)]
                     public string ErrMessage { get; set; }
 
                     /// <summary>
-                    /// The ID of the instance.
+                    /// <para>The ID of the instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>aic-xxxxx-0</para>
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
@@ -61,7 +73,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
-                /// The number of successful tasks.
+                /// <para>The number of successful tasks.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("SuccessCount")]
                 [Validation(Required=false)]
@@ -70,10 +85,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// Indicates whether all tasks are successful. Valid values:
+            /// <para>Indicates whether all tasks are successful. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: All tasks are successful.</description></item>
+            /// <item><description>false: Failed tasks exist.</description></item>
+            /// </list>
             /// 
-            /// *   true: All tasks are successful.
-            /// *   false: Failed tasks exist.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Success")]
             [Validation(Required=false)]
@@ -82,7 +101,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A331CA96-3948-4BD2-B067-F6174F5C17EA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

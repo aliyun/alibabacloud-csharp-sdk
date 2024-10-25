@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeKeyPairsResponseBody : TeaModel {
         /// <summary>
-        /// Details about the key pairs.
+        /// <para>Details about the key pairs.</para>
         /// </summary>
         [NameInMap("KeyPairs")]
         [Validation(Required=false)]
@@ -21,28 +21,40 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeKeyPairsResponseBodyKeyPairsKeyPair> KeyPair { get; set; }
             public class DescribeKeyPairsResponseBodyKeyPairsKeyPair : TeaModel {
                 /// <summary>
-                /// The time when the key pair was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+                /// <para>The time when the key pair was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2020-04-26T15:38:27Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The fingerprint of the key pair.
+                /// <para>The fingerprint of the key pair.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>fdaf8ff7a756ef843814fc****</para>
                 /// </summary>
                 [NameInMap("KeyPairFingerPrint")]
                 [Validation(Required=false)]
                 public string KeyPairFingerPrint { get; set; }
 
                 /// <summary>
-                /// The ID of the key pair.
+                /// <para>The ID of the key pair.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ssh-50cynkq42sgj4ej1tn78t4***</para>
                 /// </summary>
                 [NameInMap("KeyPairId")]
                 [Validation(Required=false)]
                 public string KeyPairId { get; set; }
 
                 /// <summary>
-                /// The name of the SSH key pair.
+                /// <para>The name of the SSH key pair.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestKeyPairName</para>
                 /// </summary>
                 [NameInMap("KeyPairName")]
                 [Validation(Required=false)]
@@ -53,28 +65,40 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>37B52F33-6879-49D0-A39B-22966B01449E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of key pairs.
+        /// <para>The total number of key pairs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

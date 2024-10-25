@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeCreatePrePaidInstanceResultRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance. You can call the CreateIntance operation to create an instance.
+        /// <para>The ID of the instance. You can call the CreateIntance operation to create an instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>i-6ecpqvkicnchxccozrp****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

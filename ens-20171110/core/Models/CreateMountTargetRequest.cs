@@ -10,36 +10,44 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateMountTargetRequest : TeaModel {
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-beijing-cmcc</para>
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// The ID of the file system.
+        /// <para>The ID of the file system.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>c50f8*****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// The name of the mount target.
+        /// <para>The name of the mount target.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>TestMountPath</para>
         /// </summary>
         [NameInMap("MountTargetName")]
         [Validation(Required=false)]
         public string MountTargetName { get; set; }
 
         /// <summary>
-        /// The ID of the network.
+        /// <para>The ID of the network.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>n-*****</para>
         /// </summary>
         [NameInMap("NetWorkId")]
         [Validation(Required=false)]

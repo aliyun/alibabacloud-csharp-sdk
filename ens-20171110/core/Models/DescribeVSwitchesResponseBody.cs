@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeVSwitchesResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned on each page.
+        /// <para>The number of entries returned on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries in the list.
+        /// <para>The total number of entries in the list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The information about the vSwitches. For more information, see the array of vSwitches in the response examples in the JSON format.
+        /// <para>The information about the vSwitches. For more information, see the array of vSwitches in the response examples in the JSON format.</para>
         /// </summary>
         [NameInMap("VSwitches")]
         [Validation(Required=false)]
@@ -49,66 +61,94 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeVSwitchesResponseBodyVSwitchesVSwitch> VSwitch { get; set; }
             public class DescribeVSwitchesResponseBodyVSwitchesVSwitch : TeaModel {
                 /// <summary>
-                /// The IPv4 CIDR block of the vSwitch.
+                /// <para>The IPv4 CIDR block of the vSwitch.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10.21.224.0/22</para>
                 /// </summary>
                 [NameInMap("CidrBlock")]
                 [Validation(Required=false)]
                 public string CidrBlock { get; set; }
 
                 /// <summary>
-                /// The time when the vSwitch was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+                /// <para>The time when the vSwitch was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2020-06-16T06:33:15Z</para>
                 /// </summary>
                 [NameInMap("CreatedTime")]
                 [Validation(Required=false)]
                 public string CreatedTime { get; set; }
 
                 /// <summary>
-                /// The description of the vSwitch.
+                /// <para>The description of the vSwitch.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>VSwitchDescription</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the edge node.
+                /// <para>The ID of the edge node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-xian-unicom</para>
                 /// </summary>
                 [NameInMap("EnsRegionId")]
                 [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
 
                 /// <summary>
-                /// The number of available IP addresses.
+                /// <para>The number of available IP addresses.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1024</para>
                 /// </summary>
                 [NameInMap("FreeIpCount")]
                 [Validation(Required=false)]
                 public long? FreeIpCount { get; set; }
 
                 /// <summary>
-                /// The ID of the network.
+                /// <para>The ID of the network.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-25cdvfeq58pl****</para>
                 /// </summary>
                 [NameInMap("NetworkId")]
                 [Validation(Required=false)]
                 public string NetworkId { get; set; }
 
                 /// <summary>
-                /// The status of the vSwitch. Valid values:
+                /// <para>The status of the vSwitch. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Pending</description></item>
+                /// <item><description>Available</description></item>
+                /// </list>
                 /// 
-                /// *   Pending
-                /// *   Available
+                /// <b>Example:</b>
+                /// <para>Pending</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The ID of the vSwitch.
+                /// <para>The ID of the vSwitch.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-5m9xhlq8oh***</para>
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The name of the vSwitch.
+                /// <para>The name of the vSwitch.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testVSwitchName</para>
                 /// </summary>
                 [NameInMap("VSwitchName")]
                 [Validation(Required=false)]

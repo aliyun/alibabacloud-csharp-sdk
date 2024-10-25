@@ -10,53 +10,69 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AddBackendServersRequest : TeaModel {
         /// <summary>
-        /// The list of backend servers that you want to add. You can add at most 20 backend servers.
-        /// 
-        /// >  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.
-        /// 
-        /// This parameter is required.
+        /// <para>The list of backend servers that you want to add. You can add at most 20 backend servers.</para>
+        /// <remarks>
+        /// <para> Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BackendServers")]
         [Validation(Required=false)]
         public List<AddBackendServersRequestBackendServers> BackendServers { get; set; }
         public class AddBackendServersRequestBackendServers : TeaModel {
             /// <summary>
-            /// The IP address of the backend server.
+            /// <para>The IP address of the backend server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.0.1</para>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
             /// <summary>
-            /// The backend port that is used by the ELB instance.
+            /// <para>The backend port that is used by the ELB instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3309</para>
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public int? Port { get; set; }
 
             /// <summary>
-            /// The ID of the ENS instance.
+            /// <para>The ID of the ENS instance.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>i-5uf6dwyzch3wly790****</para>
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
             public string ServerId { get; set; }
 
             /// <summary>
-            /// The type of the backend server. Valid values:
+            /// <para>The type of the backend server. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ens</b>: ENS instance.</description></item>
+            /// <item><description><b>eni</b>: ENI.</description></item>
+            /// </list>
             /// 
-            /// *   **ens**: ENS instance.
-            /// *   **eni**: ENI.
+            /// <b>Example:</b>
+            /// <para>ens</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The weight of the backend server. Default value: 100. Valid values: **0** to **100**.
+            /// <para>The weight of the backend server. Default value: 100. Valid values: <b>0</b> to <b>100</b>.</para>
+            /// <remarks>
+            /// <para> The value 0 indicates that requests are not forwarded to the backend server.</para>
+            /// </remarks>
             /// 
-            /// >  The value 0 indicates that requests are not forwarded to the backend server.
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("Weight")]
             [Validation(Required=false)]
@@ -65,9 +81,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: **1** to **65535**.
+        /// <para>The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: <b>1</b> to <b>65535</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-5qzdmxefgrpxd7oz2mefonvtx</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]

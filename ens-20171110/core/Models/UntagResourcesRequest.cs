@@ -10,41 +10,40 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to remove all tags from the resource. This parameter takes effect only if you do not specify TagKey.N. Valid values:
+        /// <para>Specifies whether to remove all tags from the resource. This parameter takes effect only if you do not specify TagKey.N. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b> (default)</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
-        /// 
-        /// Default value: false.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
 
         /// <summary>
-        /// The resource IDs. You can specify up to 50 resource IDs.
-        /// 
-        /// This parameter is required.
+        /// <para>The resource IDs. You can specify up to 50 resource IDs.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The resource type.
+        /// <para>The type of the resource.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Valid values:
-        /// 
-        /// *   instance
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>instance</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The keys of the tags. Valid values of N: 1 to 20.
+        /// <para>The keys of the tags. Valid values of N: 1 to 20.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

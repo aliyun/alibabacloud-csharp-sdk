@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class StartInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The returned service code. 0 indicates that the request was successful.
+        /// <para>The returned service code. 0 indicates that the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

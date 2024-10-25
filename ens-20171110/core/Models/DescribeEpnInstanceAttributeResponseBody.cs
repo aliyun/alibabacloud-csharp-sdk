@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEpnInstanceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The information about the EPN configurations.
+        /// <para>The information about the EPN configurations.</para>
         /// </summary>
         [NameInMap("ConfVersions")]
         [Validation(Required=false)]
         public List<DescribeEpnInstanceAttributeResponseBodyConfVersions> ConfVersions { get; set; }
         public class DescribeEpnInstanceAttributeResponseBodyConfVersions : TeaModel {
             /// <summary>
-            /// The version number.
+            /// <para>The version number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2017-10-11</para>
             /// </summary>
             [NameInMap("ConfVersion")]
             [Validation(Required=false)]
             public string ConfVersion { get; set; }
 
             /// <summary>
-            /// The ID of the node.
+            /// <para>The ID of the node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-chengdu-telecom</para>
             /// </summary>
             [NameInMap("EnsRegionId")]
             [Validation(Required=false)]
@@ -33,78 +39,107 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The ID of the EPN instance.
+        /// <para>The ID of the EPN instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>epn-xxxx</para>
         /// </summary>
         [NameInMap("EPNInstanceId")]
         [Validation(Required=false)]
         public string EPNInstanceId { get; set; }
 
         /// <summary>
-        /// The name of the EPN instance.
+        /// <para>The name of the EPN instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>epn-test</para>
         /// </summary>
         [NameInMap("EPNInstanceName")]
         [Validation(Required=false)]
         public string EPNInstanceName { get; set; }
 
         /// <summary>
-        /// The information about the instance.
+        /// <para>The information about the instance.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeEpnInstanceAttributeResponseBodyInstances> Instances { get; set; }
         public class DescribeEpnInstanceAttributeResponseBodyInstances : TeaModel {
             /// <summary>
-            /// The ID of the node.
+            /// <para>The ID of the node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-chengdu-telecom-4</para>
             /// </summary>
             [NameInMap("EnsRegionId")]
             [Validation(Required=false)]
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// The ID of the instance.
+            /// <para>The ID of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>epn-xxx</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The name of the instance.
+            /// <para>The name of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>epn-test</para>
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The ISP. Valid values:
+            /// <para>The ISP. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>cmcc: China Mobile</description></item>
+            /// <item><description>unicom: China Unicom</description></item>
+            /// <item><description>telecom: China Telecom</description></item>
+            /// </list>
             /// 
-            /// *   cmcc: China Mobile
-            /// *   unicom: China Unicom
-            /// *   telecom: China Telecom
+            /// <b>Example:</b>
+            /// <para>cmcc</para>
             /// </summary>
             [NameInMap("Isp")]
             [Validation(Required=false)]
             public string Isp { get; set; }
 
             /// <summary>
-            /// The private IP address.
+            /// <para>The private IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.1.12</para>
             /// </summary>
             [NameInMap("PrivateIpAddress")]
             [Validation(Required=false)]
             public string PrivateIpAddress { get; set; }
 
             /// <summary>
-            /// The public IP address.
+            /// <para>The public IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20.3.XX.XX</para>
             /// </summary>
             [NameInMap("PublicIpAddress")]
             [Validation(Required=false)]
             public string PublicIpAddress { get; set; }
 
             /// <summary>
-            /// The status of the instance. Valid values:
+            /// <para>The status of the instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Running</description></item>
+            /// <item><description>Stopped</description></item>
+            /// <item><description>Expired</description></item>
+            /// </list>
             /// 
-            /// *   Running
-            /// *   Stopped
-            /// *   Expired
+            /// <b>Example:</b>
+            /// <para>Running</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -113,53 +148,72 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The networking mode. Valid values:
+        /// <para>The networking mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>SpeedUp: intelligent acceleration network (Internet)</description></item>
+        /// <item><description>Connection: internal network</description></item>
+        /// <item><description>SpeedUpAndConnection: intelligent acceleration network and internal network</description></item>
+        /// </list>
         /// 
-        /// *   SpeedUp: intelligent acceleration network (Internet)
-        /// *   Connection: internal network
-        /// *   SpeedUpAndConnection: intelligent acceleration network and internal network
+        /// <b>Example:</b>
+        /// <para>SpeedUp</para>
         /// </summary>
         [NameInMap("NetworkingModel")]
         [Validation(Required=false)]
         public string NetworkingModel { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details of the vSwitch.
+        /// <para>Details of the vSwitch.</para>
         /// </summary>
         [NameInMap("VSwitches")]
         [Validation(Required=false)]
         public List<DescribeEpnInstanceAttributeResponseBodyVSwitches> VSwitches { get; set; }
         public class DescribeEpnInstanceAttributeResponseBodyVSwitches : TeaModel {
             /// <summary>
-            /// The CIDR block.
+            /// <para>The CIDR block.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10.0.0.1/24</para>
             /// </summary>
             [NameInMap("CidrBlock")]
             [Validation(Required=false)]
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// The ID of the node.
+            /// <para>The ID of the node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-chengdu-telecom-4</para>
             /// </summary>
             [NameInMap("EnsRegionId")]
             [Validation(Required=false)]
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// The ID of the vSwitch.
+            /// <para>The ID of the vSwitch.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vs-xxxx</para>
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// The name of the vSwitch.
+            /// <para>The name of the vSwitch.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vs-test</para>
             /// </summary>
             [NameInMap("VSwitchName")]
             [Validation(Required=false)]

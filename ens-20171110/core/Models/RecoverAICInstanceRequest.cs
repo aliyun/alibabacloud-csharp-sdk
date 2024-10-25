@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RecoverAICInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the server.
+        /// <para>The ID of the server.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cas-instance****</para>
         /// </summary>
         [NameInMap("ServerId")]
         [Validation(Required=false)]

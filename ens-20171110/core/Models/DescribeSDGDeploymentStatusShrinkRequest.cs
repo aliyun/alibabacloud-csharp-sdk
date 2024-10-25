@@ -18,14 +18,20 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceIdsShrink { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page **1**. Default value: **1**.
+        /// <para>The number of the page to return. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -36,9 +42,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RegionIdsShrink { get; set; }
 
         /// <summary>
-        /// The ID of the SDG.
+        /// <para>The ID of the SDG.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sdg-xxxx</para>
         /// </summary>
         [NameInMap("SDGId")]
         [Validation(Required=false)]

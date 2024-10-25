@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DistApplicationDataResponseBody : TeaModel {
         /// <summary>
-        /// The list of ENS instance IDs.
+        /// <para>The list of ENS instance IDs.</para>
         /// </summary>
         [NameInMap("DistInstanceIds")]
         [Validation(Required=false)]
@@ -23,14 +23,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The total number of ENS instance IDs.
+        /// <para>The total number of ENS instance IDs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("DistInstanceTotalCount")]
         [Validation(Required=false)]
         public int? DistInstanceTotalCount { get; set; }
 
         /// <summary>
-        /// The distribution result of the data file.
+        /// <para>The distribution result of the data file.</para>
         /// </summary>
         [NameInMap("DistResults")]
         [Validation(Required=false)]
@@ -41,28 +44,40 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DistApplicationDataResponseBodyDistResultsDistResult> DistResult { get; set; }
             public class DistApplicationDataResponseBodyDistResultsDistResult : TeaModel {
                 /// <summary>
-                /// The name of the data file.
+                /// <para>The name of the data file.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>gcs-prod-websocket-eip-unicom</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The error code. The value is of the enumerated data type.
+                /// <para>The error code. The value is of the enumerated data type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>400</para>
                 /// </summary>
                 [NameInMap("ResultCode")]
                 [Validation(Required=false)]
                 public int? ResultCode { get; set; }
 
                 /// <summary>
-                /// The description of the distribution result.
+                /// <para>The description of the distribution result.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Success</para>
                 /// </summary>
                 [NameInMap("ResultDescrip")]
                 [Validation(Required=false)]
                 public string ResultDescrip { get; set; }
 
                 /// <summary>
-                /// The version number of the data file.
+                /// <para>The version number of the data file.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>standard</para>
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
@@ -73,7 +88,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

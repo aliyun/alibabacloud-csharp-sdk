@@ -10,48 +10,64 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateSDGRequest : TeaModel {
         /// <summary>
-        /// The description of the SDG.
+        /// <para>The description of the SDG.</para>
+        /// <remarks>
+        /// <para> We recommend that you specify this parameter in details for subsequent queries.</para>
+        /// </remarks>
         /// 
-        /// >  We recommend that you specify this parameter in details for subsequent queries.
+        /// <b>Example:</b>
+        /// <para>Testing SDGs</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the SDG from which you want to create an SDG.
+        /// <para>The ID of the SDG from which you want to create an SDG.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>The first time you create an SDG, the <b>FromSDGId</b> parameter is empty.</para>
+        /// </description></item>
+        /// <item><description><para>If the value of the <b>FromSDGId</b> parameter is invalid or does not correspond to an original disk, an error is reported.</para>
+        /// </description></item>
+        /// <item><description><para>If the value of the <b>FromSDGId</b> parameter is not empty, you have created an SDG, and the operation is performed on the existing SDG.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// > 
-        /// 
-        /// *   The first time you create an SDG, the **FromSDGId** parameter is empty.
-        /// 
-        /// *   If the value of the **FromSDGId** parameter is invalid or does not correspond to an original disk, an error is reported.
-        /// 
-        /// *   If the value of the **FromSDGId** parameter is not empty, you have created an SDG, and the operation is performed on the existing SDG.
+        /// <b>Example:</b>
+        /// <para>sdg-xxxxx</para>
         /// </summary>
         [NameInMap("FromSDGId")]
         [Validation(Required=false)]
         public string FromSDGId { get; set; }
 
         /// <summary>
-        /// The ID of the AIC instance. You can call the [DescribeARMServerInstances](~~DescribeARMServerInstances~~) operation to query the ID.
+        /// <para>The ID of the AIC instance. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>aic-xxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The maximum capacity of the SDG. Unit: GB.
+        /// <para>The maximum capacity of the SDG. Unit: GB.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>To save costs, we recommend that you specify this parameter based on your business requirements.</para>
+        /// </description></item>
+        /// <item><description><para>The first time that you create an SDG, the <b>Size</b> parameter is required.</para>
+        /// </description></item>
+        /// <item><description><para>When the amount of data increases, you can pass a new <b>Size</b> parameter for resizing. If the value of the new <b>Size</b> parameter is greater than the value of the old <b>Size</b> parameter, the disk size of the SDG is increased to the size that is specified by the new <b>Size</b> parameter. If the value of the new <b>Size</b> parameter is empty or smaller than that of the old <b>Size</b> parameter, no operation is performed.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// > 
-        /// 
-        /// *   To save costs, we recommend that you specify this parameter based on your business requirements.
-        /// 
-        /// *   The first time that you create an SDG, the **Size** parameter is required.
-        /// 
-        /// *   When the amount of data increases, you can pass a new **Size** parameter for resizing. If the value of the new **Size** parameter is greater than the value of the old **Size** parameter, the disk size of the SDG is increased to the size that is specified by the new **Size** parameter. If the value of the new **Size** parameter is empty or smaller than that of the old **Size** parameter, no operation is performed.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("Size")]
         [Validation(Required=false)]

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateClassicNetworkResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the network.
+        /// <para>The ID of the network.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>n-5s9ayrxsd9hszrlt5fgv2****</para>
         /// </summary>
         [NameInMap("NetworkId")]
         [Validation(Required=false)]
         public string NetworkId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1A004E06-AC1B-5806-BA5E-41AB6B02DE83</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

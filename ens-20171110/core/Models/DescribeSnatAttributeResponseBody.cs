@@ -10,90 +10,124 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSnatAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The time when the entry was created. The time is displayed in UTC.
+        /// <para>The time when the entry was created. The time is displayed in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2020-04-26T15:38:27Z</para>
         /// </summary>
         [NameInMap("CreationTime")]
         [Validation(Required=false)]
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// The destination CIDR block. The rule takes effect only on requests that access the destination CIDR block.
+        /// <para>The destination CIDR block. The rule takes effect only on requests that access the destination CIDR block.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>101.10. XX.XX/24</para>
         /// </summary>
         [NameInMap("DestCIDR")]
         [Validation(Required=false)]
         public string DestCIDR { get; set; }
 
         /// <summary>
-        /// Timeout period.
+        /// <para>The timeout period. Unit: seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("IdleTimeout")]
         [Validation(Required=false)]
         public int? IdleTimeout { get; set; }
 
         /// <summary>
-        /// The ID of the Network Address Translation (NAT) gateway.
+        /// <para>The ID of the Network Address Translation (NAT) gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>nat-5t7nh1cfm6kxiszlttr38****</para>
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the SNAT entry.
+        /// <para>The ID of the SNAT entry.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>snat-5tfi6f8gds82mjmlofeym****</para>
         /// </summary>
         [NameInMap("SnatEntryId")]
         [Validation(Required=false)]
         public string SnatEntryId { get; set; }
 
         /// <summary>
-        /// The name of the SNAT entry.
+        /// <para>The name of the SNAT entry.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test0</para>
         /// </summary>
         [NameInMap("SnatEntryName")]
         [Validation(Required=false)]
         public string SnatEntryName { get; set; }
 
         /// <summary>
-        /// The EIP specified in the SNAT entry. Multiple EIPs are separated by commas (,).
+        /// <para>The EIP specified in the SNAT entry. Multiple EIPs are separated by commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>120.72.XX.XX</para>
         /// </summary>
         [NameInMap("SnatIp")]
         [Validation(Required=false)]
         public string SnatIp { get; set; }
 
         /// <summary>
-        /// The information about the EIP specified in the SNAT entry.
+        /// <para>The information about the EIP specified in the SNAT entry.</para>
         /// </summary>
         [NameInMap("SnatIps")]
         [Validation(Required=false)]
         public List<DescribeSnatAttributeResponseBodySnatIps> SnatIps { get; set; }
         public class DescribeSnatAttributeResponseBodySnatIps : TeaModel {
             /// <summary>
-            /// The time when the IP address was created. The time is displayed in UTC.
+            /// <para>The time when the IP address was created. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-04-26T15:38:27Z</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The IP address.
+            /// <para>The IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>203.132.XX.XX</para>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
             /// <summary>
-            /// The status of the IP address.
+            /// <para>The status of the IP address.</para>
+            /// <list type="bullet">
+            /// <item><description>Running</description></item>
+            /// <item><description>Stopping</description></item>
+            /// <item><description>Stopped</description></item>
+            /// <item><description>Starting</description></item>
+            /// <item><description>Releasing</description></item>
+            /// </list>
             /// 
-            /// *   Running
-            /// *   Stopping
-            /// *   Stopped
-            /// *   Starting
-            /// *   Releasing
+            /// <b>Example:</b>
+            /// <para>Running</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -102,48 +136,65 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The source CIDR block specified in the SNAT entry.
+        /// <para>The source CIDR block specified in the SNAT entry.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10.0.XX.XX/24</para>
         /// </summary>
         [NameInMap("SourceCIDR")]
         [Validation(Required=false)]
         public string SourceCIDR { get; set; }
 
         /// <summary>
-        /// The secondary EIP specified in the SNAT entry. Multiple secondary EIPs are separated by commas (,).
+        /// <para>The secondary EIP specified in the SNAT entry. Multiple secondary EIPs are separated by commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>101.23. XX.XX</para>
         /// </summary>
         [NameInMap("StandbySnatIp")]
         [Validation(Required=false)]
         public string StandbySnatIp { get; set; }
 
         /// <summary>
-        /// The status of the secondary EIP.
+        /// <para>The status of the secondary EIP.</para>
+        /// <list type="bullet">
+        /// <item><description>Running</description></item>
+        /// <item><description>Stopping</description></item>
+        /// <item><description>Stopped</description></item>
+        /// <item><description>Starting</description></item>
+        /// </list>
         /// 
-        /// *   Running
-        /// *   Stopping
-        /// *   Stopped
-        /// *   Starting
+        /// <b>Example:</b>
+        /// <para>Stopped</para>
         /// </summary>
         [NameInMap("StandbyStatus")]
         [Validation(Required=false)]
         public string StandbyStatus { get; set; }
 
         /// <summary>
-        /// The status of the SNAT entry.
+        /// <para>The status of the SNAT entry.</para>
+        /// <list type="bullet">
+        /// <item><description>Pending: The SNAT entry is being created or modified.</description></item>
+        /// <item><description>Available: The SNAT entry is available.</description></item>
+        /// <item><description>Deleting: The SNAT entry is being deleted.</description></item>
+        /// </list>
         /// 
-        /// *   Pending: The SNAT entry is being created or modified.
-        /// *   Available: The SNAT entry is available.
-        /// *   Deleting: The SNAT entry is being deleted.
+        /// <b>Example:</b>
+        /// <para>Available</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The type of the NAT. Valid values: 
+        /// <para>The type of the NAT.</para>
+        /// <list type="bullet">
+        /// <item><description>Empty: symmetric NAT.</description></item>
+        /// <item><description>FullCone: full cone NAT.</description></item>
+        /// </list>
         /// 
-        /// - Empty: symmetric NAT.
-        /// 
-        /// - FullCone: full cone NAT.
+        /// <b>Example:</b>
+        /// <para>FullCone</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

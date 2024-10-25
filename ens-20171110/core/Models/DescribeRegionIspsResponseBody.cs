@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeRegionIspsResponseBody : TeaModel {
         /// <summary>
-        /// The list of ISPs.
+        /// <para>The list of ISPs.</para>
         /// </summary>
         [NameInMap("Isps")]
         [Validation(Required=false)]
         public List<DescribeRegionIspsResponseBodyIsps> Isps { get; set; }
         public class DescribeRegionIspsResponseBodyIsps : TeaModel {
             /// <summary>
-            /// The code of the ISP.
+            /// <para>The code of the ISP.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cmcc</para>
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
             /// <summary>
-            /// The name of the ISP.
+            /// <para>The name of the ISP.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>move</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DC90CC7E-23B6-5A90-9097-A17CE4A161C4</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

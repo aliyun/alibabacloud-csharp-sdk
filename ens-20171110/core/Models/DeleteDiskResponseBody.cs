@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteDiskResponseBody : TeaModel {
         /// <summary>
-        /// The returned service code. 0 indicates that the request was successful.
+        /// <para>The returned service code. 0 indicates that the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3ABEEB76-1976-55AB-B884-3D65CA6A4743</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

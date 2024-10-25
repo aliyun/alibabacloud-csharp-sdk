@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSnatAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the SNAT entry.
+        /// <para>The ID of the SNAT entry.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>snat-5tc08qfj5ecblfdn2rqr9****</para>
         /// </summary>
         [NameInMap("SnatEntryId")]
         [Validation(Required=false)]

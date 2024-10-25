@@ -10,98 +10,131 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeARMServerInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4EC47282-1B74-4534-BD0E-403F3EE64CAF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the servers and the AIC instances.
+        /// <para>The information about the servers and the AIC instances.</para>
         /// </summary>
         [NameInMap("Servers")]
         [Validation(Required=false)]
         public List<DescribeARMServerInstancesResponseBodyServers> Servers { get; set; }
         public class DescribeARMServerInstancesResponseBodyServers : TeaModel {
             /// <summary>
-            /// The information about the AIC instances.
+            /// <para>The information about the AIC instances.</para>
             /// </summary>
             [NameInMap("AICInstances")]
             [Validation(Required=false)]
             public List<DescribeARMServerInstancesResponseBodyServersAICInstances> AICInstances { get; set; }
             public class DescribeARMServerInstancesResponseBodyServersAICInstances : TeaModel {
                 /// <summary>
-                /// The refresh rate of the AIC instance. Unit: Hz.
+                /// <para>The refresh rate of the AIC instance. Unit: Hz.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>120</para>
                 /// </summary>
                 [NameInMap("Frequency")]
                 [Validation(Required=false)]
                 public long? Frequency { get; set; }
 
                 /// <summary>
-                /// The ID of the AIC image.
+                /// <para>The ID of the AIC image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>m-****</para>
                 /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// The ID of the AIC instance.
+                /// <para>The ID of the AIC instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aic-instance****</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The operation that was most recently performed.
+                /// <para>The operation that was most recently performed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ServerCreate</para>
                 /// </summary>
                 [NameInMap("LatestAction")]
                 [Validation(Required=false)]
                 public string LatestAction { get; set; }
 
                 /// <summary>
-                /// The name of the container.
+                /// <para>The name of the container.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>AIC-Name</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The network attributes of the AIC instance.
+                /// <para>The network attributes of the AIC instance.</para>
                 /// </summary>
                 [NameInMap("NetworkAttributes")]
                 [Validation(Required=false)]
                 public DescribeARMServerInstancesResponseBodyServersAICInstancesNetworkAttributes NetworkAttributes { get; set; }
                 public class DescribeARMServerInstancesResponseBodyServersAICInstancesNetworkAttributes : TeaModel {
                     /// <summary>
-                    /// The IP address of the AIC instance.
+                    /// <para>The IP address of the AIC instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>192.168.XX.XX</para>
                     /// </summary>
                     [NameInMap("IpAddress")]
                     [Validation(Required=false)]
                     public string IpAddress { get; set; }
 
                     /// <summary>
-                    /// The network ID of the AIC instance.
+                    /// <para>The network ID of the AIC instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>n-*****</para>
                     /// </summary>
                     [NameInMap("NetworkId")]
                     [Validation(Required=false)]
                     public string NetworkId { get; set; }
 
                     /// <summary>
-                    /// The vSwitch ID of the AIC instance.
+                    /// <para>The vSwitch ID of the AIC instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>vsw-****</para>
                     /// </summary>
                     [NameInMap("VSwitchId")]
                     [Validation(Required=false)]
@@ -110,32 +143,42 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
-                /// The resolution of the AIC instance.
+                /// <para>The resolution of the AIC instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1920*1080</para>
                 /// </summary>
                 [NameInMap("Resolution")]
                 [Validation(Required=false)]
                 public string Resolution { get; set; }
 
                 /// <summary>
-                /// The information about the shared data group (SDG) that is deployed on the AIC instance.
+                /// <para>The information about the shared data group (SDG) that is deployed on the AIC instance.</para>
                 /// </summary>
                 [NameInMap("SdgDeployInfo")]
                 [Validation(Required=false)]
                 public DescribeARMServerInstancesResponseBodyServersAICInstancesSdgDeployInfo SdgDeployInfo { get; set; }
                 public class DescribeARMServerInstancesResponseBodyServersAICInstancesSdgDeployInfo : TeaModel {
                     /// <summary>
-                    /// The ID of the SDG.
+                    /// <para>The ID of the SDG.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>sdg-xxxxx</para>
                     /// </summary>
                     [NameInMap("SDGId")]
                     [Validation(Required=false)]
                     public string SDGId { get; set; }
 
                     /// <summary>
-                    /// The deployment status of the SDG. Valid values:
+                    /// <para>The deployment status of the SDG. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>sdg_deploying</b></description></item>
+                    /// <item><description><b>failed</b></description></item>
+                    /// <item><description><b>success</b></description></item>
+                    /// </list>
                     /// 
-                    /// *   **sdg_deploying**
-                    /// *   **failed**
-                    /// *   **success**
+                    /// <b>Example:</b>
+                    /// <para>success</para>
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
@@ -144,32 +187,43 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
-                /// The specification of the AIC instance.
+                /// <para>The specification of the AIC instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aic.cf53r.c2.np</para>
                 /// </summary>
                 [NameInMap("Spec")]
                 [Validation(Required=false)]
                 public string Spec { get; set; }
 
                 /// <summary>
-                /// The operation status of the AIC instance. Valid values:
+                /// <para>The operation status of the AIC instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>success</b></description></item>
+                /// <item><description><b>failed</b></description></item>
+                /// <item><description><b>creating</b></description></item>
+                /// <item><description><b>releasing</b></description></item>
+                /// <item><description><b>rebooting</b></description></item>
+                /// <item><description><b>reseting</b></description></item>
+                /// </list>
                 /// 
-                /// *   **success**
-                /// *   **failed**
-                /// *   **creating**
-                /// *   **releasing**
-                /// *   **rebooting**
-                /// *   **reseting**
+                /// <b>Example:</b>
+                /// <para>success</para>
                 /// </summary>
                 [NameInMap("State")]
                 [Validation(Required=false)]
                 public string State { get; set; }
 
                 /// <summary>
-                /// The running status of the AIC instance. Valid values:
+                /// <para>The running status of the AIC instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>running</b></description></item>
+                /// <item><description><b>pending</b></description></item>
+                /// <item><description><b>terminating</b></description></item>
+                /// </list>
                 /// 
-                /// *   **running**
-                /// *   **pending**
-                /// *   **terminating**
+                /// <b>Example:</b>
+                /// <para>running</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -178,89 +232,124 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// The time when the instance was created.
+            /// <para>The time when the instance was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-05-07 11:59:09</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The ID of the ENS node.
+            /// <para>The ID of the ENS node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hanghzou-27</para>
             /// </summary>
             [NameInMap("EnsRegionId")]
             [Validation(Required=false)]
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// The time when the instance expires.
+            /// <para>The time when the instance expires.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2027-05-07 11:59:09</para>
             /// </summary>
             [NameInMap("ExpiredTime")]
             [Validation(Required=false)]
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// The operation that was most recently performed.
+            /// <para>The operation that was most recently performed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ServerCreate</para>
             /// </summary>
             [NameInMap("LatestAction")]
             [Validation(Required=false)]
             public string LatestAction { get; set; }
 
             /// <summary>
-            /// The name of the server.
+            /// <para>The name of the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Server-Name</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The namespace of the cluster to which the server belongs.
+            /// <para>The namespace of the cluster to which the server belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default</para>
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
             /// <summary>
-            /// The billing method.
+            /// <para>The billing method.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>prepay</para>
             /// </summary>
             [NameInMap("PayType")]
             [Validation(Required=false)]
             public string PayType { get; set; }
 
             /// <summary>
-            /// The ID of the server.
+            /// <para>The ID of the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cas-******</para>
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
             public string ServerId { get; set; }
 
             /// <summary>
-            /// The server specification.
+            /// <para>The server specification.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cas.cf53r</para>
             /// </summary>
             [NameInMap("SpecName")]
             [Validation(Required=false)]
             public string SpecName { get; set; }
 
             /// <summary>
-            /// The operation status of the server. Valid values:
+            /// <para>The operation status of the server. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>success</b></description></item>
+            /// <item><description><b>failed</b></description></item>
+            /// <item><description><b>creating</b></description></item>
+            /// <item><description><b>releasing</b></description></item>
+            /// <item><description><b>rebooting</b></description></item>
+            /// <item><description><b>upgrading</b></description></item>
+            /// </list>
             /// 
-            /// *   **success**
-            /// *   **failed**
-            /// *   **creating**
-            /// *   **releasing**
-            /// *   **rebooting**
-            /// *   **upgrading**
+            /// <b>Example:</b>
+            /// <para>success</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
 
             /// <summary>
-            /// The running status of the server. Valid values:
+            /// <para>The running status of the server. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>running</b></description></item>
+            /// <item><description><b>stopping</b></description></item>
+            /// <item><description><b>down</b></description></item>
+            /// <item><description><b>starting</b></description></item>
+            /// </list>
             /// 
-            /// *   **running**
-            /// *   **stopping**
-            /// *   **down**
-            /// *   **starting**
+            /// <b>Example:</b>
+            /// <para>running</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -269,7 +358,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

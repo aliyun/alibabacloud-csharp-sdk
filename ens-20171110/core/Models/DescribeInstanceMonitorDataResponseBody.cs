@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstanceMonitorDataResponseBody : TeaModel {
         /// <summary>
-        /// The returned service code. A value of 0 indicates that the operation was successful.
+        /// <para>The returned service code. A value of 0 indicates that the operation was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The set of InstanceMonitorDataType data.
+        /// <para>The set of InstanceMonitorDataType data.</para>
         /// </summary>
         [NameInMap("MonitorData")]
         [Validation(Required=false)]
@@ -28,21 +31,30 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData> InstanceMonitorData { get; set; }
             public class DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData : TeaModel {
                 /// <summary>
-                /// The vCPU usage of the instance, which is raw data. For example, a value of 0.02 indicates that the usage is 2%.
+                /// <para>The vCPU usage of the instance, which is raw data. For example, a value of 0.02 indicates that the usage is 2%.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.02</para>
                 /// </summary>
                 [NameInMap("CPU")]
                 [Validation(Required=false)]
                 public string CPU { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// <para>The ID of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>yourInstance ID</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// This parameter is not yet supported.
+                /// <para>This parameter is not yet supported.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Not currently supported</para>
                 /// </summary>
                 [NameInMap("Memory")]
                 [Validation(Required=false)]
@@ -53,7 +65,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C8B26B44-0189-443E-9816-D951F59623A9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

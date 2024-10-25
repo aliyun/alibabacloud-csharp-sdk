@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteStorageGatewayResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>853D6E71-E087-1557-B65C-32BFBEE5CD97</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

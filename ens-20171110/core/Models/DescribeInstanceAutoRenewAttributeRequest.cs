@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstanceAutoRenewAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of an instance. Separate multiple IDs with semicolons (;).
+        /// <para>The ID of an instance. Separate multiple IDs with semicolons (;).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>i-5ci7l7k1m9m2zmhp4iw3o****</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

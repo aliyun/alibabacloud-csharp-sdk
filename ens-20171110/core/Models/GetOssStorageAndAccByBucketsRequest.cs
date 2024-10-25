@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class GetOssStorageAndAccByBucketsRequest : TeaModel {
         /// <summary>
-        /// The information about the bucket.
+        /// <para>The information about the bucket.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-bucket</para>
         /// </summary>
         [NameInMap("BucketList")]
         [Validation(Required=false)]

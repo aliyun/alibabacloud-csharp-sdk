@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSecurityGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details about security groups.
+        /// <para>Details about security groups.</para>
         /// </summary>
         [NameInMap("SecurityGroups")]
         [Validation(Required=false)]
@@ -42,35 +51,50 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup> SecurityGroup { get; set; }
             public class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup : TeaModel {
                 /// <summary>
-                /// The time when the security group was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC. The format is yyyy-MM-ddThh:mmZ.
+                /// <para>The time when the security group was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC. The format is yyyy-MM-ddThh:mmZ.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-11-01T06:08:46Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The description of the security group.
+                /// <para>The description of the security group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestDescription</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The number of associated instances.
+                /// <para>The number of associated instances.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
                 /// </summary>
                 [NameInMap("InstanceCount")]
                 [Validation(Required=false)]
                 public int? InstanceCount { get; set; }
 
                 /// <summary>
-                /// The ID of the security group.
+                /// <para>The ID of the security group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>sg-bp67acfmxazb4ph***</para>
                 /// </summary>
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }
 
                 /// <summary>
-                /// The name of the security group.
+                /// <para>The name of the security group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>DocTest</para>
                 /// </summary>
                 [NameInMap("SecurityGroupName")]
                 [Validation(Required=false)]
@@ -81,7 +105,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The total number of returned pages.
+        /// <para>The total number of returned pages.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>49</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

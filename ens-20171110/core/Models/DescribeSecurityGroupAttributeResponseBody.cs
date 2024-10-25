@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSecurityGroupAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The description of the security group.
+        /// <para>The description of the security group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testDescription1</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Details about the rules.
+        /// <para>Details about the rules.</para>
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
@@ -28,70 +31,100 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeSecurityGroupAttributeResponseBodyPermissionsPermission> Permission { get; set; }
             public class DescribeSecurityGroupAttributeResponseBodyPermissionsPermission : TeaModel {
                 /// <summary>
-                /// The time at which the security group rule was created. The time is displayed in UTC.
+                /// <para>The time at which the security group rule was created. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2018-12-12T07:28:38Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The description.
+                /// <para>The description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testDescription1</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The range of destination IP addresses for outbound access control.
+                /// <para>The range of destination IP addresses for outbound access control.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.0.0.0/0</para>
                 /// </summary>
                 [NameInMap("DestCidrIp")]
                 [Validation(Required=false)]
                 public string DestCidrIp { get; set; }
 
                 /// <summary>
-                /// The direction in which the security group rule is applied.
+                /// <para>The direction in which the security group rule is applied.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ingress</para>
                 /// </summary>
                 [NameInMap("Direction")]
                 [Validation(Required=false)]
                 public string Direction { get; set; }
 
                 /// <summary>
-                /// The transport layer protocol.
+                /// <para>The transport layer protocol.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TCP</para>
                 /// </summary>
                 [NameInMap("IpProtocol")]
                 [Validation(Required=false)]
                 public string IpProtocol { get; set; }
 
                 /// <summary>
-                /// The policy.
+                /// <para>The policy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Accept</para>
                 /// </summary>
                 [NameInMap("Policy")]
                 [Validation(Required=false)]
                 public string Policy { get; set; }
 
                 /// <summary>
-                /// The source port range.
+                /// <para>The source port range.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>80/80</para>
                 /// </summary>
                 [NameInMap("PortRange")]
                 [Validation(Required=false)]
                 public string PortRange { get; set; }
 
                 /// <summary>
-                /// The priority of the rule.
+                /// <para>The priority of the rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Priority")]
                 [Validation(Required=false)]
                 public int? Priority { get; set; }
 
                 /// <summary>
-                /// The range of source IP addresses for inbound access control.
+                /// <para>The range of source IP addresses for inbound access control.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.0.0.0/0</para>
                 /// </summary>
                 [NameInMap("SourceCidrIp")]
                 [Validation(Required=false)]
                 public string SourceCidrIp { get; set; }
 
                 /// <summary>
-                /// The source port number range for the security group.
+                /// <para>The source port number range for the security group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>22/22</para>
                 /// </summary>
                 [NameInMap("SourcePortRange")]
                 [Validation(Required=false)]
@@ -102,21 +135,30 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the destination security group.
+        /// <para>The ID of the destination security group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sg-bp1gxw6bznjjvhu3****</para>
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// The name of the destination security group.
+        /// <para>The name of the destination security group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testSecurityGroupName2</para>
         /// </summary>
         [NameInMap("SecurityGroupName")]
         [Validation(Required=false)]

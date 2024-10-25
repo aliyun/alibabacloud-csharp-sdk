@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeLoadBalancerUDPListenerAttributeRequest : TeaModel {
         /// <summary>
-        /// The listening port that you want to query. Valid values: **1** to **65535**.
+        /// <para>The listening port that you want to query. Valid values: <b>1</b> to <b>65535</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }
 
         /// <summary>
-        /// The ID of the ELB instance.
+        /// <para>The ID of the ELB instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-5pzipr2fszqtl2xf64uy5****</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]

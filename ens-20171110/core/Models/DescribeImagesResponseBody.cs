@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeImagesResponseBody : TeaModel {
         /// <summary>
-        /// The returned service code. 0 indicates that the request was successful.
+        /// <para>The returned service code. 0 indicates that the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The information about images.
+        /// <para>The information about images.</para>
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
@@ -28,63 +31,117 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeImagesResponseBodyImagesImage> Image { get; set; }
             public class DescribeImagesResponseBodyImagesImage : TeaModel {
                 /// <summary>
-                /// The architecture of the image. Example: **x86_64**.
+                /// <para>The architecture of the image. Example: <b>x86_64</b>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>x86_64</para>
                 /// </summary>
                 [NameInMap("Architecture")]
                 [Validation(Required=false)]
                 public string Architecture { get; set; }
 
                 /// <summary>
-                /// The time when the image was created. The time follows the ISO 8601 standard.
+                /// <para>The time when the image was created. The time follows the ISO 8601 standard.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2017-12-08T12:10:03Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
+                [NameInMap("DiskDeviceMappings")]
+                [Validation(Required=false)]
+                public DescribeImagesResponseBodyImagesImageDiskDeviceMappings DiskDeviceMappings { get; set; }
+                public class DescribeImagesResponseBodyImagesImageDiskDeviceMappings : TeaModel {
+                    [NameInMap("DiskDeviceMapping")]
+                    [Validation(Required=false)]
+                    public List<DescribeImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping> DiskDeviceMapping { get; set; }
+                    public class DescribeImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping : TeaModel {
+                        [NameInMap("Format")]
+                        [Validation(Required=false)]
+                        public string Format { get; set; }
+
+                        [NameInMap("Size")]
+                        [Validation(Required=false)]
+                        public string Size { get; set; }
+
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
+
+                        [NameInMap("imageId")]
+                        [Validation(Required=false)]
+                        public string ImageId { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
-                /// The ID of the image.
+                /// <para>The ID of the image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>centos_6_08_64_20G_alibase_2017****</para>
                 /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// The name of the image.
+                /// <para>The name of the image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Ubuntu_16.04</para>
                 /// </summary>
                 [NameInMap("ImageName")]
                 [Validation(Required=false)]
                 public string ImageName { get; set; }
 
                 /// <summary>
-                /// The source of the image. Valid values:
+                /// <para>The source of the image. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>system: Alibaba Cloud public images</description></item>
+                /// <item><description>self: your custom images</description></item>
+                /// <item><description>others: shared images from other Alibaba Cloud accounts, or community images published by other Alibaba Cloud accounts</description></item>
+                /// </list>
                 /// 
-                /// *   system: Alibaba Cloud public images
-                /// *   self: your custom images
-                /// *   others: shared images from other Alibaba Cloud accounts, or community images published by other Alibaba Cloud accounts
+                /// <b>Example:</b>
+                /// <para>system</para>
                 /// </summary>
                 [NameInMap("ImageOwnerAlias")]
                 [Validation(Required=false)]
                 public string ImageOwnerAlias { get; set; }
 
                 /// <summary>
-                /// The size of the image. Unit: GiB.
+                /// <para>The size of the image. Unit: GiB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>40</para>
                 /// </summary>
                 [NameInMap("ImageSize")]
                 [Validation(Required=false)]
                 public string ImageSize { get; set; }
 
                 /// <summary>
-                /// The operating system type of the image. Valid values:
+                /// <para>The operating system type of the image. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Linux</description></item>
+                /// <item><description>Windows</description></item>
+                /// </list>
                 /// 
-                /// *   Linux
-                /// *   Windows
+                /// <b>Example:</b>
+                /// <para>centos</para>
                 /// </summary>
                 [NameInMap("Platform")]
                 [Validation(Required=false)]
                 public string Platform { get; set; }
 
                 /// <summary>
-                /// The ID of the snapshot.
+                /// <para>The ID of the snapshot.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mock-clone_snapshot_id</para>
                 /// </summary>
                 [NameInMap("SnapshotId")]
                 [Validation(Required=false)]
@@ -95,28 +152,40 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8331AA01-C16D-5481-BB47-D19CEBAA811E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of images.
+        /// <para>The total number of images.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

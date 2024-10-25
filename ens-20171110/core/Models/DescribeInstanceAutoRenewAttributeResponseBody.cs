@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstanceAutoRenewAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The returned service code. A value of 0 indicates that the operation was successful.
+        /// <para>The returned service code. A value of 0 indicates that the operation was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The renewal status of the instance.
+        /// <para>The renewal status of the instance.</para>
         /// </summary>
         [NameInMap("InstanceRenewAttributes")]
         [Validation(Required=false)]
@@ -28,24 +31,34 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute> InstanceRenewAttribute { get; set; }
             public class DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute : TeaModel {
                 /// <summary>
-                /// The renewal type of the instance.
+                /// <para>The renewal type of the instance.</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+                /// <item><description><b>false</b>: disables auto-renewal.</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: enables auto-renewal.
-                /// *   **false**: disables auto-renewal.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("AutoRenewal")]
                 [Validation(Required=false)]
                 public bool? AutoRenewal { get; set; }
 
                 /// <summary>
-                /// The unit of the auto-renewal period.
+                /// <para>The unit of the auto-renewal period.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public string Duration { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// <para>The ID of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>i-5ci7l7k1m9m2zmhp4iw3o****</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -56,7 +69,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4DD66F05-3116-4BAA-B588-52EB2E7F431D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

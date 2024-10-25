@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteNetworkAclEntryRequest : TeaModel {
         /// <summary>
-        /// The ID of the network ACL for which you want to delete a rule.
+        /// <para>The ID of the network ACL for which you want to delete a rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>nae-5****</para>
         /// </summary>
         [NameInMap("NetworkAclEntryId")]
         [Validation(Required=false)]

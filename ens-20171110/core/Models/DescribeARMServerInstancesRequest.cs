@@ -10,100 +10,122 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeARMServerInstancesRequest : TeaModel {
         /// <summary>
-        /// The container specifications.
+        /// <para>The container specifications.</para>
         /// </summary>
         [NameInMap("AICSpecs")]
         [Validation(Required=false)]
         public List<string> AICSpecs { get; set; }
 
         /// <summary>
-        /// Spcifies whether the result contains the container information. Valid values:
+        /// <para>Spcifies whether the result contains the container information. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DescribeAICInstances")]
         [Validation(Required=false)]
         public bool? DescribeAICInstances { get; set; }
 
         /// <summary>
-        /// The IDs of the Edge Node Service (ENS) nodes.
+        /// <para>The IDs of the Edge Node Service (ENS) nodes.</para>
         /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
         public List<string> EnsRegionIds { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.
+        /// <para>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2006-01-03</para>
         /// </summary>
         [NameInMap("MaxDate")]
         [Validation(Required=false)]
         public string MaxDate { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.
+        /// <para>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2006-01-02</para>
         /// </summary>
         [NameInMap("MinDate")]
         [Validation(Required=false)]
         public string MinDate { get; set; }
 
         /// <summary>
-        /// The name of the server.
+        /// <para>The name of the server.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Server-Name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The namespace.
+        /// <para>The namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The sorting order of the results to return. Valid values: ServerIdSort, ServerNameSort, ExpireTimeSort, CreationTimeSort, and EnsRegionIdSort.
+        /// <para>The sorting order of the results to return. Valid values: ServerIdSort, ServerNameSort, ExpireTimeSort, CreationTimeSort, and EnsRegionIdSort.</para>
+        /// <para>asc: ascending order. desc: descending order.</para>
         /// 
-        /// asc: ascending order. desc: descending order.
+        /// <b>Example:</b>
+        /// <para>{&quot;ServerIdSort&quot;:&quot;desc&quot;,&quot;ServerNameSort&quot;:&quot;desc&quot;,&quot;ExpireTimeSort&quot;:&quot;asc&quot;,&quot;CreationTimeSort&quot;:&quot;asc&quot;,&quot;EnsRegionIdSort&quot;:&quot;asc&quot;}</para>
         /// </summary>
         [NameInMap("OrderByParams")]
         [Validation(Required=false)]
         public string OrderByParams { get; set; }
 
         /// <summary>
-        /// The page number. Pages start from page **1**.
+        /// <para>The page number. Pages start from page <b>1</b>.</para>
+        /// <para>Default value: <b>1</b>.</para>
         /// 
-        /// Default value: **1**.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. The maximum value is **100**.
+        /// <para>The number of entries per page. The maximum value is <b>100</b>.</para>
+        /// <para>Default value: <b>10</b>.</para>
         /// 
-        /// Default value: **10**.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The IDs of the ARM servers.
+        /// <para>The IDs of the ARM servers.</para>
         /// </summary>
         [NameInMap("ServerIds")]
         [Validation(Required=false)]
         public List<string> ServerIds { get; set; }
 
         /// <summary>
-        /// The server specifications.
+        /// <para>The server specifications.</para>
         /// </summary>
         [NameInMap("ServerSpecs")]
         [Validation(Required=false)]
         public List<string> ServerSpecs { get; set; }
 
         /// <summary>
-        /// The operation statuses.
+        /// <para>The operation statuses.</para>
         /// </summary>
         [NameInMap("States")]
         [Validation(Required=false)]

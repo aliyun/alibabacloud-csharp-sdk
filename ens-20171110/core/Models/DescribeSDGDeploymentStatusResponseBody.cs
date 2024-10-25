@@ -10,53 +10,68 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSDGDeploymentStatusResponseBody : TeaModel {
         /// <summary>
-        /// The deployment information of the SDG.
+        /// <para>The deployment information of the SDG.</para>
         /// </summary>
         [NameInMap("DeploymentStatus")]
         [Validation(Required=false)]
         public List<DescribeSDGDeploymentStatusResponseBodyDeploymentStatus> DeploymentStatus { get; set; }
         public class DescribeSDGDeploymentStatusResponseBodyDeploymentStatus : TeaModel {
             /// <summary>
-            /// The ID of the AIC instance.
+            /// <para>The ID of the AIC instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>aic-xxxx</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The deployment type.
+            /// <para>The deployment type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>overlay: read/write splitting.</description></item>
+            /// <item><description>common: common deployment.</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   overlay: read/write splitting.
-            /// *   common: common deployment.
+            /// <b>Example:</b>
+            /// <para>overlay</para>
             /// </summary>
             [NameInMap("MountType")]
             [Validation(Required=false)]
             public string MountType { get; set; }
 
             /// <summary>
-            /// The ID of the edge node.
+            /// <para>The ID of the edge node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// the deployment status of the shared data group SDG.
+            /// <para>the deployment status of the shared data group SDG.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>sdg_deploying</description></item>
+            /// <item><description>success</description></item>
+            /// <item><description>failed</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   sdg_deploying
-            /// *   success
-            /// *   failed
+            /// <b>Example:</b>
+            /// <para>success</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The time when the status was last updated.
+            /// <para>The time when the status was last updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2023-02-17T02:44:31Z</para>
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -65,28 +80,40 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The page number. Pages start from page 1. Default value: 1
+        /// <para>The page number. Pages start from page 1. Default value: 1</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **10**.
+        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>68B85217-03B8-5141-9216-EA4D7C496B9A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of queried deployment records.
+        /// <para>The total number of queried deployment records.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

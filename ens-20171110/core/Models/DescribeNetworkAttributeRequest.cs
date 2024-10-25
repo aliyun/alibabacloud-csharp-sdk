@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeNetworkAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the network.
+        /// <para>The ID of the network.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>n-****</para>
         /// </summary>
         [NameInMap("NetworkId")]
         [Validation(Required=false)]

@@ -10,35 +10,50 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeNetworkAclsRequest : TeaModel {
         /// <summary>
-        /// The ID of the network ACL.
+        /// <para>The ID of the network ACL.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>nacl-bp1lhl0taikrbgnh****</para>
         /// </summary>
         [NameInMap("NetworkAclId")]
         [Validation(Required=false)]
         public string NetworkAclId { get; set; }
 
         /// <summary>
-        /// The name of the network ACL.
+        /// <para>The name of the network ACL.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acl-1</para>
         /// </summary>
         [NameInMap("NetworkAclName")]
         [Validation(Required=false)]
         public string NetworkAclName { get; set; }
 
         /// <summary>
-        /// The page number. Pages start from page **1**. Default value: **1**.
+        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Maximum value: **50**. Default value: **10**.
+        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the associated instance.
+        /// <para>The ID of the associated instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>n-5****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]

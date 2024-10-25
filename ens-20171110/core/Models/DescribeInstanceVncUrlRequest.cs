@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstanceVncUrlRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance
+        /// <para>The ID of the instance</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>i-5bp1hzoinajzkh91h****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class JoinVSwitchesToEpnInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the edge network instance.
+        /// <para>The ID of the edge network instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>epn-xxxx</para>
         /// </summary>
         [NameInMap("EPNInstanceId")]
         [Validation(Required=false)]
         public string EPNInstanceId { get; set; }
 
         /// <summary>
-        /// The information about the internal networking to which you want to add the edge network instance.
+        /// <para>The information about the internal networking to which you want to add the edge network instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[{&quot;VSwitchId&quot;:&quot;vs-ixxxx&quot;},{&quot;VSwitchId&quot;:&quot;vs-ixxxx&quot;}]</para>
         /// </summary>
         [NameInMap("VSwitchesInfo")]
         [Validation(Required=false)]

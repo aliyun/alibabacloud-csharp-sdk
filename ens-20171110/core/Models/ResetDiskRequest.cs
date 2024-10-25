@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ResetDiskRequest : TeaModel {
         /// <summary>
-        /// The ID of the disk that you want to roll back.
+        /// <para>The ID of the disk that you want to roll back.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>d-bp199lyny9b3****</para>
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
         public string DiskId { get; set; }
 
         /// <summary>
-        /// The ID of the snapshot that you want to use to roll back the disk.
+        /// <para>The ID of the snapshot that you want to use to roll back the disk.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sp-bp199lyny9b3****</para>
         /// </summary>
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]

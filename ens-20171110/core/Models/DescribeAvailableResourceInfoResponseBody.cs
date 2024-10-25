@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeAvailableResourceInfoResponseBody : TeaModel {
         /// <summary>
-        /// The information about the image.
+        /// <para>The information about the image.</para>
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
@@ -21,21 +21,30 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeAvailableResourceInfoResponseBodyImagesImage> Image { get; set; }
             public class DescribeAvailableResourceInfoResponseBodyImagesImage : TeaModel {
                 /// <summary>
-                /// The ID of the image.
+                /// <para>The ID of the image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>centos_6_08_64_20G_a****</para>
                 /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// The name of the image.
+                /// <para>The name of the image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>centos_6_08_64_20G_a****</para>
                 /// </summary>
                 [NameInMap("ImageName")]
                 [Validation(Required=false)]
                 public string ImageName { get; set; }
 
                 /// <summary>
-                /// The size of the image. Unit: GB.
+                /// <para>The size of the image. Unit: GB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20</para>
                 /// </summary>
                 [NameInMap("ImageSize")]
                 [Validation(Required=false)]
@@ -46,14 +55,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8629F679-B51D-4194-A1CC-5D8F504C362B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The specifications of resources that you can purchase.
+        /// <para>The specifications of resources that you can purchase.</para>
         /// </summary>
         [NameInMap("SupportResources")]
         [Validation(Required=false)]
@@ -64,7 +76,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource> SupportResource { get; set; }
             public class DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource : TeaModel {
                 /// <summary>
-                /// Bandwidth billing method.
+                /// <para>Bandwidth billing method.</para>
                 /// </summary>
                 [NameInMap("BandwidthTypes")]
                 [Validation(Required=false)]
@@ -77,21 +89,27 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
-                /// The maximum capacity of a data disk. Unit: GB.
+                /// <para>The maximum capacity of a data disk. Unit: GB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>200</para>
                 /// </summary>
                 [NameInMap("DataDiskMaxSize")]
                 [Validation(Required=false)]
                 public int? DataDiskMaxSize { get; set; }
 
                 /// <summary>
-                /// The minimum data disk size. Unit: GiB.
+                /// <para>The minimum data disk size. Unit: GiB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
                 /// </summary>
                 [NameInMap("DataDiskMinSize")]
                 [Validation(Required=false)]
                 public int? DataDiskMinSize { get; set; }
 
                 /// <summary>
-                /// node ID
+                /// <para>node ID</para>
                 /// </summary>
                 [NameInMap("EnsRegionIds")]
                 [Validation(Required=false)]
@@ -104,7 +122,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
-                /// The supplementary information about the edge nodes.
+                /// <para>The supplementary information about the edge nodes.</para>
                 /// </summary>
                 [NameInMap("EnsRegionIdsExtends")]
                 [Validation(Required=false)]
@@ -115,42 +133,60 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public List<DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIdsExtendsEnsRegionId> EnsRegionId { get; set; }
                     public class DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIdsExtendsEnsRegionId : TeaModel {
                         /// <summary>
-                        /// The region.
+                        /// <para>The region.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>EastChina</para>
                         /// </summary>
                         [NameInMap("Area")]
                         [Validation(Required=false)]
                         public string Area { get; set; }
 
                         /// <summary>
-                        /// The name. This parameter is empty by default.
+                        /// <para>The name. This parameter is empty by default.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>EnName</para>
                         /// </summary>
                         [NameInMap("EnName")]
                         [Validation(Required=false)]
                         public string EnName { get; set; }
 
                         /// <summary>
-                        /// The ID of the edge node.
+                        /// <para>The ID of the edge node.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>cn-chengdu-telecom-4</para>
                         /// </summary>
                         [NameInMap("EnsRegionId")]
                         [Validation(Required=false)]
                         public string EnsRegionId { get; set; }
 
                         /// <summary>
-                        /// The information about the Internet service provider (ISP).
+                        /// <para>The information about the Internet service provider (ISP).</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>unicom</para>
                         /// </summary>
                         [NameInMap("Isp")]
                         [Validation(Required=false)]
                         public string Isp { get; set; }
 
                         /// <summary>
-                        /// The name of the edge node.
+                        /// <para>The name of the edge node.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Taizhou Telecom, China Unicom, and China Mobile</para>
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// The province.
+                        /// <para>The province.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Zhejiang Province</para>
                         /// </summary>
                         [NameInMap("Province")]
                         [Validation(Required=false)]
@@ -171,7 +207,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
-                /// Operator
+                /// <para>Operator</para>
                 /// </summary>
                 [NameInMap("Isp")]
                 [Validation(Required=false)]
@@ -184,14 +220,20 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
-                /// The maximum size of the system disk. Unit: GiB.
+                /// <para>The maximum size of the system disk. Unit: GiB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
                 /// </summary>
                 [NameInMap("SystemDiskMaxSize")]
                 [Validation(Required=false)]
                 public int? SystemDiskMaxSize { get; set; }
 
                 /// <summary>
-                /// The minimum capacity of a system disk. Unit: GB.
+                /// <para>The minimum capacity of a system disk. Unit: GB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20</para>
                 /// </summary>
                 [NameInMap("SystemDiskMinSize")]
                 [Validation(Required=false)]

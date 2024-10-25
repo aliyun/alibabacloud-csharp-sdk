@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RemoveVSwitchesFromEpnInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of theEPN instance.
+        /// <para>The ID of theEPN instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>epn-****</para>
         /// </summary>
         [NameInMap("EPNInstanceId")]
         [Validation(Required=false)]
         public string EPNInstanceId { get; set; }
 
         /// <summary>
-        /// The internal networking information that you want to delete.
+        /// <para>The internal networking information that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>VSwitchesInfo=[{&quot;VSwitchId&quot;:&quot;vs-ixxxx&quot;},{&quot;VSwitchId&quot;:&quot;vs-ixxxx&quot;}]</para>
         /// </summary>
         [NameInMap("VSwitchesInfo")]
         [Validation(Required=false)]

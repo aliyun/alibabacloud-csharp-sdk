@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class PutBucketLifecycleResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>62373E71-5521-4620-8AAB-133CCE49357A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

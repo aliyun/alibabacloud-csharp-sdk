@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteFileSystemRequest : TeaModel {
         /// <summary>
-        /// The ID of the edge node.
+        /// <para>The ID of the edge node.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-chengdu-telecom-4</para>
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// The ID of the file system that you want to delete.
+        /// <para>The ID of the file system that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>e42640****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEpnMeasurementDataResponseBody : TeaModel {
         /// <summary>
-        /// The metering data returned.
+        /// <para>The metering data returned.</para>
         /// </summary>
         [NameInMap("MeasurementDatas")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementData> MeasurementData { get; set; }
             public class DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementData : TeaModel {
                 /// <summary>
-                /// The bandwidth data returned.
+                /// <para>The bandwidth data returned.</para>
                 /// </summary>
                 [NameInMap("BandWidthFeeDatas")]
                 [Validation(Required=false)]
@@ -32,38 +32,54 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public List<DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeDatasBandWidthFeeData> BandWidthFeeData { get; set; }
                     public class DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeDatasBandWidthFeeData : TeaModel {
                         /// <summary>
-                        /// The code of the billable item.
+                        /// <para>The code of the billable item.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>cn-cmcc-1</para>
                         /// </summary>
                         [NameInMap("CostCode")]
                         [Validation(Required=false)]
                         public string CostCode { get; set; }
 
                         /// <summary>
-                        /// The name of the billable item.
+                        /// <para>The name of the billable item.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Beijing, Shanghai, and Guangzhou Mobile</para>
                         /// </summary>
                         [NameInMap("CostName")]
                         [Validation(Required=false)]
                         public string CostName { get; set; }
 
                         /// <summary>
-                        /// Metering method
+                        /// <para>Metering method</para>
+                        /// <list type="bullet">
+                        /// <item><description>SpeedUp: bandwidth of intelligent acceleration</description></item>
+                        /// <item><description>IntranetConnection: internal bandwidth</description></item>
+                        /// </list>
                         /// 
-                        /// *   SpeedUp: bandwidth of intelligent acceleration
-                        /// *   IntranetConnection: internal bandwidth
+                        /// <b>Example:</b>
+                        /// <para>SpeedUp</para>
                         /// </summary>
                         [NameInMap("CostType")]
                         [Validation(Required=false)]
                         public string CostType { get; set; }
 
                         /// <summary>
-                        /// The value of the billable item.
+                        /// <para>The value of the billable item.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>16486</para>
                         /// </summary>
                         [NameInMap("CostVal")]
                         [Validation(Required=false)]
                         public int? CostVal { get; set; }
 
                         /// <summary>
-                        /// This parameter is unavailable.
+                        /// <para>This parameter is unavailable.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>This parameter is not currently in use.</para>
                         /// </summary>
                         [NameInMap("IspLine")]
                         [Validation(Required=false)]
@@ -74,31 +90,44 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
-                /// The metering method. Valid values:
+                /// <para>The metering method. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>ChargeByUnified: unified metering.</description></item>
+                /// <item><description>ChargeByGrade: differential metering.</description></item>
+                /// </list>
                 /// 
-                /// *   ChargeByUnified: unified metering.
-                /// *   ChargeByGrade: differential metering.
+                /// <b>Example:</b>
+                /// <para>ChargeByGrade</para>
                 /// </summary>
                 [NameInMap("ChargeModel")]
                 [Validation(Required=false)]
                 public string ChargeModel { get; set; }
 
                 /// <summary>
-                /// The metering cycle.
+                /// <para>The metering cycle.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-07-30</para>
                 /// </summary>
                 [NameInMap("CostCycle")]
                 [Validation(Required=false)]
                 public string CostCycle { get; set; }
 
                 /// <summary>
-                /// The end time of the metering cycle.
+                /// <para>The end time of the metering cycle.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-07-30T16:00:00Z</para>
                 /// </summary>
                 [NameInMap("CostEndTime")]
                 [Validation(Required=false)]
                 public string CostEndTime { get; set; }
 
                 /// <summary>
-                /// The start time of the metering cycle.
+                /// <para>The start time of the metering cycle.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-07-29T16:00:00Z</para>
                 /// </summary>
                 [NameInMap("CostStartTime")]
                 [Validation(Required=false)]
@@ -109,7 +138,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A6328C33-6304-5291-8641-0A00A99D0DD0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

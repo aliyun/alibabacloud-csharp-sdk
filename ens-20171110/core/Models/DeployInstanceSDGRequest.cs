@@ -10,27 +10,29 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeployInstanceSDGRequest : TeaModel {
         /// <summary>
-        /// The deployment type of the SDG. Valid values:
+        /// <para>The deployment type of the SDG. shared: shared read/write splitting deployment. The content of the SDG is read-only, and data updates are written to the local storage of the instance.</para>
         /// 
-        /// *   shared: shared read/write splitting deployment. The content of the SDG is read-only, and data updates are written to the local storage of the instance.
+        /// <b>Example:</b>
+        /// <para>shared</para>
         /// </summary>
         [NameInMap("DeploymentType")]
         [Validation(Required=false)]
         public string DeploymentType { get; set; }
 
         /// <summary>
-        /// The IDs of the instances. The value is a JSON array that consists of up to 100 IDs.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of the instances. The value is a JSON array that consists of up to 100 IDs.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// The ID of the SDG.
+        /// <para>The ID of the SDG.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sdg-xxxx</para>
         /// </summary>
         [NameInMap("SDGId")]
         [Validation(Required=false)]

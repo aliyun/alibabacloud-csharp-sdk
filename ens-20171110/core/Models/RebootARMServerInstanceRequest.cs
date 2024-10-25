@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RebootARMServerInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the server.
+        /// <para>The ID of the server.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>yourInstance ID</para>
         /// </summary>
         [NameInMap("ServerId")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteSnatEntryRequest : TeaModel {
         /// <summary>
-        /// The ID of the SNAT entry that you want to delete.
+        /// <para>The ID of the SNAT entry that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>snat-5tfi6f8gds82mjmlofeym****</para>
         /// </summary>
         [NameInMap("SnatEntryId")]
         [Validation(Required=false)]

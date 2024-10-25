@@ -10,148 +10,201 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstancesShrinkRequest : TeaModel {
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing-cmcc</para>
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the regions. The value is a JSON array that consists of up to 100 IDs. Separate multiple IDs with commas (,).
+        /// <para>The IDs of the regions. The value is a JSON array that consists of up to 100 IDs. Separate multiple IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;cn-suzhou-telecom&quot;,&quot;cn-chengdu-telecom&quot;]</para>
         /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
         public string EnsRegionIds { get; set; }
 
         /// <summary>
-        /// The ID of the edge service. You can use the ID to query information about the instances that are created in the edge service.
+        /// <para>The ID of the edge service. You can use the ID to query information about the instances that are created in the edge service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ens-20190730202316s****</para>
         /// </summary>
         [NameInMap("EnsServiceId")]
         [Validation(Required=false)]
         public string EnsServiceId { get; set; }
 
         /// <summary>
-        /// The ID of the image.
+        /// <para>The ID of the image.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>centos_6_08_64_20G_alibase_****</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-5iqczfxps7csjrxeca****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The IDs of the instances. The value is a JSON array that consists of up to 100 IDs. Separate IDs with commas (,).
+        /// <para>The IDs of the instances. The value is a JSON array that consists of up to 100 IDs. Separate IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;i-5iqczfxps7csjrxeca07****&quot;, &quot;i-5iqczfxps7csjrxeca07****&quot;]]</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// The name of the instance.
+        /// <para>The name of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TestName</para>
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// The condition that you want to use to filter instances by category. Valid values:
+        /// <para>The condition that you want to use to filter instances by category. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>EnsInstance: ENS instances that you purchase.</description></item>
+        /// <item><description>EnsService: ENS instances that belong to edge services.</description></item>
+        /// <item><description>BuildMachine: ENS instances that are configured with image builders.</description></item>
+        /// <item><description>EnsPostPaidInstance: Pay-as-you-go ENS instances that you purchase.</description></item>
+        /// </list>
         /// 
-        /// *   EnsInstance: ENS instances that you purchase.
-        /// *   EnsService: ENS instances that belong to edge services.
-        /// *   BuildMachine: ENS instances that are configured with image builders.
-        /// *   EnsPostPaidInstance: Pay-as-you-go ENS instances that you purchase.
+        /// <b>Example:</b>
+        /// <para>EnsService</para>
         /// </summary>
         [NameInMap("InstanceResourceType")]
         [Validation(Required=false)]
         public string InstanceResourceType { get; set; }
 
         /// <summary>
-        /// The instance type.
+        /// <para>The instance type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ens.se1.tiny</para>
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The internal IP address of the instance.
+        /// <para>The internal IP address of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>47.100.XX.XX</para>
         /// </summary>
         [NameInMap("IntranetIp")]
         [Validation(Required=false)]
         public string IntranetIp { get; set; }
 
         /// <summary>
-        /// The ID of the network.
+        /// <para>The ID of the network.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>n-2zeuphj08tt7q3brd****</para>
         /// </summary>
         [NameInMap("NetworkId")]
         [Validation(Required=false)]
         public string NetworkId { get; set; }
 
         /// <summary>
-        /// The method that you want to use to sort instances. The value of this parameter is in the JSON format.
+        /// <para>The method that you want to use to sort instances. The value of this parameter is in the JSON format.</para>
+        /// <para>You can sort instances by name, expiration time, node ID, or creation time. You can specify one or more methods.</para>
         /// 
-        /// You can sort instances by name, expiration time, node ID, or creation time. You can specify one or more methods.
+        /// <b>Example:</b>
+        /// <para>{&quot;InstanceNameSort&quot;:&quot;asc&quot;,&quot;ExpireTimeSort&quot;:&quot;asc&quot;,&quot;CreationTimeSort&quot;:&quot;desc&quot;}}</para>
         /// </summary>
         [NameInMap("OrderByParams")]
         [Validation(Required=false)]
         public string OrderByParams { get; set; }
 
         /// <summary>
-        /// The page number. Pages start from page **1**.
+        /// <para>The page number. Pages start from page <b>1</b>.</para>
+        /// <para>Default value: <b>1</b>.</para>
         /// 
-        /// Default value: **1**.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. The maximum value is **100**.
+        /// <para>The number of entries to return on each page. The maximum value is <b>100</b>.</para>
+        /// <para>Default value: <b>10</b>.</para>
         /// 
-        /// Default value: **10**.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The keyword that you use to query the logs of the service. You can specify the values of parameters such as **ip**, **InstanceName**, and **InstanceId** as the keyword.
+        /// <para>The keyword that you use to query the logs of the service. You can specify the values of parameters such as <b>ip</b>, <b>InstanceName</b>, and <b>InstanceId</b> as the keyword.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Joshua</para>
         /// </summary>
         [NameInMap("SearchKey")]
         [Validation(Required=false)]
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// The ID of the security group.
+        /// <para>The ID of the security group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sg-5kyicq2kfcapxrdds6tar7jqb</para>
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// The status of the instance. Valid values:
+        /// <para>The status of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Running</description></item>
+        /// <item><description>Stopped</description></item>
+        /// <item><description>Expired</description></item>
+        /// </list>
         /// 
-        /// *   Running
-        /// *   Stopped
-        /// *   Expired
+        /// <b>Example:</b>
+        /// <para>Running</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The tags that are added to the resource. This operation does not return tag information. You can call this operation in combination with the tag-related operations.
+        /// <para>The tags that are added to the resource. This operation does not return tag information. You can call this operation in combination with the tag-related operations.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch.
+        /// <para>The ID of the vSwitch.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-2zeh0r1pabwtg6wcs****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateNatGatewayResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the NAT gateway.
+        /// <para>The ID of the NAT gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>nat-5t7nh1cfm6kxiszlttr38****</para>
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

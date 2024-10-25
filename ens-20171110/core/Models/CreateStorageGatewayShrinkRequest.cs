@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateStorageGatewayShrinkRequest : TeaModel {
         /// <summary>
-        /// The array of orders.
-        /// 
-        /// This parameter is required.
+        /// <para>The array of orders.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OrderDetails")]
         [Validation(Required=false)]

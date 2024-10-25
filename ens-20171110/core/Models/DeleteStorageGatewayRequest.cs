@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteStorageGatewayRequest : TeaModel {
         /// <summary>
-        /// The ID of the gateway.
+        /// <para>The ID of the gateway.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sgw-****</para>
         /// </summary>
         [NameInMap("GatewayId")]
         [Validation(Required=false)]

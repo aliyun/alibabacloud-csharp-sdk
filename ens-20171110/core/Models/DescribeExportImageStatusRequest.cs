@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeExportImageStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the image.
+        /// <para>The ID of the image.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>centos_6_08_64_20G_alibase_****</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]

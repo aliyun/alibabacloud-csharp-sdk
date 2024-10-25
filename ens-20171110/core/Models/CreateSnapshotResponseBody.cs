@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateSnapshotResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the order.
+        /// <para>The ID of the order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>21969183547****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The IDs of the snapshots.
+        /// <para>The IDs of the snapshots.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>s-bp17441ohwka0yuh****</para>
         /// </summary>
         [NameInMap("SnapShotId")]
         [Validation(Required=false)]

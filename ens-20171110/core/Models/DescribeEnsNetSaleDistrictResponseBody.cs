@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsNetSaleDistrictResponseBody : TeaModel {
         /// <summary>
-        /// The returned service code. A value of 0 indicates that the operation was successful.
+        /// <para>The returned service code. A value of 0 indicates that the operation was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The information about the ISPs in the area.
+        /// <para>The information about the ISPs in the area.</para>
         /// </summary>
         [NameInMap("EnsNetDistricts")]
         [Validation(Required=false)]
@@ -28,53 +31,75 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeEnsNetSaleDistrictResponseBodyEnsNetDistrictsEnsNetDistrict> EnsNetDistrict { get; set; }
             public class DescribeEnsNetSaleDistrictResponseBodyEnsNetDistrictsEnsNetDistrict : TeaModel {
                 /// <summary>
-                /// The information about the ISP.
+                /// <para>The information about the ISP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{                         &quot;count&quot;:2,                         &quot;name&quot;:&quot;telecommunication&quot;,                         &quot;code&quot;:&quot;telecom&quot;,                         &quot;country&quot;:&quot;cn&quot;                     }</para>
                 /// </summary>
                 [NameInMap("EnsRegionIdCount")]
                 [Validation(Required=false)]
                 public string EnsRegionIdCount { get; set; }
 
                 /// <summary>
-                /// The information about the instance.
+                /// <para>The information about the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{                         &quot;count&quot;:2,                         &quot;code&quot;:&quot;multiCarrier&quot;                     }</para>
                 /// </summary>
                 [NameInMap("InstanceCount")]
                 [Validation(Required=false)]
                 public string InstanceCount { get; set; }
 
                 /// <summary>
-                /// The region code.
+                /// <para>The region code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100101</para>
                 /// </summary>
                 [NameInMap("NetDistrictCode")]
                 [Validation(Required=false)]
                 public string NetDistrictCode { get; set; }
 
                 /// <summary>
-                /// The name of the region.
+                /// <para>The name of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>northEast</para>
                 /// </summary>
                 [NameInMap("NetDistrictEnName")]
                 [Validation(Required=false)]
                 public string NetDistrictEnName { get; set; }
 
                 /// <summary>
-                /// The parent code of the region.
+                /// <para>The parent code of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100000</para>
                 /// </summary>
                 [NameInMap("NetDistrictFatherCode")]
                 [Validation(Required=false)]
                 public string NetDistrictFatherCode { get; set; }
 
                 /// <summary>
-                /// The region level. Valid values:
+                /// <para>The region level. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Big</b>: area</description></item>
+                /// <item><description><b>Middle</b>: province</description></item>
+                /// <item><description><b>Small</b>: city</description></item>
+                /// </list>
                 /// 
-                /// *   **Big**: area
-                /// *   **Middle**: province
-                /// *   **Small**: city
+                /// <b>Example:</b>
+                /// <para>Big</para>
                 /// </summary>
                 [NameInMap("NetDistrictLevel")]
                 [Validation(Required=false)]
                 public string NetDistrictLevel { get; set; }
 
                 /// <summary>
-                /// The Chinese name of the region.
+                /// <para>The Chinese name of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Northeast China</para>
                 /// </summary>
                 [NameInMap("NetDistrictName")]
                 [Validation(Required=false)]
@@ -85,7 +110,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1707B55C-A12F-43EF-BC66-14FFDB9253C3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

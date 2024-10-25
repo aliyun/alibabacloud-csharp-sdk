@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateStorageVolumeResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7030AB96-57CF-1C68-9FEE-D60E547FD79C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array of volume IDs.
+        /// <para>An array of volume IDs.</para>
         /// </summary>
         [NameInMap("VolumeId")]
         [Validation(Required=false)]

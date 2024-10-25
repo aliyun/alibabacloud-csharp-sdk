@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class GetBucketLifecycleRequest : TeaModel {
         /// <summary>
-        /// The name of the bucket.
+        /// <para>The name of the bucket.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>tese</para>
         /// </summary>
         [NameInMap("BucketName")]
         [Validation(Required=false)]
         public string BucketName { get; set; }
 
         /// <summary>
-        /// The ID of the rule that you want to query. If this parameter is not specified, all rules are returned.
+        /// <para>The ID of the rule that you want to query. If this parameter is not specified, all rules are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

@@ -10,40 +10,51 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RenewARMServerInstanceRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable auto-renewal for the subscription. Valid values:
+        /// <para>Specifies whether to enable auto-renewal for the premium bandwidth plan. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>.</description></item>
+        /// <item><description><b>false</b> (default).</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false (default)
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// The ID of the instance that you want to renew.
+        /// <para>The ID of the instance that you want to renew.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>yourInstance ID</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The renewal period. By default, instances are renewed on a monthly basis. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.
+        /// <para>The renewal period. By default, instances are renewed on a monthly basis. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
         /// <summary>
-        /// The unit of the renewal period. Valid values:
+        /// <para>The unit of the renewal period. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Month (default)</description></item>
+        /// <item><description>Year</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Month (default)
-        /// *   Year
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Month</para>
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]

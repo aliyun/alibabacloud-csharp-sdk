@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class StartInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance. You can start only one instance.
+        /// <para>The ID of the instance. You can start only one instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>i-instance****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

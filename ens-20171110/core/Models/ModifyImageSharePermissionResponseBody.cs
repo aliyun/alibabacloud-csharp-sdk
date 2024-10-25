@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyImageSharePermissionResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>701B3BB9-9190-544D-90D1-328B0527380C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

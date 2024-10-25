@@ -10,29 +10,39 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyVSwitchAttributeRequest : TeaModel {
         /// <summary>
-        /// The description of the vSwitch.
+        /// <para>The description of the vSwitch.</para>
+        /// <list type="bullet">
+        /// <item><description>The description must be 2 to 256 characters in length.</description></item>
+        /// <item><description>The description cannot start with http:// or https://.</description></item>
+        /// </list>
         /// 
-        /// *   The description must be 2 to 256 characters in length.
-        /// *   The description cannot start with http:// or https://.
+        /// <b>Example:</b>
+        /// <para>this is my first network</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch.
+        /// <para>The ID of the vSwitch.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>n-****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The name of the vSwitch.
+        /// <para>The name of the vSwitch.</para>
+        /// <list type="bullet">
+        /// <item><description>The name must be 2 to 128 characters in length.</description></item>
+        /// <item><description>The name must start with a letter and cannot start with http:// or https://.</description></item>
+        /// </list>
         /// 
-        /// *   The name must be 2 to 128 characters in length.
-        /// *   The name must start with a letter and cannot start with http:// or https://.
+        /// <b>Example:</b>
+        /// <para>Test-switch</para>
         /// </summary>
         [NameInMap("VSwitchName")]
         [Validation(Required=false)]

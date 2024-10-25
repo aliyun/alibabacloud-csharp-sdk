@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsRegionsRequest : TeaModel {
         /// <summary>
-        /// The ID of the node.
+        /// <para>The ID of the node.</para>
+        /// <para>By default, all available node IDs are returned.</para>
         /// 
-        /// By default, all available node IDs are returned.
+        /// <b>Example:</b>
+        /// <para>cn-dalian-unicom</para>
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]

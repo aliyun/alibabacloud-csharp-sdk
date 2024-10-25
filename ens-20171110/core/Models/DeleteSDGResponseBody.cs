@@ -10,56 +10,68 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteSDGResponseBody : TeaModel {
         /// <summary>
-        /// The returned data object.
+        /// <para>The returned data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteSDGResponseBodyData Data { get; set; }
         public class DeleteSDGResponseBodyData : TeaModel {
             /// <summary>
-            /// The response message. Success is returned for a successful request.
+            /// <para>The response message. Success is returned for a successful request.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>success</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// The execution result of the synchronization request.
+            /// <para>The execution result of the synchronization request.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public DeleteSDGResponseBodyDataResult Result { get; set; }
             public class DeleteSDGResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// The number of failed tasks.
+                /// <para>The number of failed tasks.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("FailedCount")]
                 [Validation(Required=false)]
                 public long? FailedCount { get; set; }
 
                 /// <summary>
-                /// Details about the failed tasks.
+                /// <para>Details about the failed tasks.</para>
                 /// </summary>
                 [NameInMap("FailedItems")]
                 [Validation(Required=false)]
                 public List<DeleteSDGResponseBodyDataResultFailedItems> FailedItems { get; set; }
                 public class DeleteSDGResponseBodyDataResultFailedItems : TeaModel {
                     /// <summary>
-                    /// The error message.
+                    /// <para>The error message.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>sdg not found</para>
                     /// </summary>
                     [NameInMap("ErrMessage")]
                     [Validation(Required=false)]
                     public string ErrMessage { get; set; }
 
                     /// <summary>
-                    /// Description
+                    /// <para>Description</para>
                     /// </summary>
                     [NameInMap("Item")]
                     [Validation(Required=false)]
                     public DeleteSDGResponseBodyDataResultFailedItemsItem Item { get; set; }
                     public class DeleteSDGResponseBodyDataResultFailedItemsItem : TeaModel {
                         /// <summary>
-                        /// The ID of the shared data group (SDG).
+                        /// <para>The ID of the shared data group (SDG).</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>sdg-dfet5vvvgy</para>
                         /// </summary>
                         [NameInMap("SdgId")]
                         [Validation(Required=false)]
@@ -70,7 +82,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
-                /// The number of successful tasks.
+                /// <para>The number of successful tasks.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("SuccessCount")]
                 [Validation(Required=false)]
@@ -79,10 +94,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// Indicates whether all tasks are successful. Valid values:
+            /// <para>Indicates whether all tasks are successful. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: All tasks are successful.</description></item>
+            /// <item><description>false: Failed tasks exist.</description></item>
+            /// </list>
             /// 
-            /// *   true: All tasks are successful.
-            /// *   false: Failed tasks exist.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Success")]
             [Validation(Required=false)]
@@ -91,7 +110,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>86A6D421-A0C7-4C01-8648-47377CA6A2CE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

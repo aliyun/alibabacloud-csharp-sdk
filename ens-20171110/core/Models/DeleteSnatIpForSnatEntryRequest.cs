@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteSnatIpForSnatEntryRequest : TeaModel {
         /// <summary>
-        /// The ID of the SNAT entry.
+        /// <para>The ID of the SNAT entry.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>snat-5tfi6f8gds82mjmlofeym****</para>
         /// </summary>
         [NameInMap("SnatEntryId")]
         [Validation(Required=false)]
         public string SnatEntryId { get; set; }
 
         /// <summary>
-        /// The EIP that you want to delete from the SNAT entry.
+        /// <para>The EIP that you want to delete from the SNAT entry.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>120.72.56.71</para>
         /// </summary>
         [NameInMap("SnatIp")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteStorageVolumeRequest : TeaModel {
         /// <summary>
-        /// The ID of the volume.
+        /// <para>The ID of the volume.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sv-***</para>
         /// </summary>
         [NameInMap("VolumeId")]
         [Validation(Required=false)]
