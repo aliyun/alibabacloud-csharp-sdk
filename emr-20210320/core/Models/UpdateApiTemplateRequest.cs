@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class UpdateApiTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the API. You can create only a cluster API operation template. Set the value to CreateCluster.</para>
+        /// <para>The name of the API operation. You can create only a cluster API operation template. Set the value to CreateCluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ApiName { get; set; }
 
         /// <summary>
-        /// <para>The content of the cluster API operation template. Set the value to JSON strings of the request parameters of the <a href="https://help.aliyun.com/document_detail/454393.html">CreateCluster</a> API for creating a cluster.</para>
+        /// <para>The content of the cluster API operation template. Set the value to JSON strings of the request parameters of the <a href="https://help.aliyun.com/document_detail/454393.html">CreateCluster</a> API operation for creating a cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

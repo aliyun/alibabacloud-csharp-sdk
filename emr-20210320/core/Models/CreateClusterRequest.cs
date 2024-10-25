@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class CreateClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The application configurations. You can specify a maximum of 1,000 items.</para>
+        /// <para>The service configurations. Number of elements in the array: 1 to 1000.</para>
         /// </summary>
         [NameInMap("ApplicationConfigs")]
         [Validation(Required=false)]
         public List<ApplicationConfig> ApplicationConfigs { get; set; }
 
         /// <summary>
-        /// <para>The applications. You can specify a maximum of 100 items.</para>
+        /// <para>The services. Number of elements in the array: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Applications")]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<Application> Applications { get; set; }
 
         /// <summary>
-        /// <para>The bootstrap actions. You can specify a maximum of 10 items.</para>
+        /// <para>The bootstrap actions. Number of elements in the array: 1 to 10.</para>
         /// </summary>
         [NameInMap("BootstrapScripts")]
         [Validation(Required=false)]
@@ -86,12 +86,16 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string DeployMode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Emr cluster for ETL</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The attributes of all ECS instances.</para>
+        /// <para>The attributes of all ECS instances. The basic attributes of all ECS instances in the cluster.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodeAttributes")]
@@ -99,7 +103,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public NodeAttributes NodeAttributes { get; set; }
 
         /// <summary>
-        /// <para>The node groups. You can specify a maximum of 100 items.</para>
+        /// <para>The node groups. Number of elements in the array: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -178,7 +182,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public SubscriptionConfig SubscriptionConfig { get; set; }
 
         /// <summary>
-        /// <para>The tags. You can specify a maximum of 20 items.</para>
+        /// <para>The list of tags. Number of elements in the array: 0 to 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A7D960FA-6DBA-5E07-8746-A63E3E4D****</para>

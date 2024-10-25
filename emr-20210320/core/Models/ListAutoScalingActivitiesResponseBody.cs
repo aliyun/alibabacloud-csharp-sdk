@@ -126,6 +126,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             [Validation(Required=false)]
             public int? ExpectNum { get; set; }
 
+            [NameInMap("InstanceTypeToNum")]
+            [Validation(Required=false)]
+            public Dictionary<string, int?> InstanceTypeToNum { get; set; }
+
             /// <summary>
             /// <para>The ID of the node group.</para>
             /// 
@@ -155,6 +159,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             [NameInMap("OperationId")]
             [Validation(Required=false)]
             public string OperationId { get; set; }
+
+            [NameInMap("PolicyType")]
+            [Validation(Required=false)]
+            public string PolicyType { get; set; }
 
             /// <summary>
             /// <para>The name of the scaling rule.</para>

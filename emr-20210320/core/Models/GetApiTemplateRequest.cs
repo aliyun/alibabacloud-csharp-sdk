@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetApiTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>区域ID。</para>
+        /// <para>Region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>集群模板id。</para>
+        /// <para>Cluster template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

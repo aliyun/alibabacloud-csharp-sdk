@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public bool? ExistCloneConfig { get; set; }
 
             /// <summary>
-            /// <para>The attributes of the node.</para>
+            /// <para>The attributes of all ECS instances.</para>
             /// </summary>
             [NameInMap("NodeAttributes")]
             [Validation(Required=false)]

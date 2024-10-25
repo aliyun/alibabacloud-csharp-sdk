@@ -143,6 +143,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             [Validation(Required=false)]
             public string OperationId { get; set; }
 
+            [NameInMap("PolicyType")]
+            [Validation(Required=false)]
+            public string PolicyType { get; set; }
+
             /// <summary>
             /// <para>The description of the scaling rule.</para>
             /// </summary>

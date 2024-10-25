@@ -82,6 +82,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a predefined API operation template. The template contains information about an API operation, including the basic structure, request method, URL path, request parameters, and response format.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateApiTemplateRequest
         /// </param>
@@ -135,6 +140,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<CreateApiTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a predefined API operation template. The template contains information about an API operation, including the basic structure, request method, URL path, request parameters, and response format.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateApiTemplateRequest
         /// </param>
@@ -188,6 +198,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<CreateApiTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a predefined API operation template. The template contains information about an API operation, including the basic structure, request method, URL path, request parameters, and response format.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateApiTemplateRequest
         /// </param>
@@ -201,6 +216,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return CreateApiTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a predefined API operation template. The template contains information about an API operation, including the basic structure, request method, URL path, request parameters, and response format.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateApiTemplateRequest
         /// </param>
@@ -914,6 +934,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await DecreaseNodesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an API operation template.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>创建集群模板</para>
@@ -968,6 +993,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<DeleteApiTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an API operation template.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>创建集群模板</para>
@@ -1022,6 +1052,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<DeleteApiTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an API operation template.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>创建集群模板</para>
@@ -1040,6 +1075,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return DeleteApiTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an API operation template.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>创建集群模板</para>
@@ -1312,7 +1352,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取API模板详情</para>
+        /// <para>Queries the detailed configuration information about an API operation template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1358,7 +1398,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取API模板详情</para>
+        /// <para>Queries the detailed configuration information about an API operation template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1404,7 +1444,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取API模板详情</para>
+        /// <para>Queries the detailed configuration information about an API operation template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1422,7 +1462,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取API模板详情</para>
+        /// <para>Queries the detailed configuration information about an API operation template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1574,10 +1614,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await GetApplicationWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取弹性伸缩活动详情。</para>
-        /// </description>
+        /// </summary>
         /// 
         /// <param name="request">
         /// GetAutoScalingActivityRequest
@@ -1624,10 +1664,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<GetAutoScalingActivityResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取弹性伸缩活动详情。</para>
-        /// </description>
+        /// </summary>
         /// 
         /// <param name="request">
         /// GetAutoScalingActivityRequest
@@ -1674,10 +1714,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<GetAutoScalingActivityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取弹性伸缩活动详情。</para>
-        /// </description>
+        /// </summary>
         /// 
         /// <param name="request">
         /// GetAutoScalingActivityRequest
@@ -1692,10 +1732,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             return GetAutoScalingActivityWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取弹性伸缩活动详情。</para>
-        /// </description>
+        /// </summary>
         /// 
         /// <param name="request">
         /// GetAutoScalingActivityRequest
@@ -2566,9 +2606,14 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await GetDoctorHBaseClusterWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get HBase Region information.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>list Doctor HBaseRegions</para>
+        /// <para>List Doctor HBase Regions</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2620,9 +2665,14 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<GetDoctorHBaseRegionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get HBase Region information.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>list Doctor HBaseRegions</para>
+        /// <para>List Doctor HBase Regions</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2674,9 +2724,14 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<GetDoctorHBaseRegionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get HBase Region information.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>list Doctor HBaseRegions</para>
+        /// <para>List Doctor HBase Regions</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2692,9 +2747,14 @@ namespace AlibabaCloud.SDK.Emr20210320
             return GetDoctorHBaseRegionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get HBase Region information.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>list Doctor HBaseRegions</para>
+        /// <para>List Doctor HBase Regions</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2874,6 +2934,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await GetDoctorHBaseRegionServerWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get HBase Table information.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>get Doctor HBaseTable</para>
@@ -2928,6 +2993,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<GetDoctorHBaseTableResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get HBase Table information.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>get Doctor HBaseTable</para>
@@ -2982,6 +3052,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<GetDoctorHBaseTableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get HBase Table information.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>get Doctor HBaseTable</para>
@@ -3000,6 +3075,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return GetDoctorHBaseTableWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get HBase Table information.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>get Doctor HBaseTable</para>
@@ -4150,9 +4230,14 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await GetDoctorJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the analysis result report of a specified component from EMR Doctor.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>get specify component&#39;s report analysis by emr doctor</para>
+        /// <para>get specify component\&quot;s report analysis by EMR Doctor</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4204,9 +4289,14 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<GetDoctorReportComponentSummaryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the analysis result report of a specified component from EMR Doctor.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>get specify component&#39;s report analysis by emr doctor</para>
+        /// <para>get specify component\&quot;s report analysis by EMR Doctor</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4258,9 +4348,14 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<GetDoctorReportComponentSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the analysis result report of a specified component from EMR Doctor.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>get specify component&#39;s report analysis by emr doctor</para>
+        /// <para>get specify component\&quot;s report analysis by EMR Doctor</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4276,9 +4371,14 @@ namespace AlibabaCloud.SDK.Emr20210320
             return GetDoctorReportComponentSummaryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the analysis result report of a specified component from EMR Doctor.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>get specify component&#39;s report analysis by emr doctor</para>
+        /// <para>get specify component\&quot;s report analysis by EMR Doctor</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5422,10 +5522,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await ListApplicationsWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询弹性伸缩活动列表。</para>
-        /// </description>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ListAutoScalingActivitiesRequest
@@ -5473,6 +5573,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             {
                 query["ScalingActivityType"] = request.ScalingActivityType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingPolicyType))
+            {
+                query["ScalingPolicyType"] = request.ScalingPolicyType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingRuleName))
             {
                 query["ScalingRuleName"] = request.ScalingRuleName;
@@ -5500,10 +5604,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<ListAutoScalingActivitiesResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询弹性伸缩活动列表。</para>
-        /// </description>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ListAutoScalingActivitiesRequest
@@ -5551,6 +5655,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             {
                 query["ScalingActivityType"] = request.ScalingActivityType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingPolicyType))
+            {
+                query["ScalingPolicyType"] = request.ScalingPolicyType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingRuleName))
             {
                 query["ScalingRuleName"] = request.ScalingRuleName;
@@ -5578,10 +5686,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<ListAutoScalingActivitiesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询弹性伸缩活动列表。</para>
-        /// </description>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ListAutoScalingActivitiesRequest
@@ -5596,10 +5704,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             return ListAutoScalingActivitiesWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询弹性伸缩活动列表。</para>
-        /// </description>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ListAutoScalingActivitiesRequest
@@ -8306,6 +8414,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await ListDoctorReportsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists instance types.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstanceTypesRequest
         /// </param>
@@ -8383,6 +8496,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<ListInstanceTypesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists instance types.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstanceTypesRequest
         /// </param>
@@ -8460,6 +8578,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<ListInstanceTypesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists instance types.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstanceTypesRequest
         /// </param>
@@ -8473,6 +8596,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return ListInstanceTypesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists instance types.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstanceTypesRequest
         /// </param>
@@ -9018,6 +9146,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await ListReleaseVersionsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the bootstrap actions or common scripts of an E-MapReduce (EMR) cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListScriptsRequest
         /// </param>
@@ -9071,6 +9204,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<ListScriptsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the bootstrap actions or common scripts of an E-MapReduce (EMR) cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListScriptsRequest
         /// </param>
@@ -9124,6 +9262,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<ListScriptsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the bootstrap actions or common scripts of an E-MapReduce (EMR) cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListScriptsRequest
         /// </param>
@@ -9137,6 +9280,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return ListScriptsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the bootstrap actions or common scripts of an E-MapReduce (EMR) cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListScriptsRequest
         /// </param>

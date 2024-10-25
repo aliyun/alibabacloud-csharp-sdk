@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string ScalingActivityType { get; set; }
 
+        [NameInMap("ScalingPolicyType")]
+        [Validation(Required=false)]
+        public string ScalingPolicyType { get; set; }
+
         /// <summary>
         /// <para>The name of the scaling rule.</para>
         /// 

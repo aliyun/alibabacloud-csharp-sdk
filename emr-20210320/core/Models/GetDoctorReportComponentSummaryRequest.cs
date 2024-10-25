@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetDoctorReportComponentSummaryRequest : TeaModel {
         /// <summary>
-        /// <para>集群ID。</para>
+        /// <para>Cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,15 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>component type</para>
+        /// <para>Select component filter type. Values: </para>
+        /// <list type="bullet">
+        /// <item><description>compute </description></item>
+        /// <item><description>hive</description></item>
+        /// <item><description>hdfs</description></item>
+        /// <item><description>yarn</description></item>
+        /// <item><description>oss</description></item>
+        /// <item><description>hbase</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ComponentType { get; set; }
 
         /// <summary>
-        /// <para>dateTime for specify report</para>
+        /// <para>Report date.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +51,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string DateTime { get; set; }
 
         /// <summary>
-        /// <para>区域ID。</para>
+        /// <para>Region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

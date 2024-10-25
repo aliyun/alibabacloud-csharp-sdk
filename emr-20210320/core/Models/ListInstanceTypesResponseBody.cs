@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<InstanceType> InstanceTypes { get; set; }
 
         /// <summary>
-        /// <para>本次请求所返回的最大记录条数。</para>
+        /// <para>The maximum number of records returned in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>返回读取到的数据位置，空代表数据已经读取完毕。</para>
+        /// <para>Returns the position of the read data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>请求ID。</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>本次请求条件下的数据总量。</para>
+        /// <para>The total amount of data under the conditions of this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
