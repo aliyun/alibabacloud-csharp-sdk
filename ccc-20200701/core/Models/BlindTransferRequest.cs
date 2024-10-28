@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string RoutingType { get; set; }
 
+        [NameInMap("SkillGroupId")]
+        [Validation(Required=false)]
+        public string SkillGroupId { get; set; }
+
         [NameInMap("StrategyName")]
         [Validation(Required=false)]
         public string StrategyName { get; set; }

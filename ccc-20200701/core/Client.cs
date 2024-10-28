@@ -2320,6 +2320,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["RoutingType"] = request.RoutingType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillGroupId))
+            {
+                query["SkillGroupId"] = request.SkillGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyName))
             {
                 query["StrategyName"] = request.StrategyName;
@@ -2416,6 +2420,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoutingType))
             {
                 query["RoutingType"] = request.RoutingType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillGroupId))
+            {
+                query["SkillGroupId"] = request.SkillGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyName))
             {
@@ -9816,6 +9824,114 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetInstanceTrendingReportWithOptionsAsync(request, runtime);
+        }
+
+        /// <param name="request">
+        /// GetIvrTrackingSummaryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIvrTrackingSummaryResponse
+        /// </returns>
+        public GetIvrTrackingSummaryResponse GetIvrTrackingSummaryWithOptions(GetIvrTrackingSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                query["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIvrTrackingSummary",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIvrTrackingSummaryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// GetIvrTrackingSummaryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIvrTrackingSummaryResponse
+        /// </returns>
+        public async Task<GetIvrTrackingSummaryResponse> GetIvrTrackingSummaryWithOptionsAsync(GetIvrTrackingSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                query["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIvrTrackingSummary",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIvrTrackingSummaryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// GetIvrTrackingSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIvrTrackingSummaryResponse
+        /// </returns>
+        public GetIvrTrackingSummaryResponse GetIvrTrackingSummary(GetIvrTrackingSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetIvrTrackingSummaryWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// GetIvrTrackingSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIvrTrackingSummaryResponse
+        /// </returns>
+        public async Task<GetIvrTrackingSummaryResponse> GetIvrTrackingSummaryAsync(GetIvrTrackingSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetIvrTrackingSummaryWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
