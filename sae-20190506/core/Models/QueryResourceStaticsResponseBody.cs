@@ -68,6 +68,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public QueryResourceStaticsResponseBodyDataSummary Summary { get; set; }
             public class QueryResourceStaticsResponseBodyDataSummary : TeaModel {
+                [NameInMap("ActiveCpu")]
+                [Validation(Required=false)]
+                public float? ActiveCpu { get; set; }
+
                 /// <summary>
                 /// <para>The CPU usage. Unit: core per minute.</para>
                 /// 
@@ -77,6 +81,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [NameInMap("Cpu")]
                 [Validation(Required=false)]
                 public float? Cpu { get; set; }
+
+                [NameInMap("IdleCpu")]
+                [Validation(Required=false)]
+                public float? IdleCpu { get; set; }
 
                 /// <summary>
                 /// <para>The memory usage. Unit: GiB per minute.</para>

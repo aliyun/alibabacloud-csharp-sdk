@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public float? Cpu { get; set; }
 
+                [NameInMap("Cu")]
+                [Validation(Required=false)]
+                public float? Cu { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>989802.563546</para>

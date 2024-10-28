@@ -2059,7 +2059,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>{&quot;appId&quot;:&quot;395b60e4-0550-458d-9c54-a265d036\<em>\</em>\<em>\</em>&quot;,&quot;containerPort&quot;:8080}</para>
+        /// <para>Creates a routing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2155,7 +2155,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>{&quot;appId&quot;:&quot;395b60e4-0550-458d-9c54-a265d036\<em>\</em>\<em>\</em>&quot;,&quot;containerPort&quot;:8080}</para>
+        /// <para>Creates a routing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2251,7 +2251,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>{&quot;appId&quot;:&quot;395b60e4-0550-458d-9c54-a265d036\<em>\</em>\<em>\</em>&quot;,&quot;containerPort&quot;:8080}</para>
+        /// <para>Creates a routing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2270,7 +2270,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>{&quot;appId&quot;:&quot;395b60e4-0550-458d-9c54-a265d036\<em>\</em>\<em>\</em>&quot;,&quot;containerPort&quot;:8080}</para>
+        /// <para>Creates a routing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17915,6 +17915,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return await UpdateGreyTagRouteWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of a routing rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateIngressRequest
         /// </param>
@@ -18002,6 +18007,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<UpdateIngressResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of a routing rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateIngressRequest
         /// </param>
@@ -18089,6 +18099,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<UpdateIngressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of a routing rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateIngressRequest
         /// </param>
@@ -18103,6 +18118,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return UpdateIngressWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of a routing rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateIngressRequest
         /// </param>

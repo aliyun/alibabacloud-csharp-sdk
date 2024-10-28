@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string InstanceID { get; set; }
 
+        [NameInMap("registryConfig")]
+        [Validation(Required=false)]
+        public RegistryConfig RegistryConfig { get; set; }
+
     }
 
 }
