@@ -1749,6 +1749,150 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>取消设置智能目录配额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelFilesetQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelFilesetQuotaResponse
+        /// </returns>
+        public CancelFilesetQuotaResponse CancelFilesetQuotaWithOptions(CancelFilesetQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FsetId))
+            {
+                query["FsetId"] = request.FsetId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelFilesetQuota",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelFilesetQuotaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消设置智能目录配额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelFilesetQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelFilesetQuotaResponse
+        /// </returns>
+        public async Task<CancelFilesetQuotaResponse> CancelFilesetQuotaWithOptionsAsync(CancelFilesetQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FsetId))
+            {
+                query["FsetId"] = request.FsetId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelFilesetQuota",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelFilesetQuotaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消设置智能目录配额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelFilesetQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelFilesetQuotaResponse
+        /// </returns>
+        public CancelFilesetQuotaResponse CancelFilesetQuota(CancelFilesetQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelFilesetQuotaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消设置智能目录配额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelFilesetQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelFilesetQuotaResponse
+        /// </returns>
+        public async Task<CancelFilesetQuotaResponse> CancelFilesetQuotaAsync(CancelFilesetQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelFilesetQuotaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Cancels a running data retrieval task.</para>
         /// </summary>
         /// 
@@ -18267,6 +18411,166 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetDirQuotaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置智能目录配额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetFilesetQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetFilesetQuotaResponse
+        /// </returns>
+        public SetFilesetQuotaResponse SetFilesetQuotaWithOptions(SetFilesetQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileCountLimit))
+            {
+                query["FileCountLimit"] = request.FileCountLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FsetId))
+            {
+                query["FsetId"] = request.FsetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SizeLimit))
+            {
+                query["SizeLimit"] = request.SizeLimit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetFilesetQuota",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetFilesetQuotaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置智能目录配额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetFilesetQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetFilesetQuotaResponse
+        /// </returns>
+        public async Task<SetFilesetQuotaResponse> SetFilesetQuotaWithOptionsAsync(SetFilesetQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileCountLimit))
+            {
+                query["FileCountLimit"] = request.FileCountLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FsetId))
+            {
+                query["FsetId"] = request.FsetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SizeLimit))
+            {
+                query["SizeLimit"] = request.SizeLimit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetFilesetQuota",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetFilesetQuotaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置智能目录配额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetFilesetQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetFilesetQuotaResponse
+        /// </returns>
+        public SetFilesetQuotaResponse SetFilesetQuota(SetFilesetQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetFilesetQuotaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置智能目录配额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetFilesetQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetFilesetQuotaResponse
+        /// </returns>
+        public async Task<SetFilesetQuotaResponse> SetFilesetQuotaAsync(SetFilesetQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetFilesetQuotaWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
