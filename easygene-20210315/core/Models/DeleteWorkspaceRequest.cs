@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class DeleteWorkspaceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MyTestWorkspace</para>
         /// </summary>
         [NameInMap("Workspace")]
         [Validation(Required=false)]

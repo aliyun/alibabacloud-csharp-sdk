@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class AbortSubmissionResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>easygene.cn-beijing.aliyuncs.com</para>
+        /// </summary>
         [NameInMap("HostId")]
         [Validation(Required=false)]
         public string HostId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>easygene.cn-beijing.aliyuncs.com</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

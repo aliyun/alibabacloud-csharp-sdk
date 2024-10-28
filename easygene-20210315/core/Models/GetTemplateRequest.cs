@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class GetTemplateRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-template</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-workspace</para>
         /// </summary>
         [NameInMap("Workspace")]
         [Validation(Required=false)]

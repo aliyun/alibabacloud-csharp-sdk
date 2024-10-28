@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class DeleteSubmissionRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sub-13BeXWnGvrOl3MC124tazcJVKaV</para>
         /// </summary>
         [NameInMap("SubmissionId")]
         [Validation(Required=false)]
         public string SubmissionId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TestWorkspace</para>
         /// </summary>
         [NameInMap("Workspace")]
         [Validation(Required=false)]

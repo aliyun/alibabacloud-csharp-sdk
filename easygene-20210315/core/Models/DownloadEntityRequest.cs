@@ -14,14 +14,20 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public List<string> EntityNames { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sample</para>
         /// </summary>
         [NameInMap("EntityType")]
         [Validation(Required=false)]
         public string EntityType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-workspace</para>
         /// </summary>
         [NameInMap("Workspace")]
         [Validation(Required=false)]

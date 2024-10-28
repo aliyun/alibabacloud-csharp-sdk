@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,14 +10,20 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class AbortRunRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>run-13BeYuxc0fxO24uA75UppTiMRoQ</para>
         /// </summary>
         [NameInMap("RunId")]
         [Validation(Required=false)]
         public string RunId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-workspace</para>
         /// </summary>
         [NameInMap("Workspace")]
         [Validation(Required=false)]

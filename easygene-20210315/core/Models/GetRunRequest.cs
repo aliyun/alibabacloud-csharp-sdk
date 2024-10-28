@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class GetRunRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>run-12kDbbqp5O9dfsH0sEdQeRclGQb</para>
         /// </summary>
         [NameInMap("RunId")]
         [Validation(Required=false)]
         public string RunId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default-workspace</para>
         /// </summary>
         [NameInMap("Workspace")]
         [Validation(Required=false)]

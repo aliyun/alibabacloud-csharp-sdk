@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class UpdateTemplateRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>This is a test template</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InputsExpression")]
         [Validation(Required=false)]
@@ -25,39 +29,58 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             public string Help { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>True</para>
             /// </summary>
             [NameInMap("Required")]
             [Validation(Required=false)]
             public bool? Required { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("StepOrder")]
             [Validation(Required=false)]
             public int? StepOrder { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Task1</para>
             /// </summary>
             [NameInMap("TaskName")]
             [Validation(Required=false)]
             public string TaskName { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>fastq1</para>
             /// </summary>
             [NameInMap("VariableName")]
             [Validation(Required=false)]
             public string VariableName { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>String</para>
             /// </summary>
             [NameInMap("VariableType")]
             [Validation(Required=false)]
             public string VariableType { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>read_1.fastq.gz</para>
             /// </summary>
             [NameInMap("VariableValue")]
             [Validation(Required=false)]
@@ -65,12 +88,16 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;key&quot;: &quot;value&quot;}</para>
+        /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public string Labels { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OutputsExpression")]
         [Validation(Required=false)]
@@ -81,7 +108,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             public string Help { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>True</para>
             /// </summary>
             [NameInMap("Required")]
             [Validation(Required=false)]
@@ -92,28 +122,40 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             public int? StepOrder { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Task1</para>
             /// </summary>
             [NameInMap("TaskName")]
             [Validation(Required=false)]
             public string TaskName { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Bam</para>
             /// </summary>
             [NameInMap("VariableName")]
             [Validation(Required=false)]
             public string VariableName { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>String</para>
             /// </summary>
             [NameInMap("VariableType")]
             [Validation(Required=false)]
             public string VariableType { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>out.bam</para>
             /// </summary>
             [NameInMap("VariableValue")]
             [Validation(Required=false)]
@@ -121,19 +163,29 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test-entity</para>
+        /// </summary>
         [NameInMap("RootEntity")]
         [Validation(Required=false)]
         public string RootEntity { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-template</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-workspace</para>
         /// </summary>
         [NameInMap("Workspace")]
         [Validation(Required=false)]

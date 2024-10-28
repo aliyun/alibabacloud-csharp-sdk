@@ -9,18 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class ListPublicDatasetTagsResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>easygene.cn-beijing.aliyuncs.com</para>
+        /// </summary>
         [NameInMap("HostId")]
         [Validation(Required=false)]
         public string HostId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ba6d88e2-a6f2-4d2c-a2ae-68b76b078445</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>DA980AD0-158F-44F3-847D-5EAB96C0EB6B</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -29,6 +45,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [Validation(Required=false)]
         public List<string> Tags { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

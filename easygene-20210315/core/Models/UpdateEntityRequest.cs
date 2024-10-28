@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class UpdateEntityRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EntityItems")]
         [Validation(Required=false)]
@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             [Validation(Required=false)]
             public Dictionary<string, string> EntityData { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>s1</para>
+            /// </summary>
             [NameInMap("EntityName")]
             [Validation(Required=false)]
             public string EntityName { get; set; }
@@ -27,14 +31,20 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sample</para>
         /// </summary>
         [NameInMap("EntityType")]
         [Validation(Required=false)]
         public string EntityType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-workspace</para>
         /// </summary>
         [NameInMap("Workspace")]
         [Validation(Required=false)]

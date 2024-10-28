@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public List<string> Attributes { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>西蒙斯基因组多样性计划</para>
         /// </summary>
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
