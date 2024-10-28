@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                         [Validation(Required=false)]
                         public string Content { get; set; }
 
+                        [NameInMap("CreateTime")]
+                        [Validation(Required=false)]
+                        public string CreateTime { get; set; }
+
                         /// <summary>
                         /// <b>Example:</b>
                         /// <para>9957175DEDCF49C5ACF7A956B4FD67B2</para>
@@ -164,6 +168,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                         [NameInMap("ImageUrls")]
                         [Validation(Required=false)]
                         public List<string> ImageUrls { get; set; }
+
+                        [NameInMap("PubTime")]
+                        [Validation(Required=false)]
+                        public string PubTime { get; set; }
 
                         [NameInMap("Source")]
                         [Validation(Required=false)]
