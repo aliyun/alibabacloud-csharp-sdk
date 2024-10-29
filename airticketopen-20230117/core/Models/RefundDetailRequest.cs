@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class RefundDetailRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>refund order number</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4966***617732</para>
         /// </summary>
         [NameInMap("refund_order_num")]
         [Validation(Required=false)]

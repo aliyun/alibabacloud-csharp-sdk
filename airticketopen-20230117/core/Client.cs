@@ -37,14 +37,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 账号资金流水
-         *
-         * @param request AccountFlowListRequest
-         * @param headers AccountFlowListHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AccountFlowListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>账号资金流水</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountFlowListRequest
+        /// </param>
+        /// <param name="headers">
+        /// AccountFlowListHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountFlowListResponse
+        /// </returns>
         public AccountFlowListResponse AccountFlowListWithOptions(AccountFlowListRequest request, AccountFlowListHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -98,14 +108,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<AccountFlowListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 账号资金流水
-         *
-         * @param request AccountFlowListRequest
-         * @param headers AccountFlowListHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AccountFlowListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>账号资金流水</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountFlowListRequest
+        /// </param>
+        /// <param name="headers">
+        /// AccountFlowListHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountFlowListResponse
+        /// </returns>
         public async Task<AccountFlowListResponse> AccountFlowListWithOptionsAsync(AccountFlowListRequest request, AccountFlowListHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -159,12 +179,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<AccountFlowListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 账号资金流水
-         *
-         * @param request AccountFlowListRequest
-         * @return AccountFlowListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>账号资金流水</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountFlowListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountFlowListResponse
+        /// </returns>
         public AccountFlowListResponse AccountFlowList(AccountFlowListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -172,12 +198,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return AccountFlowListWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 账号资金流水
-         *
-         * @param request AccountFlowListRequest
-         * @return AccountFlowListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>账号资金流水</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountFlowListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountFlowListResponse
+        /// </returns>
         public async Task<AccountFlowListResponse> AccountFlowListAsync(AccountFlowListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -185,14 +217,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await AccountFlowListWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 辅营-推荐
-         *
-         * @param request AncillarySuggestRequest
-         * @param headers AncillarySuggestHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AncillarySuggestResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ancillary - Suggestion</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>search ancillary for selected solution, you should enter the solution_id returned by enrich.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AncillarySuggestRequest
+        /// </param>
+        /// <param name="headers">
+        /// AncillarySuggestHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AncillarySuggestResponse
+        /// </returns>
         public AncillarySuggestResponse AncillarySuggestWithOptions(AncillarySuggestRequest request, AncillarySuggestHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -234,14 +281,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<AncillarySuggestResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 辅营-推荐
-         *
-         * @param request AncillarySuggestRequest
-         * @param headers AncillarySuggestHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AncillarySuggestResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ancillary - Suggestion</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>search ancillary for selected solution, you should enter the solution_id returned by enrich.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AncillarySuggestRequest
+        /// </param>
+        /// <param name="headers">
+        /// AncillarySuggestHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AncillarySuggestResponse
+        /// </returns>
         public async Task<AncillarySuggestResponse> AncillarySuggestWithOptionsAsync(AncillarySuggestRequest request, AncillarySuggestHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -283,12 +345,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<AncillarySuggestResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 辅营-推荐
-         *
-         * @param request AncillarySuggestRequest
-         * @return AncillarySuggestResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ancillary - Suggestion</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>search ancillary for selected solution, you should enter the solution_id returned by enrich.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AncillarySuggestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AncillarySuggestResponse
+        /// </returns>
         public AncillarySuggestResponse AncillarySuggest(AncillarySuggestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -296,12 +369,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return AncillarySuggestWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 辅营-推荐
-         *
-         * @param request AncillarySuggestRequest
-         * @return AncillarySuggestResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ancillary - Suggestion</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>search ancillary for selected solution, you should enter the solution_id returned by enrich.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AncillarySuggestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AncillarySuggestResponse
+        /// </returns>
         public async Task<AncillarySuggestResponse> AncillarySuggestAsync(AncillarySuggestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -309,14 +393,34 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await AncillarySuggestWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 交易-预定
-         *
-         * @param tmpReq BookRequest
-         * @param headers BookHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transaction-Reservation</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enter solution_id returned by enrich, ancillary_id returned by ancillarySuggest(optional), passengers information and contact information, the book interface will create an order wait for pay.
+        /// There are two issues should be noticed:</para>
+        /// <ol>
+        /// <item><description>the solution_id must be processed by pricing.</description></item>
+        /// <item><description>the order created by book interface should be pay within 30 minutes, otherwise the order will be closed.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BookRequest
+        /// </param>
+        /// <param name="headers">
+        /// BookHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BookResponse
+        /// </returns>
         public BookResponse BookWithOptions(BookRequest tmpReq, BookHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -388,14 +492,34 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<BookResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 交易-预定
-         *
-         * @param tmpReq BookRequest
-         * @param headers BookHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transaction-Reservation</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enter solution_id returned by enrich, ancillary_id returned by ancillarySuggest(optional), passengers information and contact information, the book interface will create an order wait for pay.
+        /// There are two issues should be noticed:</para>
+        /// <ol>
+        /// <item><description>the solution_id must be processed by pricing.</description></item>
+        /// <item><description>the order created by book interface should be pay within 30 minutes, otherwise the order will be closed.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BookRequest
+        /// </param>
+        /// <param name="headers">
+        /// BookHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BookResponse
+        /// </returns>
         public async Task<BookResponse> BookWithOptionsAsync(BookRequest tmpReq, BookHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -467,12 +591,28 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<BookResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 交易-预定
-         *
-         * @param request BookRequest
-         * @return BookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transaction-Reservation</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enter solution_id returned by enrich, ancillary_id returned by ancillarySuggest(optional), passengers information and contact information, the book interface will create an order wait for pay.
+        /// There are two issues should be noticed:</para>
+        /// <ol>
+        /// <item><description>the solution_id must be processed by pricing.</description></item>
+        /// <item><description>the order created by book interface should be pay within 30 minutes, otherwise the order will be closed.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BookRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BookResponse
+        /// </returns>
         public BookResponse Book(BookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -480,12 +620,28 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return BookWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 交易-预定
-         *
-         * @param request BookRequest
-         * @return BookResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transaction-Reservation</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enter solution_id returned by enrich, ancillary_id returned by ancillarySuggest(optional), passengers information and contact information, the book interface will create an order wait for pay.
+        /// There are two issues should be noticed:</para>
+        /// <ol>
+        /// <item><description>the solution_id must be processed by pricing.</description></item>
+        /// <item><description>the order created by book interface should be pay within 30 minutes, otherwise the order will be closed.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BookRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BookResponse
+        /// </returns>
         public async Task<BookResponse> BookAsync(BookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -493,14 +649,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await BookWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 交易-未支付取消
-         *
-         * @param request CancelRequest
-         * @param headers CancelHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transaction - Unpaid Cancellation</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>close an unpaid order</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelRequest
+        /// </param>
+        /// <param name="headers">
+        /// CancelHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelResponse
+        /// </returns>
         public CancelResponse CancelWithOptions(CancelRequest request, CancelHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -542,14 +713,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<CancelResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 交易-未支付取消
-         *
-         * @param request CancelRequest
-         * @param headers CancelHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transaction - Unpaid Cancellation</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>close an unpaid order</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelRequest
+        /// </param>
+        /// <param name="headers">
+        /// CancelHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelResponse
+        /// </returns>
         public async Task<CancelResponse> CancelWithOptionsAsync(CancelRequest request, CancelHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -591,12 +777,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<CancelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 交易-未支付取消
-         *
-         * @param request CancelRequest
-         * @return CancelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transaction - Unpaid Cancellation</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>close an unpaid order</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelResponse
+        /// </returns>
         public CancelResponse Cancel(CancelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -604,12 +801,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return CancelWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 交易-未支付取消
-         *
-         * @param request CancelRequest
-         * @return CancelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transaction - Unpaid Cancellation</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>close an unpaid order</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelResponse
+        /// </returns>
         public async Task<CancelResponse> CancelAsync(CancelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -617,14 +825,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await CancelWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 改签-Apply
-         *
-         * @param tmpReq ChangeApplyRequest
-         * @param headers ChangeApplyHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeApplyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签-Apply</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ChangeApplyRequest
+        /// </param>
+        /// <param name="headers">
+        /// ChangeApplyHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeApplyResponse
+        /// </returns>
         public ChangeApplyResponse ChangeApplyWithOptions(ChangeApplyRequest tmpReq, ChangeApplyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -700,14 +918,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<ChangeApplyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 改签-Apply
-         *
-         * @param tmpReq ChangeApplyRequest
-         * @param headers ChangeApplyHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeApplyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签-Apply</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ChangeApplyRequest
+        /// </param>
+        /// <param name="headers">
+        /// ChangeApplyHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeApplyResponse
+        /// </returns>
         public async Task<ChangeApplyResponse> ChangeApplyWithOptionsAsync(ChangeApplyRequest tmpReq, ChangeApplyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -783,12 +1011,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<ChangeApplyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 改签-Apply
-         *
-         * @param request ChangeApplyRequest
-         * @return ChangeApplyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签-Apply</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeApplyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeApplyResponse
+        /// </returns>
         public ChangeApplyResponse ChangeApply(ChangeApplyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -796,12 +1030,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return ChangeApplyWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 改签-Apply
-         *
-         * @param request ChangeApplyRequest
-         * @return ChangeApplyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签-Apply</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeApplyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeApplyResponse
+        /// </returns>
         public async Task<ChangeApplyResponse> ChangeApplyAsync(ChangeApplyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -809,14 +1049,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await ChangeApplyWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 改签-取消
-         *
-         * @param request ChangeCancelRequest
-         * @param headers ChangeCancelHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeCancelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签-取消</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeCancelRequest
+        /// </param>
+        /// <param name="headers">
+        /// ChangeCancelHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeCancelResponse
+        /// </returns>
         public ChangeCancelResponse ChangeCancelWithOptions(ChangeCancelRequest request, ChangeCancelHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -858,14 +1108,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<ChangeCancelResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 改签-取消
-         *
-         * @param request ChangeCancelRequest
-         * @param headers ChangeCancelHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeCancelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签-取消</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeCancelRequest
+        /// </param>
+        /// <param name="headers">
+        /// ChangeCancelHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeCancelResponse
+        /// </returns>
         public async Task<ChangeCancelResponse> ChangeCancelWithOptionsAsync(ChangeCancelRequest request, ChangeCancelHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -907,12 +1167,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<ChangeCancelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 改签-取消
-         *
-         * @param request ChangeCancelRequest
-         * @return ChangeCancelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签-取消</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeCancelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeCancelResponse
+        /// </returns>
         public ChangeCancelResponse ChangeCancel(ChangeCancelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -920,12 +1186,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return ChangeCancelWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 改签-取消
-         *
-         * @param request ChangeCancelRequest
-         * @return ChangeCancelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签-取消</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeCancelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeCancelResponse
+        /// </returns>
         public async Task<ChangeCancelResponse> ChangeCancelAsync(ChangeCancelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -933,14 +1205,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await ChangeCancelWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 改签-确认
-         *
-         * @param request ChangeConfirmRequest
-         * @param headers ChangeConfirmHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeConfirmResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签-确认</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeConfirmRequest
+        /// </param>
+        /// <param name="headers">
+        /// ChangeConfirmHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeConfirmResponse
+        /// </returns>
         public ChangeConfirmResponse ChangeConfirmWithOptions(ChangeConfirmRequest request, ChangeConfirmHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -982,14 +1264,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<ChangeConfirmResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 改签-确认
-         *
-         * @param request ChangeConfirmRequest
-         * @param headers ChangeConfirmHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeConfirmResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签-确认</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeConfirmRequest
+        /// </param>
+        /// <param name="headers">
+        /// ChangeConfirmHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeConfirmResponse
+        /// </returns>
         public async Task<ChangeConfirmResponse> ChangeConfirmWithOptionsAsync(ChangeConfirmRequest request, ChangeConfirmHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1031,12 +1323,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<ChangeConfirmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 改签-确认
-         *
-         * @param request ChangeConfirmRequest
-         * @return ChangeConfirmResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签-确认</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeConfirmRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeConfirmResponse
+        /// </returns>
         public ChangeConfirmResponse ChangeConfirm(ChangeConfirmRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1044,12 +1342,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return ChangeConfirmWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 改签-确认
-         *
-         * @param request ChangeConfirmRequest
-         * @return ChangeConfirmResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签-确认</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeConfirmRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeConfirmResponse
+        /// </returns>
         public async Task<ChangeConfirmResponse> ChangeConfirmAsync(ChangeConfirmRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1057,14 +1361,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await ChangeConfirmWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 改签-Detail
-         *
-         * @param request ChangeDetailRequest
-         * @param headers ChangeDetailHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签-Detail</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// ChangeDetailHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeDetailResponse
+        /// </returns>
         public ChangeDetailResponse ChangeDetailWithOptions(ChangeDetailRequest request, ChangeDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1106,14 +1420,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<ChangeDetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 改签-Detail
-         *
-         * @param request ChangeDetailRequest
-         * @param headers ChangeDetailHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签-Detail</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// ChangeDetailHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeDetailResponse
+        /// </returns>
         public async Task<ChangeDetailResponse> ChangeDetailWithOptionsAsync(ChangeDetailRequest request, ChangeDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1155,12 +1479,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<ChangeDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 改签-Detail
-         *
-         * @param request ChangeDetailRequest
-         * @return ChangeDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签-Detail</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeDetailResponse
+        /// </returns>
         public ChangeDetailResponse ChangeDetail(ChangeDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1168,12 +1498,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return ChangeDetailWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 改签-Detail
-         *
-         * @param request ChangeDetailRequest
-         * @return ChangeDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签-Detail</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeDetailResponse
+        /// </returns>
         public async Task<ChangeDetailResponse> ChangeDetailAsync(ChangeDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1181,14 +1517,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await ChangeDetailWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 改签单列表-关于买家账号
-         *
-         * @param request ChangeDetailListOfBuyerRequest
-         * @param headers ChangeDetailListOfBuyerHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeDetailListOfBuyerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签单列表-关于买家账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeDetailListOfBuyerRequest
+        /// </param>
+        /// <param name="headers">
+        /// ChangeDetailListOfBuyerHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeDetailListOfBuyerResponse
+        /// </returns>
         public ChangeDetailListOfBuyerResponse ChangeDetailListOfBuyerWithOptions(ChangeDetailListOfBuyerRequest request, ChangeDetailListOfBuyerHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1242,14 +1588,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<ChangeDetailListOfBuyerResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 改签单列表-关于买家账号
-         *
-         * @param request ChangeDetailListOfBuyerRequest
-         * @param headers ChangeDetailListOfBuyerHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeDetailListOfBuyerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签单列表-关于买家账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeDetailListOfBuyerRequest
+        /// </param>
+        /// <param name="headers">
+        /// ChangeDetailListOfBuyerHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeDetailListOfBuyerResponse
+        /// </returns>
         public async Task<ChangeDetailListOfBuyerResponse> ChangeDetailListOfBuyerWithOptionsAsync(ChangeDetailListOfBuyerRequest request, ChangeDetailListOfBuyerHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1303,12 +1659,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<ChangeDetailListOfBuyerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 改签单列表-关于买家账号
-         *
-         * @param request ChangeDetailListOfBuyerRequest
-         * @return ChangeDetailListOfBuyerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签单列表-关于买家账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeDetailListOfBuyerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeDetailListOfBuyerResponse
+        /// </returns>
         public ChangeDetailListOfBuyerResponse ChangeDetailListOfBuyer(ChangeDetailListOfBuyerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1316,12 +1678,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return ChangeDetailListOfBuyerWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 改签单列表-关于买家账号
-         *
-         * @param request ChangeDetailListOfBuyerRequest
-         * @return ChangeDetailListOfBuyerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签单列表-关于买家账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeDetailListOfBuyerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeDetailListOfBuyerResponse
+        /// </returns>
         public async Task<ChangeDetailListOfBuyerResponse> ChangeDetailListOfBuyerAsync(ChangeDetailListOfBuyerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1329,14 +1697,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await ChangeDetailListOfBuyerWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 改签单列表-关于正向订单
-         *
-         * @param request ChangeDetailListOfOrderNumRequest
-         * @param headers ChangeDetailListOfOrderNumHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeDetailListOfOrderNumResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签单列表-关于正向订单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeDetailListOfOrderNumRequest
+        /// </param>
+        /// <param name="headers">
+        /// ChangeDetailListOfOrderNumHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeDetailListOfOrderNumResponse
+        /// </returns>
         public ChangeDetailListOfOrderNumResponse ChangeDetailListOfOrderNumWithOptions(ChangeDetailListOfOrderNumRequest request, ChangeDetailListOfOrderNumHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1386,14 +1764,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<ChangeDetailListOfOrderNumResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 改签单列表-关于正向订单
-         *
-         * @param request ChangeDetailListOfOrderNumRequest
-         * @param headers ChangeDetailListOfOrderNumHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeDetailListOfOrderNumResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签单列表-关于正向订单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeDetailListOfOrderNumRequest
+        /// </param>
+        /// <param name="headers">
+        /// ChangeDetailListOfOrderNumHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeDetailListOfOrderNumResponse
+        /// </returns>
         public async Task<ChangeDetailListOfOrderNumResponse> ChangeDetailListOfOrderNumWithOptionsAsync(ChangeDetailListOfOrderNumRequest request, ChangeDetailListOfOrderNumHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1443,12 +1831,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<ChangeDetailListOfOrderNumResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 改签单列表-关于正向订单
-         *
-         * @param request ChangeDetailListOfOrderNumRequest
-         * @return ChangeDetailListOfOrderNumResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签单列表-关于正向订单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeDetailListOfOrderNumRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeDetailListOfOrderNumResponse
+        /// </returns>
         public ChangeDetailListOfOrderNumResponse ChangeDetailListOfOrderNum(ChangeDetailListOfOrderNumRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1456,12 +1850,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return ChangeDetailListOfOrderNumWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 改签单列表-关于正向订单
-         *
-         * @param request ChangeDetailListOfOrderNumRequest
-         * @return ChangeDetailListOfOrderNumResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>改签单列表-关于正向订单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeDetailListOfOrderNumRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeDetailListOfOrderNumResponse
+        /// </returns>
         public async Task<ChangeDetailListOfOrderNumResponse> ChangeDetailListOfOrderNumAsync(ChangeDetailListOfOrderNumRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1469,14 +1869,34 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await ChangeDetailListOfOrderNumWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 搜索-Enrich
-         *
-         * @param tmpReq EnrichRequest
-         * @param headers EnrichHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnrichResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Search-Enrich</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enrich supports two modes:</para>
+        /// <ol>
+        /// <item><description>mode1: enter solution_id returned by Search.</description></item>
+        /// <item><description>mode2: enter journeyParamList.
+        /// If you already confirm which flight to fly with, then you can use mode2, otherwise, use mode1(search first, then chose one solution_ID and Enrich).</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// EnrichRequest
+        /// </param>
+        /// <param name="headers">
+        /// EnrichHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnrichResponse
+        /// </returns>
         public EnrichResponse EnrichWithOptions(EnrichRequest tmpReq, EnrichHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1544,14 +1964,34 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<EnrichResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 搜索-Enrich
-         *
-         * @param tmpReq EnrichRequest
-         * @param headers EnrichHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnrichResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Search-Enrich</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enrich supports two modes:</para>
+        /// <ol>
+        /// <item><description>mode1: enter solution_id returned by Search.</description></item>
+        /// <item><description>mode2: enter journeyParamList.
+        /// If you already confirm which flight to fly with, then you can use mode2, otherwise, use mode1(search first, then chose one solution_ID and Enrich).</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// EnrichRequest
+        /// </param>
+        /// <param name="headers">
+        /// EnrichHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnrichResponse
+        /// </returns>
         public async Task<EnrichResponse> EnrichWithOptionsAsync(EnrichRequest tmpReq, EnrichHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1619,12 +2059,28 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<EnrichResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 搜索-Enrich
-         *
-         * @param request EnrichRequest
-         * @return EnrichResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Search-Enrich</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enrich supports two modes:</para>
+        /// <ol>
+        /// <item><description>mode1: enter solution_id returned by Search.</description></item>
+        /// <item><description>mode2: enter journeyParamList.
+        /// If you already confirm which flight to fly with, then you can use mode2, otherwise, use mode1(search first, then chose one solution_ID and Enrich).</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnrichRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnrichResponse
+        /// </returns>
         public EnrichResponse Enrich(EnrichRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1632,12 +2088,28 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return EnrichWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 搜索-Enrich
-         *
-         * @param request EnrichRequest
-         * @return EnrichResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Search-Enrich</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enrich supports two modes:</para>
+        /// <ol>
+        /// <item><description>mode1: enter solution_id returned by Search.</description></item>
+        /// <item><description>mode2: enter journeyParamList.
+        /// If you already confirm which flight to fly with, then you can use mode2, otherwise, use mode1(search first, then chose one solution_ID and Enrich).</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnrichRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnrichResponse
+        /// </returns>
         public async Task<EnrichResponse> EnrichAsync(EnrichRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1645,14 +2117,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await EnrichWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 附件上传
-         *
-         * @param request FileUploadRequest
-         * @param headers FileUploadHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return FileUploadResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>附件上传</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FileUploadRequest
+        /// </param>
+        /// <param name="headers">
+        /// FileUploadHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FileUploadResponse
+        /// </returns>
         public FileUploadResponse FileUploadWithOptions(FileUploadRequest request, FileUploadHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1698,14 +2180,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<FileUploadResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 附件上传
-         *
-         * @param request FileUploadRequest
-         * @param headers FileUploadHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return FileUploadResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>附件上传</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FileUploadRequest
+        /// </param>
+        /// <param name="headers">
+        /// FileUploadHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FileUploadResponse
+        /// </returns>
         public async Task<FileUploadResponse> FileUploadWithOptionsAsync(FileUploadRequest request, FileUploadHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1751,12 +2243,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<FileUploadResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 附件上传
-         *
-         * @param request FileUploadRequest
-         * @return FileUploadResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>附件上传</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FileUploadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FileUploadResponse
+        /// </returns>
         public FileUploadResponse FileUpload(FileUploadRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1764,12 +2262,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return FileUploadWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 附件上传
-         *
-         * @param request FileUploadRequest
-         * @return FileUploadResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>附件上传</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FileUploadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FileUploadResponse
+        /// </returns>
         public async Task<FileUploadResponse> FileUploadAsync(FileUploadRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1777,14 +2281,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await FileUploadWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 航变信息-关于订单
-         *
-         * @param request FlightChangeOfOrderRequest
-         * @param headers FlightChangeOfOrderHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return FlightChangeOfOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>航变信息-关于订单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FlightChangeOfOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// FlightChangeOfOrderHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlightChangeOfOrderResponse
+        /// </returns>
         public FlightChangeOfOrderResponse FlightChangeOfOrderWithOptions(FlightChangeOfOrderRequest request, FlightChangeOfOrderHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1826,14 +2340,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<FlightChangeOfOrderResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 航变信息-关于订单
-         *
-         * @param request FlightChangeOfOrderRequest
-         * @param headers FlightChangeOfOrderHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return FlightChangeOfOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>航变信息-关于订单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FlightChangeOfOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// FlightChangeOfOrderHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlightChangeOfOrderResponse
+        /// </returns>
         public async Task<FlightChangeOfOrderResponse> FlightChangeOfOrderWithOptionsAsync(FlightChangeOfOrderRequest request, FlightChangeOfOrderHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1875,12 +2399,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<FlightChangeOfOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 航变信息-关于订单
-         *
-         * @param request FlightChangeOfOrderRequest
-         * @return FlightChangeOfOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>航变信息-关于订单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FlightChangeOfOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlightChangeOfOrderResponse
+        /// </returns>
         public FlightChangeOfOrderResponse FlightChangeOfOrder(FlightChangeOfOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1888,12 +2418,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return FlightChangeOfOrderWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 航变信息-关于订单
-         *
-         * @param request FlightChangeOfOrderRequest
-         * @return FlightChangeOfOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>航变信息-关于订单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FlightChangeOfOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlightChangeOfOrderResponse
+        /// </returns>
         public async Task<FlightChangeOfOrderResponse> FlightChangeOfOrderAsync(FlightChangeOfOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1901,14 +2437,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await FlightChangeOfOrderWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 获取token
-         *
-         * @param request GetTokenRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTokenResponse
+        /// </returns>
         public GetTokenResponse GetTokenWithOptions(GetTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1941,14 +2487,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<GetTokenResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取token
-         *
-         * @param request GetTokenRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTokenResponse
+        /// </returns>
         public async Task<GetTokenResponse> GetTokenWithOptionsAsync(GetTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1981,12 +2537,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<GetTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取token
-         *
-         * @param request GetTokenRequest
-         * @return GetTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTokenResponse
+        /// </returns>
         public GetTokenResponse GetToken(GetTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1994,12 +2556,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return GetTokenWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 获取token
-         *
-         * @param request GetTokenRequest
-         * @return GetTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTokenResponse
+        /// </returns>
         public async Task<GetTokenResponse> GetTokenAsync(GetTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2007,14 +2575,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await GetTokenWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 航程行李直挂
-         *
-         * @param tmpReq LuggageDirectRequest
-         * @param headers LuggageDirectHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return LuggageDirectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>航程行李直挂</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// LuggageDirectRequest
+        /// </param>
+        /// <param name="headers">
+        /// LuggageDirectHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LuggageDirectResponse
+        /// </returns>
         public LuggageDirectResponse LuggageDirectWithOptions(LuggageDirectRequest tmpReq, LuggageDirectHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2062,14 +2640,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<LuggageDirectResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 航程行李直挂
-         *
-         * @param tmpReq LuggageDirectRequest
-         * @param headers LuggageDirectHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return LuggageDirectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>航程行李直挂</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// LuggageDirectRequest
+        /// </param>
+        /// <param name="headers">
+        /// LuggageDirectHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LuggageDirectResponse
+        /// </returns>
         public async Task<LuggageDirectResponse> LuggageDirectWithOptionsAsync(LuggageDirectRequest tmpReq, LuggageDirectHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2117,12 +2705,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<LuggageDirectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 航程行李直挂
-         *
-         * @param request LuggageDirectRequest
-         * @return LuggageDirectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>航程行李直挂</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LuggageDirectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LuggageDirectResponse
+        /// </returns>
         public LuggageDirectResponse LuggageDirect(LuggageDirectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2130,12 +2724,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return LuggageDirectWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 航程行李直挂
-         *
-         * @param request LuggageDirectRequest
-         * @return LuggageDirectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>航程行李直挂</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LuggageDirectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LuggageDirectResponse
+        /// </returns>
         public async Task<LuggageDirectResponse> LuggageDirectAsync(LuggageDirectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2143,14 +2743,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await LuggageDirectWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 交易-订单详情
-         *
-         * @param request OrderDetailRequest
-         * @param headers OrderDetailHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return OrderDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Trade-Order Details</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>query order detail</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OrderDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// OrderDetailHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OrderDetailResponse
+        /// </returns>
         public OrderDetailResponse OrderDetailWithOptions(OrderDetailRequest request, OrderDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2196,14 +2811,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<OrderDetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 交易-订单详情
-         *
-         * @param request OrderDetailRequest
-         * @param headers OrderDetailHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return OrderDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Trade-Order Details</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>query order detail</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OrderDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// OrderDetailHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OrderDetailResponse
+        /// </returns>
         public async Task<OrderDetailResponse> OrderDetailWithOptionsAsync(OrderDetailRequest request, OrderDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2249,12 +2879,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<OrderDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 交易-订单详情
-         *
-         * @param request OrderDetailRequest
-         * @return OrderDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Trade-Order Details</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>query order detail</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OrderDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OrderDetailResponse
+        /// </returns>
         public OrderDetailResponse OrderDetail(OrderDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2262,12 +2903,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return OrderDetailWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 交易-订单详情
-         *
-         * @param request OrderDetailRequest
-         * @return OrderDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Trade-Order Details</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>query order detail</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OrderDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OrderDetailResponse
+        /// </returns>
         public async Task<OrderDetailResponse> OrderDetailAsync(OrderDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2275,14 +2927,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await OrderDetailWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 交易-订单列表
-         *
-         * @param request OrderListRequest
-         * @param headers OrderListHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return OrderListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Trade - Order List</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>query order list</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OrderListRequest
+        /// </param>
+        /// <param name="headers">
+        /// OrderListHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OrderListResponse
+        /// </returns>
         public OrderListResponse OrderListWithOptions(OrderListRequest request, OrderListHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2340,14 +3007,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<OrderListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 交易-订单列表
-         *
-         * @param request OrderListRequest
-         * @param headers OrderListHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return OrderListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Trade - Order List</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>query order list</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OrderListRequest
+        /// </param>
+        /// <param name="headers">
+        /// OrderListHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OrderListResponse
+        /// </returns>
         public async Task<OrderListResponse> OrderListWithOptionsAsync(OrderListRequest request, OrderListHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2405,12 +3087,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<OrderListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 交易-订单列表
-         *
-         * @param request OrderListRequest
-         * @return OrderListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Trade - Order List</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>query order list</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OrderListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OrderListResponse
+        /// </returns>
         public OrderListResponse OrderList(OrderListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2418,12 +3111,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return OrderListWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 交易-订单列表
-         *
-         * @param request OrderListRequest
-         * @return OrderListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Trade - Order List</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>query order list</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OrderListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OrderListResponse
+        /// </returns>
         public async Task<OrderListResponse> OrderListAsync(OrderListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2431,14 +3135,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await OrderListWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Pricing
-         *
-         * @param request PricingRequest
-         * @param headers PricingHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PricingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Trade - Seat and Price Verification</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Check is price and remaining seats of solution you selected has changed. You should enter the solution_id returned by enrich.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PricingRequest
+        /// </param>
+        /// <param name="headers">
+        /// PricingHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PricingResponse
+        /// </returns>
         public PricingResponse PricingWithOptions(PricingRequest request, PricingHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2480,14 +3199,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<PricingResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Pricing
-         *
-         * @param request PricingRequest
-         * @param headers PricingHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PricingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Trade - Seat and Price Verification</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Check is price and remaining seats of solution you selected has changed. You should enter the solution_id returned by enrich.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PricingRequest
+        /// </param>
+        /// <param name="headers">
+        /// PricingHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PricingResponse
+        /// </returns>
         public async Task<PricingResponse> PricingWithOptionsAsync(PricingRequest request, PricingHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2529,12 +3263,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<PricingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Pricing
-         *
-         * @param request PricingRequest
-         * @return PricingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Trade - Seat and Price Verification</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Check is price and remaining seats of solution you selected has changed. You should enter the solution_id returned by enrich.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PricingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PricingResponse
+        /// </returns>
         public PricingResponse Pricing(PricingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2542,12 +3287,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return PricingWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Pricing
-         *
-         * @param request PricingRequest
-         * @return PricingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Trade - Seat and Price Verification</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Check is price and remaining seats of solution you selected has changed. You should enter the solution_id returned by enrich.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PricingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PricingResponse
+        /// </returns>
         public async Task<PricingResponse> PricingAsync(PricingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2555,14 +3311,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await PricingWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 退票-申请
-         *
-         * @param tmpReq RefundApplyRequest
-         * @param headers RefundApplyHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RefundApplyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>退票-申请</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Apply for a refund and generate a refund order.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// RefundApplyRequest
+        /// </param>
+        /// <param name="headers">
+        /// RefundApplyHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefundApplyResponse
+        /// </returns>
         public RefundApplyResponse RefundApplyWithOptions(RefundApplyRequest tmpReq, RefundApplyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2630,14 +3401,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<RefundApplyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 退票-申请
-         *
-         * @param tmpReq RefundApplyRequest
-         * @param headers RefundApplyHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RefundApplyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>退票-申请</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Apply for a refund and generate a refund order.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// RefundApplyRequest
+        /// </param>
+        /// <param name="headers">
+        /// RefundApplyHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefundApplyResponse
+        /// </returns>
         public async Task<RefundApplyResponse> RefundApplyWithOptionsAsync(RefundApplyRequest tmpReq, RefundApplyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2705,12 +3491,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<RefundApplyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 退票-申请
-         *
-         * @param request RefundApplyRequest
-         * @return RefundApplyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>退票-申请</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Apply for a refund and generate a refund order.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RefundApplyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefundApplyResponse
+        /// </returns>
         public RefundApplyResponse RefundApply(RefundApplyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2718,12 +3515,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return RefundApplyWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 退票-申请
-         *
-         * @param request RefundApplyRequest
-         * @return RefundApplyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>退票-申请</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Apply for a refund and generate a refund order.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RefundApplyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefundApplyResponse
+        /// </returns>
         public async Task<RefundApplyResponse> RefundApplyAsync(RefundApplyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2731,14 +3539,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await RefundApplyWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 退票-Detail
-         *
-         * @param request RefundDetailRequest
-         * @param headers RefundDetailHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RefundDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refund - Detail</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query refund order detail.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RefundDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// RefundDetailHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefundDetailResponse
+        /// </returns>
         public RefundDetailResponse RefundDetailWithOptions(RefundDetailRequest request, RefundDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2780,14 +3603,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<RefundDetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 退票-Detail
-         *
-         * @param request RefundDetailRequest
-         * @param headers RefundDetailHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RefundDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refund - Detail</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query refund order detail.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RefundDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// RefundDetailHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefundDetailResponse
+        /// </returns>
         public async Task<RefundDetailResponse> RefundDetailWithOptionsAsync(RefundDetailRequest request, RefundDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2829,12 +3667,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<RefundDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 退票-Detail
-         *
-         * @param request RefundDetailRequest
-         * @return RefundDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refund - Detail</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query refund order detail.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RefundDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefundDetailResponse
+        /// </returns>
         public RefundDetailResponse RefundDetail(RefundDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2842,12 +3691,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return RefundDetailWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 退票-Detail
-         *
-         * @param request RefundDetailRequest
-         * @return RefundDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refund - Detail</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query refund order detail.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RefundDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefundDetailResponse
+        /// </returns>
         public async Task<RefundDetailResponse> RefundDetailAsync(RefundDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2855,14 +3715,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await RefundDetailWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 退票-DetailList
-         *
-         * @param request RefundDetailListRequest
-         * @param headers RefundDetailListHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RefundDetailListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refund - Detail List</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query refund order detail.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RefundDetailListRequest
+        /// </param>
+        /// <param name="headers">
+        /// RefundDetailListHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefundDetailListResponse
+        /// </returns>
         public RefundDetailListResponse RefundDetailListWithOptions(RefundDetailListRequest request, RefundDetailListHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2920,14 +3795,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<RefundDetailListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 退票-DetailList
-         *
-         * @param request RefundDetailListRequest
-         * @param headers RefundDetailListHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RefundDetailListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refund - Detail List</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query refund order detail.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RefundDetailListRequest
+        /// </param>
+        /// <param name="headers">
+        /// RefundDetailListHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefundDetailListResponse
+        /// </returns>
         public async Task<RefundDetailListResponse> RefundDetailListWithOptionsAsync(RefundDetailListRequest request, RefundDetailListHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2985,12 +3875,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<RefundDetailListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 退票-DetailList
-         *
-         * @param request RefundDetailListRequest
-         * @return RefundDetailListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refund - Detail List</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query refund order detail.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RefundDetailListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefundDetailListResponse
+        /// </returns>
         public RefundDetailListResponse RefundDetailList(RefundDetailListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2998,12 +3899,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return RefundDetailListWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 退票-DetailList
-         *
-         * @param request RefundDetailListRequest
-         * @return RefundDetailListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refund - Detail List</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query refund order detail.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RefundDetailListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefundDetailListResponse
+        /// </returns>
         public async Task<RefundDetailListResponse> RefundDetailListAsync(RefundDetailListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3011,14 +3923,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await RefundDetailListWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 搜索
-         *
-         * @param tmpReq SearchRequest
-         * @param headers SearchHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SearchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>search</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enter the information of departure, arrival, departure date, passenger number and cabin, return the lowest price for each flight.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SearchRequest
+        /// </param>
+        /// <param name="headers">
+        /// SearchHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchResponse
+        /// </returns>
         public SearchResponse SearchWithOptions(SearchRequest tmpReq, SearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3090,14 +4017,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<SearchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 搜索
-         *
-         * @param tmpReq SearchRequest
-         * @param headers SearchHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SearchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>search</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enter the information of departure, arrival, departure date, passenger number and cabin, return the lowest price for each flight.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SearchRequest
+        /// </param>
+        /// <param name="headers">
+        /// SearchHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchResponse
+        /// </returns>
         public async Task<SearchResponse> SearchWithOptionsAsync(SearchRequest tmpReq, SearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3169,12 +4111,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<SearchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 搜索
-         *
-         * @param request SearchRequest
-         * @return SearchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>search</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enter the information of departure, arrival, departure date, passenger number and cabin, return the lowest price for each flight.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchResponse
+        /// </returns>
         public SearchResponse Search(SearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3182,12 +4135,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return SearchWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 搜索
-         *
-         * @param request SearchRequest
-         * @return SearchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>search</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enter the information of departure, arrival, departure date, passenger number and cabin, return the lowest price for each flight.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchResponse
+        /// </returns>
         public async Task<SearchResponse> SearchAsync(SearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3195,14 +4159,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await SearchWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 交易-支付出票
-         *
-         * @param request TicketingRequest
-         * @param headers TicketingHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TicketingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transaction - Payment and Ticket Issuance</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketingRequest
+        /// </param>
+        /// <param name="headers">
+        /// TicketingHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketingResponse
+        /// </returns>
         public TicketingResponse TicketingWithOptions(TicketingRequest request, TicketingHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3244,14 +4218,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<TicketingResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 交易-支付出票
-         *
-         * @param request TicketingRequest
-         * @param headers TicketingHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TicketingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transaction - Payment and Ticket Issuance</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketingRequest
+        /// </param>
+        /// <param name="headers">
+        /// TicketingHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketingResponse
+        /// </returns>
         public async Task<TicketingResponse> TicketingWithOptionsAsync(TicketingRequest request, TicketingHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3293,12 +4277,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<TicketingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 交易-支付出票
-         *
-         * @param request TicketingRequest
-         * @return TicketingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transaction - Payment and Ticket Issuance</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketingResponse
+        /// </returns>
         public TicketingResponse Ticketing(TicketingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3306,12 +4296,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TicketingWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 交易-支付出票
-         *
-         * @param request TicketingRequest
-         * @return TicketingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transaction - Payment and Ticket Issuance</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketingResponse
+        /// </returns>
         public async Task<TicketingResponse> TicketingAsync(TicketingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3319,14 +4315,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await TicketingWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 交易-支付前校验
-         *
-         * @param request TicketingCheckRequest
-         * @param headers TicketingCheckHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TicketingCheckResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transaction - Pre-payment verification</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Pre-check for Ticketing, this interface is optional to use.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TicketingCheckRequest
+        /// </param>
+        /// <param name="headers">
+        /// TicketingCheckHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketingCheckResponse
+        /// </returns>
         public TicketingCheckResponse TicketingCheckWithOptions(TicketingCheckRequest request, TicketingCheckHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3368,14 +4379,29 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<TicketingCheckResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 交易-支付前校验
-         *
-         * @param request TicketingCheckRequest
-         * @param headers TicketingCheckHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TicketingCheckResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transaction - Pre-payment verification</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Pre-check for Ticketing, this interface is optional to use.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TicketingCheckRequest
+        /// </param>
+        /// <param name="headers">
+        /// TicketingCheckHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketingCheckResponse
+        /// </returns>
         public async Task<TicketingCheckResponse> TicketingCheckWithOptionsAsync(TicketingCheckRequest request, TicketingCheckHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3417,12 +4443,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<TicketingCheckResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 交易-支付前校验
-         *
-         * @param request TicketingCheckRequest
-         * @return TicketingCheckResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transaction - Pre-payment verification</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Pre-check for Ticketing, this interface is optional to use.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TicketingCheckRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketingCheckResponse
+        /// </returns>
         public TicketingCheckResponse TicketingCheck(TicketingCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3430,12 +4467,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TicketingCheckWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 交易-支付前校验
-         *
-         * @param request TicketingCheckRequest
-         * @return TicketingCheckResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transaction - Pre-payment verification</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Pre-check for Ticketing, this interface is optional to use.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TicketingCheckRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketingCheckResponse
+        /// </returns>
         public async Task<TicketingCheckResponse> TicketingCheckAsync(TicketingCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3443,14 +4491,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return await TicketingCheckWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 航程过境签
-         *
-         * @param tmpReq TransitVisaRequest
-         * @param headers TransitVisaHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TransitVisaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>航程过境签</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// TransitVisaRequest
+        /// </param>
+        /// <param name="headers">
+        /// TransitVisaHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransitVisaResponse
+        /// </returns>
         public TransitVisaResponse TransitVisaWithOptions(TransitVisaRequest tmpReq, TransitVisaHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3498,14 +4556,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<TransitVisaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 航程过境签
-         *
-         * @param tmpReq TransitVisaRequest
-         * @param headers TransitVisaHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TransitVisaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>航程过境签</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// TransitVisaRequest
+        /// </param>
+        /// <param name="headers">
+        /// TransitVisaHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransitVisaResponse
+        /// </returns>
         public async Task<TransitVisaResponse> TransitVisaWithOptionsAsync(TransitVisaRequest tmpReq, TransitVisaHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3553,12 +4621,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TeaModel.ToObject<TransitVisaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 航程过境签
-         *
-         * @param request TransitVisaRequest
-         * @return TransitVisaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>航程过境签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransitVisaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransitVisaResponse
+        /// </returns>
         public TransitVisaResponse TransitVisa(TransitVisaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3566,12 +4640,18 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             return TransitVisaWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 航程过境签
-         *
-         * @param request TransitVisaRequest
-         * @return TransitVisaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>航程过境签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransitVisaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransitVisaResponse
+        /// </returns>
         public async Task<TransitVisaResponse> TransitVisaAsync(TransitVisaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

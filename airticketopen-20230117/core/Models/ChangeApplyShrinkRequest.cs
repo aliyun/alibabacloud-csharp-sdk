@@ -10,39 +10,49 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class ChangeApplyShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("change_passenger_list")]
         [Validation(Required=false)]
         public string ChangePassengerListShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("changed_journeys")]
         [Validation(Required=false)]
         public string ChangedJourneysShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("contact")]
         [Validation(Required=false)]
         public string ContactShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4988430***950</para>
         /// </summary>
         [NameInMap("order_num")]
         [Validation(Required=false)]
         public long? OrderNum { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>remark desc</para>
+        /// </summary>
         [NameInMap("remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

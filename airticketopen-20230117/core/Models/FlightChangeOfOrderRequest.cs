@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class FlightChangeOfOrderRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4966***617111</para>
         /// </summary>
         [NameInMap("order_num")]
         [Validation(Required=false)]

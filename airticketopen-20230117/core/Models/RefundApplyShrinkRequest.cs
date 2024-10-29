@@ -10,28 +10,35 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class RefundApplyShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>order number</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4966***617111</para>
         /// </summary>
         [NameInMap("order_num")]
         [Validation(Required=false)]
         public long? OrderNum { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>journeys for which a refund is being requested</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("refund_journeys")]
         [Validation(Required=false)]
         public string RefundJourneysShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>passengers that applying for a refund</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("refund_passenger_list")]
         [Validation(Required=false)]
         public string RefundPassengerListShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>refund type and attachments</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("refund_type")]
         [Validation(Required=false)]
