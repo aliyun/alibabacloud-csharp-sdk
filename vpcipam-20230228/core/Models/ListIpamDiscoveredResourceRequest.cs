@@ -8,22 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
-    public class ListIpamResourceCidrsRequest : TeaModel {
+    public class ListIpamDiscoveredResourceRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>ipam-pool-6rcq3tobayc20t****</para>
+        /// <para>ipam-res-disco-jt5f2af2u6nk2z321****</para>
         /// </summary>
-        [NameInMap("IpamPoolId")]
+        [NameInMap("IpamResourceDiscoveryId")]
         [Validation(Required=false)]
-        public string IpamPoolId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>ipam-scope-glfmcyldpm8lsy****</para>
-        /// </summary>
-        [NameInMap("IpamScopeId")]
-        [Validation(Required=false)]
-        public string IpamScopeId { get; set; }
+        public string IpamResourceDiscoveryId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -52,16 +46,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>vpc-bp16qjewdsunr41m1****</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
-        [NameInMap("ResourceId")]
+        [NameInMap("ResourceRegionId")]
         [Validation(Required=false)]
-        public string ResourceId { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string ResourceRegionId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -70,10 +62,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
-
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
 
     }
 

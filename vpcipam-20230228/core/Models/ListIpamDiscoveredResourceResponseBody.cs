@@ -8,15 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
-    public class ListIpamResourceCidrsResponseBody : TeaModel {
+    public class ListIpamDiscoveredResourceResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
-        public long? Count { get; set; }
+        public int? Count { get; set; }
 
-        [NameInMap("IpamResourceCidrs")]
+        [NameInMap("IpamDiscoveredResources")]
         [Validation(Required=false)]
-        public List<ListIpamResourceCidrsResponseBodyIpamResourceCidrs> IpamResourceCidrs { get; set; }
-        public class ListIpamResourceCidrsResponseBodyIpamResourceCidrs : TeaModel {
+        public List<ListIpamDiscoveredResourceResponseBodyIpamDiscoveredResources> IpamDiscoveredResources { get; set; }
+        public class ListIpamDiscoveredResourceResponseBodyIpamDiscoveredResources : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>132193271328****</para>
@@ -35,11 +39,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>Compliant</para>
+            /// <para>2024-01-01 00:00:00</para>
             /// </summary>
-            [NameInMap("ComplianceStatus")]
+            [NameInMap("DiscoveryTime")]
             [Validation(Required=false)]
-            public string ComplianceStatus { get; set; }
+            public string DiscoveryTime { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -51,55 +55,15 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>ipam-pool-alloc-112za33e4****</para>
+            /// <para>ipam-res-disco-jt5f2af2u6nk2z321****</para>
             /// </summary>
-            [NameInMap("IpamAllocationId")]
+            [NameInMap("IpamResourceDiscoveryId")]
             [Validation(Required=false)]
-            public string IpamAllocationId { get; set; }
+            public string IpamResourceDiscoveryId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>ipam-uq5dcfc2eqhpf4****</para>
-            /// </summary>
-            [NameInMap("IpamId")]
-            [Validation(Required=false)]
-            public string IpamId { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>ipam-pool-6rcq3tobayc20t***</para>
-            /// </summary>
-            [NameInMap("IpamPoolId")]
-            [Validation(Required=false)]
-            public string IpamPoolId { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>ipam-scope-glfmcyldpm8lsy****</para>
-            /// </summary>
-            [NameInMap("IpamScopeId")]
-            [Validation(Required=false)]
-            public string IpamScopeId { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>Managed</para>
-            /// </summary>
-            [NameInMap("ManagementStatus")]
-            [Validation(Required=false)]
-            public string ManagementStatus { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>Nonoverlapping</para>
-            /// </summary>
-            [NameInMap("OverlapStatus")]
-            [Validation(Required=false)]
-            public string OverlapStatus { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>vpc-bp16qjewdsunr41m1****</para>
+            /// <para>vpc-uf611fp465c7dyb4z****</para>
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
@@ -139,12 +103,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>Created</para>
+            /// <para>vpc-uf611fp465c7dyb4z****</para>
             /// </summary>
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
@@ -157,7 +117,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public long? MaxResults { get; set; }
+        public int? MaxResults { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -169,7 +129,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>49A9DE56-B68C-5FFC-BC06-509D086F287C</para>
+        /// <para>3748DEFF-68BE-5EED-9937-7C1D0C21BAB4</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

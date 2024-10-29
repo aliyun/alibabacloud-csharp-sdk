@@ -8,30 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
-    public class ListIpamPoolsRequest : TeaModel {
-        [NameInMap("IpamPoolIds")]
+    public class ListIpamResourceDiscoveriesRequest : TeaModel {
+        [NameInMap("IpamResourceDiscoveryIds")]
         [Validation(Required=false)]
-        public List<string> IpamPoolIds { get; set; }
+        public List<string> IpamResourceDiscoveryIds { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
-        [NameInMap("IpamPoolName")]
+        [NameInMap("IpamResourceDiscoveryName")]
         [Validation(Required=false)]
-        public string IpamPoolName { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>ipam-scope-glfmcyldpm8lsy****</para>
-        /// </summary>
-        [NameInMap("IpamScopeId")]
-        [Validation(Required=false)]
-        public string IpamScopeId { get; set; }
-
-        [NameInMap("IsShared")]
-        [Validation(Required=false)]
-        public bool? IsShared { get; set; }
+        public string IpamResourceDiscoveryName { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -56,14 +44,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
-        /// </summary>
-        [NameInMap("PoolRegionId")]
-        [Validation(Required=false)]
-        public string PoolRegionId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -91,18 +71,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>ipam-pool-lfnwi4jok1ss0g****</para>
-        /// </summary>
-        [NameInMap("SourceIpamPoolId")]
-        [Validation(Required=false)]
-        public string SourceIpamPoolId { get; set; }
-
         [NameInMap("Tags")]
         [Validation(Required=false)]
-        public List<ListIpamPoolsRequestTags> Tags { get; set; }
-        public class ListIpamPoolsRequestTags : TeaModel {
+        public List<ListIpamResourceDiscoveriesRequestTags> Tags { get; set; }
+        public class ListIpamResourceDiscoveriesRequestTags : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -120,6 +92,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
             public string Value { get; set; }
 
         }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>system</para>
+        /// </summary>
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

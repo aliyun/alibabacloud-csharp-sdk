@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
-    public class TagResourcesResponseBody : TeaModel {
+    public class UpdateIpamPoolAllocationResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>BF872550-9700-52FD-839C-4D3F05543FA8</para>
+        /// <para>F4650E33-895C-53F0-9CD5-D1338F322DE8</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
-    public class DeleteIpamPoolAllocationRequest : TeaModel {
+    public class UpdateIpamPoolAllocationRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -26,14 +26,30 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>test description</para>
+        /// </summary>
+        [NameInMap("IpamPoolAllocationDescription")]
+        [Validation(Required=false)]
+        public string IpamPoolAllocationDescription { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ipam-alloc-c4vhvr3b22mmc6****</para>
+        /// <para>ipam-pool-alloc-112za33e4****</para>
         /// </summary>
         [NameInMap("IpamPoolAllocationId")]
         [Validation(Required=false)]
         public string IpamPoolAllocationId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test name</para>
+        /// </summary>
+        [NameInMap("IpamPoolAllocationName")]
+        [Validation(Required=false)]
+        public string IpamPoolAllocationName { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
