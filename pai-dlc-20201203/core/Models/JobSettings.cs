@@ -31,6 +31,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("DisableEcsStockCheck")]
+        [Validation(Required=false)]
+        public bool? DisableEcsStockCheck { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>535.54.03</para>
         /// </summary>
         [NameInMap("Driver")]
