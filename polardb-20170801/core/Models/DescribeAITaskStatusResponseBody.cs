@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAITaskStatusResponseBody : TeaModel {
+        [NameInMap("AccountName")]
+        [Validation(Required=false)]
+        public string AccountName { get; set; }
+
         /// <summary>
         /// <para>The cluster ID.</para>
         /// 
