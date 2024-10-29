@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdateExcessiveDeviceRegistrationApplicationsStatusRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApplicationIds")]
         [Validation(Required=false)]
         public List<string> ApplicationIds { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Approved</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetRegistrationPolicyRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>reg-policy-dcbfd33cb004****</para>
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]

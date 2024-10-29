@@ -14,12 +14,19 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<string> Addresses { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pa-application-e12860ef6c48****</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -36,6 +43,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string L7ProxyDomainPrivate { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Cover</para>
+        /// </summary>
         [NameInMap("ModifyType")]
         [Validation(Required=false)]
         public string ModifyType { get; set; }
@@ -44,24 +55,44 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public List<UpdatePrivateAccessApplicationRequestPortRanges> PortRanges { get; set; }
         public class UpdatePrivateAccessApplicationRequestPortRanges : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>80</para>
+            /// </summary>
             [NameInMap("Begin")]
             [Validation(Required=false)]
             public int? Begin { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>81</para>
+            /// </summary>
             [NameInMap("End")]
             [Validation(Required=false)]
             public int? End { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>All</para>
+        /// </summary>
         [NameInMap("Protocol")]
         [Validation(Required=false)]
         public string Protocol { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Enabled</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
         [NameInMap("TagIds")]
         [Validation(Required=false)]
         public List<string> TagIds { get; set; }

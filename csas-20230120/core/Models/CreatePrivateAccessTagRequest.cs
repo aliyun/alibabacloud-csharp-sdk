@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tag_name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

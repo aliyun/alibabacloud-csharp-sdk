@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DeletePrivateAccessApplicationRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pa-application-e12860ef6c48****</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]

@@ -8,20 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
-    public class CreateWmEmbedTaskShrinkRequest : TeaModel {
+    public class CreateWmExtractTaskShrinkRequest : TeaModel {
         [NameInMap("CsvControl")]
         [Validation(Required=false)]
         public string CsvControlShrink { get; set; }
 
-        [NameInMap("DocumentControl")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("DocumentIsCapture")]
         [Validation(Required=false)]
-        public string DocumentControlShrink { get; set; }
+        public bool? DocumentIsCapture { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="https://example.com/abc****.pdf">https://example.com/abc****.pdf</a></para>
+        /// <para><a href="https://example.com/test-****.pdf">https://example.com/test-****.pdf</a></para>
         /// </summary>
         [NameInMap("FileUrl")]
         [Validation(Required=false)]
@@ -31,35 +35,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>abc****.pdf</para>
+        /// <para>test-****.pdf</para>
         /// </summary>
         [NameInMap("Filename")]
         [Validation(Required=false)]
         public string Filename { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>95</para>
-        /// </summary>
-        [NameInMap("ImageEmbedJpegQuality")]
-        [Validation(Required=false)]
-        public long? ImageEmbedJpegQuality { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>2</para>
-        /// </summary>
-        [NameInMap("ImageEmbedLevel")]
-        [Validation(Required=false)]
-        public long? ImageEmbedLevel { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>3000k</para>
-        /// </summary>
-        [NameInMap("VideoBitrate")]
-        [Validation(Required=false)]
-        public string VideoBitrate { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -71,11 +51,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>aGVsbG8gc2F*****</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("WmInfoBytesB64")]
+        [NameInMap("VideoSpeed")]
         [Validation(Required=false)]
-        public string WmInfoBytesB64 { get; set; }
+        public string VideoSpeed { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -84,14 +64,6 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [NameInMap("WmInfoSize")]
         [Validation(Required=false)]
         public long? WmInfoSize { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>123***</para>
-        /// </summary>
-        [NameInMap("WmInfoUint")]
-        [Validation(Required=false)]
-        public string WmInfoUint { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

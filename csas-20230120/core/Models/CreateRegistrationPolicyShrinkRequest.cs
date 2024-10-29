@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string CompanyLimitCountShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LimitAll</para>
         /// </summary>
         [NameInMap("CompanyLimitType")]
         [Validation(Required=false)]
@@ -25,14 +28,20 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UserGroupAll</para>
         /// </summary>
         [NameInMap("MatchMode")]
         [Validation(Required=false)]
         public string MatchMode { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>registration_policy_name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -43,18 +52,28 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string PersonalLimitCountShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LimitDiff</para>
         /// </summary>
         [NameInMap("PersonalLimitType")]
         [Validation(Required=false)]
         public string PersonalLimitType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>99</para>
+        /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public long? Priority { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Enabled</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

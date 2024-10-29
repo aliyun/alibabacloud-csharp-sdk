@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DeletePrivateAccessPolicyRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pa-policy-867ef4007c8a****</para>
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]

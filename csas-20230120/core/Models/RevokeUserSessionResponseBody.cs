@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class RevokeUserSessionResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>D6707286-A50E-57B1-B2CF-EFAC59E850D8</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

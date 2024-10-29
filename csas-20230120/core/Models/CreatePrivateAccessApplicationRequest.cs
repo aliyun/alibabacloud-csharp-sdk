@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreatePrivateAccessApplicationRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Addresses")]
         [Validation(Required=false)]
@@ -33,28 +33,37 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string L7ProxyDomainCustom { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>private_access_application_name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PortRanges")]
         [Validation(Required=false)]
         public List<CreatePrivateAccessApplicationRequestPortRanges> PortRanges { get; set; }
         public class CreatePrivateAccessApplicationRequestPortRanges : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
             /// </summary>
             [NameInMap("Begin")]
             [Validation(Required=false)]
             public int? Begin { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>81</para>
             /// </summary>
             [NameInMap("End")]
             [Validation(Required=false)]
@@ -63,14 +72,20 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>All</para>
         /// </summary>
         [NameInMap("Protocol")]
         [Validation(Required=false)]
         public string Protocol { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Enabled</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

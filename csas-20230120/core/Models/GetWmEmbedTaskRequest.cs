@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetWmEmbedTaskRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>job:5GfrJYsoaffmCE7Z5bZtjU********</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

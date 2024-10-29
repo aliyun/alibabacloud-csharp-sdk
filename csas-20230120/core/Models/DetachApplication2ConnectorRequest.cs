@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DetachApplication2ConnectorRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApplicationIds")]
         [Validation(Required=false)]
         public List<string> ApplicationIds { get; set; }
 
         /// <summary>
-        /// ConnectorID。
+        /// <para>ConnectorID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>connector-94db94e06b98****</para>
         /// </summary>
         [NameInMap("ConnectorId")]
         [Validation(Required=false)]

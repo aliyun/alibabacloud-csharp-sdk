@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateIdpDepartmentRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DepartmentName")]
         [Validation(Required=false)]
         public string DepartmentName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1222</para>
         /// </summary>
         [NameInMap("IdpConfigId")]
         [Validation(Required=false)]

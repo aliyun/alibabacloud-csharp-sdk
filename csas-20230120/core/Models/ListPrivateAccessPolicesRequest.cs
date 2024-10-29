@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListPrivateAccessPolicesRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>pa-application-e12860ef6c48****</para>
+        /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
@@ -18,23 +22,37 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ApplicationName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>private_access_policy_name</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Allow</para>
+        /// </summary>
         [NameInMap("PolicyAction")]
         [Validation(Required=false)]
         public string PolicyAction { get; set; }
@@ -43,10 +61,18 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public List<string> PolicyIds { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Enabled</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>tag-c0cb77857a99****</para>
+        /// </summary>
         [NameInMap("TagId")]
         [Validation(Required=false)]
         public string TagId { get; set; }
@@ -56,9 +82,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string TagName { get; set; }
 
         /// <summary>
-        /// 用户组ID。取值来源：
-        /// - [ListUserGroups](~~ListUserGroups~~)：批量查询用户组。
-        /// - [CreateUserGroup](~~CreateUserGroup~~)：创建用户组。
+        /// <para>用户组ID。取值来源：</para>
+        /// <list type="bullet">
+        /// <item><description><a href="~~ListUserGroups~~">ListUserGroups</a>：批量查询用户组。</description></item>
+        /// <item><description><a href="~~CreateUserGroup~~">CreateUserGroup</a>：创建用户组。</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>usergroup-6f1ef2fc56b6****</para>
         /// </summary>
         [NameInMap("UserGroupId")]
         [Validation(Required=false)]

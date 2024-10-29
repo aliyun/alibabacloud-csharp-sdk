@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetDynamicRouteRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dr-16ff07c8207d****</para>
         /// </summary>
         [NameInMap("DynamicRouteId")]
         [Validation(Required=false)]

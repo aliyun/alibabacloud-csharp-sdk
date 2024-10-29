@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public List<ListRegistrationPoliciesResponseBodyPolicies> Policies { get; set; }
         public class ListRegistrationPoliciesResponseBodyPolicies : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2023-05-16 17:18:46</para>
+            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
@@ -25,6 +29,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public List<ListRegistrationPoliciesResponseBodyPoliciesLimitDetail> LimitDetail { get; set; }
             public class ListRegistrationPoliciesResponseBodyPoliciesLimitDetail : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Company</para>
+                /// </summary>
                 [NameInMap("DeviceBelong")]
                 [Validation(Required=false)]
                 public string DeviceBelong { get; set; }
@@ -33,42 +41,78 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 [Validation(Required=false)]
                 public ListRegistrationPoliciesResponseBodyPoliciesLimitDetailLimitCount LimitCount { get; set; }
                 public class ListRegistrationPoliciesResponseBodyPoliciesLimitDetailLimitCount : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>3</para>
+                    /// </summary>
                     [NameInMap("All")]
                     [Validation(Required=false)]
                     public int? All { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>0</para>
+                    /// </summary>
                     [NameInMap("Mobile")]
                     [Validation(Required=false)]
                     public int? Mobile { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>0</para>
+                    /// </summary>
                     [NameInMap("PC")]
                     [Validation(Required=false)]
                     public int? PC { get; set; }
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>LimitAll</para>
+                /// </summary>
                 [NameInMap("LimitType")]
                 [Validation(Required=false)]
                 public string LimitType { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>UserGroupNormal</para>
+            /// </summary>
             [NameInMap("MatchMode")]
             [Validation(Required=false)]
             public string MatchMode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>registration_policy_name</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>reg-policy-dcbfd33cb004****</para>
+            /// </summary>
             [NameInMap("PolicyId")]
             [Validation(Required=false)]
             public string PolicyId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public long? Priority { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Enabled</para>
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -83,10 +127,18 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>7A8FE38A-E29C-5678-B84A-FEDBCB83552F</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("TotalNum")]
         [Validation(Required=false)]
         public string TotalNum { get; set; }

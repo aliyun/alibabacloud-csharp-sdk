@@ -1,3 +1,8 @@
+2024-10-29 Version: 1.9.2
+- Update API CreateWmEmbedTask: add param CsvControl.
+- Update API CreateWmExtractTask: add param CsvControl.
+
+
 2024-09-11 Version: 1.9.1
 - Update API CreatePrivateAccessApplication: add param BrowserAccessStatus.
 - Update API CreatePrivateAccessApplication: add param L7ProxyDomainAutomaticPrefix.

@@ -13,14 +13,26 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public CreateRegistrationPolicyRequestCompanyLimitCount CompanyLimitCount { get; set; }
         public class CreateRegistrationPolicyRequestCompanyLimitCount : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("All")]
             [Validation(Required=false)]
             public int? All { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("Mobile")]
             [Validation(Required=false)]
             public int? Mobile { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("PC")]
             [Validation(Required=false)]
             public int? PC { get; set; }
@@ -28,7 +40,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LimitAll</para>
         /// </summary>
         [NameInMap("CompanyLimitType")]
         [Validation(Required=false)]
@@ -39,14 +54,20 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UserGroupAll</para>
         /// </summary>
         [NameInMap("MatchMode")]
         [Validation(Required=false)]
         public string MatchMode { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>registration_policy_name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -56,14 +77,26 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public CreateRegistrationPolicyRequestPersonalLimitCount PersonalLimitCount { get; set; }
         public class CreateRegistrationPolicyRequestPersonalLimitCount : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("All")]
             [Validation(Required=false)]
             public int? All { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
             [NameInMap("Mobile")]
             [Validation(Required=false)]
             public int? Mobile { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("PC")]
             [Validation(Required=false)]
             public int? PC { get; set; }
@@ -71,18 +104,28 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LimitDiff</para>
         /// </summary>
         [NameInMap("PersonalLimitType")]
         [Validation(Required=false)]
         public string PersonalLimitType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>99</para>
+        /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public long? Priority { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Enabled</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

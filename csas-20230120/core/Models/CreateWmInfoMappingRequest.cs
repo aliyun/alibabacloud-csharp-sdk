@@ -10,18 +10,28 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateWmInfoMappingRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aGVsbG8gc2F*****</para>
         /// </summary>
         [NameInMap("WmInfoBytesB64")]
         [Validation(Required=false)]
         public string WmInfoBytesB64 { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>32</para>
+        /// </summary>
         [NameInMap("WmInfoSize")]
         [Validation(Required=false)]
         public long? WmInfoSize { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PureDocument</para>
         /// </summary>
         [NameInMap("WmType")]
         [Validation(Required=false)]

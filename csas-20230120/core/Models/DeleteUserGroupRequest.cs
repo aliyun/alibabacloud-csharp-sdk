@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DeleteUserGroupRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>usergroup-6f1ef2fc56b6****</para>
         /// </summary>
         [NameInMap("UserGroupId")]
         [Validation(Required=false)]

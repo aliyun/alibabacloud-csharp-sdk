@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdateUserDevicesStatusRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Unbound</para>
         /// </summary>
         [NameInMap("DeviceAction")]
         [Validation(Required=false)]
         public string DeviceAction { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceTags")]
         [Validation(Required=false)]

@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreatePrivateAccessTagResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>102350E7-1A20-58F5-9D63-ABEA820AE6E1</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>tag-d3f64e8bdd4a****</para>
+        /// </summary>
         [NameInMap("TagId")]
         [Validation(Required=false)]
         public string TagId { get; set; }

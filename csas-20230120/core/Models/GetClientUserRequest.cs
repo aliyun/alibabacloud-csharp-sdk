@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetClientUserRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>598</para>
         /// </summary>
         [NameInMap("IdpConfigId")]
         [Validation(Required=false)]
         public string IdpConfigId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Username")]
         [Validation(Required=false)]

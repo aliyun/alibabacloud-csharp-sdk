@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public List<string> ApplicationIds { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Application</para>
+        /// </summary>
         [NameInMap("ApplicationType")]
         [Validation(Required=false)]
         public string ApplicationType { get; set; }
@@ -22,28 +26,51 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dr-ca9fddfac7c6****</para>
         /// </summary>
         [NameInMap("DynamicRouteId")]
         [Validation(Required=false)]
         public string DynamicRouteId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>connector</para>
+        /// </summary>
         [NameInMap("DynamicRouteType")]
         [Validation(Required=false)]
         public string DynamicRouteType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Cover</para>
+        /// </summary>
         [NameInMap("ModifyType")]
         [Validation(Required=false)]
         public string ModifyType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dynamic_route_name</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>connector-8ccb13b6f52c****</para>
+        /// </summary>
         [NameInMap("NextHop")]
         [Validation(Required=false)]
         public string NextHop { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>99</para>
+        /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public int? Priority { get; set; }
@@ -52,6 +79,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public List<string> RegionIds { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Disabled</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
