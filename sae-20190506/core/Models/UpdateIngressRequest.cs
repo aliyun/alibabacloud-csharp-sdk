@@ -64,6 +64,30 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("EnableXForwardedFor")]
+        [Validation(Required=false)]
+        public bool? EnableXForwardedFor { get; set; }
+
+        [NameInMap("EnableXForwardedForClientSrcPort")]
+        [Validation(Required=false)]
+        public bool? EnableXForwardedForClientSrcPort { get; set; }
+
+        [NameInMap("EnableXForwardedForProto")]
+        [Validation(Required=false)]
+        public bool? EnableXForwardedForProto { get; set; }
+
+        [NameInMap("EnableXForwardedForSlbId")]
+        [Validation(Required=false)]
+        public bool? EnableXForwardedForSlbId { get; set; }
+
+        [NameInMap("EnableXForwardedForSlbPort")]
+        [Validation(Required=false)]
+        public bool? EnableXForwardedForSlbPort { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("IdleTimeout")]
         [Validation(Required=false)]
         public int? IdleTimeout { get; set; }
@@ -113,6 +137,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string LoadBalanceType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>60</para>
+        /// </summary>
         [NameInMap("RequestTimeout")]
         [Validation(Required=false)]
         public int? RequestTimeout { get; set; }
@@ -133,6 +161,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Rules { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>tls_cipher_policy_1_0</para>
+        /// </summary>
         [NameInMap("SecurityPolicyId")]
         [Validation(Required=false)]
         public string SecurityPolicyId { get; set; }

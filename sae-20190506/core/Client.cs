@@ -2095,6 +2095,26 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedFor))
+            {
+                query["EnableXForwardedFor"] = request.EnableXForwardedFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedForClientSrcPort))
+            {
+                query["EnableXForwardedForClientSrcPort"] = request.EnableXForwardedForClientSrcPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedForProto))
+            {
+                query["EnableXForwardedForProto"] = request.EnableXForwardedForProto;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedForSlbId))
+            {
+                query["EnableXForwardedForSlbId"] = request.EnableXForwardedForSlbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedForSlbPort))
+            {
+                query["EnableXForwardedForSlbPort"] = request.EnableXForwardedForSlbPort;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleTimeout))
             {
                 query["IdleTimeout"] = request.IdleTimeout;
@@ -2190,6 +2210,26 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedFor))
+            {
+                query["EnableXForwardedFor"] = request.EnableXForwardedFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedForClientSrcPort))
+            {
+                query["EnableXForwardedForClientSrcPort"] = request.EnableXForwardedForClientSrcPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedForProto))
+            {
+                query["EnableXForwardedForProto"] = request.EnableXForwardedForProto;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedForSlbId))
+            {
+                query["EnableXForwardedForSlbId"] = request.EnableXForwardedForSlbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedForSlbPort))
+            {
+                query["EnableXForwardedForSlbPort"] = request.EnableXForwardedForSlbPort;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleTimeout))
             {
@@ -17953,6 +17993,26 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedFor))
+            {
+                query["EnableXForwardedFor"] = request.EnableXForwardedFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedForClientSrcPort))
+            {
+                query["EnableXForwardedForClientSrcPort"] = request.EnableXForwardedForClientSrcPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedForProto))
+            {
+                query["EnableXForwardedForProto"] = request.EnableXForwardedForProto;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedForSlbId))
+            {
+                query["EnableXForwardedForSlbId"] = request.EnableXForwardedForSlbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedForSlbPort))
+            {
+                query["EnableXForwardedForSlbPort"] = request.EnableXForwardedForSlbPort;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleTimeout))
             {
                 query["IdleTimeout"] = request.IdleTimeout;
@@ -18044,6 +18104,26 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedFor))
+            {
+                query["EnableXForwardedFor"] = request.EnableXForwardedFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedForClientSrcPort))
+            {
+                query["EnableXForwardedForClientSrcPort"] = request.EnableXForwardedForClientSrcPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedForProto))
+            {
+                query["EnableXForwardedForProto"] = request.EnableXForwardedForProto;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedForSlbId))
+            {
+                query["EnableXForwardedForSlbId"] = request.EnableXForwardedForSlbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedForSlbPort))
+            {
+                query["EnableXForwardedForSlbPort"] = request.EnableXForwardedForSlbPort;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleTimeout))
             {

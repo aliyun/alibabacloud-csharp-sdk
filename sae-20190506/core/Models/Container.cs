@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Image { get; set; }
 
+        [NameInMap("ImageRegistryConfig")]
+        [Validation(Required=false)]
+        public ImageRegistryConfig ImageRegistryConfig { get; set; }
+
         [NameInMap("MetricsCollectConfig")]
         [Validation(Required=false)]
         public MetricsCollectConfig MetricsCollectConfig { get; set; }
