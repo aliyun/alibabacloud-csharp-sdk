@@ -381,6 +381,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 body["ThirdPartyId"] = request.ThirdPartyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                body["callbackParams"] = request.CallbackParams;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -484,6 +488,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartyId))
             {
                 body["ThirdPartyId"] = request.ThirdPartyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                body["callbackParams"] = request.CallbackParams;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -627,6 +635,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 body["ThirdPartyId"] = request.ThirdPartyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                body["callbackParams"] = request.CallbackParams;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -730,6 +742,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartyId))
             {
                 body["ThirdPartyId"] = request.ThirdPartyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                body["callbackParams"] = request.CallbackParams;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -865,6 +881,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 body["ThirdPartyId"] = request.ThirdPartyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                body["callbackParams"] = request.CallbackParams;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -960,6 +980,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartyId))
             {
                 body["ThirdPartyId"] = request.ThirdPartyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                body["callbackParams"] = request.CallbackParams;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1099,6 +1123,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 body["ThirdPartyId"] = request.ThirdPartyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                body["callbackParams"] = request.CallbackParams;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1198,6 +1226,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartyId))
             {
                 body["ThirdPartyId"] = request.ThirdPartyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                body["callbackParams"] = request.CallbackParams;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1337,6 +1369,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 body["ThirdPartyId"] = request.ThirdPartyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                body["callbackParams"] = request.CallbackParams;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1436,6 +1472,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartyId))
             {
                 body["ThirdPartyId"] = request.ThirdPartyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                body["callbackParams"] = request.CallbackParams;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1575,6 +1615,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 body["ThirdPartyId"] = request.ThirdPartyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                body["callbackParams"] = request.CallbackParams;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1674,6 +1718,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartyId))
             {
                 body["ThirdPartyId"] = request.ThirdPartyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                body["callbackParams"] = request.CallbackParams;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

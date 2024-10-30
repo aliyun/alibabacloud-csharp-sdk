@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [Validation(Required=false)]
         public string HuaweiChannelImportance { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>取值为&quot;NORMAL&quot;和&quot;HIGH&quot;,默认为”NORMAL”</para>
+        /// </summary>
+        [NameInMap("huaweiMessageUrgency")]
+        [Validation(Required=false)]
+        public string HuaweiMessageUrgency { get; set; }
+
         [NameInMap("mainActivity")]
         [Validation(Required=false)]
         public string MainActivity { get; set; }
@@ -32,6 +40,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [NameInMap("oppoChannelId")]
         [Validation(Required=false)]
         public string OppoChannelId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>&quot;true&quot; ,默认为&quot;false&quot;，可不填</para>
+        /// </summary>
+        [NameInMap("useHuaweiMessage")]
+        [Validation(Required=false)]
+        public string UseHuaweiMessage { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
