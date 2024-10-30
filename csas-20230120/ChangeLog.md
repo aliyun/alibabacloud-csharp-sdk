@@ -1,3 +1,6 @@
+2024-10-30 Version: 1.9.3
+- Generated csharp 2023-01-20 for csas.
+
 2024-10-29 Version: 1.9.2
 - Update API CreateWmEmbedTask: add param CsvControl.
 - Update API CreateWmExtractTask: add param CsvControl.
