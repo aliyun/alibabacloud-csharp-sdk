@@ -114,6 +114,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     [Validation(Required=false)]
                     public int? Archive { get; set; }
 
+                    [NameInMap("CommonFileSystem")]
+                    [Validation(Required=false)]
+                    public int? CommonFileSystem { get; set; }
+
                     /// <summary>
                     /// <para>The number of backup plans for General-purpose NAS file systems.</para>
                     /// 
