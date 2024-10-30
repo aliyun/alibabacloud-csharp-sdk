@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? DataSize { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OSS</para>
         /// </summary>
@@ -52,6 +54,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Options { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DIRECTORY</para>
         /// </summary>
@@ -76,6 +80,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceType { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss://mybucket.oss-cn-beijing.aliyuncs.com/mypath/</para>
         /// </summary>

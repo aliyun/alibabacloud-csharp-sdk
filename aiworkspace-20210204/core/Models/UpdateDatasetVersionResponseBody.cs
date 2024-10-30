@@ -9,11 +9,7 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateDatasetVersionResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>ADF6D849-*****-7E7030F0CE53</para>
-        /// </summary>
-        [NameInMap("requestId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 

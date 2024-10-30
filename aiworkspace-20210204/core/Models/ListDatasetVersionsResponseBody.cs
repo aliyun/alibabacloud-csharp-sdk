@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>5</para>
@@ -36,14 +40,6 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>ADF6D849-*****-7E7030F0CE53</para>
-        /// </summary>
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

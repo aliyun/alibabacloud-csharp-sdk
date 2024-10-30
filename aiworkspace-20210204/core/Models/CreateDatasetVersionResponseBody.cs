@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateDatasetVersionResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>v1</para>
@@ -16,14 +20,6 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("VersionName")]
         [Validation(Required=false)]
         public string VersionName { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>ADF6D849-*****-7E7030F0CE53</para>
-        /// </summary>
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 
