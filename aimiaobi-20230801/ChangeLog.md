@@ -1,3 +1,6 @@
+2024-11-01 Version: 1.8.5
+- Generated csharp 2023-08-01 for AiMiaoBi.
+
 2024-10-28 Version: 1.8.4
 - Update API GetTopicSelectionPerspectiveAnalysisTask: update response param.
 
