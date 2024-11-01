@@ -485,6 +485,410 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>轻应用-热点播报-问答</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RunHotTopicChatRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunHotTopicChatResponse
+        /// </returns>
+        public RunHotTopicChatResponse RunHotTopicChatWithOptions(string workspaceId, RunHotTopicChatRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunHotTopicChatShrinkRequest request = new RunHotTopicChatShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GenerateOptions))
+            {
+                request.GenerateOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GenerateOptions, "generateOptions", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HotTopics))
+            {
+                request.HotTopicsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HotTopics, "hotTopics", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StepForBroadcastContentConfig))
+            {
+                request.StepForBroadcastContentConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StepForBroadcastContentConfig, "stepForBroadcastContentConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                body["category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateOptionsShrink))
+            {
+                body["generateOptions"] = request.GenerateOptionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotTopicVersion))
+            {
+                body["hotTopicVersion"] = request.HotTopicVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotTopicsShrink))
+            {
+                body["hotTopics"] = request.HotTopicsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCount))
+            {
+                body["imageCount"] = request.ImageCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelCustomPromptTemplate))
+            {
+                body["modelCustomPromptTemplate"] = request.ModelCustomPromptTemplate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                body["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalSessionId))
+            {
+                body["originalSessionId"] = request.OriginalSessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                body["prompt"] = request.Prompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StepForBroadcastContentConfigShrink))
+            {
+                body["stepForBroadcastContentConfig"] = request.StepForBroadcastContentConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunHotTopicChat",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/runHotTopicChat",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunHotTopicChatResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轻应用-热点播报-问答</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RunHotTopicChatRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunHotTopicChatResponse
+        /// </returns>
+        public async Task<RunHotTopicChatResponse> RunHotTopicChatWithOptionsAsync(string workspaceId, RunHotTopicChatRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunHotTopicChatShrinkRequest request = new RunHotTopicChatShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GenerateOptions))
+            {
+                request.GenerateOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GenerateOptions, "generateOptions", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HotTopics))
+            {
+                request.HotTopicsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HotTopics, "hotTopics", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StepForBroadcastContentConfig))
+            {
+                request.StepForBroadcastContentConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StepForBroadcastContentConfig, "stepForBroadcastContentConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                body["category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateOptionsShrink))
+            {
+                body["generateOptions"] = request.GenerateOptionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotTopicVersion))
+            {
+                body["hotTopicVersion"] = request.HotTopicVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotTopicsShrink))
+            {
+                body["hotTopics"] = request.HotTopicsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCount))
+            {
+                body["imageCount"] = request.ImageCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelCustomPromptTemplate))
+            {
+                body["modelCustomPromptTemplate"] = request.ModelCustomPromptTemplate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                body["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalSessionId))
+            {
+                body["originalSessionId"] = request.OriginalSessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                body["prompt"] = request.Prompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StepForBroadcastContentConfigShrink))
+            {
+                body["stepForBroadcastContentConfig"] = request.StepForBroadcastContentConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunHotTopicChat",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/runHotTopicChat",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunHotTopicChatResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轻应用-热点播报-问答</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunHotTopicChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunHotTopicChatResponse
+        /// </returns>
+        public RunHotTopicChatResponse RunHotTopicChat(string workspaceId, RunHotTopicChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RunHotTopicChatWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轻应用-热点播报-问答</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunHotTopicChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunHotTopicChatResponse
+        /// </returns>
+        public async Task<RunHotTopicChatResponse> RunHotTopicChatAsync(string workspaceId, RunHotTopicChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RunHotTopicChatWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轻应用-热点播报-热点摘要生成</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RunHotTopicSummaryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunHotTopicSummaryResponse
+        /// </returns>
+        public RunHotTopicSummaryResponse RunHotTopicSummaryWithOptions(string workspaceId, RunHotTopicSummaryRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunHotTopicSummaryShrinkRequest request = new RunHotTopicSummaryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StepForCustomSummaryStyleConfig))
+            {
+                request.StepForCustomSummaryStyleConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StepForCustomSummaryStyleConfig, "stepForCustomSummaryStyleConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TopicIds))
+            {
+                request.TopicIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TopicIds, "topicIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotTopicVersion))
+            {
+                body["hotTopicVersion"] = request.HotTopicVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StepForCustomSummaryStyleConfigShrink))
+            {
+                body["stepForCustomSummaryStyleConfig"] = request.StepForCustomSummaryStyleConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicIdsShrink))
+            {
+                body["topicIds"] = request.TopicIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunHotTopicSummary",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/runHotTopicSummary",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunHotTopicSummaryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轻应用-热点播报-热点摘要生成</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RunHotTopicSummaryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunHotTopicSummaryResponse
+        /// </returns>
+        public async Task<RunHotTopicSummaryResponse> RunHotTopicSummaryWithOptionsAsync(string workspaceId, RunHotTopicSummaryRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunHotTopicSummaryShrinkRequest request = new RunHotTopicSummaryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StepForCustomSummaryStyleConfig))
+            {
+                request.StepForCustomSummaryStyleConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StepForCustomSummaryStyleConfig, "stepForCustomSummaryStyleConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TopicIds))
+            {
+                request.TopicIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TopicIds, "topicIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotTopicVersion))
+            {
+                body["hotTopicVersion"] = request.HotTopicVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StepForCustomSummaryStyleConfigShrink))
+            {
+                body["stepForCustomSummaryStyleConfig"] = request.StepForCustomSummaryStyleConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicIdsShrink))
+            {
+                body["topicIds"] = request.TopicIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunHotTopicSummary",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/runHotTopicSummary",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunHotTopicSummaryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轻应用-热点播报-热点摘要生成</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunHotTopicSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunHotTopicSummaryResponse
+        /// </returns>
+        public RunHotTopicSummaryResponse RunHotTopicSummary(string workspaceId, RunHotTopicSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RunHotTopicSummaryWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轻应用-热点播报-热点摘要生成</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunHotTopicSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunHotTopicSummaryResponse
+        /// </returns>
+        public async Task<RunHotTopicSummaryResponse> RunHotTopicSummaryAsync(string workspaceId, RunHotTopicSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RunHotTopicSummaryWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>营销信息抽取服务</para>
         /// </summary>
         /// 
