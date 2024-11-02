@@ -10,64 +10,82 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ReplaceServersInServerGroupRequest : TeaModel {
         /// <summary>
-        /// The backend servers that you want to add to the server group. You can specify up to 40 backend servers in each call.
-        /// 
-        /// This parameter is required.
+        /// <para>The backend servers. You can specify at most 200 servers in each call.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AddedServers")]
         [Validation(Required=false)]
         public List<ReplaceServersInServerGroupRequestAddedServers> AddedServers { get; set; }
         public class ReplaceServersInServerGroupRequestAddedServers : TeaModel {
             /// <summary>
-            /// The description of the backend server. The description must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify at most 40 servers in each call.
+            /// <para>The description of the backend server. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The port used by the server group. Valid values: **1** to **65535**. You can specify at most 40 servers in each call.
+            /// <para>The port used by the backend server in the server group. Valid values: <b>1</b> to <b>65535</b>. You can specify at most 200 servers in each call.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public int? Port { get; set; }
 
             /// <summary>
-            /// The ID of the backend server. You can specify up to 40 server IDs in each call.
+            /// <para>The ID of the backend server. You can specify at most 200 servers in each call.</para>
+            /// <list type="bullet">
+            /// <item><description>If the server group is of the <b>Instance</b> type, set ServerId to the ID of a resource of the <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> type.</description></item>
+            /// <item><description>If the server group is of the <b>Ip</b> type, set ServerId to IP addresses.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> You cannot perform this operation on a server group of the Function Compute type. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the type of server groups.</para>
+            /// </remarks>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   If the server group type is **Instance**, set the ServerId parameter to the ID of an ECS instance, an ENI, or an elastic container instance. These backend servers are specified by **Ecs**, **Eni**, or **Eci**.
-            /// *   If the server group type is **Ip**, set the ServerId parameter to an IP address specified in the server group.
-            /// 
-            /// > You cannot perform this operation on a server group of the Function type. You can call the [ListServerGroups](https://help.aliyun.com/document_detail/213627.html) operation to query information about the server group type so that you can set ServerId to a proper value.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>i-bp1f9kdprbgy9uiu****</para>
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
             public string ServerId { get; set; }
 
             /// <summary>
-            /// The IP address in inclusive ENI mode. You can specify at most 40 servers in each call.
+            /// <para>The IP address of the elastic network interface (ENI) in exclusive mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.1.1</para>
             /// </summary>
             [NameInMap("ServerIp")]
             [Validation(Required=false)]
             public string ServerIp { get; set; }
 
             /// <summary>
-            /// The type of the backend server that you want to remove from the server group. You can specify up to 40 backend servers in each call. Valid values:
+            /// <para>The type of backend server. You can specify at most 200 servers in each call. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Ecs</b>: Elastic Compute Service (ECS) instance</description></item>
+            /// <item><description><b>Eni</b>: ENI</description></item>
+            /// <item><description><b>Eci</b>: elastic container instance</description></item>
+            /// </list>
             /// 
-            /// *   **Ecs**
-            /// *   **Eni**
-            /// *   **Eci**
+            /// <b>Example:</b>
+            /// <para>Ecs</para>
             /// </summary>
             [NameInMap("ServerType")]
             [Validation(Required=false)]
             public string ServerType { get; set; }
 
             /// <summary>
-            /// The weight of the backend server that you want to add to the server group. You can specify up to 40 backend servers in each call.
+            /// <para>The weight of the backend server. You can specify at most 200 servers in each call.</para>
+            /// <para>Valid values: <b>0</b> to <b>100</b>. Default value: <b>100</b>. If the value is set to <b>0</b>, no requests are forwarded to the server.</para>
             /// 
-            /// Valid values: **0** to **100**. Default value: **100**. If the weight of a backend server is set to **0**, no requests are forwarded to the backend server.
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("Weight")]
             [Validation(Required=false)]
@@ -76,69 +94,89 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <c>2xx</c> HTTP status code is returned and the operation is performed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a `2xx` HTTP status code is returned and the operation is performed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The backend servers that you want to remove.
-        /// 
-        /// This parameter is required.
+        /// <para>The backend servers that you want to remove.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RemovedServers")]
         [Validation(Required=false)]
         public List<ReplaceServersInServerGroupRequestRemovedServers> RemovedServers { get; set; }
         public class ReplaceServersInServerGroupRequestRemovedServers : TeaModel {
             /// <summary>
-            /// The port that is used by the backend server. Valid values: **1** to **65535**. You can specify at most 40 servers in each call.
+            /// <para>The port that is used by the backend server. Valid values: <b>1</b> to <b>65535</b>. You can specify at most 200 servers in each call.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>81</para>
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public int? Port { get; set; }
 
             /// <summary>
-            /// The ID of the backend server. You can specify up to 40 server IDs in each call.
+            /// <para>The ID of the backend server. You can specify at most 200 servers in each call.</para>
+            /// <list type="bullet">
+            /// <item><description>If the server group is of the <b>Instance</b> type, set ServerId to the ID of a resource of the <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> type.</description></item>
+            /// <item><description>If the server group is of the <b>Ip</b> type, set ServerId to IP addresses.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> You cannot perform this operation on a server group of the Function Compute type. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the type of server groups.</para>
+            /// </remarks>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   If the server group type is **Instance**, set the ServerId parameter to the ID of an ECS instance, an ENI, or an elastic container instance. These backend servers are specified by **Ecs**, **Eni**, or **Eci**.
-            /// *   If the server group type is **Ip**, set the ServerId parameter to an IP address specified in the server group.
-            /// 
-            /// > You cannot perform this operation on a server group of the Function type. You can call the [ListServerGroups](https://help.aliyun.com/document_detail/213627.html) operation to query information about the server group type so that you can set ServerId to a proper value.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>ecs-bp1ac9uozods2uc****</para>
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
             public string ServerId { get; set; }
 
             /// <summary>
-            /// The IP address in inclusive ENI mode. You can specify at most 40 servers in each call.
+            /// <para>The IP address of the ENI in exclusive mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.1.12</para>
             /// </summary>
             [NameInMap("ServerIp")]
             [Validation(Required=false)]
             public string ServerIp { get; set; }
 
             /// <summary>
-            /// The type of the backend server that you want to remove from the server group. You can specify up to 40 backend servers in each call. Valid values:
+            /// <para>The type of backend server. You can specify at most 200 servers in each call. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Ecs</b>: ECS instance</description></item>
+            /// <item><description><b>Eni</b>: ENI</description></item>
+            /// <item><description><b>Eci</b>: elastic container instance</description></item>
+            /// </list>
             /// 
-            /// *   **Ecs**
-            /// *   **Eni**
-            /// *   **Eci**
+            /// <b>Example:</b>
+            /// <para>ecs</para>
             /// </summary>
             [NameInMap("ServerType")]
             [Validation(Required=false)]
@@ -147,11 +185,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// The ID of the server group.
+        /// <para>The ID of the server group.</para>
+        /// <remarks>
+        /// <para>You cannot perform this operation on a server group of the Function type.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You cannot perform this operation on a server group of the Function type.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sgp-5114d593o96qxy****</para>
         /// </summary>
         [NameInMap("ServerGroupId")]
         [Validation(Required=false)]

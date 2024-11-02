@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class AssociateAclsWithListenerResponseBody : TeaModel {
         /// <summary>
-        /// The synchronous task ID.
+        /// <para>The synchronous task ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>72dcd26b-f12d-4c27-b3af-18f6aed5****</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

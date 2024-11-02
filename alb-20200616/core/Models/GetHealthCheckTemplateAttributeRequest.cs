@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class GetHealthCheckTemplateAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the health check template.
+        /// <para>The ID of the health check template.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>hct-x4jazoyi6tvsq9****</para>
         /// </summary>
         [NameInMap("HealthCheckTemplateId")]
         [Validation(Required=false)]

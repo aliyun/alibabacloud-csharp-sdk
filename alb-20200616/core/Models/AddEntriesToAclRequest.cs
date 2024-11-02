@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,29 +10,30 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class AddEntriesToAclRequest : TeaModel {
         /// <summary>
-        /// The IP entries that you want to add. You can add up to 20 IP entries in each call.
-        /// 
-        /// This parameter is required.
+        /// <para>The ACL entries that you want to add. You can add at most 20 entries in each call.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AclEntries")]
         [Validation(Required=false)]
         public List<AddEntriesToAclRequestAclEntries> AclEntries { get; set; }
         public class AddEntriesToAclRequestAclEntries : TeaModel {
             /// <summary>
-            /// The description of the IP entry. The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ _ -.
+            /// <para>The description of the ACL entry. The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</para>
+            /// <para>You can add at most 20 entries in each call.</para>
             /// 
-            /// You can add up to 20 IP entries in each call.
+            /// <b>Example:</b>
+            /// <para>test-entry</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The CIDR block of the IP entry.
+            /// <para>The CIDR block in the ACL entry.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// You can add up to 20 IP entries in each call.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>10.0.1.0/24</para>
             /// </summary>
             [NameInMap("Entry")]
             [Validation(Required=false)]
@@ -44,30 +42,39 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// The ID of the ACL.
+        /// <para>The ID of the ACL.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>nacl-hp34s2h0xx1ht4nwo****</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]

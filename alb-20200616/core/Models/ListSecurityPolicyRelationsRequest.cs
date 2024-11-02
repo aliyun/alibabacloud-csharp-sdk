@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListSecurityPolicyRelationsRequest : TeaModel {
         /// <summary>
-        /// The security policy IDs. You can specify up to five IDs.
-        /// 
-        /// This parameter is required.
+        /// <para>The security policy IDs. You can specify up to five IDs.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SecurityPolicyIds")]
         [Validation(Required=false)]

@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListAclRelationsRequest : TeaModel {
         /// <summary>
-        /// Array of ACL ID.
-        /// 
-        /// This parameter is required.
+        /// <para>The access control list (ACL) IDs. You can query at most five ACLs in each call.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AclIds")]
         [Validation(Required=false)]

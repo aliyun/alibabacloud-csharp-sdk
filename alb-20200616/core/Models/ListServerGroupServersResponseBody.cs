@@ -10,104 +10,144 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListServerGroupServersResponseBody : TeaModel {
         /// <summary>
-        /// The maximum number of entries returned.
+        /// <para>The maximum number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
+        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is not empty, the value of NextToken can be used in the next request to retrieve a new page of results.</description></item>
+        /// </list>
         /// 
-        /// *   If **NextToken** is empty, no next page exists.
-        /// *   If **NextToken** is not empty, the value of NextToken can be used in the next request to retrieve a new page of results.
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f8****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// A list of backend servers.
+        /// <para>A list of backend servers.</para>
         /// </summary>
         [NameInMap("Servers")]
         [Validation(Required=false)]
         public List<ListServerGroupServersResponseBodyServers> Servers { get; set; }
         public class ListServerGroupServersResponseBodyServers : TeaModel {
             /// <summary>
-            /// The description of the backend server.
+            /// <para>The description of the backend server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The port used by the backend server. Valid values: **1** to **65535**.
+            /// <para>The port used by the backend server. Valid values: <b>1</b> to <b>65535</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public int? Port { get; set; }
 
             /// <summary>
-            /// Indicates whether the remote IP address feature is enabled. Valid values:
+            /// <para>Indicates whether the remote IP address feature is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("RemoteIpEnabled")]
             [Validation(Required=false)]
             public bool? RemoteIpEnabled { get; set; }
 
             /// <summary>
-            /// The ID of the server group.
+            /// <para>The ID of the server group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sgp-qy042e1jabmprh****</para>
             /// </summary>
             [NameInMap("ServerGroupId")]
             [Validation(Required=false)]
             public string ServerGroupId { get; set; }
 
             /// <summary>
-            /// The ID of the backend server.
+            /// <para>The ID of the backend server.</para>
+            /// <remarks>
+            /// <para>If <b>ServerType</b> is set to <b>Fc</b>, <b>ServerId</b> is the ARN of a function.</para>
+            /// </remarks>
             /// 
-            /// > If **ServerType** is set to **Fc**, **ServerId** is the ARN of a function.
+            /// <b>Example:</b>
+            /// <para>i-bp1f9kdprbgy9uiu****</para>
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
             public string ServerId { get; set; }
 
             /// <summary>
-            /// The IP address in inclusive ENI mode.
+            /// <para>The IP address in inclusive ENI mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.XX.XX</para>
             /// </summary>
             [NameInMap("ServerIp")]
             [Validation(Required=false)]
             public string ServerIp { get; set; }
 
             /// <summary>
-            /// The type of the backend server.
+            /// <para>The type of the backend server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Ecs</para>
             /// </summary>
             [NameInMap("ServerType")]
             [Validation(Required=false)]
             public string ServerType { get; set; }
 
             /// <summary>
-            /// The status of the backend server. Valid values:
+            /// <para>The status of the backend server. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Adding</b></description></item>
+            /// <item><description><b>Available</b></description></item>
+            /// <item><description><b>Configuring</b></description></item>
+            /// <item><description><b>Removing</b></description></item>
+            /// </list>
             /// 
-            /// *   **Adding**
-            /// *   **Available**
-            /// *   **Configuring**
-            /// *   **Removing**
+            /// <b>Example:</b>
+            /// <para>Available</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The weight of the backend server. An ECS instance with a higher weight receives more requests.
+            /// <para>The weight of the backend server. An ECS instance with a higher weight receives more requests.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("Weight")]
             [Validation(Required=false)]
@@ -116,7 +156,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class GetListenerAttributeRequest : TeaModel {
         /// <summary>
-        /// The listener ID.
+        /// <para>The listener ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lsr-bp1bpn0kn908w4nbw****</para>
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]

@@ -10,64 +10,87 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
+        /// <item><description>If a value is returned for <b>NextToken</b>, the value is the token that determines the start point of the next query.</description></item>
+        /// </list>
         /// 
-        /// *   If **NextToken** is empty, no next page exists.
-        /// *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The tags that match the specified keys and values.
+        /// <para>The tags that match the specified keys and values.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// The resource ID.
+            /// <para>The resource ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>d-2ze1ot4ah7xjyv0d****</para>
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The type of the resource. Valid values:
+            /// <para>The type of the resource. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>acl</b>: an ACL</description></item>
+            /// <item><description><b>loadbalancer</b>: an ALB instance</description></item>
+            /// <item><description><b>securitypolicy</b>: a security policy</description></item>
+            /// <item><description><b>servergroup</b>: a server group</description></item>
+            /// </list>
             /// 
-            /// *   **acl**: an ACL
-            /// *   **loadbalancer**: an ALB instance
-            /// *   **securitypolicy**: a security policy
-            /// *   **servergroup**: a server group
+            /// <b>Example:</b>
+            /// <para>loadbalancer</para>
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>env</para>
             /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>product</para>
             /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]

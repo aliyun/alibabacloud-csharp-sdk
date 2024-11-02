@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class GetLoadBalancerAttributeRequest : TeaModel {
         /// <summary>
-        /// The ALB instance ID.
+        /// <para>The ALB instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>alb-o9ulmq5hgn68jk****</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]

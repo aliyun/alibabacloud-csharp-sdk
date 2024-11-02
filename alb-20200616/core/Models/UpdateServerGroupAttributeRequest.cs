@@ -10,41 +10,55 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class UpdateServerGroupAttributeRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// > If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
+        /// <b>Example:</b>
+        /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The configurations of connection draining.
-        /// 
-        /// After connection draining is enabled, ALB maintains data transmission for a period of time after the backend server is removed or declared unhealthy.
-        /// 
-        /// > *   By default, connection draining is disabled. To enable connection draining, contact your account manager.
-        /// >*   Basic ALB instances do not support connection draining. Standard and WAF-enabled ALB instances support connection draining.
-        /// >*   Server groups of the instance and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.
+        /// <para>The configurations of connection draining.</para>
+        /// <para>After connection draining is enabled, SLB remains data transmission for a period of time after a backend server is removed or declared unhealthy.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>Basic SLB instances do not support connection draining. Standard and WAF-enabled SLB instances support connection draining.</para>
+        /// </description></item>
+        /// <item><description><para>Server groups of the server and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.</para>
+        /// </description></item>
+        /// </list>
         /// </summary>
         [NameInMap("ConnectionDrainConfig")]
         [Validation(Required=false)]
         public UpdateServerGroupAttributeRequestConnectionDrainConfig ConnectionDrainConfig { get; set; }
         public class UpdateServerGroupAttributeRequestConnectionDrainConfig : TeaModel {
             /// <summary>
-            /// Indicates whether connection draining is enabled. Valid values:
+            /// <para>Specifies whether to enable connection draining. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("ConnectionDrainEnabled")]
             [Validation(Required=false)]
             public bool? ConnectionDrainEnabled { get; set; }
 
             /// <summary>
-            /// The timeout period of connection draining.
+            /// <para>The timeout period of connection draining.</para>
+            /// <para>Valid values: <b>0</b> to <b>900</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>300</para>
             /// </summary>
             [NameInMap("ConnectionDrainTimeout")]
             [Validation(Required=false)]
@@ -53,154 +67,192 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: checks the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <c>2xx</c> HTTP status code is returned and the operation is performed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: checks the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a `2xx` HTTP status code is returned and the operation is performed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The configuration of health checks.
+        /// <para>The configuration of health checks.</para>
         /// </summary>
         [NameInMap("HealthCheckConfig")]
         [Validation(Required=false)]
         public UpdateServerGroupAttributeRequestHealthCheckConfig HealthCheckConfig { get; set; }
         public class UpdateServerGroupAttributeRequestHealthCheckConfig : TeaModel {
             /// <summary>
-            /// The HTTP status codes that indicate healthy backend servers.
+            /// <para>The HTTP status codes that indicate healthy backend servers.</para>
             /// </summary>
             [NameInMap("HealthCheckCodes")]
             [Validation(Required=false)]
             public List<string> HealthCheckCodes { get; set; }
 
             /// <summary>
-            /// The backend port that is used for health checks.
+            /// <para>The backend port that is used for health checks.</para>
+            /// <para>Valid values: <b>0</b> to <b>65535</b>.</para>
+            /// <para>If you set the value to <b>0</b>, the backend port is used for health checks.</para>
+            /// <remarks>
+            /// <para> This parameter takes effect only if you set <b>HealthCheckEnabled</b> to <b>true</b>.</para>
+            /// </remarks>
             /// 
-            /// Valid values: **0** to **65535**.
-            /// 
-            /// If you set the value to **0**, the backend port is used for health checks.
-            /// 
-            /// >  This parameter takes effect only if you set **HealthCheckEnabled** to **true**.
+            /// <b>Example:</b>
+            /// <para>80</para>
             /// </summary>
             [NameInMap("HealthCheckConnectPort")]
             [Validation(Required=false)]
             public int? HealthCheckConnectPort { get; set; }
 
             /// <summary>
-            /// Specifies whether to enable the health check feature. Valid values:
+            /// <para>Specifies whether to enable the health check feature. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("HealthCheckEnabled")]
             [Validation(Required=false)]
             public bool? HealthCheckEnabled { get; set; }
 
             /// <summary>
-            /// The domain name that is used for health checks. The domain name must meet the following requirements:
+            /// <para>The domain name that is used for health checks. The domain name must meet the following requirements:</para>
+            /// <list type="bullet">
+            /// <item><description>The domain name must be 1 to 80 characters in length.</description></item>
+            /// <item><description>The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).</description></item>
+            /// <item><description>The domain name must contain at least one period (.) but cannot start or end with a period (.).</description></item>
+            /// <item><description>The rightmost field of the domain name can contain only letters and cannot contain digits or hyphens (-).</description></item>
+            /// <item><description>Other fields cannot start or end with a hyphen (-).</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> This parameter takes effect only if you set <b>HealthCheckEnabled</b> to true and <b>HealthCheckProtocol</b> to <b>HTTP</b> or <b>HTTPS</b>.</para>
+            /// </remarks>
             /// 
-            /// *   The domain name must be 1 to 80 characters in length.
-            /// *   The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).
-            /// *   The domain name must contain at least one period (.) but cannot start or end with a period (.).
-            /// *   The rightmost field of the domain name can contain only letters and cannot contain digits or hyphens (-).
-            /// *   Other fields cannot start or end with a hyphen (-).
-            /// 
-            /// >  This parameter takes effect only if you set **HealthCheckEnabled** to true and **HealthCheckProtocol** to **HTTP** or **HTTPS**.
+            /// <b>Example:</b>
+            /// <para>example.com</para>
             /// </summary>
             [NameInMap("HealthCheckHost")]
             [Validation(Required=false)]
             public string HealthCheckHost { get; set; }
 
             /// <summary>
-            /// The HTTP version for health checks. Valid values:
+            /// <para>The HTTP version that is used for health checks. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>HTTP1.0</b></description></item>
+            /// <item><description><b>HTTP1.1</b></description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> This parameter takes effect only if you set <b>HealthCheckEnabled</b> to true and <b>HealthCheckProtocol</b> to <b>HTTP</b> or <b>HTTPS</b>.</para>
+            /// </remarks>
             /// 
-            /// *   **HTTP1.0**
-            /// *   **HTTP1.1**
-            /// 
-            /// >  This parameter takes effect only if you set **HealthCheckEnabled** to true and **HealthCheckProtocol** to **HTTP** or **HTTPS**.
+            /// <b>Example:</b>
+            /// <para>HTTP1.1</para>
             /// </summary>
             [NameInMap("HealthCheckHttpVersion")]
             [Validation(Required=false)]
             public string HealthCheckHttpVersion { get; set; }
 
             /// <summary>
-            /// The interval at which health checks are performed. Unit: seconds.
+            /// <para>The interval at which health checks are performed. Unit: seconds.</para>
+            /// <para>Valid values: <b>1</b> to <b>50</b>.</para>
+            /// <remarks>
+            /// <para> This parameter takes effect only if you set <b>HealthCheckEnabled</b> to <b>true</b>.</para>
+            /// </remarks>
             /// 
-            /// Valid values: **1** to **50**.
-            /// 
-            /// >  This parameter takes effect only if you set **HealthCheckEnabled** to **true**.
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("HealthCheckInterval")]
             [Validation(Required=false)]
             public int? HealthCheckInterval { get; set; }
 
             /// <summary>
-            /// The HTTP method that is used for health checks. Valid values:
+            /// <para>The HTTP method that is used for health checks. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>GET</b>: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</description></item>
+            /// <item><description><b>POST</b>: gRPC health checks use the POST method by default.</description></item>
+            /// <item><description><b>HEAD</b>: HTTP and HTTPS health checks use the HEAD method by default.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> This parameter takes effect only if you set <b>HealthCheckEnabled</b> to true and <b>HealthCheckProtocol</b> to <b>HTTP</b>, <b>HTTPS</b>, or <b>gRPC</b>.</para>
+            /// </remarks>
             /// 
-            /// *   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.
-            /// *   **POST**: gRPC health checks use the POST method by default.
-            /// *   **HEAD**: HTTP and HTTPS health checks use the HEAD method by default.
-            /// 
-            /// >  This parameter takes effect only if you set **HealthCheckEnabled** to true and **HealthCheckProtocol** to **HTTP**, **HTTPS**, or **gRPC**.
+            /// <b>Example:</b>
+            /// <para>HEAD</para>
             /// </summary>
             [NameInMap("HealthCheckMethod")]
             [Validation(Required=false)]
             public string HealthCheckMethod { get; set; }
 
             /// <summary>
-            /// The URL that is used for health checks.
+            /// <para>The URL that is used for health checks.</para>
+            /// <para>The URL must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <c>- / . % ? # &amp; =</c>. It can also contain the following extended characters: <c>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</c>. The URL must start with a forward slash (<c>/</c>).</para>
+            /// <remarks>
+            /// <para> This parameter takes effect only if you set <b>HealthCheckEnabled</b> to <b>true</b> and <b>HealthCheckProtocol</b> to <b>HTTP</b> or <b>HTTPS</b>.</para>
+            /// </remarks>
             /// 
-            /// The URL must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: `- / . % ? # & =`. It can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \\" , +`. The URL must start with a forward slash (`/`).
-            /// 
-            /// >  This parameter takes effect only if you set **HealthCheckEnabled** to **true** and **HealthCheckProtocol** to **HTTP** or **HTTPS**.
+            /// <b>Example:</b>
+            /// <para>/test/index.html</para>
             /// </summary>
             [NameInMap("HealthCheckPath")]
             [Validation(Required=false)]
             public string HealthCheckPath { get; set; }
 
             /// <summary>
-            /// The protocol that is used for health checks. Valid values:
+            /// <para>The protocol that you want to use for health checks. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>HTTP</b>: HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.</description></item>
+            /// <item><description><b>HTTPS</b>: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS supports encryption and provides higher security than HTTP.</description></item>
+            /// <item><description><b>TCP</b>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</description></item>
+            /// <item><description><b>gRPC</b>: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.</description></item>
+            /// </list>
             /// 
-            /// *   **HTTP**: HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.
-            /// *   **HTTPS**: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS supports encryption and provides higher security than HTTP.
-            /// *   **TCP**: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.
-            /// *   **gRPC**: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.
+            /// <b>Example:</b>
+            /// <para>HTTP</para>
             /// </summary>
             [NameInMap("HealthCheckProtocol")]
             [Validation(Required=false)]
             public string HealthCheckProtocol { get; set; }
 
             /// <summary>
-            /// The timeout period of a health check response. If a backend ECS instance does not respond within the specified timeout period, the ECS instance fails the health check. Unit: seconds.
+            /// <para>The timeout period of a health check response. If a backend ECS instance does not respond within the specified timeout period, the ECS instance fails the health check. Unit: seconds.</para>
+            /// <para>Valid values: <b>1</b> to <b>300</b>.</para>
+            /// <remarks>
+            /// <para> This parameter takes effect only if you set <b>HealthCheckEnabled</b> to <b>true</b>.</para>
+            /// </remarks>
             /// 
-            /// Valid values: **1** to **300**.
-            /// 
-            /// > 
-            /// 
-            /// *   If the value of **HealthCHeckTimeout** is smaller than the value of **HealthCheckInterval**, **HealthCHeckTimeout** becomes invalid. The timeout period is specified by the value of **HealthCheckInterval**.
-            /// 
-            /// *   This parameter takes effect only if you set **HealthCheckEnabled** to **true**.
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("HealthCheckTimeout")]
             [Validation(Required=false)]
             public int? HealthCheckTimeout { get; set; }
 
             /// <summary>
-            /// The number of times that an unhealthy backend server must consecutively pass health checks before it can be declared healthy. In this case, the health check status of the backend server changes from **fail** to **success**.
+            /// <para>The number of times that an unhealthy backend server must consecutively pass health checks before it can be declared healthy. In this case, the health check status of the backend server changes from <b>fail</b> to <b>success</b>.</para>
+            /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
             /// 
-            /// Valid values: **2** to **10**.
+            /// <b>Example:</b>
+            /// <para>4</para>
             /// </summary>
             [NameInMap("HealthyThreshold")]
             [Validation(Required=false)]
             public int? HealthyThreshold { get; set; }
 
             /// <summary>
-            /// The number of times that a healthy backend server must consecutively fail health checks before it can be declared unhealthy. In this case, the health check status of the backend server changes from **success** to **fail**.
+            /// <para>The number of times that a healthy backend server must consecutively fail health checks before it can be declared unhealthy. In this case, the health check status of the backend server changes from <b>success</b> to <b>fail</b>.</para>
+            /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
             /// 
-            /// Valid values: **2** to **10**.
+            /// <b>Example:</b>
+            /// <para>4</para>
             /// </summary>
             [NameInMap("UnhealthyThreshold")]
             [Validation(Required=false)]
@@ -209,66 +261,86 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// The scheduling algorithm. Valid values:
+        /// <para>The scheduling algorithm. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Wrr</b>: the weighted round robin algorithm. Backend servers that have higher weights receive more requests than those that have lower weights.</description></item>
+        /// <item><description><b>Wlc</b>: the weighted least connections algorithm. Requests are distributed based on the weights and the number of connections to backend servers. If two backend servers have the same weight, the backend server that has fewer connections is expected to receive more requests.</description></item>
+        /// <item><description><b>Sch</b>: the consistent hashing algorithm. Requests from the same source IP address are distributed to the same backend server.</description></item>
+        /// </list>
         /// 
-        /// *   **Wrr**: the weighted round robin algorithm. Backend servers that have higher weights receive more requests than those that have lower weights.
-        /// *   **Wlc**: the weighted least connections algorithm. Requests are distributed based on the weights and the number of connections to backend servers. If two backend servers have the same weight, the backend server that has fewer connections is expected to receive more requests.
-        /// *   **Sch**: the consistent hashing algorithm. Requests from the same source IP address are distributed to the same backend server.
+        /// <b>Example:</b>
+        /// <para>Wrr</para>
         /// </summary>
         [NameInMap("Scheduler")]
         [Validation(Required=false)]
         public string Scheduler { get; set; }
 
         /// <summary>
-        /// The server group ID.
+        /// <para>The server group ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sgp-atstuj3rtop****</para>
         /// </summary>
         [NameInMap("ServerGroupId")]
         [Validation(Required=false)]
         public string ServerGroupId { get; set; }
 
         /// <summary>
-        /// The server group name.
+        /// <para>The server group name.</para>
+        /// <para>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</para>
         /// 
-        /// The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("ServerGroupName")]
         [Validation(Required=false)]
         public string ServerGroupName { get; set; }
 
         /// <summary>
-        /// This parameter is available only if the ALB Ingress controller is used. In this case, set this parameter to the name of the `Kubernetes Service` that is associated with the server group.
+        /// <para>This parameter is available only if the ALB Ingress controller is used. In this case, set this parameter to the name of the <c>Kubernetes Service</c> that is associated with the server group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test2</para>
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// The configurations of slow starts.
-        /// 
-        /// After slow starts are enabled, ALB prefetches data to newly added backend servers. Requests distributed to the backend servers gradually increase.
-        /// 
-        /// > *   Basic ALB instances do not support slow starts. Standard and WAF-enabled ALB instances support slow starts.
-        /// >*   Server groups of the instance and IP types support slow starts. Server groups of the Function Compute type do not support slow starts.
-        /// >*   Slow start is supported only by the weighted round-robin scheduling algorithm.
+        /// <para>The configurations of slow starts.</para>
+        /// <para>After slow starts are enabled, ALB prefetches data to newly added backend servers. Requests distributed to the backend servers gradually increase.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Basic ALB instances do not support slow starts. Standard and WAF-enabled ALB instances support slow starts.</description></item>
+        /// <item><description>Server groups of the instance and IP types support slow starts. Server groups of the Function Compute type do not support slow starts.</description></item>
+        /// <item><description>Slow start is supported only by the weighted round-robin scheduling algorithm.</description></item>
+        /// </list>
+        /// </remarks>
         /// </summary>
         [NameInMap("SlowStartConfig")]
         [Validation(Required=false)]
         public UpdateServerGroupAttributeRequestSlowStartConfig SlowStartConfig { get; set; }
         public class UpdateServerGroupAttributeRequestSlowStartConfig : TeaModel {
             /// <summary>
-            /// The duration of a slow start.
+            /// <para>The duration of a slow start.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30</para>
             /// </summary>
             [NameInMap("SlowStartDuration")]
             [Validation(Required=false)]
             public int? SlowStartDuration { get; set; }
 
             /// <summary>
-            /// Indicates whether slow starts are enabled. Valid values:
+            /// <para>Indicates whether slow starts are enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("SlowStartEnabled")]
             [Validation(Required=false)]
@@ -277,56 +349,70 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// The configuration of session persistence.
+        /// <para>The configuration of session persistence.</para>
         /// </summary>
         [NameInMap("StickySessionConfig")]
         [Validation(Required=false)]
         public UpdateServerGroupAttributeRequestStickySessionConfig StickySessionConfig { get; set; }
         public class UpdateServerGroupAttributeRequestStickySessionConfig : TeaModel {
             /// <summary>
-            /// The cookie to be configured on the server.
+            /// <para>The cookie to be configured on the server.</para>
+            /// <para>The cookie must be 1 to 200 characters in length and can contain only ASCII characters and digits. It cannot contain commas (,), semicolons (;), or space characters. It cannot start with a dollar sign ($).</para>
+            /// <remarks>
+            /// <para>This parameter takes effect when the <b>StickySessionEnabled</b> parameter is set to <b>true</b> and the <b>StickySessionType</b> parameter is set to <b>Server</b>.</para>
+            /// </remarks>
             /// 
-            /// The cookie must be 1 to 200 characters in length and can contain only ASCII characters and digits. It cannot contain commas (,), semicolons (;), or space characters. It cannot start with a dollar sign ($).
-            /// 
-            /// > This parameter takes effect when the **StickySessionEnabled** parameter is set to **true** and the **StickySessionType** parameter is set to **Server**.
+            /// <b>Example:</b>
+            /// <para>B490B5EBF6F3CD402E515D22BCDA1598</para>
             /// </summary>
             [NameInMap("Cookie")]
             [Validation(Required=false)]
             public string Cookie { get; set; }
 
             /// <summary>
-            /// The timeout period of a cookie. Unit: seconds.
+            /// <para>The timeout period of a cookie. Unit: seconds.</para>
+            /// <para>Valid values: <b>1</b> to <b>86400</b>.</para>
+            /// <remarks>
+            /// <para>This parameter takes effect when the <b>StickySessionEnabled</b> parameter is set to <b>true</b> and the <b>StickySessionType</b> parameter is set to <b>Insert</b>.</para>
+            /// </remarks>
             /// 
-            /// Valid values: **1** to **86400**.
-            /// 
-            /// > This parameter takes effect when the **StickySessionEnabled** parameter is set to **true** and the **StickySessionType** parameter is set to **Insert**.
+            /// <b>Example:</b>
+            /// <para>1000</para>
             /// </summary>
             [NameInMap("CookieTimeout")]
             [Validation(Required=false)]
             public int? CookieTimeout { get; set; }
 
             /// <summary>
-            /// Specifies whether to enable session persistence. Valid values:
+            /// <para>Specifies whether to enable session persistence. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b> (default)</description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false** (default)
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("StickySessionEnabled")]
             [Validation(Required=false)]
             public bool? StickySessionEnabled { get; set; }
 
             /// <summary>
-            /// The method that is used to handle a cookie. Valid values:
+            /// <para>The method that is used to handle a cookie. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Insert</b>: inserts a cookie.</description></item>
+            /// </list>
+            /// <para>ALB inserts a cookie (SERVERID) into the first HTTP or HTTPS response packet that is sent to a client. The next request from the client contains this cookie and the listener forwards this request to the recorded backend server.</para>
+            /// <list type="bullet">
+            /// <item><description><b>Server</b>: rewrites a cookie.</description></item>
+            /// </list>
+            /// <para>When ALB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. Subsequent requests to ALB carry this user-defined cookie, and ALB determines the destination servers of the requests based on the cookies.</para>
+            /// <remarks>
+            /// <para>This parameter takes effect when the <b>StickySessionEnabled</b> parameter is set to <b>true</b> for the server group.</para>
+            /// </remarks>
             /// 
-            /// *   **Insert**: inserts a cookie.
-            /// 
-            /// ALB inserts a cookie (SERVERID) into the first HTTP or HTTPS response packet that is sent to a client. The next request from the client contains this cookie and the listener forwards this request to the recorded backend server.
-            /// 
-            /// *   **Server**: rewrites a cookie.
-            /// 
-            /// When ALB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. Subsequent requests to ALB carry this user-defined cookie, and ALB determines the destination servers of the requests based on the cookies.
-            /// 
-            /// > This parameter takes effect when the **StickySessionEnabled** parameter is set to **true** for the server group.
+            /// <b>Example:</b>
+            /// <para>Insert</para>
             /// </summary>
             [NameInMap("StickySessionType")]
             [Validation(Required=false)]
@@ -335,25 +421,29 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// The configurations of consistent hashing based on URLs.
+        /// <para>The configurations of consistent hashing based on URLs.</para>
         /// </summary>
         [NameInMap("UchConfig")]
         [Validation(Required=false)]
         public UpdateServerGroupAttributeRequestUchConfig UchConfig { get; set; }
         public class UpdateServerGroupAttributeRequestUchConfig : TeaModel {
             /// <summary>
-            /// The type of the parameter. Only query strings are supported.
+            /// <para>The type of the parameter. Only query strings are supported.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>QueryString</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The value of the parameter used for consistent hashing.
+            /// <para>The value of the parameter used for consistent hashing.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>abc</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -362,7 +452,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// Specifies whether to enable persistent TCP connections.
+        /// <para>Specifies whether to enable persistent TCP connections.</para>
         /// </summary>
         [NameInMap("UpstreamKeepaliveEnabled")]
         [Validation(Required=false)]
