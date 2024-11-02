@@ -8,17 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.LinkedmallRetrieval20240501.Models
 {
-    public class AISearchRequest : TeaModel {
-        [NameInMap("card")]
+    public class SearchInformation : TeaModel {
+        [NameInMap("searchTime")]
         [Validation(Required=false)]
-        public string Card { get; set; }
+        public long? SearchTime { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("query")]
+        [NameInMap("total")]
         [Validation(Required=false)]
-        public string Query { get; set; }
+        public long? Total { get; set; }
 
     }
 

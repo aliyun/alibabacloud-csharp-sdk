@@ -37,120 +37,24 @@ namespace AlibabaCloud.SDK.LinkedmallRetrieval20240501
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary AI搜索
-         *
-         * @param request AISearchRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AISearchResponse
-         */
-        public AISearchResponse AISearchWithOptions(AISearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Card))
-            {
-                query["card"] = request.Card;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
-            {
-                query["query"] = request.Query;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "AISearch",
-                Version = "2024-05-01",
-                Protocol = "HTTPS",
-                Pathname = "/linked-retrieval/linked-retrieval-entry/v1/linkedRetrieval/commands/aiSearch",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<AISearchResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary AI搜索
-         *
-         * @param request AISearchRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AISearchResponse
-         */
-        public async Task<AISearchResponse> AISearchWithOptionsAsync(AISearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Card))
-            {
-                query["card"] = request.Card;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
-            {
-                query["query"] = request.Query;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "AISearch",
-                Version = "2024-05-01",
-                Protocol = "HTTPS",
-                Pathname = "/linked-retrieval/linked-retrieval-entry/v1/linkedRetrieval/commands/aiSearch",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<AISearchResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary AI搜索
-         *
-         * @param request AISearchRequest
-         * @return AISearchResponse
-         */
-        public AISearchResponse AISearch(AISearchRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return AISearchWithOptions(request, headers, runtime);
-        }
-
-        /**
-         * @summary AI搜索
-         *
-         * @param request AISearchRequest
-         * @return AISearchResponse
-         */
-        public async Task<AISearchResponse> AISearchAsync(AISearchRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await AISearchWithOptionsAsync(request, headers, runtime);
-        }
-
-        /**
-         * @summary 提供通用检索与检索后处理的多阶段优化结果，为开放域QA提供信源
-         *
-         * @param request AISearchV2Request
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AISearchV2Response
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提供通用检索与检索后处理的多阶段优化结果，为开放域QA提供信源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchV2Request
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchV2Response
+        /// </returns>
         public AISearchV2Response AISearchV2WithOptions(AISearchV2Request request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -187,14 +91,24 @@ namespace AlibabaCloud.SDK.LinkedmallRetrieval20240501
             return TeaModel.ToObject<AISearchV2Response>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 提供通用检索与检索后处理的多阶段优化结果，为开放域QA提供信源
-         *
-         * @param request AISearchV2Request
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AISearchV2Response
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提供通用检索与检索后处理的多阶段优化结果，为开放域QA提供信源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchV2Request
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchV2Response
+        /// </returns>
         public async Task<AISearchV2Response> AISearchV2WithOptionsAsync(AISearchV2Request request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -231,12 +145,18 @@ namespace AlibabaCloud.SDK.LinkedmallRetrieval20240501
             return TeaModel.ToObject<AISearchV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 提供通用检索与检索后处理的多阶段优化结果，为开放域QA提供信源
-         *
-         * @param request AISearchV2Request
-         * @return AISearchV2Response
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提供通用检索与检索后处理的多阶段优化结果，为开放域QA提供信源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchV2Response
+        /// </returns>
         public AISearchV2Response AISearchV2(AISearchV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -244,17 +164,161 @@ namespace AlibabaCloud.SDK.LinkedmallRetrieval20240501
             return AISearchV2WithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 提供通用检索与检索后处理的多阶段优化结果，为开放域QA提供信源
-         *
-         * @param request AISearchV2Request
-         * @return AISearchV2Response
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提供通用检索与检索后处理的多阶段优化结果，为开放域QA提供信源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchV2Response
+        /// </returns>
         public async Task<AISearchV2Response> AISearchV2Async(AISearchV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await AISearchV2WithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenericSearchRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenericSearchResponse
+        /// </returns>
+        public GenericSearchResponse GenericSearchWithOptions(GenericSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRange))
+            {
+                query["timeRange"] = request.TimeRange;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenericSearch",
+                Version = "2024-05-01",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-entry/v2/linkedRetrieval/commands/genericSearch",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenericSearchResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenericSearchRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenericSearchResponse
+        /// </returns>
+        public async Task<GenericSearchResponse> GenericSearchWithOptionsAsync(GenericSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRange))
+            {
+                query["timeRange"] = request.TimeRange;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenericSearch",
+                Version = "2024-05-01",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-entry/v2/linkedRetrieval/commands/genericSearch",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenericSearchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenericSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenericSearchResponse
+        /// </returns>
+        public GenericSearchResponse GenericSearch(GenericSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GenericSearchWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenericSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenericSearchResponse
+        /// </returns>
+        public async Task<GenericSearchResponse> GenericSearchAsync(GenericSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GenericSearchWithOptionsAsync(request, headers, runtime);
         }
 
     }

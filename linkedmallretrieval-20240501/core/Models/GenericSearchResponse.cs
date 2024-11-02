@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.LinkedmallRetrieval20240501.Models
 {
-    public class AISearchResponse : TeaModel {
+    public class GenericSearchResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.LinkedmallRetrieval20240501.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public AISearchResponseBody Body { get; set; }
+        public GenericSearchResult Body { get; set; }
 
     }
 
