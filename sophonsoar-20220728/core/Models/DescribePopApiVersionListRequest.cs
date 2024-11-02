@@ -10,30 +10,39 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribePopApiVersionListRequest : TeaModel {
         /// <summary>
-        /// The environment in which the API operation parameters are used. Set the value to **online**.
+        /// <para>The environment in which the API operation parameters are used. Set the value to <b>online</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>online</para>
         /// </summary>
         [NameInMap("Env")]
         [Validation(Required=false)]
         public string Env { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh** (default): Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The POP code of the Alibaba Cloud service.
+        /// <para>The POP code of the Alibaba Cloud service.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeApiList~~">DescribeApiList</a> operation to query the POP code.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeApiList](~~DescribeApiList~~) operation to query the POP code.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Sas</para>
         /// </summary>
         [NameInMap("PopCode")]
         [Validation(Required=false)]

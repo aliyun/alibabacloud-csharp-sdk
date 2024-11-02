@@ -10,57 +10,77 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribePopApiResponseBody : TeaModel {
         /// <summary>
-        /// The name of the API.
+        /// <para>The name of the API.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AddAssetCleanConfig</para>
         /// </summary>
         [NameInMap("ApiName")]
         [Validation(Required=false)]
         public string ApiName { get; set; }
 
         /// <summary>
-        /// The information about the API.
+        /// <para>The information about the API.</para>
         /// </summary>
         [NameInMap("OpenApiMetaList")]
         [Validation(Required=false)]
         public List<DescribePopApiResponseBodyOpenApiMetaList> OpenApiMetaList { get; set; }
         public class DescribePopApiResponseBodyOpenApiMetaList : TeaModel {
             /// <summary>
-            /// The parameter description.
+            /// <para>The parameter description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>demo parameter</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The example value.
+            /// <para>The example value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>12.xx.xx.xx</para>
             /// </summary>
             [NameInMap("ExampleValue")]
             [Validation(Required=false)]
             public string ExampleValue { get; set; }
 
             /// <summary>
-            /// The parameter name.
+            /// <para>The parameter name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>DescribePopApi</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// Indicates whether the parameter is required.
+            /// <para>Indicates whether the parameter is required.</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
             /// 
-            /// *   true
-            /// *   false
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Required")]
             [Validation(Required=false)]
             public bool? Required { get; set; }
 
             /// <summary>
-            /// The data type of the parameter field. Valid values:
+            /// <para>The data type of the parameter field. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>string</b></description></item>
+            /// <item><description><b>boolean</b></description></item>
+            /// <item><description><b>integer</b></description></item>
+            /// <item><description><b>long</b></description></item>
+            /// </list>
             /// 
-            /// *   **string**
-            /// *   **boolean**
-            /// *   **integer**
-            /// *   **long**
+            /// <b>Example:</b>
+            /// <para>string</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -69,21 +89,30 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// The POP code of the Alibaba Cloud service.
+        /// <para>The POP code of the Alibaba Cloud service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sas</para>
         /// </summary>
         [NameInMap("PopCode")]
         [Validation(Required=false)]
         public string PopCode { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1A01B0BA-CFC4-5813-9EB0-A5DA15FA95AE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The version of the API.
+        /// <para>The version of the API.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-09-10</para>
         /// </summary>
         [NameInMap("Version")]
         [Validation(Required=false)]

@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescriberPython3ScriptLogsRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh** (default): Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The UUID that is returned when the Python3 script is run.
+        /// <para>The UUID that is returned when the Python3 script is run.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~RunPython3Script~~">RunPython3Script</a> operation to query the UUID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [RunPython3Script](~~RunPython3Script~~) operation to query the UUID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>69edc2b4-c95c-424f-9114-xxxxxxx</para>
         /// </summary>
         [NameInMap("RequestUuid")]
         [Validation(Required=false)]

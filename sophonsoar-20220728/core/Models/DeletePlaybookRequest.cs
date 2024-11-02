@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DeletePlaybookRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese (default)</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese (default)
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The UUID of the playbook.
+        /// <para>The UUID of the playbook.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>e99dab31-499b-4307-9248-xxxxxx</para>
         /// </summary>
         [NameInMap("PlaybookUuid")]
         [Validation(Required=false)]

@@ -10,41 +10,53 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeSoarRecordActionOutputListRequest : TeaModel {
         /// <summary>
-        /// The UUID of the component action.
+        /// <para>The UUID of the component action.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeSoarTaskAndActions~~">DescribeSoarTaskAndActions</a> operation to query the UUID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeSoarTaskAndActions](~~DescribeSoarTaskAndActions~~) operation to query the UUID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2202c90d-fa93-4726-bc32-xxxxxx</para>
         /// </summary>
         [NameInMap("ActionUuid")]
         [Validation(Required=false)]
         public string ActionUuid { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The page number. Default value: 1. Pages start from page 1.
+        /// <para>The page number. Default value: 1. Pages start from page 1.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 10. If you leave this parameter empty, 10 entries are returned on each page.
+        /// <para>The number of entries per page. Default value: 10. If you leave this parameter empty, 10 entries are returned on each page.</para>
+        /// <remarks>
+        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  We recommend that you do not leave this parameter empty.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

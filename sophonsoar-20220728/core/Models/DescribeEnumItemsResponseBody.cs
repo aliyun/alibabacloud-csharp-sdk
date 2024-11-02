@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeEnumItemsResponseBody : TeaModel {
         /// <summary>
-        /// The information about the enumeration item.
+        /// <para>The information about the enumeration item.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeEnumItemsResponseBodyData> Data { get; set; }
         public class DescribeEnumItemsResponseBodyData : TeaModel {
             /// <summary>
-            /// The key of the enumeration item.
+            /// <para>The key of the enumeration item.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>system_xxxxx_process_book</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the enumeration item.
+            /// <para>The value of the enumeration item.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>system_xxxxx_process_book</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E7698CFB-4E1C-5840-8EC9-691B86729E94</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

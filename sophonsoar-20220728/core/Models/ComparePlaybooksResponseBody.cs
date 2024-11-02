@@ -10,31 +10,41 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class ComparePlaybooksResponseBody : TeaModel {
         /// <summary>
-        /// The comparison result.
+        /// <para>The comparison result.</para>
         /// </summary>
         [NameInMap("CompareResult")]
         [Validation(Required=false)]
         public ComparePlaybooksResponseBodyCompareResult CompareResult { get; set; }
         public class ComparePlaybooksResponseBodyCompareResult : TeaModel {
             /// <summary>
-            /// The description of the comparison result.
+            /// <para>The description of the comparison result.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The first version adds one node compared to the second version</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// Indicates whether the second version provides more information than the first version. Valid values:
+            /// <para>Indicates whether the second version provides more information than the first version. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("New")]
             [Validation(Required=false)]
             public bool? New { get; set; }
 
             /// <summary>
-            /// Indicates whether the configurations of the two versions are the same. Valid values: **true** and **false**.
+            /// <para>Indicates whether the configurations of the two versions are the same. Valid values: <b>true</b> and <b>false</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Same")]
             [Validation(Required=false)]
@@ -43,7 +53,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2EC05B06-BF3C-5F3E-8FE8-3B1FAD76087A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

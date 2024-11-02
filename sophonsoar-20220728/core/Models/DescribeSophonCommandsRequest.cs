@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeSophonCommandsRequest : TeaModel {
         /// <summary>
-        /// The name of the command. Fuzzy match is supported.
+        /// <para>The name of the command. Fuzzy match is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>waf_process</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

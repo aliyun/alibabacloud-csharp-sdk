@@ -10,49 +10,69 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeExecutePlaybooksRequest : TeaModel {
         /// <summary>
-        /// The entity type of the script input parameter. When you want to query multiple entity types, separate them with commas.
-        /// - **ip**: IP entity.
-        /// - **file**: file entity.
-        /// - **process**: process entity.
-        /// - **incident**: incident entity.
+        /// <para>The entity type of the script input parameter. When you want to query multiple entity types, separate them with commas.</para>
+        /// <list type="bullet">
+        /// <item><description><b>ip</b>: IP entity.</description></item>
+        /// <item><description><b>file</b>: file entity.</description></item>
+        /// <item><description><b>process</b>: process entity.</description></item>
+        /// <item><description><b>incident</b>: incident entity.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ip,file,process,host</para>
         /// </summary>
         [NameInMap("InputMode")]
         [Validation(Required=false)]
         public string InputMode { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and the response. Valid values:
+        /// <para>The language of the content within the request and the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese (default)</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese (default)
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The input parameter type of the playbook.
+        /// <para>The input parameter type of the playbook.</para>
+        /// <list type="bullet">
+        /// <item><description><b>template-ip</b></description></item>
+        /// <item><description><b>template-file</b></description></item>
+        /// <item><description><b>template-process</b></description></item>
+        /// <item><description><b>custom</b></description></item>
+        /// </list>
         /// 
-        /// *   **template-ip**
-        /// *   **template-file**
-        /// *   **template-process**
-        /// *   **custom**
+        /// <b>Example:</b>
+        /// <para>custom</para>
         /// </summary>
         [NameInMap("ParamType")]
         [Validation(Required=false)]
         public string ParamType { get; set; }
 
         /// <summary>
-        /// The playbook name. Fuzzy search is supported.
+        /// <para>The playbook name. Fuzzy search is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demo_test</para>
         /// </summary>
         [NameInMap("PlaybookName")]
         [Validation(Required=false)]
         public string PlaybookName { get; set; }
 
         /// <summary>
-        /// The playbook UUID.
+        /// <para>The playbook UUID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.
+        /// <b>Example:</b>
+        /// <para>f916b93e-e814-459f-9662-xxxxxx</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

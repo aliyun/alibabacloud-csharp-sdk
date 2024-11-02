@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeFieldRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese (default)</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese (default)
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The key of the global configuration. Valid values:
+        /// <para>The key of the global configuration. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>soar_filed_tags</b>: queries the input template of the playbook.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **soar_filed_tags**: queries the input template of the playbook.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>soar_filed_tags</para>
         /// </summary>
         [NameInMap("QueryKey")]
         [Validation(Required=false)]

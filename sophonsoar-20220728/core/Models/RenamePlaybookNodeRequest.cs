@@ -10,39 +10,50 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class RenamePlaybookNodeRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and the response. Valid values:
+        /// <para>The language of the content within the request and the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh** (default): Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The new name of the node.
+        /// <para>The new name of the node.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>waf_process</para>
         /// </summary>
         [NameInMap("NewNodeName")]
         [Validation(Required=false)]
         public string NewNodeName { get; set; }
 
         /// <summary>
-        /// The original name of the node.
+        /// <para>The original name of the node.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>firewall_process</para>
         /// </summary>
         [NameInMap("OldNodeName")]
         [Validation(Required=false)]
         public string OldNodeName { get; set; }
 
         /// <summary>
-        /// The UUID of the playbook.
+        /// <para>The UUID of the playbook.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the UUIDs of playbooks.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the UUIDs of playbooks.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ac343acc-1a61-4084-9a1c-xxxxxxxx</para>
         /// </summary>
         [NameInMap("PlaybookUuid")]
         [Validation(Required=false)]

@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribePlaybookNumberMetricsResponseBody : TeaModel {
         /// <summary>
-        /// The statistics.
+        /// <para>The statistics.</para>
         /// </summary>
         [NameInMap("Metrics")]
         [Validation(Required=false)]
         public DescribePlaybookNumberMetricsResponseBodyMetrics Metrics { get; set; }
         public class DescribePlaybookNumberMetricsResponseBodyMetrics : TeaModel {
             /// <summary>
-            /// The number of enabled playbooks.
+            /// <para>The number of enabled playbooks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>50</para>
             /// </summary>
             [NameInMap("StartUpNum")]
             [Validation(Required=false)]
             public int? StartUpNum { get; set; }
 
             /// <summary>
-            /// The total number of playbooks.
+            /// <para>The total number of playbooks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("TotalNum")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D4CC979E-3D5B-5A6A-BC87-C93C9E861C7B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

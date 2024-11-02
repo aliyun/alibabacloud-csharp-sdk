@@ -10,30 +10,39 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeNodeParamTagsRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The name of the node.
+        /// <para>The name of the node.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>python3_2</para>
         /// </summary>
         [NameInMap("NodeName")]
         [Validation(Required=false)]
         public string NodeName { get; set; }
 
         /// <summary>
-        /// The playbook UUID.
+        /// <para>The playbook UUID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ac343acc-1a61-4084-9a1c-xxxxxxx</para>
         /// </summary>
         [NameInMap("PlaybookUuid")]
         [Validation(Required=false)]

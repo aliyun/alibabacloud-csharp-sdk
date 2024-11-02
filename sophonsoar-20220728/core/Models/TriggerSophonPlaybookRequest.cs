@@ -10,44 +10,64 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class TriggerSophonPlaybookRequest : TeaModel {
         /// <summary>
-        /// The name of the command that you want to trigger.
+        /// <para>The name of the command that you want to trigger.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeSophonCommands~~">DescribeSophonCommands</a> operation to query the command name.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeSophonCommands](~~DescribeSophonCommands~~) operation to query the command name.
+        /// <b>Example:</b>
+        /// <para>waf_process_command</para>
         /// </summary>
         [NameInMap("CommandName")]
         [Validation(Required=false)]
         public string CommandName { get; set; }
 
         /// <summary>
-        /// The input parameters of the command or playbook that you want to trigger.
+        /// <para>The input parameters of the command or playbook that you want to trigger.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;param1&quot;: &quot;xx.xx.xx.xx&quot;,
+        ///     &quot;param2&quot;: &quot;7d&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("InputParams")]
         [Validation(Required=false)]
         public string InputParams { get; set; }
 
         /// <summary>
-        /// The custom ID. If you do not specify this parameter when the playbook is triggered, a random ID is generated for fault locating and troubleshooting.
+        /// <para>The custom ID. If you do not specify this parameter when the playbook is triggered, a random ID is generated for fault locating and troubleshooting.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>f916b93e-e814-459f-9662-xxxxxxxxxx</para>
         /// </summary>
         [NameInMap("SophonTaskId")]
         [Validation(Required=false)]
         public string SophonTaskId { get; set; }
 
         /// <summary>
-        /// The task type. Valid values:
+        /// <para>The task type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>command</b></description></item>
+        /// <item><description><b>playbook</b></description></item>
+        /// </list>
         /// 
-        /// *   **command**
-        /// *   **playbook**
+        /// <b>Example:</b>
+        /// <para>playbook</para>
         /// </summary>
         [NameInMap("TriggerType")]
         [Validation(Required=false)]
         public string TriggerType { get; set; }
 
         /// <summary>
-        /// The UUID of the playbook.
+        /// <para>The UUID of the playbook.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.
+        /// <b>Example:</b>
+        /// <para>f916b93e-e814-459f-9662-xxxxxxxxxx</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

@@ -10,76 +10,106 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeSoarRecordsRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query. The value is a 13-digit timestamp.
+        /// <para>The end of the time range to query. The value is a 13-digit timestamp.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1683772744953</para>
         /// </summary>
         [NameInMap("EndMillis")]
         [Validation(Required=false)]
         public long? EndMillis { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The page number. Default value: 1. Pages start from page 1.
+        /// <para>The page number. Default value: 1. Pages start from page 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 10. If you do not specify the PageSize parameter, 10 entries are returned by default.
+        /// <para>The number of entries per page. Default value: 10. If you do not specify the PageSize parameter, 10 entries are returned by default.</para>
+        /// <remarks>
+        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// </remarks>
         /// 
-        /// >  We recommend that you do not leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The playbook UUID.
+        /// <para>The playbook UUID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>8f55e76d-b5d5-4720-9cd7-xxxxx</para>
         /// </summary>
         [NameInMap("PlaybookUuid")]
         [Validation(Required=false)]
         public string PlaybookUuid { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. The value is a 13-byte timestamp.
+        /// <para>The beginning of the time range to query. The value is a 13-byte timestamp.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1683526284584</para>
         /// </summary>
         [NameInMap("StartMillis")]
         [Validation(Required=false)]
         public long? StartMillis { get; set; }
 
         /// <summary>
-        /// The status of the task. Valid values:
+        /// <para>The status of the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>success</b></description></item>
+        /// <item><description><b>failed</b></description></item>
+        /// <item><description><b>inprogress</b></description></item>
+        /// </list>
         /// 
-        /// *   **success**
-        /// *   **failed**
-        /// *   **inprogress**
+        /// <b>Example:</b>
+        /// <para>inprogress</para>
         /// </summary>
         [NameInMap("TaskStatus")]
         [Validation(Required=false)]
         public string TaskStatus { get; set; }
 
         /// <summary>
-        /// The MD5 value of the playbook.
+        /// <para>The MD5 value of the playbook.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>be0a4ef084dd174abe478df52xxxxx</para>
         /// </summary>
         [NameInMap("TaskflowMd5")]
         [Validation(Required=false)]
         public string TaskflowMd5 { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account that is used to execute the task.
+        /// <para>The ID of the Alibaba Cloud account that is used to execute the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127xxxx4392</para>
         /// </summary>
         [NameInMap("TriggerUser")]
         [Validation(Required=false)]

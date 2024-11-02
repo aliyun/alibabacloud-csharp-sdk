@@ -10,66 +10,88 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeSophonCommandsResponseBody : TeaModel {
         /// <summary>
-        /// The commands.
+        /// <para>The commands.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeSophonCommandsResponseBodyData> Data { get; set; }
         public class DescribeSophonCommandsResponseBodyData : TeaModel {
             /// <summary>
-            /// The description of the command.
+            /// <para>The description of the command.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>This is a action of processing for WAF</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The display name of the command.
+            /// <para>The display name of the command.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>WAF Process IP</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// The name of the command.
+            /// <para>The name of the command.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>waf_process_ip_v2</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The parameter configurations.
+            /// <para>The parameter configurations.</para>
             /// </summary>
             [NameInMap("ParamConfig")]
             [Validation(Required=false)]
             public List<DescribeSophonCommandsResponseBodyDataParamConfig> ParamConfig { get; set; }
             public class DescribeSophonCommandsResponseBodyDataParamConfig : TeaModel {
                 /// <summary>
-                /// The regular expression that is used to check the format of the parameter value. If the parameter is left empty, the check is not performed.
+                /// <para>The regular expression that is used to check the format of the parameter value. If the parameter is left empty, the check is not performed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[0-9]{4}\.[0-9]{4}\.[0-9]{4}\.[0-9]{4}</para>
                 /// </summary>
                 [NameInMap("CheckField")]
                 [Validation(Required=false)]
                 public string CheckField { get; set; }
 
                 /// <summary>
-                /// The name of the parameter.
+                /// <para>The name of the parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ip</para>
                 /// </summary>
                 [NameInMap("Field")]
                 [Validation(Required=false)]
                 public string Field { get; set; }
 
                 /// <summary>
-                /// Indicates whether the parameter is required. Valid values:
+                /// <para>Indicates whether the parameter is required. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b> (default)</description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
                 /// 
-                /// *   **true** (default)
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Necessary")]
                 [Validation(Required=false)]
                 public bool? Necessary { get; set; }
 
                 /// <summary>
-                /// The value of the parameter.
+                /// <para>The value of the parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12.xx.xx.xx</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -80,7 +102,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1E1EC464-3BD7-518F-9937-BCC12E6855FE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

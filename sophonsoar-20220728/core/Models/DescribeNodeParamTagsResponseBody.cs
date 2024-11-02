@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeNodeParamTagsResponseBody : TeaModel {
         /// <summary>
-        /// The configuration of the recommended path.
+        /// <para>The configuration of the recommended path.</para>
         /// </summary>
         [NameInMap("ParamReferredPaths")]
         [Validation(Required=false)]
         public List<DescribeNodeParamTagsResponseBodyParamReferredPaths> ParamReferredPaths { get; set; }
         public class DescribeNodeParamTagsResponseBodyParamReferredPaths : TeaModel {
             /// <summary>
-            /// The name of the upstream node.
+            /// <para>The name of the upstream node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>DataFormat_1</para>
             /// </summary>
             [NameInMap("ParamName")]
             [Validation(Required=false)]
             public string ParamName { get; set; }
 
             /// <summary>
-            /// The paths.
+            /// <para>The paths.</para>
             /// </summary>
             [NameInMap("ReferredPath")]
             [Validation(Required=false)]
@@ -33,7 +36,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6BE94351-712A-505D-A40A-BC77CC8254A9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

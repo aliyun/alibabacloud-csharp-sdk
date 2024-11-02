@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class TriggerProcessTaskResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>58A518BC-E4A8-5BD7-AFEA-366046ED9073</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

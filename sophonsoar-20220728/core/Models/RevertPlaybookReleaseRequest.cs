@@ -10,32 +10,42 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class RevertPlaybookReleaseRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to directly publish the new playbook after the rollback.
+        /// <para>Specifies whether to directly publish the new playbook after the rollback.</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b> (default)</description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true** (default)
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsPublish")]
         [Validation(Required=false)]
         public bool? IsPublish { get; set; }
 
         /// <summary>
-        /// The version of the playbook that you want to publish.
+        /// <para>The version of the playbook that you want to publish.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribePlaybookReleases~~">DescribePlaybookReleases</a> operation to query the playbook version.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribePlaybookReleases](~~DescribePlaybookReleases~~) operation to query the playbook version.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3f97b56e-064e-47e7-a309-xxxxxxx</para>
         /// </summary>
         [NameInMap("PlayReleaseId")]
         [Validation(Required=false)]
         public int? PlayReleaseId { get; set; }
 
         /// <summary>
-        /// The UUID of the playbook.
+        /// <para>The UUID of the playbook.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>185295a1-c987-4b64-8796-xxxxxxxx</para>
         /// </summary>
         [NameInMap("PlaybookUuid")]
         [Validation(Required=false)]

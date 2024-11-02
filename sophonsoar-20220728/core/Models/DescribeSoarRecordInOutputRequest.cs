@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeSoarRecordInOutputRequest : TeaModel {
         /// <summary>
-        /// The UUID of the component action.
+        /// <para>The UUID of the component action.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeSoarTaskAndActions~~">DescribeSoarTaskAndActions</a> operation to query the UUIDs of component actions.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeSoarTaskAndActions](~~DescribeSoarTaskAndActions~~) operation to query the UUIDs of component actions.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0531ff66-dd05-4f24-84bf-xxxxxxxx</para>
         /// </summary>
         [NameInMap("ActionUuid")]
         [Validation(Required=false)]
         public string ActionUuid { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and the response. Valid values:
+        /// <para>The language of the content within the request and the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh** (default): Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

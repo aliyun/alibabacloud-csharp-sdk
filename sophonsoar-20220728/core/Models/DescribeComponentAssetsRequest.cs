@@ -10,19 +10,25 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeComponentAssetsRequest : TeaModel {
         /// <summary>
-        /// The name of the component.
+        /// <para>The name of the component.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>python3</para>
         /// </summary>
         [NameInMap("ComponentName")]
         [Validation(Required=false)]
         public string ComponentName { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

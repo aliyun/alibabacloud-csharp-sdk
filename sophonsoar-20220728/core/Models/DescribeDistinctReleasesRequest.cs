@@ -10,28 +10,38 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeDistinctReleasesRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese (default)</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
-        /// *   **zh**: Chinese (default)
-        /// *   **en**: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The playbook UUID.
+        /// <para>The playbook UUID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>bc0b8424-535c-4ed5-bd94-xxxxxx</para>
         /// </summary>
         [NameInMap("PlaybookUuid")]
         [Validation(Required=false)]
         public string PlaybookUuid { get; set; }
 
         /// <summary>
-        /// The MD5 value of the playbook XML configuration.
+        /// <para>The MD5 value of the playbook XML configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>be0a4ef084dd174abe47xxxxx</para>
         /// </summary>
         [NameInMap("TaskflowMd5")]
         [Validation(Required=false)]

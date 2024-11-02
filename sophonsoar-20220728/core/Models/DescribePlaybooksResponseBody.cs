@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribePlaybooksResponseBody : TeaModel {
         /// <summary>
-        /// The pagination information.
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public DescribePlaybooksResponseBodyPage Page { get; set; }
         public class DescribePlaybooksResponseBodyPage : TeaModel {
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// <para>The number of entries returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -40,59 +49,89 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// The list of playbooks.
+        /// <para>The playbooks.</para>
         /// </summary>
         [NameInMap("Playbooks")]
         [Validation(Required=false)]
         public List<DescribePlaybooksResponseBodyPlaybooks> Playbooks { get; set; }
         public class DescribePlaybooksResponseBodyPlaybooks : TeaModel {
             /// <summary>
-            /// The playbook status. Valid values:
+            /// <para>The playbook status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: The playbook is started.</description></item>
+            /// <item><description><b>0</b>: The playbook is stopped.</description></item>
+            /// </list>
             /// 
-            /// *   **1**: The playbook is started.
-            /// *   **0**: The playbook is stopped.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Active")]
             [Validation(Required=false)]
             public int? Active { get; set; }
 
             /// <summary>
-            /// The display name of the playbook.
+            /// <para>The display name of the playbook.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>demo_playbook</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// The time when the playbook was created. The value is a 13-digit timestamp.
+            /// <para>The time when the playbook was created. The value is a 13-digit timestamp.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1683526277415</para>
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
 
+            /// <summary>
+            /// <para>The time when the playbook was modified.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1681396398000</para>
+            /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// The time when the playbook was last run. The value is a 13-digit timestamp.
+            /// <para>The time when the playbook was last run. The value is a 13-digit timestamp.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1683526277415</para>
             /// </summary>
             [NameInMap("LastRuntime")]
             [Validation(Required=false)]
             public long? LastRuntime { get; set; }
 
             /// <summary>
-            /// The type of the playbook. Valid values:
+            /// <para>The type of the playbook. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>preset</b>: predefined playbook</description></item>
+            /// <item><description><b>user</b>: custom playbook</description></item>
+            /// </list>
             /// 
-            /// *   **preset**: predefined playbook
-            /// *   **user**: custom playbook
+            /// <b>Example:</b>
+            /// <para>user</para>
             /// </summary>
             [NameInMap("OwnType")]
             [Validation(Required=false)]
             public string OwnType { get; set; }
 
+            [NameInMap("ParamType")]
+            [Validation(Required=false)]
+            public string ParamType { get; set; }
+
             /// <summary>
-            /// The UUID of the playbook.
+            /// <para>The UUID of the playbook.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>bb5a8640-a14f-44ef-8376-cxxxxx</para>
             /// </summary>
             [NameInMap("PlaybookUuid")]
             [Validation(Required=false)]
@@ -101,7 +140,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>138B5AB7-7F2B-5814-87A3-E3ECFE1F207E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

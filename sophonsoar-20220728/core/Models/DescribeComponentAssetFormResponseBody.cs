@@ -10,19 +10,33 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeComponentAssetFormResponseBody : TeaModel {
         /// <summary>
-        /// The metadata of the asset in the component. The value is a JSON array and contains the following fields:
+        /// <para>The metadata of the asset in the component. The value is a JSON array and contains the following fields:</para>
+        /// <list type="bullet">
+        /// <item><description><b>name</b>: the parameter name.</description></item>
+        /// <item><description><b>defaultValue</b>: the default parameter value.</description></item>
+        /// <item><description><b>description</b>: the parameter description.</description></item>
+        /// <item><description><b>required</b>: indicates whether the parameter is required. Valid values: <b>true</b> and <b>false</b>.</description></item>
+        /// </list>
         /// 
-        /// *   **name**: the parameter name.
-        /// *   **defaultValue**: the default parameter value.
-        /// *   **description**: the parameter description.
-        /// *   **required**: indicates whether the parameter is required. Valid values: **true** and **false**.
+        /// <b>Example:</b>
+        /// <para>[
+        ///     {
+        ///         &quot;defaultValue&quot;: &quot;&quot;,
+        ///         &quot;description&quot;: &quot;assetname&quot;,
+        ///         &quot;name&quot;: &quot;assetname&quot;,
+        ///         &quot;required&quot;: true
+        ///     }
+        /// ]</para>
         /// </summary>
         [NameInMap("ComponentAssetForm")]
         [Validation(Required=false)]
         public string ComponentAssetForm { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9D1651AC-31CC-5CC4-A14E-626B3FCC1022</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
