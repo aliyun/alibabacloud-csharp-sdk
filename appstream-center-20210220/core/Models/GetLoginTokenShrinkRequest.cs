@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Appstream_center20210220.Models
 {
-    public class GetLoginTokenRequest : TeaModel {
+    public class GetLoginTokenShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>182901</para>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210220.Models
 
         [NameInMap("AvailableFeatures")]
         [Validation(Required=false)]
-        public Dictionary<string, string> AvailableFeatures { get; set; }
+        public string AvailableFeaturesShrink { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

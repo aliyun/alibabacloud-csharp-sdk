@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Appstream_center20210220.Models
 {
-    public class FindIdpListByLoginIdentifierRequest : TeaModel {
+    public class FindIdpListByLoginIdentifierShrinkRequest : TeaModel {
         [NameInMap("AvailableFeatures")]
         [Validation(Required=false)]
-        public Dictionary<string, string> AvailableFeatures { get; set; }
+        public string AvailableFeaturesShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

@@ -38,16 +38,35 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 身份认证查询接口
-         *
-         * @param request FindIdpListByLoginIdentifierRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return FindIdpListByLoginIdentifierResponse
-         */
-        public FindIdpListByLoginIdentifierResponse FindIdpListByLoginIdentifierWithOptions(FindIdpListByLoginIdentifierRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>身份认证查询接口</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// FindIdpListByLoginIdentifierRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FindIdpListByLoginIdentifierResponse
+        /// </returns>
+        public FindIdpListByLoginIdentifierResponse FindIdpListByLoginIdentifierWithOptions(FindIdpListByLoginIdentifierRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            FindIdpListByLoginIdentifierShrinkRequest request = new FindIdpListByLoginIdentifierShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AvailableFeatures))
+            {
+                request.AvailableFeaturesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AvailableFeatures, "AvailableFeatures", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvailableFeaturesShrink))
+            {
+                query["AvailableFeatures"] = request.AvailableFeaturesShrink;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientChannel))
             {
@@ -83,6 +102,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -100,16 +120,35 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             return TeaModel.ToObject<FindIdpListByLoginIdentifierResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 身份认证查询接口
-         *
-         * @param request FindIdpListByLoginIdentifierRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return FindIdpListByLoginIdentifierResponse
-         */
-        public async Task<FindIdpListByLoginIdentifierResponse> FindIdpListByLoginIdentifierWithOptionsAsync(FindIdpListByLoginIdentifierRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>身份认证查询接口</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// FindIdpListByLoginIdentifierRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FindIdpListByLoginIdentifierResponse
+        /// </returns>
+        public async Task<FindIdpListByLoginIdentifierResponse> FindIdpListByLoginIdentifierWithOptionsAsync(FindIdpListByLoginIdentifierRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            FindIdpListByLoginIdentifierShrinkRequest request = new FindIdpListByLoginIdentifierShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AvailableFeatures))
+            {
+                request.AvailableFeaturesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AvailableFeatures, "AvailableFeatures", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvailableFeaturesShrink))
+            {
+                query["AvailableFeatures"] = request.AvailableFeaturesShrink;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientChannel))
             {
@@ -145,6 +184,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -162,44 +202,74 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             return TeaModel.ToObject<FindIdpListByLoginIdentifierResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 身份认证查询接口
-         *
-         * @param request FindIdpListByLoginIdentifierRequest
-         * @return FindIdpListByLoginIdentifierResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>身份认证查询接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FindIdpListByLoginIdentifierRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FindIdpListByLoginIdentifierResponse
+        /// </returns>
         public FindIdpListByLoginIdentifierResponse FindIdpListByLoginIdentifier(FindIdpListByLoginIdentifierRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return FindIdpListByLoginIdentifierWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 身份认证查询接口
-         *
-         * @param request FindIdpListByLoginIdentifierRequest
-         * @return FindIdpListByLoginIdentifierResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>身份认证查询接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FindIdpListByLoginIdentifierRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FindIdpListByLoginIdentifierResponse
+        /// </returns>
         public async Task<FindIdpListByLoginIdentifierResponse> FindIdpListByLoginIdentifierAsync(FindIdpListByLoginIdentifierRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await FindIdpListByLoginIdentifierWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary GetLoginToken
-         *
-         * @param request GetLoginTokenRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetLoginTokenResponse
-         */
-        public GetLoginTokenResponse GetLoginTokenWithOptions(GetLoginTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetLoginToken</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetLoginTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLoginTokenResponse
+        /// </returns>
+        public GetLoginTokenResponse GetLoginTokenWithOptions(GetLoginTokenRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetLoginTokenShrinkRequest request = new GetLoginTokenShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AvailableFeatures))
+            {
+                request.AvailableFeaturesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AvailableFeatures, "AvailableFeatures", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthenticationCode))
             {
                 query["AuthenticationCode"] = request.AuthenticationCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvailableFeaturesShrink))
+            {
+                query["AvailableFeatures"] = request.AvailableFeaturesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
@@ -268,6 +338,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginName))
             {
                 query["LoginName"] = request.LoginName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MfaType))
+            {
+                query["MfaType"] = request.MfaType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
             {
@@ -344,20 +418,38 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             return TeaModel.ToObject<GetLoginTokenResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary GetLoginToken
-         *
-         * @param request GetLoginTokenRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetLoginTokenResponse
-         */
-        public async Task<GetLoginTokenResponse> GetLoginTokenWithOptionsAsync(GetLoginTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetLoginToken</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetLoginTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLoginTokenResponse
+        /// </returns>
+        public async Task<GetLoginTokenResponse> GetLoginTokenWithOptionsAsync(GetLoginTokenRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetLoginTokenShrinkRequest request = new GetLoginTokenShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AvailableFeatures))
+            {
+                request.AvailableFeaturesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AvailableFeatures, "AvailableFeatures", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthenticationCode))
             {
                 query["AuthenticationCode"] = request.AuthenticationCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvailableFeaturesShrink))
+            {
+                query["AvailableFeatures"] = request.AvailableFeaturesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
@@ -426,6 +518,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginName))
             {
                 query["LoginName"] = request.LoginName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MfaType))
+            {
+                query["MfaType"] = request.MfaType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
             {
@@ -502,35 +598,52 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             return TeaModel.ToObject<GetLoginTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary GetLoginToken
-         *
-         * @param request GetLoginTokenRequest
-         * @return GetLoginTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetLoginToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLoginTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLoginTokenResponse
+        /// </returns>
         public GetLoginTokenResponse GetLoginToken(GetLoginTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetLoginTokenWithOptions(request, runtime);
         }
 
-        /**
-         * @summary GetLoginToken
-         *
-         * @param request GetLoginTokenRequest
-         * @return GetLoginTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetLoginToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLoginTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLoginTokenResponse
+        /// </returns>
         public async Task<GetLoginTokenResponse> GetLoginTokenAsync(GetLoginTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetLoginTokenWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request RefreshLoginTokenRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RefreshLoginTokenResponse
-         */
+        /// <param name="request">
+        /// RefreshLoginTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshLoginTokenResponse
+        /// </returns>
         public RefreshLoginTokenResponse RefreshLoginTokenWithOptions(RefreshLoginTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -590,11 +703,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             return TeaModel.ToObject<RefreshLoginTokenResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request RefreshLoginTokenRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RefreshLoginTokenResponse
-         */
+        /// <param name="request">
+        /// RefreshLoginTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshLoginTokenResponse
+        /// </returns>
         public async Task<RefreshLoginTokenResponse> RefreshLoginTokenWithOptionsAsync(RefreshLoginTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -654,20 +772,26 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             return TeaModel.ToObject<RefreshLoginTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request RefreshLoginTokenRequest
-         * @return RefreshLoginTokenResponse
-         */
+        /// <param name="request">
+        /// RefreshLoginTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshLoginTokenResponse
+        /// </returns>
         public RefreshLoginTokenResponse RefreshLoginToken(RefreshLoginTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RefreshLoginTokenWithOptions(request, runtime);
         }
 
-        /**
-         * @param request RefreshLoginTokenRequest
-         * @return RefreshLoginTokenResponse
-         */
+        /// <param name="request">
+        /// RefreshLoginTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshLoginTokenResponse
+        /// </returns>
         public async Task<RefreshLoginTokenResponse> RefreshLoginTokenAsync(RefreshLoginTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
