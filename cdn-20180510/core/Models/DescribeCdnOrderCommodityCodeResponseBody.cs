@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnOrderCommodityCodeResponseBody : TeaModel {
         /// <summary>
-        /// The commodity code that includes the organization unit.
+        /// <para>The commodity code that includes the organization unit.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("OrderCommodityCode")]
         [Validation(Required=false)]
         public string OrderCommodityCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BFFCDFAD-DACC-484E-9BE6-0AF3B3A0DD23</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

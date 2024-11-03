@@ -10,63 +10,90 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnSMCertificateDetailResponseBody : TeaModel {
         /// <summary>
-        /// The expiration time of the certificate. The time is displayed in UTC.
+        /// <para>The expiration time of the certificate. The time is displayed in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-08-31T09:42:28Z</para>
         /// </summary>
         [NameInMap("CertExpireTime")]
         [Validation(Required=false)]
         public string CertExpireTime { get; set; }
 
         /// <summary>
-        /// The ID of the certificate.
+        /// <para>The ID of the certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>648****-cn-hangzhou</para>
         /// </summary>
         [NameInMap("CertIdentifier")]
         [Validation(Required=false)]
         public string CertIdentifier { get; set; }
 
         /// <summary>
-        /// The name of the certificate.
+        /// <para>The name of the certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>yourCertName</para>
         /// </summary>
         [NameInMap("CertName")]
         [Validation(Required=false)]
         public string CertName { get; set; }
 
         /// <summary>
-        /// The certificate authority (CA) that issued the certificate.
+        /// <para>The certificate authority (CA) that issued the certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DigiCert Inc</para>
         /// </summary>
         [NameInMap("CertOrg")]
         [Validation(Required=false)]
         public string CertOrg { get; set; }
 
         /// <summary>
-        /// The common name.
+        /// <para>The common name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("CommonName")]
         [Validation(Required=false)]
         public string CommonName { get; set; }
 
         /// <summary>
-        /// The content of the encryption certificate.
+        /// <para>The content of the encryption certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>-BEGIN CERTIFICATE-----***-----END CERTIFICATE--</para>
         /// </summary>
         [NameInMap("EncryptCertificate")]
         [Validation(Required=false)]
         public string EncryptCertificate { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A7C69682-7F88-40DD-A198-10D0309E439D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The subdomain name.
+        /// <para>The subdomain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>***.example.com</para>
         /// </summary>
         [NameInMap("Sans")]
         [Validation(Required=false)]
         public string Sans { get; set; }
 
         /// <summary>
-        /// The content of the signature certificate.
+        /// <para>The content of the signature certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>--BEGIN CERTIFICATE-----***-----END CERTIFICATE--</para>
         /// </summary>
         [NameInMap("SignCertificate")]
         [Validation(Required=false)]

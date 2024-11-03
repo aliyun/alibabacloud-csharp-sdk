@@ -10,16 +10,23 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class VerifyDomainOwnerResponseBody : TeaModel {
         /// <summary>
-        /// The verification result.
+        /// <para>The verification result.</para>
+        /// <remarks>
+        /// <para>This parameter is returned only if the operation fails.</para>
+        /// </remarks>
         /// 
-        /// > This parameter is returned only if the operation fails.
+        /// <b>Example:</b>
+        /// <para>verify_dffeb6610035dcb77b413a59c32c****</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>34AB41F1-04A5-496F-8C8D-634BDBE6A9FB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

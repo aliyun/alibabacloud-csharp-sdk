@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeStagingIpResponseBody : TeaModel {
         /// <summary>
-        /// IPv4 addresses.
+        /// <para>IPv4 addresses.</para>
         /// </summary>
         [NameInMap("IPV4s")]
         [Validation(Required=false)]
@@ -23,7 +23,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1B9E0E83-24AC-49F4-9EE0-BF5EB03E8381</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

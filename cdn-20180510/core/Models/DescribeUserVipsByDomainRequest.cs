@@ -10,19 +10,25 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeUserVipsByDomainRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to query the virtual IP addresses of only healthy CDN POPs. Valid values:
+        /// <para>Specifies whether to query the virtual IP addresses of only healthy CDN POPs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b>: healthy CDN edge nodes.</description></item>
+        /// <item><description><b>off</b>: all CDN edge nodes.</description></item>
+        /// </list>
         /// 
-        /// *   **on**: healthy CDN edge nodes.
-        /// *   **off**: all CDN edge nodes.
+        /// <b>Example:</b>
+        /// <para>on</para>
         /// </summary>
         [NameInMap("Available")]
         [Validation(Required=false)]
         public string Available { get; set; }
 
         /// <summary>
-        /// The accelerated domain name. You can specify only one domain name.
+        /// <para>The accelerated domain name. You can specify only one domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

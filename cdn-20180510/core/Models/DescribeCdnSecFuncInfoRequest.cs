@@ -10,24 +10,30 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnSecFuncInfoRequest : TeaModel {
         /// <summary>
-        /// The language.
+        /// <para>The language.</para>
+        /// <list type="bullet">
+        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   en: English
-        /// *   zh: Chinese
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The type of the security feature. Valid values:
+        /// <para>The type of the security feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CipherSuiteGroupCustomize: custom cipher suite.</description></item>
+        /// <item><description>CipherSuiteGroupStrict: dustom cipher suite.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   CipherSuiteGroupCustomize: custom cipher suite.
-        /// *   CipherSuiteGroupStrict: dustom cipher suite.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>CipherSuiteGroupCustomize</para>
         /// </summary>
         [NameInMap("SecFuncType")]
         [Validation(Required=false)]

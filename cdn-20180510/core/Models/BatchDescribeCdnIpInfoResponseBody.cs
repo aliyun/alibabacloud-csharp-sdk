@@ -10,52 +10,71 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class BatchDescribeCdnIpInfoResponseBody : TeaModel {
         /// <summary>
-        /// The results about IP addresses returned.
+        /// <para>The results about IP addresses returned.</para>
         /// </summary>
         [NameInMap("IpInfoList")]
         [Validation(Required=false)]
         public List<BatchDescribeCdnIpInfoResponseBodyIpInfoList> IpInfoList { get; set; }
         public class BatchDescribeCdnIpInfoResponseBodyIpInfoList : TeaModel {
             /// <summary>
-            /// Indicates whether the IP address belongs to an Alibaba Cloud CDN point of presence (POP).
+            /// <para>Indicates whether the IP address belongs to an Alibaba Cloud CDN point of presence (POP).</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("CdnIp")]
             [Validation(Required=false)]
             public string CdnIp { get; set; }
 
             /// <summary>
-            /// The city to which the IP address belongs.
+            /// <para>The city to which the IP address belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Beijing</para>
             /// </summary>
             [NameInMap("City")]
             [Validation(Required=false)]
             public string City { get; set; }
 
             /// <summary>
-            /// The country to which the IP address belongs.
+            /// <para>The country to which the IP address belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>China</para>
             /// </summary>
             [NameInMap("Country")]
             [Validation(Required=false)]
             public string Country { get; set; }
 
             /// <summary>
-            /// The IP address.
+            /// <para>The IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>111.XXX.XXX.230</para>
             /// </summary>
             [NameInMap("IpAddress")]
             [Validation(Required=false)]
             public string IpAddress { get; set; }
 
             /// <summary>
-            /// The ISP to which the IP address belongs.
+            /// <para>The ISP to which the IP address belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Move</para>
             /// </summary>
             [NameInMap("IspName")]
             [Validation(Required=false)]
             public string IspName { get; set; }
 
             /// <summary>
-            /// The province to which the IP address belongs.
+            /// <para>The province to which the IP address belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Beijing</para>
             /// </summary>
             [NameInMap("Province")]
             [Validation(Required=false)]
@@ -64,7 +83,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>55ADD936-763F-5E1A-BF54-2EA3F6E94A52</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

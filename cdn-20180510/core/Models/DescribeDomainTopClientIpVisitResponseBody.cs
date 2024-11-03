@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainTopClientIpVisitResponseBody : TeaModel {
         /// <summary>
-        /// A list of client IP addresses.
+        /// <para>A list of client IP addresses.</para>
         /// </summary>
         [NameInMap("ClientIpList")]
         [Validation(Required=false)]
         public List<DescribeDomainTopClientIpVisitResponseBodyClientIpList> ClientIpList { get; set; }
         public class DescribeDomainTopClientIpVisitResponseBodyClientIpList : TeaModel {
             /// <summary>
-            /// The total number of requests.
+            /// <para>The total number of requests.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>256</para>
             /// </summary>
             [NameInMap("Acc")]
             [Validation(Required=false)]
             public long? Acc { get; set; }
 
             /// <summary>
-            /// The client IP address returned. Only IPv4 addressed are supported.
+            /// <para>The client IP address returned. Only IPv4 addressed are supported.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.1.xxx</para>
             /// </summary>
             [NameInMap("ClientIp")]
             [Validation(Required=false)]
             public string ClientIp { get; set; }
 
             /// <summary>
-            /// The ranking of the client IP address returned.
+            /// <para>The ranking of the client IP address returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("Rank")]
             [Validation(Required=false)]
             public int? Rank { get; set; }
 
             /// <summary>
-            /// The total amount of network traffic consumed. Unit: bytes.
+            /// <para>The total amount of network traffic consumed. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1024</para>
             /// </summary>
             [NameInMap("Traffic")]
             [Validation(Required=false)]
@@ -47,7 +59,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>64D28B53-5902-409B-94F6-FD46680144FE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

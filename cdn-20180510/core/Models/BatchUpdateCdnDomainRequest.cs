@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class BatchUpdateCdnDomainRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain names. You can specify one or more accelerated domain names. Separate domain names with commas (,).
+        /// <para>The accelerated domain names. You can specify one or more accelerated domain names. Separate domain names with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com,example.org</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -23,7 +25,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmyuji4b6r4**</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -34,18 +39,26 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The information about the addresses of origin servers.
+        /// <para>The information about the addresses of origin servers.</para>
+        /// <remarks>
+        /// <para>Do not set <b>Sources</b> and <b>TopLevelDomain</b> at the same time. If you set <b>Sources</b> and <b>TopLevelDomain</b> at the same time, <b>TopLevelDomain</b> does not take effect.</para>
+        /// </remarks>
         /// 
-        /// > Do not set **Sources** and **TopLevelDomain** at the same time. If you set **Sources** and **TopLevelDomain** at the same time, **TopLevelDomain** does not take effect.
+        /// <b>Example:</b>
+        /// <para>[{&quot;content&quot;:&quot;10.10.10.10&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80,&quot;weight&quot;:&quot;15&quot;}]</para>
         /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]
         public string Sources { get; set; }
 
         /// <summary>
-        /// The root domain.
+        /// <para>The root domain.</para>
+        /// <remarks>
+        /// <para>Do not set <b>Sources</b> and <b>TopLevelDomain</b> at the same time. If you set <b>Sources</b> and <b>TopLevelDomain</b> at the same time, <b>TopLevelDomain</b> does not take effect.</para>
+        /// </remarks>
         /// 
-        /// > Do not set **Sources** and **TopLevelDomain** at the same time. If you set **Sources** and **TopLevelDomain** at the same time, **TopLevelDomain** does not take effect.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("TopLevelDomain")]
         [Validation(Required=false)]

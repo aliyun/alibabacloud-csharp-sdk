@@ -10,21 +10,26 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnCertificateDetailByIdRequest : TeaModel {
         /// <summary>
-        /// The ID of the certificate.
+        /// <para>The ID of the certificate.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("CertId")]
         [Validation(Required=false)]
         public string CertId { get; set; }
 
         /// <summary>
-        /// The region of the certificate. Valid values:
+        /// <para>The region of the certificate. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ap-southeast-1</b>: Singapore</description></item>
+        /// <item><description><b>cn-hangzhou</b>: China (Hangzhou)</description></item>
+        /// </list>
+        /// <para>Default value: <b>cn-hangzhou</b></para>
         /// 
-        /// *   **ap-southeast-1**: Singapore
-        /// *   **cn-hangzhou**: China (Hangzhou)
-        /// 
-        /// Default value: **cn-hangzhou**
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("CertRegion")]
         [Validation(Required=false)]

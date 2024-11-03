@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnDomainAtoaLogsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

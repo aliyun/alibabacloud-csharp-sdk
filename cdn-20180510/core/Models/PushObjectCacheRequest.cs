@@ -10,37 +10,48 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class PushObjectCacheRequest : TeaModel {
         /// <summary>
-        /// The accelerated region where content is to be prefetched. Valid values:
+        /// <para>The accelerated region where content is to be prefetched. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>domestic</b><b>: Chinese mainland</b></description></item>
+        /// <item><description><b>overseas</b><b>: regions outside the Chinese mainland</b></description></item>
+        /// </list>
+        /// <para>If you do not set this parameter, content in the accelerated region of the domain name is prefetched.</para>
+        /// <list type="bullet">
+        /// <item><description>If the accelerated region is set to <b>Mainland China Only</b>, content in regions in the Chinese mainland is prefetched.</description></item>
+        /// <item><description>If the accelerated region is set to <b>Global</b>, content in all regions is prefetched.</description></item>
+        /// <item><description>If the accelerated region is set to <b>Global (Excluding Mainland China)</b>, content in regions outside the Chinese mainland is prefetched.</description></item>
+        /// </list>
         /// 
-        /// *   **domestic****: Chinese mainland**
-        /// *   **overseas****: regions outside the Chinese mainland**
-        /// 
-        /// If you do not set this parameter, content in the accelerated region of the domain name is prefetched.
-        /// 
-        /// *   If the accelerated region is set to **Mainland China Only**, content in regions in the Chinese mainland is prefetched.
-        /// *   If the accelerated region is set to **Global**, content in all regions is prefetched.
-        /// *   If the accelerated region is set to **Global (Excluding Mainland China)**, content in regions outside the Chinese mainland is prefetched.
+        /// <b>Example:</b>
+        /// <para>domestic</para>
         /// </summary>
         [NameInMap("Area")]
         [Validation(Required=false)]
         public string Area { get; set; }
 
         /// <summary>
-        /// Specifies whether to prefetch content to POPs. Valid values:
+        /// <para>Specifies whether to prefetch content to POPs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: prefetches content to POPs.</description></item>
+        /// <item><description><b>false</b>: prefetches content to regular POPs. Regular POPs can be L2 POPs or L3 POPs. Default value: <b>false</b>.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: prefetches content to POPs.
-        /// *   **false**: prefetches content to regular POPs. Regular POPs can be L2 POPs or L3 POPs. Default value: **false**.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("L2Preload")]
         [Validation(Required=false)]
         public bool? L2Preload { get; set; }
 
         /// <summary>
-        /// The URLs based on which content is prefetched. Format: **accelerated domain name/files to be prefetched**.
+        /// <para>The URLs based on which content is prefetched. Format: <b>accelerated domain name/files to be prefetched</b>.</para>
+        /// <remarks>
+        /// <para>Separate URLs with line feeds (\n or \r\n). Each object path can be up to 1,024 characters in length.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > Separate URLs with line feeds (\\n or \\r\\n). Each object path can be up to 1,024 characters in length.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com/image/1.png\nexample.org/image/2.png</para>
         /// </summary>
         [NameInMap("ObjectPath")]
         [Validation(Required=false)]
@@ -50,12 +61,23 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("QueryHashkey")]
+        [Validation(Required=false)]
+        public bool? QueryHashkey { get; set; }
+
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The custom header for prefetch in the JSON format.
+        /// <para>The custom header for prefetch in the JSON format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///       &quot;Accept-Encoding&quot;: [
+        ///             &quot;gzip&quot;
+        ///       ]
+        /// }</para>
         /// </summary>
         [NameInMap("WithHeader")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class ListUserCustomLogConfigResponseBody : TeaModel {
         /// <summary>
-        /// The list of log configuration IDs.
+        /// <para>The list of log configuration IDs.</para>
         /// </summary>
         [NameInMap("ConfigIds")]
         [Validation(Required=false)]
@@ -23,7 +23,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>95D5B69F-8AEC-419B-8F3A-612B35032B0D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

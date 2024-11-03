@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class BatchStartCdnDomainRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain names. You can specify one or more domain names. Separate multiple domain names with commas (,).
+        /// <para>The accelerated domain names. You can specify one or more domain names. Separate multiple domain names with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainNames")]
         [Validation(Required=false)]

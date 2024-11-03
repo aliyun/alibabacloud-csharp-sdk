@@ -10,18 +10,21 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class ChangeCdnDomainToDcdnRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name. You can specify only one domain name in each request.
+        /// <para>The accelerated domain name. You can specify only one domain name in each request.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform on the check items. Valid values:
+        /// <para>The operation to perform. Set the value to preCheck. Precheck is performed, and the result is returned. If the precheck passes, set the value to enforce to perform the transfer.</para>
         /// 
-        /// **preCheck**: return the verification result.
+        /// <b>Example:</b>
+        /// <para>preCheck</para>
         /// </summary>
         [NameInMap("Operation")]
         [Validation(Required=false)]

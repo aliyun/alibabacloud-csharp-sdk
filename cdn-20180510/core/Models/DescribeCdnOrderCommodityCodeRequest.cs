@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnOrderCommodityCodeRequest : TeaModel {
         /// <summary>
-        /// The original commodity code.
+        /// <para>The original commodity code.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]

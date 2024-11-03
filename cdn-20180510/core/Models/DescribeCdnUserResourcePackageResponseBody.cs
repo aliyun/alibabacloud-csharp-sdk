@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnUserResourcePackageResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>84839536-2B7E-457D-9D8C-82E6C7D4E1A3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The detailed information about resource plans. The returned information is displayed in an array of ResourcePackageInfo nodes.
+        /// <para>The detailed information about resource plans. The returned information is displayed in an array of ResourcePackageInfo nodes.</para>
         /// </summary>
         [NameInMap("ResourcePackageInfos")]
         [Validation(Required=false)]
@@ -28,72 +31,102 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             public List<DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo> ResourcePackageInfo { get; set; }
             public class DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo : TeaModel {
                 /// <summary>
-                /// The ID of the resource plan.
+                /// <para>The ID of the resource plan.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cdnflowbag</para>
                 /// </summary>
                 [NameInMap("CommodityCode")]
                 [Validation(Required=false)]
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// The remaining quota of the resource plan.
+                /// <para>The remaining quota of the resource plan.</para>
+                /// <list type="bullet">
+                /// <item><description>For a data transfer plan, the quota is measured in bytes.</description></item>
+                /// <item><description>For a request resource plan, the quota is measured in the number of requests.</description></item>
+                /// </list>
                 /// 
-                /// *   For a data transfer plan, the quota is measured in bytes.
-                /// *   For a request resource plan, the quota is measured in the number of requests.
+                /// <b>Example:</b>
+                /// <para>10995089554629</para>
                 /// </summary>
                 [NameInMap("CurrCapacity")]
                 [Validation(Required=false)]
                 public string CurrCapacity { get; set; }
 
                 /// <summary>
-                /// The name of the resource plan.
+                /// <para>The name of the resource plan.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CDN data transfer plan (Chinese mainland)</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// The expiration time.
+                /// <para>The expiration time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2018-07-01T08:00:00Z</para>
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// The total quota of the resource plan.
+                /// <para>The total quota of the resource plan.</para>
+                /// <list type="bullet">
+                /// <item><description>For a data transfer plan, the quota is measured in bytes.</description></item>
+                /// <item><description>For a request resource plan, the quota is measured in the number of requests.</description></item>
+                /// </list>
                 /// 
-                /// *   For a data transfer plan, the quota is measured in bytes.
-                /// *   For a request resource plan, the quota is measured in the number of requests.
+                /// <b>Example:</b>
+                /// <para>536870912000</para>
                 /// </summary>
                 [NameInMap("InitCapacity")]
                 [Validation(Required=false)]
                 public string InitCapacity { get; set; }
 
                 /// <summary>
-                /// The ID of the instance
+                /// <para>The ID of the instance</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>FP-ilttxc23a</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The effective time.
+                /// <para>The effective time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2017-12-05T19:10:58Z</para>
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// The status of the resource plan. Valid values:
+                /// <para>The status of the resource plan. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>valid</b>: valid</description></item>
+                /// <item><description><b>closed</b>: expired</description></item>
+                /// </list>
                 /// 
-                /// *   **valid**: valid
-                /// *   **closed**: expired
+                /// <b>Example:</b>
+                /// <para>valid</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The name of the template.
+                /// <para>The name of the template.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CDN data transfer plan</para>
                 /// </summary>
                 [NameInMap("TemplateName")]
                 [Validation(Required=false)]

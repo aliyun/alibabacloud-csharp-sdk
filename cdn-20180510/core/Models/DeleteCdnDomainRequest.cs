@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DeleteCdnDomainRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name that you want to remove. You can specify only one domain name in each call.
+        /// <para>The accelerated domain name that you want to remove. You can specify only one domain name in each call.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainRealtimeLogDeliveryRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name for which real-time log delivery is enabled. You can specify only one domain name.
+        /// <para>The accelerated domain name for which real-time log delivery is enabled. You can specify only one domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]

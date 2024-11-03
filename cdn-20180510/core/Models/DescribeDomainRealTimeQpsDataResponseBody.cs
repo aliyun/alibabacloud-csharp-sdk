@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainRealTimeQpsDataResponseBody : TeaModel {
         /// <summary>
-        /// The data entries returned.
+        /// <para>The data entries returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -21,14 +21,20 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             public List<DescribeDomainRealTimeQpsDataResponseBodyDataQpsModel> QpsModel { get; set; }
             public class DescribeDomainRealTimeQpsDataResponseBodyDataQpsModel : TeaModel {
                 /// <summary>
-                /// The number of queries per second.
+                /// <para>The number of queries per second.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1851.25</para>
                 /// </summary>
                 [NameInMap("Qps")]
                 [Validation(Required=false)]
                 public float? Qps { get; set; }
 
                 /// <summary>
-                /// The timestamp of the data returned. The time follows the yyyy-MM-ddTHH:mm:ssZ format in the ISO 8601 standard and is in UTC.
+                /// <para>The timestamp of the data returned. The time follows the yyyy-MM-ddTHH:mm:ssZ format in the ISO 8601 standard and is in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-12-02T11:25:00Z</para>
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
@@ -39,7 +45,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>32DC9806-E9F9-4490-BBDC-B3A9E32FCC1D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

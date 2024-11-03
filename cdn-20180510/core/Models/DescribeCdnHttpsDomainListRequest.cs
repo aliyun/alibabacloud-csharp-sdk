@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnHttpsDomainListRequest : TeaModel {
         /// <summary>
-        /// The keyword that is used to search for certificates.
+        /// <para>The keyword that is used to search for certificates.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>com</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Valid values: **1** to **100000**.
+        /// <para>The number of the page to return. Valid values: <b>1</b> to <b>100000</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **20**.
+        /// <para>The number of entries to return on each page. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

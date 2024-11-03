@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnCertificateListRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name. Separate multiple accelerated domain names with commas (,).
+        /// <para>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</para>
+        /// <para>If you do not specify an accelerated domain name, SSL certificates of all your accelerated domain names are queried.</para>
         /// 
-        /// If you do not specify an accelerated domain name, SSL certificates of all your accelerated domain names are queried.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

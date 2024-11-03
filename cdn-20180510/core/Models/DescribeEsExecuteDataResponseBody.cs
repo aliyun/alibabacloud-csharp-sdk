@@ -10,28 +10,31 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeEsExecuteDataResponseBody : TeaModel {
         /// <summary>
-        /// The content of the script.
+        /// <para>The content of the script.</para>
         /// </summary>
         [NameInMap("Contents")]
         [Validation(Required=false)]
         public List<DescribeEsExecuteDataResponseBodyContents> Contents { get; set; }
         public class DescribeEsExecuteDataResponseBodyContents : TeaModel {
             /// <summary>
-            /// The time and column names in the table that shows the status of the script.
+            /// <para>The time and column names in the table that shows the status of the script.</para>
             /// </summary>
             [NameInMap("Columns")]
             [Validation(Required=false)]
             public List<string> Columns { get; set; }
 
             /// <summary>
-            /// The name of the table that shows the status of the script.
+            /// <para>The name of the table that shows the status of the script.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Exception</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The list of timestamps and values in the corresponding columns of the table that shows the status of the script.
+            /// <para>The list of timestamps and values in the corresponding columns of the table that shows the status of the script.</para>
             /// </summary>
             [NameInMap("Points")]
             [Validation(Required=false)]
@@ -40,7 +43,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>99D61AB3-6164-4CF2-A0DE-129C9B07618B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

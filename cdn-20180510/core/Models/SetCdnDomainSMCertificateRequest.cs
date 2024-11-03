@@ -10,20 +10,25 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class SetCdnDomainSMCertificateRequest : TeaModel {
         /// <summary>
-        /// The ID of the SM certificate that you want to configure. The identifier of the certificate. The value is Certificate ID-cn-hangzhou. For example, if the certificate ID is 123, set the value of this parameter to 123-cn-hangzhou.
+        /// <para>The ID of the SM certificate that you want to configure. The identifier of the certificate. The value is Certificate ID-cn-hangzhou. For example, if the certificate ID is 123, set the value of this parameter to 123-cn-hangzhou.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1234****-cn-hangzhou</para>
         /// </summary>
         [NameInMap("CertIdentifier")]
         [Validation(Required=false)]
         public string CertIdentifier { get; set; }
 
         /// <summary>
-        /// The accelerated domain name for which you want to configure the SM certificate.
+        /// <para>The accelerated domain name for which you want to configure the SM certificate.</para>
+        /// <remarks>
+        /// <para>The domain name must use HTTPS acceleration.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > The domain name must use HTTPS acceleration.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -34,12 +39,15 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the SSL certificate. Valid values:
+        /// <para>Specifies whether to enable the SSL certificate. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b></description></item>
+        /// <item><description><b>off</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **on**
-        /// *   **off**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>on</para>
         /// </summary>
         [NameInMap("SSLProtocol")]
         [Validation(Required=false)]

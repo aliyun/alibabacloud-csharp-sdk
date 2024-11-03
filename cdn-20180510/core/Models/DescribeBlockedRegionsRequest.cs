@@ -10,13 +10,16 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeBlockedRegionsRequest : TeaModel {
         /// <summary>
-        /// The language. Valid values:
+        /// <para>The language. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: simplified Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>jp</b>: Japanese</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **zh**: simplified Chinese
-        /// *   **en**: English
-        /// *   **jp**: Japanese
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]

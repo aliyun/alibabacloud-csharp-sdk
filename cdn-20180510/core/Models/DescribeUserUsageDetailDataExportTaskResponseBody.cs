@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeUserUsageDetailDataExportTaskResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A91BE91F-0B34-4CBF-8E0F-A2977E15AA52</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The usage details returned per page.
+        /// <para>The usage details returned per page.</para>
         /// </summary>
         [NameInMap("UsageDataPerPage")]
         [Validation(Required=false)]
         public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPage UsageDataPerPage { get; set; }
         public class DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPage : TeaModel {
             /// <summary>
-            /// The information about the task.
+            /// <para>The information about the task.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
@@ -35,42 +38,57 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 public List<DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem> DataItem { get; set; }
                 public class DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem : TeaModel {
                     /// <summary>
-                    /// The time when the task was created.
+                    /// <para>The time when the task was created.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2018-10-09T06:33:38Z</para>
                     /// </summary>
                     [NameInMap("CreateTime")]
                     [Validation(Required=false)]
                     public string CreateTime { get; set; }
 
                     /// <summary>
-                    /// The download URL.
+                    /// <para>The download URL.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para><a href="https://test.oss-cn-beijing.aliyuncs.com/billing_data/xxx">https://test.oss-cn-beijing.aliyuncs.com/billing_data/xxx</a></para>
                     /// </summary>
                     [NameInMap("DownloadUrl")]
                     [Validation(Required=false)]
                     public string DownloadUrl { get; set; }
 
                     /// <summary>
-                    /// The status of the task.
+                    /// <para>The status of the task.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>success</para>
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// The configurations of the task.
+                    /// <para>The configurations of the task.</para>
                     /// </summary>
                     [NameInMap("TaskConfig")]
                     [Validation(Required=false)]
                     public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig TaskConfig { get; set; }
                     public class DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig : TeaModel {
                         /// <summary>
-                        /// The end of the time range during which data was queried.
+                        /// <para>The end of the time range during which data was queried.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2018-08-31T15:59:59Z</para>
                         /// </summary>
                         [NameInMap("EndTime")]
                         [Validation(Required=false)]
                         public string EndTime { get; set; }
 
                         /// <summary>
-                        /// The start of the time range during which data was queried.
+                        /// <para>The start of the time range during which data was queried.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2018-07-31T16:00:00Z</para>
                         /// </summary>
                         [NameInMap("StartTime")]
                         [Validation(Required=false)]
@@ -79,21 +97,30 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                     }
 
                     /// <summary>
-                    /// The ID of the task.
+                    /// <para>The ID of the task.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>11</para>
                     /// </summary>
                     [NameInMap("TaskId")]
                     [Validation(Required=false)]
                     public string TaskId { get; set; }
 
                     /// <summary>
-                    /// The name of the task.
+                    /// <para>The name of the task.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Refresh</para>
                     /// </summary>
                     [NameInMap("TaskName")]
                     [Validation(Required=false)]
                     public string TaskName { get; set; }
 
                     /// <summary>
-                    /// The time when the task was last modified.
+                    /// <para>The time when the task was last modified.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2018-10-09T06:35:46Z</para>
                     /// </summary>
                     [NameInMap("UpdateTime")]
                     [Validation(Required=false)]
@@ -104,21 +131,30 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// <para>The page number of the returned page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// <para>The number of entries returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]

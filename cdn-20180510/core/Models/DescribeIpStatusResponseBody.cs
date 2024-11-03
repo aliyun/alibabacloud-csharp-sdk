@@ -10,25 +10,32 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeIpStatusResponseBody : TeaModel {
         /// <summary>
-        /// The status of the IP addresses of the POPs.
+        /// <para>The status of the IP addresses of the POPs.</para>
         /// </summary>
         [NameInMap("IpStatus")]
         [Validation(Required=false)]
         public List<DescribeIpStatusResponseBodyIpStatus> IpStatus { get; set; }
         public class DescribeIpStatusResponseBodyIpStatus : TeaModel {
             /// <summary>
-            /// The IP address of the POP.
+            /// <para>The IP address of the POP.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10.10.10.10</para>
             /// </summary>
             [NameInMap("ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
             /// <summary>
-            /// The status.
+            /// <para>The status.</para>
+            /// <list type="bullet">
+            /// <item><description><b>nonali</b>: not an Alibaba Cloud CDN POP</description></item>
+            /// <item><description><b>normal</b>: an available Alibaba Cloud CDN POP</description></item>
+            /// <item><description><b>abnormal</b>: an unavailable Alibaba Cloud CDN POP</description></item>
+            /// </list>
             /// 
-            /// *   **nonali**: not an Alibaba Cloud CDN POP
-            /// *   **normal**: an available Alibaba Cloud CDN POP
-            /// *   **abnormal**: an unavailable Alibaba Cloud CDN POP
+            /// <b>Example:</b>
+            /// <para>abnormal</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
@@ -37,7 +44,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

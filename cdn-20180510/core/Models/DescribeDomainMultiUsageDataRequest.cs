@@ -10,26 +10,39 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainMultiUsageDataRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name. Separate multiple accelerated domain names with commas (,).
+        /// <para>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You can specify a maximum of 30 domain names at a time.</description></item>
+        /// <item><description>If this parameter is not set, data of all your accelerated domain names is queried.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > *   You can specify a maximum of 30 domain names at a time.
-        /// >*   If this parameter is not set, data of all your accelerated domain names is queried.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para>The end time must be later than the start time.</para>
+        /// </remarks>
         /// 
-        /// > The end time must be later than the start time.
+        /// <b>Example:</b>
+        /// <para>2017-12-10T21:00:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2017-12-10T20:00:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

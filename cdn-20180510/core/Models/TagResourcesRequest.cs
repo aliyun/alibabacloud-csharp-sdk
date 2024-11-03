@@ -10,43 +10,51 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// The list of resource IDs. Maximum number of list elements: 50.
+        /// <para>The list of resource IDs. Maximum number of list elements: 50.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Set this value to **DOMAIN**.
+        /// <para>The type of the resource. Set this value to <b>DOMAIN</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>DOMAIN</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags. Maximum number of list elements: 20.
-        /// 
-        /// This parameter is required.
+        /// <para>The tags. Maximum number of list elements: 20.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The key of a tag.
+            /// <para>The key of a tag.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>env</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of a tag.
+            /// <para>The value of a tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

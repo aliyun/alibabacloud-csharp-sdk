@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeBlockedRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The information returned.
+        /// <para>The information returned.</para>
         /// </summary>
         [NameInMap("InfoList")]
         [Validation(Required=false)]
@@ -21,21 +21,30 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             public List<DescribeBlockedRegionsResponseBodyInfoListInfoItem> InfoItem { get; set; }
             public class DescribeBlockedRegionsResponseBodyInfoListInfoItem : TeaModel {
                 /// <summary>
-                /// The district to which the country or region belongs.
+                /// <para>The district to which the country or region belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Asia</para>
                 /// </summary>
                 [NameInMap("Continent")]
                 [Validation(Required=false)]
                 public string Continent { get; set; }
 
                 /// <summary>
-                /// The abbreviation of the name of the country or region.
+                /// <para>The abbreviation of the name of the country or region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>AF</para>
                 /// </summary>
                 [NameInMap("CountriesAndRegions")]
                 [Validation(Required=false)]
                 public string CountriesAndRegions { get; set; }
 
                 /// <summary>
-                /// The name of the country or region.
+                /// <para>The name of the country or region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Afghanistan</para>
                 /// </summary>
                 [NameInMap("CountriesAndRegionsName")]
                 [Validation(Required=false)]
@@ -46,7 +55,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BFFCDFAD-DACC-484E-9BE6-0AF3B3A0DD23</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

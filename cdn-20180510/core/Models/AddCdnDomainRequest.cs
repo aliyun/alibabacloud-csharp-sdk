@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,31 +10,38 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class AddCdnDomainRequest : TeaModel {
         /// <summary>
-        /// The workload type of the accelerated domain name. Valid values:
+        /// <para>The workload type of the accelerated domain name. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>web</b>: images and small files</description></item>
+        /// <item><description><b>download</b>: large files</description></item>
+        /// <item><description><b>video</b>: on-demand video and audio streaming</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **web**: images and small files
-        /// *   **download**: large files
-        /// *   **video**: on-demand video and audio streaming
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>web</para>
         /// </summary>
         [NameInMap("CdnType")]
         [Validation(Required=false)]
         public string CdnType { get; set; }
 
         /// <summary>
-        /// The URL that is used to check the accessibility of the origin server.
+        /// <para>The URL that is used to check the accessibility of the origin server.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com/test.html">www.example.com/test.html</a></para>
         /// </summary>
         [NameInMap("CheckUrl")]
         [Validation(Required=false)]
         public string CheckUrl { get; set; }
 
         /// <summary>
-        /// The domain name that you want to add to Alibaba Cloud CDN.
+        /// <para>The domain name that you want to add to Alibaba Cloud CDN.</para>
+        /// <para>A wildcard domain that starts with a period (.) is supported, such as .example.com.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// A wildcard domain that starts with a period (.) is supported, such as .example.com.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>.example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -52,20 +56,26 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// <para>If you do not set this parameter, the system uses the ID of the default resource group.</para>
         /// 
-        /// If you do not set this parameter, the system uses the ID of the default resource group.
+        /// <b>Example:</b>
+        /// <para>rg-acfmyuji4b6r4**</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The acceleration region. Default value: domestic. Valid values:
+        /// <para>The acceleration region. Default value: domestic. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>domestic</b>: Chinese mainland</description></item>
+        /// <item><description><b>overseas</b>: global (excluding the Chinese mainland)</description></item>
+        /// <item><description><b>global</b>: global</description></item>
+        /// </list>
         /// 
-        /// *   **domestic**: Chinese mainland
-        /// *   **overseas**: global (excluding the Chinese mainland)
-        /// *   **global**: global
+        /// <b>Example:</b>
+        /// <para>domestic</para>
         /// </summary>
         [NameInMap("Scope")]
         [Validation(Required=false)]
@@ -76,30 +86,46 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The information about the addresses of origin servers.
+        /// <para>The information about the addresses of origin servers.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[
+        ///       {
+        ///             &quot;content&quot;: &quot;192.0.2.0&quot;,
+        ///             &quot;type&quot;: &quot;ipaddr&quot;,
+        ///             &quot;priority&quot;: &quot;20&quot;,
+        ///             &quot;port&quot;: 80,
+        ///             &quot;weight&quot;: &quot;15&quot;
+        ///       }
+        /// ]</para>
         /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]
         public string Sources { get; set; }
 
         /// <summary>
-        /// Details about the tags. You can specify up to 20 tags.
+        /// <para>Details about the tags. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<AddCdnDomainRequestTag> Tag { get; set; }
         public class AddCdnDomainRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag. Valid values of N: **1 to 20**.
+            /// <para>The key of the tag. Valid values of N: <b>1 to 20</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>env</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag. Valid values of N: **1 to 20**.
+            /// <para>The value of the tag. Valid values of N: <b>1 to 20</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -108,7 +134,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         }
 
         /// <summary>
-        /// The top-level domain.
+        /// <para>The top-level domain.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("TopLevelDomain")]
         [Validation(Required=false)]

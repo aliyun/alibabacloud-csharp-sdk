@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class CreateCdnDeliverTaskResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the tracking task.
+        /// <para>The ID of the tracking task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1025</para>
         /// </summary>
         [NameInMap("DeliverId")]
         [Validation(Required=false)]
         public string DeliverId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

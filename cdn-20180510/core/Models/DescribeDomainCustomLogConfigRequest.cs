@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainCustomLogConfigRequest : TeaModel {
         /// <summary>
-        /// The domain name. You can specify only one domain name.
+        /// <para>The domain name. You can specify only one domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

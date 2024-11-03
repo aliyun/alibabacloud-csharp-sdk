@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class BatchDeleteCdnDomainConfigRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain names whose configurations you want to delete. Separate multiple accelerated domain names with commas (,).
+        /// <para>The accelerated domain names whose configurations you want to delete. Separate multiple accelerated domain names with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com,example.org</para>
         /// </summary>
         [NameInMap("DomainNames")]
         [Validation(Required=false)]
         public string DomainNames { get; set; }
 
         /// <summary>
-        /// The names of the features that you want to delete. Separate multiple feature names with commas (,). For more information about feature names, see [Parameters for configuring features for domain names](https://help.aliyun.com/document_detail/388460.html).
+        /// <para>The names of the features that you want to delete. Separate multiple feature names with commas (,). For more information about feature names, see <a href="https://help.aliyun.com/document_detail/388460.html">Parameters for configuring features for domain names</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>referer_white_list_set,https_force</para>
         /// </summary>
         [NameInMap("FunctionNames")]
         [Validation(Required=false)]

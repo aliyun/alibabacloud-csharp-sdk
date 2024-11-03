@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class StopCdnDomainRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name that you want to disable. You can specify only one domain name in each request.
+        /// <para>The accelerated domain name that you want to disable. You can specify only one domain name in each request.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

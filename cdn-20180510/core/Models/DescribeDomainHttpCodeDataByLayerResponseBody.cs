@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainHttpCodeDataByLayerResponseBody : TeaModel {
         /// <summary>
-        /// The time interval between the data entries returned. Unit: seconds.
+        /// <para>The time interval between the data entries returned. Unit: seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>300</para>
         /// </summary>
         [NameInMap("DataInterval")]
         [Validation(Required=false)]
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// The statistics of HTTP status codes returned at each time interval.
+        /// <para>The statistics of HTTP status codes returned at each time interval.</para>
         /// </summary>
         [NameInMap("HttpCodeDataInterval")]
         [Validation(Required=false)]
@@ -28,21 +31,30 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             public List<DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule : TeaModel {
                 /// <summary>
-                /// The timestamp of the data returned.
+                /// <para>The timestamp of the data returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2015-12-10T20:35:00Z</para>
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
                 /// <summary>
-                /// The total number of times that HTTP status codes were returned.
+                /// <para>The total number of times that HTTP status codes were returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>110</para>
                 /// </summary>
                 [NameInMap("TotalValue")]
                 [Validation(Required=false)]
                 public string TotalValue { get; set; }
 
                 /// <summary>
-                /// The number of times that the HTTP status code was returned.
+                /// <para>The number of times that the HTTP status code was returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{ &quot;200&quot;: 10, &quot;206&quot;: 100}</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -53,7 +65,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class ListDomainsByLogConfigIdRequest : TeaModel {
         /// <summary>
-        /// The ID of the custom configuration.
+        /// <para>The ID of the custom configuration.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("ConfigId")]
         [Validation(Required=false)]

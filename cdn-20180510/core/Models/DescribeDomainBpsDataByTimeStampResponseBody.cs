@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainBpsDataByTimeStampResponseBody : TeaModel {
         /// <summary>
-        /// A list of bandwidth values by ISP and region.
+        /// <para>A list of bandwidth values by ISP and region.</para>
         /// </summary>
         [NameInMap("BpsDataList")]
         [Validation(Required=false)]
@@ -21,28 +21,40 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             public List<DescribeDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel> BpsDataModel { get; set; }
             public class DescribeDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel : TeaModel {
                 /// <summary>
-                /// The bandwidth value.
+                /// <para>The bandwidth value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>52119553</para>
                 /// </summary>
                 [NameInMap("Bps")]
                 [Validation(Required=false)]
                 public long? Bps { get; set; }
 
                 /// <summary>
-                /// The name of the ISP.
+                /// <para>The name of the ISP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>unicom</para>
                 /// </summary>
                 [NameInMap("IspName")]
                 [Validation(Required=false)]
                 public string IspName { get; set; }
 
                 /// <summary>
-                /// The name of the region.
+                /// <para>The name of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Liaoning</para>
                 /// </summary>
                 [NameInMap("LocationName")]
                 [Validation(Required=false)]
                 public string LocationName { get; set; }
 
                 /// <summary>
-                /// The timestamp of the data returned.
+                /// <para>The timestamp of the data returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-11-30T05:40:00Z</para>
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
@@ -53,21 +65,30 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         }
 
         /// <summary>
-        /// The accelerated domain name.
+        /// <para>The accelerated domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The point in time.
+        /// <para>The point in time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-11-30T05:40:00Z</para>
         /// </summary>
         [NameInMap("TimeStamp")]
         [Validation(Required=false)]

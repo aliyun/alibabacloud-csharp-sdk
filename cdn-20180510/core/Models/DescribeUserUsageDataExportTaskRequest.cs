@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeUserUsageDataExportTaskRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return. Valid values: **1** to **100000**.
+        /// <para>The number of the page to return. Valid values: <b>1</b> to <b>100000</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **20**. Maximum value: **50**.
+        /// <para>The number of entries to return on each page. Default value: <b>20</b>. Maximum value: <b>50</b>.</para>
+        /// <para>Valid values: an integer from <b>1</b> to <b>50</b>.</para>
         /// 
-        /// Valid values: an integer from **1** to **50**.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

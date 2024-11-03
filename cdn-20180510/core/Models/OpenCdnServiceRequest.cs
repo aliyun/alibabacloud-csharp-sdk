@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class OpenCdnServiceRequest : TeaModel {
         /// <summary>
-        /// The metering method of Alibaba Cloud CDN. A value of **PayByTraffic** indicates that the metering method is pay-by-data-transfer.
+        /// <para>The metering method of Alibaba Cloud CDN. A value of <b>PayByTraffic</b> indicates that the metering method is pay-by-data-transfer.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>PayByTraffic</para>
         /// </summary>
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]

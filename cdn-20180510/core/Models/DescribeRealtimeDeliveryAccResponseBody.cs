@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeRealtimeDeliveryAccResponseBody : TeaModel {
         /// <summary>
-        /// The statistics about real-time log deliveries.
+        /// <para>The statistics about real-time log deliveries.</para>
         /// </summary>
         [NameInMap("ReatTimeDeliveryAccData")]
         [Validation(Required=false)]
@@ -21,21 +21,30 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             public List<DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData> AccData { get; set; }
             public class DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData : TeaModel {
                 /// <summary>
-                /// The number of failed attempts to deliver log data to Log Service.
+                /// <para>The number of failed attempts to deliver log data to Log Service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("FailedNum")]
                 [Validation(Required=false)]
                 public int? FailedNum { get; set; }
 
                 /// <summary>
-                /// The number of successful deliveries of log data to Log Service.
+                /// <para>The number of successful deliveries of log data to Log Service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("SuccessNum")]
                 [Validation(Required=false)]
                 public int? SuccessNum { get; set; }
 
                 /// <summary>
-                /// The timestamp of the data returned.
+                /// <para>The timestamp of the data returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2018-09-03T06:00:00Z</para>
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
@@ -46,7 +55,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>684306D2-2511-4977-991D-CE97E91FD7C0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

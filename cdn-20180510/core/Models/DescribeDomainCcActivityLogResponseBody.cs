@@ -10,56 +10,77 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainCcActivityLogResponseBody : TeaModel {
         /// <summary>
-        /// The list of rate limiting logs.
+        /// <para>The list of rate limiting logs.</para>
         /// </summary>
         [NameInMap("ActivityLog")]
         [Validation(Required=false)]
         public List<DescribeDomainCcActivityLogResponseBodyActivityLog> ActivityLog { get; set; }
         public class DescribeDomainCcActivityLogResponseBodyActivityLog : TeaModel {
             /// <summary>
-            /// The action that was triggered.
+            /// <para>The action that was triggered.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>deny</para>
             /// </summary>
             [NameInMap("Action")]
             [Validation(Required=false)]
             public string Action { get; set; }
 
             /// <summary>
-            /// The accelerated domain name.
+            /// <para>The accelerated domain name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example.com</para>
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
 
             /// <summary>
-            /// The name of the rule based on which rate limiting was triggered.
+            /// <para>The name of the rule based on which rate limiting was triggered.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
             public string RuleName { get; set; }
 
             /// <summary>
-            /// The timestamp of the data returned.
+            /// <para>The timestamp of the data returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2015-12-10T20:00:00Z</para>
             /// </summary>
             [NameInMap("TimeStamp")]
             [Validation(Required=false)]
             public string TimeStamp { get; set; }
 
             /// <summary>
-            /// The trigger of rate limiting.
+            /// <para>The trigger of rate limiting.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Ip</para>
             /// </summary>
             [NameInMap("TriggerObject")]
             [Validation(Required=false)]
             public string TriggerObject { get; set; }
 
             /// <summary>
-            /// The period of time during which rate limiting remains effective.
+            /// <para>The period of time during which rate limiting remains effective.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>300</para>
             /// </summary>
             [NameInMap("Ttl")]
             [Validation(Required=false)]
             public long? Ttl { get; set; }
 
             /// <summary>
-            /// The value of the trigger for rate limiting.
+            /// <para>The value of the trigger for rate limiting.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.2.3.4</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -68,28 +89,40 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageIndex")]
         [Validation(Required=false)]
         public long? PageIndex { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

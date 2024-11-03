@@ -18,9 +18,11 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The origin servers. Separate multiple origin servers with commas (,). Fuzzy match is not supported.
+        /// <para>The origin servers. Separate multiple origin servers with commas (,). Fuzzy match is not supported.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]

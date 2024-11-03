@@ -10,29 +10,34 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainRegionDataRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name. Separate multiple accelerated domain names with commas (,).
+        /// <para>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</para>
+        /// <para>By default, this operation queries the geographic distribution of users for all accelerated domain names.</para>
         /// 
-        /// By default, this operation queries the geographic distribution of users for all accelerated domain names.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range to query.
+        /// <para>The end of the time range to query.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end time must be later than the start time.</para>
         /// 
-        /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-        /// 
-        /// The end time must be later than the start time.
+        /// <b>Example:</b>
+        /// <para>2015-12-07T12:00:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query.
+        /// <para>The beginning of the time range to query.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
-        /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// <b>Example:</b>
+        /// <para>2015-12-05T12:00:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DeleteFCTriggerRequest : TeaModel {
         /// <summary>
-        /// The trigger that corresponds to the Function Compute service.
+        /// <para>The trigger that corresponds to the Function Compute service.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>acs:cdn:{RegionID}:{AccountID}:{Filter}</para>
         /// </summary>
         [NameInMap("TriggerARN")]
         [Validation(Required=false)]

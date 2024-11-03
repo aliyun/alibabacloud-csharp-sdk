@@ -10,44 +10,55 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>QpgBAAAAAABsb2dzL2RzLw==</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the resource.
+        /// <para>The ID of the resource.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Set the value to **DOMAIN**.
+        /// <para>The type of the resource. Set the value to <b>DOMAIN</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>DOMAIN</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The key-value pair of a tag.
+        /// <para>The key-value pair of a tag.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag.
+            /// <para>The key of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -56,14 +67,20 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         }
 
         /// <summary>
-        /// The business ID of the tag owner.
+        /// <para>The business ID of the tag owner.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>26842</para>
         /// </summary>
         [NameInMap("TagOwnerBid")]
         [Validation(Required=false)]
         public string TagOwnerBid { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the tag belongs.
+        /// <para>The ID of the Alibaba Cloud account to which the tag belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123xxxx</para>
         /// </summary>
         [NameInMap("TagOwnerUid")]
         [Validation(Required=false)]

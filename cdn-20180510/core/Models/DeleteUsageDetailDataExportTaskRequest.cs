@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DeleteUsageDetailDataExportTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the task. You can call the [DescribeUserUsageDataExportTask](https://help.aliyun.com/document_detail/91062.html) operation to query tasks.
+        /// <para>The ID of the task. You can call the <a href="https://help.aliyun.com/document_detail/91062.html">DescribeUserUsageDataExportTask</a> operation to query tasks.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
