@@ -3443,6 +3443,118 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>根据实体uuid查询关联的处置任务数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeProcessTaskCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProcessTaskCountResponse
+        /// </returns>
+        public DescribeProcessTaskCountResponse DescribeProcessTaskCountWithOptions(DescribeProcessTaskCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeProcessTaskCount",
+                Version = "2022-07-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeProcessTaskCountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据实体uuid查询关联的处置任务数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeProcessTaskCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProcessTaskCountResponse
+        /// </returns>
+        public async Task<DescribeProcessTaskCountResponse> DescribeProcessTaskCountWithOptionsAsync(DescribeProcessTaskCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeProcessTaskCount",
+                Version = "2022-07-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeProcessTaskCountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据实体uuid查询关联的处置任务数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeProcessTaskCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProcessTaskCountResponse
+        /// </returns>
+        public DescribeProcessTaskCountResponse DescribeProcessTaskCount(DescribeProcessTaskCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeProcessTaskCountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据实体uuid查询关联的处置任务数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeProcessTaskCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProcessTaskCountResponse
+        /// </returns>
+        public async Task<DescribeProcessTaskCountResponse> DescribeProcessTaskCountAsync(DescribeProcessTaskCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeProcessTaskCountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the information about handling tasks. When you use Security Orchestration Automation Response (SOAR) to handle events, handling tasks are generated in the handling center.</para>
         /// </summary>
         /// 
