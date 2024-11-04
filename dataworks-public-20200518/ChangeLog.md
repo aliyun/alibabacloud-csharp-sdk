@@ -1,3 +1,7 @@
+2024-11-04 Version: 6.1.7
+- Update API CreateProject: update param ProjectDescription.
+
+
 2024-10-17 Version: 6.1.6
 - Update API ListNodes: update response param.
 

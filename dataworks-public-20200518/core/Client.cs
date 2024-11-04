@@ -24956,7 +24956,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom alert rule.</para>
+        /// <para>Queries the information about a custom alert rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25004,7 +25004,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom alert rule.</para>
+        /// <para>Queries the information about a custom alert rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25052,7 +25052,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom alert rule.</para>
+        /// <para>Queries the information about a custom alert rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25076,7 +25076,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom alert rule.</para>
+        /// <para>Queries the information about a custom alert rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -35544,7 +35544,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取租户下面的数据源类型粒度的表名称</para>
+        /// <para>Obtains tables of different data source types within a tenant by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35594,7 +35594,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取租户下面的数据源类型粒度的表名称</para>
+        /// <para>Obtains tables of different data source types within a tenant by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35644,7 +35644,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取租户下面的数据源类型粒度的表名称</para>
+        /// <para>Obtains tables of different data source types within a tenant by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35662,7 +35662,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取租户下面的数据源类型粒度的表名称</para>
+        /// <para>Obtains tables of different data source types within a tenant by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45114,7 +45114,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata information about a table.</para>
+        /// <para>Updates the metadata information about a table. Only MaxCompute tables are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45198,7 +45198,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata information about a table.</para>
+        /// <para>Updates the metadata information about a table. Only MaxCompute tables are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45282,7 +45282,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata information about a table.</para>
+        /// <para>Updates the metadata information about a table. Only MaxCompute tables are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45300,7 +45300,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata information about a table.</para>
+        /// <para>Updates the metadata information about a table. Only MaxCompute tables are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">

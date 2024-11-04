@@ -42,8 +42,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string TaskContent { get; set; }
 
         /// <summary>
-        /// <para>The setting based on which the resource group used by the data synchronization task is updated. You must configure this parameter in the JSON format.</para>
-        /// <para>Only the ResourceGroup field is supported. This field specifies the identifier of the resource group for Data Integration that is used by the data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the identifier of the resource group. If you do not need to update the resource group for the data synchronization task, leave this parameter empty.</para>
+        /// <para>The configuration parameters of the data synchronization task. You must configure this parameter in the JSON format.</para>
+        /// <list type="bullet">
+        /// <item><description>ResourceGroup: the identifier of the resource group for Data Integration that is used by the data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the identifier of the resource group.</description></item>
+        /// <item><description>Cu: the specifications occupied by the data synchronization task in the serverless resource group. The value of this parameter must be a multiple of 0.5.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;ResourceGroup&quot;:&quot;S_res_group_XXX_XXXX&quot;}</para>

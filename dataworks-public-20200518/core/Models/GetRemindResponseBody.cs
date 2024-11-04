@@ -26,10 +26,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public int? AlertInterval { get; set; }
 
+            /// <summary>
+            /// <para>The alert notification method.</para>
+            /// </summary>
             [NameInMap("AlertMethods")]
             [Validation(Required=false)]
             public List<string> AlertMethods { get; set; }
 
+            /// <summary>
+            /// <para>The description of the alert recipient.</para>
+            /// </summary>
             [NameInMap("AlertTargets")]
             [Validation(Required=false)]
             public List<string> AlertTargets { get; set; }
@@ -82,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<GetRemindResponseBodyDataBizProcesses> BizProcesses { get; set; }
             public class GetRemindResponseBodyDataBizProcesses : TeaModel {
                 /// <summary>
-                /// <para>The workflow ID.</para>
+                /// <para>The ID of the workflow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9527</para>
@@ -229,6 +235,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public List<string> AlertTargets { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>OWNER</para>
+                /// </summary>
                 [NameInMap("AlertUnit")]
                 [Validation(Required=false)]
                 public string AlertUnit { get; set; }
@@ -311,6 +321,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public bool? Useflag { get; set; }
 
+            /// <summary>
+            /// <para>The information about the webhook URL.</para>
+            /// </summary>
             [NameInMap("Webhooks")]
             [Validation(Required=false)]
             public List<string> Webhooks { get; set; }
