@@ -467,6 +467,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [Validation(Required=false)]
                 public string IntranetAddressHcStatus { get; set; }
 
+                [NameInMap("Ipv4LocalAddresses")]
+                [Validation(Required=false)]
+                public List<string> Ipv4LocalAddresses { get; set; }
+
                 /// <summary>
                 /// <para>An IPv6 address.</para>
                 /// <para>This parameter takes effect only when <b>AddressIPVersion</b> is set to <b>DualStack</b>. The network type is determined by the value of <b>Ipv6AddressType</b>.</para>
@@ -481,6 +485,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [NameInMap("Ipv6AddressHcStatus")]
                 [Validation(Required=false)]
                 public string Ipv6AddressHcStatus { get; set; }
+
+                [NameInMap("Ipv6LocalAddresses")]
+                [Validation(Required=false)]
+                public List<string> Ipv6LocalAddresses { get; set; }
 
             }
 
