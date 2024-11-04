@@ -10,85 +10,116 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class QuerySecretNoDetailResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// <list type="bullet">
+        /// <item><description>The value OK indicates that the request was successful.</description></item>
+        /// <item><description>Other status codes indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</description></item>
+        /// </list>
         /// 
-        /// *   The value OK indicates that the request was successful.
-        /// *   Other status codes indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/109196.html).
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>066E6E47-04CB-4774-A976-4F73CB76D4A3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The attributes of the phone number.
+        /// <para>The attributes of the phone number.</para>
         /// </summary>
         [NameInMap("SecretNoInfoDTO")]
         [Validation(Required=false)]
         public QuerySecretNoDetailResponseBodySecretNoInfoDTO SecretNoInfoDTO { get; set; }
         public class QuerySecretNoDetailResponseBodySecretNoInfoDTO : TeaModel {
             /// <summary>
-            /// The verification status of the phone number. Valid values:
+            /// <para>The verification status of the phone number. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: The phone number is not verified.</description></item>
+            /// <item><description><b>1</b>: The phone number is verified.</description></item>
+            /// </list>
             /// 
-            /// *   **0**: The phone number is not verified.
-            /// *   **1**: The phone number is verified.
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("CertifyStatus")]
             [Validation(Required=false)]
             public int? CertifyStatus { get; set; }
 
             /// <summary>
-            /// The city.
+            /// <para>The city.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>chengdu</para>
             /// </summary>
             [NameInMap("City")]
             [Validation(Required=false)]
             public string City { get; set; }
 
             /// <summary>
-            /// The province.
+            /// <para>The province.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sichuan</para>
             /// </summary>
             [NameInMap("Province")]
             [Validation(Required=false)]
             public string Province { get; set; }
 
             /// <summary>
-            /// The time when the phone number was purchased.
+            /// <para>The time when the phone number was purchased.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-12-03 15:19:27</para>
             /// </summary>
             [NameInMap("PurchaseTime")]
             [Validation(Required=false)]
             public string PurchaseTime { get; set; }
 
             /// <summary>
-            /// The status of the phone number. Valid values:
+            /// <para>The status of the phone number. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: The phone number is not bound to other phone numbers.</description></item>
+            /// <item><description><b>1</b>: The phone number is bound to other phone numbers.</description></item>
+            /// <item><description><b>2</b>: The phone number is locked.</description></item>
+            /// <item><description><b>3</b>: The phone number is frozen.</description></item>
+            /// </list>
             /// 
-            /// *   **0**: The phone number is not bound to other phone numbers.
-            /// *   **1**: The phone number is bound to other phone numbers.
-            /// *   **2**: The phone number is locked.
-            /// *   **3**: The phone number is frozen.
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("SecretStatus")]
             [Validation(Required=false)]
             public long? SecretStatus { get; set; }
 
             /// <summary>
-            /// The carrier to which the phone number belongs. Valid values:
+            /// <para>The carrier to which the phone number belongs. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: China Mobile</description></item>
+            /// <item><description><b>2</b>: China Unicom</description></item>
+            /// <item><description><b>3</b>: China Telecom</description></item>
+            /// </list>
             /// 
-            /// *   **1**: China Mobile
-            /// *   **2**: China Unicom
-            /// *   **3**: China Telecom
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Vendor")]
             [Validation(Required=false)]

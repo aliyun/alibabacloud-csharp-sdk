@@ -10,51 +10,65 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class CreatePickUpWaybillPreQueryRequest : TeaModel {
         /// <summary>
-        /// The consignee information.
-        /// 
-        /// This parameter is required.
+        /// <para>The consignee information.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ConsigneeInfo")]
         [Validation(Required=false)]
         public CreatePickUpWaybillPreQueryRequestConsigneeInfo ConsigneeInfo { get; set; }
         public class CreatePickUpWaybillPreQueryRequestConsigneeInfo : TeaModel {
             /// <summary>
-            /// The address of the consignee.
+            /// <para>The address of the consignee.</para>
             /// </summary>
             [NameInMap("AddressInfo")]
             [Validation(Required=false)]
             public CreatePickUpWaybillPreQueryRequestConsigneeInfoAddressInfo AddressInfo { get; set; }
             public class CreatePickUpWaybillPreQueryRequestConsigneeInfoAddressInfo : TeaModel {
                 /// <summary>
-                /// The detailed address of the consignee.
+                /// <para>The detailed address of the consignee.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>XX community</para>
                 /// </summary>
                 [NameInMap("AddressDetail")]
                 [Validation(Required=false)]
                 public string AddressDetail { get; set; }
 
                 /// <summary>
-                /// The district where the consignee is located.
+                /// <para>The district where the consignee is located.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>chang,an</para>
                 /// </summary>
                 [NameInMap("AreaName")]
                 [Validation(Required=false)]
                 public string AreaName { get; set; }
 
                 /// <summary>
-                /// The city where the consignee is located.
+                /// <para>The city where the consignee is located.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Xi,an</para>
                 /// </summary>
                 [NameInMap("CityName")]
                 [Validation(Required=false)]
                 public string CityName { get; set; }
 
                 /// <summary>
-                /// The province where the consignee is located.
+                /// <para>The province where the consignee is located.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Shanxi</para>
                 /// </summary>
                 [NameInMap("ProvinceName")]
                 [Validation(Required=false)]
                 public string ProvinceName { get; set; }
 
                 /// <summary>
-                /// The street where the consignee is located.
+                /// <para>The street where the consignee is located.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>XX Street</para>
                 /// </summary>
                 [NameInMap("TownName")]
                 [Validation(Required=false)]
@@ -63,18 +77,22 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             }
 
             /// <summary>
-            /// The mobile phone number of the consignee.
+            /// <para>The mobile phone number of the consignee.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>1390000****</para>
             /// </summary>
             [NameInMap("Mobile")]
             [Validation(Required=false)]
             public string Mobile { get; set; }
 
             /// <summary>
-            /// The name of the consignee.
+            /// <para>The name of the consignee.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>Li</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -83,83 +101,109 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         }
 
         /// <summary>
-        /// The code of the courier company. If no courier company is specified, the system allocates a courier company.
+        /// <para>The code of the courier company. If no courier company is specified, the system allocates a courier company.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>YTO</para>
         /// </summary>
         [NameInMap("CpCode")]
         [Validation(Required=false)]
         public string CpCode { get; set; }
 
         /// <summary>
-        /// The identifier of the external channel source. It cannot contain underscores.
+        /// <para>The identifier of the external channel source. It cannot contain underscores.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("OrderChannels")]
         [Validation(Required=false)]
         public string OrderChannels { get; set; }
 
         /// <summary>
-        /// The order number of the access system.
+        /// <para>The order number of the access system.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>787DFHHDS989****</para>
         /// </summary>
         [NameInMap("OuterOrderCode")]
         [Validation(Required=false)]
         public string OuterOrderCode { get; set; }
 
         /// <summary>
-        /// The estimated weight. Unit: gram.
+        /// <para>The estimated weight. Unit: gram.</para>
+        /// <remarks>
+        /// <para> If you need to query the estimated price, this parameter is required.</para>
+        /// </remarks>
         /// 
-        /// >  If you need to query the estimated price, this parameter is required.
+        /// <b>Example:</b>
+        /// <para>2000</para>
         /// </summary>
         [NameInMap("PreWeight")]
         [Validation(Required=false)]
         public string PreWeight { get; set; }
 
         /// <summary>
-        /// The sender information.
-        /// 
-        /// This parameter is required.
+        /// <para>The sender information.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SenderInfo")]
         [Validation(Required=false)]
         public CreatePickUpWaybillPreQueryRequestSenderInfo SenderInfo { get; set; }
         public class CreatePickUpWaybillPreQueryRequestSenderInfo : TeaModel {
             /// <summary>
-            /// The address of the sender.
+            /// <para>The address of the sender.</para>
             /// </summary>
             [NameInMap("AddressInfo")]
             [Validation(Required=false)]
             public CreatePickUpWaybillPreQueryRequestSenderInfoAddressInfo AddressInfo { get; set; }
             public class CreatePickUpWaybillPreQueryRequestSenderInfoAddressInfo : TeaModel {
                 /// <summary>
-                /// The detailed address of the sender.
+                /// <para>The detailed address of the sender.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>XX community</para>
                 /// </summary>
                 [NameInMap("AddressDetail")]
                 [Validation(Required=false)]
                 public string AddressDetail { get; set; }
 
                 /// <summary>
-                /// The district where the sender is located.
+                /// <para>The district where the sender is located.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>xihu</para>
                 /// </summary>
                 [NameInMap("AreaName")]
                 [Validation(Required=false)]
                 public string AreaName { get; set; }
 
                 /// <summary>
-                /// The city where the sender is located.
+                /// <para>The city where the sender is located.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>hangzhou</para>
                 /// </summary>
                 [NameInMap("CityName")]
                 [Validation(Required=false)]
                 public string CityName { get; set; }
 
                 /// <summary>
-                /// The province where the sender is located.
+                /// <para>The province where the sender is located.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>zhejiang</para>
                 /// </summary>
                 [NameInMap("ProvinceName")]
                 [Validation(Required=false)]
                 public string ProvinceName { get; set; }
 
                 /// <summary>
-                /// The street where the sender is located.
+                /// <para>The street where the sender is located.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>XX Street</para>
                 /// </summary>
                 [NameInMap("TownName")]
                 [Validation(Required=false)]
@@ -168,18 +212,22 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             }
 
             /// <summary>
-            /// The mobile phone number of the sender.
+            /// <para>The mobile phone number of the sender.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>1390000****</para>
             /// </summary>
             [NameInMap("Mobile")]
             [Validation(Required=false)]
             public string Mobile { get; set; }
 
             /// <summary>
-            /// The name of the sender.
+            /// <para>The name of the sender.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>Wang</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

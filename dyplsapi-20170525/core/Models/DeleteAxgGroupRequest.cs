@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class DeleteAxgGroupRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FC2235****</para>
         /// </summary>
         [NameInMap("PoolKey")]
         [Validation(Required=false)]

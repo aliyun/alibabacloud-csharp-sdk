@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class BindBatchAxgShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AxgBindList")]
         [Validation(Required=false)]
@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>FC2235****</para>
+        /// </summary>
         [NameInMap("PoolKey")]
         [Validation(Required=false)]
         public string PoolKey { get; set; }

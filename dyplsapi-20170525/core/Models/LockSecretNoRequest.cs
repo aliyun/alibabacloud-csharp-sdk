@@ -14,11 +14,12 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The key of the phone number pool.
+        /// <para>The key of the phone number pool.</para>
+        /// <para>Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <b>Number Pool Management</b> page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>FC123****</para>
         /// </summary>
         [NameInMap("PoolKey")]
         [Validation(Required=false)]
@@ -33,9 +34,11 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The private number that you want to lock. You must enter a complete mobile phone number.
+        /// <para>The private number that you want to lock. You must enter a complete mobile phone number.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1300000****</para>
         /// </summary>
         [NameInMap("SecretNo")]
         [Validation(Required=false)]

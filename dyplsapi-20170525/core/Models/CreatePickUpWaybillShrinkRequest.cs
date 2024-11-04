@@ -10,139 +10,179 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class CreatePickUpWaybillShrinkRequest : TeaModel {
         /// <summary>
-        /// The end time of the door-to-door pickup in the appointment. The value of **AppointGotEndTime** is the value of **EndTime** of **AppointTimes** in **CpTimeSelectList** returned by the [CreatePickUpWaybillPreQuery](~~CreatePickUpWaybillPreQuery~~#resultMapping) operation.
+        /// <para>The end time of the door-to-door pickup in the appointment. The value of <b>AppointGotEndTime</b> is the value of <b>EndTime</b> of <b>AppointTimes</b> in <b>CpTimeSelectList</b> returned by the <a href="~~CreatePickUpWaybillPreQuery~~#resultMapping">CreatePickUpWaybillPreQuery</a> operation.</para>
+        /// <remarks>
+        /// <para> This parameter is required when <b>BizType</b> is set to <b>1</b>.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is required when **BizType** is set to **1**.
+        /// <b>Example:</b>
+        /// <para>2021-01-01 12:00:00</para>
         /// </summary>
         [NameInMap("AppointGotEndTime")]
         [Validation(Required=false)]
         public string AppointGotEndTime { get; set; }
 
         /// <summary>
-        /// The start time of the door-to-door pickup in the appointment. The value of **AppointGotStartTime** is the value of **StartTime** of **AppointTimes** in **CpTimeSelectList** returned by the [CreatePickUpWaybillPreQuery](~~CreatePickUpWaybillPreQuery~~#resultMapping) operation.
+        /// <para>The start time of the door-to-door pickup in the appointment. The value of <b>AppointGotStartTime</b> is the value of <b>StartTime</b> of <b>AppointTimes</b> in <b>CpTimeSelectList</b> returned by the <a href="~~CreatePickUpWaybillPreQuery~~#resultMapping">CreatePickUpWaybillPreQuery</a> operation.</para>
+        /// <remarks>
+        /// <para> This parameter is required when <b>BizType</b> is set to <b>1</b>.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is required when **BizType** is set to **1**.
+        /// <b>Example:</b>
+        /// <para>2021-01-01 10:00:00</para>
         /// </summary>
         [NameInMap("AppointGotStartTime")]
         [Validation(Required=false)]
         public string AppointGotStartTime { get; set; }
 
         /// <summary>
-        /// The pickup mode. Valid values:
+        /// <para>The pickup mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b> (default): real-time order.</description></item>
+        /// <item><description><b>1</b>: appointment order.</description></item>
+        /// </list>
         /// 
-        /// *   **0** (default): real-time order.
-        /// *   **1**: appointment order.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public int? BizType { get; set; }
 
         /// <summary>
-        /// The address of the consignee.
-        /// 
-        /// This parameter is required.
+        /// <para>The address of the consignee.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ConsigneeAddress")]
         [Validation(Required=false)]
         public string ConsigneeAddressShrink { get; set; }
 
         /// <summary>
-        /// The mobile phone number of the consignee.
+        /// <para>The mobile phone number of the consignee.</para>
+        /// <remarks>
+        /// <para> Either ConsigneeMobile or ConsigneePhone must be set.</para>
+        /// </remarks>
         /// 
-        /// >  Either ConsigneeMobile or ConsigneePhone must be set.
+        /// <b>Example:</b>
+        /// <para>1580000****</para>
         /// </summary>
         [NameInMap("ConsigneeMobile")]
         [Validation(Required=false)]
         public string ConsigneeMobile { get; set; }
 
         /// <summary>
-        /// The name of the consignee.
+        /// <para>The name of the consignee.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Li</para>
         /// </summary>
         [NameInMap("ConsigneeName")]
         [Validation(Required=false)]
         public string ConsigneeName { get; set; }
 
         /// <summary>
-        /// The landline phone number of the consignee.
+        /// <para>The landline phone number of the consignee.</para>
+        /// <remarks>
+        /// <para> Either ConsigneeMobile or ConsigneePhone must be set.</para>
+        /// </remarks>
         /// 
-        /// >  Either ConsigneeMobile or ConsigneePhone must be set.
+        /// <b>Example:</b>
+        /// <para>0570000****</para>
         /// </summary>
         [NameInMap("ConsigneePhone")]
         [Validation(Required=false)]
         public string ConsigneePhone { get; set; }
 
         /// <summary>
-        /// The code of the courier company.
+        /// <para>The code of the courier company.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>YTO</para>
         /// </summary>
         [NameInMap("CpCode")]
         [Validation(Required=false)]
         public string CpCode { get; set; }
 
         /// <summary>
-        /// The items.
+        /// <para>The items.</para>
         /// </summary>
         [NameInMap("GoodsInfos")]
         [Validation(Required=false)]
         public string GoodsInfosShrink { get; set; }
 
         /// <summary>
-        /// The external channel sources.
+        /// <para>The external channel sources.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>YUN_DIAN_SHANG</para>
         /// </summary>
         [NameInMap("OrderChannels")]
         [Validation(Required=false)]
         public string OrderChannels { get; set; }
 
         /// <summary>
-        /// The ID of the external order.
+        /// <para>The ID of the external order.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>143234234266****</para>
         /// </summary>
         [NameInMap("OuterOrderCode")]
         [Validation(Required=false)]
         public string OuterOrderCode { get; set; }
 
         /// <summary>
-        /// The additional information about the order. The additional information will be printed on the order.
+        /// <para>The additional information about the order. The additional information will be printed on the order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>fragile</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// The address of the sender.
-        /// 
-        /// This parameter is required.
+        /// <para>The address of the sender.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SendAddress")]
         [Validation(Required=false)]
         public string SendAddressShrink { get; set; }
 
         /// <summary>
-        /// The mobile phone number of the sender.
+        /// <para>The mobile phone number of the sender.</para>
+        /// <remarks>
+        /// <para> Either SendMobile or SendPhone must be set.</para>
+        /// </remarks>
         /// 
-        /// >  Either SendMobile or SendPhone must be set.
+        /// <b>Example:</b>
+        /// <para>1596714****</para>
         /// </summary>
         [NameInMap("SendMobile")]
         [Validation(Required=false)]
         public string SendMobile { get; set; }
 
         /// <summary>
-        /// The name of the sender.
+        /// <para>The name of the sender.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Wang</para>
         /// </summary>
         [NameInMap("SendName")]
         [Validation(Required=false)]
         public string SendName { get; set; }
 
         /// <summary>
-        /// The landline phone number of the sender.
+        /// <para>The landline phone number of the sender.</para>
+        /// <remarks>
+        /// <para> Either SendMobile or SendPhone must be set.</para>
+        /// </remarks>
         /// 
-        /// >  Either SendMobile or SendPhone must be set.
+        /// <b>Example:</b>
+        /// <para>05718845****</para>
         /// </summary>
         [NameInMap("SendPhone")]
         [Validation(Required=false)]

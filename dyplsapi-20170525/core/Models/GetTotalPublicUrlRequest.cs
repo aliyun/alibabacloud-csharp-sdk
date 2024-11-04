@@ -10,31 +10,35 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class GetTotalPublicUrlRequest : TeaModel {
         /// <summary>
-        /// The ID of the call record.
+        /// <para>The ID of the call record.</para>
+        /// <para>Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view <b>Call Record ID</b> on the <b>Call Record Query</b> page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view **Call Record ID** on the **Call Record Query** page.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2568900****</para>
         /// </summary>
         [NameInMap("CallId")]
         [Validation(Required=false)]
         public string CallId { get; set; }
 
         /// <summary>
-        /// The call initiation time in the call record.
+        /// <para>The call initiation time in the call record.</para>
+        /// <para>Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a>. View <b>Call Initiated At</b> on the <b>Call Record Query</b> page, or view the call_time field in the Call Detail Record (CDR) receipt.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account). View **Call Initiated At** on the **Call Record Query** page, or view the call_time field in the Call Detail Record (CDR) receipt.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2019-03-05 12:00:00</para>
         /// </summary>
         [NameInMap("CallTime")]
         [Validation(Required=false)]
         public string CallTime { get; set; }
 
         /// <summary>
-        /// Specifies whether the verification on the binding ID is required.
+        /// <para>Specifies whether the verification on the binding ID is required.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("CheckSubs")]
         [Validation(Required=false)]
@@ -45,9 +49,11 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
+        /// <para>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <b>Number Pool Management</b> page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>FC12256****</para>
         /// </summary>
         [NameInMap("PartnerKey")]
         [Validation(Required=false)]

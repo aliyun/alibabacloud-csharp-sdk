@@ -10,45 +10,61 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class QueryPhoneNoAByTrackNoResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// <list type="bullet">
+        /// <item><description>The value OK indicates that the request was successful.</description></item>
+        /// <item><description>Other status codes indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</description></item>
+        /// </list>
         /// 
-        /// *   The value OK indicates that the request was successful.
-        /// *   Other status codes indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/109196.html).
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The information returned after the phone numbers were bound.
+        /// <para>The information returned after the phone numbers were bound.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public List<QueryPhoneNoAByTrackNoResponseBodyModule> Module { get; set; }
         public class QueryPhoneNoAByTrackNoResponseBodyModule : TeaModel {
             /// <summary>
-            /// The extension of phone number X.
+            /// <para>The extension of phone number X.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>130</para>
             /// </summary>
             [NameInMap("Extension")]
             [Validation(Required=false)]
             public string Extension { get; set; }
 
             /// <summary>
-            /// Phone number A.
+            /// <para>Phone number A.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1310000****</para>
             /// </summary>
             [NameInMap("PhoneNoA")]
             [Validation(Required=false)]
             public string PhoneNoA { get; set; }
 
             /// <summary>
-            /// The private number, that is, phone number X.
+            /// <para>The private number, that is, phone number X.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1710000****</para>
             /// </summary>
             [NameInMap("PhoneNoX")]
             [Validation(Required=false)]
@@ -57,7 +73,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8906582E-6722</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,45 +10,61 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class CancelPickUpWaybillResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// <list type="bullet">
+        /// <item><description>The value OK indicates that the request was successful.</description></item>
+        /// <item><description>Other status codes indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</description></item>
+        /// </list>
         /// 
-        /// *   The value OK indicates that the request was successful.
-        /// *   Other status codes indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/109196.html).
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CancelPickUpWaybillResponseBodyData Data { get; set; }
         public class CancelPickUpWaybillResponseBodyData : TeaModel {
             /// <summary>
-            /// The error code.
+            /// <para>The error code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>none</para>
             /// </summary>
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// The error message.
+            /// <para>The error message.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>none</para>
             /// </summary>
             [NameInMap("ErrorMsg")]
             [Validation(Required=false)]
             public string ErrorMsg { get; set; }
 
             /// <summary>
-            /// The cancellation result.
+            /// <para>The cancellation result.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>OK</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// Indicates whether the cancellation was successful.
+            /// <para>Indicates whether the cancellation was successful.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Success")]
             [Validation(Required=false)]
@@ -57,14 +73,20 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9FC30594-3841-43AD-9008-03393BCB5CD2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

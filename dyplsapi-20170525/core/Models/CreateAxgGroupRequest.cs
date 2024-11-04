@@ -10,16 +10,23 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class CreateAxgGroupRequest : TeaModel {
         /// <summary>
-        /// The name of number group G. If the name of number group G is not specified, the ID of number group G is used as the name of number group G.
+        /// <para>The name of number group G. If the name of number group G is not specified, the ID of number group G is used as the name of number group G.</para>
+        /// <remarks>
+        /// <para> The value must be 1 to 128 characters in length.</para>
+        /// </remarks>
         /// 
-        /// >  The value must be 1 to 128 characters in length.
+        /// <b>Example:</b>
+        /// <para>Aliyun</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The phone numbers that you add to number group G. Separate multiple phone numbers with commas (,). A maximum of 200 phone numbers can be added to number group G.
+        /// <para>The phone numbers that you add to number group G. Separate multiple phone numbers with commas (,). A maximum of 200 phone numbers can be added to number group G.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1390000****,1380000****</para>
         /// </summary>
         [NameInMap("Numbers")]
         [Validation(Required=false)]
@@ -30,16 +37,21 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
+        /// <para>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <b>Number Pool Management</b> page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>FC123456</para>
         /// </summary>
         [NameInMap("PoolKey")]
         [Validation(Required=false)]
         public string PoolKey { get; set; }
 
         /// <summary>
-        /// The remarks of number group G. The value must be 0 to 256 characters in length.
+        /// <para>The remarks of number group G. The value must be 0 to 256 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

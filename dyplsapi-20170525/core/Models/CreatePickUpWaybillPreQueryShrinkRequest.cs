@@ -10,50 +10,60 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class CreatePickUpWaybillPreQueryShrinkRequest : TeaModel {
         /// <summary>
-        /// The consignee information.
-        /// 
-        /// This parameter is required.
+        /// <para>The consignee information.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ConsigneeInfo")]
         [Validation(Required=false)]
         public string ConsigneeInfoShrink { get; set; }
 
         /// <summary>
-        /// The code of the courier company. If no courier company is specified, the system allocates a courier company.
+        /// <para>The code of the courier company. If no courier company is specified, the system allocates a courier company.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>YTO</para>
         /// </summary>
         [NameInMap("CpCode")]
         [Validation(Required=false)]
         public string CpCode { get; set; }
 
         /// <summary>
-        /// The identifier of the external channel source. It cannot contain underscores.
+        /// <para>The identifier of the external channel source. It cannot contain underscores.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("OrderChannels")]
         [Validation(Required=false)]
         public string OrderChannels { get; set; }
 
         /// <summary>
-        /// The order number of the access system.
+        /// <para>The order number of the access system.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>787DFHHDS989****</para>
         /// </summary>
         [NameInMap("OuterOrderCode")]
         [Validation(Required=false)]
         public string OuterOrderCode { get; set; }
 
         /// <summary>
-        /// The estimated weight. Unit: gram.
+        /// <para>The estimated weight. Unit: gram.</para>
+        /// <remarks>
+        /// <para> If you need to query the estimated price, this parameter is required.</para>
+        /// </remarks>
         /// 
-        /// >  If you need to query the estimated price, this parameter is required.
+        /// <b>Example:</b>
+        /// <para>2000</para>
         /// </summary>
         [NameInMap("PreWeight")]
         [Validation(Required=false)]
         public string PreWeight { get; set; }
 
         /// <summary>
-        /// The sender information.
-        /// 
-        /// This parameter is required.
+        /// <para>The sender information.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SenderInfo")]
         [Validation(Required=false)]

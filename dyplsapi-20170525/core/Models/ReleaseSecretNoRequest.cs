@@ -14,9 +14,11 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
+        /// <para>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <b>Number Pool Management</b> page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>FC123456</para>
         /// </summary>
         [NameInMap("PoolKey")]
         [Validation(Required=false)]
@@ -31,11 +33,14 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The prefix of phone numbers. When you call the ReleaseSecretNo operation with **SecretNo** specified, the system performs fuzzy matching against phone numbers based on the prefix.
+        /// <para>The prefix of phone numbers. When you call the ReleaseSecretNo operation with <b>SecretNo</b> specified, the system performs fuzzy matching against phone numbers based on the prefix.</para>
+        /// <remarks>
+        /// <para> Up to 18 digits of a phone number prefix can be specified.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  Up to 18 digits of a phone number prefix can be specified.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>130</para>
         /// </summary>
         [NameInMap("SecretNo")]
         [Validation(Required=false)]

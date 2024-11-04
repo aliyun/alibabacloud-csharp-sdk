@@ -10,52 +10,71 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class BindAxnExtensionResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// <list type="bullet">
+        /// <item><description>The value OK indicates that the request was successful.</description></item>
+        /// <item><description>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</description></item>
+        /// </list>
         /// 
-        /// *   The value OK indicates that the request was successful.
-        /// *   Other values indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/109196.html).
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9297B722-A016-43FB-B51A-E54050D9369D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information returned after the phone numbers were bound.
+        /// <para>The information returned after the phone numbers were bound.</para>
         /// </summary>
         [NameInMap("SecretBindDTO")]
         [Validation(Required=false)]
         public BindAxnExtensionResponseBodySecretBindDTO SecretBindDTO { get; set; }
         public class BindAxnExtensionResponseBodySecretBindDTO : TeaModel {
             /// <summary>
-            /// The extension of the phone number.
+            /// <para>The extension of the phone number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>130</para>
             /// </summary>
             [NameInMap("Extension")]
             [Validation(Required=false)]
             public string Extension { get; set; }
 
             /// <summary>
-            /// The private number, that is, phone number X.
+            /// <para>The private number, that is, phone number X.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>139*****0000</para>
             /// </summary>
             [NameInMap("SecretNo")]
             [Validation(Required=false)]
             public string SecretNo { get; set; }
 
             /// <summary>
-            /// The binding ID.
+            /// <para>The binding ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1***************3</para>
             /// </summary>
             [NameInMap("SubsId")]
             [Validation(Required=false)]

@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class CancelPickUpWaybillRequest : TeaModel {
         /// <summary>
-        /// The cancellation reason.
+        /// <para>The cancellation reason.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>{\&quot;action\&quot;:\&quot;UPDATE_DESC\&quot;,\&quot;value\&quot;:\&quot;The courier is unable to pick up the package.\&quot;}</para>
         /// </summary>
         [NameInMap("CancelDesc")]
         [Validation(Required=false)]
         public string CancelDesc { get; set; }
 
         /// <summary>
-        /// The ID of the external order.
+        /// <para>The ID of the external order.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1145678823****</para>
         /// </summary>
         [NameInMap("OuterOrderCode")]
         [Validation(Required=false)]

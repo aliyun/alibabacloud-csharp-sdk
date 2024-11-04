@@ -14,18 +14,22 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The private number in the binding, that is, phone number X.
+        /// <para>The private number in the binding, that is, phone number X.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1390000****</para>
         /// </summary>
         [NameInMap("PhoneNoX")]
         [Validation(Required=false)]
         public string PhoneNoX { get; set; }
 
         /// <summary>
-        /// The key of the phone number pool.
+        /// <para>The key of the phone number pool.</para>
+        /// <para>Log on to the <a href="https://dyplsnext.console.aliyun.com/overview">Phone Number Protection console</a> and view the key of the phone number pool on the Number Pool Management page.</para>
         /// 
-        /// Log on to the [Phone Number Protection console](https://dyplsnext.console.aliyun.com/overview) and view the key of the phone number pool on the Number Pool Management page.
+        /// <b>Example:</b>
+        /// <para>FC123456</para>
         /// </summary>
         [NameInMap("PoolKey")]
         [Validation(Required=false)]

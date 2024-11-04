@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -17,20 +14,23 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The private number in the AXN binding, that is, phone number X.
+        /// <para>The private number in the AXN binding, that is, phone number X.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/110258.html">BindAxn</a> operation to obtain the value of PhoneNoX.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [BindAxn](https://help.aliyun.com/document_detail/110258.html) operation to obtain the value of PhoneNoX.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1700000****</para>
         /// </summary>
         [NameInMap("PhoneNoX")]
         [Validation(Required=false)]
         public string PhoneNoX { get; set; }
 
         /// <summary>
-        /// The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
+        /// <para>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <b>Number Pool Management</b> page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>FC2235****</para>
         /// </summary>
         [NameInMap("PoolKey")]
         [Validation(Required=false)]
@@ -45,20 +45,23 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The binding ID.
+        /// <para>The binding ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/110258.html">BindAxn</a> operation to obtain the value of SubsId.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [BindAxn](https://help.aliyun.com/document_detail/110258.html) operation to obtain the value of SubsId.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>15678890****</para>
         /// </summary>
         [NameInMap("SubsId")]
         [Validation(Required=false)]
         public string SubsId { get; set; }
 
         /// <summary>
-        /// The tracking number.
+        /// <para>The tracking number.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>abcde*****</para>
         /// </summary>
         [NameInMap("trackNo")]
         [Validation(Required=false)]
