@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+        /// <para> This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

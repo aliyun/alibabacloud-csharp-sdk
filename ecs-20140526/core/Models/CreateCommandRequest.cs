@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? EnableParameter { get; set; }
 
+        [NameInMap("Launcher")]
+        [Validation(Required=false)]
+        public string Launcher { get; set; }
+
         /// <summary>
         /// <para>The name of the command. The name supports all character sets and can be up to 128 characters in length.</para>
         /// <para>This parameter is required.</para>

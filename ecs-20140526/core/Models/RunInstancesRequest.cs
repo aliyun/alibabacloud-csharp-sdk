@@ -593,23 +593,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The category of data disk N. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>cloud_efficiency: ultra disk.</para>
+            /// <item><description><para>cloud_efficiency: ultra disk</para>
             /// </description></item>
-            /// <item><description><para>cloud_ssd: standard SSD.</para>
+            /// <item><description><para>cloud_ssd: standard SSD</para>
             /// </description></item>
-            /// <item><description><para>cloud_essd: ESSD.</para>
+            /// <item><description><para>cloud_essd: ESSD</para>
             /// </description></item>
-            /// <item><description><para>cloud: basic disk.</para>
+            /// <item><description><para>cloud: basic disk</para>
             /// </description></item>
-            /// <item><description><para>cloud_auto: ESSD AutoPL disk.</para>
+            /// <item><description><para>cloud_auto: ESSD AutoPL disk</para>
             /// </description></item>
-            /// <item><description><para>cloud_essd_entry: ESSD Entry disk.</para>
+            /// <item><description><para>cloud_essd_entry: ESSD Entry disk</para>
             /// <para>**</para>
             /// <para><b>Note</b> This parameter can be set to <c>cloud_essd_entry</c> only when <c>InstanceType</c> is set to <c>ecs.u1</c> or <c>ecs.e</c>.</para>
             /// </description></item>
-            /// <item><description><para>elastic_ephemeral_disk_standard: standard elastic ephemeral disk.</para>
+            /// <item><description><para>elastic_ephemeral_disk_standard: standard elastic ephemeral disk</para>
             /// </description></item>
-            /// <item><description><para>elastic_ephemeral_disk_premium: premium elastic ephemeral disk.</para>
+            /// <item><description><para>elastic_ephemeral_disk_premium: premium elastic ephemeral disk</para>
             /// </description></item>
             /// </list>
             /// <para>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</para>
@@ -653,7 +653,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description>From the 26th data disk on: /dev/xvd<c>[aa-zz]</c>. For example, the 26th data disk is named /dev/xvdaa, the 27th data disk is named /dev/xvdab, and so on.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify <c>DataDisk.N.Size</c> and <c>DataDisk.N.Category</c> to change the category and size of data disk N created based on the image.</para>
+            /// <para> This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify the <c>DataDisk.N.Size</c> and <c>DataDisk.N.Category</c> parameters to change the category and size of data disk N created based on the image.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -714,11 +714,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The performance level of the ESSD to use as data disk N. The value of N must be the same as that in <c>DataDisk.N.Category</c> when DataDisk.N.Category is set to cloud_essd. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</description></item>
-            /// <item><description>PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</description></item>
-            /// <item><description>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</description></item>
-            /// <item><description>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</description></item>
+            /// <item><description>PL1 (default): A single ESSD can deliver up to 50000 random read/write IOPS.</description></item>
+            /// <item><description>PL2: A single ESSD can deliver up to 100000 random read/write IOPS.</description></item>
+            /// <item><description>PL3: A single ESSD can deliver up to 1000000 random read/write IOPS.</description></item>
             /// </list>
-            /// <para>For more information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
+            /// <para>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PL1</para>
@@ -729,7 +729,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
-            /// <para>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</para>
+            /// <para>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</para>
             /// <remarks>
             /// <para> This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
             /// </remarks>
@@ -750,15 +750,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// </description></item>
             /// <item><description><para>Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the value of <c>DataDisk.N.PerformanceLevel</c>.</para>
             /// <list type="bullet">
-            /// <item><description>Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.</description></item>
-            /// <item><description>Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</description></item>
-            /// <item><description>Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</description></item>
-            /// <item><description>Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</description></item>
+            /// <item><description>Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 65536.</description></item>
+            /// <item><description>Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 65536.</description></item>
+            /// <item><description>Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 65536.</description></item>
+            /// <item><description>Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 65536.</description></item>
             /// </list>
             /// </description></item>
             /// <item><description><para>Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.</para>
             /// </description></item>
-            /// <item><description><para>Valid values when DataDisk.N.Category is set to cloud_auto: 1 to 32768.</para>
+            /// <item><description><para>Valid values when DiskCategory is set to cloud_auto: 1 to 65536.</para>
             /// </description></item>
             /// <item><description><para>Valid values when DataDisk.N.Category is set to cloud_essd_entry: 10 to 32768.</para>
             /// </description></item>
@@ -776,7 +776,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.</para>
-            /// <para>If <c>DataDisk.N.SnapshotId</c> is specified, <c>DataDisk.N.Size</c> is ignored. The data disk is created based on the size of the specified snapshot. Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.</para>
+            /// <para>When the <c>DataDisk.N.SnapshotId</c> parameter is specified, the <c>DataDisk.N.Size</c> parameter is ignored. The data disk is created with the size of the specified snapshot. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s-bp17441ohwka0yuh****</para>
@@ -786,7 +786,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string SnapshotId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the dedicated block storage cluster to which data disk N belongs. If you want to use a disk in a dedicated block storage cluster as data disk N when you create the instance, specify this parameter.</para>
+            /// <para>The ID of the dedicated block storage cluster to which data disk N belongs. If you want to use a disk in a dedicated block storage cluster as data disk N when you create the instance, you must specify this parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dbsc-j5e1sf2vaf5he8m2****</para>

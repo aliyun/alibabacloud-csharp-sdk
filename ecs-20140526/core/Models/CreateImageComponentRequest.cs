@@ -30,6 +30,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ComponentType { get; set; }
 
+        /// <summary>
+        /// <remarks>
+        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("ComponentVersion")]
         [Validation(Required=false)]
         public string ComponentVersion { get; set; }
@@ -55,9 +63,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The component name. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with http:// or https://.<a href="http://https://%E3%80%82%E3%80%81%E3%80%81%E3%80%81%EF%BC%88:%EF%BC%89%E3%80%81%EF%BC%88_%EF%BC%89%E3%80%81%EF%BC%88.%EF%BC%89%EF%BC%88-%EF%BC%89%E3%80%82"> </a>The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the image component. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <remarks>
-        /// <para>If you do not configure <c>Name</c>, the return value of <c>ImageComponentId</c> is used.</para>
+        /// <para> If you do not specify <c>Name</c>, the return value of <c>ImageComponentId</c> is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -105,7 +113,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The operating system type supported by the image component. Only Linux is supported. Set the value to Linux.</para>
+        /// <para>The type of the operating system supported by the image component. Only Linux operating systems are supported. Set the value to Linux.</para>
         /// <para>Default value: Linux.</para>
         /// 
         /// <b>Example:</b>

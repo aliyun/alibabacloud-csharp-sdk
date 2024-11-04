@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
+        /// <para> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -86,9 +86,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The number of days for which the instant access feature is available. Unit: days. Valid values: 1 to 65535.</para>
         /// <para>This parameter takes effect only when <c>InstantAccess</c> is set to true. The instant access feature is automatically disabled when the specified duration ends.</para>
-        /// <para>This parameter is left empty by default, which indicates that the instant access feature is automatically disabled for snapshots when the snapshots are released.</para>
+        /// <para>This parameter is left empty by default, which indicates that the instant access feature is automatically disabled when the instant access snapshots are released.</para>
         /// <remarks>
-        /// <para> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
+        /// <para> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

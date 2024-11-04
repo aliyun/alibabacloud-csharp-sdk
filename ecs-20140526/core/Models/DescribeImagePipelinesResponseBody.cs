@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelinesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the image templates.</para>
+        /// <para>The information about the image templates.</para>
         /// </summary>
         [NameInMap("ImagePipeline")]
         [Validation(Required=false)]
@@ -101,6 +101,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <remarks>
+                /// <para> This parameter is in invitational preview and is not publicly available.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
+                /// </summary>
                 [NameInMap("ImageFamily")]
                 [Validation(Required=false)]
                 public string ImageFamily { get; set; }
@@ -155,6 +163,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <remarks>
+                /// <para> This parameter is in invitational preview and is not publicly available.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
+                /// </summary>
                 [NameInMap("RepairMode")]
                 [Validation(Required=false)]
                 public string RepairMode { get; set; }
@@ -214,6 +230,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 }
 
+                /// <summary>
+                /// <remarks>
+                /// <para> This parameter is in invitational preview and is not publicly available.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
+                /// </summary>
                 [NameInMap("TestContent")]
                 [Validation(Required=false)]
                 public string TestContent { get; set; }

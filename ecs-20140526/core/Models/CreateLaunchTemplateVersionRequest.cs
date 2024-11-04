@@ -475,14 +475,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string HostName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>enabled</para>
+        /// </summary>
         [NameInMap("HttpEndpoint")]
         [Validation(Required=false)]
         public string HttpEndpoint { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("HttpPutResponseHopLimit")]
         [Validation(Required=false)]
         public int? HttpPutResponseHopLimit { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>optional</para>
+        /// </summary>
         [NameInMap("HttpTokens")]
         [Validation(Required=false)]
         public string HttpTokens { get; set; }

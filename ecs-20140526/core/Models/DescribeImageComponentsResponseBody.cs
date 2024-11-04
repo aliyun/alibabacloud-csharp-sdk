@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImageComponentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the image components.</para>
+        /// <para>The information about the image components.</para>
         /// </summary>
         [NameInMap("ImageComponent")]
         [Validation(Required=false)]
@@ -30,6 +30,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string ComponentType { get; set; }
 
+                /// <summary>
+                /// <remarks>
+                /// <para> This parameter is in invitational preview and is not publicly available.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
+                /// </summary>
                 [NameInMap("ComponentVersion")]
                 [Validation(Required=false)]
                 public string ComponentVersion { get; set; }
@@ -98,6 +106,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string Owner { get; set; }
 
+                /// <summary>
+                /// <remarks>
+                /// <para> This parameter is in invitational preview and is not publicly available.</para>
+                /// </remarks>
+                /// </summary>
                 [NameInMap("Parameters")]
                 [Validation(Required=false)]
                 public DescribeImageComponentsResponseBodyImageComponentImageComponentSetParameters Parameters { get; set; }
@@ -106,14 +119,38 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter> Parameter { get; set; }
                     public class DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter : TeaModel {
+                        /// <summary>
+                        /// <remarks>
+                        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+                        /// </remarks>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>null</para>
+                        /// </summary>
                         [NameInMap("DefaultValue")]
                         [Validation(Required=false)]
                         public string DefaultValue { get; set; }
 
+                        /// <summary>
+                        /// <remarks>
+                        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+                        /// </remarks>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>null</para>
+                        /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
+                        /// <summary>
+                        /// <remarks>
+                        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+                        /// </remarks>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>null</para>
+                        /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }

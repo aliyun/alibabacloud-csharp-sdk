@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The category of the snapshot. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Standard: normal snapshot</description></item>
+        /// <item><description>Standard: standard snapshot</description></item>
         /// <item><description>Flash: local snapshot</description></item>
         /// </list>
         /// <para>The local snapshot feature is replaced by the instant access feature. When you specify this parameter, take note of the following items:</para>

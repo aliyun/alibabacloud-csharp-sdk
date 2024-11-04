@@ -9,10 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImageComponentsRequest : TeaModel {
+        /// <summary>
+        /// <remarks>
+        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("ComponentType")]
         [Validation(Required=false)]
         public string ComponentType { get; set; }
 
+        /// <summary>
+        /// <remarks>
+        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("ComponentVersion")]
         [Validation(Required=false)]
         public string ComponentVersion { get; set; }
@@ -112,6 +128,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <remarks>
+        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("SystemType")]
         [Validation(Required=false)]
         public string SystemType { get; set; }

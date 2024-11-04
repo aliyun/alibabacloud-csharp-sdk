@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeNetworkInterfacesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the ENIs.</para>
+        /// <para>Details of the ENIs.</para>
         /// </summary>
         [NameInMap("NetworkInterfaceSets")]
         [Validation(Required=false)]
@@ -454,6 +454,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public bool? ServiceManaged { get; set; }
 
+                /// <summary>
+                /// <remarks>
+                /// <para> This parameter is in invitational preview and is not publicly available.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("SourceDestCheck")]
                 [Validation(Required=false)]
                 public bool? SourceDestCheck { get; set; }

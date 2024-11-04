@@ -12,12 +12,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The payment is automatically completed. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled.</description></item>
+        /// <item><description>true: The payment is automatically completed. Maintain a sufficient account balance. Otherwise, your order becomes invalid and is canceled.</description></item>
         /// <item><description>false: An order is generated but no payment is made.</description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// <remarks>
-        /// <para>If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</para>
+        /// <para> If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run. Valid Values:</para>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether Resource Access Management (RAM) users are granted permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
         /// <item><description>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
@@ -53,7 +53,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to change the billing method of all data disks attached to the instance from pay-as-you-go to subscription.</para>
+        /// <para>Specifies whether to change the billing method of all data disks on the instance from pay-as-you-go to subscription. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
@@ -66,8 +70,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The new billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PrePaid</description></item>
-        /// <item><description>PostPaid</description></item>
+        /// <item><description>PrePaid: subscription</description></item>
+        /// <item><description>PostPaid: pay-as-you-go</description></item>
         /// </list>
         /// <para>Default value: PrePaid.</para>
         /// 
@@ -90,7 +94,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return cost details of the order after the billing method is changed from subscription to pay-as-you-go.</para>
+        /// <para>Specifies whether to return cost details of the order after the billing method is changed from subscription to pay-as-you-go. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>

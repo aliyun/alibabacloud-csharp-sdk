@@ -457,12 +457,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// <para>Details about the image options.</para>
+                /// <para>The image options.</para>
                 /// </summary>
                 [NameInMap("ImageOptions")]
                 [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstanceImageOptions ImageOptions { get; set; }
                 public class DescribeInstancesResponseBodyInstancesInstanceImageOptions : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("CurrentOSNVMeSupported")]
+                    [Validation(Required=false)]
+                    public bool? CurrentOSNVMeSupported { get; set; }
+
                     /// <summary>
                     /// <para>Indicates whether the instance that uses the image supports logons of the ecs-user user. Valid values:</para>
                     /// <list type="bullet">

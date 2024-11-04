@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The ID of the launch template.</para>
-        /// <para>You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.</para>
+        /// <para>You must set <c>LaunchTemplateId</c> or <c>LaunchTemplateName</c> to specify a launch template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lt-bp168lnahrdwl39p****</para>
@@ -47,6 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The name of the launch template.</para>
+        /// <para>You must set <c>LaunchTemplateId</c> or <c>LaunchTemplateName</c> to specify a launch template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testLaunchTemplateName</para>
@@ -56,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LaunchTemplateName { get; set; }
 
         /// <summary>
-        /// <para>Version N of the launch template.</para>
+        /// <para>The versions of the launch template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -66,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<long?> LaunchTemplateVersion { get; set; }
 
         /// <summary>
-        /// <para>The maximum version number in the version range to query.</para>
+        /// <para>The maximum version number in the version range to query. This parameter is used together with <c>MinVersion</c> to specify a version range to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -76,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? MaxVersion { get; set; }
 
         /// <summary>
-        /// <para>The minimum version number in the version range to query.</para>
+        /// <para>The minimum version number in the version range to query. This parameter is used together with <c>MaxVersion</c> to specify a version range to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

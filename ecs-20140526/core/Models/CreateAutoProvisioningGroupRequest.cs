@@ -1103,6 +1103,42 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The resource pool options to use to create instances. When you specify this parameter, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>This parameter takes effect only when the auto provisioning group creates pay-as-you-go instances.</description></item>
+        /// <item><description>This parameter takes effect only if you set <c>AutoProvisioningGroupType</c> to instant.</description></item>
+        /// </list>
+        /// </summary>
+        [NameInMap("ResourcePoolOptions")]
+        [Validation(Required=false)]
+        public CreateAutoProvisioningGroupRequestResourcePoolOptions ResourcePoolOptions { get; set; }
+        public class CreateAutoProvisioningGroupRequestResourcePoolOptions : TeaModel {
+            /// <summary>
+            /// <para>The IDs of private pools. The ID of a private pool is the same as the ID of the elasticity assurance or capacity reservation that is associated with the private pool. You can specify the IDs of only targeted private pools for this parameter.</para>
+            /// </summary>
+            [NameInMap("PrivatePoolIds")]
+            [Validation(Required=false)]
+            public List<string> PrivatePoolIds { get; set; }
+
+            /// <summary>
+            /// <para>Specifies which resource pools to use to create instances. Resource pools include the public pool and the private pools that are associated with elasticity assurance and capacity reservations in the Active state. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PrivatePoolFirst: uses private pools first. If you set this parameter to PrivatePoolFirst, you can specify ResourcePoolOptions.PrivatePoolIds or leave ResourcePoolOptions.PrivatePoolIds empty. If you specify ResourcePoolOptions.PrivatePoolIds, the specified private pools are used first. If you leave ResourcePoolOptions.PrivatePoolIds empty or the private pools that you specify in ResourcePoolOptions.PrivatePoolIds have insufficient capacity, matching open private pools are used. If no matching open private pools exist, the public pool is used.</description></item>
+            /// <item><description>PrivatePoolOnly: uses only private pools. If you set this parameter to PrivatePoolOnly, you must specify ResourcePoolOptions.PrivatePoolIds. If the private pools that you specify in ResourcePoolOptions.PrivatePoolIds have insufficient capacity, instances cannot be created.</description></item>
+            /// <item><description>PublicPoolOnly: uses the public pool.</description></item>
+            /// </list>
+            /// <para>Default value: PublicPoolOnly.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PrivatePoolFirst</para>
+            /// </summary>
+            [NameInMap("Strategy")]
+            [Validation(Required=false)]
+            public string Strategy { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The policy for creating preemptible instances. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>lowest-price: cost optimization policy. The auto provisioning group selects the lowest-priced instance type to create instances.</description></item>

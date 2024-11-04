@@ -54,6 +54,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public int? CpuCoreCount { get; set; }
 
+                [NameInMap("CpuOptions")]
+                [Validation(Required=false)]
+                public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions CpuOptions { get; set; }
+                public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions : TeaModel {
+                    [NameInMap("SupportedTopologyTypes")]
+                    [Validation(Required=false)]
+                    public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes SupportedTopologyTypes { get; set; }
+                    public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes : TeaModel {
+                        [NameInMap("SupportedTopologyType")]
+                        [Validation(Required=false)]
+                        public List<string> SupportedTopologyType { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// <para>The CPU base frequency. Unit: GHz.</para>
                 /// 

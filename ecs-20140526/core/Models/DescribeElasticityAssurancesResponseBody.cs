@@ -31,6 +31,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource> AllocatedResource { get; set; }
                     public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource : TeaModel {
+                        [NameInMap("AvailableAmount")]
+                        [Validation(Required=false)]
+                        public int? AvailableAmount { get; set; }
+
+                        [NameInMap("ElasticityAssuranceUsages")]
+                        [Validation(Required=false)]
+                        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsages ElasticityAssuranceUsages { get; set; }
+                        public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsages : TeaModel {
+                            [NameInMap("ElasticityAssuranceUsage")]
+                            [Validation(Required=false)]
+                            public List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage> ElasticityAssuranceUsage { get; set; }
+                            public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage : TeaModel {
+                                [NameInMap("AccountId")]
+                                [Validation(Required=false)]
+                                public string AccountId { get; set; }
+
+                                [NameInMap("ServiceName")]
+                                [Validation(Required=false)]
+                                public string ServiceName { get; set; }
+
+                                [NameInMap("UsedAmount")]
+                                [Validation(Required=false)]
+                                public int? UsedAmount { get; set; }
+
+                            }
+
+                        }
+
                         /// <summary>
                         /// <para>The instance type.</para>
                         /// 
@@ -84,6 +112,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("ElasticityAssuranceOwnerId")]
+                [Validation(Required=false)]
+                public string ElasticityAssuranceOwnerId { get; set; }
 
                 /// <summary>
                 /// <para>The time when the elasticity assurance expires.</para>

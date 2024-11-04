@@ -97,12 +97,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <remarks>
+        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("ImageFamily")]
         [Validation(Required=false)]
         public string ImageFamily { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the image name. The prefix must be 2 to 64 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The prefix of the image name. The prefix must be 2 to 64 characters in length. The prefix must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The prefix can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <para>The system generates the final complete image name that consists of the specified prefix and the ID of the build task (<c>ExecutionId</c>) in the format of <c>{ImageName}_{ExecutionId}</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -135,9 +143,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? InternetMaxBandwidthOut { get; set; }
 
         /// <summary>
-        /// <para>The name of the image template. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the launch template. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <remarks>
-        /// <para>If you do not specify the <c>Name</c> parameter, the return value of <c>ImagePipelineId</c> is used.</para>
+        /// <para> If you do not specify <c>Name</c>, the return value of <c>ImagePipelineId</c> is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -166,6 +174,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <remarks>
+        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("RepairMode")]
         [Validation(Required=false)]
         public string RepairMode { get; set; }
@@ -228,6 +244,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        /// <summary>
+        /// <remarks>
+        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("TestContent")]
         [Validation(Required=false)]
         public string TestContent { get; set; }

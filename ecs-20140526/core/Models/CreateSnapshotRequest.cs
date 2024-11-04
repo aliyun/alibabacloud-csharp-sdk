@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The category of the snapshot. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Standard: normal snapshot</description></item>
+        /// <item><description>Standard: standard snapshot</description></item>
         /// <item><description>Flash: local snapshot</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
+        /// <para> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -62,11 +62,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Specifies whether to enable the instant access feature. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: enables the instant access feature. This feature can be enabled only for ESSDs.</description></item>
-        /// <item><description>false: does not enable the instant access feature. If InstantAccess is set to false, a normal snapshot is created.</description></item>
+        /// <item><description>false: does not enable the instant access feature. If InstantAccess is set to false, a standard snapshot is created.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
+        /// <para> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The validity period of the instant access feature. When the validity period ends, the feature is disabled and the instant access snapshot is automatically released. This parameter takes effect only when <c>InstantAccess</c> is set to true. Unit: days. Valid values: 1 to 65535.</para>
         /// <para>By default, the value of this parameter is the same as that of <c>RetentionDays</c>.</para>
         /// <remarks>
-        /// <para> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
+        /// <para> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The snapshot type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Standard: normal snapshot</description></item>
+        /// <item><description>Standard: standard snapshot</description></item>
         /// <item><description>Flash: local snapshot</description></item>
         /// </list>
         /// <remarks>
@@ -135,8 +135,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? RetentionDays { get; set; }
 
         /// <summary>
-        /// <para>The name of the snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
-        /// <para>It cannot start with <c>auto</c> because snapshots whose names start with auto are recognized as automatic snapshots.</para>
+        /// <para>The name of the snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name cannot start with <c>auto</c> because snapshots whose names start with auto are recognized as automatic snapshots.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testSnapshotName</para>

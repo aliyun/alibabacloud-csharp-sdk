@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("Launcher")]
+        [Validation(Required=false)]
+        public string Launcher { get; set; }
+
         /// <summary>
         /// <para>The command name. The name supports all character sets and can be up to 128 characters in length.</para>
         /// 

@@ -280,6 +280,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork : TeaModel {
             /// <summary>
             /// <para>This parameter is not publicly available.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("EnableSriov")]
             [Validation(Required=false)]
@@ -696,6 +699,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        /// <summary>
+        /// <para>This parameter is not publicly available.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("SourceDestCheck")]
         [Validation(Required=false)]
         public bool? SourceDestCheck { get; set; }

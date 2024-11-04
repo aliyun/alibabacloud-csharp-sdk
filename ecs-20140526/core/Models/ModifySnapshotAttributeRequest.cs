@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
+        /// <para> This parameter is no longer used. By default, new standard snapshots of Enterprise SSDs (ESSDs) are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

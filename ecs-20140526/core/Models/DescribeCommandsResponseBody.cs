@@ -104,6 +104,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public bool? Latest { get; set; }
 
+                [NameInMap("Launcher")]
+                [Validation(Required=false)]
+                public string Launcher { get; set; }
+
                 /// <summary>
                 /// <para>The name of the command.</para>
                 /// 
