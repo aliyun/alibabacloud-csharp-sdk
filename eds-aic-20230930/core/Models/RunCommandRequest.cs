@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string CommandContent { get; set; }
 
+        [NameInMap("ContentEncoding")]
+        [Validation(Required=false)]
+        public string ContentEncoding { get; set; }
+
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
