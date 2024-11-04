@@ -49,6 +49,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group. To obtain a resource group ID, see the ResourceId field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eas-r-4gt8twzwllfo******</para>
+        /// </summary>
+        [NameInMap("ResourceName")]
+        [Validation(Required=false)]
+        public string ResourceName { get; set; }
+
     }
 
 }

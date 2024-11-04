@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
     public class CreateAclPolicyRequest : TeaModel {
         /// <summary>
         /// <para>The whitelisted IP CIDR blocks in the VPC that can access the private gateway.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AclPolicyList")]
         [Validation(Required=false)]
@@ -28,6 +29,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
             /// <summary>
             /// <para>The IP CIDR block in the VPC that can access the private gateway.</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.23.XX.XX/32</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The ID of the private gateway.</para>
+        /// <para>The private gateway ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-1uhcqmsc7x22******</para>
@@ -110,6 +110,24 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string ResourceName { get; set; }
 
+        /// <summary>
+        /// <para>The server role.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DataLoader</description></item>
+        /// <item><description>FrontEnd</description></item>
+        /// <item><description>DataSet</description></item>
+        /// <item><description>SDProxy</description></item>
+        /// <item><description>LLMSscheduler</description></item>
+        /// <item><description>ScalableJob</description></item>
+        /// <item><description>LLMGateway</description></item>
+        /// <item><description>Job</description></item>
+        /// <item><description>Queue</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LLMGateway</para>
+        /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public string Role { get; set; }

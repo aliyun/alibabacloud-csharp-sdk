@@ -17,6 +17,20 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public List<ListGatewayResponseBodyGateways> Gateways { get; set; }
         public class ListGatewayResponseBodyGateways : TeaModel {
             /// <summary>
+            /// <para>The billing method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PrePaid: subscription.</description></item>
+            /// <item><description>PostPaid: pay-as-you-go.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PostPaid</para>
+            /// </summary>
+            [NameInMap("ChargeType")]
+            [Validation(Required=false)]
+            public string ChargeType { get; set; }
+
+            /// <summary>
             /// <para>The time when the private gateway was created. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>

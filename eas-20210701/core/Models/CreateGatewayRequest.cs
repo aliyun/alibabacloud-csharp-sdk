@@ -20,6 +20,31 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ResourceName { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false (default)</description></item>
+        /// <item><description>true</description></item>
+        /// </list>
+        /// </summary>
+        [NameInMap("AutoRenewal")]
+        [Validation(Required=false)]
+        public bool? AutoRenewal { get; set; }
+
+        /// <summary>
+        /// <para>The billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PrePaid: subscription.</description></item>
+        /// <item><description>PostPaid: pay-as-you-go.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PostPaid</para>
+        /// </summary>
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to enable Internet access. Default value: false.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">

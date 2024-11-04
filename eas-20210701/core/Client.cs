@@ -57,6 +57,148 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Binds a custom domain name to a private gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AttachGatewayDomainRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachGatewayDomainResponse
+        /// </returns>
+        public AttachGatewayDomainResponse AttachGatewayDomainWithOptions(string ClusterId, string GatewayId, AttachGatewayDomainRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AttachGatewayDomainShrinkRequest request = new AttachGatewayDomainShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CustomDomain))
+            {
+                request.CustomDomainShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CustomDomain, "CustomDomain", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomDomainShrink))
+            {
+                query["CustomDomain"] = request.CustomDomainShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachGatewayDomain",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/domain/attach",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachGatewayDomainResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a custom domain name to a private gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AttachGatewayDomainRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachGatewayDomainResponse
+        /// </returns>
+        public async Task<AttachGatewayDomainResponse> AttachGatewayDomainWithOptionsAsync(string ClusterId, string GatewayId, AttachGatewayDomainRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AttachGatewayDomainShrinkRequest request = new AttachGatewayDomainShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CustomDomain))
+            {
+                request.CustomDomainShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CustomDomain, "CustomDomain", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomDomainShrink))
+            {
+                query["CustomDomain"] = request.CustomDomainShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachGatewayDomain",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/domain/attach",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachGatewayDomainResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a custom domain name to a private gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachGatewayDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachGatewayDomainResponse
+        /// </returns>
+        public AttachGatewayDomainResponse AttachGatewayDomain(string ClusterId, string GatewayId, AttachGatewayDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AttachGatewayDomainWithOptions(ClusterId, GatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a custom domain name to a private gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachGatewayDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachGatewayDomainResponse
+        /// </returns>
+        public async Task<AttachGatewayDomainResponse> AttachGatewayDomainAsync(string ClusterId, string GatewayId, AttachGatewayDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AttachGatewayDomainWithOptionsAsync(ClusterId, GatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Clones a service.</para>
         /// </summary>
         /// 
@@ -763,7 +905,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a private gateway. You can create a private gateway only in a self-managed resource group.</para>
+        /// <para>Creates a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -788,6 +930,14 @@ namespace AlibabaCloud.SDK.Eas20210701
                 query["ResourceName"] = request.ResourceName;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewal))
+            {
+                body["AutoRenewal"] = request.AutoRenewal;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                body["ChargeType"] = request.ChargeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableInternet))
             {
                 body["EnableInternet"] = request.EnableInternet;
@@ -831,7 +981,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a private gateway. You can create a private gateway only in a self-managed resource group.</para>
+        /// <para>Creates a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -856,6 +1006,14 @@ namespace AlibabaCloud.SDK.Eas20210701
                 query["ResourceName"] = request.ResourceName;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewal))
+            {
+                body["AutoRenewal"] = request.AutoRenewal;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                body["ChargeType"] = request.ChargeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableInternet))
             {
                 body["EnableInternet"] = request.EnableInternet;
@@ -899,7 +1057,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a private gateway. You can create a private gateway only in a self-managed resource group.</para>
+        /// <para>Creates a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -918,7 +1076,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a private gateway. You can create a private gateway only in a self-managed resource group.</para>
+        /// <para>Creates a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1071,6 +1229,156 @@ namespace AlibabaCloud.SDK.Eas20210701
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateGatewayIntranetLinkedVpcWithOptionsAsync(ClusterId, GatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建网关内网访问端点跨VPC连接</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateGatewayIntranetLinkedVpcPeerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGatewayIntranetLinkedVpcPeerResponse
+        /// </returns>
+        public CreateGatewayIntranetLinkedVpcPeerResponse CreateGatewayIntranetLinkedVpcPeerWithOptions(string ClusterId, string GatewayId, CreateGatewayIntranetLinkedVpcPeerRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateGatewayIntranetLinkedVpcPeerShrinkRequest request = new CreateGatewayIntranetLinkedVpcPeerShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PeerVpcs))
+            {
+                request.PeerVpcsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PeerVpcs, "PeerVpcs", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerVpcsShrink))
+            {
+                query["PeerVpcs"] = request.PeerVpcsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGatewayIntranetLinkedVpcPeer",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/intranet_endpoint_linked_vpc_peer",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGatewayIntranetLinkedVpcPeerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建网关内网访问端点跨VPC连接</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateGatewayIntranetLinkedVpcPeerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGatewayIntranetLinkedVpcPeerResponse
+        /// </returns>
+        public async Task<CreateGatewayIntranetLinkedVpcPeerResponse> CreateGatewayIntranetLinkedVpcPeerWithOptionsAsync(string ClusterId, string GatewayId, CreateGatewayIntranetLinkedVpcPeerRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateGatewayIntranetLinkedVpcPeerShrinkRequest request = new CreateGatewayIntranetLinkedVpcPeerShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PeerVpcs))
+            {
+                request.PeerVpcsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PeerVpcs, "PeerVpcs", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerVpcsShrink))
+            {
+                query["PeerVpcs"] = request.PeerVpcsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGatewayIntranetLinkedVpcPeer",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/intranet_endpoint_linked_vpc_peer",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGatewayIntranetLinkedVpcPeerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建网关内网访问端点跨VPC连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGatewayIntranetLinkedVpcPeerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGatewayIntranetLinkedVpcPeerResponse
+        /// </returns>
+        public CreateGatewayIntranetLinkedVpcPeerResponse CreateGatewayIntranetLinkedVpcPeer(string ClusterId, string GatewayId, CreateGatewayIntranetLinkedVpcPeerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateGatewayIntranetLinkedVpcPeerWithOptions(ClusterId, GatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建网关内网访问端点跨VPC连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGatewayIntranetLinkedVpcPeerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGatewayIntranetLinkedVpcPeerResponse
+        /// </returns>
+        public async Task<CreateGatewayIntranetLinkedVpcPeerResponse> CreateGatewayIntranetLinkedVpcPeerAsync(string ClusterId, string GatewayId, CreateGatewayIntranetLinkedVpcPeerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateGatewayIntranetLinkedVpcPeerWithOptionsAsync(ClusterId, GatewayId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2207,6 +2515,144 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a virtual resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVirtualResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVirtualResourceResponse
+        /// </returns>
+        public CreateVirtualResourceResponse CreateVirtualResourceWithOptions(CreateVirtualResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resources))
+            {
+                body["Resources"] = request.Resources;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualResourceName))
+            {
+                body["VirtualResourceName"] = request.VirtualResourceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVirtualResource",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/virtualresources",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVirtualResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVirtualResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVirtualResourceResponse
+        /// </returns>
+        public async Task<CreateVirtualResourceResponse> CreateVirtualResourceWithOptionsAsync(CreateVirtualResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resources))
+            {
+                body["Resources"] = request.Resources;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualResourceName))
+            {
+                body["VirtualResourceName"] = request.VirtualResourceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVirtualResource",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/virtualresources",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVirtualResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVirtualResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVirtualResourceResponse
+        /// </returns>
+        public CreateVirtualResourceResponse CreateVirtualResource(CreateVirtualResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateVirtualResourceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVirtualResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVirtualResourceResponse
+        /// </returns>
+        public async Task<CreateVirtualResourceResponse> CreateVirtualResourceAsync(CreateVirtualResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateVirtualResourceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes an access control list (ACL) for a private gateway. The IP CIDR block that is deleted from the ACL cannot access the private gateway.</para>
         /// </summary>
         /// 
@@ -2695,6 +3141,156 @@ namespace AlibabaCloud.SDK.Eas20210701
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteGatewayIntranetLinkedVpcWithOptionsAsync(ClusterId, GatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除网关内网访问端点跨VPC连接</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteGatewayIntranetLinkedVpcPeerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGatewayIntranetLinkedVpcPeerResponse
+        /// </returns>
+        public DeleteGatewayIntranetLinkedVpcPeerResponse DeleteGatewayIntranetLinkedVpcPeerWithOptions(string ClusterId, string GatewayId, DeleteGatewayIntranetLinkedVpcPeerRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteGatewayIntranetLinkedVpcPeerShrinkRequest request = new DeleteGatewayIntranetLinkedVpcPeerShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PeerVpcs))
+            {
+                request.PeerVpcsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PeerVpcs, "PeerVpcs", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerVpcsShrink))
+            {
+                query["PeerVpcs"] = request.PeerVpcsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGatewayIntranetLinkedVpcPeer",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/intranet_endpoint_linked_vpc_peer",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGatewayIntranetLinkedVpcPeerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除网关内网访问端点跨VPC连接</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteGatewayIntranetLinkedVpcPeerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGatewayIntranetLinkedVpcPeerResponse
+        /// </returns>
+        public async Task<DeleteGatewayIntranetLinkedVpcPeerResponse> DeleteGatewayIntranetLinkedVpcPeerWithOptionsAsync(string ClusterId, string GatewayId, DeleteGatewayIntranetLinkedVpcPeerRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteGatewayIntranetLinkedVpcPeerShrinkRequest request = new DeleteGatewayIntranetLinkedVpcPeerShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PeerVpcs))
+            {
+                request.PeerVpcsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PeerVpcs, "PeerVpcs", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerVpcsShrink))
+            {
+                query["PeerVpcs"] = request.PeerVpcsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGatewayIntranetLinkedVpcPeer",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/intranet_endpoint_linked_vpc_peer",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGatewayIntranetLinkedVpcPeerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除网关内网访问端点跨VPC连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGatewayIntranetLinkedVpcPeerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGatewayIntranetLinkedVpcPeerResponse
+        /// </returns>
+        public DeleteGatewayIntranetLinkedVpcPeerResponse DeleteGatewayIntranetLinkedVpcPeer(string ClusterId, string GatewayId, DeleteGatewayIntranetLinkedVpcPeerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteGatewayIntranetLinkedVpcPeerWithOptions(ClusterId, GatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除网关内网访问端点跨VPC连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGatewayIntranetLinkedVpcPeerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGatewayIntranetLinkedVpcPeerResponse
+        /// </returns>
+        public async Task<DeleteGatewayIntranetLinkedVpcPeerResponse> DeleteGatewayIntranetLinkedVpcPeerAsync(string ClusterId, string GatewayId, DeleteGatewayIntranetLinkedVpcPeerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteGatewayIntranetLinkedVpcPeerWithOptionsAsync(ClusterId, GatewayId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3835,6 +4431,108 @@ namespace AlibabaCloud.SDK.Eas20210701
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteServiceMirrorWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual resource group that contains no resources or instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVirtualResourceResponse
+        /// </returns>
+        public DeleteVirtualResourceResponse DeleteVirtualResourceWithOptions(string ClusterId, string VirtualResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVirtualResource",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/virtualresources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(VirtualResourceId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVirtualResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual resource group that contains no resources or instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVirtualResourceResponse
+        /// </returns>
+        public async Task<DeleteVirtualResourceResponse> DeleteVirtualResourceWithOptionsAsync(string ClusterId, string VirtualResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVirtualResource",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/virtualresources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(VirtualResourceId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVirtualResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual resource group that contains no resources or instances.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteVirtualResourceResponse
+        /// </returns>
+        public DeleteVirtualResourceResponse DeleteVirtualResource(string ClusterId, string VirtualResourceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteVirtualResourceWithOptions(ClusterId, VirtualResourceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual resource group that contains no resources or instances.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteVirtualResourceResponse
+        /// </returns>
+        public async Task<DeleteVirtualResourceResponse> DeleteVirtualResourceAsync(string ClusterId, string VirtualResourceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteVirtualResourceWithOptionsAsync(ClusterId, VirtualResourceId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5695,6 +6393,250 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Views the details of a virtual resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVirtualResourceResponse
+        /// </returns>
+        public DescribeVirtualResourceResponse DescribeVirtualResourceWithOptions(string ClusterId, string VirtualResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVirtualResource",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/virtualresources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(VirtualResourceId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVirtualResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Views the details of a virtual resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVirtualResourceResponse
+        /// </returns>
+        public async Task<DescribeVirtualResourceResponse> DescribeVirtualResourceWithOptionsAsync(string ClusterId, string VirtualResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVirtualResource",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/virtualresources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(VirtualResourceId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVirtualResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Views the details of a virtual resource group.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeVirtualResourceResponse
+        /// </returns>
+        public DescribeVirtualResourceResponse DescribeVirtualResource(string ClusterId, string VirtualResourceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeVirtualResourceWithOptions(ClusterId, VirtualResourceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Views the details of a virtual resource group.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeVirtualResourceResponse
+        /// </returns>
+        public async Task<DescribeVirtualResourceResponse> DescribeVirtualResourceAsync(string ClusterId, string VirtualResourceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeVirtualResourceWithOptionsAsync(ClusterId, VirtualResourceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a custom domain name from a private gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DetachGatewayDomainRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachGatewayDomainResponse
+        /// </returns>
+        public DetachGatewayDomainResponse DetachGatewayDomainWithOptions(string ClusterId, string GatewayId, DetachGatewayDomainRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DetachGatewayDomainShrinkRequest request = new DetachGatewayDomainShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CustomDomain))
+            {
+                request.CustomDomainShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CustomDomain, "CustomDomain", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomDomainShrink))
+            {
+                query["CustomDomain"] = request.CustomDomainShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DetachGatewayDomain",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/domain/detach",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DetachGatewayDomainResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a custom domain name from a private gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DetachGatewayDomainRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachGatewayDomainResponse
+        /// </returns>
+        public async Task<DetachGatewayDomainResponse> DetachGatewayDomainWithOptionsAsync(string ClusterId, string GatewayId, DetachGatewayDomainRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DetachGatewayDomainShrinkRequest request = new DetachGatewayDomainShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CustomDomain))
+            {
+                request.CustomDomainShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CustomDomain, "CustomDomain", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomDomainShrink))
+            {
+                query["CustomDomain"] = request.CustomDomainShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DetachGatewayDomain",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/domain/detach",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DetachGatewayDomainResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a custom domain name from a private gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachGatewayDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachGatewayDomainResponse
+        /// </returns>
+        public DetachGatewayDomainResponse DetachGatewayDomain(string ClusterId, string GatewayId, DetachGatewayDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DetachGatewayDomainWithOptions(ClusterId, GatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a custom domain name from a private gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachGatewayDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachGatewayDomainResponse
+        /// </returns>
+        public async Task<DetachGatewayDomainResponse> DetachGatewayDomainAsync(string ClusterId, string GatewayId, DetachGatewayDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DetachGatewayDomainWithOptionsAsync(ClusterId, GatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Switches a container service to development mode or exits development mode.</para>
         /// </summary>
         /// 
@@ -6145,6 +7087,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
+            {
+                query["ResourceName"] = request.ResourceName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6203,6 +7149,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
+            {
+                query["ResourceName"] = request.ResourceName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6259,6 +7209,108 @@ namespace AlibabaCloud.SDK.Eas20210701
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListGatewayWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom domain names of a private gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGatewayDomainsResponse
+        /// </returns>
+        public ListGatewayDomainsResponse ListGatewayDomainsWithOptions(string ClusterId, string GatewayId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGatewayDomains",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/domains",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGatewayDomainsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom domain names of a private gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGatewayDomainsResponse
+        /// </returns>
+        public async Task<ListGatewayDomainsResponse> ListGatewayDomainsWithOptionsAsync(string ClusterId, string GatewayId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGatewayDomains",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/domains",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGatewayDomainsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom domain names of a private gateway.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListGatewayDomainsResponse
+        /// </returns>
+        public ListGatewayDomainsResponse ListGatewayDomains(string ClusterId, string GatewayId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListGatewayDomainsWithOptions(ClusterId, GatewayId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom domain names of a private gateway.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListGatewayDomainsResponse
+        /// </returns>
+        public async Task<ListGatewayDomainsResponse> ListGatewayDomainsAsync(string ClusterId, string GatewayId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListGatewayDomainsWithOptionsAsync(ClusterId, GatewayId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6361,6 +7413,136 @@ namespace AlibabaCloud.SDK.Eas20210701
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListGatewayIntranetLinkedVpcWithOptionsAsync(ClusterId, GatewayId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取网关内网访问端点跨VPC连接列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListGatewayIntranetLinkedVpcPeerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGatewayIntranetLinkedVpcPeerResponse
+        /// </returns>
+        public ListGatewayIntranetLinkedVpcPeerResponse ListGatewayIntranetLinkedVpcPeerWithOptions(string ClusterId, string GatewayId, ListGatewayIntranetLinkedVpcPeerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGatewayIntranetLinkedVpcPeer",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/intranet_endpoint_linked_vpc_peer",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGatewayIntranetLinkedVpcPeerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取网关内网访问端点跨VPC连接列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListGatewayIntranetLinkedVpcPeerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGatewayIntranetLinkedVpcPeerResponse
+        /// </returns>
+        public async Task<ListGatewayIntranetLinkedVpcPeerResponse> ListGatewayIntranetLinkedVpcPeerWithOptionsAsync(string ClusterId, string GatewayId, ListGatewayIntranetLinkedVpcPeerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGatewayIntranetLinkedVpcPeer",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/intranet_endpoint_linked_vpc_peer",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGatewayIntranetLinkedVpcPeerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取网关内网访问端点跨VPC连接列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListGatewayIntranetLinkedVpcPeerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGatewayIntranetLinkedVpcPeerResponse
+        /// </returns>
+        public ListGatewayIntranetLinkedVpcPeerResponse ListGatewayIntranetLinkedVpcPeer(string ClusterId, string GatewayId, ListGatewayIntranetLinkedVpcPeerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListGatewayIntranetLinkedVpcPeerWithOptions(ClusterId, GatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取网关内网访问端点跨VPC连接列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListGatewayIntranetLinkedVpcPeerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGatewayIntranetLinkedVpcPeerResponse
+        /// </returns>
+        public async Task<ListGatewayIntranetLinkedVpcPeerResponse> ListGatewayIntranetLinkedVpcPeerAsync(string ClusterId, string GatewayId, ListGatewayIntranetLinkedVpcPeerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListGatewayIntranetLinkedVpcPeerWithOptionsAsync(ClusterId, GatewayId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7649,7 +8831,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of services that are created by the current user.</para>
+        /// <para>Lists services.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7765,7 +8947,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of services that are created by the current user.</para>
+        /// <para>Lists services.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7881,7 +9063,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of services that are created by the current user.</para>
+        /// <para>Lists services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7900,7 +9082,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of services that are created by the current user.</para>
+        /// <para>Lists services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8021,7 +9203,161 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a tenant plug-in.</para>
+        /// <para>Queries a list of virtual resource groups for the current user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirtualResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirtualResourceResponse
+        /// </returns>
+        public ListVirtualResourceResponse ListVirtualResourceWithOptions(ListVirtualResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualResourceId))
+            {
+                query["VirtualResourceId"] = request.VirtualResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualResourceName))
+            {
+                query["VirtualResourceName"] = request.VirtualResourceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVirtualResource",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/virtualresources",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVirtualResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of virtual resource groups for the current user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirtualResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirtualResourceResponse
+        /// </returns>
+        public async Task<ListVirtualResourceResponse> ListVirtualResourceWithOptionsAsync(ListVirtualResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualResourceId))
+            {
+                query["VirtualResourceId"] = request.VirtualResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualResourceName))
+            {
+                query["VirtualResourceName"] = request.VirtualResourceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVirtualResource",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/virtualresources",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVirtualResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of virtual resource groups for the current user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirtualResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirtualResourceResponse
+        /// </returns>
+        public ListVirtualResourceResponse ListVirtualResource(ListVirtualResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListVirtualResourceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of virtual resource groups for the current user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirtualResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirtualResourceResponse
+        /// </returns>
+        public async Task<ListVirtualResourceResponse> ListVirtualResourceAsync(ListVirtualResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListVirtualResourceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets tenant configurations.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8057,7 +9393,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a tenant plug-in.</para>
+        /// <para>Resets tenant configurations.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8093,7 +9429,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a tenant plug-in.</para>
+        /// <para>Resets tenant configurations.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8108,7 +9444,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a tenant plug-in.</para>
+        /// <para>Resets tenant configurations.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10743,6 +12079,144 @@ namespace AlibabaCloud.SDK.Eas20210701
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateServiceVersionWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a virtual resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVirtualResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVirtualResourceResponse
+        /// </returns>
+        public UpdateVirtualResourceResponse UpdateVirtualResourceWithOptions(string ClusterId, string VirtualResourceId, UpdateVirtualResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resources))
+            {
+                body["Resources"] = request.Resources;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualResourceName))
+            {
+                body["VirtualResourceName"] = request.VirtualResourceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVirtualResource",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/virtualresources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(VirtualResourceId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVirtualResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a virtual resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVirtualResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVirtualResourceResponse
+        /// </returns>
+        public async Task<UpdateVirtualResourceResponse> UpdateVirtualResourceWithOptionsAsync(string ClusterId, string VirtualResourceId, UpdateVirtualResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resources))
+            {
+                body["Resources"] = request.Resources;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualResourceName))
+            {
+                body["VirtualResourceName"] = request.VirtualResourceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVirtualResource",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/virtualresources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(VirtualResourceId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVirtualResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a virtual resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVirtualResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVirtualResourceResponse
+        /// </returns>
+        public UpdateVirtualResourceResponse UpdateVirtualResource(string ClusterId, string VirtualResourceId, UpdateVirtualResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateVirtualResourceWithOptions(ClusterId, VirtualResourceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a virtual resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVirtualResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVirtualResourceResponse
+        /// </returns>
+        public async Task<UpdateVirtualResourceResponse> UpdateVirtualResourceAsync(string ClusterId, string VirtualResourceId, UpdateVirtualResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateVirtualResourceWithOptionsAsync(ClusterId, VirtualResourceId, request, headers, runtime);
         }
 
     }
