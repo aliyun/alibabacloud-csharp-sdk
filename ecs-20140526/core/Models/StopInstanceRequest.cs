@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcibly stop the instance. Valid values:</para>
+        /// <para>Specifies whether to forcefully stop the ECS instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: forcefully stops the ECS instance. If you set ForceStop to true, this operation is equivalent to a power-off operation. Cache data that is not written to storage devices on the instance is lost.</description></item>
+        /// <item><description>false: normally stops the ECS instance.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 

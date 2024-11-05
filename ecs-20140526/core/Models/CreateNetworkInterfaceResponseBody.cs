@@ -232,6 +232,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? ServiceManaged { get; set; }
 
+        [NameInMap("SourceDestCheck")]
+        [Validation(Required=false)]
+        public bool? SourceDestCheck { get; set; }
+
         /// <summary>
         /// <para>The state of the ENI.</para>
         /// 

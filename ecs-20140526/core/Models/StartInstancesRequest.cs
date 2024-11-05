@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the ECS instances. You can specify up to 100 ECS instance IDs.</para>
+        /// <para>The IDs of ECS instances. Valid values of N: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

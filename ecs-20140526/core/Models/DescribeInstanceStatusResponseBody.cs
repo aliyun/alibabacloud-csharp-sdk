@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status information of the instances.</para>
+        /// <para>The IDs and status of the ECS instances.</para>
         /// </summary>
         [NameInMap("InstanceStatuses")]
         [Validation(Required=false)]

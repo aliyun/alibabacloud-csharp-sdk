@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID of the instances.</para>
+        /// <para>The ID of the cluster to which the ECS instances belong.</para>
+        /// <remarks>
+        /// <para> This parameter is deprecated. We recommend that you do not use this parameter.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cls-bp67acfmxazb4p****</para>
@@ -20,7 +23,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instances. When you use this parameter to specify multiple instance IDs, separate the IDs with commas(,). Example: <c>InstanceId.1=i-bp1j4i2jdf3owlhe****, InstanceId.2=i-bp1j4i2jdf3o1234****</c>.</para>
+        /// <para>The IDs of ECS instances. You can specify 1 to 100 instance IDs.</para>
+        /// <para>Example: [&quot;i-bp1j4i2jdf3owlhe\<em>\</em>\<em>\</em>&quot;, &quot;i-bp1j4i2jdf3o1234\<em>\</em>\<em>\</em>&quot;].</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp1j4i2jdf3owlhe****</para>

@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotMonitorDataRequest : TeaModel {
         /// <summary>
-        /// <para>The category of the snapshot. Valid values:</para>
+        /// <para>The type of the snapshot. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Standard: standard snapshot</description></item>
         /// <item><description>Flash: local snapshot</description></item>
+        /// <item><description>Archive: archive snapshot</description></item>
         /// </list>
         /// <para>Default value: Standard.</para>
         /// 

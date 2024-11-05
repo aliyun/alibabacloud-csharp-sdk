@@ -438,6 +438,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<string> SecurityGroupIds { get; set; }
 
+        [NameInMap("SourceDestCheck")]
+        [Validation(Required=false)]
+        public bool? SourceDestCheck { get; set; }
+
         /// <summary>
         /// <para>The tags to add to the ENI.</para>
         /// </summary>

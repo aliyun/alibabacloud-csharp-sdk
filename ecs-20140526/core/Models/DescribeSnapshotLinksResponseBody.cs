@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the snapshot chains.</para>
+        /// <para>The information about the snapshot chains.</para>
         /// </summary>
         [NameInMap("SnapshotLinks")]
         [Validation(Required=false)]
@@ -51,7 +51,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink> SnapshotLink { get; set; }
             public class DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink : TeaModel {
                 /// <summary>
-                /// <para>The category of the snapshot.</para>
+                /// <para>The type of the snapshot chain. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>standard: standard snapshot chain.</description></item>
+                /// <item><description>archive: archive snapshot chain.</description></item>
+                /// <item><description>flash: instant access snapshot chain.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>standard</para>
@@ -83,11 +88,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>Indicates whether the instant access feature is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</description></item>
+                /// <item><description>true: The instant access feature is enabled. The feature can be enabled only for Enterprise SSDs (ESSDs).</description></item>
                 /// <item><description>false: The instant access feature is disabled. The snapshot is a standard snapshot for which the instant access feature is disabled.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
+                /// <para> This parameter is no longer used. By default, standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>

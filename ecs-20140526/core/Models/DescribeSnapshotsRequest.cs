@@ -38,17 +38,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The category of the snapshot. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Standard: standard snapshot</description></item>
-        /// <item><description>Flash: local snapshot</description></item>
-        /// </list>
-        /// <para>The local snapshot feature is replaced by the instant access feature. When you specify this parameter, take note of the following items:</para>
+        /// <item><description><para>Standard: standard snapshot.</para>
+        /// </description></item>
+        /// <item><description><para>Flash: local snapshot. This value will be deprecated. The local snapshot feature is replaced by the instant access feature. When you specify this parameter, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>If you have used local snapshots before December 14, 2020, you can use this parameter.</description></item>
         /// <item><description>If you have not used local snapshots before December 14, 2020, you cannot use this parameter.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</para>
-        /// </remarks>
+        /// </description></item>
+        /// <item><description><para>archive: archive snapshot.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Standard</para>

@@ -75,10 +75,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public bool? Available { get; set; }
 
                 /// <summary>
-                /// <para>The category of the snapshot.</para>
-                /// <remarks>
-                /// <para> This parameter will be removed in the future. We recommend that you use <c>InstantAccess</c> to ensure future compatibility.</para>
-                /// </remarks>
+                /// <para>The category of the snapshot. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Standard: standard snapshot.</description></item>
+                /// <item><description>Flash: local snapshot. This value will be deprecated. The local snapshot feature is replaced by the instant access feature.</description></item>
+                /// <item><description>archive: archive snapshot.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>standard</para>
@@ -124,7 +126,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <item><description>false: The instant access feature is disabled. The snapshot is a standard snapshot for which the instant access feature is disabled.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> This parameter is no longer used. The standard snapshots of ESSDs are upgraded to support the instant access feature by default. No additional configurations are required to enable the feature and you are not charged for the feature. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
+                /// <para> This parameter is deprecated. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -135,10 +137,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public bool? InstantAccess { get; set; }
 
                 /// <summary>
-                /// <para>Indicates the validity period of the instant access feature. When the specified period expires, the instant access feature is automatically disabled.</para>
+                /// <para>Indicates the validity period of the instant access feature. When the validity period ends, the instant access feature is automatically disabled.</para>
                 /// <para>By default, the value of this parameter is the same as the value of <c>RetentionDays</c>.</para>
                 /// <remarks>
-                /// <para> This parameter is no longer used. The standard snapshots of ESSDs are upgraded to support the instant access feature by default. No additional configurations are required to enable the feature and you are not charged for the feature. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
+                /// <para> This parameter is deprecated. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeElasticityAssurancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the elasticity assurances.</para>
+        /// <para>The information about the elasticity assurances.</para>
         /// </summary>
         [NameInMap("ElasticityAssuranceSet")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem> ElasticityAssuranceItem { get; set; }
             public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem : TeaModel {
                 /// <summary>
-                /// <para>Details about the allocated resources.</para>
+                /// <para>The information about the allocated resources.</para>
                 /// </summary>
                 [NameInMap("AllocatedResources")]
                 [Validation(Required=false)]
@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource> AllocatedResource { get; set; }
                     public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>5</para>
+                        /// </summary>
                         [NameInMap("AvailableAmount")]
                         [Validation(Required=false)]
                         public int? AvailableAmount { get; set; }
@@ -43,14 +47,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [Validation(Required=false)]
                             public List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage> ElasticityAssuranceUsage { get; set; }
                             public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage : TeaModel {
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>1144775968548340</para>
+                                /// </summary>
                                 [NameInMap("AccountId")]
                                 [Validation(Required=false)]
                                 public string AccountId { get; set; }
 
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>name</para>
+                                /// </summary>
                                 [NameInMap("ServiceName")]
                                 [Validation(Required=false)]
                                 public string ServiceName { get; set; }
 
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>1</para>
+                                /// </summary>
                                 [NameInMap("UsedAmount")]
                                 [Validation(Required=false)]
                                 public int? UsedAmount { get; set; }
@@ -113,6 +129,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>e114477596854834</para>
+                /// </summary>
                 [NameInMap("ElasticityAssuranceOwnerId")]
                 [Validation(Required=false)]
                 public string ElasticityAssuranceOwnerId { get; set; }

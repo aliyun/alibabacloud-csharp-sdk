@@ -124,6 +124,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public int? EcsCount { get; set; }
 
+                /// <summary>
+                /// <para>The number of rules that reference security groups in the security group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
+                /// </summary>
                 [NameInMap("GroupToGroupRuleCount")]
                 [Validation(Required=false)]
                 public int? GroupToGroupRuleCount { get; set; }
@@ -138,6 +144,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
+                /// <summary>
+                /// <para>The number of rules in the security group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
+                /// </summary>
                 [NameInMap("RuleCount")]
                 [Validation(Required=false)]
                 public int? RuleCount { get; set; }

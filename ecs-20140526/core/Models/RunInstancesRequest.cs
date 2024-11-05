@@ -1479,6 +1479,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
 
+            [NameInMap("SourceDestCheck")]
+            [Validation(Required=false)]
+            public bool? SourceDestCheck { get; set; }
+
             /// <summary>
             /// <para>The Tx queue depth of ENI N.</para>
             /// <para>When you specify this parameter, take note of the following items:</para>

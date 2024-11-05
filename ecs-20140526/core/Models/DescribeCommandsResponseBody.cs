@@ -104,6 +104,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public bool? Latest { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</para>
+                /// </summary>
                 [NameInMap("Launcher")]
                 [Validation(Required=false)]
                 public string Launcher { get; set; }

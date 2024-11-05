@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceRamRoleRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of instances. You can specify up to 100 instance IDs in a single request. You must specify at least one of the <c>InstanceIds</c> and <c>RamRoleName</c> parameters.</para>
+        /// <para>The IDs of ECS instances. You can specify up to 100 instance IDs in a single request.</para>
+        /// <remarks>
+        /// <para> You must specify at least one parameter from <c>InstanceIds</c> and <c>RamRoleName</c>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;i-bp67acfmxazb1p****&quot;, &quot;i-bp67acfmxazb2p****&quot;, &quot;bp67acfmxazb3p****&quot;…]</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// <para>Pages start from page 1.</para>
         /// <para>Default value: 1.</para>
         /// 
@@ -36,8 +39,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
-        /// <para>Maximum value: 50.</para>
+        /// <para>The number of entries per page.</para>
+        /// <para>Valid values: 1 to 50.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +51,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance RAM role. You can call the <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> operation provided by RAM to query the instance RAM roles that you created. You must specify at least one of the <c>InstanceIds</c> and <c>RamRoleName</c> parameters.</para>
+        /// <para>The name of the instance RAM role. If you specify this parameter, all ECS instances to which the instance RAM role is attached are returned in the response. You can call the <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> operation of RAM to query the names of available instance RAM roles.</para>
+        /// <remarks>
+        /// <para> You must specify at least one parameter from <c>InstanceIds</c> and <c>RamRoleName</c>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>EcsServiceRole-EcsDocGuideTest</para>

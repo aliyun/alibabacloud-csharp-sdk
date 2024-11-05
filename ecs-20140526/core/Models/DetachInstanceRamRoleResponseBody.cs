@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DetachInstanceRamRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the results of detaching instance RAM roles from the instances.</para>
+        /// <para>The results of the instance RAM role detachment, which include the names of the instance RAM roles and the IDs of the ECS instances from which you attempted to detach the instance RAM roles.</para>
         /// </summary>
         [NameInMap("DetachInstanceRamRoleResults")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance from which you attempted to detach the instance RAM role.</para>
+                /// <para>The ID of the ECS instance from which you attempted to detach the instance RAM role.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-bp67acfmxazb4p****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Details about the instance RAM role of the instance.</para>
+                /// <para>The name of the instance RAM role and the ID of the ECS instance.</para>
                 /// </summary>
                 [NameInMap("InstanceRamRoleSets")]
                 [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSetsInstanceRamRoleSet> InstanceRamRoleSet { get; set; }
                     public class DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSetsInstanceRamRoleSet : TeaModel {
                         /// <summary>
-                        /// <para>The instance ID.</para>
+                        /// <para>The ID of the ECS instance.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>i-bp67acfmxazb4p****</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The number of instances from which instance RAM roles failed to be detached.</para>
+        /// <para>The number of ECS instances from which instance RAM roles failed to be detached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of instances from which you attempted to detach instance RAM roles.</para>
+        /// <para>The total number of ECS instances from which you attempted to detach instance RAM roles.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

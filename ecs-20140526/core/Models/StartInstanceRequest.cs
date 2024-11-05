@@ -25,10 +25,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to restore the instance to its initial health state. This parameter is applicable to instances that are equipped with local disks, such as d1, i1, and i2 instances. If a local disk of a d1, i1, or i2 instance fails, you can use this parameter to specify whether to restore the instance to its initial health state on startup. Valid values:</para>
+        /// <para>Specifies whether to restore the ECS instance to the initial health state on startup if a local disk fails. This parameter is applicable to ECS instances that are equipped with local disks, such as d1, i1, and i2 instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: restores the instance to its initial health state on startup. After the instance is restored to its initial health state, data stored on the local disks of the instance is lost.</description></item>
-        /// <item><description>false: does not perform operations and keeps the instance in the current state.</description></item>
+        /// <item><description><para>true: restores the ECS instance to the initial health state on startup.</para>
+        /// <para>**</para>
+        /// <para><b>Warning</b>: After the ECS instance is restored to the initial health state, data stored on the local disks of the instance is lost.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not restore the ECS instance to the initial health state on startup. The instance remains in the current state.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 

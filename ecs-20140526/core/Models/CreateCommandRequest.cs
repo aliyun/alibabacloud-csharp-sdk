@@ -103,6 +103,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? EnableParameter { get; set; }
 
+        /// <summary>
+        /// <para>The launcher for script execution. The value cannot exceed 1 KB in length.</para>
+        /// <remarks>
+        /// <para> This parameter is not publicly available.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</para>
+        /// </summary>
         [NameInMap("Launcher")]
         [Validation(Required=false)]
         public string Launcher { get; set; }

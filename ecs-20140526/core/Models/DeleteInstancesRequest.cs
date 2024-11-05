@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully release the instance that is in the <b>Running</b> (<c>Running</c>) state. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to forcefully release the ECS instance in the <b>Running</b> (<c>Running</c>) state. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: forcefully releases the instance that is in the <b>Running</b> (<c>Running</c>) state. When the Force parameter is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</description></item>
-        /// <item><description>false: normally releases the instance. This value is valid only for instances that are in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
+        /// <item><description>true: forcefully releases the ECS instance in the <b>Running</b> (<c>Running</c>) state. When Force is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</description></item>
+        /// <item><description>false (default): normally releases the ECS instance. This value is valid only for instances that are in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release an expired subscription instance.</para>
+        /// <para>Specifies whether to release the expired subscription instance.</para>
         /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>

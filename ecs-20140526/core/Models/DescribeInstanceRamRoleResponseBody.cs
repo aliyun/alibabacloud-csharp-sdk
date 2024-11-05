@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceRamRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the instance RAM roles.</para>
+        /// <para>The IDs of the ECS instances and the names of the corresponding instance RAM roles.</para>
         /// </summary>
         [NameInMap("InstanceRamRoleSets")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The region ID of the instance RAM role.</para>
+        /// <para>The region ID of the ECS instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of instance RAM roles returned.</para>
+        /// <para>The number of ECS instances returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
