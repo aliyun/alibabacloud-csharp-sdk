@@ -11775,6 +11775,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return await DescribeReplicaSetRoleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries ApsaraDB for MongoDB instances whose backups are restored within seven days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRestoreDBInstanceListRequest
         /// </param>
@@ -11840,6 +11845,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeRestoreDBInstanceListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries ApsaraDB for MongoDB instances whose backups are restored within seven days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRestoreDBInstanceListRequest
         /// </param>
@@ -11905,6 +11915,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeRestoreDBInstanceListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries ApsaraDB for MongoDB instances whose backups are restored within seven days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRestoreDBInstanceListRequest
         /// </param>
@@ -11918,6 +11933,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return DescribeRestoreDBInstanceListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries ApsaraDB for MongoDB instances whose backups are restored within seven days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRestoreDBInstanceListRequest
         /// </param>

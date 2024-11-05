@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The endpoints of ApsaraDB for MongoDB instances.</para>
+        /// <para>The endpoints of the ApsaraDB for MongoDB sharded cluster instance.</para>
         /// </summary>
         [NameInMap("NetworkAddresses")]
         [Validation(Required=false)]
@@ -116,6 +116,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress> NetworkAddress { get; set; }
             public class DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress : TeaModel {
+                /// <summary>
+                /// <para>The public endpoint type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>SRV</b></description></item>
+                /// <item><description><b>Normal</b></description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>SRV</para>
+                /// </summary>
                 [NameInMap("ConnectionType")]
                 [Validation(Required=false)]
                 public string ConnectionType { get; set; }
@@ -214,6 +224,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 [Validation(Required=false)]
                 public string Role { get; set; }
 
+                /// <summary>
+                /// <para>Txt record which can be used to store MongoDB-related meta data, such as version, configuration parameters and etc. With the combination of txt record and other technology, for example SRV record, the MongoDB client can complete the complex service discovery and configuration passing.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mongo.example.com. IN TXT &quot;config=replicaSet=myReplicaSet&quot;</para>
+                /// </summary>
                 [NameInMap("TxtRecord")]
                 [Validation(Required=false)]
                 public string TxtRecord { get; set; }
