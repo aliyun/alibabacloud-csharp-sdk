@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeSlowLogRecordsResponseBody : TeaModel {
         /// <summary>
-        /// The database engine.
+        /// <para>The database engine.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MongoDB</para>
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// An array that consists of the information about each slow query.
+        /// <para>An array that consists of the information about each slow query.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -28,70 +31,100 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeSlowLogRecordsResponseBodyItemsLogRecords> LogRecords { get; set; }
             public class DescribeSlowLogRecordsResponseBodyItemsLogRecords : TeaModel {
                 /// <summary>
-                /// The username of the database account that performs the operation.
+                /// <para>The username of the database account that performs the operation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("AccountName")]
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// The name of the database.
+                /// <para>The name of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mongodbtest</para>
                 /// </summary>
                 [NameInMap("DBName")]
                 [Validation(Required=false)]
                 public string DBName { get; set; }
 
                 /// <summary>
-                /// The number of documents that are scanned during the operation.
+                /// <para>The number of documents that are scanned during the operation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1000000</para>
                 /// </summary>
                 [NameInMap("DocsExamined")]
                 [Validation(Required=false)]
                 public long? DocsExamined { get; set; }
 
                 /// <summary>
-                /// The start time of the operation. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// <para>The start time of the operation. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-02-25T 01:41:28Z</para>
                 /// </summary>
                 [NameInMap("ExecutionStartTime")]
                 [Validation(Required=false)]
                 public string ExecutionStartTime { get; set; }
 
                 /// <summary>
-                /// The host IP address that is used to connect to the database.
+                /// <para>The host IP address that is used to connect to the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.168.XX.XX</para>
                 /// </summary>
                 [NameInMap("HostAddress")]
                 [Validation(Required=false)]
                 public string HostAddress { get; set; }
 
                 /// <summary>
-                /// The number of rows involved in index scans.
+                /// <para>The number of rows involved in index scans.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("KeysExamined")]
                 [Validation(Required=false)]
                 public long? KeysExamined { get; set; }
 
                 /// <summary>
-                /// The execution time of the statement. Unit: milliseconds.
+                /// <para>The execution time of the statement. Unit: milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>600</para>
                 /// </summary>
                 [NameInMap("QueryTimes")]
                 [Validation(Required=false)]
                 public string QueryTimes { get; set; }
 
                 /// <summary>
-                /// The number of rows returned by the SQL statement.
+                /// <para>The number of rows returned by the SQL statement.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("ReturnRowCounts")]
                 [Validation(Required=false)]
                 public long? ReturnRowCounts { get; set; }
 
                 /// <summary>
-                /// The SQL statement that is executed during the slow operation.
+                /// <para>The SQL statement that is executed during the slow operation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{\&quot;op\&quot;:\&quot;query\&quot;,\&quot;ns\&quot;:\&quot;mongodbtest.customer\&quot;,\&quot;query\&quot;:{\&quot;find\&quot;:\&quot;customer\&quot;,\&quot;filter\&quot;:{\&quot;name\&quot;:\&quot;jack\&quot;}}}</para>
                 /// </summary>
                 [NameInMap("SQLText")]
                 [Validation(Required=false)]
                 public string SQLText { get; set; }
 
                 /// <summary>
-                /// The name of the collection.
+                /// <para>The name of the collection.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>C1</para>
                 /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
@@ -102,28 +135,40 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The page number of the returned page. The value is a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: **1**.
+        /// <para>The page number of the returned page. The value is a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of slow query log entries returned on the page.
+        /// <para>The number of slow query log entries returned on the page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8076C4BA-DDBD-529C-BFF4-D8620C3F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// <para>The total number of returned entries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeBackupStorageRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-2zeb2d64cb46xxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the shard node in the sharded cluster instance.
+        /// <para>The ID of the shard node in the sharded cluster instance.</para>
+        /// <remarks>
+        /// <para> This parameter is required only when the <b>DBInstanceId</b> parameter is set to the ID of a sharded cluster instance.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is required only when the **DBInstanceId** parameter is set to the ID of a sharded cluster instance.
+        /// <b>Example:</b>
+        /// <para>d-2zee48956b4axxxx</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -36,7 +42,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/62010.html) operation to query the most recent region list.
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the most recent region list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-bejing</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeRoleZoneInfoResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>728B9A96-E262-4AE5-915E-3A51CCE2FDA9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information of nodes in the zone.
+        /// <para>The information of nodes in the zone.</para>
         /// </summary>
         [NameInMap("ZoneInfos")]
         [Validation(Required=false)]
@@ -28,46 +31,64 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeRoleZoneInfoResponseBodyZoneInfosZoneInfo> ZoneInfo { get; set; }
             public class DescribeRoleZoneInfoResponseBodyZoneInfosZoneInfo : TeaModel {
                 /// <summary>
-                /// The ID of the node.
+                /// <para>The ID of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dds-bpxxxxxxxx</para>
                 /// </summary>
                 [NameInMap("InsName")]
                 [Validation(Required=false)]
                 public string InsName { get; set; }
 
                 /// <summary>
-                /// The type of the node. Valid values:
+                /// <para>The type of the node. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>normal</b></description></item>
+                /// <item><description><b>configServer</b></description></item>
+                /// <item><description><b>shard</b></description></item>
+                /// <item><description><b>mongos</b></description></item>
+                /// </list>
+                /// <remarks>
+                /// <para>Valid value for replica set instances: <b>normal</b>. Valid values for sharded cluster instances: <b>configServer</b>, <b>shard</b>, and <b>mongos</b>.</para>
+                /// </remarks>
                 /// 
-                /// *   **normal**
-                /// *   **configServer**
-                /// *   **shard**
-                /// *   **mongos**
-                /// 
-                /// > Valid value for replica set instances: **normal**. Valid values for sharded cluster instances: **configServer**, **shard**, and **mongos**.
+                /// <b>Example:</b>
+                /// <para>normal</para>
                 /// </summary>
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// The role ID.
+                /// <para>The role ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>83xxxxx</para>
                 /// </summary>
                 [NameInMap("RoleId")]
                 [Validation(Required=false)]
                 public string RoleId { get; set; }
 
                 /// <summary>
-                /// The role of the node. Valid values:
+                /// <para>The role of the node. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Primary</b></description></item>
+                /// <item><description><b>Secondary</b></description></item>
+                /// <item><description><b>Hidden</b></description></item>
+                /// </list>
                 /// 
-                /// *   **Primary**
-                /// *   **Secondary**
-                /// *   **Hidden**
+                /// <b>Example:</b>
+                /// <para>Primary</para>
                 /// </summary>
                 [NameInMap("RoleType")]
                 [Validation(Required=false)]
                 public string RoleType { get; set; }
 
                 /// <summary>
-                /// The zone ID of the node.
+                /// <para>The zone ID of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-e</para>
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

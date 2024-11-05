@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeSecurityIpsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FC724D23-2962-479E-ABB1-606C935AE7FD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of the information of IP whitelists.
+        /// <para>An array that consists of the information of IP whitelists.</para>
         /// </summary>
         [NameInMap("SecurityIpGroups")]
         [Validation(Required=false)]
@@ -28,21 +31,30 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup> SecurityIpGroup { get; set; }
             public class DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup : TeaModel {
                 /// <summary>
-                /// The attribute of the IP address whitelist.
+                /// <para>The attribute of the IP address whitelist.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>hidden</para>
                 /// </summary>
                 [NameInMap("SecurityIpGroupAttribute")]
                 [Validation(Required=false)]
                 public string SecurityIpGroupAttribute { get; set; }
 
                 /// <summary>
-                /// The name of the IP whitelist.
+                /// <para>The name of the IP whitelist.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>default</para>
                 /// </summary>
                 [NameInMap("SecurityIpGroupName")]
                 [Validation(Required=false)]
                 public string SecurityIpGroupName { get; set; }
 
                 /// <summary>
-                /// The name of the IP whitelist.
+                /// <para>The name of the IP whitelist.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>47.xxx.xxx.xx,100.xxx.xxx.0/24</para>
                 /// </summary>
                 [NameInMap("SecurityIpList")]
                 [Validation(Required=false)]
@@ -53,7 +65,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The IP addresses in the default whitelist.
+        /// <para>The IP addresses in the default whitelist.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>47.xxx.xxx.xx,100.xxx.xxx.0/24</para>
         /// </summary>
         [NameInMap("SecurityIps")]
         [Validation(Required=false)]

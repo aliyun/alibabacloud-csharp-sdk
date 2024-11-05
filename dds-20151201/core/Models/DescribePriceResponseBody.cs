@@ -10,28 +10,34 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribePriceResponseBody : TeaModel {
         /// <summary>
-        /// The order information.
+        /// <para>The order information.</para>
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
         public DescribePriceResponseBodyOrder Order { get; set; }
         public class DescribePriceResponseBodyOrder : TeaModel {
             /// <summary>
-            /// The order code.
+            /// <para>The order code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;&quot;</para>
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
             /// <summary>
-            /// Indicates whether the contract promotion is hit.
+            /// <para>Indicates whether the contract promotion is hit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("ContractActivity")]
             [Validation(Required=false)]
             public bool? ContractActivity { get; set; }
 
             /// <summary>
-            /// The information of coupons.
+            /// <para>The information of coupons.</para>
             /// </summary>
             [NameInMap("Coupons")]
             [Validation(Required=false)]
@@ -42,62 +48,85 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public List<DescribePriceResponseBodyOrderCouponsCoupon> Coupon { get; set; }
                 public class DescribePriceResponseBodyOrderCouponsCoupon : TeaModel {
                     /// <summary>
-                    /// The activity type of the coupon. Valid values:
+                    /// <para>The activity type of the coupon. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>payondemand</b>: subscription</description></item>
+                    /// <item><description><b>payasyougo</b>: pay-as-you-go</description></item>
+                    /// </list>
                     /// 
-                    /// *   **payondemand**: subscription
-                    /// *   **payasyougo**: pay-as-you-go
+                    /// <b>Example:</b>
+                    /// <para>payondemand</para>
                     /// </summary>
                     [NameInMap("ActivityCategory")]
                     [Validation(Required=false)]
                     public string ActivityCategory { get; set; }
 
                     /// <summary>
-                    /// The coupon ID.
+                    /// <para>The coupon ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>youhuiquan_promotion_option_id_for_blank</para>
                     /// </summary>
                     [NameInMap("CouponNo")]
                     [Validation(Required=false)]
                     public string CouponNo { get; set; }
 
                     /// <summary>
-                    /// The description of the coupon.
+                    /// <para>The description of the coupon.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ceshi</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the coupon was selected. Valid values:
+                    /// <para>Indicates whether the coupon was selected. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>true</b></description></item>
+                    /// <item><description><b>false</b></description></item>
+                    /// </list>
                     /// 
-                    /// *   **true**
-                    /// *   **false**
+                    /// <b>Example:</b>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("IsSelected")]
                     [Validation(Required=false)]
                     public string IsSelected { get; set; }
 
                     /// <summary>
-                    /// The coupon name.
+                    /// <para>The coupon name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>youhuiquan111</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// The code of the coupon.
+                    /// <para>The code of the coupon.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>youhui_quan</para>
                     /// </summary>
                     [NameInMap("OptionCode")]
                     [Validation(Required=false)]
                     public string OptionCode { get; set; }
 
                     /// <summary>
-                    /// The promotional option code.
+                    /// <para>The promotional option code.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>youhui_quan</para>
                     /// </summary>
                     [NameInMap("PromotionOptionCode")]
                     [Validation(Required=false)]
                     public string PromotionOptionCode { get; set; }
 
                     /// <summary>
-                    /// The IDs of the rules that correspond to the coupon.
+                    /// <para>The IDs of the rules that correspond to the coupon.</para>
                     /// </summary>
                     [NameInMap("PromotionRuleIdList")]
                     [Validation(Required=false)]
@@ -114,77 +143,101 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             }
 
             /// <summary>
-            /// The currency.
+            /// <para>The currency.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>USD</para>
             /// </summary>
             [NameInMap("Currency")]
             [Validation(Required=false)]
             public string Currency { get; set; }
 
             /// <summary>
-            /// The price reduction information.
+            /// <para>The price reduction information.</para>
             /// </summary>
             [NameInMap("DepreciateInfo")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyOrderDepreciateInfo DepreciateInfo { get; set; }
             public class DescribePriceResponseBodyOrderDepreciateInfo : TeaModel {
                 /// <summary>
-                /// The price reduction rate.
+                /// <para>The price reduction rate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>30%</para>
                 /// </summary>
                 [NameInMap("CheapRate")]
                 [Validation(Required=false)]
                 public double? CheapRate { get; set; }
 
                 /// <summary>
-                /// The new total price displayed on the official website.
+                /// <para>The new total price displayed on the official website.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>9*</para>
                 /// </summary>
                 [NameInMap("CheapStandAmount")]
                 [Validation(Required=false)]
                 public double? CheapStandAmount { get; set; }
 
                 /// <summary>
-                /// The contract promotion.
+                /// <para>The contract promotion.</para>
                 /// </summary>
                 [NameInMap("ContractActivity")]
                 [Validation(Required=false)]
                 public DescribePriceResponseBodyOrderDepreciateInfoContractActivity ContractActivity { get; set; }
                 public class DescribePriceResponseBodyOrderDepreciateInfoContractActivity : TeaModel {
                     /// <summary>
-                    /// The activity ID.
+                    /// <para>The activity ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>41120065996xxxxx</para>
                     /// </summary>
                     [NameInMap("ActivityId")]
                     [Validation(Required=false)]
                     public long? ActivityId { get; set; }
 
                     /// <summary>
-                    /// The activity name.
+                    /// <para>The activity name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>contract promotion_order_xxx discount</para>
                     /// </summary>
                     [NameInMap("ActivityName")]
                     [Validation(Required=false)]
                     public string ActivityName { get; set; }
 
                     /// <summary>
-                    /// The price after the promotion.
+                    /// <para>The price after the promotion.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>20522.4</para>
                     /// </summary>
                     [NameInMap("FinalFee")]
                     [Validation(Required=false)]
                     public double? FinalFee { get; set; }
 
                     /// <summary>
-                    /// The total discount amount.
+                    /// <para>The total discount amount.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3621.6</para>
                     /// </summary>
                     [NameInMap("FinalPromFee")]
                     [Validation(Required=false)]
                     public double? FinalPromFee { get; set; }
 
                     /// <summary>
-                    /// The promotion ID.
+                    /// <para>The promotion ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>wanhua_activity</para>
                     /// </summary>
                     [NameInMap("OptionCode")]
                     [Validation(Required=false)]
                     public string OptionCode { get; set; }
 
                     /// <summary>
-                    /// The promotion IDs.
+                    /// <para>The promotion IDs.</para>
                     /// </summary>
                     [NameInMap("OptionIds")]
                     [Validation(Required=false)]
@@ -197,7 +250,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     }
 
                     /// <summary>
-                    /// The original price.
+                    /// <para>The original price.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>24144.0</para>
                     /// </summary>
                     [NameInMap("ProdFee")]
                     [Validation(Required=false)]
@@ -206,49 +262,70 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 }
 
                 /// <summary>
-                /// The price difference displayed in the total order amount.
+                /// <para>The price difference displayed in the total order amount.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>**</para>
                 /// </summary>
                 [NameInMap("Differential")]
                 [Validation(Required=false)]
                 public double? Differential { get; set; }
 
                 /// <summary>
-                /// The name of the price difference.
+                /// <para>The name of the price difference.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>XXXXX</para>
                 /// </summary>
                 [NameInMap("DifferentialName")]
                 [Validation(Required=false)]
                 public string DifferentialName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the contract promotion is hit.
+                /// <para>Indicates whether the contract promotion is hit.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("IsContractActivity")]
                 [Validation(Required=false)]
                 public bool? IsContractActivity { get; set; }
 
                 /// <summary>
-                /// Indicates whether the price reduction rate is displayed.
+                /// <para>Indicates whether the price reduction rate is displayed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("IsShow")]
                 [Validation(Required=false)]
                 public string IsShow { get; set; }
 
                 /// <summary>
-                /// The list price.
+                /// <para>The list price.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1*</para>
                 /// </summary>
                 [NameInMap("ListPrice")]
                 [Validation(Required=false)]
                 public double? ListPrice { get; set; }
 
                 /// <summary>
-                /// The monthly price.
+                /// <para>The monthly price.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>**</para>
                 /// </summary>
                 [NameInMap("MonthPrice")]
                 [Validation(Required=false)]
                 public double? MonthPrice { get; set; }
 
                 /// <summary>
-                /// The original total price displayed on the official website.
+                /// <para>The original total price displayed on the official website.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12*</para>
                 /// </summary>
                 [NameInMap("OriginalStandAmount")]
                 [Validation(Required=false)]
@@ -257,49 +334,67 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             }
 
             /// <summary>
-            /// The discount amount of the order.
+            /// <para>The discount amount of the order.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>322.4</para>
             /// </summary>
             [NameInMap("DiscountAmount")]
             [Validation(Required=false)]
             public string DiscountAmount { get; set; }
 
             /// <summary>
-            /// Indicates whether the contract promotion is hit.
+            /// <para>Indicates whether the contract promotion is hit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("IsContractActivity")]
             [Validation(Required=false)]
             public bool? IsContractActivity { get; set; }
 
             /// <summary>
-            /// The order information.
+            /// <para>The order information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;&quot;</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// The promotional activity information.
+            /// <para>The promotional activity information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[{\”activityCategory\”:\”discount\”,\”activityExtInfo\”:{\”noUseYouhuiquan\”:\”true\”,\”activityId\”:\”191156098xxxx\”,\”activityExtraAttr\”:\”{\\\\”forbiddenCpsProfit\\\\”:\\\\”true\\\\”,\\\\”forbiddenCouponsRestricted\\\\”:\\\\”true\\\\”,\\\\”forbiddenAmbassadorProfit\\\\”:\\\\”true\\\\”}\”,\”isActivityIdFromWanHuaTong\”:\”true\”,\”isContractActivity\”:\”false\”},\”canPromFee\”:906130,\”optionCode\”:\”wanhua_activity\”,\”promotionName\”:\”FY24--MongoDB replica set - first-time purchase - \* discount for a one-year period - first-time purchase benefits\”,\”promotionOptionNo\”:\”19115609882xxxx\”,\”promotionRuleIdList\”:[2091xxxx],\”selected\”:true,\”targetArticleItemCodes\”:[]},{\”activityCategory\”:\”discount\”,\”activityExtInfo\”:{\”activityId\”:\”1018040010xxxxx\”,\”wanHuaOrderExpireSec\”:\”604800\”,\”isActivityIdFromWanHuaTong\”:\”true\”,\”isContractActivity\”:\”false\”},\”canPromFee\”:339799,\”optionCode\”:\”wanhua_activity\”,\”promotionName\”:\”FY24--MongoDB discount for a one-year period \”,\”promotionOptionNo\”:\”10180400107xxxxx\”,\”promotionRuleIdList\”:[xxxxx],\”selected\”:false,\”targetArticleItemCodes\”:[]}]”</para>
             /// </summary>
             [NameInMap("OptionalPromotions")]
             [Validation(Required=false)]
             public string OptionalPromotions { get; set; }
 
             /// <summary>
-            /// The original price of the order.
+            /// <para>The original price of the order.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>322.4</para>
             /// </summary>
             [NameInMap("OriginalAmount")]
             [Validation(Required=false)]
             public string OriginalAmount { get; set; }
 
             /// <summary>
-            /// The promotional activity that is hit.
+            /// <para>The promotional activity that is hit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[{\”finalPromFee\”:90xxx,\”optionCode\”:\”wanhua_activity\”,\”promType\”:\”discount\”,\”promotionId\”:2091xxxx,\”promotionName\”:\”\* discount is provided for new users who purchase ApsaraDB for MongoDB replica set instances for one year. A new user can purchase an ApsaraDB for MongoDB replica set instance only by using the discount.\”}]”</para>
             /// </summary>
             [NameInMap("PromDetailList")]
             [Validation(Required=false)]
             public string PromDetailList { get; set; }
 
             /// <summary>
-            /// The rules of the order.
+            /// <para>The rules of the order.</para>
             /// </summary>
             [NameInMap("RuleIds")]
             [Validation(Required=false)]
@@ -312,28 +407,40 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             }
 
             /// <summary>
-            /// Indicates whether the discount information is displayed.
+            /// <para>Indicates whether the discount information is displayed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("ShowDiscountInfo")]
             [Validation(Required=false)]
             public bool? ShowDiscountInfo { get; set; }
 
             /// <summary>
-            /// The discount.
+            /// <para>The discount.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("StandDiscountPrice")]
             [Validation(Required=false)]
             public double? StandDiscountPrice { get; set; }
 
             /// <summary>
-            /// The discount.
+            /// <para>The discount.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("StandPrice")]
             [Validation(Required=false)]
             public double? StandPrice { get; set; }
 
             /// <summary>
-            /// The final price of the order.
+            /// <para>The final price of the order.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("TradeAmount")]
             [Validation(Required=false)]
@@ -342,23 +449,30 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The order parameters.
+        /// <para>The order parameters.</para>
+        /// <remarks>
+        /// <para>This parameter is returned only when the <b>OrderParamOut</b> parameter is set to <b>true</b>.</para>
+        /// </remarks>
         /// 
-        /// > This parameter is returned only when the **OrderParamOut** parameter is set to **true**.
+        /// <b>Example:</b>
+        /// <para>{\&quot;autoPay\&quot;:false}&quot;</para>
         /// </summary>
         [NameInMap("OrderParams")]
         [Validation(Required=false)]
         public string OrderParams { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>27227A3D-6B86-56F3-9E03-9E60F001CE12</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The promotion rules.
+        /// <para>The promotion rules.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
@@ -369,21 +483,30 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribePriceResponseBodyRulesRule> Rule { get; set; }
             public class DescribePriceResponseBodyRulesRule : TeaModel {
                 /// <summary>
-                /// The rule name.
+                /// <para>The rule name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>demoname</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The rule ID.
+                /// <para>The rule ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2075****</para>
                 /// </summary>
                 [NameInMap("RuleDescId")]
                 [Validation(Required=false)]
                 public long? RuleDescId { get; set; }
 
                 /// <summary>
-                /// The rule title.
+                /// <para>The rule title.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>demo</para>
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
@@ -394,7 +517,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The coupon rules.
+        /// <para>The coupon rules.</para>
         /// </summary>
         [NameInMap("SubOrders")]
         [Validation(Required=false)]
@@ -405,77 +528,101 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribePriceResponseBodySubOrdersSubOrder> SubOrder { get; set; }
             public class DescribePriceResponseBodySubOrdersSubOrder : TeaModel {
                 /// <summary>
-                /// Indicates whether the contract promotion is hit.
+                /// <para>Indicates whether the contract promotion is hit.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("ContractActivity")]
                 [Validation(Required=false)]
                 public bool? ContractActivity { get; set; }
 
                 /// <summary>
-                /// The price reduction information.
+                /// <para>The price reduction information.</para>
                 /// </summary>
                 [NameInMap("DepreciateInfo")]
                 [Validation(Required=false)]
                 public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfo DepreciateInfo { get; set; }
                 public class DescribePriceResponseBodySubOrdersSubOrderDepreciateInfo : TeaModel {
                     /// <summary>
-                    /// The price reduction rate.
+                    /// <para>The price reduction rate.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>30%</para>
                     /// </summary>
                     [NameInMap("CheapRate")]
                     [Validation(Required=false)]
                     public double? CheapRate { get; set; }
 
                     /// <summary>
-                    /// The new total price displayed on the official website.
+                    /// <para>The new total price displayed on the official website.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>9*</para>
                     /// </summary>
                     [NameInMap("CheapStandAmount")]
                     [Validation(Required=false)]
                     public double? CheapStandAmount { get; set; }
 
                     /// <summary>
-                    /// The activity information.
+                    /// <para>The activity information.</para>
                     /// </summary>
                     [NameInMap("ContractActivity")]
                     [Validation(Required=false)]
                     public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity ContractActivity { get; set; }
                     public class DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity : TeaModel {
                         /// <summary>
-                        /// The activity ID.
+                        /// <para>The activity ID.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>41120065996xxxxx</para>
                         /// </summary>
                         [NameInMap("ActivityId")]
                         [Validation(Required=false)]
                         public long? ActivityId { get; set; }
 
                         /// <summary>
-                        /// The activity name.
+                        /// <para>The activity name.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>contract promotion_order_xxx discount</para>
                         /// </summary>
                         [NameInMap("ActivityName")]
                         [Validation(Required=false)]
                         public string ActivityName { get; set; }
 
                         /// <summary>
-                        /// The price after the promotion.
+                        /// <para>The price after the promotion.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>20522.4</para>
                         /// </summary>
                         [NameInMap("FinalFee")]
                         [Validation(Required=false)]
                         public double? FinalFee { get; set; }
 
                         /// <summary>
-                        /// The total discount amount.
+                        /// <para>The total discount amount.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>3621.6</para>
                         /// </summary>
                         [NameInMap("FinalPromFee")]
                         [Validation(Required=false)]
                         public double? FinalPromFee { get; set; }
 
                         /// <summary>
-                        /// The promotion ID.
+                        /// <para>The promotion ID.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>wanhua_activity</para>
                         /// </summary>
                         [NameInMap("OptionCode")]
                         [Validation(Required=false)]
                         public string OptionCode { get; set; }
 
                         /// <summary>
-                        /// The promotion IDs.
+                        /// <para>The promotion IDs.</para>
                         /// </summary>
                         [NameInMap("OptionIds")]
                         [Validation(Required=false)]
@@ -488,7 +635,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         }
 
                         /// <summary>
-                        /// The original price.
+                        /// <para>The original price.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>24144.0</para>
                         /// </summary>
                         [NameInMap("ProdFee")]
                         [Validation(Required=false)]
@@ -497,56 +647,80 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     }
 
                     /// <summary>
-                    /// The price difference displayed in the total order amount.
+                    /// <para>The price difference displayed in the total order amount.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>**</para>
                     /// </summary>
                     [NameInMap("Differential")]
                     [Validation(Required=false)]
                     public double? Differential { get; set; }
 
                     /// <summary>
-                    /// The name of the price difference.
+                    /// <para>The name of the price difference.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>XXXXX</para>
                     /// </summary>
                     [NameInMap("DifferentialName")]
                     [Validation(Required=false)]
                     public string DifferentialName { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the contract promotion is hit.
+                    /// <para>Indicates whether the contract promotion is hit.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>false</para>
                     /// </summary>
                     [NameInMap("IsContractActivity")]
                     [Validation(Required=false)]
                     public bool? IsContractActivity { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the price reduction rate is displayed.
+                    /// <para>Indicates whether the price reduction rate is displayed.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("IsShow")]
                     [Validation(Required=false)]
                     public string IsShow { get; set; }
 
                     /// <summary>
-                    /// The list price.
+                    /// <para>The list price.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1*</para>
                     /// </summary>
                     [NameInMap("ListPrice")]
                     [Validation(Required=false)]
                     public double? ListPrice { get; set; }
 
                     /// <summary>
-                    /// The monthly price.
+                    /// <para>The monthly price.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>**</para>
                     /// </summary>
                     [NameInMap("MonthPrice")]
                     [Validation(Required=false)]
                     public double? MonthPrice { get; set; }
 
                     /// <summary>
-                    /// The original total price displayed on the official website.
+                    /// <para>The original total price displayed on the official website.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>12*</para>
                     /// </summary>
                     [NameInMap("OriginalStandAmount")]
                     [Validation(Required=false)]
                     public double? OriginalStandAmount { get; set; }
 
                     /// <summary>
-                    /// The start time of the activity.
+                    /// <para>The start time of the activity.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2024-02-29 10:30:00</para>
                     /// </summary>
                     [NameInMap("StartTime")]
                     [Validation(Required=false)]
@@ -555,35 +729,47 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 }
 
                 /// <summary>
-                /// The discount amount of the order.
+                /// <para>The discount amount of the order.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>322.4</para>
                 /// </summary>
                 [NameInMap("DiscountAmount")]
                 [Validation(Required=false)]
                 public string DiscountAmount { get; set; }
 
                 /// <summary>
-                /// The instance ID.
+                /// <para>The instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dds-bp1b6e54e7cc****</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// Indicates whether the contract promotion is hit.
+                /// <para>Indicates whether the contract promotion is hit.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("IsContractActivity")]
                 [Validation(Required=false)]
                 public bool? IsContractActivity { get; set; }
 
                 /// <summary>
-                /// Indicates whether the discount is hit.
+                /// <para>Indicates whether the discount is hit.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("IsNewOfficialActivity")]
                 [Validation(Required=false)]
                 public string IsNewOfficialActivity { get; set; }
 
                 /// <summary>
-                /// The configuration item of the instance in the order.
+                /// <para>The configuration item of the instance in the order.</para>
                 /// </summary>
                 [NameInMap("ModuleInstance")]
                 [Validation(Required=false)]
@@ -594,84 +780,117 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     public List<DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance> ModuleInstance { get; set; }
                     public class DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance : TeaModel {
                         /// <summary>
-                        /// Indicates whether the contract promotion is hit.
+                        /// <para>Indicates whether the contract promotion is hit.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
                         /// </summary>
                         [NameInMap("ContractActivity")]
                         [Validation(Required=false)]
                         public bool? ContractActivity { get; set; }
 
                         /// <summary>
-                        /// The cycle fee of the module.
+                        /// <para>The cycle fee of the module.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>0.0</para>
                         /// </summary>
                         [NameInMap("CycleFee")]
                         [Validation(Required=false)]
                         public string CycleFee { get; set; }
 
                         /// <summary>
-                        /// The activity information.
+                        /// <para>The activity information.</para>
                         /// </summary>
                         [NameInMap("DepreciateInfo")]
                         [Validation(Required=false)]
                         public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo DepreciateInfo { get; set; }
                         public class DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo : TeaModel {
                             /// <summary>
-                            /// The price reduction rate.
+                            /// <para>The price reduction rate.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>30%</para>
                             /// </summary>
                             [NameInMap("CheapRate")]
                             [Validation(Required=false)]
                             public double? CheapRate { get; set; }
 
                             /// <summary>
-                            /// The new total price displayed on the official website.
+                            /// <para>The new total price displayed on the official website.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>9*</para>
                             /// </summary>
                             [NameInMap("CheapStandAmount")]
                             [Validation(Required=false)]
                             public double? CheapStandAmount { get; set; }
 
                             /// <summary>
-                            /// The price difference displayed in the total order amount.
+                            /// <para>The price difference displayed in the total order amount.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>**</para>
                             /// </summary>
                             [NameInMap("Differential")]
                             [Validation(Required=false)]
                             public double? Differential { get; set; }
 
                             /// <summary>
-                            /// The name of the price difference.
+                            /// <para>The name of the price difference.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>XXXXX</para>
                             /// </summary>
                             [NameInMap("DifferentialName")]
                             [Validation(Required=false)]
                             public string DifferentialName { get; set; }
 
                             /// <summary>
-                            /// Indicates whether the contract promotion is hit.
+                            /// <para>Indicates whether the contract promotion is hit.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>false</para>
                             /// </summary>
                             [NameInMap("IsContractActivity")]
                             [Validation(Required=false)]
                             public bool? IsContractActivity { get; set; }
 
                             /// <summary>
-                            /// Indicates whether the price reduction rate is displayed.
+                            /// <para>Indicates whether the price reduction rate is displayed.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>true</para>
                             /// </summary>
                             [NameInMap("IsShow")]
                             [Validation(Required=false)]
                             public string IsShow { get; set; }
 
                             /// <summary>
-                            /// The list price.
+                            /// <para>The list price.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>1*</para>
                             /// </summary>
                             [NameInMap("ListPrice")]
                             [Validation(Required=false)]
                             public double? ListPrice { get; set; }
 
                             /// <summary>
-                            /// The monthly price.
+                            /// <para>The monthly price.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>**</para>
                             /// </summary>
                             [NameInMap("MonthPrice")]
                             [Validation(Required=false)]
                             public double? MonthPrice { get; set; }
 
                             /// <summary>
-                            /// The original total price displayed on the official website.
+                            /// <para>The original total price displayed on the official website.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>12*</para>
                             /// </summary>
                             [NameInMap("OriginalStandAmount")]
                             [Validation(Required=false)]
@@ -680,14 +899,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         }
 
                         /// <summary>
-                        /// The discount.
+                        /// <para>The discount.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>0.0</para>
                         /// </summary>
                         [NameInMap("DiscountFee")]
                         [Validation(Required=false)]
                         public string DiscountFee { get; set; }
 
                         /// <summary>
-                        /// The module attributes.
+                        /// <para>The module attributes.</para>
                         /// </summary>
                         [NameInMap("ModuleAttrs")]
                         [Validation(Required=false)]
@@ -698,28 +920,40 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                             public List<DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceModuleAttrsModuleAttr> ModuleAttr { get; set; }
                             public class DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceModuleAttrsModuleAttr : TeaModel {
                                 /// <summary>
-                                /// The attribute code.
+                                /// <para>The attribute code.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>dds_dbtype</para>
                                 /// </summary>
                                 [NameInMap("Code")]
                                 [Validation(Required=false)]
                                 public string Code { get; set; }
 
                                 /// <summary>
-                                /// The attribute name.
+                                /// <para>The attribute name.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>MongoDB</para>
                                 /// </summary>
                                 [NameInMap("Name")]
                                 [Validation(Required=false)]
                                 public string Name { get; set; }
 
                                 /// <summary>
-                                /// The attribute type.
+                                /// <para>The attribute type.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>3</para>
                                 /// </summary>
                                 [NameInMap("Type")]
                                 [Validation(Required=false)]
                                 public string Type { get; set; }
 
                                 /// <summary>
-                                /// The attribute value.
+                                /// <para>The attribute value.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>MongoDB</para>
                                 /// </summary>
                                 [NameInMap("Value")]
                                 [Validation(Required=false)]
@@ -730,49 +964,67 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         }
 
                         /// <summary>
-                        /// The module code.
+                        /// <para>The module code.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>dds_dbtype</para>
                         /// </summary>
                         [NameInMap("ModuleCode")]
                         [Validation(Required=false)]
                         public string ModuleCode { get; set; }
 
                         /// <summary>
-                        /// The module ID
+                        /// <para>The module ID</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1017110000415xxx</para>
                         /// </summary>
                         [NameInMap("ModuleId")]
                         [Validation(Required=false)]
                         public long? ModuleId { get; set; }
 
                         /// <summary>
-                        /// The module name.
+                        /// <para>The module name.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>database type</para>
                         /// </summary>
                         [NameInMap("ModuleName")]
                         [Validation(Required=false)]
                         public string ModuleName { get; set; }
 
                         /// <summary>
-                        /// Indicates whether the order is paid.
+                        /// <para>Indicates whether the order is paid.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>true</para>
                         /// </summary>
                         [NameInMap("NeedOrderPay")]
                         [Validation(Required=false)]
                         public bool? NeedOrderPay { get; set; }
 
                         /// <summary>
-                        /// The actual amount paid.
+                        /// <para>The actual amount paid.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>0.0</para>
                         /// </summary>
                         [NameInMap("PayFee")]
                         [Validation(Required=false)]
                         public double? PayFee { get; set; }
 
                         /// <summary>
-                        /// Indicates whether the item is billed.
+                        /// <para>Indicates whether the item is billed.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
                         /// </summary>
                         [NameInMap("PricingModule")]
                         [Validation(Required=false)]
                         public bool? PricingModule { get; set; }
 
                         /// <summary>
-                        /// The promotion details.
+                        /// <para>The promotion details.</para>
                         /// </summary>
                         [NameInMap("PromDetailList")]
                         [Validation(Required=false)]
@@ -783,56 +1035,82 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                             public List<DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstancePromDetailListPromDetail> PromDetail { get; set; }
                             public class DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstancePromDetailListPromDetail : TeaModel {
                                 /// <summary>
-                                /// The additional promotion information.
+                                /// <para>The additional promotion information.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>{
+                                ///     &quot;activityId&quot;: &quot;1512010241743170&quot;
+                                /// }</para>
                                 /// </summary>
                                 [NameInMap("ActivityExtInfo")]
                                 [Validation(Required=false)]
                                 public Dictionary<string, object> ActivityExtInfo { get; set; }
 
                                 /// <summary>
-                                /// The sub-type of the promotion.
+                                /// <para>The sub-type of the promotion.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>subPrice</para>
                                 /// </summary>
                                 [NameInMap("DerivedPromType")]
                                 [Validation(Required=false)]
                                 public string DerivedPromType { get; set; }
 
                                 /// <summary>
-                                /// The discount amount.
+                                /// <para>The discount amount.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>0.0</para>
                                 /// </summary>
                                 [NameInMap("FinalPromFee")]
                                 [Validation(Required=false)]
                                 public double? FinalPromFee { get; set; }
 
                                 /// <summary>
-                                /// The code of the commodity to which the coupon can be applied.
+                                /// <para>The code of the commodity to which the coupon can be applied.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>wanhua_activity</para>
                                 /// </summary>
                                 [NameInMap("OptionCode")]
                                 [Validation(Required=false)]
                                 public string OptionCode { get; set; }
 
                                 /// <summary>
-                                /// The sub-type of the promotion.
+                                /// <para>The sub-type of the promotion.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>discount</para>
                                 /// </summary>
                                 [NameInMap("PromType")]
                                 [Validation(Required=false)]
                                 public string PromType { get; set; }
 
                                 /// <summary>
-                                /// The coupon code.
+                                /// <para>The coupon code.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>aliwood-xxx</para>
                                 /// </summary>
                                 [NameInMap("PromotionCode")]
                                 [Validation(Required=false)]
                                 public string PromotionCode { get; set; }
 
                                 /// <summary>
-                                /// The ID of the promotional activity.
+                                /// <para>The ID of the promotional activity.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>8105187xxxx</para>
                                 /// </summary>
                                 [NameInMap("PromotionId")]
                                 [Validation(Required=false)]
                                 public long? PromotionId { get; set; }
 
                                 /// <summary>
-                                /// The promotional activity name.
+                                /// <para>The promotional activity name.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>[Item with price reduction in x xxxx] ApsaraDB for MongoDB instances of a full range of specifications - xxxxx</para>
                                 /// </summary>
                                 [NameInMap("PromotionName")]
                                 [Validation(Required=false)]
@@ -843,21 +1121,30 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         }
 
                         /// <summary>
-                        /// The discount.
+                        /// <para>The discount.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>451.00</para>
                         /// </summary>
                         [NameInMap("StandDiscountPrice")]
                         [Validation(Required=false)]
                         public double? StandDiscountPrice { get; set; }
 
                         /// <summary>
-                        /// The discount.
+                        /// <para>The discount.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>0</para>
                         /// </summary>
                         [NameInMap("StandPrice")]
                         [Validation(Required=false)]
                         public double? StandPrice { get; set; }
 
                         /// <summary>
-                        /// The original price of the product.
+                        /// <para>The original price of the product.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>0.0</para>
                         /// </summary>
                         [NameInMap("TotalProductFee")]
                         [Validation(Required=false)]
@@ -868,7 +1155,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 }
 
                 /// <summary>
-                /// The promotional options that can be configured.
+                /// <para>The promotional options that can be configured.</para>
                 /// </summary>
                 [NameInMap("OptionalPromotions")]
                 [Validation(Required=false)]
@@ -879,49 +1166,69 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     public List<DescribePriceResponseBodySubOrdersSubOrderOptionalPromotionsOptionalPromotion> OptionalPromotion { get; set; }
                     public class DescribePriceResponseBodySubOrdersSubOrderOptionalPromotionsOptionalPromotion : TeaModel {
                         /// <summary>
-                        /// The activity type.
+                        /// <para>The activity type.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>discount</para>
                         /// </summary>
                         [NameInMap("ActivityCategory")]
                         [Validation(Required=false)]
                         public string ActivityCategory { get; set; }
 
                         /// <summary>
-                        /// The additional activity information.
+                        /// <para>The additional activity information.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>{
+                        ///     &quot;activityId&quot;: &quot;1512010241743170&quot;
+                        /// }</para>
                         /// </summary>
                         [NameInMap("ActivityExtInfo")]
                         [Validation(Required=false)]
                         public Dictionary<string, object> ActivityExtInfo { get; set; }
 
                         /// <summary>
-                        /// The amount that can be deducted by using the coupon.
+                        /// <para>The amount that can be deducted by using the coupon.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>4560789</para>
                         /// </summary>
                         [NameInMap("CanPromFee")]
                         [Validation(Required=false)]
                         public double? CanPromFee { get; set; }
 
                         /// <summary>
-                        /// The promotion type.
+                        /// <para>The promotion type.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>wanhua_activity</para>
                         /// </summary>
                         [NameInMap("OptionCode")]
                         [Validation(Required=false)]
                         public string OptionCode { get; set; }
 
                         /// <summary>
-                        /// The promotion name.
+                        /// <para>The promotion name.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>[Item with price reduction in xxx] ApsaraDB for MongoDB instances of a full range of specifications - xxx</para>
                         /// </summary>
                         [NameInMap("PromotionName")]
                         [Validation(Required=false)]
                         public string PromotionName { get; set; }
 
                         /// <summary>
-                        /// The promotion ID.
+                        /// <para>The promotion ID.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1512010241xxxxx</para>
                         /// </summary>
                         [NameInMap("PromotionOptionNo")]
                         [Validation(Required=false)]
                         public string PromotionOptionNo { get; set; }
 
                         /// <summary>
-                        /// The IDs of the rules that correspond to the coupon.
+                        /// <para>The IDs of the rules that correspond to the coupon.</para>
                         /// </summary>
                         [NameInMap("PromotionRuleIdList")]
                         [Validation(Required=false)]
@@ -934,21 +1241,27 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         }
 
                         /// <summary>
-                        /// Indicates whether
+                        /// <para>Indicates whether</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
                         /// </summary>
                         [NameInMap("Selected")]
                         [Validation(Required=false)]
                         public bool? Selected { get; set; }
 
                         /// <summary>
-                        /// Indicates whether the discount is displayed.
+                        /// <para>Indicates whether the discount is displayed.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>true</para>
                         /// </summary>
                         [NameInMap("Show")]
                         [Validation(Required=false)]
                         public bool? Show { get; set; }
 
                         /// <summary>
-                        /// The specification codes of the product.
+                        /// <para>The specification codes of the product.</para>
                         /// </summary>
                         [NameInMap("TargetArticleItemCodes")]
                         [Validation(Required=false)]
@@ -965,14 +1278,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 }
 
                 /// <summary>
-                /// The original price of the order.
+                /// <para>The original price of the order.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>322.4</para>
                 /// </summary>
                 [NameInMap("OriginalAmount")]
                 [Validation(Required=false)]
                 public string OriginalAmount { get; set; }
 
                 /// <summary>
-                /// The promotion details.
+                /// <para>The promotion details.</para>
                 /// </summary>
                 [NameInMap("PromDetailList")]
                 [Validation(Required=false)]
@@ -983,56 +1299,82 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     public List<DescribePriceResponseBodySubOrdersSubOrderPromDetailListPromDetail> PromDetail { get; set; }
                     public class DescribePriceResponseBodySubOrdersSubOrderPromDetailListPromDetail : TeaModel {
                         /// <summary>
-                        /// The additional activity information.
+                        /// <para>The additional activity information.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>{
+                        ///     &quot;activityId&quot;: &quot;1512010241743170&quot;
+                        /// }</para>
                         /// </summary>
                         [NameInMap("ActivityExtInfo")]
                         [Validation(Required=false)]
                         public Dictionary<string, object> ActivityExtInfo { get; set; }
 
                         /// <summary>
-                        /// The sub-type of the promotion.
+                        /// <para>The sub-type of the promotion.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>subPrice</para>
                         /// </summary>
                         [NameInMap("DerivedPromType")]
                         [Validation(Required=false)]
                         public string DerivedPromType { get; set; }
 
                         /// <summary>
-                        /// The discount amount.
+                        /// <para>The discount amount.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>0.0</para>
                         /// </summary>
                         [NameInMap("FinalPromFee")]
                         [Validation(Required=false)]
                         public double? FinalPromFee { get; set; }
 
                         /// <summary>
-                        /// The code of the coupon.
+                        /// <para>The code of the coupon.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>youhui_quan</para>
                         /// </summary>
                         [NameInMap("OptionCode")]
                         [Validation(Required=false)]
                         public string OptionCode { get; set; }
 
                         /// <summary>
-                        /// The sub-type of the promotion.
+                        /// <para>The sub-type of the promotion.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>discount</para>
                         /// </summary>
                         [NameInMap("PromType")]
                         [Validation(Required=false)]
                         public string PromType { get; set; }
 
                         /// <summary>
-                        /// The coupon code.
+                        /// <para>The coupon code.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>ali-wood</para>
                         /// </summary>
                         [NameInMap("PromotionCode")]
                         [Validation(Required=false)]
                         public string PromotionCode { get; set; }
 
                         /// <summary>
-                        /// The promotion ID.
+                        /// <para>The promotion ID.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>233xxxxx</para>
                         /// </summary>
                         [NameInMap("PromotionId")]
                         [Validation(Required=false)]
                         public long? PromotionId { get; set; }
 
                         /// <summary>
-                        /// The name of the promotional activity.
+                        /// <para>The name of the promotional activity.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>[Item with price reduction in x xxxx] ApsaraDB for MongoDB instances of a full range of specifications - xxxxx</para>
                         /// </summary>
                         [NameInMap("PromotionName")]
                         [Validation(Required=false)]
@@ -1043,7 +1385,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 }
 
                 /// <summary>
-                /// The activity rules.
+                /// <para>The activity rules.</para>
                 /// </summary>
                 [NameInMap("RuleIds")]
                 [Validation(Required=false)]
@@ -1056,21 +1398,30 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 }
 
                 /// <summary>
-                /// The discount.
+                /// <para>The discount.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>8687</para>
                 /// </summary>
                 [NameInMap("StandDiscountPrice")]
                 [Validation(Required=false)]
                 public double? StandDiscountPrice { get; set; }
 
                 /// <summary>
-                /// The discount.
+                /// <para>The discount.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>62982</para>
                 /// </summary>
                 [NameInMap("StandPrice")]
                 [Validation(Required=false)]
                 public double? StandPrice { get; set; }
 
                 /// <summary>
-                /// The actual price of the order.
+                /// <para>The actual price of the order.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("TradeAmount")]
                 [Validation(Required=false)]
@@ -1081,7 +1432,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The ID of the trace.
+        /// <para>The ID of the trace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>27227A3D-6B87-56F3-9E03-9E60F001****</para>
         /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]

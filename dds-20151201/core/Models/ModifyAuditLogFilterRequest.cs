@@ -10,26 +10,31 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyAuditLogFilterRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bp12c5b040dc****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The type of logs collected by the audit log feature of the instance. Separate multiple types with commas (,). Valid values:
+        /// <para>The type of logs collected by the audit log feature of the instance. Separate multiple types with commas (,). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>admin</b>: O\&amp;M and management operations</description></item>
+        /// <item><description><b>slow</b>: slow query logs</description></item>
+        /// <item><description><b>query</b>: query operations</description></item>
+        /// <item><description><b>insert</b>: insert operations</description></item>
+        /// <item><description><b>update</b>: update operations</description></item>
+        /// <item><description><b>delete</b>: delete operations</description></item>
+        /// <item><description><b>command</b>: protocol commands such as the aggregate method</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **admin**: O\\&M and management operations
-        /// *   **slow**: slow query logs
-        /// *   **query**: query operations
-        /// *   **insert**: insert operations
-        /// *   **update**: update operations
-        /// *   **delete**: delete operations
-        /// *   **command**: protocol commands such as the aggregate method
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>insert,query,update,delete</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
@@ -52,10 +57,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The role of the node in the instance. Valid values:
+        /// <para>The role of the node in the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>primary</b></description></item>
+        /// <item><description><b>secondary</b></description></item>
+        /// </list>
         /// 
-        /// *   **primary**
-        /// *   **secondary**
+        /// <b>Example:</b>
+        /// <para>primary</para>
         /// </summary>
         [NameInMap("RoleType")]
         [Validation(Required=false)]

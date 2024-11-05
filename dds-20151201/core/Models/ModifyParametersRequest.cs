@@ -10,31 +10,42 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyParametersRequest : TeaModel {
         /// <summary>
-        /// The role of the instance. Valid values:
+        /// <para>The role of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>db</b>: a shard node.</description></item>
+        /// <item><description><b>cs</b>: a Configserver node.</description></item>
+        /// <item><description><b>mongos</b>: a mongos node.</description></item>
+        /// </list>
         /// 
-        /// *   **db**: a shard node.
-        /// *   **cs**: a Configserver node.
-        /// *   **mongos**: a mongos node.
+        /// <b>Example:</b>
+        /// <para>db</para>
         /// </summary>
         [NameInMap("CharacterType")]
         [Validation(Required=false)]
         public string CharacterType { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <remarks>
+        /// <para> If you set this parameter to the ID of a sharded cluster instance, you must also specify the NodeId parameter.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the NodeId parameter.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bp19f409d75****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the mongos or shard node in the specified sharded cluster instance.
+        /// <para>The ID of the mongos or shard node in the specified sharded cluster instance.</para>
+        /// <remarks>
+        /// <para> This parameter is valid only when DBInstanceId is set to the ID of a sharded cluster instance.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is valid only when DBInstanceId is set to the ID of a sharded cluster instance.
+        /// <b>Example:</b>
+        /// <para>d-bp1b7bb3bbe****</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -49,18 +60,24 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The instance parameters that you want to modify and their values. Specify this parameter in a JSON string. Sample format: {"ParameterName1":"ParameterValue1","ParameterName2":"ParameterValue2"}.
+        /// <para>The instance parameters that you want to modify and their values. Specify this parameter in a JSON string. Sample format: {&quot;ParameterName1&quot;:&quot;ParameterValue1&quot;,&quot;ParameterName2&quot;:&quot;ParameterValue2&quot;}.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/67618.html">DescribeParameterTemplates</a> operation to query a list of default parameter templates.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeParameterTemplates](https://help.aliyun.com/document_detail/67618.html) operation to query a list of default parameter templates.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>{&quot;operationProfiling.mode&quot;:&quot;all&quot;,&quot;operationProfiling.slowOpThresholdMs&quot;:&quot;200&quot;}</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public string Parameters { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the most recent region list.
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

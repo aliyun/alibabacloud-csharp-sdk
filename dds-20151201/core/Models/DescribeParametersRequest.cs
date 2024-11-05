@@ -10,38 +10,52 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeParametersRequest : TeaModel {
         /// <summary>
-        /// The role of the instance. Valid values:
+        /// <para>The role of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>db: a shard node.</description></item>
+        /// <item><description>cs: a Configserver node.</description></item>
+        /// <item><description>mongos: a mongos node.</description></item>
+        /// </list>
         /// 
-        /// *   db: a shard node.
-        /// *   cs: a Configserver node.
-        /// *   mongos: a mongos node.
+        /// <b>Example:</b>
+        /// <para>mongos</para>
         /// </summary>
         [NameInMap("CharacterType")]
         [Validation(Required=false)]
         public string CharacterType { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <remarks>
+        /// <para> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bpxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The parameter that is available in the future.
+        /// <para>The parameter that is available in the future.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>terrform</para>
         /// </summary>
         [NameInMap("ExtraParam")]
         [Validation(Required=false)]
         public string ExtraParam { get; set; }
 
         /// <summary>
-        /// The ID of the mongos or shard node in the specified sharded cluster instance.
+        /// <para>The ID of the mongos or shard node in the specified sharded cluster instance.</para>
+        /// <remarks>
+        /// <para> This parameter is valid when the <b>DBInstanceId</b> parameter is set to the ID of a sharded cluster instance.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is valid when the **DBInstanceId** parameter is set to the ID of a sharded cluster instance.
+        /// <b>Example:</b>
+        /// <para>d-bpxxxxxxxx</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

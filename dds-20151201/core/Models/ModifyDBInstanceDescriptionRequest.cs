@@ -10,37 +10,48 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceDescriptionRequest : TeaModel {
         /// <summary>
-        /// The name of the instance.
+        /// <para>The name of the instance.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>The name cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// </description></item>
+        /// <item><description><para>It must start with a letter.</para>
+        /// </description></item>
+        /// <item><description><para>It must be 2 to 256 characters in length, and can contain letters, underscores (_), hyphens (-), and digits.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > 
-        /// 
-        /// *   The name cannot start with `http://` or `https://`.
-        /// 
-        /// *   It must start with a letter.
-        /// 
-        /// *   It must be 2 to 256 characters in length, and can contain letters, underscores (_), hyphens (-), and digits.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testdata</para>
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <remarks>
+        /// <para> To modify the name of a shard or mongos node in a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  To modify the name of a shard or mongos node in a sharded cluster instance, you must also specify the **NodeId** parameter.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bp2234****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the shard or mongos node in the sharded cluster instance.
+        /// <para>The ID of the shard or mongos node in the sharded cluster instance.</para>
+        /// <remarks>
+        /// <para> This parameter is valid only if you set the <b>DBInstanceId</b> parameter to the ID of a sharded cluster instance.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
+        /// <b>Example:</b>
+        /// <para>d-bp89067****</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

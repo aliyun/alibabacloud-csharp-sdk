@@ -8,23 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
-    public class DescribeAccountsRequest : TeaModel {
+    public class DescribeRestoreDBInstanceListRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the account. Set the value to <b>root</b>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>root</para>
-        /// </summary>
-        [NameInMap("AccountName")]
-        [Validation(Required=false)]
-        public string AccountName { get; set; }
-
-        /// <summary>
-        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dds-bp1fd530f271****</para>
+        /// <para>2024-07-24T14:00:00Z</para>
+        /// </summary>
+        [NameInMap("CreationTimeAfter")]
+        [Validation(Required=false)]
+        public string CreationTimeAfter { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dds-bp114f14849d****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -37,6 +36,22 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

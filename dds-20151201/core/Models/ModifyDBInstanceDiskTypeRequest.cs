@@ -10,85 +10,114 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceDiskTypeRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable automatic payment. Valid values:
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables automatic payment. Make sure that you have sufficient balance within your account.</description></item>
+        /// <item><description><b>false</b>: disables automatic payment. You must perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner, click <b>Expenses</b> and select <b>User Center</b> from the drop-down list. The User Center page appears. In the left-side navigation pane, choose <b>Order Management</b> &gt; Renew. On the Renewal tab, find the bill that you want to pay and then click Renew in the Actions column.</description></item>
+        /// </list>
+        /// <para>Default value: <b>true</b>.</para>
         /// 
-        /// *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
-        /// *   **false**: disables automatic payment. You must perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner, click **Expenses** and select **User Center** from the drop-down list. The User Center page appears. In the left-side navigation pane, choose **Order Management** > Renew. On the Renewal tab, find the bill that you want to pay and then click Renew in the Actions column.
-        /// 
-        /// Default value: **true**.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable auto-renewal. Valid values:
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// <para>Default value: <b>false</b>.</para>
         /// 
-        /// *   **true**
-        /// *   **false**
-        /// 
-        /// Default value: **false**.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// The business information. This is an additional parameter.
+        /// <para>The business information. This is an additional parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{“ActivityId&quot;:&quot;000000000&quot;}</para>
         /// </summary>
         [NameInMap("BusinessInfo")]
         [Validation(Required=false)]
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
+        /// <para>The coupon code. Default value: <c>youhuiquan_promotion_option_id_for_blank</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>youhuiquan_promotion_option_id_for_blank</para>
         /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bp1fa5efaa93****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The new disk type. Valid values:
+        /// <para>The new disk type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cloud_auto</b>: ESSD AutoPL disk</description></item>
+        /// <item><description><b>cloud_essd1</b>: PL1 ESSD</description></item>
+        /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
+        /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
+        /// </list>
         /// 
-        /// *   **cloud_auto**: ESSD AutoPL disk
-        /// *   **cloud_essd1**: PL1 ESSD
-        /// *   **cloud_essd2**: PL2 ESSD
-        /// *   **cloud_essd3**: PL3 ESSD
+        /// <b>Example:</b>
+        /// <para>cloud_auto</para>
         /// </summary>
         [NameInMap("DbInstanceStorageType")]
         [Validation(Required=false)]
         public string DbInstanceStorageType { get; set; }
 
         /// <summary>
-        /// An additional parameter.
+        /// <para>An additional parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>async</para>
         /// </summary>
         [NameInMap("ExtraParam")]
         [Validation(Required=false)]
         public string ExtraParam { get; set; }
 
         /// <summary>
-        /// The type of configuration changes. Valid values:
+        /// <para>The type of configuration changes. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>UPGRADE</b></description></item>
+        /// <item><description><b>DOWNGRADE</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is valid only when the billing method of the instance is subscription.</para>
+        /// </remarks>
         /// 
-        /// *   **UPGRADE**
-        /// *   **DOWNGRADE**
-        /// 
-        /// >  This parameter is valid only when the billing method of the instance is subscription.
+        /// <b>Example:</b>
+        /// <para>UPGRADE</para>
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }
 
         /// <summary>
-        /// The provisioned IOPS. Valid values: 0 to 50000.
+        /// <para>The provisioned IOPS. Valid values: 0 to 50000.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1960</para>
         /// </summary>
         [NameInMap("ProvisionedIops")]
         [Validation(Required=false)]

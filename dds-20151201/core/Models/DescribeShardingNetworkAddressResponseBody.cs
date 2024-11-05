@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeShardingNetworkAddressResponseBody : TeaModel {
         /// <summary>
-        /// The endpoints of DynamoDB-compatible instances.
+        /// <para>The endpoints of DynamoDB-compatible instances.</para>
         /// </summary>
         [NameInMap("CompatibleConnections")]
         [Validation(Required=false)]
@@ -21,57 +21,81 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection> CompatibleConnection { get; set; }
             public class DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection : TeaModel {
                 /// <summary>
-                /// The remaining duration of the classic network endpoint. Unit: seconds.
+                /// <para>The remaining duration of the classic network endpoint. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2591963</para>
                 /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
 
                 /// <summary>
-                /// The IP address of the instance.
+                /// <para>The IP address of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10.140.xxx.xx</para>
                 /// </summary>
                 [NameInMap("IPAddress")]
                 [Validation(Required=false)]
                 public string IPAddress { get; set; }
 
                 /// <summary>
-                /// The endpoint of the instance.
+                /// <para>The endpoint of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dds-bpxxxxxxxxxxxxxx.mongodb.rds.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("NetworkAddress")]
                 [Validation(Required=false)]
                 public string NetworkAddress { get; set; }
 
                 /// <summary>
-                /// The network type of the instance.
+                /// <para>The network type of the instance.</para>
+                /// <list type="bullet">
+                /// <item><description><b>VPC</b>: virtual private cloud</description></item>
+                /// <item><description><b>Classic</b>: classic network</description></item>
+                /// <item><description><b>Public</b>: the Internet</description></item>
+                /// </list>
                 /// 
-                /// *   **VPC**: virtual private cloud
-                /// *   **Classic**: classic network
-                /// *   **Public**: the Internet
+                /// <b>Example:</b>
+                /// <para>VPC</para>
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// The port that is used to connect to the instance.
+                /// <para>The port that is used to connect to the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3717</para>
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
                 /// <summary>
-                /// The VPC ID of the instance.
+                /// <para>The VPC ID of the instance.</para>
+                /// <remarks>
+                /// <para> This parameter is returned when the network type is <b>VPC</b>.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned when the network type is **VPC**.
+                /// <b>Example:</b>
+                /// <para>vpc-bpxxxxxxxx</para>
                 /// </summary>
                 [NameInMap("VPCId")]
                 [Validation(Required=false)]
                 public string VPCId { get; set; }
 
                 /// <summary>
-                /// The ID of the vSwitch in the Virtual Private Cloud (VPC).
+                /// <para>The ID of the vSwitch in the Virtual Private Cloud (VPC).</para>
+                /// <remarks>
+                /// <para> This parameter is returned when the network type is <b>VPC</b>.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned when the network type is **VPC**.
+                /// <b>Example:</b>
+                /// <para>vsw-bpxxxxxxxx</para>
                 /// </summary>
                 [NameInMap("VswitchId")]
                 [Validation(Required=false)]
@@ -82,7 +106,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The endpoints of ApsaraDB for MongoDB instances.
+        /// <para>The endpoints of ApsaraDB for MongoDB instances.</para>
         /// </summary>
         [NameInMap("NetworkAddresses")]
         [Validation(Required=false)]
@@ -92,86 +116,129 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress> NetworkAddress { get; set; }
             public class DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress : TeaModel {
+                [NameInMap("ConnectionType")]
+                [Validation(Required=false)]
+                public string ConnectionType { get; set; }
+
                 /// <summary>
-                /// The remaining duration of the classic network endpoint. Unit: seconds.
+                /// <para>The remaining duration of the classic network endpoint. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2591963</para>
                 /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
 
                 /// <summary>
-                /// The IP address of the instance.
+                /// <para>The IP address of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10.140.xxx.xx</para>
                 /// </summary>
                 [NameInMap("IPAddress")]
                 [Validation(Required=false)]
                 public string IPAddress { get; set; }
 
                 /// <summary>
-                /// The connection string of the instance.
+                /// <para>The connection string of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>s-bpxxxxxxxx.mongodb.rds.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("NetworkAddress")]
                 [Validation(Required=false)]
                 public string NetworkAddress { get; set; }
 
                 /// <summary>
-                /// The network type of the instance.
+                /// <para>The network type of the instance.</para>
+                /// <list type="bullet">
+                /// <item><description><b>VPC</b>: virtual private cloud</description></item>
+                /// <item><description><b>Classic</b>: classic network</description></item>
+                /// <item><description><b>Public</b>: the Internet</description></item>
+                /// </list>
                 /// 
-                /// *   **VPC**: virtual private cloud
-                /// *   **Classic**: classic network
-                /// *   **Public**: the Internet
+                /// <b>Example:</b>
+                /// <para>VPC</para>
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// The ID of the mongos node.
+                /// <para>The ID of the mongos node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>s-bpxxxxxxxx</para>
                 /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// The type of the node. Valid values:
+                /// <para>The type of the node. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>mongos</b>: mongos node</description></item>
+                /// <item><description><b>shard</b>: shard node</description></item>
+                /// <item><description><b>configserver</b>: Configserver node</description></item>
+                /// </list>
                 /// 
-                /// *   **mongos**: mongos node
-                /// *   **shard**: shard node
-                /// *   **configserver**: Configserver node
+                /// <b>Example:</b>
+                /// <para>mongos</para>
                 /// </summary>
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// The port that is used to connect to the instance.
+                /// <para>The port that is used to connect to the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3717</para>
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
                 /// <summary>
-                /// The role of the node. Valid values:
+                /// <para>The role of the node. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Primary</description></item>
+                /// <item><description>Secondary</description></item>
+                /// </list>
                 /// 
-                /// *   Primary
-                /// *   Secondary
+                /// <b>Example:</b>
+                /// <para>Primary</para>
                 /// </summary>
                 [NameInMap("Role")]
                 [Validation(Required=false)]
                 public string Role { get; set; }
 
+                [NameInMap("TxtRecord")]
+                [Validation(Required=false)]
+                public string TxtRecord { get; set; }
+
                 /// <summary>
-                /// The VPC ID of the instance.
+                /// <para>The VPC ID of the instance.</para>
+                /// <remarks>
+                /// <para> This parameter is returned when the network type is <b>VPC</b>.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned when the network type is **VPC**.
+                /// <b>Example:</b>
+                /// <para>vpc-bpxxxxxxxx</para>
                 /// </summary>
                 [NameInMap("VPCId")]
                 [Validation(Required=false)]
                 public string VPCId { get; set; }
 
                 /// <summary>
-                /// The ID of the vSwitch in the VPC.
+                /// <para>The ID of the vSwitch in the VPC.</para>
+                /// <remarks>
+                /// <para> This parameter is returned when the network type is <b>VPC</b>.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned when the network type is **VPC**.
+                /// <b>Example:</b>
+                /// <para>vsw-bpxxxxxxxx</para>
                 /// </summary>
                 [NameInMap("VswitchId")]
                 [Validation(Required=false)]
@@ -182,7 +249,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>18D8AAFD-6BEB-420F-8164-810CB0C0AA39</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

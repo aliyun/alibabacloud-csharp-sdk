@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeRunningLogRecordsResponseBody : TeaModel {
         /// <summary>
-        /// The database engine.
+        /// <para>The database engine.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MongoDB</para>
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// Details about the operational log entries.
+        /// <para>Details about the operational log entries.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -28,28 +31,40 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeRunningLogRecordsResponseBodyItemsLogRecords> LogRecords { get; set; }
             public class DescribeRunningLogRecordsResponseBodyItemsLogRecords : TeaModel {
                 /// <summary>
-                /// The category of the log entry.
+                /// <para>The category of the log entry.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>NETWORK</para>
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
                 /// <summary>
-                /// The connection information of the log entry.
+                /// <para>The connection information of the log entry.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>conn18xxxxxx</para>
                 /// </summary>
                 [NameInMap("ConnInfo")]
                 [Validation(Required=false)]
                 public string ConnInfo { get; set; }
 
                 /// <summary>
-                /// The content of the log entry.
+                /// <para>The content of the log entry.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>end connection 11.xxx.xxx.xx:3xxxx (0 connections now open)\n</para>
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
                 /// <summary>
-                /// The time when the log entry was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// <para>The time when the log entry was generated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-02-26T12:09:34Z</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
@@ -60,28 +75,40 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>45D2B592-DEBA-4347-BBF3-47FF6C97DBBC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries.
+        /// <para>The total number of entries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

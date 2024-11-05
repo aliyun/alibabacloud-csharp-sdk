@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class TransferClusterBackupResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the instance is switched to the cluster backup mode. If the value of this parameter is **1**, the instance is switched to the cluster backup mode.
+        /// <para>Indicates whether the instance is switched to the cluster backup mode. If the value of this parameter is <b>1</b>, the instance is switched to the cluster backup mode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("AlreadyDone")]
         [Validation(Required=false)]
         public string AlreadyDone { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3C4A2494-85C4-45C5-93CF-548DB3375193</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

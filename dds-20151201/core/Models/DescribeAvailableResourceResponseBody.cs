@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAvailableResourceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>344EE51D-8850-4935-B68B-58A8F4DCE3BD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The supported database types.
+        /// <para>The supported database types.</para>
         /// </summary>
         [NameInMap("SupportedDBTypes")]
         [Validation(Required=false)]
@@ -28,7 +31,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBType> SupportedDBType { get; set; }
             public class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBType : TeaModel {
                 /// <summary>
-                /// The available zones.
+                /// <para>The available zones.</para>
                 /// </summary>
                 [NameInMap("AvailableZones")]
                 [Validation(Required=false)]
@@ -39,14 +42,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     public List<DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZone> AvailableZone { get; set; }
                     public class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZone : TeaModel {
                         /// <summary>
-                        /// The ID of the region.
+                        /// <para>The ID of the region.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>cn-hangzhou</para>
                         /// </summary>
                         [NameInMap("RegionId")]
                         [Validation(Required=false)]
                         public string RegionId { get; set; }
 
                         /// <summary>
-                        /// The supported storage engine versions.
+                        /// <para>The supported storage engine versions.</para>
                         /// </summary>
                         [NameInMap("SupportedEngineVersions")]
                         [Validation(Required=false)]
@@ -57,7 +63,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                             public List<DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersion> SupportedEngineVersion { get; set; }
                             public class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersion : TeaModel {
                                 /// <summary>
-                                /// The supported storage engines.
+                                /// <para>The supported storage engines.</para>
                                 /// </summary>
                                 [NameInMap("SupportedEngines")]
                                 [Validation(Required=false)]
@@ -68,14 +74,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                                     public List<DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngine> SupportedEngine { get; set; }
                                     public class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngine : TeaModel {
                                         /// <summary>
-                                        /// The storage engine of the instance.
+                                        /// <para>The storage engine of the instance.</para>
+                                        /// 
+                                        /// <b>Example:</b>
+                                        /// <para>WiredTiger</para>
                                         /// </summary>
                                         [NameInMap("Engine")]
                                         [Validation(Required=false)]
                                         public string Engine { get; set; }
 
                                         /// <summary>
-                                        /// The supported instance types.
+                                        /// <para>The supported instance types.</para>
                                         /// </summary>
                                         [NameInMap("SupportedNodeTypes")]
                                         [Validation(Required=false)]
@@ -86,7 +95,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                                             public List<DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypesSupportedNodeType> SupportedNodeType { get; set; }
                                             public class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypesSupportedNodeType : TeaModel {
                                                 /// <summary>
-                                                /// The details of the available resources.
+                                                /// <para>The details of the available resources.</para>
                                                 /// </summary>
                                                 [NameInMap("AvailableResources")]
                                                 [Validation(Required=false)]
@@ -97,28 +106,37 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                                                     public List<DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypesSupportedNodeTypeAvailableResourcesAvailableResource> AvailableResource { get; set; }
                                                     public class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypesSupportedNodeTypeAvailableResourcesAvailableResource : TeaModel {
                                                         /// <summary>
-                                                        /// The storage capacity range of the instance.
+                                                        /// <para>The storage capacity range of the instance.</para>
                                                         /// </summary>
                                                         [NameInMap("DBInstanceStorageRange")]
                                                         [Validation(Required=false)]
                                                         public DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypesSupportedNodeTypeAvailableResourcesAvailableResourceDBInstanceStorageRange DBInstanceStorageRange { get; set; }
                                                         public class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypesSupportedNodeTypeAvailableResourcesAvailableResourceDBInstanceStorageRange : TeaModel {
                                                             /// <summary>
-                                                            /// The maximum storage capacity. Unit: GB.
+                                                            /// <para>The maximum storage capacity. Unit: GB.</para>
+                                                            /// 
+                                                            /// <b>Example:</b>
+                                                            /// <para>16000</para>
                                                             /// </summary>
                                                             [NameInMap("Max")]
                                                             [Validation(Required=false)]
                                                             public int? Max { get; set; }
 
                                                             /// <summary>
-                                                            /// The minimum storage capacity. Unit: GB.
+                                                            /// <para>The minimum storage capacity. Unit: GB.</para>
+                                                            /// 
+                                                            /// <b>Example:</b>
+                                                            /// <para>20</para>
                                                             /// </summary>
                                                             [NameInMap("Min")]
                                                             [Validation(Required=false)]
                                                             public int? Min { get; set; }
 
                                                             /// <summary>
-                                                            /// The step size for adjusting the storage capacity. Unit: GB.
+                                                            /// <para>The step size for adjusting the storage capacity. Unit: GB.</para>
+                                                            /// 
+                                                            /// <b>Example:</b>
+                                                            /// <para>10</para>
                                                             /// </summary>
                                                             [NameInMap("Step")]
                                                             [Validation(Required=false)]
@@ -127,14 +145,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                                                         }
 
                                                         /// <summary>
-                                                        /// The instance family.
+                                                        /// <para>The instance family.</para>
+                                                        /// 
+                                                        /// <b>Example:</b>
+                                                        /// <para>mdb.shard.2x.xlarge.d</para>
                                                         /// </summary>
                                                         [NameInMap("InstanceClass")]
                                                         [Validation(Required=false)]
                                                         public string InstanceClass { get; set; }
 
                                                         /// <summary>
-                                                        /// The type of the instance.
+                                                        /// <para>The type of the instance.</para>
+                                                        /// 
+                                                        /// <b>Example:</b>
+                                                        /// <para>4 cores, 8 GB (Dedicated) (Current instance type: mdb.shard.2x.xlarge.d (4 cores, 8 GB (Dedicated cloud-disk), maximum connections: 3000, maximum IOPS: min{1800 + 50 × Storage capacity, 21000}))</para>
                                                         /// </summary>
                                                         [NameInMap("InstanceClassRemark")]
                                                         [Validation(Required=false)]
@@ -145,14 +169,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                                                 }
 
                                                 /// <summary>
-                                                /// The network type of the instance.
+                                                /// <para>The network type of the instance.</para>
+                                                /// 
+                                                /// <b>Example:</b>
+                                                /// <para>VPC</para>
                                                 /// </summary>
                                                 [NameInMap("NetworkTypes")]
                                                 [Validation(Required=false)]
                                                 public string NetworkTypes { get; set; }
 
                                                 /// <summary>
-                                                /// The number of nodes in the instance.
+                                                /// <para>The number of nodes in the instance.</para>
+                                                /// 
+                                                /// <b>Example:</b>
+                                                /// <para>3</para>
                                                 /// </summary>
                                                 [NameInMap("NodeType")]
                                                 [Validation(Required=false)]
@@ -167,7 +197,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                                 }
 
                                 /// <summary>
-                                /// The database engine version of the instance.
+                                /// <para>The database engine version of the instance.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>4.0</para>
                                 /// </summary>
                                 [NameInMap("Version")]
                                 [Validation(Required=false)]
@@ -178,7 +211,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         }
 
                         /// <summary>
-                        /// The ID of the zone.
+                        /// <para>The ID of the zone.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>cn-hangzhou-h</para>
                         /// </summary>
                         [NameInMap("ZoneId")]
                         [Validation(Required=false)]
@@ -189,10 +225,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 }
 
                 /// <summary>
-                /// The architecture of the instance. Valid values:
+                /// <para>The architecture of the instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>normal</b>: replica set instance</description></item>
+                /// <item><description><b>sharding</b>: sharded cluster instance</description></item>
+                /// </list>
                 /// 
-                /// *   **normal**: replica set instance
-                /// *   **sharding**: sharded cluster instance
+                /// <b>Example:</b>
+                /// <para>sharding</para>
                 /// </summary>
                 [NameInMap("DbType")]
                 [Validation(Required=false)]

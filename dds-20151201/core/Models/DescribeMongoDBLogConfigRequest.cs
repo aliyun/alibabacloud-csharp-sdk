@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeMongoDBLogConfigRequest : TeaModel {
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/61939.html) operation to query the ID of the instance.
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/61939.html">DescribeDBInstances</a> operation to query the ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bp12c5b040dc****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

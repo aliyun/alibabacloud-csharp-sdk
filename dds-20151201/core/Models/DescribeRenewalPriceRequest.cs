@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeRenewalPriceRequest : TeaModel {
         /// <summary>
-        /// The business information. This is an additional parameter.
+        /// <para>The business information. This is an additional parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{“ActivityId&quot;:&quot;000000000&quot;}</para>
         /// </summary>
         [NameInMap("BusinessInfo")]
         [Validation(Required=false)]
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// The coupon code. Default value: **youhuiquan_promotion_option_id_for_blank**.
+        /// <para>The coupon code. Default value: <b>youhuiquan_promotion_option_id_for_blank</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>youhuiquan_promotion_option_id_for_blank</para>
         /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bp12c5b040dc****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

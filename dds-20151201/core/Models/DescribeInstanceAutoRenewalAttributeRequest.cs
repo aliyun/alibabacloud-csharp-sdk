@@ -10,19 +10,25 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeInstanceAutoRenewalAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dds-bp567b****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The category of the instance. Valid values:
+        /// <para>The category of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>replicate</b>: the standalone or replica set instance</description></item>
+        /// <item><description><b>sharding</b>: the sharded cluster instance</description></item>
+        /// </list>
+        /// <para>Default value: <b>replicate</b>.</para>
         /// 
-        /// *   **replicate**: the standalone or replica set instance
-        /// *   **sharding**: the sharded cluster instance
-        /// 
-        /// Default value: **replicate**.
+        /// <b>Example:</b>
+        /// <para>replicate</para>
         /// </summary>
         [NameInMap("DBInstanceType")]
         [Validation(Required=false)]
@@ -37,25 +43,34 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value must be a positive integer that does not exceed the maximum value of the Integer parameter. Default value: **1**.
+        /// <para>The number of the page to return. The value must be a positive integer that does not exceed the maximum value of the Integer parameter. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **30**, **50**, and **100**.
+        /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
+        /// <remarks>
+        /// <para> Default value: <b>30</b>.</para>
+        /// </remarks>
         /// 
-        /// >  Default value: **30**.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/62010.html) operation to query the region ID of the instance.
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the region ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

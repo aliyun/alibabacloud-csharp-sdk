@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The regions.
+        /// <para>The regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -21,37 +21,46 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeRegionsResponseBodyRegionsDdsRegion> DdsRegion { get; set; }
             public class DescribeRegionsResponseBodyRegionsDdsRegion : TeaModel {
                 /// <summary>
-                /// The public endpoint of the region.
+                /// <para>The public endpoint of the region.</para>
+                /// <para>For example, if the value of the RegionId parameter in the response is cn-hangzhou, the following value is returned for the EndPoint parameter:</para>
+                /// <list type="bullet">
+                /// <item><description>mongodb.aliyuncs.com</description></item>
+                /// </list>
                 /// 
-                /// For example, if the value of the RegionId parameter in the response is cn-hangzhou, the following value is returned for the EndPoint parameter:
-                /// 
-                /// *   mongodb.aliyuncs.com
+                /// <b>Example:</b>
+                /// <para>mongodb.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("EndPoint")]
                 [Validation(Required=false)]
                 public string EndPoint { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// <para>The region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The name of the region.
+                /// <para>The name of the region.</para>
+                /// <para>The value of the LocalName parameter is in the language that is specified by the <b>AcceptLanguage</b> parameter. For example, if the value of the RegionId parameter in the response is <b>cn-hangzhou</b>, the following values are returned for the LocalName parameter:</para>
+                /// <list type="bullet">
+                /// <item><description>If the value of the <b>AcceptLanguage</b> parameter is <b>zh</b>, the value <b>华东1（杭州）</b> is returned for the LocalName parameter.</description></item>
+                /// <item><description>If the value of the <b>AcceptLanguage</b> parameter is <b>en</b>, the value <b>China (Hangzhou)</b> is returned for the LocalName parameter.</description></item>
+                /// </list>
                 /// 
-                /// The value of the LocalName parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the RegionId parameter in the response is **cn-hangzhou**, the following values are returned for the LocalName parameter:
-                /// 
-                /// *   If the value of the **AcceptLanguage** parameter is **zh**, the value **华东1（杭州）** is returned for the LocalName parameter.
-                /// *   If the value of the **AcceptLanguage** parameter is **en**, the value **China (Hangzhou)** is returned for the LocalName parameter.
+                /// <b>Example:</b>
+                /// <para>China (Hangzhou)</para>
                 /// </summary>
                 [NameInMap("RegionName")]
                 [Validation(Required=false)]
                 public string RegionName { get; set; }
 
                 /// <summary>
-                /// The zones.
+                /// <para>The zones.</para>
                 /// </summary>
                 [NameInMap("Zones")]
                 [Validation(Required=false)]
@@ -62,29 +71,39 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     public List<DescribeRegionsResponseBodyRegionsDdsRegionZonesZone> Zone { get; set; }
                     public class DescribeRegionsResponseBodyRegionsDdsRegionZonesZone : TeaModel {
                         /// <summary>
-                        /// Indicates whether a virtual private cloud (VPC) is supported. Valid values:
+                        /// <para>Indicates whether a virtual private cloud (VPC) is supported. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>true</b>: VPC is supported.</description></item>
+                        /// <item><description><b>false</b>: VPC is not supported.</description></item>
+                        /// </list>
                         /// 
-                        /// *   **true**: VPC is supported.
-                        /// *   **false**: VPC is not supported.
+                        /// <b>Example:</b>
+                        /// <para>true</para>
                         /// </summary>
                         [NameInMap("VpcEnabled")]
                         [Validation(Required=false)]
                         public bool? VpcEnabled { get; set; }
 
                         /// <summary>
-                        /// The zone ID.
+                        /// <para>The zone ID.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>cn-hangzhou-h</para>
                         /// </summary>
                         [NameInMap("ZoneId")]
                         [Validation(Required=false)]
                         public string ZoneId { get; set; }
 
                         /// <summary>
-                        /// The name of the zone.
+                        /// <para>The name of the zone.</para>
+                        /// <para>The value of the ZoneName parameter is in the language that is specified by the <b>AcceptLanguage</b> parameter. For example, if the value of the ZoneId parameter in the response is <b>cn-hangzhou-h</b>, the following values are returned for the ZoneName parameter:</para>
+                        /// <list type="bullet">
+                        /// <item><description>If the value of the <b>AcceptLanguage</b> parameter is <b>zh</b>, the value <b>H</b> is returned for the ZoneName parameter.</description></item>
+                        /// <item><description>If the value of the <b>AcceptLanguage</b> parameter is <b>en</b>, the value <b>Hangzhou Zone H</b> is returned for the ZoneName parameter.</description></item>
+                        /// </list>
                         /// 
-                        /// The value of the ZoneName parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the ZoneId parameter in the response is **cn-hangzhou-h**, the following values are returned for the ZoneName parameter:
-                        /// 
-                        /// *   If the value of the **AcceptLanguage** parameter is **zh**, the value **H** is returned for the ZoneName parameter.
-                        /// *   If the value of the **AcceptLanguage** parameter is **en**, the value **Hangzhou Zone H** is returned for the ZoneName parameter.
+                        /// <b>Example:</b>
+                        /// <para>Hangzhou Zone H</para>
                         /// </summary>
                         [NameInMap("ZoneName")]
                         [Validation(Required=false)]
@@ -99,7 +118,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4E46C22C-D3B7-4DB8-9C76-63851BE68E20</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

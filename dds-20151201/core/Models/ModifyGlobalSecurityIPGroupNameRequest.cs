@@ -10,22 +10,27 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyGlobalSecurityIPGroupNameRequest : TeaModel {
         /// <summary>
-        /// The name of the IP whitelist template. The name must meet the following requirements:
+        /// <para>The name of the IP whitelist template. The name must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>It can contain lowercase letters, digits, and underscores (_).</description></item>
+        /// <item><description>It must start with a letter and end with a letter or digit.</description></item>
+        /// <item><description>It must be 2 to 120 characters in length.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   It can contain lowercase letters, digits, and underscores (_).
-        /// *   It must start with a letter and end with a letter or digit.
-        /// *   It must be 2 to 120 characters in length.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>prod_baoxian_k8s</para>
         /// </summary>
         [NameInMap("GlobalIgName")]
         [Validation(Required=false)]
         public string GlobalIgName { get; set; }
 
         /// <summary>
-        /// The ID of the IP whitelist template.
+        /// <para>The ID of the IP whitelist template.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>g-xmtncwkrzqqoe59dzljb</para>
         /// </summary>
         [NameInMap("GlobalSecurityGroupId")]
         [Validation(Required=false)]
@@ -40,9 +45,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the most recent region list.
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

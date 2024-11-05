@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceSSLRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bp2235****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -35,13 +37,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The operation on the SSL feature. Valid values:
+        /// <para>The operation on the SSL feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Open</b>: enables SSL encryption.</description></item>
+        /// <item><description><b>Close</b>: disables SSL encryption.</description></item>
+        /// <item><description><b>Update</b>: updates the SSL certificate.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **Open**: enables SSL encryption.
-        /// *   **Close**: disables SSL encryption.
-        /// *   **Update**: updates the SSL certificate.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Open</para>
         /// </summary>
         [NameInMap("SSLAction")]
         [Validation(Required=false)]

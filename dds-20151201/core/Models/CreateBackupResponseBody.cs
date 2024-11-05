@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CreateBackupResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the backup set.
+        /// <para>The ID of the backup set.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5664****</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7016B12F-7F64-40A4-BAFF-013F02AC82FC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

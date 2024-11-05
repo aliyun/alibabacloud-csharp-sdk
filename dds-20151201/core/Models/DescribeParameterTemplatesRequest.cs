@@ -10,24 +10,29 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeParameterTemplatesRequest : TeaModel {
         /// <summary>
-        /// The database engine of the instance. Set the value to **MongoDB**.
+        /// <para>The database engine of the instance. Set the value to <b>MongoDB</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>mongodb</para>
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// The database engine version of the instance. Valid values:
+        /// <para>The database engine version of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>5.0</b></description></item>
+        /// <item><description><b>4.4</b></description></item>
+        /// <item><description><b>4.2</b></description></item>
+        /// <item><description><b>4.0</b></description></item>
+        /// <item><description><b>3.4</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **5.0**
-        /// *   **4.4**
-        /// *   **4.2**
-        /// *   **4.0**
-        /// *   **3.4**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>5.0</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -42,7 +47,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the most recent region list.
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -57,19 +65,23 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The role of the instance. Valid values:
+        /// <para>The role of the instance. Valid values:</para>
+        /// <ol>
+        /// <item><description><para>db:  a shard node.</para>
+        /// </description></item>
+        /// <item><description><para>cs:  a Configserver node.</para>
+        /// </description></item>
+        /// <item><description><para>mongos:  a mongos node.</para>
+        /// </description></item>
+        /// <item><description><para>normal: a replica set node.</para>
+        /// </description></item>
+        /// <item><description><para>physical: a standalone node.</para>
+        /// </description></item>
+        /// </ol>
+        /// <para>default: normal</para>
         /// 
-        /// 1. db:  a shard node.
-        /// 
-        /// 1. cs:  a Configserver node.
-        /// 
-        /// 1. mongos:  a mongos node.
-        /// 
-        /// 1. normal: a replica set node.
-        /// 
-        /// 1. physical: a standalone node.
-        /// 
-        /// default: normal
+        /// <b>Example:</b>
+        /// <para>normal</para>
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]

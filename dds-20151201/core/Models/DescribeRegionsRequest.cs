@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The language of the values of the returned **RegionName** and **ZoneName** parameters. Valid values:
+        /// <para>The language of the values of the returned <b>RegionName</b> and <b>ZoneName</b> parameters. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default)</description></item>
+        /// <item><description><b>en</b></description></item>
+        /// </list>
         /// 
-        /// *   **zh** (default)
-        /// *   **en**
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -28,9 +32,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, all supported regions are queried.</para>
+        /// </remarks>
         /// 
-        /// >  If you do not specify this parameter, all supported regions are queried.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

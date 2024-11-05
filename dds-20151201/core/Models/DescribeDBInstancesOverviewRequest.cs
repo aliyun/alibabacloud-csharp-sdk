@@ -10,74 +10,103 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstancesOverviewRequest : TeaModel {
         /// <summary>
-        /// The billing method of the instance. Valid values:
+        /// <para>The billing method of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PrePaid</b>: subscription</description></item>
+        /// <item><description><b>PostPaid</b>: pay-as-you-go</description></item>
+        /// </list>
         /// 
-        /// *   **PrePaid**: subscription
-        /// *   **PostPaid**: pay-as-you-go
+        /// <b>Example:</b>
+        /// <para>PostPaid</para>
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The database engine version of the instance. Valid values: **5.0**, **4.4**, **4.2**, **4.0**, and **3.4**.
+        /// <para>The database engine version of the instance. Valid values: <b>5.0</b>, <b>4.4</b>, <b>4.2</b>, <b>4.0</b>, and <b>3.4</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4.0</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// The instance type. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following references:
+        /// <para>The instance type. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following references:</para>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/311407.html">Standalone instance types</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/311410.html">Replica set instance types</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a></description></item>
+        /// </list>
         /// 
-        /// *   [Standalone instance types](https://help.aliyun.com/document_detail/311407.html)
-        /// *   [Replica set instance types](https://help.aliyun.com/document_detail/311410.html)
-        /// *   [Sharded cluster instance types](https://help.aliyun.com/document_detail/311414.html)
+        /// <b>Example:</b>
+        /// <para>dds.mongo.2xlarge</para>
         /// </summary>
         [NameInMap("InstanceClass")]
         [Validation(Required=false)]
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// The ID of the instance for which you want to query the overview information.
+        /// <para>The ID of the instance for which you want to query the overview information.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If you do not specify this parameter, the overview information of all instances within this account is queried.</para>
+        /// </description></item>
+        /// <item><description><para>Separate the instance IDs with commas (,).</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// > 
-        /// 
-        /// *   If you do not specify this parameter, the overview information of all instances within this account is queried.
-        /// 
-        /// *   Separate the instance IDs with commas (,).
+        /// <b>Example:</b>
+        /// <para>dds-bp12c5b040dc****</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// The state of the instance. For more information about valid values, see [Instance states](https://help.aliyun.com/document_detail/63870.html).
+        /// <para>The state of the instance. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Running</para>
         /// </summary>
         [NameInMap("InstanceStatus")]
         [Validation(Required=false)]
         public string InstanceStatus { get; set; }
 
         /// <summary>
-        /// The architecture of the instance. Valid values:
+        /// <para>The architecture of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>sharding</b>: sharded cluster instance</description></item>
+        /// <item><description><b>replicate</b>: replica set or standalone instance</description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>To query the overview information of a sharded cluster instance, you must set the parameter to <b>sharding</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not specify this parameter, the overview information of all instances within this account is queried.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   **sharding**: sharded cluster instance
-        /// *   **replicate**: replica set or standalone instance
-        /// 
-        /// > 
-        /// 
-        /// *   To query the overview information of a sharded cluster instance, you must set the parameter to **sharding**.
-        /// 
-        /// *   If you do not specify this parameter, the overview information of all instances within this account is queried.
+        /// <b>Example:</b>
+        /// <para>replicate</para>
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The network type of the instance. Valid values:
+        /// <para>The network type of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Classic</b>: classic network</description></item>
+        /// <item><description><b>VPC</b>: Virtual Private Cloud (VPC)</description></item>
+        /// </list>
         /// 
-        /// *   **Classic**: classic network
-        /// *   **VPC**: Virtual Private Cloud (VPC)
+        /// <b>Example:</b>
+        /// <para>Classic</para>
         /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
@@ -92,16 +121,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the most recent region list.
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instance belongs. For more information, see [View the basic information of a resource group](https://help.aliyun.com/document_detail/151181.html).
+        /// <para>The ID of the resource group to which the instance belongs. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmyiu4ekp****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -116,21 +150,30 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch to which the instance is connected.
+        /// <para>The ID of the vSwitch to which the instance is connected.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-bp1e7clcw529l773d****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC in which the instance is deployed.
+        /// <para>The ID of the VPC in which the instance is deployed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp1nme44gek34slfc****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The zone ID of the instance.
+        /// <para>The zone ID of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-b</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

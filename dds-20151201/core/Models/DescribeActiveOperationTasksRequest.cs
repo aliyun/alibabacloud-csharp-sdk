@@ -10,45 +10,63 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeActiveOperationTasksRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to allow the cancellation operation. Valid values:
+        /// <para>Specifies whether to allow the cancellation operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: The cancellation operation is not allowed.</description></item>
+        /// <item><description><b>1</b>: The cancellation operation is allowed.</description></item>
+        /// </list>
         /// 
-        /// *   **0**: The cancellation operation is not allowed.
-        /// *   **1**: The cancellation operation is allowed.
+        /// <b>Example:</b>
+        /// <hr>
         /// </summary>
         [NameInMap("AllowCancel")]
         [Validation(Required=false)]
         public int? AllowCancel { get; set; }
 
         /// <summary>
-        /// Specifies whether to allow the modification operation. Valid values:
+        /// <para>Specifies whether to allow the modification operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: The modification operation is not allowed.</description></item>
+        /// <item><description><b>1</b>: The modification operation is allowed.</description></item>
+        /// </list>
         /// 
-        /// *   **0**: The modification operation is not allowed.
-        /// *   **1**: The modification operation is allowed.
+        /// <b>Example:</b>
+        /// <para>-1</para>
         /// </summary>
         [NameInMap("AllowChange")]
         [Validation(Required=false)]
         public int? AllowChange { get; set; }
 
         /// <summary>
-        /// The type of task configuration change. Valid values:
+        /// <para>The type of task configuration change. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>all</b> (default): The configurations of all O\&amp;M tasks are changed.</description></item>
+        /// <item><description><b>S0</b>: The configurations of tasks initiated to fix exceptions are changed.</description></item>
+        /// <item><description><b>S1</b>: The configurations of system O\&amp;M tasks are changed.</description></item>
+        /// </list>
         /// 
-        /// *   **all** (default): The configurations of all O\\&M tasks are changed.
-        /// *   **S0**: The configurations of tasks initiated to fix exceptions are changed.
-        /// *   **S1**: The configurations of system O\\&M tasks are changed.
+        /// <b>Example:</b>
+        /// <hr>
         /// </summary>
         [NameInMap("ChangeLevel")]
         [Validation(Required=false)]
         public string ChangeLevel { get; set; }
 
         /// <summary>
-        /// The type of the database engine.
+        /// <para>The type of the database engine.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
         /// </summary>
         [NameInMap("DbType")]
         [Validation(Required=false)]
         public string DbType { get; set; }
 
         /// <summary>
-        /// The name of the instance.
+        /// <para>The name of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dds-bp16aaccfe10e3e4</para>
         /// </summary>
         [NameInMap("InsName")]
         [Validation(Required=false)]
@@ -63,30 +81,43 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number of the page to return.
+        /// <para>The page number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **30, 50, and 100**. Default value: **30**.
+        /// <para>The number of entries to return on each page. Valid values: <b>30, 50, and 100</b>. Default value: <b>30</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the service.
+        /// <para>The ID of the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
         /// </summary>
         [NameInMap("ProductId")]
         [Validation(Required=false)]
         public string ProductId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// <para>The region ID of the instance.</para>
+        /// <remarks>
+        /// <para> If you set the Region parameter to <b>all</b>, all tasks created within your Alibaba Cloud account are queried. In this case, you must set the <b>taskType</b> parameter to <b>all</b>.</para>
+        /// </remarks>
         /// 
-        /// >  If you set the Region parameter to **all**, all tasks created within your Alibaba Cloud account are queried. In this case, you must set the **taskType** parameter to **all**.
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
@@ -101,19 +132,26 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The status of the task. Valid values:
+        /// <para>The status of the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: waiting for execution</description></item>
+        /// <item><description><b>1</b>: being executed</description></item>
+        /// <item><description><b>2</b>: successful</description></item>
+        /// <item><description><b>3</b>: failed</description></item>
+        /// </list>
         /// 
-        /// *   **0**: waiting for execution
-        /// *   **1**: being executed
-        /// *   **2**: successful
-        /// *   **3**: failed
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }
 
         /// <summary>
-        /// The task type.
+        /// <para>The task type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeParameterTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// The database engine of the instance.
+        /// <para>The database engine of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mongodb</para>
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// The database engine version of the instance.
+        /// <para>The database engine version of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5.0</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// The number of parameters that are supported by the instance.
+        /// <para>The number of parameters that are supported by the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("ParameterCount")]
         [Validation(Required=false)]
         public string ParameterCount { get; set; }
 
         /// <summary>
-        /// Details about the parameter templates.
+        /// <para>Details about the parameter templates.</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -42,48 +51,68 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeParameterTemplatesResponseBodyParametersTemplateRecord> TemplateRecord { get; set; }
             public class DescribeParameterTemplatesResponseBodyParametersTemplateRecord : TeaModel {
                 /// <summary>
-                /// The value range of modifiable parameters.
+                /// <para>The value range of modifiable parameters.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[0-65536]</para>
                 /// </summary>
                 [NameInMap("CheckingCode")]
                 [Validation(Required=false)]
                 public string CheckingCode { get; set; }
 
                 /// <summary>
-                /// Indicates whether the parameter is modifiable.
+                /// <para>Indicates whether the parameter is modifiable.</para>
+                /// <list type="bullet">
+                /// <item><description><b>false</b>: The parameter cannot be modified.</description></item>
+                /// <item><description><b>true</b>: The parameter can be modified.</description></item>
+                /// </list>
                 /// 
-                /// *   **false**: The parameter cannot be modified.
-                /// *   **true**: The parameter can be modified.
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("ForceModify")]
                 [Validation(Required=false)]
                 public bool? ForceModify { get; set; }
 
                 /// <summary>
-                /// Indicates whether a restart is required for parameter modifications to take effect.
+                /// <para>Indicates whether a restart is required for parameter modifications to take effect.</para>
+                /// <list type="bullet">
+                /// <item><description><b>false</b>: A restart is not required. Parameter modifications immediately take effect.</description></item>
+                /// <item><description><b>true</b>: A restart is required for parameter modifications to take effect.</description></item>
+                /// </list>
                 /// 
-                /// *   **false**: A restart is not required. Parameter modifications immediately take effect.
-                /// *   **true**: A restart is required for parameter modifications to take effect.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("ForceRestart")]
                 [Validation(Required=false)]
                 public bool? ForceRestart { get; set; }
 
                 /// <summary>
-                /// The description of the parameter.
+                /// <para>The description of the parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>The threshold in milliseconds at which the database profiler considers a query slow, default is 100.</para>
                 /// </summary>
                 [NameInMap("ParameterDescription")]
                 [Validation(Required=false)]
                 public string ParameterDescription { get; set; }
 
                 /// <summary>
-                /// The name of the parameter.
+                /// <para>The name of the parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>net.compression.compressors</para>
                 /// </summary>
                 [NameInMap("ParameterName")]
                 [Validation(Required=false)]
                 public string ParameterName { get; set; }
 
                 /// <summary>
-                /// The default value of the parameter.
+                /// <para>The default value of the parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
                 /// </summary>
                 [NameInMap("ParameterValue")]
                 [Validation(Required=false)]
@@ -94,7 +123,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BDA54203-9D61-54A3-A568-D281F785****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstanceMonitorRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bp1143f90ff3****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

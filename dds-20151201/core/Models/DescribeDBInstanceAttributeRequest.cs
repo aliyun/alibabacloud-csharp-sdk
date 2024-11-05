@@ -10,26 +10,35 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bp11483712c1****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The database engine of the instance. Set the value to **MongoDB**.
+        /// <para>The database engine. Set the value to <b>MongoDB</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MongoDB</para>
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// Specifies whether to delete the instance. Valid values:
+        /// <para>Specifies whether to query instances that are deleted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b>: queries instances that are running.</description></item>
+        /// <item><description><b>true</b>: queries instance that are deleted.</description></item>
+        /// </list>
         /// 
-        /// - **false**: queries the details of running instances.
-        /// - **true**: queries the details of deleted instances.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IsDelete")]
         [Validation(Required=false)]
@@ -44,9 +53,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. For more information, see [View the basic information of a resource group](https://help.aliyun.com/document_detail/151181.html).
+        /// <para>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</para>
+        /// <remarks>
+        /// <para>This parameter is available only if you use the China site (aliyun.com).</para>
+        /// </remarks>
         /// 
-        /// > This parameter is available only if you use the China site (aliyun.com).
+        /// <b>Example:</b>
+        /// <para>rg-acfmyiu4ekp****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

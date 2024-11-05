@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CreateBackupRequest : TeaModel {
         /// <summary>
-        /// The backup method of the instance. Valid values:
+        /// <para>The backup method of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Logical</b></description></item>
+        /// <item><description><b>Physical</b> (default)</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>Only replica set instances and sharded cluster instances support this parameter. You do not need to specify this parameter for standalone instances. All standalone instances use snapshot backup.</para>
+        /// </remarks>
         /// 
-        /// *   **Logical**
-        /// *   **Physical** (default)
-        /// 
-        /// > Only replica set instances and sharded cluster instances support this parameter. You do not need to specify this parameter for standalone instances. All standalone instances use snapshot backup.
+        /// <b>Example:</b>
+        /// <para>Logical</para>
         /// </summary>
         [NameInMap("BackupMethod")]
         [Validation(Required=false)]
         public string BackupMethod { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>d-bp2235****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

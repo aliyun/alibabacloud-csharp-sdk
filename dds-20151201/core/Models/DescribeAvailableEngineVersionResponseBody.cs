@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAvailableEngineVersionResponseBody : TeaModel {
         /// <summary>
-        /// The list of one or more engine versions to which an ApsaraDB for MongoDB instance can be upgraded.
-        /// 
-        /// >  An empty string is returned if the latest version is being used.
+        /// <para>The list of one or more engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</para>
+        /// <remarks>
+        /// <para> An empty string is returned if the latest version is being used.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("EngineVersions")]
         [Validation(Required=false)]
@@ -25,7 +26,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>52507B6B-003B-47A3-A0A3-9FE992C7A243</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

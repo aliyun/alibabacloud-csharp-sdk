@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifySecurityGroupConfigurationRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bpxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -35,12 +37,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the ECS security group.
+        /// <para>The ID of the ECS security group.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You can bind up to 10 ECS security groups to an ApsaraDB for MongoDB instance.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroup</a> operation of ECS to query the security groups in the specified region.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > * You can bind up to 10 ECS security groups to an ApsaraDB for MongoDB instance.
-        /// > * You can call the [DescribeSecurityGroup](https://help.aliyun.com/document_detail/25556.html) operation of ECS to query the security groups in the specified region.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sg-bpxxxxxxxx</para>
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]

@@ -10,16 +10,22 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to remove all tags from the instances. Valid values:
+        /// <para>Specifies whether to remove all tags from the instances. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: removes all tags from the instances.</description></item>
+        /// <item><description><b>false</b>: does not remove all tags from the instances.</description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>Default value: <b>false</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify the <b>TagKey</b> parameter together with this parameter, this parameter does not take effect.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   **true**: removes all tags from the instances.
-        /// *   **false**: does not remove all tags from the instances.
-        /// 
-        /// > 
-        /// 
-        /// *   Default value: **false**.
-        /// 
-        /// *   If you specify the **TagKey** parameter together with this parameter, this parameter does not take effect.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
@@ -34,25 +40,32 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/62010.html) operation to query the region ID of the instance.
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the region ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sg-bpxxxxxxxxxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The resource IDs.
+        /// <para>The resource IDs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bpxxxxxxxx</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -67,16 +80,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The resource type. Set the value to **INSTANCE**.
+        /// <para>The resource type. Set the value to <b>INSTANCE</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>INSTANCE</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tag keys of the resource.
+        /// <para>The tag keys of the resource.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

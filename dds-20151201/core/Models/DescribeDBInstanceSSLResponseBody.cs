@@ -10,31 +10,44 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstanceSSLResponseBody : TeaModel {
         /// <summary>
-        /// The name of the SSL certificate.
+        /// <para>The name of the SSL certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dds-bpxxxxxxxx.mongodb.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("CertCommonName")]
         [Validation(Required=false)]
         public string CertCommonName { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>36BB1BC2-789C-4BBA-A519-C5B388E4B0D4</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The time when the SSL certificate expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in Coordinated Universal Time (UTC).
+        /// <para>The time when the SSL certificate expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in Coordinated Universal Time (UTC).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2020-03-11T02:28:25Z</para>
         /// </summary>
         [NameInMap("SSLExpiredTime")]
         [Validation(Required=false)]
         public string SSLExpiredTime { get; set; }
 
         /// <summary>
-        /// The status of the SSL feature. Valid values:
+        /// <para>The status of the SSL feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Open</b>: The SSL feature is enabled.</description></item>
+        /// <item><description><b>Closed</b>: The SSL feature is disabled.</description></item>
+        /// </list>
         /// 
-        /// *   **Open**: The SSL feature is enabled.
-        /// *   **Closed**: The SSL feature is disabled.
+        /// <b>Example:</b>
+        /// <para>Open</para>
         /// </summary>
         [NameInMap("SSLStatus")]
         [Validation(Required=false)]

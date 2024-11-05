@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstanceEncryptionKeyRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bp2235****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The custom key for the instance. You can call the [DescribeUserEncryptionKeyList](https://help.aliyun.com/document_detail/151729.html) operation to query the list of custom keys for an ApsaraDB for MongoDB instance.
+        /// <para>The custom key for the instance. You can call the <a href="https://help.aliyun.com/document_detail/151729.html">DescribeUserEncryptionKeyList</a> operation to query the list of custom keys for an ApsaraDB for MongoDB instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2axxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("EncryptionKey")]
         [Validation(Required=false)]

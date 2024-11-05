@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyInstanceVpcAuthModeRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bpxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the mongos node in the sharded cluster instance.
+        /// <para>The ID of the mongos node in the sharded cluster instance.</para>
+        /// <remarks>
+        /// <para> This parameter can be used only when the instance type is sharded cluster.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter can be used only when the instance type is sharded cluster.
+        /// <b>Example:</b>
+        /// <para>s-bpxxxxxxxx</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -44,7 +50,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Specify whether to disable password-free access over VPC. Set the value to **Close**.
+        /// <para>Specify whether to disable password-free access over VPC. Set the value to <b>Close</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Open</para>
         /// </summary>
         [NameInMap("VpcAuthMode")]
         [Validation(Required=false)]

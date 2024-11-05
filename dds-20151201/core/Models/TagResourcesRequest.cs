@@ -18,25 +18,32 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/62010.html) operation to query the region ID of the instance.
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the region ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmyiu4ekp****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The details of the tags bound to the instance.
+        /// <para>The details of the tags bound to the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bpxxxxxxxx</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -51,46 +58,51 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The resource type. Set the value to **INSTANCE**.
+        /// <para>The resource type. Set the value to <b>INSTANCE</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>INSTANCE</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags that are attached to the resources.
-        /// 
-        /// This parameter is required.
+        /// <para>The tags that are attached to the resources.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag.
+            /// <para>The key of tag.</para>
+            /// <para>N specifies the serial number of the tag. The following example shows how to calculate consumption intervals:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Tag.1.Key</b> specifies the key of the first tag.</description></item>
+            /// <item><description><b>Tag.2.Key</b> specifies the key of the second tag.</description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
             /// 
-            /// N specifies the serial number of the tag. The following example shows how to calculate consumption intervals:
-            /// 
-            /// - **Tag.1.Key** specifies the key of the first tag.
-            /// - **Tag.2.Key** specifies the key of the second tag.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>Development team</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag.
+            /// <para>The value of tag.</para>
+            /// <para>N specifies the serial number of the tag. The following example shows how to calculate consumption intervals:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Tag.1.Value</b> specifies the value of the first tag.</description></item>
+            /// <item><description><b>Tag.2.Value</b> specifies the value of the second tag.</description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
             /// 
-            /// N specifies the serial number of the tag. The following example shows how to calculate consumption intervals:
-            /// 
-            /// - **Tag.1.Value** specifies the value of the first tag.
-            /// - **Tag.2.Value** specifies the value of the second tag.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>MongoDB 4.0 environment</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

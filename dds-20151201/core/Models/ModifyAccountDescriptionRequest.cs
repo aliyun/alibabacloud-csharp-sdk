@@ -10,30 +10,37 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyAccountDescriptionRequest : TeaModel {
         /// <summary>
-        /// The description of the account.
+        /// <para>The description of the account.</para>
+        /// <list type="bullet">
+        /// <item><description>The description must start with a letter and cannot start with http:// or https://.</description></item>
+        /// <item><description>The description must be 2 to 256 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   The description must start with a letter and cannot start with http:// or https://.
-        /// *   The description must be 2 to 256 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>superadmin</para>
         /// </summary>
         [NameInMap("AccountDescription")]
         [Validation(Required=false)]
         public string AccountDescription { get; set; }
 
         /// <summary>
-        /// The name of the account whose description is to be modified.
+        /// <para>The name of the account whose description is to be modified.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>root</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bp2356****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

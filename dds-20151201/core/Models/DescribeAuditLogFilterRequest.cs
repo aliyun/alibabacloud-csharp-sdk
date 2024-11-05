@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAuditLogFilterRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bp12c5b040dc****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -35,11 +37,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The role of the node in the instance. Valid values:
+        /// <para>The role of the node in the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>mongos</b>: mongos node.</description></item>
+        /// <item><description><b>db</b> : shard node.</description></item>
+        /// <item><description><b>logic</b> : logical instance.</description></item>
+        /// </list>
         /// 
-        /// * **mongos**: mongos node.
-        /// * **db** : shard node.
-        /// * **logic** : logical instance.
+        /// <b>Example:</b>
+        /// <para>logic</para>
         /// </summary>
         [NameInMap("RoleType")]
         [Validation(Required=false)]

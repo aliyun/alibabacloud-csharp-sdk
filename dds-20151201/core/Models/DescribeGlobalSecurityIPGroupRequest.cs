@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeGlobalSecurityIPGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the IP whitelist template.
+        /// <para>The ID of the IP whitelist template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>g-hedmu8kg9nsabw6u42rv</para>
         /// </summary>
         [NameInMap("GlobalSecurityGroupId")]
         [Validation(Required=false)]
@@ -25,9 +28,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/62010.html) operation to query the most recent region list.
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

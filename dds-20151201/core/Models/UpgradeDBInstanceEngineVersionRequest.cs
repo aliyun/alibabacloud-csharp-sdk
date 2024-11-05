@@ -10,20 +10,25 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class UpgradeDBInstanceEngineVersionRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bpxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The database version to which you want to upgrade. Valid values: **3.4**, **4.0**, and **4.2**.
+        /// <para>The database version to which you want to upgrade. Valid values: <b>3.4</b>, <b>4.0</b>, and <b>4.2</b>.</para>
+        /// <remarks>
+        /// <para> This database version must be later than the current database version of the instance.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  This database version must be later than the current database version of the instance.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>4.0</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -44,6 +49,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("SwitchMode")]
+        [Validation(Required=false)]
+        public int? SwitchMode { get; set; }
 
     }
 

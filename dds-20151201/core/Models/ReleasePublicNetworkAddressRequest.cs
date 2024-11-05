@@ -10,33 +10,47 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ReleasePublicNetworkAddressRequest : TeaModel {
         /// <summary>
-        /// The public endpoint type. Valid values:
+        /// <para>The public endpoint type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>SRV</b></description></item>
+        /// <item><description><b>Normal</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is valid only when you want to release an SRV endpoint.</para>
+        /// </remarks>
         /// 
-        /// *   **SRV**
-        /// *   **Normal**
-        /// 
-        /// >  This parameter is valid only when you want to release an SRV endpoint.
+        /// <b>Example:</b>
+        /// <para>SRV</para>
         /// </summary>
         [NameInMap("ConnectionType")]
         [Validation(Required=false)]
         public string ConnectionType { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <remarks>
+        /// <para> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bp2235****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the mongos, shard, or Configserver node in the sharded cluster instance.
+        /// <para>The ID of the mongos, shard, or Configserver node in the sharded cluster instance.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is valid only if you set the <b>DBInstanceId</b> parameter to the ID of a sharded cluster instance.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > *   This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
-        /// > *   You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/62010.html) operation to view the ID of the mongos, shard, or Configserver node.
+        /// <b>Example:</b>
+        /// <para>s-bp2235****</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

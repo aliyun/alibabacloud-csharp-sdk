@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAuditRecordsResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the information of audit log entries.
+        /// <para>An array that consists of the information of audit log entries.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,63 +21,90 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeAuditRecordsResponseBodyItemsSQLRecord> SQLRecord { get; set; }
             public class DescribeAuditRecordsResponseBodyItemsSQLRecord : TeaModel {
                 /// <summary>
-                /// The account of the database.
+                /// <para>The account of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("AccountName")]
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// The name of the database.
+                /// <para>The name of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test123</para>
                 /// </summary>
                 [NameInMap("DBName")]
                 [Validation(Required=false)]
                 public string DBName { get; set; }
 
                 /// <summary>
-                /// The time when the statement was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// <para>The time when the statement was executed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-03-11T03:30:27Z</para>
                 /// </summary>
                 [NameInMap("ExecuteTime")]
                 [Validation(Required=false)]
                 public string ExecuteTime { get; set; }
 
                 /// <summary>
-                /// The IP addresses of the client.
+                /// <para>The IP addresses of the client.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>11.xxx.xxx.xxx</para>
                 /// </summary>
                 [NameInMap("HostAddress")]
                 [Validation(Required=false)]
                 public string HostAddress { get; set; }
 
                 /// <summary>
-                /// The number of SQL audit log entries that are returned.
+                /// <para>The number of SQL audit log entries that are returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("ReturnRowCounts")]
                 [Validation(Required=false)]
                 public long? ReturnRowCounts { get; set; }
 
                 /// <summary>
-                /// The statement that was executed.
+                /// <para>The statement that was executed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{ \&quot;atype\&quot; : \&quot;createCollection\&quot;, \&quot;param\&quot; : { \&quot;ns\&quot; : \&quot;123.test1\&quot; }, \&quot;result\&quot;: \&quot;OK\&quot; }</para>
                 /// </summary>
                 [NameInMap("Syntax")]
                 [Validation(Required=false)]
                 public string Syntax { get; set; }
 
                 /// <summary>
-                /// The name of the collection.
+                /// <para>The name of the collection.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>C1</para>
                 /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
                 public string TableName { get; set; }
 
                 /// <summary>
-                /// The ID of the thread.
+                /// <para>The ID of the thread.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>140682188297984</para>
                 /// </summary>
                 [NameInMap("ThreadID")]
                 [Validation(Required=false)]
                 public string ThreadID { get; set; }
 
                 /// <summary>
-                /// The duration of the statement execution. Unit: microseconds.
+                /// <para>The duration of the statement execution. Unit: microseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>700</para>
                 /// </summary>
                 [NameInMap("TotalExecutionTimes")]
                 [Validation(Required=false)]
@@ -88,28 +115,40 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The maximum number of entries on the current page.
+        /// <para>The maximum number of entries on the current page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3278BEB8-503B-4E46-8F7E-D26E040C9769</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// <para>The total number of returned entries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>40</para>
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

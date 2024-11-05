@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstancePerformanceResponseBody : TeaModel {
         /// <summary>
-        /// The end of the queried time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+        /// <para>The end of the queried time range. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-06-13T11:58Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The details of performance metrics.
+        /// <para>The details of performance metrics.</para>
         /// </summary>
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]
@@ -28,14 +31,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey> PerformanceKey { get; set; }
             public class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey : TeaModel {
                 /// <summary>
-                /// The performance metrics that are returned.
+                /// <para>The performance metrics that are returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CpuUsage</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The details of the performance metric values.
+                /// <para>The details of the performance metric values.</para>
                 /// </summary>
                 [NameInMap("PerformanceValues")]
                 [Validation(Required=false)]
@@ -46,14 +52,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     public List<DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValuesPerformanceValue> PerformanceValue { get; set; }
                     public class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValuesPerformanceValue : TeaModel {
                         /// <summary>
-                        /// The date and time when the metric value was generated.
+                        /// <para>The date and time when the metric value was generated.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2022-06-13T10:58:00Z</para>
                         /// </summary>
                         [NameInMap("Date")]
                         [Validation(Required=false)]
                         public string Date { get; set; }
 
                         /// <summary>
-                        /// The value of the performance metric.
+                        /// <para>The value of the performance metric.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>0.23</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -64,16 +76,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 }
 
                 /// <summary>
-                /// The unit of the performance metric.
+                /// <para>The unit of the performance metric.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>%</para>
                 /// </summary>
                 [NameInMap("Unit")]
                 [Validation(Required=false)]
                 public string Unit { get; set; }
 
                 /// <summary>
-                /// The format of the performance metric value. If the performance metric contains multiple fields, the fields are separated with ampersands ( &).
+                /// <para>The format of the performance metric value. If the performance metric contains multiple fields, the fields are separated with ampersands ( &amp;).</para>
+                /// <para>For example, if you query disk space usage, the returned value of the <b>ValueFormat</b> parameter is <b>ins_size\&amp;data_size\&amp;log_size</b>.</para>
                 /// 
-                /// For example, if you query disk space usage, the returned value of the **ValueFormat** parameter is **ins_size\\&data_size\\&log_size**.
+                /// <b>Example:</b>
+                /// <para>cpu_usage</para>
                 /// </summary>
                 [NameInMap("ValueFormat")]
                 [Validation(Required=false)]
@@ -84,14 +101,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4A300BC7-6D8F-527F-A2DB-A7768D26E9AC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The beginning of the queried time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+        /// <para>The beginning of the queried time range. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-06-13T10:58Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

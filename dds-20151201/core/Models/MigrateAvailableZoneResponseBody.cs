@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class MigrateAvailableZoneResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0FDDC511-7252-4A4A-ADDA-5CB1BF63****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

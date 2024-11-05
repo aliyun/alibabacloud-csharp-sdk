@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeUserEncryptionKeyListResponseBody : TeaModel {
         /// <summary>
-        /// The list of custom keys.
+        /// <para>The list of custom keys.</para>
         /// </summary>
         [NameInMap("KeyIds")]
         [Validation(Required=false)]
@@ -23,7 +23,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7CD51DA4-A499-43CE-B9B5-20CD4FDC648E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

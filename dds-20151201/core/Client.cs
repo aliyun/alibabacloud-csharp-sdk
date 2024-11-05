@@ -99,16 +99,29 @@ namespace AlibabaCloud.SDK.Dds20151201
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary Applies for an internal endpoint for a shard or Configserver node in an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description This operation is applicable only to sharded cluster instances. For more information, see [Apply for an endpoint for a shard or Configserver node](https://help.aliyun.com/document_detail/134037.html).
-         * >  The allocated endpoints can be used only for internal access. To gain Internet access, you must call the [AllocatePublicNetworkAddress](https://help.aliyun.com/document_detail/67602.html) operation to apply for public endpoints.
-         *
-         * @param request AllocateNodePrivateNetworkAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AllocateNodePrivateNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for an internal endpoint for a shard or Configserver node in an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to sharded cluster instances. For more information, see <a href="https://help.aliyun.com/document_detail/134037.html">Apply for an endpoint for a shard or Configserver node</a>.</para>
+        /// <remarks>
+        /// <para> The allocated endpoints can be used only for internal access. To gain Internet access, you must call the <a href="https://help.aliyun.com/document_detail/67602.html">AllocatePublicNetworkAddress</a> operation to apply for public endpoints.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AllocateNodePrivateNetworkAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateNodePrivateNetworkAddressResponse
+        /// </returns>
         public AllocateNodePrivateNetworkAddressResponse AllocateNodePrivateNetworkAddressWithOptions(AllocateNodePrivateNetworkAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -168,16 +181,29 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<AllocateNodePrivateNetworkAddressResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Applies for an internal endpoint for a shard or Configserver node in an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description This operation is applicable only to sharded cluster instances. For more information, see [Apply for an endpoint for a shard or Configserver node](https://help.aliyun.com/document_detail/134037.html).
-         * >  The allocated endpoints can be used only for internal access. To gain Internet access, you must call the [AllocatePublicNetworkAddress](https://help.aliyun.com/document_detail/67602.html) operation to apply for public endpoints.
-         *
-         * @param request AllocateNodePrivateNetworkAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AllocateNodePrivateNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for an internal endpoint for a shard or Configserver node in an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to sharded cluster instances. For more information, see <a href="https://help.aliyun.com/document_detail/134037.html">Apply for an endpoint for a shard or Configserver node</a>.</para>
+        /// <remarks>
+        /// <para> The allocated endpoints can be used only for internal access. To gain Internet access, you must call the <a href="https://help.aliyun.com/document_detail/67602.html">AllocatePublicNetworkAddress</a> operation to apply for public endpoints.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AllocateNodePrivateNetworkAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateNodePrivateNetworkAddressResponse
+        /// </returns>
         public async Task<AllocateNodePrivateNetworkAddressResponse> AllocateNodePrivateNetworkAddressWithOptionsAsync(AllocateNodePrivateNetworkAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -237,43 +263,73 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<AllocateNodePrivateNetworkAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Applies for an internal endpoint for a shard or Configserver node in an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description This operation is applicable only to sharded cluster instances. For more information, see [Apply for an endpoint for a shard or Configserver node](https://help.aliyun.com/document_detail/134037.html).
-         * >  The allocated endpoints can be used only for internal access. To gain Internet access, you must call the [AllocatePublicNetworkAddress](https://help.aliyun.com/document_detail/67602.html) operation to apply for public endpoints.
-         *
-         * @param request AllocateNodePrivateNetworkAddressRequest
-         * @return AllocateNodePrivateNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for an internal endpoint for a shard or Configserver node in an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to sharded cluster instances. For more information, see <a href="https://help.aliyun.com/document_detail/134037.html">Apply for an endpoint for a shard or Configserver node</a>.</para>
+        /// <remarks>
+        /// <para> The allocated endpoints can be used only for internal access. To gain Internet access, you must call the <a href="https://help.aliyun.com/document_detail/67602.html">AllocatePublicNetworkAddress</a> operation to apply for public endpoints.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AllocateNodePrivateNetworkAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateNodePrivateNetworkAddressResponse
+        /// </returns>
         public AllocateNodePrivateNetworkAddressResponse AllocateNodePrivateNetworkAddress(AllocateNodePrivateNetworkAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AllocateNodePrivateNetworkAddressWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Applies for an internal endpoint for a shard or Configserver node in an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description This operation is applicable only to sharded cluster instances. For more information, see [Apply for an endpoint for a shard or Configserver node](https://help.aliyun.com/document_detail/134037.html).
-         * >  The allocated endpoints can be used only for internal access. To gain Internet access, you must call the [AllocatePublicNetworkAddress](https://help.aliyun.com/document_detail/67602.html) operation to apply for public endpoints.
-         *
-         * @param request AllocateNodePrivateNetworkAddressRequest
-         * @return AllocateNodePrivateNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for an internal endpoint for a shard or Configserver node in an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to sharded cluster instances. For more information, see <a href="https://help.aliyun.com/document_detail/134037.html">Apply for an endpoint for a shard or Configserver node</a>.</para>
+        /// <remarks>
+        /// <para> The allocated endpoints can be used only for internal access. To gain Internet access, you must call the <a href="https://help.aliyun.com/document_detail/67602.html">AllocatePublicNetworkAddress</a> operation to apply for public endpoints.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AllocateNodePrivateNetworkAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateNodePrivateNetworkAddressResponse
+        /// </returns>
         public async Task<AllocateNodePrivateNetworkAddressResponse> AllocateNodePrivateNetworkAddressAsync(AllocateNodePrivateNetworkAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AllocateNodePrivateNetworkAddressWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Allocates a public endpoint to an instance.
-         *
-         * @param request AllocatePublicNetworkAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AllocatePublicNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Allocates a public endpoint to an instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllocatePublicNetworkAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocatePublicNetworkAddressResponse
+        /// </returns>
         public AllocatePublicNetworkAddressResponse AllocatePublicNetworkAddressWithOptions(AllocatePublicNetworkAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -321,13 +377,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<AllocatePublicNetworkAddressResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Allocates a public endpoint to an instance.
-         *
-         * @param request AllocatePublicNetworkAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AllocatePublicNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Allocates a public endpoint to an instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllocatePublicNetworkAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocatePublicNetworkAddressResponse
+        /// </returns>
         public async Task<AllocatePublicNetworkAddressResponse> AllocatePublicNetworkAddressWithOptionsAsync(AllocatePublicNetworkAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -375,39 +439,62 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<AllocatePublicNetworkAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Allocates a public endpoint to an instance.
-         *
-         * @param request AllocatePublicNetworkAddressRequest
-         * @return AllocatePublicNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Allocates a public endpoint to an instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllocatePublicNetworkAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocatePublicNetworkAddressResponse
+        /// </returns>
         public AllocatePublicNetworkAddressResponse AllocatePublicNetworkAddress(AllocatePublicNetworkAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AllocatePublicNetworkAddressWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Allocates a public endpoint to an instance.
-         *
-         * @param request AllocatePublicNetworkAddressRequest
-         * @return AllocatePublicNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Allocates a public endpoint to an instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllocatePublicNetworkAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocatePublicNetworkAddressResponse
+        /// </returns>
         public async Task<AllocatePublicNetworkAddressResponse> AllocatePublicNetworkAddressAsync(AllocatePublicNetworkAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AllocatePublicNetworkAddressWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary You can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.
-         *
-         * @description Before you enable Transparent Data Encryption (TDE) by calling the [ModifyDBInstanceTDE](https://help.aliyun.com/document_detail/131267.html) operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.
-         *
-         * @param request CheckCloudResourceAuthorizedRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckCloudResourceAuthorizedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you enable Transparent Data Encryption (TDE) by calling the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckCloudResourceAuthorizedRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCloudResourceAuthorizedResponse
+        /// </returns>
         public CheckCloudResourceAuthorizedResponse CheckCloudResourceAuthorizedWithOptions(CheckCloudResourceAuthorizedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -455,15 +542,26 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CheckCloudResourceAuthorizedResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.
-         *
-         * @description Before you enable Transparent Data Encryption (TDE) by calling the [ModifyDBInstanceTDE](https://help.aliyun.com/document_detail/131267.html) operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.
-         *
-         * @param request CheckCloudResourceAuthorizedRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckCloudResourceAuthorizedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you enable Transparent Data Encryption (TDE) by calling the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckCloudResourceAuthorizedRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCloudResourceAuthorizedResponse
+        /// </returns>
         public async Task<CheckCloudResourceAuthorizedResponse> CheckCloudResourceAuthorizedWithOptionsAsync(CheckCloudResourceAuthorizedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -511,44 +609,75 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CheckCloudResourceAuthorizedResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.
-         *
-         * @description Before you enable Transparent Data Encryption (TDE) by calling the [ModifyDBInstanceTDE](https://help.aliyun.com/document_detail/131267.html) operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.
-         *
-         * @param request CheckCloudResourceAuthorizedRequest
-         * @return CheckCloudResourceAuthorizedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you enable Transparent Data Encryption (TDE) by calling the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckCloudResourceAuthorizedRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCloudResourceAuthorizedResponse
+        /// </returns>
         public CheckCloudResourceAuthorizedResponse CheckCloudResourceAuthorized(CheckCloudResourceAuthorizedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckCloudResourceAuthorizedWithOptions(request, runtime);
         }
 
-        /**
-         * @summary You can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.
-         *
-         * @description Before you enable Transparent Data Encryption (TDE) by calling the [ModifyDBInstanceTDE](https://help.aliyun.com/document_detail/131267.html) operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.
-         *
-         * @param request CheckCloudResourceAuthorizedRequest
-         * @return CheckCloudResourceAuthorizedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you enable Transparent Data Encryption (TDE) by calling the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckCloudResourceAuthorizedRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCloudResourceAuthorizedResponse
+        /// </returns>
         public async Task<CheckCloudResourceAuthorizedResponse> CheckCloudResourceAuthorizedAsync(CheckCloudResourceAuthorizedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CheckCloudResourceAuthorizedWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries whether the data of an ApsaraDB for MongoDB instance can be restored.
-         *
-         * @description This operation is applicable to replica set instances and sharded cluster instances.
-         * >  After you call this operation to confirm that the data of the instance can be restored, you can call the [CreateDBInstance](https://help.aliyun.com/document_detail/61763.html) operation to restore data to a new instance.
-         *
-         * @param request CheckRecoveryConditionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckRecoveryConditionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the data of an ApsaraDB for MongoDB instance can be restored.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to replica set instances and sharded cluster instances.</para>
+        /// <remarks>
+        /// <para> After you call this operation to confirm that the data of the instance can be restored, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation to restore data to a new instance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckRecoveryConditionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckRecoveryConditionResponse
+        /// </returns>
         public CheckRecoveryConditionResponse CheckRecoveryConditionWithOptions(CheckRecoveryConditionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -564,6 +693,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestRegion))
             {
                 query["DestRegion"] = request.DestRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
@@ -628,16 +761,29 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CheckRecoveryConditionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether the data of an ApsaraDB for MongoDB instance can be restored.
-         *
-         * @description This operation is applicable to replica set instances and sharded cluster instances.
-         * >  After you call this operation to confirm that the data of the instance can be restored, you can call the [CreateDBInstance](https://help.aliyun.com/document_detail/61763.html) operation to restore data to a new instance.
-         *
-         * @param request CheckRecoveryConditionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckRecoveryConditionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the data of an ApsaraDB for MongoDB instance can be restored.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to replica set instances and sharded cluster instances.</para>
+        /// <remarks>
+        /// <para> After you call this operation to confirm that the data of the instance can be restored, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation to restore data to a new instance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckRecoveryConditionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckRecoveryConditionResponse
+        /// </returns>
         public async Task<CheckRecoveryConditionResponse> CheckRecoveryConditionWithOptionsAsync(CheckRecoveryConditionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -653,6 +799,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestRegion))
             {
                 query["DestRegion"] = request.DestRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
@@ -717,46 +867,81 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CheckRecoveryConditionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether the data of an ApsaraDB for MongoDB instance can be restored.
-         *
-         * @description This operation is applicable to replica set instances and sharded cluster instances.
-         * >  After you call this operation to confirm that the data of the instance can be restored, you can call the [CreateDBInstance](https://help.aliyun.com/document_detail/61763.html) operation to restore data to a new instance.
-         *
-         * @param request CheckRecoveryConditionRequest
-         * @return CheckRecoveryConditionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the data of an ApsaraDB for MongoDB instance can be restored.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to replica set instances and sharded cluster instances.</para>
+        /// <remarks>
+        /// <para> After you call this operation to confirm that the data of the instance can be restored, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation to restore data to a new instance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckRecoveryConditionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckRecoveryConditionResponse
+        /// </returns>
         public CheckRecoveryConditionResponse CheckRecoveryCondition(CheckRecoveryConditionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckRecoveryConditionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries whether the data of an ApsaraDB for MongoDB instance can be restored.
-         *
-         * @description This operation is applicable to replica set instances and sharded cluster instances.
-         * >  After you call this operation to confirm that the data of the instance can be restored, you can call the [CreateDBInstance](https://help.aliyun.com/document_detail/61763.html) operation to restore data to a new instance.
-         *
-         * @param request CheckRecoveryConditionRequest
-         * @return CheckRecoveryConditionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the data of an ApsaraDB for MongoDB instance can be restored.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to replica set instances and sharded cluster instances.</para>
+        /// <remarks>
+        /// <para> After you call this operation to confirm that the data of the instance can be restored, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation to restore data to a new instance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckRecoveryConditionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckRecoveryConditionResponse
+        /// </returns>
         public async Task<CheckRecoveryConditionResponse> CheckRecoveryConditionAsync(CheckRecoveryConditionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CheckRecoveryConditionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates an account that is granted read-only permissions for shard nodes in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.
-         *
-         * @description *   You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.
-         * *   The account is granted read-only permissions.
-         *
-         * @param request CreateAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an account that is granted read-only permissions for shard nodes in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// <list type="bullet">
+        /// <item><description>The account is granted read-only permissions.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccountResponse
+        /// </returns>
         public CreateAccountResponse CreateAccountWithOptions(CreateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -808,16 +993,29 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CreateAccountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an account that is granted read-only permissions for shard nodes in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.
-         *
-         * @description *   You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.
-         * *   The account is granted read-only permissions.
-         *
-         * @param request CreateAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an account that is granted read-only permissions for shard nodes in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// <list type="bullet">
+        /// <item><description>The account is granted read-only permissions.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccountResponse
+        /// </returns>
         public async Task<CreateAccountResponse> CreateAccountWithOptionsAsync(CreateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -869,45 +1067,78 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CreateAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an account that is granted read-only permissions for shard nodes in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.
-         *
-         * @description *   You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.
-         * *   The account is granted read-only permissions.
-         *
-         * @param request CreateAccountRequest
-         * @return CreateAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an account that is granted read-only permissions for shard nodes in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// <list type="bullet">
+        /// <item><description>The account is granted read-only permissions.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccountResponse
+        /// </returns>
         public CreateAccountResponse CreateAccount(CreateAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateAccountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates an account that is granted read-only permissions for shard nodes in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.
-         *
-         * @description *   You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.
-         * *   The account is granted read-only permissions.
-         *
-         * @param request CreateAccountRequest
-         * @return CreateAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an account that is granted read-only permissions for shard nodes in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// <list type="bullet">
+        /// <item><description>The account is granted read-only permissions.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccountResponse
+        /// </returns>
         public async Task<CreateAccountResponse> CreateAccountAsync(CreateAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a backup set for an ApsaraDB for MongoDB instance.
-         *
-         * @description When you call this operation, the instance must be in the Running state.
-         *
-         * @param request CreateBackupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateBackupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a backup set for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the instance must be in the Running state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateBackupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBackupResponse
+        /// </returns>
         public CreateBackupResponse CreateBackupWithOptions(CreateBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -955,15 +1186,26 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CreateBackupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a backup set for an ApsaraDB for MongoDB instance.
-         *
-         * @description When you call this operation, the instance must be in the Running state.
-         *
-         * @param request CreateBackupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateBackupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a backup set for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the instance must be in the Running state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateBackupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBackupResponse
+        /// </returns>
         public async Task<CreateBackupResponse> CreateBackupWithOptionsAsync(CreateBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1011,45 +1253,74 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CreateBackupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a backup set for an ApsaraDB for MongoDB instance.
-         *
-         * @description When you call this operation, the instance must be in the Running state.
-         *
-         * @param request CreateBackupRequest
-         * @return CreateBackupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a backup set for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the instance must be in the Running state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateBackupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBackupResponse
+        /// </returns>
         public CreateBackupResponse CreateBackup(CreateBackupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateBackupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a backup set for an ApsaraDB for MongoDB instance.
-         *
-         * @description When you call this operation, the instance must be in the Running state.
-         *
-         * @param request CreateBackupRequest
-         * @return CreateBackupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a backup set for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the instance must be in the Running state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateBackupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBackupResponse
+        /// </returns>
         public async Task<CreateBackupResponse> CreateBackupAsync(CreateBackupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateBackupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates or clones an ApsaraDB for MongoDB replica set instance.
-         *
-         * @description Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail/mongodb_computeudr_dp_cn) of ApsaraDB for MongoDB before you call this operation.
-         * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](https://www.alibabacloud.com/help/en/mongodb/product-overview/instance-types-1).
-         * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~CreateShardingDBInstance~~) operation.
-         *
-         * @param request CreateDBInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or clones an ApsaraDB for MongoDB replica set instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+        /// For more information about the instance types of ApsaraDB for MongoDB instances, see <a href="https://www.alibabacloud.com/help/en/mongodb/product-overview/instance-types-1">Instance types</a>.
+        /// To create sharded cluster instances, you can call the <a href="~~CreateShardingDBInstance~~">CreateShardingDBInstance</a> operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDBInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBInstanceResponse
+        /// </returns>
         public CreateDBInstanceResponse CreateDBInstanceWithOptions(CreateDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1237,17 +1508,28 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CreateDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates or clones an ApsaraDB for MongoDB replica set instance.
-         *
-         * @description Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail/mongodb_computeudr_dp_cn) of ApsaraDB for MongoDB before you call this operation.
-         * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](https://www.alibabacloud.com/help/en/mongodb/product-overview/instance-types-1).
-         * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~CreateShardingDBInstance~~) operation.
-         *
-         * @param request CreateDBInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or clones an ApsaraDB for MongoDB replica set instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+        /// For more information about the instance types of ApsaraDB for MongoDB instances, see <a href="https://www.alibabacloud.com/help/en/mongodb/product-overview/instance-types-1">Instance types</a>.
+        /// To create sharded cluster instances, you can call the <a href="~~CreateShardingDBInstance~~">CreateShardingDBInstance</a> operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDBInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBInstanceResponse
+        /// </returns>
         public async Task<CreateDBInstanceResponse> CreateDBInstanceWithOptionsAsync(CreateDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1435,45 +1717,71 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CreateDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates or clones an ApsaraDB for MongoDB replica set instance.
-         *
-         * @description Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail/mongodb_computeudr_dp_cn) of ApsaraDB for MongoDB before you call this operation.
-         * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](https://www.alibabacloud.com/help/en/mongodb/product-overview/instance-types-1).
-         * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~CreateShardingDBInstance~~) operation.
-         *
-         * @param request CreateDBInstanceRequest
-         * @return CreateDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or clones an ApsaraDB for MongoDB replica set instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+        /// For more information about the instance types of ApsaraDB for MongoDB instances, see <a href="https://www.alibabacloud.com/help/en/mongodb/product-overview/instance-types-1">Instance types</a>.
+        /// To create sharded cluster instances, you can call the <a href="~~CreateShardingDBInstance~~">CreateShardingDBInstance</a> operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDBInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBInstanceResponse
+        /// </returns>
         public CreateDBInstanceResponse CreateDBInstance(CreateDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDBInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates or clones an ApsaraDB for MongoDB replica set instance.
-         *
-         * @description Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail/mongodb_computeudr_dp_cn) of ApsaraDB for MongoDB before you call this operation.
-         * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](https://www.alibabacloud.com/help/en/mongodb/product-overview/instance-types-1).
-         * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~CreateShardingDBInstance~~) operation.
-         *
-         * @param request CreateDBInstanceRequest
-         * @return CreateDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or clones an ApsaraDB for MongoDB replica set instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+        /// For more information about the instance types of ApsaraDB for MongoDB instances, see <a href="https://www.alibabacloud.com/help/en/mongodb/product-overview/instance-types-1">Instance types</a>.
+        /// To create sharded cluster instances, you can call the <a href="~~CreateShardingDBInstance~~">CreateShardingDBInstance</a> operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDBInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBInstanceResponse
+        /// </returns>
         public async Task<CreateDBInstanceResponse> CreateDBInstanceAsync(CreateDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDBInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a global IP whitelist template.
-         *
-         * @param request CreateGlobalSecurityIPGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateGlobalSecurityIPGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a global IP whitelist template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGlobalSecurityIPGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGlobalSecurityIPGroupResponse
+        /// </returns>
         public CreateGlobalSecurityIPGroupResponse CreateGlobalSecurityIPGroupWithOptions(CreateGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1529,13 +1837,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CreateGlobalSecurityIPGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a global IP whitelist template.
-         *
-         * @param request CreateGlobalSecurityIPGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateGlobalSecurityIPGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a global IP whitelist template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGlobalSecurityIPGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGlobalSecurityIPGroupResponse
+        /// </returns>
         public async Task<CreateGlobalSecurityIPGroupResponse> CreateGlobalSecurityIPGroupWithOptionsAsync(CreateGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1591,40 +1907,63 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CreateGlobalSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a global IP whitelist template.
-         *
-         * @param request CreateGlobalSecurityIPGroupRequest
-         * @return CreateGlobalSecurityIPGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a global IP whitelist template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGlobalSecurityIPGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGlobalSecurityIPGroupResponse
+        /// </returns>
         public CreateGlobalSecurityIPGroupResponse CreateGlobalSecurityIPGroup(CreateGlobalSecurityIPGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateGlobalSecurityIPGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a global IP whitelist template.
-         *
-         * @param request CreateGlobalSecurityIPGroupRequest
-         * @return CreateGlobalSecurityIPGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a global IP whitelist template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGlobalSecurityIPGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGlobalSecurityIPGroupResponse
+        /// </returns>
         public async Task<CreateGlobalSecurityIPGroupResponse> CreateGlobalSecurityIPGroupAsync(CreateGlobalSecurityIPGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateGlobalSecurityIPGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Adds a shard or mongos node to an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-         * This operation applies only to sharded cluster instances.
-         *
-         * @param request CreateNodeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateNodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a shard or mongos node to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// This operation applies only to sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNodeResponse
+        /// </returns>
         public CreateNodeResponse CreateNodeWithOptions(CreateNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1712,16 +2051,27 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CreateNodeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Adds a shard or mongos node to an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-         * This operation applies only to sharded cluster instances.
-         *
-         * @param request CreateNodeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateNodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a shard or mongos node to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// This operation applies only to sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNodeResponse
+        /// </returns>
         public async Task<CreateNodeResponse> CreateNodeWithOptionsAsync(CreateNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1809,46 +2159,75 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CreateNodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Adds a shard or mongos node to an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-         * This operation applies only to sharded cluster instances.
-         *
-         * @param request CreateNodeRequest
-         * @return CreateNodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a shard or mongos node to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// This operation applies only to sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNodeResponse
+        /// </returns>
         public CreateNodeResponse CreateNode(CreateNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateNodeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Adds a shard or mongos node to an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-         * This operation applies only to sharded cluster instances.
-         *
-         * @param request CreateNodeRequest
-         * @return CreateNodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a shard or mongos node to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// This operation applies only to sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNodeResponse
+        /// </returns>
         public async Task<CreateNodeResponse> CreateNodeAsync(CreateNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateNodeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Batch adds mongos or shard nodes for a sharded cluster instance.
-         *
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB. 
-         * This operation is applicable only to sharded cluster instances.
-         *
-         * @param request CreateNodeBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateNodeBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch adds mongos or shard nodes for a sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB. 
+        /// This operation is applicable only to sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNodeBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNodeBatchResponse
+        /// </returns>
         public CreateNodeBatchResponse CreateNodeBatchWithOptions(CreateNodeBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1928,16 +2307,27 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CreateNodeBatchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Batch adds mongos or shard nodes for a sharded cluster instance.
-         *
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB. 
-         * This operation is applicable only to sharded cluster instances.
-         *
-         * @param request CreateNodeBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateNodeBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch adds mongos or shard nodes for a sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB. 
+        /// This operation is applicable only to sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNodeBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNodeBatchResponse
+        /// </returns>
         public async Task<CreateNodeBatchResponse> CreateNodeBatchWithOptionsAsync(CreateNodeBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2017,47 +2407,78 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CreateNodeBatchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Batch adds mongos or shard nodes for a sharded cluster instance.
-         *
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB. 
-         * This operation is applicable only to sharded cluster instances.
-         *
-         * @param request CreateNodeBatchRequest
-         * @return CreateNodeBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch adds mongos or shard nodes for a sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB. 
+        /// This operation is applicable only to sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNodeBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNodeBatchResponse
+        /// </returns>
         public CreateNodeBatchResponse CreateNodeBatch(CreateNodeBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateNodeBatchWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Batch adds mongos or shard nodes for a sharded cluster instance.
-         *
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB. 
-         * This operation is applicable only to sharded cluster instances.
-         *
-         * @param request CreateNodeBatchRequest
-         * @return CreateNodeBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch adds mongos or shard nodes for a sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB. 
+        /// This operation is applicable only to sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNodeBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNodeBatchResponse
+        /// </returns>
         public async Task<CreateNodeBatchResponse> CreateNodeBatchAsync(CreateNodeBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateNodeBatchWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates or clones an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description *   Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
-         * *   For more information about the instance types of ApsaraDB for MongoDB, see [Instance types](https://help.aliyun.com/document_detail/57141.html).
-         * *   To create standalone instances and replica set instances, you can call the [CreateDBInstance](https://help.aliyun.com/document_detail/61763.html) operation.
-         *
-         * @param request CreateShardingDBInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateShardingDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or clones an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about the instance types of ApsaraDB for MongoDB, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</description></item>
+        /// <item><description>To create standalone instances and replica set instances, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateShardingDBInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateShardingDBInstanceResponse
+        /// </returns>
         public CreateShardingDBInstanceResponse CreateShardingDBInstanceWithOptions(CreateShardingDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2233,17 +2654,30 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CreateShardingDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates or clones an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description *   Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
-         * *   For more information about the instance types of ApsaraDB for MongoDB, see [Instance types](https://help.aliyun.com/document_detail/57141.html).
-         * *   To create standalone instances and replica set instances, you can call the [CreateDBInstance](https://help.aliyun.com/document_detail/61763.html) operation.
-         *
-         * @param request CreateShardingDBInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateShardingDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or clones an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about the instance types of ApsaraDB for MongoDB, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</description></item>
+        /// <item><description>To create standalone instances and replica set instances, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateShardingDBInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateShardingDBInstanceResponse
+        /// </returns>
         public async Task<CreateShardingDBInstanceResponse> CreateShardingDBInstanceWithOptionsAsync(CreateShardingDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2419,50 +2853,87 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<CreateShardingDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates or clones an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description *   Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
-         * *   For more information about the instance types of ApsaraDB for MongoDB, see [Instance types](https://help.aliyun.com/document_detail/57141.html).
-         * *   To create standalone instances and replica set instances, you can call the [CreateDBInstance](https://help.aliyun.com/document_detail/61763.html) operation.
-         *
-         * @param request CreateShardingDBInstanceRequest
-         * @return CreateShardingDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or clones an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about the instance types of ApsaraDB for MongoDB, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</description></item>
+        /// <item><description>To create standalone instances and replica set instances, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateShardingDBInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateShardingDBInstanceResponse
+        /// </returns>
         public CreateShardingDBInstanceResponse CreateShardingDBInstance(CreateShardingDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateShardingDBInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates or clones an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description *   Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
-         * *   For more information about the instance types of ApsaraDB for MongoDB, see [Instance types](https://help.aliyun.com/document_detail/57141.html).
-         * *   To create standalone instances and replica set instances, you can call the [CreateDBInstance](https://help.aliyun.com/document_detail/61763.html) operation.
-         *
-         * @param request CreateShardingDBInstanceRequest
-         * @return CreateShardingDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or clones an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about the instance types of ApsaraDB for MongoDB, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</description></item>
+        /// <item><description>To create standalone instances and replica set instances, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateShardingDBInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateShardingDBInstanceResponse
+        /// </returns>
         public async Task<CreateShardingDBInstanceResponse> CreateShardingDBInstanceAsync(CreateShardingDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateShardingDBInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Releases an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the instance meets the following requirements
-         * *   The instance is in the Running state.
-         * *   The billing method of the instance is pay-as-you-go.
-         * > After an instance is released, all data in the instance is cleared and cannot be recovered. Proceed with caution.
-         *
-         * @param request DeleteDBInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the instance meets the following requirements</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The billing method of the instance is pay-as-you-go.<remarks>
+        /// <para>After an instance is released, all data in the instance is cleared and cannot be recovered. Proceed with caution.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDBInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBInstanceResponse
+        /// </returns>
         public DeleteDBInstanceResponse DeleteDBInstanceWithOptions(DeleteDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2510,18 +2981,33 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DeleteDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Releases an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the instance meets the following requirements
-         * *   The instance is in the Running state.
-         * *   The billing method of the instance is pay-as-you-go.
-         * > After an instance is released, all data in the instance is cleared and cannot be recovered. Proceed with caution.
-         *
-         * @param request DeleteDBInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the instance meets the following requirements</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The billing method of the instance is pay-as-you-go.<remarks>
+        /// <para>After an instance is released, all data in the instance is cleared and cannot be recovered. Proceed with caution.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDBInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBInstanceResponse
+        /// </returns>
         public async Task<DeleteDBInstanceResponse> DeleteDBInstanceWithOptionsAsync(DeleteDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2569,47 +3055,81 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DeleteDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Releases an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the instance meets the following requirements
-         * *   The instance is in the Running state.
-         * *   The billing method of the instance is pay-as-you-go.
-         * > After an instance is released, all data in the instance is cleared and cannot be recovered. Proceed with caution.
-         *
-         * @param request DeleteDBInstanceRequest
-         * @return DeleteDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the instance meets the following requirements</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The billing method of the instance is pay-as-you-go.<remarks>
+        /// <para>After an instance is released, all data in the instance is cleared and cannot be recovered. Proceed with caution.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDBInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBInstanceResponse
+        /// </returns>
         public DeleteDBInstanceResponse DeleteDBInstance(DeleteDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDBInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Releases an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the instance meets the following requirements
-         * *   The instance is in the Running state.
-         * *   The billing method of the instance is pay-as-you-go.
-         * > After an instance is released, all data in the instance is cleared and cannot be recovered. Proceed with caution.
-         *
-         * @param request DeleteDBInstanceRequest
-         * @return DeleteDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the instance meets the following requirements</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The billing method of the instance is pay-as-you-go.<remarks>
+        /// <para>After an instance is released, all data in the instance is cleared and cannot be recovered. Proceed with caution.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDBInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBInstanceResponse
+        /// </returns>
         public async Task<DeleteDBInstanceResponse> DeleteDBInstanceAsync(DeleteDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDBInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a global IP whitelist template.
-         *
-         * @param request DeleteGlobalSecurityIPGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteGlobalSecurityIPGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a global IP whitelist template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGlobalSecurityIPGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGlobalSecurityIPGroupResponse
+        /// </returns>
         public DeleteGlobalSecurityIPGroupResponse DeleteGlobalSecurityIPGroupWithOptions(DeleteGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2665,13 +3185,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DeleteGlobalSecurityIPGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a global IP whitelist template.
-         *
-         * @param request DeleteGlobalSecurityIPGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteGlobalSecurityIPGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a global IP whitelist template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGlobalSecurityIPGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGlobalSecurityIPGroupResponse
+        /// </returns>
         public async Task<DeleteGlobalSecurityIPGroupResponse> DeleteGlobalSecurityIPGroupWithOptionsAsync(DeleteGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2727,43 +3255,68 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DeleteGlobalSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a global IP whitelist template.
-         *
-         * @param request DeleteGlobalSecurityIPGroupRequest
-         * @return DeleteGlobalSecurityIPGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a global IP whitelist template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGlobalSecurityIPGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGlobalSecurityIPGroupResponse
+        /// </returns>
         public DeleteGlobalSecurityIPGroupResponse DeleteGlobalSecurityIPGroup(DeleteGlobalSecurityIPGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteGlobalSecurityIPGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a global IP whitelist template.
-         *
-         * @param request DeleteGlobalSecurityIPGroupRequest
-         * @return DeleteGlobalSecurityIPGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a global IP whitelist template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGlobalSecurityIPGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGlobalSecurityIPGroupResponse
+        /// </returns>
         public async Task<DeleteGlobalSecurityIPGroupResponse> DeleteGlobalSecurityIPGroupAsync(DeleteGlobalSecurityIPGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteGlobalSecurityIPGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a shard or mongos node from an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance is in the Running state.
-         * *   The instance is a sharded cluster instance.
-         * *   The billing method of the instance is pay-as-you-go.
-         * *   The number of the shard or mongos nodes in the instance is greater than two.
-         *
-         * @param request DeleteNodeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteNodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a shard or mongos node from an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance is a sharded cluster instance.</description></item>
+        /// <item><description>The billing method of the instance is pay-as-you-go.</description></item>
+        /// <item><description>The number of the shard or mongos nodes in the instance is greater than two.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNodeResponse
+        /// </returns>
         public DeleteNodeResponse DeleteNodeWithOptions(DeleteNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2815,19 +3368,32 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DeleteNodeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a shard or mongos node from an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance is in the Running state.
-         * *   The instance is a sharded cluster instance.
-         * *   The billing method of the instance is pay-as-you-go.
-         * *   The number of the shard or mongos nodes in the instance is greater than two.
-         *
-         * @param request DeleteNodeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteNodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a shard or mongos node from an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance is a sharded cluster instance.</description></item>
+        /// <item><description>The billing method of the instance is pay-as-you-go.</description></item>
+        /// <item><description>The number of the shard or mongos nodes in the instance is greater than two.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNodeResponse
+        /// </returns>
         public async Task<DeleteNodeResponse> DeleteNodeWithOptionsAsync(DeleteNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2879,51 +3445,86 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DeleteNodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a shard or mongos node from an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance is in the Running state.
-         * *   The instance is a sharded cluster instance.
-         * *   The billing method of the instance is pay-as-you-go.
-         * *   The number of the shard or mongos nodes in the instance is greater than two.
-         *
-         * @param request DeleteNodeRequest
-         * @return DeleteNodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a shard or mongos node from an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance is a sharded cluster instance.</description></item>
+        /// <item><description>The billing method of the instance is pay-as-you-go.</description></item>
+        /// <item><description>The number of the shard or mongos nodes in the instance is greater than two.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNodeResponse
+        /// </returns>
         public DeleteNodeResponse DeleteNode(DeleteNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteNodeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a shard or mongos node from an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance is in the Running state.
-         * *   The instance is a sharded cluster instance.
-         * *   The billing method of the instance is pay-as-you-go.
-         * *   The number of the shard or mongos nodes in the instance is greater than two.
-         *
-         * @param request DeleteNodeRequest
-         * @return DeleteNodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a shard or mongos node from an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance is a sharded cluster instance.</description></item>
+        /// <item><description>The billing method of the instance is pay-as-you-go.</description></item>
+        /// <item><description>The number of the shard or mongos nodes in the instance is greater than two.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNodeResponse
+        /// </returns>
         public async Task<DeleteNodeResponse> DeleteNodeAsync(DeleteNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteNodeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the database accounts of an ApsaraDB for MongoDB instance.
-         *
-         * @description >  This operation can be used to query only the information of the root account.
-         *
-         * @param request DescribeAccountsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAccountsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database accounts of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation can be used to query only the information of the root account.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccountsResponse
+        /// </returns>
         public DescribeAccountsResponse DescribeAccountsWithOptions(DescribeAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2971,15 +3572,28 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeAccountsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the database accounts of an ApsaraDB for MongoDB instance.
-         *
-         * @description >  This operation can be used to query only the information of the root account.
-         *
-         * @param request DescribeAccountsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAccountsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database accounts of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation can be used to query only the information of the root account.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccountsResponse
+        /// </returns>
         public async Task<DescribeAccountsResponse> DescribeAccountsWithOptionsAsync(DescribeAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3027,41 +3641,71 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeAccountsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the database accounts of an ApsaraDB for MongoDB instance.
-         *
-         * @description >  This operation can be used to query only the information of the root account.
-         *
-         * @param request DescribeAccountsRequest
-         * @return DescribeAccountsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database accounts of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation can be used to query only the information of the root account.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccountsResponse
+        /// </returns>
         public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAccountsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the database accounts of an ApsaraDB for MongoDB instance.
-         *
-         * @description >  This operation can be used to query only the information of the root account.
-         *
-         * @param request DescribeAccountsRequest
-         * @return DescribeAccountsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database accounts of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation can be used to query only the information of the root account.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccountsResponse
+        /// </returns>
         public async Task<DescribeAccountsResponse> DescribeAccountsAsync(DescribeAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAccountsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the number of operation and maintenance tasks on an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeActiveOperationTaskCountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeActiveOperationTaskCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of operation and maintenance tasks on an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTaskCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTaskCountResponse
+        /// </returns>
         public DescribeActiveOperationTaskCountResponse DescribeActiveOperationTaskCountWithOptions(DescribeActiveOperationTaskCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3105,13 +3749,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeActiveOperationTaskCountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the number of operation and maintenance tasks on an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeActiveOperationTaskCountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeActiveOperationTaskCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of operation and maintenance tasks on an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTaskCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTaskCountResponse
+        /// </returns>
         public async Task<DescribeActiveOperationTaskCountResponse> DescribeActiveOperationTaskCountWithOptionsAsync(DescribeActiveOperationTaskCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3155,39 +3807,62 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeActiveOperationTaskCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the number of operation and maintenance tasks on an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeActiveOperationTaskCountRequest
-         * @return DescribeActiveOperationTaskCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of operation and maintenance tasks on an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTaskCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTaskCountResponse
+        /// </returns>
         public DescribeActiveOperationTaskCountResponse DescribeActiveOperationTaskCount(DescribeActiveOperationTaskCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeActiveOperationTaskCountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the number of operation and maintenance tasks on an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeActiveOperationTaskCountRequest
-         * @return DescribeActiveOperationTaskCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of operation and maintenance tasks on an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTaskCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTaskCountResponse
+        /// </returns>
         public async Task<DescribeActiveOperationTaskCountResponse> DescribeActiveOperationTaskCountAsync(DescribeActiveOperationTaskCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeActiveOperationTaskCountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the types of Operation and Maintenance tasks and the number of tasks of each type for an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is no longer updated and will be unavailable.
-         *
-         * @param request DescribeActiveOperationTaskTypeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeActiveOperationTaskTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of Operation and Maintenance tasks and the number of tasks of each type for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is no longer updated and will be unavailable.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTaskTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTaskTypeResponse
+        /// </returns>
         public DescribeActiveOperationTaskTypeResponse DescribeActiveOperationTaskTypeWithOptions(DescribeActiveOperationTaskTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3235,15 +3910,26 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeActiveOperationTaskTypeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the types of Operation and Maintenance tasks and the number of tasks of each type for an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is no longer updated and will be unavailable.
-         *
-         * @param request DescribeActiveOperationTaskTypeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeActiveOperationTaskTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of Operation and Maintenance tasks and the number of tasks of each type for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is no longer updated and will be unavailable.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTaskTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTaskTypeResponse
+        /// </returns>
         public async Task<DescribeActiveOperationTaskTypeResponse> DescribeActiveOperationTaskTypeWithOptionsAsync(DescribeActiveOperationTaskTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3291,41 +3977,67 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeActiveOperationTaskTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the types of Operation and Maintenance tasks and the number of tasks of each type for an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is no longer updated and will be unavailable.
-         *
-         * @param request DescribeActiveOperationTaskTypeRequest
-         * @return DescribeActiveOperationTaskTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of Operation and Maintenance tasks and the number of tasks of each type for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is no longer updated and will be unavailable.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTaskTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTaskTypeResponse
+        /// </returns>
         public DescribeActiveOperationTaskTypeResponse DescribeActiveOperationTaskType(DescribeActiveOperationTaskTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeActiveOperationTaskTypeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the types of Operation and Maintenance tasks and the number of tasks of each type for an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is no longer updated and will be unavailable.
-         *
-         * @param request DescribeActiveOperationTaskTypeRequest
-         * @return DescribeActiveOperationTaskTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of Operation and Maintenance tasks and the number of tasks of each type for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is no longer updated and will be unavailable.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTaskTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTaskTypeResponse
+        /// </returns>
         public async Task<DescribeActiveOperationTaskTypeResponse> DescribeActiveOperationTaskTypeAsync(DescribeActiveOperationTaskTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeActiveOperationTaskTypeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries a list of operation and maintenance tasks initiated for an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeActiveOperationTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of operation and maintenance tasks initiated for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTasksResponse
+        /// </returns>
         public DescribeActiveOperationTasksResponse DescribeActiveOperationTasksWithOptions(DescribeActiveOperationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3409,13 +4121,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeActiveOperationTasksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of operation and maintenance tasks initiated for an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeActiveOperationTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of operation and maintenance tasks initiated for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTasksResponse
+        /// </returns>
         public async Task<DescribeActiveOperationTasksResponse> DescribeActiveOperationTasksWithOptionsAsync(DescribeActiveOperationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3499,41 +4219,66 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeActiveOperationTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of operation and maintenance tasks initiated for an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeActiveOperationTasksRequest
-         * @return DescribeActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of operation and maintenance tasks initiated for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTasksResponse
+        /// </returns>
         public DescribeActiveOperationTasksResponse DescribeActiveOperationTasks(DescribeActiveOperationTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeActiveOperationTasksWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries a list of operation and maintenance tasks initiated for an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeActiveOperationTasksRequest
-         * @return DescribeActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of operation and maintenance tasks initiated for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTasksResponse
+        /// </returns>
         public async Task<DescribeActiveOperationTasksResponse> DescribeActiveOperationTasksAsync(DescribeActiveOperationTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeActiveOperationTasksWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the types of entries in the audit log collected for an ApsaraDB for MongoDB instance.
-         *
-         * @description *   The instance must be in the running state when you call this operation.
-         * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeAuditLogFilterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAuditLogFilterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of entries in the audit log collected for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the running state when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAuditLogFilterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAuditLogFilterResponse
+        /// </returns>
         public DescribeAuditLogFilterResponse DescribeAuditLogFilterWithOptions(DescribeAuditLogFilterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3581,17 +4326,30 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeAuditLogFilterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the types of entries in the audit log collected for an ApsaraDB for MongoDB instance.
-         *
-         * @description *   The instance must be in the running state when you call this operation.
-         * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeAuditLogFilterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAuditLogFilterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of entries in the audit log collected for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the running state when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAuditLogFilterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAuditLogFilterResponse
+        /// </returns>
         public async Task<DescribeAuditLogFilterResponse> DescribeAuditLogFilterWithOptionsAsync(DescribeAuditLogFilterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3639,49 +4397,84 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeAuditLogFilterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the types of entries in the audit log collected for an ApsaraDB for MongoDB instance.
-         *
-         * @description *   The instance must be in the running state when you call this operation.
-         * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeAuditLogFilterRequest
-         * @return DescribeAuditLogFilterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of entries in the audit log collected for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the running state when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAuditLogFilterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAuditLogFilterResponse
+        /// </returns>
         public DescribeAuditLogFilterResponse DescribeAuditLogFilter(DescribeAuditLogFilterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAuditLogFilterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the types of entries in the audit log collected for an ApsaraDB for MongoDB instance.
-         *
-         * @description *   The instance must be in the running state when you call this operation.
-         * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeAuditLogFilterRequest
-         * @return DescribeAuditLogFilterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of entries in the audit log collected for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the running state when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAuditLogFilterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAuditLogFilterResponse
+        /// </returns>
         public async Task<DescribeAuditLogFilterResponse> DescribeAuditLogFilterAsync(DescribeAuditLogFilterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAuditLogFilterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries whether the audit log feature is enabled for an ApsaraDB for MongoDB instance.
-         *
-         * @description *   The instance must be in the running state when you call this operation.
-         * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeAuditPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAuditPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the audit log feature is enabled for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the running state when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAuditPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAuditPolicyResponse
+        /// </returns>
         public DescribeAuditPolicyResponse DescribeAuditPolicyWithOptions(DescribeAuditPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3725,17 +4518,30 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeAuditPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether the audit log feature is enabled for an ApsaraDB for MongoDB instance.
-         *
-         * @description *   The instance must be in the running state when you call this operation.
-         * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeAuditPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAuditPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the audit log feature is enabled for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the running state when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAuditPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAuditPolicyResponse
+        /// </returns>
         public async Task<DescribeAuditPolicyResponse> DescribeAuditPolicyWithOptionsAsync(DescribeAuditPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3779,49 +4585,84 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeAuditPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether the audit log feature is enabled for an ApsaraDB for MongoDB instance.
-         *
-         * @description *   The instance must be in the running state when you call this operation.
-         * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeAuditPolicyRequest
-         * @return DescribeAuditPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the audit log feature is enabled for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the running state when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAuditPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAuditPolicyResponse
+        /// </returns>
         public DescribeAuditPolicyResponse DescribeAuditPolicy(DescribeAuditPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAuditPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries whether the audit log feature is enabled for an ApsaraDB for MongoDB instance.
-         *
-         * @description *   The instance must be in the running state when you call this operation.
-         * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeAuditPolicyRequest
-         * @return DescribeAuditPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the audit log feature is enabled for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the running state when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAuditPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAuditPolicyResponse
+        /// </returns>
         public async Task<DescribeAuditPolicyResponse> DescribeAuditPolicyAsync(DescribeAuditPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAuditPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the audit logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   When you call this operation, ensure that the audit log feature of the instance is enabled. Otherwise, the operation returns an empty audit log.
-         * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeAuditRecordsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAuditRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the audit logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  When you call this operation, ensure that the audit log feature of the instance is enabled. Otherwise, the operation returns an empty audit log.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAuditRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAuditRecordsResponse
+        /// </returns>
         public DescribeAuditRecordsResponse DescribeAuditRecordsWithOptions(DescribeAuditRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3909,17 +4750,30 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeAuditRecordsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the audit logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   When you call this operation, ensure that the audit log feature of the instance is enabled. Otherwise, the operation returns an empty audit log.
-         * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeAuditRecordsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAuditRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the audit logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  When you call this operation, ensure that the audit log feature of the instance is enabled. Otherwise, the operation returns an empty audit log.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAuditRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAuditRecordsResponse
+        /// </returns>
         public async Task<DescribeAuditRecordsResponse> DescribeAuditRecordsWithOptionsAsync(DescribeAuditRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4007,47 +4861,80 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeAuditRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the audit logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   When you call this operation, ensure that the audit log feature of the instance is enabled. Otherwise, the operation returns an empty audit log.
-         * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeAuditRecordsRequest
-         * @return DescribeAuditRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the audit logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  When you call this operation, ensure that the audit log feature of the instance is enabled. Otherwise, the operation returns an empty audit log.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAuditRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAuditRecordsResponse
+        /// </returns>
         public DescribeAuditRecordsResponse DescribeAuditRecords(DescribeAuditRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAuditRecordsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the audit logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   When you call this operation, ensure that the audit log feature of the instance is enabled. Otherwise, the operation returns an empty audit log.
-         * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeAuditRecordsRequest
-         * @return DescribeAuditRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the audit logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  When you call this operation, ensure that the audit log feature of the instance is enabled. Otherwise, the operation returns an empty audit log.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAuditRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAuditRecordsResponse
+        /// </returns>
         public async Task<DescribeAuditRecordsResponse> DescribeAuditRecordsAsync(DescribeAuditRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAuditRecordsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries a list of the zones that are supported by an ApsaraDB for MongoDB instance.
-         *
-         * @description Queries the zones in which an ApsaraDB for MongoDB instance can be deployed under specified purchase conditions. The region ID is required in the purchase condition.
-         *
-         * @param request DescribeAvailabilityZonesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAvailabilityZonesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of the zones that are supported by an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the zones in which an ApsaraDB for MongoDB instance can be deployed under specified purchase conditions. The region ID is required in the purchase condition.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAvailabilityZonesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAvailabilityZonesResponse
+        /// </returns>
         public DescribeAvailabilityZonesResponse DescribeAvailabilityZonesWithOptions(DescribeAvailabilityZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4143,15 +5030,26 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeAvailabilityZonesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of the zones that are supported by an ApsaraDB for MongoDB instance.
-         *
-         * @description Queries the zones in which an ApsaraDB for MongoDB instance can be deployed under specified purchase conditions. The region ID is required in the purchase condition.
-         *
-         * @param request DescribeAvailabilityZonesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAvailabilityZonesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of the zones that are supported by an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the zones in which an ApsaraDB for MongoDB instance can be deployed under specified purchase conditions. The region ID is required in the purchase condition.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAvailabilityZonesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAvailabilityZonesResponse
+        /// </returns>
         public async Task<DescribeAvailabilityZonesResponse> DescribeAvailabilityZonesWithOptionsAsync(DescribeAvailabilityZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4247,41 +5145,67 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeAvailabilityZonesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of the zones that are supported by an ApsaraDB for MongoDB instance.
-         *
-         * @description Queries the zones in which an ApsaraDB for MongoDB instance can be deployed under specified purchase conditions. The region ID is required in the purchase condition.
-         *
-         * @param request DescribeAvailabilityZonesRequest
-         * @return DescribeAvailabilityZonesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of the zones that are supported by an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the zones in which an ApsaraDB for MongoDB instance can be deployed under specified purchase conditions. The region ID is required in the purchase condition.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAvailabilityZonesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAvailabilityZonesResponse
+        /// </returns>
         public DescribeAvailabilityZonesResponse DescribeAvailabilityZones(DescribeAvailabilityZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAvailabilityZonesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries a list of the zones that are supported by an ApsaraDB for MongoDB instance.
-         *
-         * @description Queries the zones in which an ApsaraDB for MongoDB instance can be deployed under specified purchase conditions. The region ID is required in the purchase condition.
-         *
-         * @param request DescribeAvailabilityZonesRequest
-         * @return DescribeAvailabilityZonesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of the zones that are supported by an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the zones in which an ApsaraDB for MongoDB instance can be deployed under specified purchase conditions. The region ID is required in the purchase condition.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAvailabilityZonesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAvailabilityZonesResponse
+        /// </returns>
         public async Task<DescribeAvailabilityZonesResponse> DescribeAvailabilityZonesAsync(DescribeAvailabilityZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAvailabilityZonesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary You can call this operation to query the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.
-         *
-         * @param request DescribeAvailableEngineVersionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAvailableEngineVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAvailableEngineVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAvailableEngineVersionResponse
+        /// </returns>
         public DescribeAvailableEngineVersionResponse DescribeAvailableEngineVersionWithOptions(DescribeAvailableEngineVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4325,13 +5249,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeAvailableEngineVersionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call this operation to query the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.
-         *
-         * @param request DescribeAvailableEngineVersionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAvailableEngineVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAvailableEngineVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAvailableEngineVersionResponse
+        /// </returns>
         public async Task<DescribeAvailableEngineVersionResponse> DescribeAvailableEngineVersionWithOptionsAsync(DescribeAvailableEngineVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4375,37 +5307,57 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeAvailableEngineVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call this operation to query the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.
-         *
-         * @param request DescribeAvailableEngineVersionRequest
-         * @return DescribeAvailableEngineVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAvailableEngineVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAvailableEngineVersionResponse
+        /// </returns>
         public DescribeAvailableEngineVersionResponse DescribeAvailableEngineVersion(DescribeAvailableEngineVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAvailableEngineVersionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary You can call this operation to query the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.
-         *
-         * @param request DescribeAvailableEngineVersionRequest
-         * @return DescribeAvailableEngineVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAvailableEngineVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAvailableEngineVersionResponse
+        /// </returns>
         public async Task<DescribeAvailableEngineVersionResponse> DescribeAvailableEngineVersionAsync(DescribeAvailableEngineVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAvailableEngineVersionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the available resources in the specified zone.
-         *
-         * @param request DescribeAvailableResourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAvailableResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available resources in the specified zone.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAvailableResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAvailableResourceResponse
+        /// </returns>
         public DescribeAvailableResourceResponse DescribeAvailableResourceWithOptions(DescribeAvailableResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4481,13 +5433,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeAvailableResourceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the available resources in the specified zone.
-         *
-         * @param request DescribeAvailableResourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAvailableResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available resources in the specified zone.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAvailableResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAvailableResourceResponse
+        /// </returns>
         public async Task<DescribeAvailableResourceResponse> DescribeAvailableResourceWithOptionsAsync(DescribeAvailableResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4563,45 +5523,70 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeAvailableResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the available resources in the specified zone.
-         *
-         * @param request DescribeAvailableResourceRequest
-         * @return DescribeAvailableResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available resources in the specified zone.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAvailableResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAvailableResourceResponse
+        /// </returns>
         public DescribeAvailableResourceResponse DescribeAvailableResource(DescribeAvailableResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAvailableResourceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the available resources in the specified zone.
-         *
-         * @param request DescribeAvailableResourceRequest
-         * @return DescribeAvailableResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available resources in the specified zone.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAvailableResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAvailableResourceResponse
+        /// </returns>
         public async Task<DescribeAvailableResourceResponse> DescribeAvailableResourceAsync(DescribeAvailableResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAvailableResourceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the databases at a specified time or the databases in a specified backup set before you restore a database for an ApsaraDB for MongoDB instance.
-         *
-         * @description You can call the [CreateDBInstance](https://help.aliyun.com/document_detail/61763.html) operation to restore a database for an ApsaraDB for MongoDB instance. For more information, see [Restore one database of an ApsaraDB for MongoDB instance](https://help.aliyun.com/document_detail/112274.html).
-         * Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance was created after March 26, 2019.
-         * *   The instance is located in the China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), or Singapore region. Other regions are not supported.
-         * *   The instance is a replica set instance.
-         * *   The instance runs MongoDB 3.4, MongoDB 4.0, or MongoDB 4.2. In addition, the instance uses local disks to store data.
-         * *   The storage engine of the instance is WiredTiger.
-         *
-         * @param request DescribeBackupDBsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBackupDBsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the databases at a specified time or the databases in a specified backup set before you restore a database for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation to restore a database for an ApsaraDB for MongoDB instance. For more information, see <a href="https://help.aliyun.com/document_detail/112274.html">Restore one database of an ApsaraDB for MongoDB instance</a>.
+        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance was created after March 26, 2019.</description></item>
+        /// <item><description>The instance is located in the China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), or Singapore region. Other regions are not supported.</description></item>
+        /// <item><description>The instance is a replica set instance.</description></item>
+        /// <item><description>The instance runs MongoDB 3.4, MongoDB 4.0, or MongoDB 4.2. In addition, the instance uses local disks to store data.</description></item>
+        /// <item><description>The storage engine of the instance is WiredTiger.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupDBsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupDBsResponse
+        /// </returns>
         public DescribeBackupDBsResponse DescribeBackupDBsWithOptions(DescribeBackupDBsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4669,21 +5654,34 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeBackupDBsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the databases at a specified time or the databases in a specified backup set before you restore a database for an ApsaraDB for MongoDB instance.
-         *
-         * @description You can call the [CreateDBInstance](https://help.aliyun.com/document_detail/61763.html) operation to restore a database for an ApsaraDB for MongoDB instance. For more information, see [Restore one database of an ApsaraDB for MongoDB instance](https://help.aliyun.com/document_detail/112274.html).
-         * Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance was created after March 26, 2019.
-         * *   The instance is located in the China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), or Singapore region. Other regions are not supported.
-         * *   The instance is a replica set instance.
-         * *   The instance runs MongoDB 3.4, MongoDB 4.0, or MongoDB 4.2. In addition, the instance uses local disks to store data.
-         * *   The storage engine of the instance is WiredTiger.
-         *
-         * @param request DescribeBackupDBsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBackupDBsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the databases at a specified time or the databases in a specified backup set before you restore a database for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation to restore a database for an ApsaraDB for MongoDB instance. For more information, see <a href="https://help.aliyun.com/document_detail/112274.html">Restore one database of an ApsaraDB for MongoDB instance</a>.
+        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance was created after March 26, 2019.</description></item>
+        /// <item><description>The instance is located in the China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), or Singapore region. Other regions are not supported.</description></item>
+        /// <item><description>The instance is a replica set instance.</description></item>
+        /// <item><description>The instance runs MongoDB 3.4, MongoDB 4.0, or MongoDB 4.2. In addition, the instance uses local disks to store data.</description></item>
+        /// <item><description>The storage engine of the instance is WiredTiger.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupDBsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupDBsResponse
+        /// </returns>
         public async Task<DescribeBackupDBsResponse> DescribeBackupDBsWithOptionsAsync(DescribeBackupDBsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4751,53 +5749,83 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeBackupDBsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the databases at a specified time or the databases in a specified backup set before you restore a database for an ApsaraDB for MongoDB instance.
-         *
-         * @description You can call the [CreateDBInstance](https://help.aliyun.com/document_detail/61763.html) operation to restore a database for an ApsaraDB for MongoDB instance. For more information, see [Restore one database of an ApsaraDB for MongoDB instance](https://help.aliyun.com/document_detail/112274.html).
-         * Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance was created after March 26, 2019.
-         * *   The instance is located in the China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), or Singapore region. Other regions are not supported.
-         * *   The instance is a replica set instance.
-         * *   The instance runs MongoDB 3.4, MongoDB 4.0, or MongoDB 4.2. In addition, the instance uses local disks to store data.
-         * *   The storage engine of the instance is WiredTiger.
-         *
-         * @param request DescribeBackupDBsRequest
-         * @return DescribeBackupDBsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the databases at a specified time or the databases in a specified backup set before you restore a database for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation to restore a database for an ApsaraDB for MongoDB instance. For more information, see <a href="https://help.aliyun.com/document_detail/112274.html">Restore one database of an ApsaraDB for MongoDB instance</a>.
+        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance was created after March 26, 2019.</description></item>
+        /// <item><description>The instance is located in the China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), or Singapore region. Other regions are not supported.</description></item>
+        /// <item><description>The instance is a replica set instance.</description></item>
+        /// <item><description>The instance runs MongoDB 3.4, MongoDB 4.0, or MongoDB 4.2. In addition, the instance uses local disks to store data.</description></item>
+        /// <item><description>The storage engine of the instance is WiredTiger.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupDBsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupDBsResponse
+        /// </returns>
         public DescribeBackupDBsResponse DescribeBackupDBs(DescribeBackupDBsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBackupDBsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the databases at a specified time or the databases in a specified backup set before you restore a database for an ApsaraDB for MongoDB instance.
-         *
-         * @description You can call the [CreateDBInstance](https://help.aliyun.com/document_detail/61763.html) operation to restore a database for an ApsaraDB for MongoDB instance. For more information, see [Restore one database of an ApsaraDB for MongoDB instance](https://help.aliyun.com/document_detail/112274.html).
-         * Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance was created after March 26, 2019.
-         * *   The instance is located in the China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), or Singapore region. Other regions are not supported.
-         * *   The instance is a replica set instance.
-         * *   The instance runs MongoDB 3.4, MongoDB 4.0, or MongoDB 4.2. In addition, the instance uses local disks to store data.
-         * *   The storage engine of the instance is WiredTiger.
-         *
-         * @param request DescribeBackupDBsRequest
-         * @return DescribeBackupDBsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the databases at a specified time or the databases in a specified backup set before you restore a database for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation to restore a database for an ApsaraDB for MongoDB instance. For more information, see <a href="https://help.aliyun.com/document_detail/112274.html">Restore one database of an ApsaraDB for MongoDB instance</a>.
+        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance was created after March 26, 2019.</description></item>
+        /// <item><description>The instance is located in the China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), or Singapore region. Other regions are not supported.</description></item>
+        /// <item><description>The instance is a replica set instance.</description></item>
+        /// <item><description>The instance runs MongoDB 3.4, MongoDB 4.0, or MongoDB 4.2. In addition, the instance uses local disks to store data.</description></item>
+        /// <item><description>The storage engine of the instance is WiredTiger.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupDBsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupDBsResponse
+        /// </returns>
         public async Task<DescribeBackupDBsResponse> DescribeBackupDBsAsync(DescribeBackupDBsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeBackupDBsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the backup policy of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeBackupPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBackupPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup policy of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupPolicyResponse
+        /// </returns>
         public DescribeBackupPolicyResponse DescribeBackupPolicyWithOptions(DescribeBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4853,13 +5881,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeBackupPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the backup policy of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeBackupPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBackupPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup policy of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupPolicyResponse
+        /// </returns>
         public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicyWithOptionsAsync(DescribeBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4915,37 +5951,57 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the backup policy of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeBackupPolicyRequest
-         * @return DescribeBackupPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup policy of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupPolicyResponse
+        /// </returns>
         public DescribeBackupPolicyResponse DescribeBackupPolicy(DescribeBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBackupPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the backup policy of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeBackupPolicyRequest
-         * @return DescribeBackupPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup policy of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupPolicyResponse
+        /// </returns>
         public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicyAsync(DescribeBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeBackupPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the storage used for backup in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks. Note that you are charged only for the backup-used storage of each shard in a sharded cluster instance. You can call this operation only to query the storage used by a single shard in the instance for backup.
-         *
-         * @param request DescribeBackupStorageRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBackupStorageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the storage used for backup in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks. Note that you are charged only for the backup-used storage of each shard in a sharded cluster instance. You can call this operation only to query the storage used by a single shard in the instance for backup.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupStorageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupStorageResponse
+        /// </returns>
         public DescribeBackupStorageResponse DescribeBackupStorageWithOptions(DescribeBackupStorageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4969,13 +6025,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeBackupStorageResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the storage used for backup in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks. Note that you are charged only for the backup-used storage of each shard in a sharded cluster instance. You can call this operation only to query the storage used by a single shard in the instance for backup.
-         *
-         * @param request DescribeBackupStorageRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBackupStorageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the storage used for backup in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks. Note that you are charged only for the backup-used storage of each shard in a sharded cluster instance. You can call this operation only to query the storage used by a single shard in the instance for backup.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupStorageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupStorageResponse
+        /// </returns>
         public async Task<DescribeBackupStorageResponse> DescribeBackupStorageWithOptionsAsync(DescribeBackupStorageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4999,37 +6063,57 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeBackupStorageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the storage used for backup in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks. Note that you are charged only for the backup-used storage of each shard in a sharded cluster instance. You can call this operation only to query the storage used by a single shard in the instance for backup.
-         *
-         * @param request DescribeBackupStorageRequest
-         * @return DescribeBackupStorageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the storage used for backup in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks. Note that you are charged only for the backup-used storage of each shard in a sharded cluster instance. You can call this operation only to query the storage used by a single shard in the instance for backup.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupStorageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupStorageResponse
+        /// </returns>
         public DescribeBackupStorageResponse DescribeBackupStorage(DescribeBackupStorageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBackupStorageWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the storage used for backup in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks. Note that you are charged only for the backup-used storage of each shard in a sharded cluster instance. You can call this operation only to query the storage used by a single shard in the instance for backup.
-         *
-         * @param request DescribeBackupStorageRequest
-         * @return DescribeBackupStorageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the storage used for backup in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks. Note that you are charged only for the backup-used storage of each shard in a sharded cluster instance. You can call this operation only to query the storage used by a single shard in the instance for backup.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupStorageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupStorageResponse
+        /// </returns>
         public async Task<DescribeBackupStorageResponse> DescribeBackupStorageAsync(DescribeBackupStorageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeBackupStorageWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries backup tasks running in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks.
-         *
-         * @param request DescribeBackupTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBackupTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries backup tasks running in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupTasksResponse
+        /// </returns>
         public DescribeBackupTasksResponse DescribeBackupTasksWithOptions(DescribeBackupTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5053,13 +6137,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeBackupTasksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries backup tasks running in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks.
-         *
-         * @param request DescribeBackupTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBackupTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries backup tasks running in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupTasksResponse
+        /// </returns>
         public async Task<DescribeBackupTasksResponse> DescribeBackupTasksWithOptionsAsync(DescribeBackupTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5083,37 +6175,57 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeBackupTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries backup tasks running in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks.
-         *
-         * @param request DescribeBackupTasksRequest
-         * @return DescribeBackupTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries backup tasks running in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupTasksResponse
+        /// </returns>
         public DescribeBackupTasksResponse DescribeBackupTasks(DescribeBackupTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBackupTasksWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries backup tasks running in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks.
-         *
-         * @param request DescribeBackupTasksRequest
-         * @return DescribeBackupTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries backup tasks running in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupTasksResponse
+        /// </returns>
         public async Task<DescribeBackupTasksResponse> DescribeBackupTasksAsync(DescribeBackupTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeBackupTasksWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the backup sets of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeBackupsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBackupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup sets of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupsResponse
+        /// </returns>
         public DescribeBackupsResponse DescribeBackupsWithOptions(DescribeBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5189,13 +6301,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeBackupsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the backup sets of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeBackupsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBackupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup sets of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupsResponse
+        /// </returns>
         public async Task<DescribeBackupsResponse> DescribeBackupsWithOptionsAsync(DescribeBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5271,40 +6391,63 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeBackupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the backup sets of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeBackupsRequest
-         * @return DescribeBackupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup sets of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupsResponse
+        /// </returns>
         public DescribeBackupsResponse DescribeBackups(DescribeBackupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBackupsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the backup sets of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeBackupsRequest
-         * @return DescribeBackupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup sets of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupsResponse
+        /// </returns>
         public async Task<DescribeBackupsResponse> DescribeBackupsAsync(DescribeBackupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeBackupsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the backup sets of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.
-         *
-         * @description For a sharded cluster instance that is created before October 19, 2023 and uses cloud disks, you must call the [TransferClusterBackup](https://help.aliyun.com/document_detail/2587931.html) operation to switch the instance from the shard backup mode to the cluster backup mode before you call the DescribeClusterBackups operation.
-         * By default, cloud disk-based sharded cluster instances that are created after October 19, 2023 are in the cluster backup mode.
-         *
-         * @param request DescribeClusterBackupsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeClusterBackupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup sets of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For a sharded cluster instance that is created before October 19, 2023 and uses cloud disks, you must call the <a href="https://help.aliyun.com/document_detail/2587931.html">TransferClusterBackup</a> operation to switch the instance from the shard backup mode to the cluster backup mode before you call the DescribeClusterBackups operation.
+        /// By default, cloud disk-based sharded cluster instances that are created after October 19, 2023 are in the cluster backup mode.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterBackupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterBackupsResponse
+        /// </returns>
         public DescribeClusterBackupsResponse DescribeClusterBackupsWithOptions(DescribeClusterBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5380,16 +6523,27 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeClusterBackupsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the backup sets of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.
-         *
-         * @description For a sharded cluster instance that is created before October 19, 2023 and uses cloud disks, you must call the [TransferClusterBackup](https://help.aliyun.com/document_detail/2587931.html) operation to switch the instance from the shard backup mode to the cluster backup mode before you call the DescribeClusterBackups operation.
-         * By default, cloud disk-based sharded cluster instances that are created after October 19, 2023 are in the cluster backup mode.
-         *
-         * @param request DescribeClusterBackupsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeClusterBackupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup sets of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For a sharded cluster instance that is created before October 19, 2023 and uses cloud disks, you must call the <a href="https://help.aliyun.com/document_detail/2587931.html">TransferClusterBackup</a> operation to switch the instance from the shard backup mode to the cluster backup mode before you call the DescribeClusterBackups operation.
+        /// By default, cloud disk-based sharded cluster instances that are created after October 19, 2023 are in the cluster backup mode.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterBackupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterBackupsResponse
+        /// </returns>
         public async Task<DescribeClusterBackupsResponse> DescribeClusterBackupsWithOptionsAsync(DescribeClusterBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5465,46 +6619,77 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeClusterBackupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the backup sets of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.
-         *
-         * @description For a sharded cluster instance that is created before October 19, 2023 and uses cloud disks, you must call the [TransferClusterBackup](https://help.aliyun.com/document_detail/2587931.html) operation to switch the instance from the shard backup mode to the cluster backup mode before you call the DescribeClusterBackups operation.
-         * By default, cloud disk-based sharded cluster instances that are created after October 19, 2023 are in the cluster backup mode.
-         *
-         * @param request DescribeClusterBackupsRequest
-         * @return DescribeClusterBackupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup sets of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For a sharded cluster instance that is created before October 19, 2023 and uses cloud disks, you must call the <a href="https://help.aliyun.com/document_detail/2587931.html">TransferClusterBackup</a> operation to switch the instance from the shard backup mode to the cluster backup mode before you call the DescribeClusterBackups operation.
+        /// By default, cloud disk-based sharded cluster instances that are created after October 19, 2023 are in the cluster backup mode.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterBackupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterBackupsResponse
+        /// </returns>
         public DescribeClusterBackupsResponse DescribeClusterBackups(DescribeClusterBackupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeClusterBackupsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the backup sets of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.
-         *
-         * @description For a sharded cluster instance that is created before October 19, 2023 and uses cloud disks, you must call the [TransferClusterBackup](https://help.aliyun.com/document_detail/2587931.html) operation to switch the instance from the shard backup mode to the cluster backup mode before you call the DescribeClusterBackups operation.
-         * By default, cloud disk-based sharded cluster instances that are created after October 19, 2023 are in the cluster backup mode.
-         *
-         * @param request DescribeClusterBackupsRequest
-         * @return DescribeClusterBackupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup sets of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For a sharded cluster instance that is created before October 19, 2023 and uses cloud disks, you must call the <a href="https://help.aliyun.com/document_detail/2587931.html">TransferClusterBackup</a> operation to switch the instance from the shard backup mode to the cluster backup mode before you call the DescribeClusterBackups operation.
+        /// By default, cloud disk-based sharded cluster instances that are created after October 19, 2023 are in the cluster backup mode.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterBackupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterBackupsResponse
+        /// </returns>
         public async Task<DescribeClusterBackupsResponse> DescribeClusterBackupsAsync(DescribeClusterBackupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeClusterBackupsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the time range to which you can restore the data of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.
-         *
-         * @description *   The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.
-         * *   You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. The DescribeClusterRecoverTime operation is applicable only to instances that are switched to the cluster backup mode or instances that are created on or after October 19, 2023.
-         *
-         * @param request DescribeClusterRecoverTimeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeClusterRecoverTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the time range to which you can restore the data of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. The DescribeClusterRecoverTime operation is applicable only to instances that are switched to the cluster backup mode or instances that are created on or after October 19, 2023.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterRecoverTimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterRecoverTimeResponse
+        /// </returns>
         public DescribeClusterRecoverTimeResponse DescribeClusterRecoverTimeWithOptions(DescribeClusterRecoverTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5528,16 +6713,29 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeClusterRecoverTimeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the time range to which you can restore the data of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.
-         *
-         * @description *   The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.
-         * *   You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. The DescribeClusterRecoverTime operation is applicable only to instances that are switched to the cluster backup mode or instances that are created on or after October 19, 2023.
-         *
-         * @param request DescribeClusterRecoverTimeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeClusterRecoverTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the time range to which you can restore the data of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. The DescribeClusterRecoverTime operation is applicable only to instances that are switched to the cluster backup mode or instances that are created on or after October 19, 2023.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterRecoverTimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterRecoverTimeResponse
+        /// </returns>
         public async Task<DescribeClusterRecoverTimeResponse> DescribeClusterRecoverTimeWithOptionsAsync(DescribeClusterRecoverTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5561,43 +6759,73 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeClusterRecoverTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the time range to which you can restore the data of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.
-         *
-         * @description *   The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.
-         * *   You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. The DescribeClusterRecoverTime operation is applicable only to instances that are switched to the cluster backup mode or instances that are created on or after October 19, 2023.
-         *
-         * @param request DescribeClusterRecoverTimeRequest
-         * @return DescribeClusterRecoverTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the time range to which you can restore the data of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. The DescribeClusterRecoverTime operation is applicable only to instances that are switched to the cluster backup mode or instances that are created on or after October 19, 2023.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterRecoverTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterRecoverTimeResponse
+        /// </returns>
         public DescribeClusterRecoverTimeResponse DescribeClusterRecoverTime(DescribeClusterRecoverTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeClusterRecoverTimeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the time range to which you can restore the data of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.
-         *
-         * @description *   The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.
-         * *   You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. The DescribeClusterRecoverTime operation is applicable only to instances that are switched to the cluster backup mode or instances that are created on or after October 19, 2023.
-         *
-         * @param request DescribeClusterRecoverTimeRequest
-         * @return DescribeClusterRecoverTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the time range to which you can restore the data of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. The DescribeClusterRecoverTime operation is applicable only to instances that are switched to the cluster backup mode or instances that are created on or after October 19, 2023.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterRecoverTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterRecoverTimeResponse
+        /// </returns>
         public async Task<DescribeClusterRecoverTimeResponse> DescribeClusterRecoverTimeAsync(DescribeClusterRecoverTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeClusterRecoverTimeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeDBInstanceAttributeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceAttributeResponse
+        /// </returns>
         public DescribeDBInstanceAttributeResponse DescribeDBInstanceAttributeWithOptions(DescribeDBInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5657,13 +6885,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstanceAttributeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeDBInstanceAttributeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceAttributeResponse
+        /// </returns>
         public async Task<DescribeDBInstanceAttributeResponse> DescribeDBInstanceAttributeWithOptionsAsync(DescribeDBInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5723,39 +6959,62 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeDBInstanceAttributeRequest
-         * @return DescribeDBInstanceAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceAttributeResponse
+        /// </returns>
         public DescribeDBInstanceAttributeResponse DescribeDBInstanceAttribute(DescribeDBInstanceAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceAttributeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeDBInstanceAttributeRequest
-         * @return DescribeDBInstanceAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceAttributeResponse
+        /// </returns>
         public async Task<DescribeDBInstanceAttributeResponse> DescribeDBInstanceAttributeAsync(DescribeDBInstanceAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceAttributeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of a key for an ApsaraDB for MongoDB instance.
-         *
-         * @description When you call the DescribeDBInstanceEncryptionKey operation, the instance must have transparent data encryption (TDE) enabled in BYOK mode. You can call the [ModifyDBInstanceTDE](https://help.aliyun.com/document_detail/131267.html) operation to enable TDE.
-         *
-         * @param request DescribeDBInstanceEncryptionKeyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceEncryptionKeyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a key for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call the DescribeDBInstanceEncryptionKey operation, the instance must have transparent data encryption (TDE) enabled in BYOK mode. You can call the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation to enable TDE.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceEncryptionKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceEncryptionKeyResponse
+        /// </returns>
         public DescribeDBInstanceEncryptionKeyResponse DescribeDBInstanceEncryptionKeyWithOptions(DescribeDBInstanceEncryptionKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5803,15 +7062,26 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstanceEncryptionKeyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a key for an ApsaraDB for MongoDB instance.
-         *
-         * @description When you call the DescribeDBInstanceEncryptionKey operation, the instance must have transparent data encryption (TDE) enabled in BYOK mode. You can call the [ModifyDBInstanceTDE](https://help.aliyun.com/document_detail/131267.html) operation to enable TDE.
-         *
-         * @param request DescribeDBInstanceEncryptionKeyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceEncryptionKeyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a key for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call the DescribeDBInstanceEncryptionKey operation, the instance must have transparent data encryption (TDE) enabled in BYOK mode. You can call the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation to enable TDE.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceEncryptionKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceEncryptionKeyResponse
+        /// </returns>
         public async Task<DescribeDBInstanceEncryptionKeyResponse> DescribeDBInstanceEncryptionKeyWithOptionsAsync(DescribeDBInstanceEncryptionKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5859,41 +7129,67 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstanceEncryptionKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a key for an ApsaraDB for MongoDB instance.
-         *
-         * @description When you call the DescribeDBInstanceEncryptionKey operation, the instance must have transparent data encryption (TDE) enabled in BYOK mode. You can call the [ModifyDBInstanceTDE](https://help.aliyun.com/document_detail/131267.html) operation to enable TDE.
-         *
-         * @param request DescribeDBInstanceEncryptionKeyRequest
-         * @return DescribeDBInstanceEncryptionKeyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a key for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call the DescribeDBInstanceEncryptionKey operation, the instance must have transparent data encryption (TDE) enabled in BYOK mode. You can call the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation to enable TDE.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceEncryptionKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceEncryptionKeyResponse
+        /// </returns>
         public DescribeDBInstanceEncryptionKeyResponse DescribeDBInstanceEncryptionKey(DescribeDBInstanceEncryptionKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceEncryptionKeyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of a key for an ApsaraDB for MongoDB instance.
-         *
-         * @description When you call the DescribeDBInstanceEncryptionKey operation, the instance must have transparent data encryption (TDE) enabled in BYOK mode. You can call the [ModifyDBInstanceTDE](https://help.aliyun.com/document_detail/131267.html) operation to enable TDE.
-         *
-         * @param request DescribeDBInstanceEncryptionKeyRequest
-         * @return DescribeDBInstanceEncryptionKeyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a key for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call the DescribeDBInstanceEncryptionKey operation, the instance must have transparent data encryption (TDE) enabled in BYOK mode. You can call the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation to enable TDE.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceEncryptionKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceEncryptionKeyResponse
+        /// </returns>
         public async Task<DescribeDBInstanceEncryptionKeyResponse> DescribeDBInstanceEncryptionKeyAsync(DescribeDBInstanceEncryptionKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceEncryptionKeyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the collection frequency of monitoring data for an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeDBInstanceMonitorRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceMonitorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the collection frequency of monitoring data for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceMonitorResponse
+        /// </returns>
         public DescribeDBInstanceMonitorResponse DescribeDBInstanceMonitorWithOptions(DescribeDBInstanceMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5937,13 +7233,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstanceMonitorResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the collection frequency of monitoring data for an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeDBInstanceMonitorRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceMonitorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the collection frequency of monitoring data for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceMonitorResponse
+        /// </returns>
         public async Task<DescribeDBInstanceMonitorResponse> DescribeDBInstanceMonitorWithOptionsAsync(DescribeDBInstanceMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5987,37 +7291,57 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstanceMonitorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the collection frequency of monitoring data for an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeDBInstanceMonitorRequest
-         * @return DescribeDBInstanceMonitorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the collection frequency of monitoring data for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceMonitorResponse
+        /// </returns>
         public DescribeDBInstanceMonitorResponse DescribeDBInstanceMonitor(DescribeDBInstanceMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceMonitorWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the collection frequency of monitoring data for an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeDBInstanceMonitorRequest
-         * @return DescribeDBInstanceMonitorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the collection frequency of monitoring data for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceMonitorResponse
+        /// </returns>
         public async Task<DescribeDBInstanceMonitorResponse> DescribeDBInstanceMonitorAsync(DescribeDBInstanceMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceMonitorWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the performance data of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeDBInstancePerformanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstancePerformanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the performance data of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstancePerformanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstancePerformanceResponse
+        /// </returns>
         public DescribeDBInstancePerformanceResponse DescribeDBInstancePerformanceWithOptions(DescribeDBInstancePerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6089,13 +7413,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstancePerformanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the performance data of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeDBInstancePerformanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstancePerformanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the performance data of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstancePerformanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstancePerformanceResponse
+        /// </returns>
         public async Task<DescribeDBInstancePerformanceResponse> DescribeDBInstancePerformanceWithOptionsAsync(DescribeDBInstancePerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6167,42 +7499,67 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstancePerformanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the performance data of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeDBInstancePerformanceRequest
-         * @return DescribeDBInstancePerformanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the performance data of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstancePerformanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstancePerformanceResponse
+        /// </returns>
         public DescribeDBInstancePerformanceResponse DescribeDBInstancePerformance(DescribeDBInstancePerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstancePerformanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the performance data of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeDBInstancePerformanceRequest
-         * @return DescribeDBInstancePerformanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the performance data of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstancePerformanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstancePerformanceResponse
+        /// </returns>
         public async Task<DescribeDBInstancePerformanceResponse> DescribeDBInstancePerformanceAsync(DescribeDBInstancePerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstancePerformanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the Secure Sockets Layer (SSL) settings of an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the following requirements are met:
-         * *   The instance is in the Running state.
-         * *   The instance is a replica set instance.
-         * *   The instance runs MongoDB 3.4 or later.
-         *
-         * @param request DescribeDBInstanceSSLRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceSSLResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Secure Sockets Layer (SSL) settings of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the following requirements are met:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance is a replica set instance.</description></item>
+        /// <item><description>The instance runs MongoDB 3.4 or later.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceSSLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceSSLResponse
+        /// </returns>
         public DescribeDBInstanceSSLResponse DescribeDBInstanceSSLWithOptions(DescribeDBInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6246,18 +7603,31 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstanceSSLResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the Secure Sockets Layer (SSL) settings of an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the following requirements are met:
-         * *   The instance is in the Running state.
-         * *   The instance is a replica set instance.
-         * *   The instance runs MongoDB 3.4 or later.
-         *
-         * @param request DescribeDBInstanceSSLRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceSSLResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Secure Sockets Layer (SSL) settings of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the following requirements are met:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance is a replica set instance.</description></item>
+        /// <item><description>The instance runs MongoDB 3.4 or later.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceSSLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceSSLResponse
+        /// </returns>
         public async Task<DescribeDBInstanceSSLResponse> DescribeDBInstanceSSLWithOptionsAsync(DescribeDBInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6301,51 +7671,86 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstanceSSLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the Secure Sockets Layer (SSL) settings of an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the following requirements are met:
-         * *   The instance is in the Running state.
-         * *   The instance is a replica set instance.
-         * *   The instance runs MongoDB 3.4 or later.
-         *
-         * @param request DescribeDBInstanceSSLRequest
-         * @return DescribeDBInstanceSSLResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Secure Sockets Layer (SSL) settings of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the following requirements are met:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance is a replica set instance.</description></item>
+        /// <item><description>The instance runs MongoDB 3.4 or later.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceSSLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceSSLResponse
+        /// </returns>
         public DescribeDBInstanceSSLResponse DescribeDBInstanceSSL(DescribeDBInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceSSLWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the Secure Sockets Layer (SSL) settings of an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the following requirements are met:
-         * *   The instance is in the Running state.
-         * *   The instance is a replica set instance.
-         * *   The instance runs MongoDB 3.4 or later.
-         *
-         * @param request DescribeDBInstanceSSLRequest
-         * @return DescribeDBInstanceSSLResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Secure Sockets Layer (SSL) settings of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the following requirements are met:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance is a replica set instance.</description></item>
+        /// <item><description>The instance runs MongoDB 3.4 or later.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceSSLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceSSLResponse
+        /// </returns>
         public async Task<DescribeDBInstanceSSLResponse> DescribeDBInstanceSSLAsync(DescribeDBInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceSSLWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the primary/secondary switching logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   The instance is a replica set or sharded cluster instance.
-         * *   The instance uses local physical disks to store data.
-         *
-         * @param request DescribeDBInstanceSwitchLogRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceSwitchLogResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the primary/secondary switching logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is a replica set or sharded cluster instance.</description></item>
+        /// <item><description>The instance uses local physical disks to store data.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceSwitchLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceSwitchLogResponse
+        /// </returns>
         public DescribeDBInstanceSwitchLogResponse DescribeDBInstanceSwitchLogWithOptions(DescribeDBInstanceSwitchLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6393,17 +7798,30 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstanceSwitchLogResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the primary/secondary switching logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   The instance is a replica set or sharded cluster instance.
-         * *   The instance uses local physical disks to store data.
-         *
-         * @param request DescribeDBInstanceSwitchLogRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceSwitchLogResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the primary/secondary switching logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is a replica set or sharded cluster instance.</description></item>
+        /// <item><description>The instance uses local physical disks to store data.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceSwitchLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceSwitchLogResponse
+        /// </returns>
         public async Task<DescribeDBInstanceSwitchLogResponse> DescribeDBInstanceSwitchLogWithOptionsAsync(DescribeDBInstanceSwitchLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6451,51 +7869,88 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstanceSwitchLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the primary/secondary switching logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   The instance is a replica set or sharded cluster instance.
-         * *   The instance uses local physical disks to store data.
-         *
-         * @param request DescribeDBInstanceSwitchLogRequest
-         * @return DescribeDBInstanceSwitchLogResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the primary/secondary switching logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is a replica set or sharded cluster instance.</description></item>
+        /// <item><description>The instance uses local physical disks to store data.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceSwitchLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceSwitchLogResponse
+        /// </returns>
         public DescribeDBInstanceSwitchLogResponse DescribeDBInstanceSwitchLog(DescribeDBInstanceSwitchLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceSwitchLogWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the primary/secondary switching logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   The instance is a replica set or sharded cluster instance.
-         * *   The instance uses local physical disks to store data.
-         *
-         * @param request DescribeDBInstanceSwitchLogRequest
-         * @return DescribeDBInstanceSwitchLogResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the primary/secondary switching logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is a replica set or sharded cluster instance.</description></item>
+        /// <item><description>The instance uses local physical disks to store data.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceSwitchLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceSwitchLogResponse
+        /// </returns>
         public async Task<DescribeDBInstanceSwitchLogResponse> DescribeDBInstanceSwitchLogAsync(DescribeDBInstanceSwitchLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceSwitchLogWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries whether Transparent Data Encryption (TDE) is enabled for an ApsaraDB for MongoDB instance.
-         *
-         * @description >  For more information about TDE, see [TDE](https://help.aliyun.com/document_detail/131048.html).
-         * Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance is a replica set or sharded cluster instance.
-         * *   The storage engine of the instance is WiredTiger.
-         * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the [UpgradeDBInstanceEngineVersion](https://help.aliyun.com/document_detail/67608.html) operation to upgrade the database engine.
-         *
-         * @param request DescribeDBInstanceTDEInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceTDEInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether Transparent Data Encryption (TDE) is enabled for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> For more information about TDE, see <a href="https://help.aliyun.com/document_detail/131048.html">TDE</a>.
+        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>The instance is a replica set or sharded cluster instance.</description></item>
+        /// <item><description>The storage engine of the instance is WiredTiger.</description></item>
+        /// <item><description>The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database engine.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceTDEInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceTDEInfoResponse
+        /// </returns>
         public DescribeDBInstanceTDEInfoResponse DescribeDBInstanceTDEInfoWithOptions(DescribeDBInstanceTDEInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6539,19 +7994,34 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstanceTDEInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether Transparent Data Encryption (TDE) is enabled for an ApsaraDB for MongoDB instance.
-         *
-         * @description >  For more information about TDE, see [TDE](https://help.aliyun.com/document_detail/131048.html).
-         * Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance is a replica set or sharded cluster instance.
-         * *   The storage engine of the instance is WiredTiger.
-         * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the [UpgradeDBInstanceEngineVersion](https://help.aliyun.com/document_detail/67608.html) operation to upgrade the database engine.
-         *
-         * @param request DescribeDBInstanceTDEInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceTDEInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether Transparent Data Encryption (TDE) is enabled for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> For more information about TDE, see <a href="https://help.aliyun.com/document_detail/131048.html">TDE</a>.
+        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>The instance is a replica set or sharded cluster instance.</description></item>
+        /// <item><description>The storage engine of the instance is WiredTiger.</description></item>
+        /// <item><description>The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database engine.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceTDEInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceTDEInfoResponse
+        /// </returns>
         public async Task<DescribeDBInstanceTDEInfoResponse> DescribeDBInstanceTDEInfoWithOptionsAsync(DescribeDBInstanceTDEInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6595,51 +8065,88 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstanceTDEInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether Transparent Data Encryption (TDE) is enabled for an ApsaraDB for MongoDB instance.
-         *
-         * @description >  For more information about TDE, see [TDE](https://help.aliyun.com/document_detail/131048.html).
-         * Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance is a replica set or sharded cluster instance.
-         * *   The storage engine of the instance is WiredTiger.
-         * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the [UpgradeDBInstanceEngineVersion](https://help.aliyun.com/document_detail/67608.html) operation to upgrade the database engine.
-         *
-         * @param request DescribeDBInstanceTDEInfoRequest
-         * @return DescribeDBInstanceTDEInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether Transparent Data Encryption (TDE) is enabled for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> For more information about TDE, see <a href="https://help.aliyun.com/document_detail/131048.html">TDE</a>.
+        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>The instance is a replica set or sharded cluster instance.</description></item>
+        /// <item><description>The storage engine of the instance is WiredTiger.</description></item>
+        /// <item><description>The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database engine.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceTDEInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceTDEInfoResponse
+        /// </returns>
         public DescribeDBInstanceTDEInfoResponse DescribeDBInstanceTDEInfo(DescribeDBInstanceTDEInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceTDEInfoWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries whether Transparent Data Encryption (TDE) is enabled for an ApsaraDB for MongoDB instance.
-         *
-         * @description >  For more information about TDE, see [TDE](https://help.aliyun.com/document_detail/131048.html).
-         * Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance is a replica set or sharded cluster instance.
-         * *   The storage engine of the instance is WiredTiger.
-         * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the [UpgradeDBInstanceEngineVersion](https://help.aliyun.com/document_detail/67608.html) operation to upgrade the database engine.
-         *
-         * @param request DescribeDBInstanceTDEInfoRequest
-         * @return DescribeDBInstanceTDEInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether Transparent Data Encryption (TDE) is enabled for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> For more information about TDE, see <a href="https://help.aliyun.com/document_detail/131048.html">TDE</a>.
+        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>The instance is a replica set or sharded cluster instance.</description></item>
+        /// <item><description>The storage engine of the instance is WiredTiger.</description></item>
+        /// <item><description>The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database engine.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceTDEInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceTDEInfoResponse
+        /// </returns>
         public async Task<DescribeDBInstanceTDEInfoResponse> DescribeDBInstanceTDEInfoAsync(DescribeDBInstanceTDEInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceTDEInfoWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries a list of ApsaraDB for MongoDB instances.
-         *
-         * @description The list of replica set and standalone instances is displayed when the **DBInstanceType** parameter uses the default value **replicate**. To query a list of sharded cluster instances, you must set the **DBInstanceType** parameter to **sharding**.
-         *
-         * @param request DescribeDBInstancesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The list of replica set and standalone instances is displayed when the <b>DBInstanceType</b> parameter uses the default value <b>replicate</b>. To query a list of sharded cluster instances, you must set the <b>DBInstanceType</b> parameter to <b>sharding</b>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstancesResponse
+        /// </returns>
         public DescribeDBInstancesResponse DescribeDBInstancesWithOptions(DescribeDBInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6767,15 +8274,26 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstancesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of ApsaraDB for MongoDB instances.
-         *
-         * @description The list of replica set and standalone instances is displayed when the **DBInstanceType** parameter uses the default value **replicate**. To query a list of sharded cluster instances, you must set the **DBInstanceType** parameter to **sharding**.
-         *
-         * @param request DescribeDBInstancesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The list of replica set and standalone instances is displayed when the <b>DBInstanceType</b> parameter uses the default value <b>replicate</b>. To query a list of sharded cluster instances, you must set the <b>DBInstanceType</b> parameter to <b>sharding</b>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstancesResponse
+        /// </returns>
         public async Task<DescribeDBInstancesResponse> DescribeDBInstancesWithOptionsAsync(DescribeDBInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6903,44 +8421,75 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of ApsaraDB for MongoDB instances.
-         *
-         * @description The list of replica set and standalone instances is displayed when the **DBInstanceType** parameter uses the default value **replicate**. To query a list of sharded cluster instances, you must set the **DBInstanceType** parameter to **sharding**.
-         *
-         * @param request DescribeDBInstancesRequest
-         * @return DescribeDBInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The list of replica set and standalone instances is displayed when the <b>DBInstanceType</b> parameter uses the default value <b>replicate</b>. To query a list of sharded cluster instances, you must set the <b>DBInstanceType</b> parameter to <b>sharding</b>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstancesResponse
+        /// </returns>
         public DescribeDBInstancesResponse DescribeDBInstances(DescribeDBInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstancesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries a list of ApsaraDB for MongoDB instances.
-         *
-         * @description The list of replica set and standalone instances is displayed when the **DBInstanceType** parameter uses the default value **replicate**. To query a list of sharded cluster instances, you must set the **DBInstanceType** parameter to **sharding**.
-         *
-         * @param request DescribeDBInstancesRequest
-         * @return DescribeDBInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The list of replica set and standalone instances is displayed when the <b>DBInstanceType</b> parameter uses the default value <b>replicate</b>. To query a list of sharded cluster instances, you must set the <b>DBInstanceType</b> parameter to <b>sharding</b>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstancesResponse
+        /// </returns>
         public async Task<DescribeDBInstancesResponse> DescribeDBInstancesAsync(DescribeDBInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstancesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the overview information of one or more ApsaraDB for MongoDB instances.
-         *
-         * @description *   If you do not specify an instance when you call this operation, the overview information of all instances in a specific region within this account is returned.
-         * *   Paged query is disabled for this operation.
-         *
-         * @param request DescribeDBInstancesOverviewRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstancesOverviewResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the overview information of one or more ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If you do not specify an instance when you call this operation, the overview information of all instances in a specific region within this account is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>Paged query is disabled for this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstancesOverviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstancesOverviewResponse
+        /// </returns>
         public DescribeDBInstancesOverviewResponse DescribeDBInstancesOverviewWithOptions(DescribeDBInstancesOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7028,16 +8577,29 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstancesOverviewResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the overview information of one or more ApsaraDB for MongoDB instances.
-         *
-         * @description *   If you do not specify an instance when you call this operation, the overview information of all instances in a specific region within this account is returned.
-         * *   Paged query is disabled for this operation.
-         *
-         * @param request DescribeDBInstancesOverviewRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstancesOverviewResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the overview information of one or more ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If you do not specify an instance when you call this operation, the overview information of all instances in a specific region within this account is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>Paged query is disabled for this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstancesOverviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstancesOverviewResponse
+        /// </returns>
         public async Task<DescribeDBInstancesOverviewResponse> DescribeDBInstancesOverviewWithOptionsAsync(DescribeDBInstancesOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7125,46 +8687,81 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeDBInstancesOverviewResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the overview information of one or more ApsaraDB for MongoDB instances.
-         *
-         * @description *   If you do not specify an instance when you call this operation, the overview information of all instances in a specific region within this account is returned.
-         * *   Paged query is disabled for this operation.
-         *
-         * @param request DescribeDBInstancesOverviewRequest
-         * @return DescribeDBInstancesOverviewResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the overview information of one or more ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If you do not specify an instance when you call this operation, the overview information of all instances in a specific region within this account is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>Paged query is disabled for this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstancesOverviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstancesOverviewResponse
+        /// </returns>
         public DescribeDBInstancesOverviewResponse DescribeDBInstancesOverview(DescribeDBInstancesOverviewRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstancesOverviewWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the overview information of one or more ApsaraDB for MongoDB instances.
-         *
-         * @description *   If you do not specify an instance when you call this operation, the overview information of all instances in a specific region within this account is returned.
-         * *   Paged query is disabled for this operation.
-         *
-         * @param request DescribeDBInstancesOverviewRequest
-         * @return DescribeDBInstancesOverviewResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the overview information of one or more ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If you do not specify an instance when you call this operation, the overview information of all instances in a specific region within this account is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>Paged query is disabled for this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstancesOverviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstancesOverviewResponse
+        /// </returns>
         public async Task<DescribeDBInstancesOverviewResponse> DescribeDBInstancesOverviewAsync(DescribeDBInstancesOverviewRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstancesOverviewWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries entries in error logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeErrorLogRecordsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeErrorLogRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries entries in error logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeErrorLogRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeErrorLogRecordsResponse
+        /// </returns>
         public DescribeErrorLogRecordsResponse DescribeErrorLogRecordsWithOptions(DescribeErrorLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7248,16 +8845,29 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeErrorLogRecordsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries entries in error logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeErrorLogRecordsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeErrorLogRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries entries in error logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeErrorLogRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeErrorLogRecordsResponse
+        /// </returns>
         public async Task<DescribeErrorLogRecordsResponse> DescribeErrorLogRecordsWithOptionsAsync(DescribeErrorLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7341,43 +8951,73 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeErrorLogRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries entries in error logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeErrorLogRecordsRequest
-         * @return DescribeErrorLogRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries entries in error logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeErrorLogRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeErrorLogRecordsResponse
+        /// </returns>
         public DescribeErrorLogRecordsResponse DescribeErrorLogRecords(DescribeErrorLogRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeErrorLogRecordsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries entries in error logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeErrorLogRecordsRequest
-         * @return DescribeErrorLogRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries entries in error logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeErrorLogRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeErrorLogRecordsResponse
+        /// </returns>
         public async Task<DescribeErrorLogRecordsResponse> DescribeErrorLogRecordsAsync(DescribeErrorLogRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeErrorLogRecordsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the global IP whitelist template of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeGlobalSecurityIPGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeGlobalSecurityIPGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global IP whitelist template of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalSecurityIPGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalSecurityIPGroupResponse
+        /// </returns>
         public DescribeGlobalSecurityIPGroupResponse DescribeGlobalSecurityIPGroupWithOptions(DescribeGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7401,13 +9041,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeGlobalSecurityIPGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the global IP whitelist template of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeGlobalSecurityIPGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeGlobalSecurityIPGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global IP whitelist template of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalSecurityIPGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalSecurityIPGroupResponse
+        /// </returns>
         public async Task<DescribeGlobalSecurityIPGroupResponse> DescribeGlobalSecurityIPGroupWithOptionsAsync(DescribeGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7431,37 +9079,57 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeGlobalSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the global IP whitelist template of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeGlobalSecurityIPGroupRequest
-         * @return DescribeGlobalSecurityIPGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global IP whitelist template of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalSecurityIPGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalSecurityIPGroupResponse
+        /// </returns>
         public DescribeGlobalSecurityIPGroupResponse DescribeGlobalSecurityIPGroup(DescribeGlobalSecurityIPGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeGlobalSecurityIPGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the global IP whitelist template of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeGlobalSecurityIPGroupRequest
-         * @return DescribeGlobalSecurityIPGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global IP whitelist template of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalSecurityIPGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalSecurityIPGroupResponse
+        /// </returns>
         public async Task<DescribeGlobalSecurityIPGroupResponse> DescribeGlobalSecurityIPGroupAsync(DescribeGlobalSecurityIPGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeGlobalSecurityIPGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the global IP whitelist templates associated with an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeGlobalSecurityIPGroupRelationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeGlobalSecurityIPGroupRelationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global IP whitelist templates associated with an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalSecurityIPGroupRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalSecurityIPGroupRelationResponse
+        /// </returns>
         public DescribeGlobalSecurityIPGroupRelationResponse DescribeGlobalSecurityIPGroupRelationWithOptions(DescribeGlobalSecurityIPGroupRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7485,13 +9153,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeGlobalSecurityIPGroupRelationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the global IP whitelist templates associated with an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeGlobalSecurityIPGroupRelationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeGlobalSecurityIPGroupRelationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global IP whitelist templates associated with an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalSecurityIPGroupRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalSecurityIPGroupRelationResponse
+        /// </returns>
         public async Task<DescribeGlobalSecurityIPGroupRelationResponse> DescribeGlobalSecurityIPGroupRelationWithOptionsAsync(DescribeGlobalSecurityIPGroupRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7515,37 +9191,57 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeGlobalSecurityIPGroupRelationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the global IP whitelist templates associated with an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeGlobalSecurityIPGroupRelationRequest
-         * @return DescribeGlobalSecurityIPGroupRelationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global IP whitelist templates associated with an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalSecurityIPGroupRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalSecurityIPGroupRelationResponse
+        /// </returns>
         public DescribeGlobalSecurityIPGroupRelationResponse DescribeGlobalSecurityIPGroupRelation(DescribeGlobalSecurityIPGroupRelationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeGlobalSecurityIPGroupRelationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the global IP whitelist templates associated with an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeGlobalSecurityIPGroupRelationRequest
-         * @return DescribeGlobalSecurityIPGroupRelationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global IP whitelist templates associated with an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalSecurityIPGroupRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalSecurityIPGroupRelationResponse
+        /// </returns>
         public async Task<DescribeGlobalSecurityIPGroupRelationResponse> DescribeGlobalSecurityIPGroupRelationAsync(DescribeGlobalSecurityIPGroupRelationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeGlobalSecurityIPGroupRelationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries a list of tasks in the task center.
-         *
-         * @param request DescribeHistoryTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeHistoryTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of tasks in the task center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHistoryTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHistoryTasksResponse
+        /// </returns>
         public DescribeHistoryTasksResponse DescribeHistoryTasksWithOptions(DescribeHistoryTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7625,13 +9321,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeHistoryTasksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of tasks in the task center.
-         *
-         * @param request DescribeHistoryTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeHistoryTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of tasks in the task center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHistoryTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHistoryTasksResponse
+        /// </returns>
         public async Task<DescribeHistoryTasksResponse> DescribeHistoryTasksWithOptionsAsync(DescribeHistoryTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7711,37 +9415,57 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeHistoryTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of tasks in the task center.
-         *
-         * @param request DescribeHistoryTasksRequest
-         * @return DescribeHistoryTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of tasks in the task center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHistoryTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHistoryTasksResponse
+        /// </returns>
         public DescribeHistoryTasksResponse DescribeHistoryTasks(DescribeHistoryTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHistoryTasksWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries a list of tasks in the task center.
-         *
-         * @param request DescribeHistoryTasksRequest
-         * @return DescribeHistoryTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of tasks in the task center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHistoryTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHistoryTasksResponse
+        /// </returns>
         public async Task<DescribeHistoryTasksResponse> DescribeHistoryTasksAsync(DescribeHistoryTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHistoryTasksWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the overview of a task in the task center.
-         *
-         * @param request DescribeHistoryTasksStatRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeHistoryTasksStatResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the overview of a task in the task center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHistoryTasksStatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHistoryTasksStatResponse
+        /// </returns>
         public DescribeHistoryTasksStatResponse DescribeHistoryTasksStatWithOptions(DescribeHistoryTasksStatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7809,13 +9533,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeHistoryTasksStatResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the overview of a task in the task center.
-         *
-         * @param request DescribeHistoryTasksStatRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeHistoryTasksStatResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the overview of a task in the task center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHistoryTasksStatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHistoryTasksStatResponse
+        /// </returns>
         public async Task<DescribeHistoryTasksStatResponse> DescribeHistoryTasksStatWithOptionsAsync(DescribeHistoryTasksStatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7883,39 +9615,62 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeHistoryTasksStatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the overview of a task in the task center.
-         *
-         * @param request DescribeHistoryTasksStatRequest
-         * @return DescribeHistoryTasksStatResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the overview of a task in the task center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHistoryTasksStatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHistoryTasksStatResponse
+        /// </returns>
         public DescribeHistoryTasksStatResponse DescribeHistoryTasksStat(DescribeHistoryTasksStatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHistoryTasksStatWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the overview of a task in the task center.
-         *
-         * @param request DescribeHistoryTasksStatRequest
-         * @return DescribeHistoryTasksStatResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the overview of a task in the task center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHistoryTasksStatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHistoryTasksStatResponse
+        /// </returns>
         public async Task<DescribeHistoryTasksStatResponse> DescribeHistoryTasksStatAsync(DescribeHistoryTasksStatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHistoryTasksStatWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary You can call this operation to query whether auto-renewal is enabled for an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to subscription instances.
-         *
-         * @param request DescribeInstanceAutoRenewalAttributeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInstanceAutoRenewalAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query whether auto-renewal is enabled for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to subscription instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceAutoRenewalAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceAutoRenewalAttributeResponse
+        /// </returns>
         public DescribeInstanceAutoRenewalAttributeResponse DescribeInstanceAutoRenewalAttributeWithOptions(DescribeInstanceAutoRenewalAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7975,15 +9730,26 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeInstanceAutoRenewalAttributeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call this operation to query whether auto-renewal is enabled for an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to subscription instances.
-         *
-         * @param request DescribeInstanceAutoRenewalAttributeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInstanceAutoRenewalAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query whether auto-renewal is enabled for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to subscription instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceAutoRenewalAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceAutoRenewalAttributeResponse
+        /// </returns>
         public async Task<DescribeInstanceAutoRenewalAttributeResponse> DescribeInstanceAutoRenewalAttributeWithOptionsAsync(DescribeInstanceAutoRenewalAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8043,41 +9809,67 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeInstanceAutoRenewalAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call this operation to query whether auto-renewal is enabled for an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to subscription instances.
-         *
-         * @param request DescribeInstanceAutoRenewalAttributeRequest
-         * @return DescribeInstanceAutoRenewalAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query whether auto-renewal is enabled for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to subscription instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceAutoRenewalAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceAutoRenewalAttributeResponse
+        /// </returns>
         public DescribeInstanceAutoRenewalAttributeResponse DescribeInstanceAutoRenewalAttribute(DescribeInstanceAutoRenewalAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceAutoRenewalAttributeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary You can call this operation to query whether auto-renewal is enabled for an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to subscription instances.
-         *
-         * @param request DescribeInstanceAutoRenewalAttributeRequest
-         * @return DescribeInstanceAutoRenewalAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query whether auto-renewal is enabled for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to subscription instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceAutoRenewalAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceAutoRenewalAttributeResponse
+        /// </returns>
         public async Task<DescribeInstanceAutoRenewalAttributeResponse> DescribeInstanceAutoRenewalAttributeAsync(DescribeInstanceAutoRenewalAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceAutoRenewalAttributeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the time required to restore the data of an ApsaraDB for MongoDB replica set instance that uses cloud disks.
-         *
-         * @param request DescribeInstanceRecoverTimeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInstanceRecoverTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the time required to restore the data of an ApsaraDB for MongoDB replica set instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceRecoverTimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceRecoverTimeResponse
+        /// </returns>
         public DescribeInstanceRecoverTimeResponse DescribeInstanceRecoverTimeWithOptions(DescribeInstanceRecoverTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8101,13 +9893,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeInstanceRecoverTimeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the time required to restore the data of an ApsaraDB for MongoDB replica set instance that uses cloud disks.
-         *
-         * @param request DescribeInstanceRecoverTimeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInstanceRecoverTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the time required to restore the data of an ApsaraDB for MongoDB replica set instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceRecoverTimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceRecoverTimeResponse
+        /// </returns>
         public async Task<DescribeInstanceRecoverTimeResponse> DescribeInstanceRecoverTimeWithOptionsAsync(DescribeInstanceRecoverTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8131,37 +9931,57 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeInstanceRecoverTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the time required to restore the data of an ApsaraDB for MongoDB replica set instance that uses cloud disks.
-         *
-         * @param request DescribeInstanceRecoverTimeRequest
-         * @return DescribeInstanceRecoverTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the time required to restore the data of an ApsaraDB for MongoDB replica set instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceRecoverTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceRecoverTimeResponse
+        /// </returns>
         public DescribeInstanceRecoverTimeResponse DescribeInstanceRecoverTime(DescribeInstanceRecoverTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceRecoverTimeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the time required to restore the data of an ApsaraDB for MongoDB replica set instance that uses cloud disks.
-         *
-         * @param request DescribeInstanceRecoverTimeRequest
-         * @return DescribeInstanceRecoverTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the time required to restore the data of an ApsaraDB for MongoDB replica set instance that uses cloud disks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceRecoverTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceRecoverTimeResponse
+        /// </returns>
         public async Task<DescribeInstanceRecoverTimeResponse> DescribeInstanceRecoverTimeAsync(DescribeInstanceRecoverTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceRecoverTimeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the release notes of the minor versions of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeKernelReleaseNotesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeKernelReleaseNotesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the release notes of the minor versions of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeKernelReleaseNotesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKernelReleaseNotesResponse
+        /// </returns>
         public DescribeKernelReleaseNotesResponse DescribeKernelReleaseNotesWithOptions(DescribeKernelReleaseNotesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8205,13 +10025,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeKernelReleaseNotesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the release notes of the minor versions of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeKernelReleaseNotesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeKernelReleaseNotesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the release notes of the minor versions of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeKernelReleaseNotesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKernelReleaseNotesResponse
+        /// </returns>
         public async Task<DescribeKernelReleaseNotesResponse> DescribeKernelReleaseNotesWithOptionsAsync(DescribeKernelReleaseNotesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8255,39 +10083,62 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeKernelReleaseNotesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the release notes of the minor versions of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeKernelReleaseNotesRequest
-         * @return DescribeKernelReleaseNotesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the release notes of the minor versions of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeKernelReleaseNotesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKernelReleaseNotesResponse
+        /// </returns>
         public DescribeKernelReleaseNotesResponse DescribeKernelReleaseNotes(DescribeKernelReleaseNotesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeKernelReleaseNotesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the release notes of the minor versions of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeKernelReleaseNotesRequest
-         * @return DescribeKernelReleaseNotesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the release notes of the minor versions of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeKernelReleaseNotesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKernelReleaseNotesResponse
+        /// </returns>
         public async Task<DescribeKernelReleaseNotesResponse> DescribeKernelReleaseNotesAsync(DescribeKernelReleaseNotesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeKernelReleaseNotesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries Key Management Service (KMS) keys that are available for disk encryption.
-         *
-         * @description Queried keys are available only for disk encryption.
-         *
-         * @param request DescribeKmsKeysRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeKmsKeysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Key Management Service (KMS) keys that are available for disk encryption.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queried keys are available only for disk encryption.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeKmsKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKmsKeysResponse
+        /// </returns>
         public DescribeKmsKeysResponse DescribeKmsKeysWithOptions(DescribeKmsKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8327,15 +10178,26 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeKmsKeysResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries Key Management Service (KMS) keys that are available for disk encryption.
-         *
-         * @description Queried keys are available only for disk encryption.
-         *
-         * @param request DescribeKmsKeysRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeKmsKeysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Key Management Service (KMS) keys that are available for disk encryption.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queried keys are available only for disk encryption.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeKmsKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKmsKeysResponse
+        /// </returns>
         public async Task<DescribeKmsKeysResponse> DescribeKmsKeysWithOptionsAsync(DescribeKmsKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8375,46 +10237,77 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeKmsKeysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries Key Management Service (KMS) keys that are available for disk encryption.
-         *
-         * @description Queried keys are available only for disk encryption.
-         *
-         * @param request DescribeKmsKeysRequest
-         * @return DescribeKmsKeysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Key Management Service (KMS) keys that are available for disk encryption.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queried keys are available only for disk encryption.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeKmsKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKmsKeysResponse
+        /// </returns>
         public DescribeKmsKeysResponse DescribeKmsKeys(DescribeKmsKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeKmsKeysWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries Key Management Service (KMS) keys that are available for disk encryption.
-         *
-         * @description Queried keys are available only for disk encryption.
-         *
-         * @param request DescribeKmsKeysRequest
-         * @return DescribeKmsKeysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Key Management Service (KMS) keys that are available for disk encryption.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queried keys are available only for disk encryption.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeKmsKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKmsKeysResponse
+        /// </returns>
         public async Task<DescribeKmsKeysResponse> DescribeKmsKeysAsync(DescribeKmsKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeKmsKeysWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the logging configurations of an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * This operation depends on the audit log feature of ApsaraDB for MongoDB. You can enable the audit log feature based on your business requirements. For more information, see [Enable the audit log feature](https://help.aliyun.com/document_detail/59903.html).
-         * *   Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. For more information, see [Notice on official launch of the pay-as-you-go audit log feature and no more application for the free trial edition](https://help.aliyun.com/document_detail/377480.html)
-         * *   You are charged for the official edition of the audit log feature based on the storage capacity that is consumed by audit logs and the retention period of the audit logs. For more information, see [Pricing of ApsaraDB for MongoDB instances](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-         *
-         * @param request DescribeMongoDBLogConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMongoDBLogConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logging configurations of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.
+        /// This operation depends on the audit log feature of ApsaraDB for MongoDB. You can enable the audit log feature based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/59903.html">Enable the audit log feature</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. For more information, see <a href="https://help.aliyun.com/document_detail/377480.html">Notice on official launch of the pay-as-you-go audit log feature and no more application for the free trial edition</a></description></item>
+        /// <item><description>You are charged for the official edition of the audit log feature based on the storage capacity that is consumed by audit logs and the retention period of the audit logs. For more information, see <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">Pricing of ApsaraDB for MongoDB instances</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMongoDBLogConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMongoDBLogConfigResponse
+        /// </returns>
         public DescribeMongoDBLogConfigResponse DescribeMongoDBLogConfigWithOptions(DescribeMongoDBLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8458,18 +10351,31 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeMongoDBLogConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the logging configurations of an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * This operation depends on the audit log feature of ApsaraDB for MongoDB. You can enable the audit log feature based on your business requirements. For more information, see [Enable the audit log feature](https://help.aliyun.com/document_detail/59903.html).
-         * *   Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. For more information, see [Notice on official launch of the pay-as-you-go audit log feature and no more application for the free trial edition](https://help.aliyun.com/document_detail/377480.html)
-         * *   You are charged for the official edition of the audit log feature based on the storage capacity that is consumed by audit logs and the retention period of the audit logs. For more information, see [Pricing of ApsaraDB for MongoDB instances](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-         *
-         * @param request DescribeMongoDBLogConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMongoDBLogConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logging configurations of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.
+        /// This operation depends on the audit log feature of ApsaraDB for MongoDB. You can enable the audit log feature based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/59903.html">Enable the audit log feature</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. For more information, see <a href="https://help.aliyun.com/document_detail/377480.html">Notice on official launch of the pay-as-you-go audit log feature and no more application for the free trial edition</a></description></item>
+        /// <item><description>You are charged for the official edition of the audit log feature based on the storage capacity that is consumed by audit logs and the retention period of the audit logs. For more information, see <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">Pricing of ApsaraDB for MongoDB instances</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMongoDBLogConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMongoDBLogConfigResponse
+        /// </returns>
         public async Task<DescribeMongoDBLogConfigResponse> DescribeMongoDBLogConfigWithOptionsAsync(DescribeMongoDBLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8513,47 +10419,77 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeMongoDBLogConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the logging configurations of an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * This operation depends on the audit log feature of ApsaraDB for MongoDB. You can enable the audit log feature based on your business requirements. For more information, see [Enable the audit log feature](https://help.aliyun.com/document_detail/59903.html).
-         * *   Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. For more information, see [Notice on official launch of the pay-as-you-go audit log feature and no more application for the free trial edition](https://help.aliyun.com/document_detail/377480.html)
-         * *   You are charged for the official edition of the audit log feature based on the storage capacity that is consumed by audit logs and the retention period of the audit logs. For more information, see [Pricing of ApsaraDB for MongoDB instances](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-         *
-         * @param request DescribeMongoDBLogConfigRequest
-         * @return DescribeMongoDBLogConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logging configurations of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.
+        /// This operation depends on the audit log feature of ApsaraDB for MongoDB. You can enable the audit log feature based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/59903.html">Enable the audit log feature</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. For more information, see <a href="https://help.aliyun.com/document_detail/377480.html">Notice on official launch of the pay-as-you-go audit log feature and no more application for the free trial edition</a></description></item>
+        /// <item><description>You are charged for the official edition of the audit log feature based on the storage capacity that is consumed by audit logs and the retention period of the audit logs. For more information, see <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">Pricing of ApsaraDB for MongoDB instances</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMongoDBLogConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMongoDBLogConfigResponse
+        /// </returns>
         public DescribeMongoDBLogConfigResponse DescribeMongoDBLogConfig(DescribeMongoDBLogConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeMongoDBLogConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the logging configurations of an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * This operation depends on the audit log feature of ApsaraDB for MongoDB. You can enable the audit log feature based on your business requirements. For more information, see [Enable the audit log feature](https://help.aliyun.com/document_detail/59903.html).
-         * *   Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. For more information, see [Notice on official launch of the pay-as-you-go audit log feature and no more application for the free trial edition](https://help.aliyun.com/document_detail/377480.html)
-         * *   You are charged for the official edition of the audit log feature based on the storage capacity that is consumed by audit logs and the retention period of the audit logs. For more information, see [Pricing of ApsaraDB for MongoDB instances](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-         *
-         * @param request DescribeMongoDBLogConfigRequest
-         * @return DescribeMongoDBLogConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logging configurations of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.
+        /// This operation depends on the audit log feature of ApsaraDB for MongoDB. You can enable the audit log feature based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/59903.html">Enable the audit log feature</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. For more information, see <a href="https://help.aliyun.com/document_detail/377480.html">Notice on official launch of the pay-as-you-go audit log feature and no more application for the free trial edition</a></description></item>
+        /// <item><description>You are charged for the official edition of the audit log feature based on the storage capacity that is consumed by audit logs and the retention period of the audit logs. For more information, see <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">Pricing of ApsaraDB for MongoDB instances</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMongoDBLogConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMongoDBLogConfigResponse
+        /// </returns>
         public async Task<DescribeMongoDBLogConfigResponse> DescribeMongoDBLogConfigAsync(DescribeMongoDBLogConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeMongoDBLogConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the parameter modification records of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeParameterModificationHistoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeParameterModificationHistoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the parameter modification records of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeParameterModificationHistoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParameterModificationHistoryResponse
+        /// </returns>
         public DescribeParameterModificationHistoryResponse DescribeParameterModificationHistoryWithOptions(DescribeParameterModificationHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8613,13 +10549,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeParameterModificationHistoryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the parameter modification records of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeParameterModificationHistoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeParameterModificationHistoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the parameter modification records of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeParameterModificationHistoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParameterModificationHistoryResponse
+        /// </returns>
         public async Task<DescribeParameterModificationHistoryResponse> DescribeParameterModificationHistoryWithOptionsAsync(DescribeParameterModificationHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8679,37 +10623,57 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeParameterModificationHistoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the parameter modification records of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeParameterModificationHistoryRequest
-         * @return DescribeParameterModificationHistoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the parameter modification records of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeParameterModificationHistoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParameterModificationHistoryResponse
+        /// </returns>
         public DescribeParameterModificationHistoryResponse DescribeParameterModificationHistory(DescribeParameterModificationHistoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeParameterModificationHistoryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the parameter modification records of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeParameterModificationHistoryRequest
-         * @return DescribeParameterModificationHistoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the parameter modification records of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeParameterModificationHistoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParameterModificationHistoryResponse
+        /// </returns>
         public async Task<DescribeParameterModificationHistoryResponse> DescribeParameterModificationHistoryAsync(DescribeParameterModificationHistoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeParameterModificationHistoryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the list of default parameter templates for ApsaraDB for MongoDB instances.
-         *
-         * @param request DescribeParameterTemplatesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeParameterTemplatesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of default parameter templates for ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeParameterTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParameterTemplatesResponse
+        /// </returns>
         public DescribeParameterTemplatesResponse DescribeParameterTemplatesWithOptions(DescribeParameterTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8765,13 +10729,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeParameterTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the list of default parameter templates for ApsaraDB for MongoDB instances.
-         *
-         * @param request DescribeParameterTemplatesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeParameterTemplatesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of default parameter templates for ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeParameterTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParameterTemplatesResponse
+        /// </returns>
         public async Task<DescribeParameterTemplatesResponse> DescribeParameterTemplatesWithOptionsAsync(DescribeParameterTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8827,37 +10799,57 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeParameterTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the list of default parameter templates for ApsaraDB for MongoDB instances.
-         *
-         * @param request DescribeParameterTemplatesRequest
-         * @return DescribeParameterTemplatesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of default parameter templates for ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeParameterTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParameterTemplatesResponse
+        /// </returns>
         public DescribeParameterTemplatesResponse DescribeParameterTemplates(DescribeParameterTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeParameterTemplatesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the list of default parameter templates for ApsaraDB for MongoDB instances.
-         *
-         * @param request DescribeParameterTemplatesRequest
-         * @return DescribeParameterTemplatesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of default parameter templates for ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeParameterTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParameterTemplatesResponse
+        /// </returns>
         public async Task<DescribeParameterTemplatesResponse> DescribeParameterTemplatesAsync(DescribeParameterTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeParameterTemplatesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the parameter settings of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeParametersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeParametersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the parameter settings of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeParametersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParametersResponse
+        /// </returns>
         public DescribeParametersResponse DescribeParametersWithOptions(DescribeParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8913,13 +10905,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeParametersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the parameter settings of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeParametersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeParametersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the parameter settings of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeParametersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParametersResponse
+        /// </returns>
         public async Task<DescribeParametersResponse> DescribeParametersWithOptionsAsync(DescribeParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8975,37 +10975,57 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeParametersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the parameter settings of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeParametersRequest
-         * @return DescribeParametersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the parameter settings of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeParametersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParametersResponse
+        /// </returns>
         public DescribeParametersResponse DescribeParameters(DescribeParametersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeParametersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the parameter settings of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeParametersRequest
-         * @return DescribeParametersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the parameter settings of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeParametersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParametersResponse
+        /// </returns>
         public async Task<DescribeParametersResponse> DescribeParametersAsync(DescribeParametersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeParametersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the fees incurred when you create, upgrade, or renew an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribePriceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePriceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the fees incurred when you create, upgrade, or renew an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePriceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePriceResponse
+        /// </returns>
         public DescribePriceResponse DescribePriceWithOptions(DescribePriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9081,13 +11101,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribePriceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the fees incurred when you create, upgrade, or renew an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribePriceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePriceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the fees incurred when you create, upgrade, or renew an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePriceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePriceResponse
+        /// </returns>
         public async Task<DescribePriceResponse> DescribePriceWithOptionsAsync(DescribePriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9163,39 +11191,64 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribePriceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the fees incurred when you create, upgrade, or renew an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribePriceRequest
-         * @return DescribePriceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the fees incurred when you create, upgrade, or renew an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePriceResponse
+        /// </returns>
         public DescribePriceResponse DescribePrice(DescribePriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePriceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the fees incurred when you create, upgrade, or renew an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribePriceRequest
-         * @return DescribePriceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the fees incurred when you create, upgrade, or renew an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePriceResponse
+        /// </returns>
         public async Task<DescribePriceResponse> DescribePriceAsync(DescribePriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePriceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries all regions and zones supported for an ApsaraDB for MongoDB instance.
-         *
-         * @description >  To query available regions and zones in which an ApsaraDB for MongoDB instance can be created, call the [DescribeAvailableResource](https://help.aliyun.com/document_detail/149719.html) operation.
-         *
-         * @param request DescribeRegionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all regions and zones supported for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> To query available regions and zones in which an ApsaraDB for MongoDB instance can be created, call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9243,15 +11296,28 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries all regions and zones supported for an ApsaraDB for MongoDB instance.
-         *
-         * @description >  To query available regions and zones in which an ApsaraDB for MongoDB instance can be created, call the [DescribeAvailableResource](https://help.aliyun.com/document_detail/149719.html) operation.
-         *
-         * @param request DescribeRegionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all regions and zones supported for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> To query available regions and zones in which an ApsaraDB for MongoDB instance can be created, call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9299,43 +11365,76 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries all regions and zones supported for an ApsaraDB for MongoDB instance.
-         *
-         * @description >  To query available regions and zones in which an ApsaraDB for MongoDB instance can be created, call the [DescribeAvailableResource](https://help.aliyun.com/document_detail/149719.html) operation.
-         *
-         * @param request DescribeRegionsRequest
-         * @return DescribeRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all regions and zones supported for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> To query available regions and zones in which an ApsaraDB for MongoDB instance can be created, call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRegionsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries all regions and zones supported for an ApsaraDB for MongoDB instance.
-         *
-         * @description >  To query available regions and zones in which an ApsaraDB for MongoDB instance can be created, call the [DescribeAvailableResource](https://help.aliyun.com/document_detail/149719.html) operation.
-         *
-         * @param request DescribeRegionsRequest
-         * @return DescribeRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all regions and zones supported for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> To query available regions and zones in which an ApsaraDB for MongoDB instance can be created, call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRegionsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the monthly renewal price of an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to subscription instances.
-         *
-         * @param request DescribeRenewalPriceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRenewalPriceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the monthly renewal price of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to subscription instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRenewalPriceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRenewalPriceResponse
+        /// </returns>
         public DescribeRenewalPriceResponse DescribeRenewalPriceWithOptions(DescribeRenewalPriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9387,15 +11486,26 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeRenewalPriceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the monthly renewal price of an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to subscription instances.
-         *
-         * @param request DescribeRenewalPriceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRenewalPriceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the monthly renewal price of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to subscription instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRenewalPriceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRenewalPriceResponse
+        /// </returns>
         public async Task<DescribeRenewalPriceResponse> DescribeRenewalPriceWithOptionsAsync(DescribeRenewalPriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9447,43 +11557,72 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeRenewalPriceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the monthly renewal price of an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to subscription instances.
-         *
-         * @param request DescribeRenewalPriceRequest
-         * @return DescribeRenewalPriceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the monthly renewal price of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to subscription instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRenewalPriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRenewalPriceResponse
+        /// </returns>
         public DescribeRenewalPriceResponse DescribeRenewalPrice(DescribeRenewalPriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRenewalPriceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the monthly renewal price of an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to subscription instances.
-         *
-         * @param request DescribeRenewalPriceRequest
-         * @return DescribeRenewalPriceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the monthly renewal price of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to subscription instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRenewalPriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRenewalPriceResponse
+        /// </returns>
         public async Task<DescribeRenewalPriceResponse> DescribeRenewalPriceAsync(DescribeRenewalPriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRenewalPriceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the role and connection information of an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to replica set instances and standalone instances, but not to sharded cluster instances.
-         *
-         * @param request DescribeReplicaSetRoleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeReplicaSetRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the role and connection information of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to replica set instances and standalone instances, but not to sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeReplicaSetRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeReplicaSetRoleResponse
+        /// </returns>
         public DescribeReplicaSetRoleResponse DescribeReplicaSetRoleWithOptions(DescribeReplicaSetRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9527,15 +11666,26 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeReplicaSetRoleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the role and connection information of an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to replica set instances and standalone instances, but not to sharded cluster instances.
-         *
-         * @param request DescribeReplicaSetRoleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeReplicaSetRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the role and connection information of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to replica set instances and standalone instances, but not to sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeReplicaSetRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeReplicaSetRoleResponse
+        /// </returns>
         public async Task<DescribeReplicaSetRoleResponse> DescribeReplicaSetRoleWithOptionsAsync(DescribeReplicaSetRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9579,44 +11729,231 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeReplicaSetRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the role and connection information of an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to replica set instances and standalone instances, but not to sharded cluster instances.
-         *
-         * @param request DescribeReplicaSetRoleRequest
-         * @return DescribeReplicaSetRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the role and connection information of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to replica set instances and standalone instances, but not to sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeReplicaSetRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeReplicaSetRoleResponse
+        /// </returns>
         public DescribeReplicaSetRoleResponse DescribeReplicaSetRole(DescribeReplicaSetRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeReplicaSetRoleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the role and connection information of an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to replica set instances and standalone instances, but not to sharded cluster instances.
-         *
-         * @param request DescribeReplicaSetRoleRequest
-         * @return DescribeReplicaSetRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the role and connection information of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to replica set instances and standalone instances, but not to sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeReplicaSetRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeReplicaSetRoleResponse
+        /// </returns>
         public async Task<DescribeReplicaSetRoleResponse> DescribeReplicaSetRoleAsync(DescribeReplicaSetRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeReplicaSetRoleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the role and zone of each node in an ApsaraDB for MongoDB instance.
-         *
-         * @description > For more information, see [View the zone of a node](https://help.aliyun.com/document_detail/123825.html).
-         * This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
-         *
-         * @param request DescribeRoleZoneInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRoleZoneInfoResponse
-         */
+        /// <param name="request">
+        /// DescribeRestoreDBInstanceListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRestoreDBInstanceListResponse
+        /// </returns>
+        public DescribeRestoreDBInstanceListResponse DescribeRestoreDBInstanceListWithOptions(DescribeRestoreDBInstanceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreationTimeAfter))
+            {
+                query["CreationTimeAfter"] = request.CreationTimeAfter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRestoreDBInstanceList",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRestoreDBInstanceListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// DescribeRestoreDBInstanceListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRestoreDBInstanceListResponse
+        /// </returns>
+        public async Task<DescribeRestoreDBInstanceListResponse> DescribeRestoreDBInstanceListWithOptionsAsync(DescribeRestoreDBInstanceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreationTimeAfter))
+            {
+                query["CreationTimeAfter"] = request.CreationTimeAfter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRestoreDBInstanceList",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRestoreDBInstanceListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// DescribeRestoreDBInstanceListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRestoreDBInstanceListResponse
+        /// </returns>
+        public DescribeRestoreDBInstanceListResponse DescribeRestoreDBInstanceList(DescribeRestoreDBInstanceListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeRestoreDBInstanceListWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// DescribeRestoreDBInstanceListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRestoreDBInstanceListResponse
+        /// </returns>
+        public async Task<DescribeRestoreDBInstanceListResponse> DescribeRestoreDBInstanceListAsync(DescribeRestoreDBInstanceListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeRestoreDBInstanceListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the role and zone of each node in an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/123825.html">View the zone of a node</a>.
+        /// This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRoleZoneInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRoleZoneInfoResponse
+        /// </returns>
         public DescribeRoleZoneInfoResponse DescribeRoleZoneInfoWithOptions(DescribeRoleZoneInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9660,16 +11997,29 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeRoleZoneInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the role and zone of each node in an ApsaraDB for MongoDB instance.
-         *
-         * @description > For more information, see [View the zone of a node](https://help.aliyun.com/document_detail/123825.html).
-         * This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
-         *
-         * @param request DescribeRoleZoneInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRoleZoneInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the role and zone of each node in an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/123825.html">View the zone of a node</a>.
+        /// This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRoleZoneInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRoleZoneInfoResponse
+        /// </returns>
         public async Task<DescribeRoleZoneInfoResponse> DescribeRoleZoneInfoWithOptionsAsync(DescribeRoleZoneInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9713,46 +12063,81 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeRoleZoneInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the role and zone of each node in an ApsaraDB for MongoDB instance.
-         *
-         * @description > For more information, see [View the zone of a node](https://help.aliyun.com/document_detail/123825.html).
-         * This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
-         *
-         * @param request DescribeRoleZoneInfoRequest
-         * @return DescribeRoleZoneInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the role and zone of each node in an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/123825.html">View the zone of a node</a>.
+        /// This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRoleZoneInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRoleZoneInfoResponse
+        /// </returns>
         public DescribeRoleZoneInfoResponse DescribeRoleZoneInfo(DescribeRoleZoneInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRoleZoneInfoWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the role and zone of each node in an ApsaraDB for MongoDB instance.
-         *
-         * @description > For more information, see [View the zone of a node](https://help.aliyun.com/document_detail/123825.html).
-         * This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
-         *
-         * @param request DescribeRoleZoneInfoRequest
-         * @return DescribeRoleZoneInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the role and zone of each node in an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/123825.html">View the zone of a node</a>.
+        /// This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRoleZoneInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRoleZoneInfoResponse
+        /// </returns>
         public async Task<DescribeRoleZoneInfoResponse> DescribeRoleZoneInfoAsync(DescribeRoleZoneInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRoleZoneInfoWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries entries in operational logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeRunningLogRecordsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRunningLogRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries entries in operational logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRunningLogRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRunningLogRecordsResponse
+        /// </returns>
         public DescribeRunningLogRecordsResponse DescribeRunningLogRecordsWithOptions(DescribeRunningLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9844,16 +12229,29 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeRunningLogRecordsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries entries in operational logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeRunningLogRecordsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRunningLogRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries entries in operational logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRunningLogRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRunningLogRecordsResponse
+        /// </returns>
         public async Task<DescribeRunningLogRecordsResponse> DescribeRunningLogRecordsWithOptionsAsync(DescribeRunningLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9945,43 +12343,73 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeRunningLogRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries entries in operational logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeRunningLogRecordsRequest
-         * @return DescribeRunningLogRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries entries in operational logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRunningLogRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRunningLogRecordsResponse
+        /// </returns>
         public DescribeRunningLogRecordsResponse DescribeRunningLogRecords(DescribeRunningLogRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRunningLogRecordsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries entries in operational logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeRunningLogRecordsRequest
-         * @return DescribeRunningLogRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries entries in operational logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRunningLogRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRunningLogRecordsResponse
+        /// </returns>
         public async Task<DescribeRunningLogRecordsResponse> DescribeRunningLogRecordsAsync(DescribeRunningLogRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRunningLogRecordsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary You can call this operation to query ECS security groups that are bound to an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeSecurityGroupConfigurationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSecurityGroupConfigurationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query ECS security groups that are bound to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityGroupConfigurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityGroupConfigurationResponse
+        /// </returns>
         public DescribeSecurityGroupConfigurationResponse DescribeSecurityGroupConfigurationWithOptions(DescribeSecurityGroupConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10025,13 +12453,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeSecurityGroupConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call this operation to query ECS security groups that are bound to an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeSecurityGroupConfigurationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSecurityGroupConfigurationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query ECS security groups that are bound to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityGroupConfigurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityGroupConfigurationResponse
+        /// </returns>
         public async Task<DescribeSecurityGroupConfigurationResponse> DescribeSecurityGroupConfigurationWithOptionsAsync(DescribeSecurityGroupConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10075,37 +12511,57 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeSecurityGroupConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call this operation to query ECS security groups that are bound to an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeSecurityGroupConfigurationRequest
-         * @return DescribeSecurityGroupConfigurationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query ECS security groups that are bound to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityGroupConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityGroupConfigurationResponse
+        /// </returns>
         public DescribeSecurityGroupConfigurationResponse DescribeSecurityGroupConfiguration(DescribeSecurityGroupConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSecurityGroupConfigurationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary You can call this operation to query ECS security groups that are bound to an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeSecurityGroupConfigurationRequest
-         * @return DescribeSecurityGroupConfigurationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query ECS security groups that are bound to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityGroupConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityGroupConfigurationResponse
+        /// </returns>
         public async Task<DescribeSecurityGroupConfigurationResponse> DescribeSecurityGroupConfigurationAsync(DescribeSecurityGroupConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSecurityGroupConfigurationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary You can call this operation to query the IP whitelists of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeSecurityIpsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSecurityIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the IP whitelists of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityIpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityIpsResponse
+        /// </returns>
         public DescribeSecurityIpsResponse DescribeSecurityIpsWithOptions(DescribeSecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10153,13 +12609,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeSecurityIpsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call this operation to query the IP whitelists of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeSecurityIpsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSecurityIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the IP whitelists of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityIpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityIpsResponse
+        /// </returns>
         public async Task<DescribeSecurityIpsResponse> DescribeSecurityIpsWithOptionsAsync(DescribeSecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10207,39 +12671,62 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeSecurityIpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call this operation to query the IP whitelists of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeSecurityIpsRequest
-         * @return DescribeSecurityIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the IP whitelists of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityIpsResponse
+        /// </returns>
         public DescribeSecurityIpsResponse DescribeSecurityIps(DescribeSecurityIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSecurityIpsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary You can call this operation to query the IP whitelists of an ApsaraDB for MongoDB instance.
-         *
-         * @param request DescribeSecurityIpsRequest
-         * @return DescribeSecurityIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the IP whitelists of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityIpsResponse
+        /// </returns>
         public async Task<DescribeSecurityIpsResponse> DescribeSecurityIpsAsync(DescribeSecurityIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSecurityIpsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries connection information about an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description This operation is applicable only to sharded cluster instances.
-         *
-         * @param request DescribeShardingNetworkAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeShardingNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries connection information about an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeShardingNetworkAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeShardingNetworkAddressResponse
+        /// </returns>
         public DescribeShardingNetworkAddressResponse DescribeShardingNetworkAddressWithOptions(DescribeShardingNetworkAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10287,15 +12774,26 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeShardingNetworkAddressResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries connection information about an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description This operation is applicable only to sharded cluster instances.
-         *
-         * @param request DescribeShardingNetworkAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeShardingNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries connection information about an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeShardingNetworkAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeShardingNetworkAddressResponse
+        /// </returns>
         public async Task<DescribeShardingNetworkAddressResponse> DescribeShardingNetworkAddressWithOptionsAsync(DescribeShardingNetworkAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10343,44 +12841,75 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeShardingNetworkAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries connection information about an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description This operation is applicable only to sharded cluster instances.
-         *
-         * @param request DescribeShardingNetworkAddressRequest
-         * @return DescribeShardingNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries connection information about an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeShardingNetworkAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeShardingNetworkAddressResponse
+        /// </returns>
         public DescribeShardingNetworkAddressResponse DescribeShardingNetworkAddress(DescribeShardingNetworkAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeShardingNetworkAddressWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries connection information about an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description This operation is applicable only to sharded cluster instances.
-         *
-         * @param request DescribeShardingNetworkAddressRequest
-         * @return DescribeShardingNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries connection information about an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeShardingNetworkAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeShardingNetworkAddressResponse
+        /// </returns>
         public async Task<DescribeShardingNetworkAddressResponse> DescribeShardingNetworkAddressAsync(DescribeShardingNetworkAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeShardingNetworkAddressWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of entries in slow query logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeSlowLogRecordsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSlowLogRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of entries in slow query logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSlowLogRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlowLogRecordsResponse
+        /// </returns>
         public DescribeSlowLogRecordsResponse DescribeSlowLogRecordsWithOptions(DescribeSlowLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10464,16 +12993,29 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeSlowLogRecordsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of entries in slow query logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeSlowLogRecordsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSlowLogRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of entries in slow query logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSlowLogRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlowLogRecordsResponse
+        /// </returns>
         public async Task<DescribeSlowLogRecordsResponse> DescribeSlowLogRecordsWithOptionsAsync(DescribeSlowLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10557,43 +13099,73 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeSlowLogRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of entries in slow query logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeSlowLogRecordsRequest
-         * @return DescribeSlowLogRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of entries in slow query logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSlowLogRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlowLogRecordsResponse
+        /// </returns>
         public DescribeSlowLogRecordsResponse DescribeSlowLogRecords(DescribeSlowLogRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSlowLogRecordsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of entries in slow query logs of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request DescribeSlowLogRecordsRequest
-         * @return DescribeSlowLogRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of entries in slow query logs of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSlowLogRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlowLogRecordsResponse
+        /// </returns>
         public async Task<DescribeSlowLogRecordsResponse> DescribeSlowLogRecordsAsync(DescribeSlowLogRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSlowLogRecordsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries all tags in a specified region.
-         *
-         * @param request DescribeTagsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTagsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all tags in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTagsResponse
+        /// </returns>
         public DescribeTagsResponse DescribeTagsWithOptions(DescribeTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10649,13 +13221,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeTagsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries all tags in a specified region.
-         *
-         * @param request DescribeTagsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTagsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all tags in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTagsResponse
+        /// </returns>
         public async Task<DescribeTagsResponse> DescribeTagsWithOptionsAsync(DescribeTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10711,39 +13291,62 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries all tags in a specified region.
-         *
-         * @param request DescribeTagsRequest
-         * @return DescribeTagsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all tags in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTagsResponse
+        /// </returns>
         public DescribeTagsResponse DescribeTags(DescribeTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTagsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries all tags in a specified region.
-         *
-         * @param request DescribeTagsRequest
-         * @return DescribeTagsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all tags in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTagsResponse
+        /// </returns>
         public async Task<DescribeTagsResponse> DescribeTagsAsync(DescribeTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTagsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the list of custom keys for an ApsaraDB for MongoDB instance.
-         *
-         * @description You can use the custom key obtained by calling the DescribeUserEncryptionKeyList operation to enable TDE. For more information, see [ModifyDBInstanceTDE](https://help.aliyun.com/document_detail/131267.html).
-         *
-         * @param request DescribeUserEncryptionKeyListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeUserEncryptionKeyListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of custom keys for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use the custom key obtained by calling the DescribeUserEncryptionKeyList operation to enable TDE. For more information, see <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeUserEncryptionKeyListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserEncryptionKeyListResponse
+        /// </returns>
         public DescribeUserEncryptionKeyListResponse DescribeUserEncryptionKeyListWithOptions(DescribeUserEncryptionKeyListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10791,15 +13394,26 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeUserEncryptionKeyListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the list of custom keys for an ApsaraDB for MongoDB instance.
-         *
-         * @description You can use the custom key obtained by calling the DescribeUserEncryptionKeyList operation to enable TDE. For more information, see [ModifyDBInstanceTDE](https://help.aliyun.com/document_detail/131267.html).
-         *
-         * @param request DescribeUserEncryptionKeyListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeUserEncryptionKeyListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of custom keys for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use the custom key obtained by calling the DescribeUserEncryptionKeyList operation to enable TDE. For more information, see <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeUserEncryptionKeyListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserEncryptionKeyListResponse
+        /// </returns>
         public async Task<DescribeUserEncryptionKeyListResponse> DescribeUserEncryptionKeyListWithOptionsAsync(DescribeUserEncryptionKeyListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10847,48 +13461,79 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeUserEncryptionKeyListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the list of custom keys for an ApsaraDB for MongoDB instance.
-         *
-         * @description You can use the custom key obtained by calling the DescribeUserEncryptionKeyList operation to enable TDE. For more information, see [ModifyDBInstanceTDE](https://help.aliyun.com/document_detail/131267.html).
-         *
-         * @param request DescribeUserEncryptionKeyListRequest
-         * @return DescribeUserEncryptionKeyListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of custom keys for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use the custom key obtained by calling the DescribeUserEncryptionKeyList operation to enable TDE. For more information, see <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeUserEncryptionKeyListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserEncryptionKeyListResponse
+        /// </returns>
         public DescribeUserEncryptionKeyListResponse DescribeUserEncryptionKeyList(DescribeUserEncryptionKeyListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUserEncryptionKeyListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the list of custom keys for an ApsaraDB for MongoDB instance.
-         *
-         * @description You can use the custom key obtained by calling the DescribeUserEncryptionKeyList operation to enable TDE. For more information, see [ModifyDBInstanceTDE](https://help.aliyun.com/document_detail/131267.html).
-         *
-         * @param request DescribeUserEncryptionKeyListRequest
-         * @return DescribeUserEncryptionKeyListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of custom keys for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use the custom key obtained by calling the DescribeUserEncryptionKeyList operation to enable TDE. For more information, see <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeUserEncryptionKeyListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserEncryptionKeyListResponse
+        /// </returns>
         public async Task<DescribeUserEncryptionKeyListResponse> DescribeUserEncryptionKeyListAsync(DescribeUserEncryptionKeyListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUserEncryptionKeyListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Destroys an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance is a replica set instance or a sharded cluster instance that uses local disks.
-         * *   The billing method of the instance is subscription.
-         * *   The instance has expired and is in the **Locking** state.
-         * **
-         * **Warning** Data cannot be restored after the instance is destroyed. Proceed with caution.
-         *
-         * @param request DestroyInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DestroyInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Destroys an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is a replica set instance or a sharded cluster instance that uses local disks.</description></item>
+        /// <item><description>The billing method of the instance is subscription.</description></item>
+        /// <item><description>The instance has expired and is in the <b>Locking</b> state.
+        /// **
+        /// <b>Warning</b> Data cannot be restored after the instance is destroyed. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DestroyInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DestroyInstanceResponse
+        /// </returns>
         public DestroyInstanceResponse DestroyInstanceWithOptions(DestroyInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10944,20 +13589,33 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DestroyInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Destroys an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance is a replica set instance or a sharded cluster instance that uses local disks.
-         * *   The billing method of the instance is subscription.
-         * *   The instance has expired and is in the **Locking** state.
-         * **
-         * **Warning** Data cannot be restored after the instance is destroyed. Proceed with caution.
-         *
-         * @param request DestroyInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DestroyInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Destroys an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is a replica set instance or a sharded cluster instance that uses local disks.</description></item>
+        /// <item><description>The billing method of the instance is subscription.</description></item>
+        /// <item><description>The instance has expired and is in the <b>Locking</b> state.
+        /// **
+        /// <b>Warning</b> Data cannot be restored after the instance is destroyed. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DestroyInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DestroyInstanceResponse
+        /// </returns>
         public async Task<DestroyInstanceResponse> DestroyInstanceWithOptionsAsync(DestroyInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11013,54 +13671,89 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DestroyInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Destroys an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance is a replica set instance or a sharded cluster instance that uses local disks.
-         * *   The billing method of the instance is subscription.
-         * *   The instance has expired and is in the **Locking** state.
-         * **
-         * **Warning** Data cannot be restored after the instance is destroyed. Proceed with caution.
-         *
-         * @param request DestroyInstanceRequest
-         * @return DestroyInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Destroys an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is a replica set instance or a sharded cluster instance that uses local disks.</description></item>
+        /// <item><description>The billing method of the instance is subscription.</description></item>
+        /// <item><description>The instance has expired and is in the <b>Locking</b> state.
+        /// **
+        /// <b>Warning</b> Data cannot be restored after the instance is destroyed. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DestroyInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DestroyInstanceResponse
+        /// </returns>
         public DestroyInstanceResponse DestroyInstance(DestroyInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DestroyInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Destroys an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance is a replica set instance or a sharded cluster instance that uses local disks.
-         * *   The billing method of the instance is subscription.
-         * *   The instance has expired and is in the **Locking** state.
-         * **
-         * **Warning** Data cannot be restored after the instance is destroyed. Proceed with caution.
-         *
-         * @param request DestroyInstanceRequest
-         * @return DestroyInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Destroys an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is a replica set instance or a sharded cluster instance that uses local disks.</description></item>
+        /// <item><description>The billing method of the instance is subscription.</description></item>
+        /// <item><description>The instance has expired and is in the <b>Locking</b> state.
+        /// **
+        /// <b>Warning</b> Data cannot be restored after the instance is destroyed. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DestroyInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DestroyInstanceResponse
+        /// </returns>
         public async Task<DestroyInstanceResponse> DestroyInstanceAsync(DestroyInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DestroyInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Checks whether sufficient resources are available in a region in which you want to create or upgrade an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading a replica set or sharded cluster instance, or upgrading a single node of the sharded cluster instance.
-         * > You can call this operation a maximum of 200 times per minute.
-         *
-         * @param request EvaluateResourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EvaluateResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether sufficient resources are available in a region in which you want to create or upgrade an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading a replica set or sharded cluster instance, or upgrading a single node of the sharded cluster instance.</para>
+        /// <remarks>
+        /// <para>You can call this operation a maximum of 200 times per minute.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EvaluateResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EvaluateResourceResponse
+        /// </returns>
         public EvaluateResourceResponse EvaluateResourceWithOptions(EvaluateResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11140,16 +13833,29 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<EvaluateResourceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Checks whether sufficient resources are available in a region in which you want to create or upgrade an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading a replica set or sharded cluster instance, or upgrading a single node of the sharded cluster instance.
-         * > You can call this operation a maximum of 200 times per minute.
-         *
-         * @param request EvaluateResourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EvaluateResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether sufficient resources are available in a region in which you want to create or upgrade an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading a replica set or sharded cluster instance, or upgrading a single node of the sharded cluster instance.</para>
+        /// <remarks>
+        /// <para>You can call this operation a maximum of 200 times per minute.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EvaluateResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EvaluateResourceResponse
+        /// </returns>
         public async Task<EvaluateResourceResponse> EvaluateResourceWithOptionsAsync(EvaluateResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11229,43 +13935,73 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<EvaluateResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Checks whether sufficient resources are available in a region in which you want to create or upgrade an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading a replica set or sharded cluster instance, or upgrading a single node of the sharded cluster instance.
-         * > You can call this operation a maximum of 200 times per minute.
-         *
-         * @param request EvaluateResourceRequest
-         * @return EvaluateResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether sufficient resources are available in a region in which you want to create or upgrade an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading a replica set or sharded cluster instance, or upgrading a single node of the sharded cluster instance.</para>
+        /// <remarks>
+        /// <para>You can call this operation a maximum of 200 times per minute.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EvaluateResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EvaluateResourceResponse
+        /// </returns>
         public EvaluateResourceResponse EvaluateResource(EvaluateResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EvaluateResourceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Checks whether sufficient resources are available in a region in which you want to create or upgrade an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading a replica set or sharded cluster instance, or upgrading a single node of the sharded cluster instance.
-         * > You can call this operation a maximum of 200 times per minute.
-         *
-         * @param request EvaluateResourceRequest
-         * @return EvaluateResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether sufficient resources are available in a region in which you want to create or upgrade an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading a replica set or sharded cluster instance, or upgrading a single node of the sharded cluster instance.</para>
+        /// <remarks>
+        /// <para>You can call this operation a maximum of 200 times per minute.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EvaluateResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EvaluateResourceResponse
+        /// </returns>
         public async Task<EvaluateResourceResponse> EvaluateResourceAsync(EvaluateResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EvaluateResourceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the relationship between ApsaraDB for MongoDB instances and tags.
-         *
-         * @param request ListTagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the relationship between ApsaraDB for MongoDB instances and tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11325,13 +14061,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the relationship between ApsaraDB for MongoDB instances and tags.
-         *
-         * @param request ListTagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the relationship between ApsaraDB for MongoDB instances and tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11391,43 +14135,68 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the relationship between ApsaraDB for MongoDB instances and tags.
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the relationship between ApsaraDB for MongoDB instances and tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the relationship between ApsaraDB for MongoDB instances and tags.
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the relationship between ApsaraDB for MongoDB instances and tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Migrates an ApsaraDB for MongoDB instance to a specific zone.
-         *
-         * @description *   This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.
-         * *   If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the [ReleasePublicNetworkAddress](https://help.aliyun.com/document_detail/67604.html) operation to release the public endpoint before you call the MigrateAvailableZone operation.
-         * *   Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.
-         * *   The source zone and the destination zone belong to the same region.
-         * *   A vSwitch is created in the destination zone. This prerequisite must be met if the instance resides in a virtual private cloud (VPC). For more information about how to create a vSwitch, see [Work with vSwitches](https://help.aliyun.com/document_detail/65387.html).
-         *
-         * @param request MigrateAvailableZoneRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return MigrateAvailableZoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an ApsaraDB for MongoDB instance to a specific zone.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.</para>
+        /// <list type="bullet">
+        /// <item><description>If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint before you call the MigrateAvailableZone operation.</description></item>
+        /// <item><description>Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.</description></item>
+        /// <item><description>The source zone and the destination zone belong to the same region.</description></item>
+        /// <item><description>A vSwitch is created in the destination zone. This prerequisite must be met if the instance resides in a virtual private cloud (VPC). For more information about how to create a vSwitch, see <a href="https://help.aliyun.com/document_detail/65387.html">Work with vSwitches</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateAvailableZoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateAvailableZoneResponse
+        /// </returns>
         public MigrateAvailableZoneResponse MigrateAvailableZoneWithOptions(MigrateAvailableZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11491,19 +14260,32 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<MigrateAvailableZoneResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Migrates an ApsaraDB for MongoDB instance to a specific zone.
-         *
-         * @description *   This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.
-         * *   If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the [ReleasePublicNetworkAddress](https://help.aliyun.com/document_detail/67604.html) operation to release the public endpoint before you call the MigrateAvailableZone operation.
-         * *   Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.
-         * *   The source zone and the destination zone belong to the same region.
-         * *   A vSwitch is created in the destination zone. This prerequisite must be met if the instance resides in a virtual private cloud (VPC). For more information about how to create a vSwitch, see [Work with vSwitches](https://help.aliyun.com/document_detail/65387.html).
-         *
-         * @param request MigrateAvailableZoneRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return MigrateAvailableZoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an ApsaraDB for MongoDB instance to a specific zone.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.</para>
+        /// <list type="bullet">
+        /// <item><description>If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint before you call the MigrateAvailableZone operation.</description></item>
+        /// <item><description>Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.</description></item>
+        /// <item><description>The source zone and the destination zone belong to the same region.</description></item>
+        /// <item><description>A vSwitch is created in the destination zone. This prerequisite must be met if the instance resides in a virtual private cloud (VPC). For more information about how to create a vSwitch, see <a href="https://help.aliyun.com/document_detail/65387.html">Work with vSwitches</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateAvailableZoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateAvailableZoneResponse
+        /// </returns>
         public async Task<MigrateAvailableZoneResponse> MigrateAvailableZoneWithOptionsAsync(MigrateAvailableZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11567,52 +14349,87 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<MigrateAvailableZoneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Migrates an ApsaraDB for MongoDB instance to a specific zone.
-         *
-         * @description *   This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.
-         * *   If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the [ReleasePublicNetworkAddress](https://help.aliyun.com/document_detail/67604.html) operation to release the public endpoint before you call the MigrateAvailableZone operation.
-         * *   Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.
-         * *   The source zone and the destination zone belong to the same region.
-         * *   A vSwitch is created in the destination zone. This prerequisite must be met if the instance resides in a virtual private cloud (VPC). For more information about how to create a vSwitch, see [Work with vSwitches](https://help.aliyun.com/document_detail/65387.html).
-         *
-         * @param request MigrateAvailableZoneRequest
-         * @return MigrateAvailableZoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an ApsaraDB for MongoDB instance to a specific zone.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.</para>
+        /// <list type="bullet">
+        /// <item><description>If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint before you call the MigrateAvailableZone operation.</description></item>
+        /// <item><description>Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.</description></item>
+        /// <item><description>The source zone and the destination zone belong to the same region.</description></item>
+        /// <item><description>A vSwitch is created in the destination zone. This prerequisite must be met if the instance resides in a virtual private cloud (VPC). For more information about how to create a vSwitch, see <a href="https://help.aliyun.com/document_detail/65387.html">Work with vSwitches</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateAvailableZoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateAvailableZoneResponse
+        /// </returns>
         public MigrateAvailableZoneResponse MigrateAvailableZone(MigrateAvailableZoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return MigrateAvailableZoneWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Migrates an ApsaraDB for MongoDB instance to a specific zone.
-         *
-         * @description *   This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.
-         * *   If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the [ReleasePublicNetworkAddress](https://help.aliyun.com/document_detail/67604.html) operation to release the public endpoint before you call the MigrateAvailableZone operation.
-         * *   Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.
-         * *   The source zone and the destination zone belong to the same region.
-         * *   A vSwitch is created in the destination zone. This prerequisite must be met if the instance resides in a virtual private cloud (VPC). For more information about how to create a vSwitch, see [Work with vSwitches](https://help.aliyun.com/document_detail/65387.html).
-         *
-         * @param request MigrateAvailableZoneRequest
-         * @return MigrateAvailableZoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an ApsaraDB for MongoDB instance to a specific zone.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.</para>
+        /// <list type="bullet">
+        /// <item><description>If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint before you call the MigrateAvailableZone operation.</description></item>
+        /// <item><description>Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.</description></item>
+        /// <item><description>The source zone and the destination zone belong to the same region.</description></item>
+        /// <item><description>A vSwitch is created in the destination zone. This prerequisite must be met if the instance resides in a virtual private cloud (VPC). For more information about how to create a vSwitch, see <a href="https://help.aliyun.com/document_detail/65387.html">Work with vSwitches</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateAvailableZoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateAvailableZoneResponse
+        /// </returns>
         public async Task<MigrateAvailableZoneResponse> MigrateAvailableZoneAsync(MigrateAvailableZoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await MigrateAvailableZoneWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary You can call this operation to migrate an ApsaraDB for MongoDB instance to another zone.
-         *
-         * @description This operation is applicable only to replica set instances, but not to standalone instances or sharded cluster instances.
-         * >  If you have applied for a public endpoint of the instance, you must first call the [ReleasePublicNetworkAddress](https://help.aliyun.com/document_detail/67604.html) operation to release the public endpoint.
-         *
-         * @param request MigrateToOtherZoneRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return MigrateToOtherZoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to migrate an ApsaraDB for MongoDB instance to another zone.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to replica set instances, but not to standalone instances or sharded cluster instances.</para>
+        /// <remarks>
+        /// <para> If you have applied for a public endpoint of the instance, you must first call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateToOtherZoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateToOtherZoneResponse
+        /// </returns>
         public MigrateToOtherZoneResponse MigrateToOtherZoneWithOptions(MigrateToOtherZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11668,16 +14485,29 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<MigrateToOtherZoneResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call this operation to migrate an ApsaraDB for MongoDB instance to another zone.
-         *
-         * @description This operation is applicable only to replica set instances, but not to standalone instances or sharded cluster instances.
-         * >  If you have applied for a public endpoint of the instance, you must first call the [ReleasePublicNetworkAddress](https://help.aliyun.com/document_detail/67604.html) operation to release the public endpoint.
-         *
-         * @param request MigrateToOtherZoneRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return MigrateToOtherZoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to migrate an ApsaraDB for MongoDB instance to another zone.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to replica set instances, but not to standalone instances or sharded cluster instances.</para>
+        /// <remarks>
+        /// <para> If you have applied for a public endpoint of the instance, you must first call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateToOtherZoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateToOtherZoneResponse
+        /// </returns>
         public async Task<MigrateToOtherZoneResponse> MigrateToOtherZoneWithOptionsAsync(MigrateToOtherZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11733,43 +14563,73 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<MigrateToOtherZoneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call this operation to migrate an ApsaraDB for MongoDB instance to another zone.
-         *
-         * @description This operation is applicable only to replica set instances, but not to standalone instances or sharded cluster instances.
-         * >  If you have applied for a public endpoint of the instance, you must first call the [ReleasePublicNetworkAddress](https://help.aliyun.com/document_detail/67604.html) operation to release the public endpoint.
-         *
-         * @param request MigrateToOtherZoneRequest
-         * @return MigrateToOtherZoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to migrate an ApsaraDB for MongoDB instance to another zone.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to replica set instances, but not to standalone instances or sharded cluster instances.</para>
+        /// <remarks>
+        /// <para> If you have applied for a public endpoint of the instance, you must first call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateToOtherZoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateToOtherZoneResponse
+        /// </returns>
         public MigrateToOtherZoneResponse MigrateToOtherZone(MigrateToOtherZoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return MigrateToOtherZoneWithOptions(request, runtime);
         }
 
-        /**
-         * @summary You can call this operation to migrate an ApsaraDB for MongoDB instance to another zone.
-         *
-         * @description This operation is applicable only to replica set instances, but not to standalone instances or sharded cluster instances.
-         * >  If you have applied for a public endpoint of the instance, you must first call the [ReleasePublicNetworkAddress](https://help.aliyun.com/document_detail/67604.html) operation to release the public endpoint.
-         *
-         * @param request MigrateToOtherZoneRequest
-         * @return MigrateToOtherZoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to migrate an ApsaraDB for MongoDB instance to another zone.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to replica set instances, but not to standalone instances or sharded cluster instances.</para>
+        /// <remarks>
+        /// <para> If you have applied for a public endpoint of the instance, you must first call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateToOtherZoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateToOtherZoneResponse
+        /// </returns>
         public async Task<MigrateToOtherZoneResponse> MigrateToOtherZoneAsync(MigrateToOtherZoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await MigrateToOtherZoneWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the description of the root account in an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyAccountDescriptionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAccountDescriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the description of the root account in an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAccountDescriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccountDescriptionResponse
+        /// </returns>
         public ModifyAccountDescriptionResponse ModifyAccountDescriptionWithOptions(ModifyAccountDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11821,13 +14681,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyAccountDescriptionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the description of the root account in an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyAccountDescriptionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAccountDescriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the description of the root account in an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAccountDescriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccountDescriptionResponse
+        /// </returns>
         public async Task<ModifyAccountDescriptionResponse> ModifyAccountDescriptionWithOptionsAsync(ModifyAccountDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11879,37 +14747,57 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyAccountDescriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the description of the root account in an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyAccountDescriptionRequest
-         * @return ModifyAccountDescriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the description of the root account in an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAccountDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccountDescriptionResponse
+        /// </returns>
         public ModifyAccountDescriptionResponse ModifyAccountDescription(ModifyAccountDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAccountDescriptionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the description of the root account in an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyAccountDescriptionRequest
-         * @return ModifyAccountDescriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the description of the root account in an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAccountDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccountDescriptionResponse
+        /// </returns>
         public async Task<ModifyAccountDescriptionResponse> ModifyAccountDescriptionAsync(ModifyAccountDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAccountDescriptionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the switching time of scheduled O\\\\\\&M tasks for an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyActiveOperationTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the switching time of scheduled O\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyActiveOperationTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyActiveOperationTasksResponse
+        /// </returns>
         public ModifyActiveOperationTasksResponse ModifyActiveOperationTasksWithOptions(ModifyActiveOperationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11961,13 +14849,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyActiveOperationTasksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the switching time of scheduled O\\\\\\&M tasks for an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyActiveOperationTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the switching time of scheduled O\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyActiveOperationTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyActiveOperationTasksResponse
+        /// </returns>
         public async Task<ModifyActiveOperationTasksResponse> ModifyActiveOperationTasksWithOptionsAsync(ModifyActiveOperationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12019,41 +14915,66 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyActiveOperationTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the switching time of scheduled O\\\\\\&M tasks for an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyActiveOperationTasksRequest
-         * @return ModifyActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the switching time of scheduled O\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyActiveOperationTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyActiveOperationTasksResponse
+        /// </returns>
         public ModifyActiveOperationTasksResponse ModifyActiveOperationTasks(ModifyActiveOperationTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyActiveOperationTasksWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the switching time of scheduled O\\\\\\&M tasks for an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyActiveOperationTasksRequest
-         * @return ModifyActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the switching time of scheduled O\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyActiveOperationTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyActiveOperationTasksResponse
+        /// </returns>
         public async Task<ModifyActiveOperationTasksResponse> ModifyActiveOperationTasksAsync(ModifyActiveOperationTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyActiveOperationTasksWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the types of logs collected by the audit log feature of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   The instance must be in the running state when you call this operation.
-         * *   This operation is applicable only to **general-purpose local-disk** or **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request ModifyAuditLogFilterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAuditLogFilterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of logs collected by the audit log feature of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the running state when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> or <b>dedicated local-disk</b> instances.</description></item>
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAuditLogFilterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAuditLogFilterResponse
+        /// </returns>
         public ModifyAuditLogFilterResponse ModifyAuditLogFilterWithOptions(ModifyAuditLogFilterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12105,17 +15026,30 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyAuditLogFilterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the types of logs collected by the audit log feature of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   The instance must be in the running state when you call this operation.
-         * *   This operation is applicable only to **general-purpose local-disk** or **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request ModifyAuditLogFilterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAuditLogFilterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of logs collected by the audit log feature of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the running state when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> or <b>dedicated local-disk</b> instances.</description></item>
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAuditLogFilterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAuditLogFilterResponse
+        /// </returns>
         public async Task<ModifyAuditLogFilterResponse> ModifyAuditLogFilterWithOptionsAsync(ModifyAuditLogFilterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12167,48 +15101,83 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyAuditLogFilterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the types of logs collected by the audit log feature of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   The instance must be in the running state when you call this operation.
-         * *   This operation is applicable only to **general-purpose local-disk** or **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request ModifyAuditLogFilterRequest
-         * @return ModifyAuditLogFilterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of logs collected by the audit log feature of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the running state when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> or <b>dedicated local-disk</b> instances.</description></item>
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAuditLogFilterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAuditLogFilterResponse
+        /// </returns>
         public ModifyAuditLogFilterResponse ModifyAuditLogFilter(ModifyAuditLogFilterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAuditLogFilterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the types of logs collected by the audit log feature of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   The instance must be in the running state when you call this operation.
-         * *   This operation is applicable only to **general-purpose local-disk** or **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request ModifyAuditLogFilterRequest
-         * @return ModifyAuditLogFilterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of logs collected by the audit log feature of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the running state when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> or <b>dedicated local-disk</b> instances.</description></item>
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAuditLogFilterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAuditLogFilterResponse
+        /// </returns>
         public async Task<ModifyAuditLogFilterResponse> ModifyAuditLogFilterAsync(ModifyAuditLogFilterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAuditLogFilterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables the audit log feature or configures the log storage duration for an ApsaraDB for MongoDB instance.
-         *
-         * @description *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request ModifyAuditPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAuditPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the audit log feature or configures the log storage duration for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAuditPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAuditPolicyResponse
+        /// </returns>
         public ModifyAuditPolicyResponse ModifyAuditPolicyWithOptions(ModifyAuditPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12268,16 +15237,29 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyAuditPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables or disables the audit log feature or configures the log storage duration for an ApsaraDB for MongoDB instance.
-         *
-         * @description *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request ModifyAuditPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAuditPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the audit log feature or configures the log storage duration for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAuditPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAuditPolicyResponse
+        /// </returns>
         public async Task<ModifyAuditPolicyResponse> ModifyAuditPolicyWithOptionsAsync(ModifyAuditPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12337,43 +15319,78 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyAuditPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables or disables the audit log feature or configures the log storage duration for an ApsaraDB for MongoDB instance.
-         *
-         * @description *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request ModifyAuditPolicyRequest
-         * @return ModifyAuditPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the audit log feature or configures the log storage duration for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAuditPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAuditPolicyResponse
+        /// </returns>
         public ModifyAuditPolicyResponse ModifyAuditPolicy(ModifyAuditPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAuditPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables the audit log feature or configures the log storage duration for an ApsaraDB for MongoDB instance.
-         *
-         * @description *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-         * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-         *
-         * @param request ModifyAuditPolicyRequest
-         * @return ModifyAuditPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the audit log feature or configures the log storage duration for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAuditPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAuditPolicyResponse
+        /// </returns>
         public async Task<ModifyAuditPolicyResponse> ModifyAuditPolicyAsync(ModifyAuditPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAuditPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies a backup policy for an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyBackupPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyBackupPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a backup policy for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cross-regional backup only supports  MongoDB sharded cluster instance and MongoDB replica set.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyBackupPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyBackupPolicyResponse
+        /// </returns>
         public ModifyBackupPolicyResponse ModifyBackupPolicyWithOptions(ModifyBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12493,13 +15510,26 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyBackupPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a backup policy for an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyBackupPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyBackupPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a backup policy for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cross-regional backup only supports  MongoDB sharded cluster instance and MongoDB replica set.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyBackupPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyBackupPolicyResponse
+        /// </returns>
         public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicyWithOptionsAsync(ModifyBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12619,41 +15649,76 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a backup policy for an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyBackupPolicyRequest
-         * @return ModifyBackupPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a backup policy for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cross-regional backup only supports  MongoDB sharded cluster instance and MongoDB replica set.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyBackupPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyBackupPolicyResponse
+        /// </returns>
         public ModifyBackupPolicyResponse ModifyBackupPolicy(ModifyBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyBackupPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies a backup policy for an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyBackupPolicyRequest
-         * @return ModifyBackupPolicyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a backup policy for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cross-regional backup only supports  MongoDB sharded cluster instance and MongoDB replica set.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyBackupPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyBackupPolicyResponse
+        /// </returns>
         public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicyAsync(ModifyBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyBackupPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the endpoint that is used to connect to an ApsaraDB for MongoDB instance.
-         *
-         * @description You can modify the connection strings and ports of the following instances:
-         * *   You can modify the connection strings of instances that use local or cloud disks.
-         * *   You can only modify the ports of instances that use cloud disks.
-         *
-         * @param request ModifyDBInstanceConnectionStringRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceConnectionStringResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the endpoint that is used to connect to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the connection strings and ports of the following instances:</para>
+        /// <list type="bullet">
+        /// <item><description>You can modify the connection strings of instances that use local or cloud disks.</description></item>
+        /// <item><description>You can only modify the ports of instances that use cloud disks.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceConnectionStringRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceConnectionStringResponse
+        /// </returns>
         public ModifyDBInstanceConnectionStringResponse ModifyDBInstanceConnectionStringWithOptions(ModifyDBInstanceConnectionStringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12713,17 +15778,30 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceConnectionStringResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the endpoint that is used to connect to an ApsaraDB for MongoDB instance.
-         *
-         * @description You can modify the connection strings and ports of the following instances:
-         * *   You can modify the connection strings of instances that use local or cloud disks.
-         * *   You can only modify the ports of instances that use cloud disks.
-         *
-         * @param request ModifyDBInstanceConnectionStringRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceConnectionStringResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the endpoint that is used to connect to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the connection strings and ports of the following instances:</para>
+        /// <list type="bullet">
+        /// <item><description>You can modify the connection strings of instances that use local or cloud disks.</description></item>
+        /// <item><description>You can only modify the ports of instances that use cloud disks.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceConnectionStringRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceConnectionStringResponse
+        /// </returns>
         public async Task<ModifyDBInstanceConnectionStringResponse> ModifyDBInstanceConnectionStringWithOptionsAsync(ModifyDBInstanceConnectionStringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12783,45 +15861,75 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceConnectionStringResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the endpoint that is used to connect to an ApsaraDB for MongoDB instance.
-         *
-         * @description You can modify the connection strings and ports of the following instances:
-         * *   You can modify the connection strings of instances that use local or cloud disks.
-         * *   You can only modify the ports of instances that use cloud disks.
-         *
-         * @param request ModifyDBInstanceConnectionStringRequest
-         * @return ModifyDBInstanceConnectionStringResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the endpoint that is used to connect to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the connection strings and ports of the following instances:</para>
+        /// <list type="bullet">
+        /// <item><description>You can modify the connection strings of instances that use local or cloud disks.</description></item>
+        /// <item><description>You can only modify the ports of instances that use cloud disks.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceConnectionStringRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceConnectionStringResponse
+        /// </returns>
         public ModifyDBInstanceConnectionStringResponse ModifyDBInstanceConnectionString(ModifyDBInstanceConnectionStringRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceConnectionStringWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the endpoint that is used to connect to an ApsaraDB for MongoDB instance.
-         *
-         * @description You can modify the connection strings and ports of the following instances:
-         * *   You can modify the connection strings of instances that use local or cloud disks.
-         * *   You can only modify the ports of instances that use cloud disks.
-         *
-         * @param request ModifyDBInstanceConnectionStringRequest
-         * @return ModifyDBInstanceConnectionStringResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the endpoint that is used to connect to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the connection strings and ports of the following instances:</para>
+        /// <list type="bullet">
+        /// <item><description>You can modify the connection strings of instances that use local or cloud disks.</description></item>
+        /// <item><description>You can only modify the ports of instances that use cloud disks.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceConnectionStringRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceConnectionStringResponse
+        /// </returns>
         public async Task<ModifyDBInstanceConnectionStringResponse> ModifyDBInstanceConnectionStringAsync(ModifyDBInstanceConnectionStringRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceConnectionStringWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the name of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyDBInstanceDescriptionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceDescriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceDescriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceDescriptionResponse
+        /// </returns>
         public ModifyDBInstanceDescriptionResponse ModifyDBInstanceDescriptionWithOptions(ModifyDBInstanceDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12873,13 +15981,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceDescriptionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the name of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyDBInstanceDescriptionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceDescriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceDescriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceDescriptionResponse
+        /// </returns>
         public async Task<ModifyDBInstanceDescriptionResponse> ModifyDBInstanceDescriptionWithOptionsAsync(ModifyDBInstanceDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12931,37 +16047,57 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceDescriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the name of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyDBInstanceDescriptionRequest
-         * @return ModifyDBInstanceDescriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceDescriptionResponse
+        /// </returns>
         public ModifyDBInstanceDescriptionResponse ModifyDBInstanceDescription(ModifyDBInstanceDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceDescriptionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the name of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyDBInstanceDescriptionRequest
-         * @return ModifyDBInstanceDescriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceDescriptionResponse
+        /// </returns>
         public async Task<ModifyDBInstanceDescriptionResponse> ModifyDBInstanceDescriptionAsync(ModifyDBInstanceDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceDescriptionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the disk type of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyDBInstanceDiskTypeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceDiskTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the disk type of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceDiskTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceDiskTypeResponse
+        /// </returns>
         public ModifyDBInstanceDiskTypeResponse ModifyDBInstanceDiskTypeWithOptions(ModifyDBInstanceDiskTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13025,13 +16161,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceDiskTypeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the disk type of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyDBInstanceDiskTypeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceDiskTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the disk type of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceDiskTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceDiskTypeResponse
+        /// </returns>
         public async Task<ModifyDBInstanceDiskTypeResponse> ModifyDBInstanceDiskTypeWithOptionsAsync(ModifyDBInstanceDiskTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13095,37 +16239,57 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceDiskTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the disk type of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyDBInstanceDiskTypeRequest
-         * @return ModifyDBInstanceDiskTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the disk type of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceDiskTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceDiskTypeResponse
+        /// </returns>
         public ModifyDBInstanceDiskTypeResponse ModifyDBInstanceDiskType(ModifyDBInstanceDiskTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceDiskTypeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the disk type of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyDBInstanceDiskTypeRequest
-         * @return ModifyDBInstanceDiskTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the disk type of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceDiskTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceDiskTypeResponse
+        /// </returns>
         public async Task<ModifyDBInstanceDiskTypeResponse> ModifyDBInstanceDiskTypeAsync(ModifyDBInstanceDiskTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceDiskTypeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the maintenance window of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyDBInstanceMaintainTimeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceMaintainTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maintenance window of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceMaintainTimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceMaintainTimeResponse
+        /// </returns>
         public ModifyDBInstanceMaintainTimeResponse ModifyDBInstanceMaintainTimeWithOptions(ModifyDBInstanceMaintainTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13177,13 +16341,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceMaintainTimeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the maintenance window of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyDBInstanceMaintainTimeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceMaintainTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maintenance window of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceMaintainTimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceMaintainTimeResponse
+        /// </returns>
         public async Task<ModifyDBInstanceMaintainTimeResponse> ModifyDBInstanceMaintainTimeWithOptionsAsync(ModifyDBInstanceMaintainTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13235,42 +16407,69 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceMaintainTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the maintenance window of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyDBInstanceMaintainTimeRequest
-         * @return ModifyDBInstanceMaintainTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maintenance window of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceMaintainTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceMaintainTimeResponse
+        /// </returns>
         public ModifyDBInstanceMaintainTimeResponse ModifyDBInstanceMaintainTime(ModifyDBInstanceMaintainTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceMaintainTimeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the maintenance window of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyDBInstanceMaintainTimeRequest
-         * @return ModifyDBInstanceMaintainTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maintenance window of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceMaintainTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceMaintainTimeResponse
+        /// </returns>
         public async Task<ModifyDBInstanceMaintainTimeResponse> ModifyDBInstanceMaintainTimeAsync(ModifyDBInstanceMaintainTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceMaintainTimeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary You can call this operation to set the monitoring granularity for an ApsaraDB for MongoDB instance.
-         *
-         * @description >  This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the feature of adjusting collection intervals of monitoring data.
-         * Before you call this operation, make sure that the following requirements are met:
-         * *   A replica set or sharded cluster instance is used.
-         * *   MongoDB 3.4 (the latest minor version) or MongoDB 4.0 is selected.
-         *
-         * @param request ModifyDBInstanceMonitorRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceMonitorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to set the monitoring granularity for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the feature of adjusting collection intervals of monitoring data.
+        /// Before you call this operation, make sure that the following requirements are met:</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>A replica set or sharded cluster instance is used.</description></item>
+        /// <item><description>MongoDB 3.4 (the latest minor version) or MongoDB 4.0 is selected.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceMonitorResponse
+        /// </returns>
         public ModifyDBInstanceMonitorResponse ModifyDBInstanceMonitorWithOptions(ModifyDBInstanceMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13318,18 +16517,33 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceMonitorResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call this operation to set the monitoring granularity for an ApsaraDB for MongoDB instance.
-         *
-         * @description >  This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the feature of adjusting collection intervals of monitoring data.
-         * Before you call this operation, make sure that the following requirements are met:
-         * *   A replica set or sharded cluster instance is used.
-         * *   MongoDB 3.4 (the latest minor version) or MongoDB 4.0 is selected.
-         *
-         * @param request ModifyDBInstanceMonitorRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceMonitorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to set the monitoring granularity for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the feature of adjusting collection intervals of monitoring data.
+        /// Before you call this operation, make sure that the following requirements are met:</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>A replica set or sharded cluster instance is used.</description></item>
+        /// <item><description>MongoDB 3.4 (the latest minor version) or MongoDB 4.0 is selected.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceMonitorResponse
+        /// </returns>
         public async Task<ModifyDBInstanceMonitorResponse> ModifyDBInstanceMonitorWithOptionsAsync(ModifyDBInstanceMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13377,52 +16591,93 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceMonitorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call this operation to set the monitoring granularity for an ApsaraDB for MongoDB instance.
-         *
-         * @description >  This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the feature of adjusting collection intervals of monitoring data.
-         * Before you call this operation, make sure that the following requirements are met:
-         * *   A replica set or sharded cluster instance is used.
-         * *   MongoDB 3.4 (the latest minor version) or MongoDB 4.0 is selected.
-         *
-         * @param request ModifyDBInstanceMonitorRequest
-         * @return ModifyDBInstanceMonitorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to set the monitoring granularity for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the feature of adjusting collection intervals of monitoring data.
+        /// Before you call this operation, make sure that the following requirements are met:</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>A replica set or sharded cluster instance is used.</description></item>
+        /// <item><description>MongoDB 3.4 (the latest minor version) or MongoDB 4.0 is selected.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceMonitorResponse
+        /// </returns>
         public ModifyDBInstanceMonitorResponse ModifyDBInstanceMonitor(ModifyDBInstanceMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceMonitorWithOptions(request, runtime);
         }
 
-        /**
-         * @summary You can call this operation to set the monitoring granularity for an ApsaraDB for MongoDB instance.
-         *
-         * @description >  This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the feature of adjusting collection intervals of monitoring data.
-         * Before you call this operation, make sure that the following requirements are met:
-         * *   A replica set or sharded cluster instance is used.
-         * *   MongoDB 3.4 (the latest minor version) or MongoDB 4.0 is selected.
-         *
-         * @param request ModifyDBInstanceMonitorRequest
-         * @return ModifyDBInstanceMonitorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to set the monitoring granularity for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the feature of adjusting collection intervals of monitoring data.
+        /// Before you call this operation, make sure that the following requirements are met:</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>A replica set or sharded cluster instance is used.</description></item>
+        /// <item><description>MongoDB 3.4 (the latest minor version) or MongoDB 4.0 is selected.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceMonitorResponse
+        /// </returns>
         public async Task<ModifyDBInstanceMonitorResponse> ModifyDBInstanceMonitorAsync(ModifyDBInstanceMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceMonitorWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Extends the retention period of the classic network endpoint of an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance is in the Running state.
-         * *   The network of the instance is in hybrid access mode.
-         * >  This operation is supported by replica set instances and sharded cluster instances. This operation is not supported by standalone instances.
-         *
-         * @param request ModifyDBInstanceNetExpireTimeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceNetExpireTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Extends the retention period of the classic network endpoint of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The network of the instance is in hybrid access mode.<remarks>
+        /// <para> This operation is supported by replica set instances and sharded cluster instances. This operation is not supported by standalone instances.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceNetExpireTimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceNetExpireTimeResponse
+        /// </returns>
         public ModifyDBInstanceNetExpireTimeResponse ModifyDBInstanceNetExpireTimeWithOptions(ModifyDBInstanceNetExpireTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13474,18 +16729,33 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceNetExpireTimeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Extends the retention period of the classic network endpoint of an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance is in the Running state.
-         * *   The network of the instance is in hybrid access mode.
-         * >  This operation is supported by replica set instances and sharded cluster instances. This operation is not supported by standalone instances.
-         *
-         * @param request ModifyDBInstanceNetExpireTimeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceNetExpireTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Extends the retention period of the classic network endpoint of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The network of the instance is in hybrid access mode.<remarks>
+        /// <para> This operation is supported by replica set instances and sharded cluster instances. This operation is not supported by standalone instances.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceNetExpireTimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceNetExpireTimeResponse
+        /// </returns>
         public async Task<ModifyDBInstanceNetExpireTimeResponse> ModifyDBInstanceNetExpireTimeWithOptionsAsync(ModifyDBInstanceNetExpireTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13537,49 +16807,86 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceNetExpireTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Extends the retention period of the classic network endpoint of an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance is in the Running state.
-         * *   The network of the instance is in hybrid access mode.
-         * >  This operation is supported by replica set instances and sharded cluster instances. This operation is not supported by standalone instances.
-         *
-         * @param request ModifyDBInstanceNetExpireTimeRequest
-         * @return ModifyDBInstanceNetExpireTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Extends the retention period of the classic network endpoint of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The network of the instance is in hybrid access mode.<remarks>
+        /// <para> This operation is supported by replica set instances and sharded cluster instances. This operation is not supported by standalone instances.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceNetExpireTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceNetExpireTimeResponse
+        /// </returns>
         public ModifyDBInstanceNetExpireTimeResponse ModifyDBInstanceNetExpireTime(ModifyDBInstanceNetExpireTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceNetExpireTimeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Extends the retention period of the classic network endpoint of an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the instance meets the following requirements:
-         * *   The instance is in the Running state.
-         * *   The network of the instance is in hybrid access mode.
-         * >  This operation is supported by replica set instances and sharded cluster instances. This operation is not supported by standalone instances.
-         *
-         * @param request ModifyDBInstanceNetExpireTimeRequest
-         * @return ModifyDBInstanceNetExpireTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Extends the retention period of the classic network endpoint of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The network of the instance is in hybrid access mode.<remarks>
+        /// <para> This operation is supported by replica set instances and sharded cluster instances. This operation is not supported by standalone instances.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceNetExpireTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceNetExpireTimeResponse
+        /// </returns>
         public async Task<ModifyDBInstanceNetExpireTimeResponse> ModifyDBInstanceNetExpireTimeAsync(ModifyDBInstanceNetExpireTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceNetExpireTimeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Changes the network type of an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to replica set instances and sharded cluster instances, but not standalone instances. You can call this operation to change the network of an instance from a classic network to a VPC.
-         *
-         * @param request ModifyDBInstanceNetworkTypeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceNetworkTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the network type of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to replica set instances and sharded cluster instances, but not standalone instances. You can call this operation to change the network of an instance from a classic network to a VPC.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceNetworkTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceNetworkTypeResponse
+        /// </returns>
         public ModifyDBInstanceNetworkTypeResponse ModifyDBInstanceNetworkTypeWithOptions(ModifyDBInstanceNetworkTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13647,15 +16954,26 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceNetworkTypeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the network type of an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to replica set instances and sharded cluster instances, but not standalone instances. You can call this operation to change the network of an instance from a classic network to a VPC.
-         *
-         * @param request ModifyDBInstanceNetworkTypeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceNetworkTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the network type of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to replica set instances and sharded cluster instances, but not standalone instances. You can call this operation to change the network of an instance from a classic network to a VPC.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceNetworkTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceNetworkTypeResponse
+        /// </returns>
         public async Task<ModifyDBInstanceNetworkTypeResponse> ModifyDBInstanceNetworkTypeWithOptionsAsync(ModifyDBInstanceNetworkTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13723,48 +17041,81 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceNetworkTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the network type of an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to replica set instances and sharded cluster instances, but not standalone instances. You can call this operation to change the network of an instance from a classic network to a VPC.
-         *
-         * @param request ModifyDBInstanceNetworkTypeRequest
-         * @return ModifyDBInstanceNetworkTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the network type of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to replica set instances and sharded cluster instances, but not standalone instances. You can call this operation to change the network of an instance from a classic network to a VPC.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceNetworkTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceNetworkTypeResponse
+        /// </returns>
         public ModifyDBInstanceNetworkTypeResponse ModifyDBInstanceNetworkType(ModifyDBInstanceNetworkTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceNetworkTypeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Changes the network type of an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation is applicable to replica set instances and sharded cluster instances, but not standalone instances. You can call this operation to change the network of an instance from a classic network to a VPC.
-         *
-         * @param request ModifyDBInstanceNetworkTypeRequest
-         * @return ModifyDBInstanceNetworkTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the network type of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable to replica set instances and sharded cluster instances, but not standalone instances. You can call this operation to change the network of an instance from a classic network to a VPC.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceNetworkTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceNetworkTypeResponse
+        /// </returns>
         public async Task<ModifyDBInstanceNetworkTypeResponse> ModifyDBInstanceNetworkTypeAsync(ModifyDBInstanceNetworkTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceNetworkTypeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the SSL settings of an ApsaraDB for MongoDB instance.
-         *
-         * @description ## Usage
-         * Before you call this operation, make sure that the following requirements are met:
-         * *   The instance is in the running state.
-         * *   The instance is a replica set instance.
-         * *   The engine version of the instance is 3.4 or 4.0.
-         * >  When you enable or disable SSL encryption or update the SSL certificate, the instance restarts. We recommend that you call this operation during off-peak hours.
-         *
-         * @param request ModifyDBInstanceSSLRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceSSLResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the SSL settings of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage</h2>
+        /// <para>Before you call this operation, make sure that the following requirements are met:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the running state.</description></item>
+        /// <item><description>The instance is a replica set instance.</description></item>
+        /// <item><description>The engine version of the instance is 3.4 or 4.0.<remarks>
+        /// <para> When you enable or disable SSL encryption or update the SSL certificate, the instance restarts. We recommend that you call this operation during off-peak hours.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceSSLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceSSLResponse
+        /// </returns>
         public ModifyDBInstanceSSLResponse ModifyDBInstanceSSLWithOptions(ModifyDBInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13812,20 +17163,35 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceSSLResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the SSL settings of an ApsaraDB for MongoDB instance.
-         *
-         * @description ## Usage
-         * Before you call this operation, make sure that the following requirements are met:
-         * *   The instance is in the running state.
-         * *   The instance is a replica set instance.
-         * *   The engine version of the instance is 3.4 or 4.0.
-         * >  When you enable or disable SSL encryption or update the SSL certificate, the instance restarts. We recommend that you call this operation during off-peak hours.
-         *
-         * @param request ModifyDBInstanceSSLRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceSSLResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the SSL settings of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage</h2>
+        /// <para>Before you call this operation, make sure that the following requirements are met:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the running state.</description></item>
+        /// <item><description>The instance is a replica set instance.</description></item>
+        /// <item><description>The engine version of the instance is 3.4 or 4.0.<remarks>
+        /// <para> When you enable or disable SSL encryption or update the SSL certificate, the instance restarts. We recommend that you call this operation during off-peak hours.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceSSLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceSSLResponse
+        /// </returns>
         public async Task<ModifyDBInstanceSSLResponse> ModifyDBInstanceSSLWithOptionsAsync(ModifyDBInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13873,54 +17239,91 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceSSLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the SSL settings of an ApsaraDB for MongoDB instance.
-         *
-         * @description ## Usage
-         * Before you call this operation, make sure that the following requirements are met:
-         * *   The instance is in the running state.
-         * *   The instance is a replica set instance.
-         * *   The engine version of the instance is 3.4 or 4.0.
-         * >  When you enable or disable SSL encryption or update the SSL certificate, the instance restarts. We recommend that you call this operation during off-peak hours.
-         *
-         * @param request ModifyDBInstanceSSLRequest
-         * @return ModifyDBInstanceSSLResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the SSL settings of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage</h2>
+        /// <para>Before you call this operation, make sure that the following requirements are met:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the running state.</description></item>
+        /// <item><description>The instance is a replica set instance.</description></item>
+        /// <item><description>The engine version of the instance is 3.4 or 4.0.<remarks>
+        /// <para> When you enable or disable SSL encryption or update the SSL certificate, the instance restarts. We recommend that you call this operation during off-peak hours.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceSSLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceSSLResponse
+        /// </returns>
         public ModifyDBInstanceSSLResponse ModifyDBInstanceSSL(ModifyDBInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceSSLWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the SSL settings of an ApsaraDB for MongoDB instance.
-         *
-         * @description ## Usage
-         * Before you call this operation, make sure that the following requirements are met:
-         * *   The instance is in the running state.
-         * *   The instance is a replica set instance.
-         * *   The engine version of the instance is 3.4 or 4.0.
-         * >  When you enable or disable SSL encryption or update the SSL certificate, the instance restarts. We recommend that you call this operation during off-peak hours.
-         *
-         * @param request ModifyDBInstanceSSLRequest
-         * @return ModifyDBInstanceSSLResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the SSL settings of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage</h2>
+        /// <para>Before you call this operation, make sure that the following requirements are met:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the running state.</description></item>
+        /// <item><description>The instance is a replica set instance.</description></item>
+        /// <item><description>The engine version of the instance is 3.4 or 4.0.<remarks>
+        /// <para> When you enable or disable SSL encryption or update the SSL certificate, the instance restarts. We recommend that you call this operation during off-peak hours.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceSSLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceSSLResponse
+        /// </returns>
         public async Task<ModifyDBInstanceSSLResponse> ModifyDBInstanceSSLAsync(ModifyDBInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceSSLWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the specifications or storage space of an ApsaraDB for MongoDB standalone, replica set, or serverless instance. Serverless instances are available only on the China site (aliyun.com).
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-         * This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the [ModifyNodeSpec](https://help.aliyun.com/document_detail/61911.html), [CreateNode](https://help.aliyun.com/document_detail/61922.html), [DeleteNode](https://help.aliyun.com/document_detail/61816.html), or [ModifyNodeSpecBatch](https://help.aliyun.com/document_detail/61923.html) operation.
-         *
-         * @param request ModifyDBInstanceSpecRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceSpecResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the specifications or storage space of an ApsaraDB for MongoDB standalone, replica set, or serverless instance. Serverless instances are available only on the China site (aliyun.com).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the <a href="https://help.aliyun.com/document_detail/61911.html">ModifyNodeSpec</a>, <a href="https://help.aliyun.com/document_detail/61922.html">CreateNode</a>, <a href="https://help.aliyun.com/document_detail/61816.html">DeleteNode</a>, or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpecBatch</a> operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceSpecRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceSpecResponse
+        /// </returns>
         public ModifyDBInstanceSpecResponse ModifyDBInstanceSpecWithOptions(ModifyDBInstanceSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14004,16 +17407,27 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceSpecResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the specifications or storage space of an ApsaraDB for MongoDB standalone, replica set, or serverless instance. Serverless instances are available only on the China site (aliyun.com).
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-         * This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the [ModifyNodeSpec](https://help.aliyun.com/document_detail/61911.html), [CreateNode](https://help.aliyun.com/document_detail/61922.html), [DeleteNode](https://help.aliyun.com/document_detail/61816.html), or [ModifyNodeSpecBatch](https://help.aliyun.com/document_detail/61923.html) operation.
-         *
-         * @param request ModifyDBInstanceSpecRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceSpecResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the specifications or storage space of an ApsaraDB for MongoDB standalone, replica set, or serverless instance. Serverless instances are available only on the China site (aliyun.com).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the <a href="https://help.aliyun.com/document_detail/61911.html">ModifyNodeSpec</a>, <a href="https://help.aliyun.com/document_detail/61922.html">CreateNode</a>, <a href="https://help.aliyun.com/document_detail/61816.html">DeleteNode</a>, or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpecBatch</a> operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceSpecRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceSpecResponse
+        /// </returns>
         public async Task<ModifyDBInstanceSpecResponse> ModifyDBInstanceSpecWithOptionsAsync(ModifyDBInstanceSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14097,51 +17511,84 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceSpecResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the specifications or storage space of an ApsaraDB for MongoDB standalone, replica set, or serverless instance. Serverless instances are available only on the China site (aliyun.com).
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-         * This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the [ModifyNodeSpec](https://help.aliyun.com/document_detail/61911.html), [CreateNode](https://help.aliyun.com/document_detail/61922.html), [DeleteNode](https://help.aliyun.com/document_detail/61816.html), or [ModifyNodeSpecBatch](https://help.aliyun.com/document_detail/61923.html) operation.
-         *
-         * @param request ModifyDBInstanceSpecRequest
-         * @return ModifyDBInstanceSpecResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the specifications or storage space of an ApsaraDB for MongoDB standalone, replica set, or serverless instance. Serverless instances are available only on the China site (aliyun.com).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the <a href="https://help.aliyun.com/document_detail/61911.html">ModifyNodeSpec</a>, <a href="https://help.aliyun.com/document_detail/61922.html">CreateNode</a>, <a href="https://help.aliyun.com/document_detail/61816.html">DeleteNode</a>, or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpecBatch</a> operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceSpecResponse
+        /// </returns>
         public ModifyDBInstanceSpecResponse ModifyDBInstanceSpec(ModifyDBInstanceSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceSpecWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the specifications or storage space of an ApsaraDB for MongoDB standalone, replica set, or serverless instance. Serverless instances are available only on the China site (aliyun.com).
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-         * This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the [ModifyNodeSpec](https://help.aliyun.com/document_detail/61911.html), [CreateNode](https://help.aliyun.com/document_detail/61922.html), [DeleteNode](https://help.aliyun.com/document_detail/61816.html), or [ModifyNodeSpecBatch](https://help.aliyun.com/document_detail/61923.html) operation.
-         *
-         * @param request ModifyDBInstanceSpecRequest
-         * @return ModifyDBInstanceSpecResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the specifications or storage space of an ApsaraDB for MongoDB standalone, replica set, or serverless instance. Serverless instances are available only on the China site (aliyun.com).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the <a href="https://help.aliyun.com/document_detail/61911.html">ModifyNodeSpec</a>, <a href="https://help.aliyun.com/document_detail/61922.html">CreateNode</a>, <a href="https://help.aliyun.com/document_detail/61816.html">DeleteNode</a>, or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpecBatch</a> operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceSpecResponse
+        /// </returns>
         public async Task<ModifyDBInstanceSpecResponse> ModifyDBInstanceSpecAsync(ModifyDBInstanceSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceSpecWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the transparent data encryption (TDE) status of an ApsaraDB for MongoDB instance.
-         *
-         * @description TDE allows you to perform real-time I/O encryption and decryption on data files. Data is encrypted before it is written to a disk and is decrypted when it is read from the disk to the memory. For more information, see [Configure TDE](https://help.aliyun.com/document_detail/131048.html).
-         * >  TDE cannot be disabled after it is enabled.
-         * Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   A replica set or sharded cluster instance is used.
-         * *   The storage engine of the instance is WiredTiger.
-         * *   The instance uses local disks to store data.
-         * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the [UpgradeDBInstanceEngineVersion](https://help.aliyun.com/document_detail/67608.html) operation to upgrade the database engine.
-         *
-         * @param request ModifyDBInstanceTDERequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceTDEResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the transparent data encryption (TDE) status of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>TDE allows you to perform real-time I/O encryption and decryption on data files. Data is encrypted before it is written to a disk and is decrypted when it is read from the disk to the memory. For more information, see <a href="https://help.aliyun.com/document_detail/131048.html">Configure TDE</a>.</para>
+        /// <remarks>
+        /// <para> TDE cannot be disabled after it is enabled.
+        /// Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>A replica set or sharded cluster instance is used.</description></item>
+        /// <item><description>The storage engine of the instance is WiredTiger.</description></item>
+        /// <item><description>The instance uses local disks to store data.</description></item>
+        /// <item><description>The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database engine.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceTDERequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceTDEResponse
+        /// </returns>
         public ModifyDBInstanceTDEResponse ModifyDBInstanceTDEWithOptions(ModifyDBInstanceTDERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14201,21 +17648,36 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceTDEResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the transparent data encryption (TDE) status of an ApsaraDB for MongoDB instance.
-         *
-         * @description TDE allows you to perform real-time I/O encryption and decryption on data files. Data is encrypted before it is written to a disk and is decrypted when it is read from the disk to the memory. For more information, see [Configure TDE](https://help.aliyun.com/document_detail/131048.html).
-         * >  TDE cannot be disabled after it is enabled.
-         * Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   A replica set or sharded cluster instance is used.
-         * *   The storage engine of the instance is WiredTiger.
-         * *   The instance uses local disks to store data.
-         * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the [UpgradeDBInstanceEngineVersion](https://help.aliyun.com/document_detail/67608.html) operation to upgrade the database engine.
-         *
-         * @param request ModifyDBInstanceTDERequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceTDEResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the transparent data encryption (TDE) status of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>TDE allows you to perform real-time I/O encryption and decryption on data files. Data is encrypted before it is written to a disk and is decrypted when it is read from the disk to the memory. For more information, see <a href="https://help.aliyun.com/document_detail/131048.html">Configure TDE</a>.</para>
+        /// <remarks>
+        /// <para> TDE cannot be disabled after it is enabled.
+        /// Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>A replica set or sharded cluster instance is used.</description></item>
+        /// <item><description>The storage engine of the instance is WiredTiger.</description></item>
+        /// <item><description>The instance uses local disks to store data.</description></item>
+        /// <item><description>The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database engine.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceTDERequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceTDEResponse
+        /// </returns>
         public async Task<ModifyDBInstanceTDEResponse> ModifyDBInstanceTDEWithOptionsAsync(ModifyDBInstanceTDERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14275,53 +17737,87 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceTDEResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the transparent data encryption (TDE) status of an ApsaraDB for MongoDB instance.
-         *
-         * @description TDE allows you to perform real-time I/O encryption and decryption on data files. Data is encrypted before it is written to a disk and is decrypted when it is read from the disk to the memory. For more information, see [Configure TDE](https://help.aliyun.com/document_detail/131048.html).
-         * >  TDE cannot be disabled after it is enabled.
-         * Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   A replica set or sharded cluster instance is used.
-         * *   The storage engine of the instance is WiredTiger.
-         * *   The instance uses local disks to store data.
-         * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the [UpgradeDBInstanceEngineVersion](https://help.aliyun.com/document_detail/67608.html) operation to upgrade the database engine.
-         *
-         * @param request ModifyDBInstanceTDERequest
-         * @return ModifyDBInstanceTDEResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the transparent data encryption (TDE) status of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>TDE allows you to perform real-time I/O encryption and decryption on data files. Data is encrypted before it is written to a disk and is decrypted when it is read from the disk to the memory. For more information, see <a href="https://help.aliyun.com/document_detail/131048.html">Configure TDE</a>.</para>
+        /// <remarks>
+        /// <para> TDE cannot be disabled after it is enabled.
+        /// Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>A replica set or sharded cluster instance is used.</description></item>
+        /// <item><description>The storage engine of the instance is WiredTiger.</description></item>
+        /// <item><description>The instance uses local disks to store data.</description></item>
+        /// <item><description>The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database engine.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceTDERequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceTDEResponse
+        /// </returns>
         public ModifyDBInstanceTDEResponse ModifyDBInstanceTDE(ModifyDBInstanceTDERequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceTDEWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the transparent data encryption (TDE) status of an ApsaraDB for MongoDB instance.
-         *
-         * @description TDE allows you to perform real-time I/O encryption and decryption on data files. Data is encrypted before it is written to a disk and is decrypted when it is read from the disk to the memory. For more information, see [Configure TDE](https://help.aliyun.com/document_detail/131048.html).
-         * >  TDE cannot be disabled after it is enabled.
-         * Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   A replica set or sharded cluster instance is used.
-         * *   The storage engine of the instance is WiredTiger.
-         * *   The instance uses local disks to store data.
-         * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the [UpgradeDBInstanceEngineVersion](https://help.aliyun.com/document_detail/67608.html) operation to upgrade the database engine.
-         *
-         * @param request ModifyDBInstanceTDERequest
-         * @return ModifyDBInstanceTDEResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the transparent data encryption (TDE) status of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>TDE allows you to perform real-time I/O encryption and decryption on data files. Data is encrypted before it is written to a disk and is decrypted when it is read from the disk to the memory. For more information, see <a href="https://help.aliyun.com/document_detail/131048.html">Configure TDE</a>.</para>
+        /// <remarks>
+        /// <para> TDE cannot be disabled after it is enabled.
+        /// Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>A replica set or sharded cluster instance is used.</description></item>
+        /// <item><description>The storage engine of the instance is WiredTiger.</description></item>
+        /// <item><description>The instance uses local disks to store data.</description></item>
+        /// <item><description>The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database engine.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceTDERequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceTDEResponse
+        /// </returns>
         public async Task<ModifyDBInstanceTDEResponse> ModifyDBInstanceTDEAsync(ModifyDBInstanceTDERequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceTDEWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the global IP whitelist template associated with an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyGlobalSecurityIPGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyGlobalSecurityIPGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the global IP whitelist template associated with an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyGlobalSecurityIPGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyGlobalSecurityIPGroupResponse
+        /// </returns>
         public ModifyGlobalSecurityIPGroupResponse ModifyGlobalSecurityIPGroupWithOptions(ModifyGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14377,13 +17873,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyGlobalSecurityIPGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the global IP whitelist template associated with an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyGlobalSecurityIPGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyGlobalSecurityIPGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the global IP whitelist template associated with an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyGlobalSecurityIPGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyGlobalSecurityIPGroupResponse
+        /// </returns>
         public async Task<ModifyGlobalSecurityIPGroupResponse> ModifyGlobalSecurityIPGroupWithOptionsAsync(ModifyGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14439,37 +17943,57 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyGlobalSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the global IP whitelist template associated with an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyGlobalSecurityIPGroupRequest
-         * @return ModifyGlobalSecurityIPGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the global IP whitelist template associated with an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyGlobalSecurityIPGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyGlobalSecurityIPGroupResponse
+        /// </returns>
         public ModifyGlobalSecurityIPGroupResponse ModifyGlobalSecurityIPGroup(ModifyGlobalSecurityIPGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyGlobalSecurityIPGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the global IP whitelist template associated with an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyGlobalSecurityIPGroupRequest
-         * @return ModifyGlobalSecurityIPGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the global IP whitelist template associated with an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyGlobalSecurityIPGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyGlobalSecurityIPGroupResponse
+        /// </returns>
         public async Task<ModifyGlobalSecurityIPGroupResponse> ModifyGlobalSecurityIPGroupAsync(ModifyGlobalSecurityIPGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyGlobalSecurityIPGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the name of a global IP whitelist template associated with an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyGlobalSecurityIPGroupNameRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyGlobalSecurityIPGroupNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of a global IP whitelist template associated with an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyGlobalSecurityIPGroupNameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyGlobalSecurityIPGroupNameResponse
+        /// </returns>
         public ModifyGlobalSecurityIPGroupNameResponse ModifyGlobalSecurityIPGroupNameWithOptions(ModifyGlobalSecurityIPGroupNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14521,13 +18045,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyGlobalSecurityIPGroupNameResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the name of a global IP whitelist template associated with an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyGlobalSecurityIPGroupNameRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyGlobalSecurityIPGroupNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of a global IP whitelist template associated with an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyGlobalSecurityIPGroupNameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyGlobalSecurityIPGroupNameResponse
+        /// </returns>
         public async Task<ModifyGlobalSecurityIPGroupNameResponse> ModifyGlobalSecurityIPGroupNameWithOptionsAsync(ModifyGlobalSecurityIPGroupNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14579,37 +18111,57 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyGlobalSecurityIPGroupNameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the name of a global IP whitelist template associated with an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyGlobalSecurityIPGroupNameRequest
-         * @return ModifyGlobalSecurityIPGroupNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of a global IP whitelist template associated with an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyGlobalSecurityIPGroupNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyGlobalSecurityIPGroupNameResponse
+        /// </returns>
         public ModifyGlobalSecurityIPGroupNameResponse ModifyGlobalSecurityIPGroupName(ModifyGlobalSecurityIPGroupNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyGlobalSecurityIPGroupNameWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the name of a global IP whitelist template associated with an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyGlobalSecurityIPGroupNameRequest
-         * @return ModifyGlobalSecurityIPGroupNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of a global IP whitelist template associated with an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyGlobalSecurityIPGroupNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyGlobalSecurityIPGroupNameResponse
+        /// </returns>
         public async Task<ModifyGlobalSecurityIPGroupNameResponse> ModifyGlobalSecurityIPGroupNameAsync(ModifyGlobalSecurityIPGroupNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyGlobalSecurityIPGroupNameWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the mapping between a global whitelist template and an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyGlobalSecurityIPGroupRelationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyGlobalSecurityIPGroupRelationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the mapping between a global whitelist template and an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyGlobalSecurityIPGroupRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyGlobalSecurityIPGroupRelationResponse
+        /// </returns>
         public ModifyGlobalSecurityIPGroupRelationResponse ModifyGlobalSecurityIPGroupRelationWithOptions(ModifyGlobalSecurityIPGroupRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14661,13 +18213,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyGlobalSecurityIPGroupRelationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the mapping between a global whitelist template and an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyGlobalSecurityIPGroupRelationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyGlobalSecurityIPGroupRelationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the mapping between a global whitelist template and an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyGlobalSecurityIPGroupRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyGlobalSecurityIPGroupRelationResponse
+        /// </returns>
         public async Task<ModifyGlobalSecurityIPGroupRelationResponse> ModifyGlobalSecurityIPGroupRelationWithOptionsAsync(ModifyGlobalSecurityIPGroupRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14719,41 +18279,66 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyGlobalSecurityIPGroupRelationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the mapping between a global whitelist template and an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyGlobalSecurityIPGroupRelationRequest
-         * @return ModifyGlobalSecurityIPGroupRelationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the mapping between a global whitelist template and an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyGlobalSecurityIPGroupRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyGlobalSecurityIPGroupRelationResponse
+        /// </returns>
         public ModifyGlobalSecurityIPGroupRelationResponse ModifyGlobalSecurityIPGroupRelation(ModifyGlobalSecurityIPGroupRelationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyGlobalSecurityIPGroupRelationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the mapping between a global whitelist template and an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifyGlobalSecurityIPGroupRelationRequest
-         * @return ModifyGlobalSecurityIPGroupRelationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the mapping between a global whitelist template and an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyGlobalSecurityIPGroupRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyGlobalSecurityIPGroupRelationResponse
+        /// </returns>
         public async Task<ModifyGlobalSecurityIPGroupRelationResponse> ModifyGlobalSecurityIPGroupRelationAsync(ModifyGlobalSecurityIPGroupRelationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyGlobalSecurityIPGroupRelationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables auto-renewal for an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-         * This operation is applicable to subscription instances.
-         * >  When auto-renewal is enabled, your payment will be collected nine days before the expiration date of ApsaraDB for MongoDB. Ensure that your account has sufficient balance.
-         *
-         * @param request ModifyInstanceAutoRenewalAttributeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyInstanceAutoRenewalAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables auto-renewal for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a>.
+        /// This operation is applicable to subscription instances.</para>
+        /// <remarks>
+        /// <para> When auto-renewal is enabled, your payment will be collected nine days before the expiration date of ApsaraDB for MongoDB. Ensure that your account has sufficient balance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceAutoRenewalAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceAutoRenewalAttributeResponse
+        /// </returns>
         public ModifyInstanceAutoRenewalAttributeResponse ModifyInstanceAutoRenewalAttributeWithOptions(ModifyInstanceAutoRenewalAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14809,17 +18394,30 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyInstanceAutoRenewalAttributeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables or disables auto-renewal for an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-         * This operation is applicable to subscription instances.
-         * >  When auto-renewal is enabled, your payment will be collected nine days before the expiration date of ApsaraDB for MongoDB. Ensure that your account has sufficient balance.
-         *
-         * @param request ModifyInstanceAutoRenewalAttributeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyInstanceAutoRenewalAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables auto-renewal for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a>.
+        /// This operation is applicable to subscription instances.</para>
+        /// <remarks>
+        /// <para> When auto-renewal is enabled, your payment will be collected nine days before the expiration date of ApsaraDB for MongoDB. Ensure that your account has sufficient balance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceAutoRenewalAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceAutoRenewalAttributeResponse
+        /// </returns>
         public async Task<ModifyInstanceAutoRenewalAttributeResponse> ModifyInstanceAutoRenewalAttributeWithOptionsAsync(ModifyInstanceAutoRenewalAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14875,51 +18473,86 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyInstanceAutoRenewalAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables or disables auto-renewal for an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-         * This operation is applicable to subscription instances.
-         * >  When auto-renewal is enabled, your payment will be collected nine days before the expiration date of ApsaraDB for MongoDB. Ensure that your account has sufficient balance.
-         *
-         * @param request ModifyInstanceAutoRenewalAttributeRequest
-         * @return ModifyInstanceAutoRenewalAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables auto-renewal for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a>.
+        /// This operation is applicable to subscription instances.</para>
+        /// <remarks>
+        /// <para> When auto-renewal is enabled, your payment will be collected nine days before the expiration date of ApsaraDB for MongoDB. Ensure that your account has sufficient balance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceAutoRenewalAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceAutoRenewalAttributeResponse
+        /// </returns>
         public ModifyInstanceAutoRenewalAttributeResponse ModifyInstanceAutoRenewalAttribute(ModifyInstanceAutoRenewalAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceAutoRenewalAttributeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables auto-renewal for an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-         * This operation is applicable to subscription instances.
-         * >  When auto-renewal is enabled, your payment will be collected nine days before the expiration date of ApsaraDB for MongoDB. Ensure that your account has sufficient balance.
-         *
-         * @param request ModifyInstanceAutoRenewalAttributeRequest
-         * @return ModifyInstanceAutoRenewalAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables auto-renewal for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a>.
+        /// This operation is applicable to subscription instances.</para>
+        /// <remarks>
+        /// <para> When auto-renewal is enabled, your payment will be collected nine days before the expiration date of ApsaraDB for MongoDB. Ensure that your account has sufficient balance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceAutoRenewalAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceAutoRenewalAttributeResponse
+        /// </returns>
         public async Task<ModifyInstanceAutoRenewalAttributeResponse> ModifyInstanceAutoRenewalAttributeAsync(ModifyInstanceAutoRenewalAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceAutoRenewalAttributeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Disables password-free access over Virtual Private Cloud (VPC) for an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   The instance is a replica set or sharded cluster instance.
-         * *   The database engine version of the instance is 4.0 (with the minor version of mongodb_20190408_3.0.11 or later) or 4.2. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/62010.html) operation to view the database engine version of the instance. If necessary, you can call the [UpgradeDBInstanceEngineVersion](https://help.aliyun.com/document_detail/67608.html) operation to upgrade the database engine version of the instance.
-         * *   The network type of the instance must be VPC. If the network type of the instance is classic network, you must call the [ModifyDBInstanceNetworkType](https://help.aliyun.com/document_detail/62138.html) operation to change the network type to VPC.
-         * *   You can only disable but not enable password-free access over VPC.
-         *
-         * @param request ModifyInstanceVpcAuthModeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyInstanceVpcAuthModeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables password-free access over Virtual Private Cloud (VPC) for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is a replica set or sharded cluster instance.</description></item>
+        /// <item><description>The database engine version of the instance is 4.0 (with the minor version of mongodb_20190408_3.0.11 or later) or 4.2. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the database engine version of the instance. If necessary, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database engine version of the instance.</description></item>
+        /// <item><description>The network type of the instance must be VPC. If the network type of the instance is classic network, you must call the <a href="https://help.aliyun.com/document_detail/62138.html">ModifyDBInstanceNetworkType</a> operation to change the network type to VPC.</description></item>
+        /// <item><description>You can only disable but not enable password-free access over VPC.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceVpcAuthModeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceVpcAuthModeResponse
+        /// </returns>
         public ModifyInstanceVpcAuthModeResponse ModifyInstanceVpcAuthModeWithOptions(ModifyInstanceVpcAuthModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14971,19 +18604,32 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyInstanceVpcAuthModeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Disables password-free access over Virtual Private Cloud (VPC) for an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   The instance is a replica set or sharded cluster instance.
-         * *   The database engine version of the instance is 4.0 (with the minor version of mongodb_20190408_3.0.11 or later) or 4.2. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/62010.html) operation to view the database engine version of the instance. If necessary, you can call the [UpgradeDBInstanceEngineVersion](https://help.aliyun.com/document_detail/67608.html) operation to upgrade the database engine version of the instance.
-         * *   The network type of the instance must be VPC. If the network type of the instance is classic network, you must call the [ModifyDBInstanceNetworkType](https://help.aliyun.com/document_detail/62138.html) operation to change the network type to VPC.
-         * *   You can only disable but not enable password-free access over VPC.
-         *
-         * @param request ModifyInstanceVpcAuthModeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyInstanceVpcAuthModeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables password-free access over Virtual Private Cloud (VPC) for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is a replica set or sharded cluster instance.</description></item>
+        /// <item><description>The database engine version of the instance is 4.0 (with the minor version of mongodb_20190408_3.0.11 or later) or 4.2. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the database engine version of the instance. If necessary, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database engine version of the instance.</description></item>
+        /// <item><description>The network type of the instance must be VPC. If the network type of the instance is classic network, you must call the <a href="https://help.aliyun.com/document_detail/62138.html">ModifyDBInstanceNetworkType</a> operation to change the network type to VPC.</description></item>
+        /// <item><description>You can only disable but not enable password-free access over VPC.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceVpcAuthModeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceVpcAuthModeResponse
+        /// </returns>
         public async Task<ModifyInstanceVpcAuthModeResponse> ModifyInstanceVpcAuthModeWithOptionsAsync(ModifyInstanceVpcAuthModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15035,52 +18681,87 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyInstanceVpcAuthModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Disables password-free access over Virtual Private Cloud (VPC) for an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   The instance is a replica set or sharded cluster instance.
-         * *   The database engine version of the instance is 4.0 (with the minor version of mongodb_20190408_3.0.11 or later) or 4.2. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/62010.html) operation to view the database engine version of the instance. If necessary, you can call the [UpgradeDBInstanceEngineVersion](https://help.aliyun.com/document_detail/67608.html) operation to upgrade the database engine version of the instance.
-         * *   The network type of the instance must be VPC. If the network type of the instance is classic network, you must call the [ModifyDBInstanceNetworkType](https://help.aliyun.com/document_detail/62138.html) operation to change the network type to VPC.
-         * *   You can only disable but not enable password-free access over VPC.
-         *
-         * @param request ModifyInstanceVpcAuthModeRequest
-         * @return ModifyInstanceVpcAuthModeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables password-free access over Virtual Private Cloud (VPC) for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is a replica set or sharded cluster instance.</description></item>
+        /// <item><description>The database engine version of the instance is 4.0 (with the minor version of mongodb_20190408_3.0.11 or later) or 4.2. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the database engine version of the instance. If necessary, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database engine version of the instance.</description></item>
+        /// <item><description>The network type of the instance must be VPC. If the network type of the instance is classic network, you must call the <a href="https://help.aliyun.com/document_detail/62138.html">ModifyDBInstanceNetworkType</a> operation to change the network type to VPC.</description></item>
+        /// <item><description>You can only disable but not enable password-free access over VPC.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceVpcAuthModeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceVpcAuthModeResponse
+        /// </returns>
         public ModifyInstanceVpcAuthModeResponse ModifyInstanceVpcAuthMode(ModifyInstanceVpcAuthModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceVpcAuthModeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Disables password-free access over Virtual Private Cloud (VPC) for an ApsaraDB for MongoDB instance.
-         *
-         * @description Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   The instance is a replica set or sharded cluster instance.
-         * *   The database engine version of the instance is 4.0 (with the minor version of mongodb_20190408_3.0.11 or later) or 4.2. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/62010.html) operation to view the database engine version of the instance. If necessary, you can call the [UpgradeDBInstanceEngineVersion](https://help.aliyun.com/document_detail/67608.html) operation to upgrade the database engine version of the instance.
-         * *   The network type of the instance must be VPC. If the network type of the instance is classic network, you must call the [ModifyDBInstanceNetworkType](https://help.aliyun.com/document_detail/62138.html) operation to change the network type to VPC.
-         * *   You can only disable but not enable password-free access over VPC.
-         *
-         * @param request ModifyInstanceVpcAuthModeRequest
-         * @return ModifyInstanceVpcAuthModeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables password-free access over Virtual Private Cloud (VPC) for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is a replica set or sharded cluster instance.</description></item>
+        /// <item><description>The database engine version of the instance is 4.0 (with the minor version of mongodb_20190408_3.0.11 or later) or 4.2. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the database engine version of the instance. If necessary, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database engine version of the instance.</description></item>
+        /// <item><description>The network type of the instance must be VPC. If the network type of the instance is classic network, you must call the <a href="https://help.aliyun.com/document_detail/62138.html">ModifyDBInstanceNetworkType</a> operation to change the network type to VPC.</description></item>
+        /// <item><description>You can only disable but not enable password-free access over VPC.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceVpcAuthModeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceVpcAuthModeResponse
+        /// </returns>
         public async Task<ModifyInstanceVpcAuthModeResponse> ModifyInstanceVpcAuthModeAsync(ModifyInstanceVpcAuthModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceVpcAuthModeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Changes the specifications and storage capacity of a node of an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-         * > This operation is applicable only to sharded cluster instances.
-         *
-         * @param request ModifyNodeSpecRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyNodeSpecResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the specifications and storage capacity of a node of an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.</para>
+        /// <remarks>
+        /// <para>This operation is applicable only to sharded cluster instances.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyNodeSpecRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNodeSpecResponse
+        /// </returns>
         public ModifyNodeSpecResponse ModifyNodeSpecWithOptions(ModifyNodeSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15172,16 +18853,29 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyNodeSpecResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the specifications and storage capacity of a node of an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-         * > This operation is applicable only to sharded cluster instances.
-         *
-         * @param request ModifyNodeSpecRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyNodeSpecResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the specifications and storage capacity of a node of an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.</para>
+        /// <remarks>
+        /// <para>This operation is applicable only to sharded cluster instances.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyNodeSpecRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNodeSpecResponse
+        /// </returns>
         public async Task<ModifyNodeSpecResponse> ModifyNodeSpecWithOptionsAsync(ModifyNodeSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15273,47 +18967,80 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyNodeSpecResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the specifications and storage capacity of a node of an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-         * > This operation is applicable only to sharded cluster instances.
-         *
-         * @param request ModifyNodeSpecRequest
-         * @return ModifyNodeSpecResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the specifications and storage capacity of a node of an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.</para>
+        /// <remarks>
+        /// <para>This operation is applicable only to sharded cluster instances.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyNodeSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNodeSpecResponse
+        /// </returns>
         public ModifyNodeSpecResponse ModifyNodeSpec(ModifyNodeSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyNodeSpecWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Changes the specifications and storage capacity of a node of an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-         * > This operation is applicable only to sharded cluster instances.
-         *
-         * @param request ModifyNodeSpecRequest
-         * @return ModifyNodeSpecResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the specifications and storage capacity of a node of an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.</para>
+        /// <remarks>
+        /// <para>This operation is applicable only to sharded cluster instances.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyNodeSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNodeSpecResponse
+        /// </returns>
         public async Task<ModifyNodeSpecResponse> ModifyNodeSpecAsync(ModifyNodeSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyNodeSpecWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Changes the configurations of mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description Make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB before you call this operation.
-         * This operation is applicable only to sharded cluster instances.
-         * When you upgrade or downgrade the configurations of multiple sharded cluster instances in batches, the specifications of the instances are limited. For example, if you want to expand the storage capacity of the instances, the storage capacity of the instances after expansion must be greater than the current capacity. When the specifications of multiple sharded cluster instances are different, limits are defined based on the specifications of a random sharded cluster instance. In this case, you may be unable to upgrade or downgrade the configurations of the instances. In this case, we recommend that you call the ModifyNodeSpec operation to individually change the configurations of each sharded cluster instance.
-         *
-         * @param request ModifyNodeSpecBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyNodeSpecBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the configurations of mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+        /// This operation is applicable only to sharded cluster instances.
+        /// When you upgrade or downgrade the configurations of multiple sharded cluster instances in batches, the specifications of the instances are limited. For example, if you want to expand the storage capacity of the instances, the storage capacity of the instances after expansion must be greater than the current capacity. When the specifications of multiple sharded cluster instances are different, limits are defined based on the specifications of a random sharded cluster instance. In this case, you may be unable to upgrade or downgrade the configurations of the instances. In this case, we recommend that you call the ModifyNodeSpec operation to individually change the configurations of each sharded cluster instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyNodeSpecBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNodeSpecBatchResponse
+        /// </returns>
         public ModifyNodeSpecBatchResponse ModifyNodeSpecBatchWithOptions(ModifyNodeSpecBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15389,17 +19116,28 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyNodeSpecBatchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the configurations of mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description Make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB before you call this operation.
-         * This operation is applicable only to sharded cluster instances.
-         * When you upgrade or downgrade the configurations of multiple sharded cluster instances in batches, the specifications of the instances are limited. For example, if you want to expand the storage capacity of the instances, the storage capacity of the instances after expansion must be greater than the current capacity. When the specifications of multiple sharded cluster instances are different, limits are defined based on the specifications of a random sharded cluster instance. In this case, you may be unable to upgrade or downgrade the configurations of the instances. In this case, we recommend that you call the ModifyNodeSpec operation to individually change the configurations of each sharded cluster instance.
-         *
-         * @param request ModifyNodeSpecBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyNodeSpecBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the configurations of mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+        /// This operation is applicable only to sharded cluster instances.
+        /// When you upgrade or downgrade the configurations of multiple sharded cluster instances in batches, the specifications of the instances are limited. For example, if you want to expand the storage capacity of the instances, the storage capacity of the instances after expansion must be greater than the current capacity. When the specifications of multiple sharded cluster instances are different, limits are defined based on the specifications of a random sharded cluster instance. In this case, you may be unable to upgrade or downgrade the configurations of the instances. In this case, we recommend that you call the ModifyNodeSpec operation to individually change the configurations of each sharded cluster instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyNodeSpecBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNodeSpecBatchResponse
+        /// </returns>
         public async Task<ModifyNodeSpecBatchResponse> ModifyNodeSpecBatchWithOptionsAsync(ModifyNodeSpecBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15475,48 +19213,79 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyNodeSpecBatchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the configurations of mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description Make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB before you call this operation.
-         * This operation is applicable only to sharded cluster instances.
-         * When you upgrade or downgrade the configurations of multiple sharded cluster instances in batches, the specifications of the instances are limited. For example, if you want to expand the storage capacity of the instances, the storage capacity of the instances after expansion must be greater than the current capacity. When the specifications of multiple sharded cluster instances are different, limits are defined based on the specifications of a random sharded cluster instance. In this case, you may be unable to upgrade or downgrade the configurations of the instances. In this case, we recommend that you call the ModifyNodeSpec operation to individually change the configurations of each sharded cluster instance.
-         *
-         * @param request ModifyNodeSpecBatchRequest
-         * @return ModifyNodeSpecBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the configurations of mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+        /// This operation is applicable only to sharded cluster instances.
+        /// When you upgrade or downgrade the configurations of multiple sharded cluster instances in batches, the specifications of the instances are limited. For example, if you want to expand the storage capacity of the instances, the storage capacity of the instances after expansion must be greater than the current capacity. When the specifications of multiple sharded cluster instances are different, limits are defined based on the specifications of a random sharded cluster instance. In this case, you may be unable to upgrade or downgrade the configurations of the instances. In this case, we recommend that you call the ModifyNodeSpec operation to individually change the configurations of each sharded cluster instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyNodeSpecBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNodeSpecBatchResponse
+        /// </returns>
         public ModifyNodeSpecBatchResponse ModifyNodeSpecBatch(ModifyNodeSpecBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyNodeSpecBatchWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Changes the configurations of mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.
-         *
-         * @description Make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB before you call this operation.
-         * This operation is applicable only to sharded cluster instances.
-         * When you upgrade or downgrade the configurations of multiple sharded cluster instances in batches, the specifications of the instances are limited. For example, if you want to expand the storage capacity of the instances, the storage capacity of the instances after expansion must be greater than the current capacity. When the specifications of multiple sharded cluster instances are different, limits are defined based on the specifications of a random sharded cluster instance. In this case, you may be unable to upgrade or downgrade the configurations of the instances. In this case, we recommend that you call the ModifyNodeSpec operation to individually change the configurations of each sharded cluster instance.
-         *
-         * @param request ModifyNodeSpecBatchRequest
-         * @return ModifyNodeSpecBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the configurations of mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+        /// This operation is applicable only to sharded cluster instances.
+        /// When you upgrade or downgrade the configurations of multiple sharded cluster instances in batches, the specifications of the instances are limited. For example, if you want to expand the storage capacity of the instances, the storage capacity of the instances after expansion must be greater than the current capacity. When the specifications of multiple sharded cluster instances are different, limits are defined based on the specifications of a random sharded cluster instance. In this case, you may be unable to upgrade or downgrade the configurations of the instances. In this case, we recommend that you call the ModifyNodeSpec operation to individually change the configurations of each sharded cluster instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyNodeSpecBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNodeSpecBatchResponse
+        /// </returns>
         public async Task<ModifyNodeSpecBatchResponse> ModifyNodeSpecBatchAsync(ModifyNodeSpecBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyNodeSpecBatchWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the parameters of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   The instance must be in the Running state when you call this operation.
-         * *   If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the [DescribeParameterTemplates](https://help.aliyun.com/document_detail/67618.html) operation to query the parameters that take effect only after the instance is restarted.
-         *
-         * @param request ModifyParametersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyParametersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the parameters of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the Running state when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the <a href="https://help.aliyun.com/document_detail/67618.html">DescribeParameterTemplates</a> operation to query the parameters that take effect only after the instance is restarted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyParametersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyParametersResponse
+        /// </returns>
         public ModifyParametersResponse ModifyParametersWithOptions(ModifyParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15576,16 +19345,29 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyParametersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the parameters of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   The instance must be in the Running state when you call this operation.
-         * *   If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the [DescribeParameterTemplates](https://help.aliyun.com/document_detail/67618.html) operation to query the parameters that take effect only after the instance is restarted.
-         *
-         * @param request ModifyParametersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyParametersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the parameters of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the Running state when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the <a href="https://help.aliyun.com/document_detail/67618.html">DescribeParameterTemplates</a> operation to query the parameters that take effect only after the instance is restarted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyParametersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyParametersResponse
+        /// </returns>
         public async Task<ModifyParametersResponse> ModifyParametersWithOptionsAsync(ModifyParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15645,45 +19427,78 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyParametersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the parameters of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   The instance must be in the Running state when you call this operation.
-         * *   If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the [DescribeParameterTemplates](https://help.aliyun.com/document_detail/67618.html) operation to query the parameters that take effect only after the instance is restarted.
-         *
-         * @param request ModifyParametersRequest
-         * @return ModifyParametersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the parameters of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the Running state when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the <a href="https://help.aliyun.com/document_detail/67618.html">DescribeParameterTemplates</a> operation to query the parameters that take effect only after the instance is restarted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyParametersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyParametersResponse
+        /// </returns>
         public ModifyParametersResponse ModifyParameters(ModifyParametersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyParametersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the parameters of an ApsaraDB for MongoDB instance.
-         *
-         * @description *   The instance must be in the Running state when you call this operation.
-         * *   If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the [DescribeParameterTemplates](https://help.aliyun.com/document_detail/67618.html) operation to query the parameters that take effect only after the instance is restarted.
-         *
-         * @param request ModifyParametersRequest
-         * @return ModifyParametersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the parameters of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the Running state when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the <a href="https://help.aliyun.com/document_detail/67618.html">DescribeParameterTemplates</a> operation to query the parameters that take effect only after the instance is restarted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyParametersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyParametersResponse
+        /// </returns>
         public async Task<ModifyParametersResponse> ModifyParametersAsync(ModifyParametersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyParametersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Moves an ApsaraDB for MongoDB instance to a specified resource group.
-         *
-         * @description Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)
-         *
-         * @param request ModifyResourceGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves an ApsaraDB for MongoDB instance to a specified resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyResourceGroupResponse
+        /// </returns>
         public ModifyResourceGroupResponse ModifyResourceGroupWithOptions(ModifyResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15735,15 +19550,26 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Moves an ApsaraDB for MongoDB instance to a specified resource group.
-         *
-         * @description Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)
-         *
-         * @param request ModifyResourceGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves an ApsaraDB for MongoDB instance to a specified resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyResourceGroupResponse
+        /// </returns>
         public async Task<ModifyResourceGroupResponse> ModifyResourceGroupWithOptionsAsync(ModifyResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15795,43 +19621,74 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Moves an ApsaraDB for MongoDB instance to a specified resource group.
-         *
-         * @description Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)
-         *
-         * @param request ModifyResourceGroupRequest
-         * @return ModifyResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves an ApsaraDB for MongoDB instance to a specified resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyResourceGroupResponse
+        /// </returns>
         public ModifyResourceGroupResponse ModifyResourceGroup(ModifyResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyResourceGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Moves an ApsaraDB for MongoDB instance to a specified resource group.
-         *
-         * @description Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)
-         *
-         * @param request ModifyResourceGroupRequest
-         * @return ModifyResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves an ApsaraDB for MongoDB instance to a specified resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyResourceGroupResponse
+        /// </returns>
         public async Task<ModifyResourceGroupResponse> ModifyResourceGroupAsync(ModifyResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyResourceGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary You can call this operation to modify an ECS Security group that is bound to an ApsaraDB for MongoDB instance.
-         *
-         * @description >  For a sharded cluster instance, the bound ECS security group takes effect only for mongos nodes.
-         *
-         * @param request ModifySecurityGroupConfigurationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifySecurityGroupConfigurationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify an ECS Security group that is bound to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> For a sharded cluster instance, the bound ECS security group takes effect only for mongos nodes.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityGroupConfigurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityGroupConfigurationResponse
+        /// </returns>
         public ModifySecurityGroupConfigurationResponse ModifySecurityGroupConfigurationWithOptions(ModifySecurityGroupConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15879,15 +19736,28 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifySecurityGroupConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call this operation to modify an ECS Security group that is bound to an ApsaraDB for MongoDB instance.
-         *
-         * @description >  For a sharded cluster instance, the bound ECS security group takes effect only for mongos nodes.
-         *
-         * @param request ModifySecurityGroupConfigurationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifySecurityGroupConfigurationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify an ECS Security group that is bound to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> For a sharded cluster instance, the bound ECS security group takes effect only for mongos nodes.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityGroupConfigurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityGroupConfigurationResponse
+        /// </returns>
         public async Task<ModifySecurityGroupConfigurationResponse> ModifySecurityGroupConfigurationWithOptionsAsync(ModifySecurityGroupConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15935,41 +19805,71 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifySecurityGroupConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary You can call this operation to modify an ECS Security group that is bound to an ApsaraDB for MongoDB instance.
-         *
-         * @description >  For a sharded cluster instance, the bound ECS security group takes effect only for mongos nodes.
-         *
-         * @param request ModifySecurityGroupConfigurationRequest
-         * @return ModifySecurityGroupConfigurationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify an ECS Security group that is bound to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> For a sharded cluster instance, the bound ECS security group takes effect only for mongos nodes.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityGroupConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityGroupConfigurationResponse
+        /// </returns>
         public ModifySecurityGroupConfigurationResponse ModifySecurityGroupConfiguration(ModifySecurityGroupConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySecurityGroupConfigurationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary You can call this operation to modify an ECS Security group that is bound to an ApsaraDB for MongoDB instance.
-         *
-         * @description >  For a sharded cluster instance, the bound ECS security group takes effect only for mongos nodes.
-         *
-         * @param request ModifySecurityGroupConfigurationRequest
-         * @return ModifySecurityGroupConfigurationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify an ECS Security group that is bound to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> For a sharded cluster instance, the bound ECS security group takes effect only for mongos nodes.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityGroupConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityGroupConfigurationResponse
+        /// </returns>
         public async Task<ModifySecurityGroupConfigurationResponse> ModifySecurityGroupConfigurationAsync(ModifySecurityGroupConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySecurityGroupConfigurationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the IP address whitelist of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifySecurityIpsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifySecurityIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the IP address whitelist of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityIpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityIpsResponse
+        /// </returns>
         public ModifySecurityIpsResponse ModifySecurityIpsWithOptions(ModifySecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16029,13 +19929,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifySecurityIpsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the IP address whitelist of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifySecurityIpsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifySecurityIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the IP address whitelist of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityIpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityIpsResponse
+        /// </returns>
         public async Task<ModifySecurityIpsResponse> ModifySecurityIpsWithOptionsAsync(ModifySecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16095,39 +20003,62 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifySecurityIpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the IP address whitelist of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifySecurityIpsRequest
-         * @return ModifySecurityIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the IP address whitelist of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityIpsResponse
+        /// </returns>
         public ModifySecurityIpsResponse ModifySecurityIps(ModifySecurityIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySecurityIpsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the IP address whitelist of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ModifySecurityIpsRequest
-         * @return ModifySecurityIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the IP address whitelist of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityIpsResponse
+        /// </returns>
         public async Task<ModifySecurityIpsResponse> ModifySecurityIpsAsync(ModifySecurityIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySecurityIpsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the information of a task in the task center for an ApsaraDB for MongoDB instance.
-         *
-         * @description The actions performed by this operation for a task vary based on the current state of the task. The supported actions for a task can be obtained from the value of the actionInfo parameter in the DescribeHistoryTasks operation.
-         *
-         * @param request ModifyTaskInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyTaskInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information of a task in the task center for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The actions performed by this operation for a task vary based on the current state of the task. The supported actions for a task can be obtained from the value of the actionInfo parameter in the DescribeHistoryTasks operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyTaskInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTaskInfoResponse
+        /// </returns>
         public ModifyTaskInfoResponse ModifyTaskInfoWithOptions(ModifyTaskInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16179,15 +20110,26 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyTaskInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the information of a task in the task center for an ApsaraDB for MongoDB instance.
-         *
-         * @description The actions performed by this operation for a task vary based on the current state of the task. The supported actions for a task can be obtained from the value of the actionInfo parameter in the DescribeHistoryTasks operation.
-         *
-         * @param request ModifyTaskInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyTaskInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information of a task in the task center for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The actions performed by this operation for a task vary based on the current state of the task. The supported actions for a task can be obtained from the value of the actionInfo parameter in the DescribeHistoryTasks operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyTaskInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTaskInfoResponse
+        /// </returns>
         public async Task<ModifyTaskInfoResponse> ModifyTaskInfoWithOptionsAsync(ModifyTaskInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16239,44 +20181,75 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyTaskInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the information of a task in the task center for an ApsaraDB for MongoDB instance.
-         *
-         * @description The actions performed by this operation for a task vary based on the current state of the task. The supported actions for a task can be obtained from the value of the actionInfo parameter in the DescribeHistoryTasks operation.
-         *
-         * @param request ModifyTaskInfoRequest
-         * @return ModifyTaskInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information of a task in the task center for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The actions performed by this operation for a task vary based on the current state of the task. The supported actions for a task can be obtained from the value of the actionInfo parameter in the DescribeHistoryTasks operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyTaskInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTaskInfoResponse
+        /// </returns>
         public ModifyTaskInfoResponse ModifyTaskInfo(ModifyTaskInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyTaskInfoWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the information of a task in the task center for an ApsaraDB for MongoDB instance.
-         *
-         * @description The actions performed by this operation for a task vary based on the current state of the task. The supported actions for a task can be obtained from the value of the actionInfo parameter in the DescribeHistoryTasks operation.
-         *
-         * @param request ModifyTaskInfoRequest
-         * @return ModifyTaskInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information of a task in the task center for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The actions performed by this operation for a task vary based on the current state of the task. The supported actions for a task can be obtained from the value of the actionInfo parameter in the DescribeHistoryTasks operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyTaskInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTaskInfoResponse
+        /// </returns>
         public async Task<ModifyTaskInfoResponse> ModifyTaskInfoAsync(ModifyTaskInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyTaskInfoWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Releases the internal endpoint of a shard or Configserver node in a sharded cluster instance.
-         *
-         * @description *   This operation can be used to release the internal endpoint of a shard or Configserver node in a sharded cluster instance. For more information, see [Release the endpoint of a shard or Configserver node](https://help.aliyun.com/document_detail/134067.html).
-         * *   To release the public endpoint of a shard or Configserver node in a sharded cluster instance, you can call the [ReleasePublicNetworkAddress](https://help.aliyun.com/document_detail/67604.html) operation.
-         *
-         * @param request ReleaseNodePrivateNetworkAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReleaseNodePrivateNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases the internal endpoint of a shard or Configserver node in a sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation can be used to release the internal endpoint of a shard or Configserver node in a sharded cluster instance. For more information, see <a href="https://help.aliyun.com/document_detail/134067.html">Release the endpoint of a shard or Configserver node</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>To release the public endpoint of a shard or Configserver node in a sharded cluster instance, you can call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReleaseNodePrivateNetworkAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseNodePrivateNetworkAddressResponse
+        /// </returns>
         public ReleaseNodePrivateNetworkAddressResponse ReleaseNodePrivateNetworkAddressWithOptions(ReleaseNodePrivateNetworkAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16332,16 +20305,29 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ReleaseNodePrivateNetworkAddressResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Releases the internal endpoint of a shard or Configserver node in a sharded cluster instance.
-         *
-         * @description *   This operation can be used to release the internal endpoint of a shard or Configserver node in a sharded cluster instance. For more information, see [Release the endpoint of a shard or Configserver node](https://help.aliyun.com/document_detail/134067.html).
-         * *   To release the public endpoint of a shard or Configserver node in a sharded cluster instance, you can call the [ReleasePublicNetworkAddress](https://help.aliyun.com/document_detail/67604.html) operation.
-         *
-         * @param request ReleaseNodePrivateNetworkAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReleaseNodePrivateNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases the internal endpoint of a shard or Configserver node in a sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation can be used to release the internal endpoint of a shard or Configserver node in a sharded cluster instance. For more information, see <a href="https://help.aliyun.com/document_detail/134067.html">Release the endpoint of a shard or Configserver node</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>To release the public endpoint of a shard or Configserver node in a sharded cluster instance, you can call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReleaseNodePrivateNetworkAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseNodePrivateNetworkAddressResponse
+        /// </returns>
         public async Task<ReleaseNodePrivateNetworkAddressResponse> ReleaseNodePrivateNetworkAddressWithOptionsAsync(ReleaseNodePrivateNetworkAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16397,43 +20383,73 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ReleaseNodePrivateNetworkAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Releases the internal endpoint of a shard or Configserver node in a sharded cluster instance.
-         *
-         * @description *   This operation can be used to release the internal endpoint of a shard or Configserver node in a sharded cluster instance. For more information, see [Release the endpoint of a shard or Configserver node](https://help.aliyun.com/document_detail/134067.html).
-         * *   To release the public endpoint of a shard or Configserver node in a sharded cluster instance, you can call the [ReleasePublicNetworkAddress](https://help.aliyun.com/document_detail/67604.html) operation.
-         *
-         * @param request ReleaseNodePrivateNetworkAddressRequest
-         * @return ReleaseNodePrivateNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases the internal endpoint of a shard or Configserver node in a sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation can be used to release the internal endpoint of a shard or Configserver node in a sharded cluster instance. For more information, see <a href="https://help.aliyun.com/document_detail/134067.html">Release the endpoint of a shard or Configserver node</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>To release the public endpoint of a shard or Configserver node in a sharded cluster instance, you can call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReleaseNodePrivateNetworkAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseNodePrivateNetworkAddressResponse
+        /// </returns>
         public ReleaseNodePrivateNetworkAddressResponse ReleaseNodePrivateNetworkAddress(ReleaseNodePrivateNetworkAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReleaseNodePrivateNetworkAddressWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Releases the internal endpoint of a shard or Configserver node in a sharded cluster instance.
-         *
-         * @description *   This operation can be used to release the internal endpoint of a shard or Configserver node in a sharded cluster instance. For more information, see [Release the endpoint of a shard or Configserver node](https://help.aliyun.com/document_detail/134067.html).
-         * *   To release the public endpoint of a shard or Configserver node in a sharded cluster instance, you can call the [ReleasePublicNetworkAddress](https://help.aliyun.com/document_detail/67604.html) operation.
-         *
-         * @param request ReleaseNodePrivateNetworkAddressRequest
-         * @return ReleaseNodePrivateNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases the internal endpoint of a shard or Configserver node in a sharded cluster instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation can be used to release the internal endpoint of a shard or Configserver node in a sharded cluster instance. For more information, see <a href="https://help.aliyun.com/document_detail/134067.html">Release the endpoint of a shard or Configserver node</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>To release the public endpoint of a shard or Configserver node in a sharded cluster instance, you can call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReleaseNodePrivateNetworkAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseNodePrivateNetworkAddressResponse
+        /// </returns>
         public async Task<ReleaseNodePrivateNetworkAddressResponse> ReleaseNodePrivateNetworkAddressAsync(ReleaseNodePrivateNetworkAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReleaseNodePrivateNetworkAddressWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Releases the public endpoint of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ReleasePublicNetworkAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReleasePublicNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases the public endpoint of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleasePublicNetworkAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleasePublicNetworkAddressResponse
+        /// </returns>
         public ReleasePublicNetworkAddressResponse ReleasePublicNetworkAddressWithOptions(ReleasePublicNetworkAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16485,13 +20501,21 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ReleasePublicNetworkAddressResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Releases the public endpoint of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ReleasePublicNetworkAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReleasePublicNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases the public endpoint of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleasePublicNetworkAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleasePublicNetworkAddressResponse
+        /// </returns>
         public async Task<ReleasePublicNetworkAddressResponse> ReleasePublicNetworkAddressWithOptionsAsync(ReleasePublicNetworkAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16543,40 +20567,63 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ReleasePublicNetworkAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Releases the public endpoint of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ReleasePublicNetworkAddressRequest
-         * @return ReleasePublicNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases the public endpoint of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleasePublicNetworkAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleasePublicNetworkAddressResponse
+        /// </returns>
         public ReleasePublicNetworkAddressResponse ReleasePublicNetworkAddress(ReleasePublicNetworkAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReleasePublicNetworkAddressWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Releases the public endpoint of an ApsaraDB for MongoDB instance.
-         *
-         * @param request ReleasePublicNetworkAddressRequest
-         * @return ReleasePublicNetworkAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases the public endpoint of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleasePublicNetworkAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleasePublicNetworkAddressResponse
+        /// </returns>
         public async Task<ReleasePublicNetworkAddressResponse> ReleasePublicNetworkAddressAsync(ReleasePublicNetworkAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReleasePublicNetworkAddressWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Manually renews an ApsaraDB for MongoDB subscription instance.
-         *
-         * @description Make sure that you fully understand the billing methods and pricing of ApsaraDB for MongoDB before you call this operation. For more information about the pricing of ApsaraDB for MongoDB, visit the [pricing tab of the product buy page](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-         * This operation is only applicable to instances that use the subscription billing method.
-         *
-         * @param request RenewDBInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RenewDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually renews an ApsaraDB for MongoDB subscription instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you fully understand the billing methods and pricing of ApsaraDB for MongoDB before you call this operation. For more information about the pricing of ApsaraDB for MongoDB, visit the <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing tab of the product buy page</a>.
+        /// This operation is only applicable to instances that use the subscription billing method.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RenewDBInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewDBInstanceResponse
+        /// </returns>
         public RenewDBInstanceResponse RenewDBInstanceWithOptions(RenewDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16644,16 +20691,27 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<RenewDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Manually renews an ApsaraDB for MongoDB subscription instance.
-         *
-         * @description Make sure that you fully understand the billing methods and pricing of ApsaraDB for MongoDB before you call this operation. For more information about the pricing of ApsaraDB for MongoDB, visit the [pricing tab of the product buy page](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-         * This operation is only applicable to instances that use the subscription billing method.
-         *
-         * @param request RenewDBInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RenewDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually renews an ApsaraDB for MongoDB subscription instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you fully understand the billing methods and pricing of ApsaraDB for MongoDB before you call this operation. For more information about the pricing of ApsaraDB for MongoDB, visit the <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing tab of the product buy page</a>.
+        /// This operation is only applicable to instances that use the subscription billing method.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RenewDBInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewDBInstanceResponse
+        /// </returns>
         public async Task<RenewDBInstanceResponse> RenewDBInstanceWithOptionsAsync(RenewDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16721,45 +20779,76 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<RenewDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Manually renews an ApsaraDB for MongoDB subscription instance.
-         *
-         * @description Make sure that you fully understand the billing methods and pricing of ApsaraDB for MongoDB before you call this operation. For more information about the pricing of ApsaraDB for MongoDB, visit the [pricing tab of the product buy page](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-         * This operation is only applicable to instances that use the subscription billing method.
-         *
-         * @param request RenewDBInstanceRequest
-         * @return RenewDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually renews an ApsaraDB for MongoDB subscription instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you fully understand the billing methods and pricing of ApsaraDB for MongoDB before you call this operation. For more information about the pricing of ApsaraDB for MongoDB, visit the <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing tab of the product buy page</a>.
+        /// This operation is only applicable to instances that use the subscription billing method.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RenewDBInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewDBInstanceResponse
+        /// </returns>
         public RenewDBInstanceResponse RenewDBInstance(RenewDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RenewDBInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Manually renews an ApsaraDB for MongoDB subscription instance.
-         *
-         * @description Make sure that you fully understand the billing methods and pricing of ApsaraDB for MongoDB before you call this operation. For more information about the pricing of ApsaraDB for MongoDB, visit the [pricing tab of the product buy page](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-         * This operation is only applicable to instances that use the subscription billing method.
-         *
-         * @param request RenewDBInstanceRequest
-         * @return RenewDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually renews an ApsaraDB for MongoDB subscription instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you fully understand the billing methods and pricing of ApsaraDB for MongoDB before you call this operation. For more information about the pricing of ApsaraDB for MongoDB, visit the <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing tab of the product buy page</a>.
+        /// This operation is only applicable to instances that use the subscription billing method.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RenewDBInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewDBInstanceResponse
+        /// </returns>
         public async Task<RenewDBInstanceResponse> RenewDBInstanceAsync(RenewDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RenewDBInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Resets the password of the root account in an ApsaraDB for MongoDB instance.
-         *
-         * @description >  This operation can be used to reset only the password of the root account of an instance.
-         *
-         * @param request ResetAccountPasswordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetAccountPasswordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of the root account in an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation can be used to reset only the password of the root account of an instance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetAccountPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetAccountPasswordResponse
+        /// </returns>
         public ResetAccountPasswordResponse ResetAccountPasswordWithOptions(ResetAccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16815,15 +20904,28 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ResetAccountPasswordResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Resets the password of the root account in an ApsaraDB for MongoDB instance.
-         *
-         * @description >  This operation can be used to reset only the password of the root account of an instance.
-         *
-         * @param request ResetAccountPasswordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetAccountPasswordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of the root account in an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation can be used to reset only the password of the root account of an instance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetAccountPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetAccountPasswordResponse
+        /// </returns>
         public async Task<ResetAccountPasswordResponse> ResetAccountPasswordWithOptionsAsync(ResetAccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16879,43 +20981,76 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ResetAccountPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Resets the password of the root account in an ApsaraDB for MongoDB instance.
-         *
-         * @description >  This operation can be used to reset only the password of the root account of an instance.
-         *
-         * @param request ResetAccountPasswordRequest
-         * @return ResetAccountPasswordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of the root account in an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation can be used to reset only the password of the root account of an instance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetAccountPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetAccountPasswordResponse
+        /// </returns>
         public ResetAccountPasswordResponse ResetAccountPassword(ResetAccountPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetAccountPasswordWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Resets the password of the root account in an ApsaraDB for MongoDB instance.
-         *
-         * @description >  This operation can be used to reset only the password of the root account of an instance.
-         *
-         * @param request ResetAccountPasswordRequest
-         * @return ResetAccountPasswordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of the root account in an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation can be used to reset only the password of the root account of an instance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetAccountPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetAccountPasswordResponse
+        /// </returns>
         public async Task<ResetAccountPasswordResponse> ResetAccountPasswordAsync(ResetAccountPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetAccountPasswordWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Restarts an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation can also be used to restart an instance, or restart a shard or mongos node in a sharded cluster instance.
-         *
-         * @param request RestartDBInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RestartDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation can also be used to restart an instance, or restart a shard or mongos node in a sharded cluster instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RestartDBInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartDBInstanceResponse
+        /// </returns>
         public RestartDBInstanceResponse RestartDBInstanceWithOptions(RestartDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16963,15 +21098,26 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<RestartDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Restarts an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation can also be used to restart an instance, or restart a shard or mongos node in a sharded cluster instance.
-         *
-         * @param request RestartDBInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RestartDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation can also be used to restart an instance, or restart a shard or mongos node in a sharded cluster instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RestartDBInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartDBInstanceResponse
+        /// </returns>
         public async Task<RestartDBInstanceResponse> RestartDBInstanceWithOptionsAsync(RestartDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17019,41 +21165,79 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<RestartDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Restarts an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation can also be used to restart an instance, or restart a shard or mongos node in a sharded cluster instance.
-         *
-         * @param request RestartDBInstanceRequest
-         * @return RestartDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation can also be used to restart an instance, or restart a shard or mongos node in a sharded cluster instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RestartDBInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartDBInstanceResponse
+        /// </returns>
         public RestartDBInstanceResponse RestartDBInstance(RestartDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RestartDBInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Restarts an ApsaraDB for MongoDB instance.
-         *
-         * @description This operation can also be used to restart an instance, or restart a shard or mongos node in a sharded cluster instance.
-         *
-         * @param request RestartDBInstanceRequest
-         * @return RestartDBInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation can also be used to restart an instance, or restart a shard or mongos node in a sharded cluster instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RestartDBInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartDBInstanceResponse
+        /// </returns>
         public async Task<RestartDBInstanceResponse> RestartDBInstanceAsync(RestartDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RestartDBInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 重启副本集单个节点
-         *
-         * @param request RestartNodeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RestartNodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts a node in an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to restart a node in a replica set instance or a child instance in a sharded cluster instance.</para>
+        /// <remarks>
+        /// <para> When you call this operation, the instance must meet the following requirements:</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance is a replica set or sharded cluster instance of the standard edition.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RestartNodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartNodeResponse
+        /// </returns>
         public RestartNodeResponse RestartNodeWithOptions(RestartNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17105,13 +21289,33 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<RestartNodeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 重启副本集单个节点
-         *
-         * @param request RestartNodeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RestartNodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts a node in an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to restart a node in a replica set instance or a child instance in a sharded cluster instance.</para>
+        /// <remarks>
+        /// <para> When you call this operation, the instance must meet the following requirements:</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance is a replica set or sharded cluster instance of the standard edition.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RestartNodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartNodeResponse
+        /// </returns>
         public async Task<RestartNodeResponse> RestartNodeWithOptionsAsync(RestartNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17163,42 +21367,92 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<RestartNodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 重启副本集单个节点
-         *
-         * @param request RestartNodeRequest
-         * @return RestartNodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts a node in an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to restart a node in a replica set instance or a child instance in a sharded cluster instance.</para>
+        /// <remarks>
+        /// <para> When you call this operation, the instance must meet the following requirements:</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance is a replica set or sharded cluster instance of the standard edition.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RestartNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartNodeResponse
+        /// </returns>
         public RestartNodeResponse RestartNode(RestartNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RestartNodeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 重启副本集单个节点
-         *
-         * @param request RestartNodeRequest
-         * @return RestartNodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts a node in an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to restart a node in a replica set instance or a child instance in a sharded cluster instance.</para>
+        /// <remarks>
+        /// <para> When you call this operation, the instance must meet the following requirements:</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance is a replica set or sharded cluster instance of the standard edition.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RestartNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartNodeResponse
+        /// </returns>
         public async Task<RestartNodeResponse> RestartNodeAsync(RestartNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RestartNodeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Switches the primary and secondary nodes for an ApsaraDB for MongoDB instance.
-         *
-         * @description The instance must be running when you call this operation.
-         * > 
-         * *   This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
-         * *   On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.
-         *
-         * @param request SwitchDBInstanceHARequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SwitchDBInstanceHAResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches the primary and secondary nodes for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The instance must be running when you call this operation.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.</description></item>
+        /// <item><description>On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchDBInstanceHARequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchDBInstanceHAResponse
+        /// </returns>
         public SwitchDBInstanceHAResponse SwitchDBInstanceHAWithOptions(SwitchDBInstanceHARequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17254,18 +21508,32 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<SwitchDBInstanceHAResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Switches the primary and secondary nodes for an ApsaraDB for MongoDB instance.
-         *
-         * @description The instance must be running when you call this operation.
-         * > 
-         * *   This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
-         * *   On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.
-         *
-         * @param request SwitchDBInstanceHARequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SwitchDBInstanceHAResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches the primary and secondary nodes for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The instance must be running when you call this operation.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.</description></item>
+        /// <item><description>On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchDBInstanceHARequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchDBInstanceHAResponse
+        /// </returns>
         public async Task<SwitchDBInstanceHAResponse> SwitchDBInstanceHAWithOptionsAsync(SwitchDBInstanceHARequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17321,54 +21589,91 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<SwitchDBInstanceHAResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Switches the primary and secondary nodes for an ApsaraDB for MongoDB instance.
-         *
-         * @description The instance must be running when you call this operation.
-         * > 
-         * *   This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
-         * *   On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.
-         *
-         * @param request SwitchDBInstanceHARequest
-         * @return SwitchDBInstanceHAResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches the primary and secondary nodes for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The instance must be running when you call this operation.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.</description></item>
+        /// <item><description>On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchDBInstanceHARequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchDBInstanceHAResponse
+        /// </returns>
         public SwitchDBInstanceHAResponse SwitchDBInstanceHA(SwitchDBInstanceHARequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SwitchDBInstanceHAWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Switches the primary and secondary nodes for an ApsaraDB for MongoDB instance.
-         *
-         * @description The instance must be running when you call this operation.
-         * > 
-         * *   This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
-         * *   On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.
-         *
-         * @param request SwitchDBInstanceHARequest
-         * @return SwitchDBInstanceHAResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches the primary and secondary nodes for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The instance must be running when you call this operation.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.</description></item>
+        /// <item><description>On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchDBInstanceHARequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchDBInstanceHAResponse
+        /// </returns>
         public async Task<SwitchDBInstanceHAResponse> SwitchDBInstanceHAAsync(SwitchDBInstanceHARequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SwitchDBInstanceHAWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Binds tags to ApsaraDB for MongoDB instances.
-         *
-         * @description If you have a large number of instances, you can create multiple tags, bind the tags to the instances, and filter the instances by tag.
-         * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
-         * *   If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.
-         * *   If a tag that has the same key is already bound to the instance, the new tag overwrites the existing tag.
-         * *   You can bind up to 20 tags to each instance.
-         * *   You can bind tags to up to 50 instances each time you call the operation.
-         *
-         * @param request TagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds tags to ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have a large number of instances, you can create multiple tags, bind the tags to the instances, and filter the instances by tag.</para>
+        /// <list type="bullet">
+        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
+        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.</description></item>
+        /// <item><description>If a tag that has the same key is already bound to the instance, the new tag overwrites the existing tag.</description></item>
+        /// <item><description>You can bind up to 20 tags to each instance.</description></item>
+        /// <item><description>You can bind tags to up to 50 instances each time you call the operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17428,20 +21733,33 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Binds tags to ApsaraDB for MongoDB instances.
-         *
-         * @description If you have a large number of instances, you can create multiple tags, bind the tags to the instances, and filter the instances by tag.
-         * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
-         * *   If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.
-         * *   If a tag that has the same key is already bound to the instance, the new tag overwrites the existing tag.
-         * *   You can bind up to 20 tags to each instance.
-         * *   You can bind tags to up to 50 instances each time you call the operation.
-         *
-         * @param request TagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds tags to ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have a large number of instances, you can create multiple tags, bind the tags to the instances, and filter the instances by tag.</para>
+        /// <list type="bullet">
+        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
+        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.</description></item>
+        /// <item><description>If a tag that has the same key is already bound to the instance, the new tag overwrites the existing tag.</description></item>
+        /// <item><description>You can bind up to 20 tags to each instance.</description></item>
+        /// <item><description>You can bind tags to up to 50 instances each time you call the operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17501,54 +21819,89 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Binds tags to ApsaraDB for MongoDB instances.
-         *
-         * @description If you have a large number of instances, you can create multiple tags, bind the tags to the instances, and filter the instances by tag.
-         * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
-         * *   If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.
-         * *   If a tag that has the same key is already bound to the instance, the new tag overwrites the existing tag.
-         * *   You can bind up to 20 tags to each instance.
-         * *   You can bind tags to up to 50 instances each time you call the operation.
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds tags to ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have a large number of instances, you can create multiple tags, bind the tags to the instances, and filter the instances by tag.</para>
+        /// <list type="bullet">
+        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
+        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.</description></item>
+        /// <item><description>If a tag that has the same key is already bound to the instance, the new tag overwrites the existing tag.</description></item>
+        /// <item><description>You can bind up to 20 tags to each instance.</description></item>
+        /// <item><description>You can bind tags to up to 50 instances each time you call the operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Binds tags to ApsaraDB for MongoDB instances.
-         *
-         * @description If you have a large number of instances, you can create multiple tags, bind the tags to the instances, and filter the instances by tag.
-         * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
-         * *   If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.
-         * *   If a tag that has the same key is already bound to the instance, the new tag overwrites the existing tag.
-         * *   You can bind up to 20 tags to each instance.
-         * *   You can bind tags to up to 50 instances each time you call the operation.
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds tags to ApsaraDB for MongoDB instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have a large number of instances, you can create multiple tags, bind the tags to the instances, and filter the instances by tag.</para>
+        /// <list type="bullet">
+        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
+        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.</description></item>
+        /// <item><description>If a tag that has the same key is already bound to the instance, the new tag overwrites the existing tag.</description></item>
+        /// <item><description>You can bind up to 20 tags to each instance.</description></item>
+        /// <item><description>You can bind tags to up to 50 instances each time you call the operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Switches the backup mode of an ApsaraDB for MongoDB sharded cluster instance to the cluster backup mode. After the instance is switched to the cluster backup mode, the instance supports high-frequency backup.
-         *
-         * @description *   The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.
-         * *   You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. Cloud disk-based sharded cluster instances that are created on or after October 19, 2023 are set to the cluster backup mode by default.
-         *
-         * @param request TransferClusterBackupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TransferClusterBackupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches the backup mode of an ApsaraDB for MongoDB sharded cluster instance to the cluster backup mode. After the instance is switched to the cluster backup mode, the instance supports high-frequency backup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. Cloud disk-based sharded cluster instances that are created on or after October 19, 2023 are set to the cluster backup mode by default.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransferClusterBackupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferClusterBackupResponse
+        /// </returns>
         public TransferClusterBackupResponse TransferClusterBackupWithOptions(TransferClusterBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17592,16 +21945,29 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<TransferClusterBackupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Switches the backup mode of an ApsaraDB for MongoDB sharded cluster instance to the cluster backup mode. After the instance is switched to the cluster backup mode, the instance supports high-frequency backup.
-         *
-         * @description *   The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.
-         * *   You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. Cloud disk-based sharded cluster instances that are created on or after October 19, 2023 are set to the cluster backup mode by default.
-         *
-         * @param request TransferClusterBackupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TransferClusterBackupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches the backup mode of an ApsaraDB for MongoDB sharded cluster instance to the cluster backup mode. After the instance is switched to the cluster backup mode, the instance supports high-frequency backup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. Cloud disk-based sharded cluster instances that are created on or after October 19, 2023 are set to the cluster backup mode by default.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransferClusterBackupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferClusterBackupResponse
+        /// </returns>
         public async Task<TransferClusterBackupResponse> TransferClusterBackupWithOptionsAsync(TransferClusterBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17645,50 +22011,87 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<TransferClusterBackupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Switches the backup mode of an ApsaraDB for MongoDB sharded cluster instance to the cluster backup mode. After the instance is switched to the cluster backup mode, the instance supports high-frequency backup.
-         *
-         * @description *   The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.
-         * *   You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. Cloud disk-based sharded cluster instances that are created on or after October 19, 2023 are set to the cluster backup mode by default.
-         *
-         * @param request TransferClusterBackupRequest
-         * @return TransferClusterBackupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches the backup mode of an ApsaraDB for MongoDB sharded cluster instance to the cluster backup mode. After the instance is switched to the cluster backup mode, the instance supports high-frequency backup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. Cloud disk-based sharded cluster instances that are created on or after October 19, 2023 are set to the cluster backup mode by default.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransferClusterBackupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferClusterBackupResponse
+        /// </returns>
         public TransferClusterBackupResponse TransferClusterBackup(TransferClusterBackupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TransferClusterBackupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Switches the backup mode of an ApsaraDB for MongoDB sharded cluster instance to the cluster backup mode. After the instance is switched to the cluster backup mode, the instance supports high-frequency backup.
-         *
-         * @description *   The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.
-         * *   You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. Cloud disk-based sharded cluster instances that are created on or after October 19, 2023 are set to the cluster backup mode by default.
-         *
-         * @param request TransferClusterBackupRequest
-         * @return TransferClusterBackupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches the backup mode of an ApsaraDB for MongoDB sharded cluster instance to the cluster backup mode. After the instance is switched to the cluster backup mode, the instance supports high-frequency backup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. Cloud disk-based sharded cluster instances that are created on or after October 19, 2023 are set to the cluster backup mode by default.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransferClusterBackupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferClusterBackupResponse
+        /// </returns>
         public async Task<TransferClusterBackupResponse> TransferClusterBackupAsync(TransferClusterBackupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TransferClusterBackupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Changes the billing method of an instance from pay-as-you-go to subscription or from subscription to pay-as-you-go.
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB.
-         * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   The instance is in the Running state.
-         * *   Your instance has no unpaid billing method change orders.
-         * *   The instance type is available for purchase. For more information about unavailable instance types, see [Instance types](https://help.aliyun.com/document_detail/57141.html).
-         * > To change the billing method of an instance whose instance type is no longer available to purchase, call the [ModifyDBInstanceSpec](https://help.aliyun.com/document_detail/61816.html) or [ModifyNodeSpec](https://help.aliyun.com/document_detail/61923.html) operation to first change the instance type.
-         *
-         * @param request TransformInstanceChargeTypeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TransformInstanceChargeTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of an instance from pay-as-you-go to subscription or from subscription to pay-as-you-go.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB
+        /// Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>Your instance has no unpaid billing method change orders.</description></item>
+        /// <item><description>The instance type is available for purchase. For more information about unavailable instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<remarks>
+        /// <para>To change the billing method of an instance whose instance type is no longer available to purchase, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to change the instance type first.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransformInstanceChargeTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransformInstanceChargeTypeResponse
+        /// </returns>
         public TransformInstanceChargeTypeResponse TransformInstanceChargeTypeWithOptions(TransformInstanceChargeTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17760,20 +22163,35 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<TransformInstanceChargeTypeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the billing method of an instance from pay-as-you-go to subscription or from subscription to pay-as-you-go.
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB.
-         * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   The instance is in the Running state.
-         * *   Your instance has no unpaid billing method change orders.
-         * *   The instance type is available for purchase. For more information about unavailable instance types, see [Instance types](https://help.aliyun.com/document_detail/57141.html).
-         * > To change the billing method of an instance whose instance type is no longer available to purchase, call the [ModifyDBInstanceSpec](https://help.aliyun.com/document_detail/61816.html) or [ModifyNodeSpec](https://help.aliyun.com/document_detail/61923.html) operation to first change the instance type.
-         *
-         * @param request TransformInstanceChargeTypeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TransformInstanceChargeTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of an instance from pay-as-you-go to subscription or from subscription to pay-as-you-go.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB
+        /// Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>Your instance has no unpaid billing method change orders.</description></item>
+        /// <item><description>The instance type is available for purchase. For more information about unavailable instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<remarks>
+        /// <para>To change the billing method of an instance whose instance type is no longer available to purchase, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to change the instance type first.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransformInstanceChargeTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransformInstanceChargeTypeResponse
+        /// </returns>
         public async Task<TransformInstanceChargeTypeResponse> TransformInstanceChargeTypeWithOptionsAsync(TransformInstanceChargeTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17845,60 +22263,101 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<TransformInstanceChargeTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the billing method of an instance from pay-as-you-go to subscription or from subscription to pay-as-you-go.
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB.
-         * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   The instance is in the Running state.
-         * *   Your instance has no unpaid billing method change orders.
-         * *   The instance type is available for purchase. For more information about unavailable instance types, see [Instance types](https://help.aliyun.com/document_detail/57141.html).
-         * > To change the billing method of an instance whose instance type is no longer available to purchase, call the [ModifyDBInstanceSpec](https://help.aliyun.com/document_detail/61816.html) or [ModifyNodeSpec](https://help.aliyun.com/document_detail/61923.html) operation to first change the instance type.
-         *
-         * @param request TransformInstanceChargeTypeRequest
-         * @return TransformInstanceChargeTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of an instance from pay-as-you-go to subscription or from subscription to pay-as-you-go.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB
+        /// Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>Your instance has no unpaid billing method change orders.</description></item>
+        /// <item><description>The instance type is available for purchase. For more information about unavailable instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<remarks>
+        /// <para>To change the billing method of an instance whose instance type is no longer available to purchase, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to change the instance type first.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransformInstanceChargeTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransformInstanceChargeTypeResponse
+        /// </returns>
         public TransformInstanceChargeTypeResponse TransformInstanceChargeType(TransformInstanceChargeTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TransformInstanceChargeTypeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Changes the billing method of an instance from pay-as-you-go to subscription or from subscription to pay-as-you-go.
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB.
-         * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   The instance is in the Running state.
-         * *   Your instance has no unpaid billing method change orders.
-         * *   The instance type is available for purchase. For more information about unavailable instance types, see [Instance types](https://help.aliyun.com/document_detail/57141.html).
-         * > To change the billing method of an instance whose instance type is no longer available to purchase, call the [ModifyDBInstanceSpec](https://help.aliyun.com/document_detail/61816.html) or [ModifyNodeSpec](https://help.aliyun.com/document_detail/61923.html) operation to first change the instance type.
-         *
-         * @param request TransformInstanceChargeTypeRequest
-         * @return TransformInstanceChargeTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of an instance from pay-as-you-go to subscription or from subscription to pay-as-you-go.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB
+        /// Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>Your instance has no unpaid billing method change orders.</description></item>
+        /// <item><description>The instance type is available for purchase. For more information about unavailable instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<remarks>
+        /// <para>To change the billing method of an instance whose instance type is no longer available to purchase, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to change the instance type first.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransformInstanceChargeTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransformInstanceChargeTypeResponse
+        /// </returns>
         public async Task<TransformInstanceChargeTypeResponse> TransformInstanceChargeTypeAsync(TransformInstanceChargeTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TransformInstanceChargeTypeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Changes the billing method of an ApsaraDB for MongoDB instance from pay-as-you-go to subscription.
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-         * A subscription instance cannot be changed to a pay-as-you-go instance. To avoid wasting resources, proceed with caution.
-         * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   The instance is in the running state.
-         * *   The billing method of the instance is pay-as-you-go.
-         * *   The instance has no unpaid subscription orders.
-         * *   The instance type is available for purchase. For more information about unavailable instance types, see [Instance types](https://help.aliyun.com/document_detail/57141.html).
-         * >  To change the billing method of an instance whose instance type is no longer available to subscription, call the [ModifyDBInstanceSpec](https://help.aliyun.com/document_detail/61816.html) or [ModifyNodeSpec](https://help.aliyun.com/document_detail/61923.html) operation to first change the instance type.
-         *
-         * @param request TransformToPrePaidRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TransformToPrePaidResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of an ApsaraDB for MongoDB instance from pay-as-you-go to subscription.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a>.
+        /// A subscription instance cannot be changed to a pay-as-you-go instance. To avoid wasting resources, proceed with caution.
+        /// Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the running state.</description></item>
+        /// <item><description>The billing method of the instance is pay-as-you-go.</description></item>
+        /// <item><description>The instance has no unpaid subscription orders.</description></item>
+        /// <item><description>The instance type is available for purchase. For more information about unavailable instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<remarks>
+        /// <para> To change the billing method of an instance whose instance type is no longer available to subscription, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to first change the instance type.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransformToPrePaidRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransformToPrePaidResponse
+        /// </returns>
         public TransformToPrePaidResponse TransformToPrePaidWithOptions(TransformToPrePaidRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17962,22 +22421,37 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<TransformToPrePaidResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the billing method of an ApsaraDB for MongoDB instance from pay-as-you-go to subscription.
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-         * A subscription instance cannot be changed to a pay-as-you-go instance. To avoid wasting resources, proceed with caution.
-         * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   The instance is in the running state.
-         * *   The billing method of the instance is pay-as-you-go.
-         * *   The instance has no unpaid subscription orders.
-         * *   The instance type is available for purchase. For more information about unavailable instance types, see [Instance types](https://help.aliyun.com/document_detail/57141.html).
-         * >  To change the billing method of an instance whose instance type is no longer available to subscription, call the [ModifyDBInstanceSpec](https://help.aliyun.com/document_detail/61816.html) or [ModifyNodeSpec](https://help.aliyun.com/document_detail/61923.html) operation to first change the instance type.
-         *
-         * @param request TransformToPrePaidRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TransformToPrePaidResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of an ApsaraDB for MongoDB instance from pay-as-you-go to subscription.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a>.
+        /// A subscription instance cannot be changed to a pay-as-you-go instance. To avoid wasting resources, proceed with caution.
+        /// Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the running state.</description></item>
+        /// <item><description>The billing method of the instance is pay-as-you-go.</description></item>
+        /// <item><description>The instance has no unpaid subscription orders.</description></item>
+        /// <item><description>The instance type is available for purchase. For more information about unavailable instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<remarks>
+        /// <para> To change the billing method of an instance whose instance type is no longer available to subscription, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to first change the instance type.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransformToPrePaidRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransformToPrePaidResponse
+        /// </returns>
         public async Task<TransformToPrePaidResponse> TransformToPrePaidWithOptionsAsync(TransformToPrePaidRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18041,59 +22515,99 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<TransformToPrePaidResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the billing method of an ApsaraDB for MongoDB instance from pay-as-you-go to subscription.
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-         * A subscription instance cannot be changed to a pay-as-you-go instance. To avoid wasting resources, proceed with caution.
-         * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   The instance is in the running state.
-         * *   The billing method of the instance is pay-as-you-go.
-         * *   The instance has no unpaid subscription orders.
-         * *   The instance type is available for purchase. For more information about unavailable instance types, see [Instance types](https://help.aliyun.com/document_detail/57141.html).
-         * >  To change the billing method of an instance whose instance type is no longer available to subscription, call the [ModifyDBInstanceSpec](https://help.aliyun.com/document_detail/61816.html) or [ModifyNodeSpec](https://help.aliyun.com/document_detail/61923.html) operation to first change the instance type.
-         *
-         * @param request TransformToPrePaidRequest
-         * @return TransformToPrePaidResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of an ApsaraDB for MongoDB instance from pay-as-you-go to subscription.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a>.
+        /// A subscription instance cannot be changed to a pay-as-you-go instance. To avoid wasting resources, proceed with caution.
+        /// Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the running state.</description></item>
+        /// <item><description>The billing method of the instance is pay-as-you-go.</description></item>
+        /// <item><description>The instance has no unpaid subscription orders.</description></item>
+        /// <item><description>The instance type is available for purchase. For more information about unavailable instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<remarks>
+        /// <para> To change the billing method of an instance whose instance type is no longer available to subscription, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to first change the instance type.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransformToPrePaidRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransformToPrePaidResponse
+        /// </returns>
         public TransformToPrePaidResponse TransformToPrePaid(TransformToPrePaidRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TransformToPrePaidWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Changes the billing method of an ApsaraDB for MongoDB instance from pay-as-you-go to subscription.
-         *
-         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-         * A subscription instance cannot be changed to a pay-as-you-go instance. To avoid wasting resources, proceed with caution.
-         * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
-         * *   The instance is in the running state.
-         * *   The billing method of the instance is pay-as-you-go.
-         * *   The instance has no unpaid subscription orders.
-         * *   The instance type is available for purchase. For more information about unavailable instance types, see [Instance types](https://help.aliyun.com/document_detail/57141.html).
-         * >  To change the billing method of an instance whose instance type is no longer available to subscription, call the [ModifyDBInstanceSpec](https://help.aliyun.com/document_detail/61816.html) or [ModifyNodeSpec](https://help.aliyun.com/document_detail/61923.html) operation to first change the instance type.
-         *
-         * @param request TransformToPrePaidRequest
-         * @return TransformToPrePaidResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of an ApsaraDB for MongoDB instance from pay-as-you-go to subscription.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a>.
+        /// A subscription instance cannot be changed to a pay-as-you-go instance. To avoid wasting resources, proceed with caution.
+        /// Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance is in the running state.</description></item>
+        /// <item><description>The billing method of the instance is pay-as-you-go.</description></item>
+        /// <item><description>The instance has no unpaid subscription orders.</description></item>
+        /// <item><description>The instance type is available for purchase. For more information about unavailable instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<remarks>
+        /// <para> To change the billing method of an instance whose instance type is no longer available to subscription, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to first change the instance type.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransformToPrePaidRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransformToPrePaidResponse
+        /// </returns>
         public async Task<TransformToPrePaidResponse> TransformToPrePaidAsync(TransformToPrePaidRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TransformToPrePaidWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Removes a tag if the tag is not added to another instance.
-         *
-         * @description > 
-         * *   You can remove up to 20 tags at a time.
-         * *   If you remove a tag from all instances, the tag is automatically deleted.
-         *
-         * @param request UntagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a tag if the tag is not added to another instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You can remove up to 20 tags at a time.</description></item>
+        /// <item><description>If you remove a tag from all instances, the tag is automatically deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18157,17 +22671,31 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Removes a tag if the tag is not added to another instance.
-         *
-         * @description > 
-         * *   You can remove up to 20 tags at a time.
-         * *   If you remove a tag from all instances, the tag is automatically deleted.
-         *
-         * @param request UntagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a tag if the tag is not added to another instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You can remove up to 20 tags at a time.</description></item>
+        /// <item><description>If you remove a tag from all instances, the tag is automatically deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18231,50 +22759,89 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Removes a tag if the tag is not added to another instance.
-         *
-         * @description > 
-         * *   You can remove up to 20 tags at a time.
-         * *   If you remove a tag from all instances, the tag is automatically deleted.
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a tag if the tag is not added to another instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You can remove up to 20 tags at a time.</description></item>
+        /// <item><description>If you remove a tag from all instances, the tag is automatically deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UntagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Removes a tag if the tag is not added to another instance.
-         *
-         * @description > 
-         * *   You can remove up to 20 tags at a time.
-         * *   If you remove a tag from all instances, the tag is automatically deleted.
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a tag if the tag is not added to another instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You can remove up to 20 tags at a time.</description></item>
+        /// <item><description>If you remove a tag from all instances, the tag is automatically deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Upgrades the database version of an ApsaraDB for MongoDB instance.
-         *
-         * @description The instance must be in the running state when you call this operation.
-         * > * The available database versions depend on the storage engine used by the instance. For more information, see [Upgrades of MongoDB major versions](https://help.aliyun.com/document_detail/398673.html). You can also call the [DescribeAvailableEngineVersion](https://help.aliyun.com/document_detail/141355.html) operation to query the available database versions.
-         * > * You cannot downgrade the MongoDB version of an instance after you upgrade it.
-         * > * The instance is automatically restarted for two to three times during the upgrade process. Make sure that you upgrade the instance during off-peak hours.
-         *
-         * @param request UpgradeDBInstanceEngineVersionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpgradeDBInstanceEngineVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the database version of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The instance must be in the running state when you call this operation.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The available database versions depend on the storage engine used by the instance. For more information, see <a href="https://help.aliyun.com/document_detail/398673.html">Upgrades of MongoDB major versions</a>. You can also call the <a href="https://help.aliyun.com/document_detail/141355.html">DescribeAvailableEngineVersion</a> operation to query the available database versions.</description></item>
+        /// <item><description>You cannot downgrade the MongoDB version of an instance after you upgrade it.</description></item>
+        /// <item><description>The instance is automatically restarted for two to three times during the upgrade process. Make sure that you upgrade the instance during off-peak hours.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeDBInstanceEngineVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeDBInstanceEngineVersionResponse
+        /// </returns>
         public UpgradeDBInstanceEngineVersionResponse UpgradeDBInstanceEngineVersionWithOptions(UpgradeDBInstanceEngineVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18303,6 +22870,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchMode))
+            {
+                query["SwitchMode"] = request.SwitchMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -18322,18 +22893,33 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<UpgradeDBInstanceEngineVersionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Upgrades the database version of an ApsaraDB for MongoDB instance.
-         *
-         * @description The instance must be in the running state when you call this operation.
-         * > * The available database versions depend on the storage engine used by the instance. For more information, see [Upgrades of MongoDB major versions](https://help.aliyun.com/document_detail/398673.html). You can also call the [DescribeAvailableEngineVersion](https://help.aliyun.com/document_detail/141355.html) operation to query the available database versions.
-         * > * You cannot downgrade the MongoDB version of an instance after you upgrade it.
-         * > * The instance is automatically restarted for two to three times during the upgrade process. Make sure that you upgrade the instance during off-peak hours.
-         *
-         * @param request UpgradeDBInstanceEngineVersionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpgradeDBInstanceEngineVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the database version of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The instance must be in the running state when you call this operation.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The available database versions depend on the storage engine used by the instance. For more information, see <a href="https://help.aliyun.com/document_detail/398673.html">Upgrades of MongoDB major versions</a>. You can also call the <a href="https://help.aliyun.com/document_detail/141355.html">DescribeAvailableEngineVersion</a> operation to query the available database versions.</description></item>
+        /// <item><description>You cannot downgrade the MongoDB version of an instance after you upgrade it.</description></item>
+        /// <item><description>The instance is automatically restarted for two to three times during the upgrade process. Make sure that you upgrade the instance during off-peak hours.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeDBInstanceEngineVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeDBInstanceEngineVersionResponse
+        /// </returns>
         public async Task<UpgradeDBInstanceEngineVersionResponse> UpgradeDBInstanceEngineVersionWithOptionsAsync(UpgradeDBInstanceEngineVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18362,6 +22948,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchMode))
+            {
+                query["SwitchMode"] = request.SwitchMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -18381,51 +22971,92 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<UpgradeDBInstanceEngineVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Upgrades the database version of an ApsaraDB for MongoDB instance.
-         *
-         * @description The instance must be in the running state when you call this operation.
-         * > * The available database versions depend on the storage engine used by the instance. For more information, see [Upgrades of MongoDB major versions](https://help.aliyun.com/document_detail/398673.html). You can also call the [DescribeAvailableEngineVersion](https://help.aliyun.com/document_detail/141355.html) operation to query the available database versions.
-         * > * You cannot downgrade the MongoDB version of an instance after you upgrade it.
-         * > * The instance is automatically restarted for two to three times during the upgrade process. Make sure that you upgrade the instance during off-peak hours.
-         *
-         * @param request UpgradeDBInstanceEngineVersionRequest
-         * @return UpgradeDBInstanceEngineVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the database version of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The instance must be in the running state when you call this operation.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The available database versions depend on the storage engine used by the instance. For more information, see <a href="https://help.aliyun.com/document_detail/398673.html">Upgrades of MongoDB major versions</a>. You can also call the <a href="https://help.aliyun.com/document_detail/141355.html">DescribeAvailableEngineVersion</a> operation to query the available database versions.</description></item>
+        /// <item><description>You cannot downgrade the MongoDB version of an instance after you upgrade it.</description></item>
+        /// <item><description>The instance is automatically restarted for two to three times during the upgrade process. Make sure that you upgrade the instance during off-peak hours.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeDBInstanceEngineVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeDBInstanceEngineVersionResponse
+        /// </returns>
         public UpgradeDBInstanceEngineVersionResponse UpgradeDBInstanceEngineVersion(UpgradeDBInstanceEngineVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeDBInstanceEngineVersionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Upgrades the database version of an ApsaraDB for MongoDB instance.
-         *
-         * @description The instance must be in the running state when you call this operation.
-         * > * The available database versions depend on the storage engine used by the instance. For more information, see [Upgrades of MongoDB major versions](https://help.aliyun.com/document_detail/398673.html). You can also call the [DescribeAvailableEngineVersion](https://help.aliyun.com/document_detail/141355.html) operation to query the available database versions.
-         * > * You cannot downgrade the MongoDB version of an instance after you upgrade it.
-         * > * The instance is automatically restarted for two to three times during the upgrade process. Make sure that you upgrade the instance during off-peak hours.
-         *
-         * @param request UpgradeDBInstanceEngineVersionRequest
-         * @return UpgradeDBInstanceEngineVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the database version of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The instance must be in the running state when you call this operation.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The available database versions depend on the storage engine used by the instance. For more information, see <a href="https://help.aliyun.com/document_detail/398673.html">Upgrades of MongoDB major versions</a>. You can also call the <a href="https://help.aliyun.com/document_detail/141355.html">DescribeAvailableEngineVersion</a> operation to query the available database versions.</description></item>
+        /// <item><description>You cannot downgrade the MongoDB version of an instance after you upgrade it.</description></item>
+        /// <item><description>The instance is automatically restarted for two to three times during the upgrade process. Make sure that you upgrade the instance during off-peak hours.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeDBInstanceEngineVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeDBInstanceEngineVersionResponse
+        /// </returns>
         public async Task<UpgradeDBInstanceEngineVersionResponse> UpgradeDBInstanceEngineVersionAsync(UpgradeDBInstanceEngineVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradeDBInstanceEngineVersionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Upgrades the minor version of an ApsaraDB for MongoDB instance.
-         *
-         * @description When you call the UpgradeDBInstanceKernelVersion operation, the instance must be in the Running state.
-         * > * The UpgradeDBInstanceKernelVersion operation is applicable to replica set and sharded cluster instances, but not to standalone instances.
-         * > * The instance will be restarted once during the upgrade. Call this operation during off-peak hours.
-         *
-         * @param request UpgradeDBInstanceKernelVersionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpgradeDBInstanceKernelVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the minor version of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call the UpgradeDBInstanceKernelVersion operation, the instance must be in the Running state.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The UpgradeDBInstanceKernelVersion operation is applicable to replica set and sharded cluster instances, but not to standalone instances.</description></item>
+        /// <item><description>The instance will be restarted once during the upgrade. Call this operation during off-peak hours.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeDBInstanceKernelVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeDBInstanceKernelVersionResponse
+        /// </returns>
         public UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersionWithOptions(UpgradeDBInstanceKernelVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18450,6 +23081,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchMode))
+            {
+                query["SwitchMode"] = request.SwitchMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -18469,17 +23104,32 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<UpgradeDBInstanceKernelVersionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Upgrades the minor version of an ApsaraDB for MongoDB instance.
-         *
-         * @description When you call the UpgradeDBInstanceKernelVersion operation, the instance must be in the Running state.
-         * > * The UpgradeDBInstanceKernelVersion operation is applicable to replica set and sharded cluster instances, but not to standalone instances.
-         * > * The instance will be restarted once during the upgrade. Call this operation during off-peak hours.
-         *
-         * @param request UpgradeDBInstanceKernelVersionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpgradeDBInstanceKernelVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the minor version of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call the UpgradeDBInstanceKernelVersion operation, the instance must be in the Running state.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The UpgradeDBInstanceKernelVersion operation is applicable to replica set and sharded cluster instances, but not to standalone instances.</description></item>
+        /// <item><description>The instance will be restarted once during the upgrade. Call this operation during off-peak hours.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeDBInstanceKernelVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeDBInstanceKernelVersionResponse
+        /// </returns>
         public async Task<UpgradeDBInstanceKernelVersionResponse> UpgradeDBInstanceKernelVersionWithOptionsAsync(UpgradeDBInstanceKernelVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18504,6 +23154,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchMode))
+            {
+                query["SwitchMode"] = request.SwitchMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -18523,32 +23177,58 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<UpgradeDBInstanceKernelVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Upgrades the minor version of an ApsaraDB for MongoDB instance.
-         *
-         * @description When you call the UpgradeDBInstanceKernelVersion operation, the instance must be in the Running state.
-         * > * The UpgradeDBInstanceKernelVersion operation is applicable to replica set and sharded cluster instances, but not to standalone instances.
-         * > * The instance will be restarted once during the upgrade. Call this operation during off-peak hours.
-         *
-         * @param request UpgradeDBInstanceKernelVersionRequest
-         * @return UpgradeDBInstanceKernelVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the minor version of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call the UpgradeDBInstanceKernelVersion operation, the instance must be in the Running state.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The UpgradeDBInstanceKernelVersion operation is applicable to replica set and sharded cluster instances, but not to standalone instances.</description></item>
+        /// <item><description>The instance will be restarted once during the upgrade. Call this operation during off-peak hours.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeDBInstanceKernelVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeDBInstanceKernelVersionResponse
+        /// </returns>
         public UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersion(UpgradeDBInstanceKernelVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeDBInstanceKernelVersionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Upgrades the minor version of an ApsaraDB for MongoDB instance.
-         *
-         * @description When you call the UpgradeDBInstanceKernelVersion operation, the instance must be in the Running state.
-         * > * The UpgradeDBInstanceKernelVersion operation is applicable to replica set and sharded cluster instances, but not to standalone instances.
-         * > * The instance will be restarted once during the upgrade. Call this operation during off-peak hours.
-         *
-         * @param request UpgradeDBInstanceKernelVersionRequest
-         * @return UpgradeDBInstanceKernelVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the minor version of an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call the UpgradeDBInstanceKernelVersion operation, the instance must be in the Running state.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The UpgradeDBInstanceKernelVersion operation is applicable to replica set and sharded cluster instances, but not to standalone instances.</description></item>
+        /// <item><description>The instance will be restarted once during the upgrade. Call this operation during off-peak hours.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeDBInstanceKernelVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeDBInstanceKernelVersionResponse
+        /// </returns>
         public async Task<UpgradeDBInstanceKernelVersionResponse> UpgradeDBInstanceKernelVersionAsync(UpgradeDBInstanceKernelVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

@@ -10,23 +10,29 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class MigrateToOtherZoneRequest : TeaModel {
         /// <summary>
-        /// The time when the instance is migrated to the destination zone. Valid values:
+        /// <para>The time when the instance is migrated to the destination zone. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Immediately</b>: The instance is immediately migrated to the destination zone.</description></item>
+        /// <item><description><b>MaintainTime</b>: The instance is migrated during the maintenance period of the instance.</description></item>
+        /// </list>
+        /// <para>Default value: <b>Immediately</b>.</para>
         /// 
-        /// *   **Immediately**: The instance is immediately migrated to the destination zone.
-        /// *   **MaintainTime**: The instance is migrated during the maintenance period of the instance.
-        /// 
-        /// Default value: **Immediately**.
+        /// <b>Example:</b>
+        /// <para>Immediately</para>
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <remarks>
+        /// <para> If the network type of the instance is VPC, you must specify the <b>Vswitch</b> parameter .</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  If the network type of the instance is VPC, you must specify the **Vswitch** parameter .
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bp2658****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -49,21 +55,30 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch in the destination zone.
+        /// <para>The ID of the vSwitch in the destination zone.</para>
+        /// <remarks>
+        /// <para> This parameter is valid and required only when the network type of the instance is VPC.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is valid and required only when the network type of the instance is VPC.
+        /// <b>Example:</b>
+        /// <para>vsw-bp67ac****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the destination zone to which you want to migrate the ApsaraDB for MongoDB instance.
+        /// <para>The ID of the destination zone to which you want to migrate the ApsaraDB for MongoDB instance.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The destination and source zones must be in one region.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> to query the zone IDs.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > * The destination and source zones must be in one region.
-        /// > * You can call [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) to query the zone IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-b</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

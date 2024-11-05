@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeBackupTasksRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup task.
+        /// <para>The ID of the backup task.</para>
+        /// <remarks>
+        /// <para> If you call the <a href="https://help.aliyun.com/document_detail/61075.html">CreateBackup</a> operation to perform a manual backup task, you can set this parameter to the returned backup ID to query the backup progress of the task.</para>
+        /// </remarks>
         /// 
-        /// >  If you call the [CreateBackup](https://help.aliyun.com/document_detail/61075.html) operation to perform a manual backup task, you can set this parameter to the returned backup ID to query the backup progress of the task.
+        /// <b>Example:</b>
+        /// <para>170034</para>
         /// </summary>
         [NameInMap("BackupJobId")]
         [Validation(Required=false)]
         public string BackupJobId { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-2zeb2d64cb46xxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

@@ -10,68 +10,93 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAuditRecordsRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <remarks>
+        /// <para>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bp12c5b040dc****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The name of the database to be queried. By default, all databases are queried.
+        /// <para>The name of the database to be queried. By default, all databases are queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>database****</para>
         /// </summary>
         [NameInMap("Database")]
         [Validation(Required=false)]
         public string Database { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para>The end time must be within 24 hours from the start time. Otherwise, the query fails.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > The end time must be within 24 hours from the start time. Otherwise, the query fails.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2019-03-13T13:11:14Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The form of the audit log that the operation returns. Valid values:
+        /// <para>The form of the audit log that the operation returns. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>File</b>: triggers the generation of audit logs. If this parameter is set to File, only common parameters are returned.</description></item>
+        /// <item><description><b>Stream</b> (default): returns data streams.</description></item>
+        /// </list>
         /// 
-        /// *   **File**: triggers the generation of audit logs. If this parameter is set to File, only common parameters are returned.
-        /// *   **Stream** (default): returns data streams.
+        /// <b>Example:</b>
+        /// <para>Stream</para>
         /// </summary>
         [NameInMap("Form")]
         [Validation(Required=false)]
         public string Form { get; set; }
 
         /// <summary>
-        /// The logical relationship between multiple keywords. Valid values:
+        /// <para>The logical relationship between multiple keywords. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>or</b></description></item>
+        /// <item><description><b>and</b> (default value)</description></item>
+        /// </list>
         /// 
-        /// *   **or**
-        /// *   **and** (default value)
+        /// <b>Example:</b>
+        /// <para>and</para>
         /// </summary>
         [NameInMap("LogicalOperator")]
         [Validation(Required=false)]
         public string LogicalOperator { get; set; }
 
         /// <summary>
-        /// The ID of the mongos node or shard node in the instance.
+        /// <para>The ID of the mongos node or shard node in the instance.</para>
+        /// <remarks>
+        /// <para>This parameter takes effect only when you set the <b>DBInstanceId</b> parameter to the ID of a sharded cluster instance.</para>
+        /// </remarks>
         /// 
-        /// > This parameter takes effect only when you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
+        /// <b>Example:</b>
+        /// <para>d-bp128a003436****</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
         /// <summary>
-        /// The order of time in which the log entries to return are sorted. Valid values:
+        /// <para>The order of time in which the log entries to return are sorted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>asc</b>: The log entries are sorted by time in ascending order.</description></item>
+        /// <item><description><b>desc</b>: The log entries are sorted by time in descending order.</description></item>
+        /// </list>
         /// 
-        /// *   **asc**: The log entries are sorted by time in ascending order.
-        /// *   **desc**: The log entries are sorted by time in descending order.
+        /// <b>Example:</b>
+        /// <para>asc</para>
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
@@ -86,21 +111,30 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number of the page to return. The valid value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: 1.
+        /// <para>The page number of the page to return. The valid value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return per page. Default value: 30. Valid values: **30**, **50**, and **100**.
+        /// <para>The number of entries to return per page. Default value: 30. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.
+        /// <para>The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>slow</para>
         /// </summary>
         [NameInMap("QueryKeywords")]
         [Validation(Required=false)]
@@ -115,16 +149,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2019-03-13T12:11:14Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The user of the database. If you do not specify this parameter, this operation returns records of all users.
+        /// <para>The user of the database. If you do not specify this parameter, this operation returns records of all users.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]

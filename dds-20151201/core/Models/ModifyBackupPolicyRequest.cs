@@ -10,111 +10,252 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// The frequency at which high-frequency backup is created. Valid values:
+        /// <para>The frequency at which high-frequency backups are generated. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>-1</b>: High-frequency backup is disabled.</description></item>
+        /// <item><description><b>30</b>: High-frequency backups are generated every 30 minutes.</description></item>
+        /// <item><description><b>60</b>: High-frequency backups are generated every 1 hour.</description></item>
+        /// <item><description><b>120</b>: High-frequency backups are generated every 2 hours.</description></item>
+        /// <item><description><b>180</b>: High-frequency backups are generated every 3 hours.</description></item>
+        /// <item><description><b>240</b>: High-frequency backups are generated every 4 hours.</description></item>
+        /// <item><description><b>360</b>: High-frequency backups are generated every 6 hours.</description></item>
+        /// <item><description><b>480</b>: High-frequency backups are generated every 8 hours.</description></item>
+        /// <item><description><b>720</b>: High-frequency backups are generated every 12 hours.</description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If you set the <b>SnapshotBackupType</b> parameter to <b>Standard</b>, you must fix the value of this parameter to -1.</para>
+        /// </description></item>
+        /// <item><description><para>High-frequency backup takes effect only when you set the <b>SnapshotBackupType</b> parameter to <b>Flash</b> and this parameter to a value greater than 0.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   **-1**: High-frequency backup is disabled.
-        /// *   **30**: High-frequency backups are generated every 30 minutes.
-        /// *   **60**: High-frequency backups are generated every 1 hour.
-        /// *   **120**: High-frequency backups are generated every 2 hours.
-        /// *   **180**: High-frequency backups are generated every 3 hours.
-        /// *   **240**: High-frequency backups are generated every 4 hours.
-        /// *   **360**: High-frequency backups are generated every 6 hours.
-        /// *   **480**: High-frequency backups are generated every 8 hours.
-        /// *   **720**: High-frequency backups are generated every 12 hours.
-        /// 
-        /// > 
-        /// 
-        /// *   If the **SnapshotBackupType** parameter is set to **Standard**, this parameter is set to -1 and cannot be changed.
-        /// 
-        /// *   High-frequency backup takes effect only when the **SnapshotBackupType** parameter is set to **Flash** and the value of this parameter is greater than 0.
+        /// <b>Example:</b>
+        /// <para>-1</para>
         /// </summary>
         [NameInMap("BackupInterval")]
         [Validation(Required=false)]
         public string BackupInterval { get; set; }
 
         /// <summary>
-        /// The retention period of full backups.
+        /// <para>The retention period of full backups.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If your instance is created before September 10, 2021, backups are retained for seven days by default.</para>
+        /// </description></item>
+        /// <item><description><para>If your instance is created after September 10, 2021, backups are retained for 30 days by default.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// > 
-        /// 
-        /// *   If your instance is created before September 10, 2021, backups are retained for seven days by default.
-        /// 
-        /// *   If your instance is created after September 10, 2021, backups are retained for 30 days by default.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("BackupRetentionPeriod")]
         [Validation(Required=false)]
         public long? BackupRetentionPeriod { get; set; }
 
+        /// <summary>
+        /// <para>The backup retention policy configured for the instance. Valid values:</para>
+        /// <ol>
+        /// <item><description>0: All backup sets are immediately deleted when the instance is released.</description></item>
+        /// <item><description>1: Automatic backup is performed and the backup set is retained for a long period of time when the instance is released.</description></item>
+        /// <item><description>2: Automatic backup is performed and all backup sets are retained for a long period of time when the instance is released.</description></item>
+        /// </ol>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/4920562.html">Retain the backup files of an ApsaraDB for MongoDB instance for a long period of time</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("BackupRetentionPolicyOnClusterDeletion")]
         [Validation(Required=false)]
         public int? BackupRetentionPolicyOnClusterDeletion { get; set; }
 
+        /// <summary>
+        /// <para>The retention period of Cross-regional backup.
+        /// Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Monday</b></description></item>
+        /// <item><description><b>Tuesday</b></description></item>
+        /// <item><description><b>Wednesday</b></description></item>
+        /// <item><description><b>Thursday</b></description></item>
+        /// <item><description><b>Friday</b></description></item>
+        /// <item><description><b>Saturday</b></description></item>
+        /// <item><description><b>Sunday</b></description></item>
+        /// </list>
+        /// <para>**</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Separate multiple values with commas (,).</description></item>
+        /// <item><description>When SnapshotBackupType  is set to standard, this value needs to be a subset of the PreferredBackupPeriod.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</para>
+        /// </summary>
         [NameInMap("CrossBackupPeriod")]
         [Validation(Required=false)]
         public string CrossBackupPeriod { get; set; }
 
+        /// <summary>
+        /// <para>The operation strategy of Cross-regional backup.</para>
+        /// <list type="bullet">
+        /// <item><description>update</description></item>
+        /// <item><description>delete</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>update</para>
+        /// </summary>
         [NameInMap("CrossBackupType")]
         [Validation(Required=false)]
         public string CrossBackupType { get; set; }
 
+        /// <summary>
+        /// <para>The retention type of Cross-regional  log backup.</para>
+        /// <list type="bullet">
+        /// <item><description>delay : retain the backup for a period of time.</description></item>
+        /// <item><description>never : retain the backup permanently.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>delay</para>
+        /// </summary>
         [NameInMap("CrossLogRetentionType")]
         [Validation(Required=false)]
         public string CrossLogRetentionType { get; set; }
 
+        /// <summary>
+        /// <para>The retention time of Cross-regional log backup, 3 - 1825 days.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("CrossLogRetentionValue")]
         [Validation(Required=false)]
         public int? CrossLogRetentionValue { get; set; }
 
+        /// <summary>
+        /// <para>The retention type of Cross-regional backup.</para>
+        /// <list type="bullet">
+        /// <item><description>delay : retain the backup for a period of time.</description></item>
+        /// <item><description>never : retain the backup permanently.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>delay</para>
+        /// </summary>
         [NameInMap("CrossRetentionType")]
         [Validation(Required=false)]
         public string CrossRetentionType { get; set; }
 
+        /// <summary>
+        /// <para>The retention time of Cross-regional backup, 3 - 1825 days.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Used and must be used when CrossRetentionType is delay.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7</para>
+        /// </summary>
         [NameInMap("CrossRetentionValue")]
         [Validation(Required=false)]
         public int? CrossRetentionValue { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bp16cb162771****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The region id of Cross-regional backup.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Required for Cross-regional backup.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("DestRegion")]
         [Validation(Required=false)]
         public string DestRegion { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the log backup feature. Valid values:
+        /// <para>Specifies whether to enable the log backup feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b> (default): The log backup feature is disabled.</description></item>
+        /// <item><description><b>1</b>: The log backup feature is enabled.</description></item>
+        /// </list>
         /// 
-        /// *   **0** (default): The log backup feature is disabled.
-        /// *   **1**: The log backup feature is enabled.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("EnableBackupLog")]
         [Validation(Required=false)]
         public long? EnableBackupLog { get; set; }
 
+        /// <summary>
+        /// <para>Whether to turn on cross-regional log backup.</para>
+        /// <list type="bullet">
+        /// <item><description>1：turn on . Used for sharded cluster.</description></item>
+        /// <item><description>0: turn off. Used for replicate set.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("EnableCrossLogBackup")]
         [Validation(Required=false)]
         public int? EnableCrossLogBackup { get; set; }
 
         /// <summary>
-        /// The number of days for which high-frequency backups are retained. Before you use this parameter, make sure that you specify the BackupInterval parameter. By default, high-frequency backups are retained for one day.
+        /// <para>The number of days for which high-frequency backups are retained. Before you use this parameter, make sure that you specify the BackupInterval parameter. By default, high-frequency backups are retained for one day.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("HighFrequencyBackupRetention")]
         [Validation(Required=false)]
         public long? HighFrequencyBackupRetention { get; set; }
 
+        /// <summary>
+        /// <para>The instance architecture. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>replicate</description></item>
+        /// <item><description>sharding</description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is required  for Cross-regional backup.</description></item>
+        /// <item><description>This parameter is required for backup recovery of deleted instances.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>replicate</para>
+        /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The number of days for which log backups are retained. Default value: 7.
+        /// <para>The number of days for which log backups are retained. Default value: 7.</para>
+        /// <para>Valid values: 7 to 730.</para>
         /// 
-        /// Valid values: 7 to 730.
+        /// <b>Example:</b>
+        /// <para>7</para>
         /// </summary>
         [NameInMap("LogBackupRetentionPeriod")]
         [Validation(Required=false)]
@@ -129,26 +270,37 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The day of a week when the system regularly backs up data. Valid values:
+        /// <para>The day of a week when the system regularly backs up data. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Monday</b></description></item>
+        /// <item><description><b>Tuesday</b></description></item>
+        /// <item><description><b>Wednesday</b></description></item>
+        /// <item><description><b>Thursday</b></description></item>
+        /// <item><description><b>Friday</b></description></item>
+        /// <item><description><b>Saturday</b></description></item>
+        /// <item><description><b>Sunday</b></description></item>
+        /// </list>
+        /// <para>**</para>
+        /// <para><b>Notice</b>: To ensure data security, make sure that the system backs up data at least twice a week.</para>
+        /// <remarks>
+        /// <para> Separate multiple values with commas (,).</para>
+        /// </remarks>
         /// 
-        /// *   **Monday**
-        /// *   **Tuesday**
-        /// *   **Wednesday**
-        /// *   **Thursday**
-        /// *   **Friday**
-        /// *   **Saturday**
-        /// *   **Sunday**
-        /// 
-        /// >  Separate multiple values with commas (,).
+        /// <b>Example:</b>
+        /// <para>Monday,Wednesday,Friday,Sunday</para>
         /// </summary>
         [NameInMap("PreferredBackupPeriod")]
         [Validation(Required=false)]
         public string PreferredBackupPeriod { get; set; }
 
         /// <summary>
-        /// The start time of the backup. Specify the time in the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time must be in UTC.
+        /// <para>The start time of the backup. Specify the time in the ISO 8601 standard in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para> The time range is 1 hour.</para>
+        /// </remarks>
         /// 
-        /// >  The time range is 1 hour.
+        /// <b>Example:</b>
+        /// <para>03:00Z-04:00Z</para>
         /// </summary>
         [NameInMap("PreferredBackupTime")]
         [Validation(Required=false)]
@@ -163,15 +315,31 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The snapshot backup type. Valid values:
+        /// <para>The snapshot backup type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Flash</b>: single-digit second backup</description></item>
+        /// <item><description><b>Standard</b> (default): standard backup</description></item>
+        /// </list>
         /// 
-        /// *   **Flash**: single-digit second backup
-        /// *   **Standard** (default): standard backup
+        /// <b>Example:</b>
+        /// <para>Standard</para>
         /// </summary>
         [NameInMap("SnapshotBackupType")]
         [Validation(Required=false)]
         public string SnapshotBackupType { get; set; }
 
+        /// <summary>
+        /// <para>The region ID of the instance.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Required for Cross-regional backup.</description></item>
+        /// <item><description>Required for backup recovery of deleted instances.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
         [NameInMap("SrcRegion")]
         [Validation(Required=false)]
         public string SrcRegion { get; set; }

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyAuditLogFilterResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E209BE2B-F264-4B9D-81F6-A5A5FB1FBF28</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

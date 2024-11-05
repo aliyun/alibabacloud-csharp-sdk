@@ -10,102 +10,133 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceSpecRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable automatic payment. Valid values:
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b> (default): enables automatic payment. Make sure that your Alibaba Cloud account has a sufficient balance.</description></item>
+        /// <item><description><b>false</b>: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <b>Expenses</b> &gt; <b>User Center</b>. In the left-side navigation pane, choose <b>Order Management</b> &gt; <b>Order</b>. On the <b>Orders for Services</b> tab, find the order and pay for the order.</description></item>
+        /// </list>
         /// 
-        /// *   **true** (default): enables automatic payment. Make sure that your Alibaba Cloud account has a sufficient balance.
-        /// *   **false**: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose **Expenses** > **User Center**. In the left-side navigation pane, choose **Order Management** > **Order**. On the **Orders for Services** tab, find the order and pay for the order.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// The business information.
+        /// <para>The business information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{“ActivityId&quot;:&quot;000000000&quot;}</para>
         /// </summary>
         [NameInMap("BusinessInfo")]
         [Validation(Required=false)]
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
+        /// <para>The coupon code. Default value: <c>youhuiquan_promotion_option_id_for_blank</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>youhuiquan_promotion_option_id_for_blank</para>
         /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// The instance type. For more information, see [Instance types](https://help.aliyun.com/document_detail/57141.html). You can also call the [DescribeAvailableResource](https://help.aliyun.com/document_detail/149719.html) operation to view instance types.
+        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>. You can also call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation to view instance types.</para>
+        /// <remarks>
+        /// <para>You must specify at least one of the DBInstanceClass and <b>DBInstanceStorage</b> parameters.</para>
+        /// </remarks>
         /// 
-        /// > You must specify at least one of the DBInstanceClass and **DBInstanceStorage** parameters.
+        /// <b>Example:</b>
+        /// <para>dds.sn4.xlarge.1</para>
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bp1ea17b41ab****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The storage capacity of the instance. Valid values: 10 to 3000. The value must be a multiple of 10. Unit: GB. The values that can be specified for this parameter are subject to the instance types. For more information, see [Instance types](https://help.aliyun.com/document_detail/57141.html).
+        /// <para>The storage capacity of the instance. Valid values: 10 to 3000. The value must be a multiple of 10. Unit: GB. The values that can be specified for this parameter are subject to the instance types. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>You must specify at least one of the DBInstanceStorage and <b>DBInstanceClass</b> parameters.</para>
+        /// </description></item>
+        /// <item><description><para>Storage capacity can be scaled down only for pay-as-you-go replica set instances. The new storage capacity you specify must be greater than the used storage capacity.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// > 
-        /// 
-        /// *   You must specify at least one of the DBInstanceStorage and **DBInstanceClass** parameters.
-        /// 
-        /// *   Storage capacity can be scaled down only for pay-as-you-go replica set instances. The new storage capacity you specify must be greater than the used storage capacity.
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("DBInstanceStorage")]
         [Validation(Required=false)]
         public string DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// The time when the changed configurations take effect. Valid values:
+        /// <para>The time when the changed configurations take effect. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Immediately</b> (default): The configurations immediately take effect.</description></item>
+        /// <item><description><b>MaintainTime</b>: The configurations take effect during the maintenance window of the instance.</description></item>
+        /// </list>
         /// 
-        /// *   **Immediately** (default): The configurations immediately take effect.
-        /// *   **MaintainTime**: The configurations take effect during the maintenance window of the instance.
+        /// <b>Example:</b>
+        /// <para>Immediately</para>
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// The additional parameter.
+        /// <para>The additional parameter.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>async</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
         /// 
-        /// *   async
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>sync</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        /// *   sync
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>async</para>
         /// </summary>
         [NameInMap("ExtraParam")]
         [Validation(Required=false)]
         public string ExtraParam { get; set; }
 
         /// <summary>
-        /// The type of the configuration change. Valid values:
+        /// <para>The type of the configuration change. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>UPGRADE</b></description></item>
+        /// <item><description><b>DOWNGRADE</b> (default)</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter can be configured only when the billing method of the instance is subscription.</para>
+        /// </remarks>
         /// 
-        /// *   **UPGRADE**
-        /// *   **DOWNGRADE** (default)
-        /// 
-        /// >  This parameter can be configured only when the billing method of the instance is subscription.
+        /// <b>Example:</b>
+        /// <para>UPGRADE</para>
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
@@ -120,23 +151,31 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of read-only nodes. Valid values: **0** to **5**.
+        /// <para>The number of read-only nodes. Valid values: <b>0</b> to <b>5</b>.</para>
+        /// <para>If your instance has only <b>Classic Network</b> and <b>VPC</b> endpoints, you must apply for a public endpoint or release the classic network endpoint for the instance before you can change the <b>Read-only Nodes</b> value.</para>
+        /// <remarks>
+        /// <para>You can go to the <b>Database Connections</b> page to view the types of networks that are enabled.</para>
+        /// </remarks>
         /// 
-        /// If your instance has only **Classic Network** and **VPC** endpoints, you must apply for a public endpoint or release the classic network endpoint for the instance before you can change the **Read-only Nodes** value.
-        /// 
-        /// > You can go to the **Database Connections** page to view the types of networks that are enabled.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ReadonlyReplicas")]
         [Validation(Required=false)]
         public string ReadonlyReplicas { get; set; }
 
         /// <summary>
-        /// The number of nodes in the instance.
+        /// <para>The number of nodes in the instance.</para>
+        /// <list type="bullet">
+        /// <item><description>Valid values for replica set instances: <b>3</b>, <b>5</b>, and <b>7</b></description></item>
+        /// <item><description>Valid values for standalone instances: <b>1</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is not required for a serverless instance which is only available on the China site (aliyun.com).</para>
+        /// </remarks>
         /// 
-        /// *   Valid values for replica set instances: **3**, **5**, and **7**
-        /// *   Valid values for standalone instances: **1**
-        /// 
-        /// >  This parameter is not required for a serverless instance which is only available on the China site (aliyun.com).
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("ReplicationFactor")]
         [Validation(Required=false)]

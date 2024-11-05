@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class UpgradeDBInstanceKernelVersionResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>27B9A130-7C4B-40D9-84E8-2FC081097AAC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

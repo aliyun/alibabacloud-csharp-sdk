@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeReplicaSetRoleResponseBody : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dds-bpxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The details of the roles of the replica set instance.
+        /// <para>The details of the roles of the replica set instance.</para>
         /// </summary>
         [NameInMap("ReplicaSets")]
         [Validation(Required=false)]
@@ -28,49 +31,79 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeReplicaSetRoleResponseBodyReplicaSetsReplicaSet> ReplicaSet { get; set; }
             public class DescribeReplicaSetRoleResponseBodyReplicaSetsReplicaSet : TeaModel {
                 /// <summary>
-                /// The endpoint of the node.
+                /// <para>The endpoint of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dds-bpxxxxxxxx.mongodb.rds.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("ConnectionDomain")]
                 [Validation(Required=false)]
                 public string ConnectionDomain { get; set; }
 
                 /// <summary>
-                /// The port number that is used to connect to the node.
+                /// <para>The port number that is used to connect to the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3717</para>
                 /// </summary>
                 [NameInMap("ConnectionPort")]
                 [Validation(Required=false)]
                 public string ConnectionPort { get; set; }
 
                 /// <summary>
-                /// The remaining duration of the classic network endpoint. Unit: seconds.
+                /// <para>The connection type of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>SRV</para>
+                /// </summary>
+                [NameInMap("ConnectionType")]
+                [Validation(Required=false)]
+                public string ConnectionType { get; set; }
+
+                /// <summary>
+                /// <para>The remaining duration of the classic network endpoint. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1209582</para>
                 /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
 
                 /// <summary>
-                /// The network type of the instance. Valid values:
+                /// <para>The network type of the instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>VPC</b>: the virtual private cloud (VPC)</description></item>
+                /// <item><description><b>Classic</b>: the classic network</description></item>
+                /// <item><description><b>Public</b>: the Internet</description></item>
+                /// </list>
                 /// 
-                /// *   **VPC**: the virtual private cloud (VPC)
-                /// *   **Classic**: the classic network
-                /// *   **Public**: the Internet
+                /// <b>Example:</b>
+                /// <para>VPC</para>
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// The role of the node in the replica set instance. Valid values:
+                /// <para>The role of the node in the replica set instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Primary</b></description></item>
+                /// <item><description><b>Secondary</b></description></item>
+                /// </list>
                 /// 
-                /// *   **Primary**
-                /// *   **Secondary**
+                /// <b>Example:</b>
+                /// <para>Primary</para>
                 /// </summary>
                 [NameInMap("ReplicaSetRole")]
                 [Validation(Required=false)]
                 public string ReplicaSetRole { get; set; }
 
                 /// <summary>
-                /// The role ID of the node.
+                /// <para>The role ID of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>651xxxxx</para>
                 /// </summary>
                 [NameInMap("RoleId")]
                 [Validation(Required=false)]
@@ -81,7 +114,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DB4A0595-FCA9-437F-B2BB-25DBFC009D3E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

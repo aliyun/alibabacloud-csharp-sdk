@@ -10,29 +10,36 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceMaintainTimeRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bpac2345****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The end time of the maintenance window. Specify the time in the ISO 8601 standard in the *HH:mm*Z format. The time must be in UTC.
+        /// <para>The end time of the maintenance window. Specify the time in the ISO 8601 standard in the <em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para> The end time must be later than the start time of the maintenance window.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  The end time must be later than the start time of the maintenance window.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>02:00Z</para>
         /// </summary>
         [NameInMap("MaintainEndTime")]
         [Validation(Required=false)]
         public string MaintainEndTime { get; set; }
 
         /// <summary>
-        /// The start time of the maintenance window. Specify the time in the ISO 8601 standard in the *HH:mm*Z format. The time must be in UTC.
+        /// <para>The start time of the maintenance window. Specify the time in the ISO 8601 standard in the <em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>01:00Z</para>
         /// </summary>
         [NameInMap("MaintainStartTime")]
         [Validation(Required=false)]

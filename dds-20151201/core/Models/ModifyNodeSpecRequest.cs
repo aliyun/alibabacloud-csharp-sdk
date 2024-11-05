@@ -10,100 +10,138 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyNodeSpecRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable automatic payment. Valid values:
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b> (default): enables automatic payment. Make sure that you have sufficient balance within your account.</description></item>
+        /// <item><description><b>false</b>: disables automatic payment. In this case, you must manually pay for the instance.</description></item>
+        /// </list>
         /// 
-        /// *   **true** (default): enables automatic payment. Make sure that you have sufficient balance within your account.
-        /// *   **false**: disables automatic payment. In this case, you must manually pay for the instance.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// The business information. This is an additional parameter.
+        /// <para>The business information. This is an additional parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{“ActivityId&quot;:&quot;000000000&quot;}</para>
         /// </summary>
         [NameInMap("BusinessInfo")]
         [Validation(Required=false)]
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
+        /// <para>The coupon code. Default value: <c>youhuiquan_promotion_option_id_for_blank</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>youhuiquan_promotion_option_id_for_blank</para>
         /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dds-bp1c0b990184****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The time when the changed configurations take effect. Valid values:
+        /// <para>The time when the changed configurations take effect. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Immediately</b> (default): The new configurations immediately take effect</description></item>
+        /// <item><description><b>MaintainTime</b>: The new configurations take effect during the maintenance window of the instance.</description></item>
+        /// </list>
         /// 
-        /// *   **Immediately** (default): The new configurations immediately take effect
-        /// *   **MaintainTime**: The new configurations take effect during the maintenance window of the instance.
+        /// <b>Example:</b>
+        /// <para>Immediately</para>
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// The source of the request. Valid values:
+        /// <para>The source of the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>OpenApi</b>: the ApsaraDB for MongoDB API</description></item>
+        /// <item><description><b>mongo_buy</b>: the ApsaraDB for MongoDB console</description></item>
+        /// </list>
         /// 
-        /// *   **OpenApi**: the ApsaraDB for MongoDB API
-        /// *   **mongo_buy**: the ApsaraDB for MongoDB console
+        /// <b>Example:</b>
+        /// <para>OpenApi</para>
         /// </summary>
         [NameInMap("FromApp")]
         [Validation(Required=false)]
         public string FromApp { get; set; }
 
         /// <summary>
-        /// The specifications of the shard or mongos node. For more information, see [Instance types](https://help.aliyun.com/document_detail/57141.html).
+        /// <para>The specifications of the shard or mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dds.mongos.standard</para>
         /// </summary>
         [NameInMap("NodeClass")]
         [Validation(Required=false)]
         public string NodeClass { get; set; }
 
         /// <summary>
-        /// The ID of the shard or mongos node in the sharded cluster instance. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/62010.html) operation to query the node ID.
+        /// <para>The ID of the shard or mongos node in the sharded cluster instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the node ID.</para>
+        /// <remarks>
+        /// <para>If you set this parameter to the ID of the shard node, you must also specify the <b>NodeStorage</b> parameter.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > If you set this parameter to the ID of the shard node, you must also specify the **NodeStorage** parameter.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>s-bp143e1b1637****</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
         /// <summary>
-        /// The storage capacity of the shard node. Unit: GB.
+        /// <para>The storage capacity of the shard node. Unit: GB.</para>
+        /// <list type="bullet">
+        /// <item><description>Valid values are <b>10</b> to <b>2000</b> if the instance uses local SSDs.</description></item>
+        /// <item><description>Valid values are <b>20</b> to <b>16000</b> if the instance uses enhanced SSDs (ESSDs) at PL1.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>The value must be a multiple of 10.</para>
+        /// </remarks>
         /// 
-        /// *   Valid values are **10** to **2000** if the instance uses local SSDs.
-        /// *   Valid values are **20** to **16000** if the instance uses enhanced SSDs (ESSDs) at PL1.
-        /// 
-        /// > The value must be a multiple of 10.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("NodeStorage")]
         [Validation(Required=false)]
         public int? NodeStorage { get; set; }
 
         /// <summary>
-        /// The order type. Valid values:
+        /// <para>The order type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>UPGRADE</b></description></item>
+        /// <item><description><b>DOWNGRADE</b></description></item>
+        /// </list>
         /// 
-        /// *   **UPGRADE**
-        /// *   **DOWNGRADE**
+        /// <b>Example:</b>
+        /// <para>UPGRADE</para>
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
@@ -118,9 +156,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of read-only nodes in the shard node.
+        /// <para>The number of read-only nodes in the shard node.</para>
+        /// <para>Valid values: <b>0</b> to <b>5</b>. The value must be an integer. Default value: <b>0</b>.</para>
         /// 
-        /// Valid values: **0** to **5**. The value must be an integer. Default value: **0**.
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("ReadonlyReplicas")]
         [Validation(Required=false)]
@@ -135,7 +175,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The execution time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// <para>The execution time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-01-05T03:18:53Z</para>
         /// </summary>
         [NameInMap("SwitchTime")]
         [Validation(Required=false)]
