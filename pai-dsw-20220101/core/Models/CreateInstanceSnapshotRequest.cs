@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         public List<string> ExcludePaths { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</para>
         /// </summary>
@@ -60,6 +62,8 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         public string SnapshotDescription { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>training_data_env</para>
         /// </summary>
