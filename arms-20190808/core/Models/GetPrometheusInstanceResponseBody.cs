@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string EnableAuthToken { get; set; }
 
             /// <summary>
-            /// <para>扩展信息（仅控制台请求才返回）</para>
+            /// <para>The extra information.</para>
             /// </summary>
             [NameInMap("ExtraInfo")]
             [Validation(Required=false)]
@@ -335,7 +335,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string SubClustersJson { get; set; }
 
             /// <summary>
-            /// <para>Supported authentication types.</para>
+            /// <para>The supported authentication types.</para>
             /// </summary>
             [NameInMap("SupportAuthTypes")]
             [Validation(Required=false)]

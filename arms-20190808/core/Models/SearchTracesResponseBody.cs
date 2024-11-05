@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The IP address of the host where the application resides.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>172.20.**.**</para>
+            /// <para><c>172.20.**.**</c></para>
             /// </summary>
             [NameInMap("ServiceIp")]
             [Validation(Required=false)]

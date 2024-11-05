@@ -26,12 +26,24 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public GetRumExceptionStackResponseBodyData Data { get; set; }
         public class GetRumExceptionStackResponseBodyData : TeaModel {
+            [NameInMap("CrashAddress")]
+            [Validation(Required=false)]
+            public string CrashAddress { get; set; }
+
+            [NameInMap("CrashReason")]
+            [Validation(Required=false)]
+            public string CrashReason { get; set; }
+
             /// <summary>
             /// <para>The list of stacks.</para>
             /// </summary>
             [NameInMap("Lines")]
             [Validation(Required=false)]
             public List<string> Lines { get; set; }
+
+            [NameInMap("ModuleName")]
+            [Validation(Required=false)]
+            public string ModuleName { get; set; }
 
             /// <summary>
             /// <para>The thread ID.</para>
@@ -42,6 +54,24 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [NameInMap("ThreadId")]
             [Validation(Required=false)]
             public string ThreadId { get; set; }
+
+            [NameInMap("ThreadInfoList")]
+            [Validation(Required=false)]
+            public List<GetRumExceptionStackResponseBodyDataThreadInfoList> ThreadInfoList { get; set; }
+            public class GetRumExceptionStackResponseBodyDataThreadInfoList : TeaModel {
+                [NameInMap("ThreadDetail")]
+                [Validation(Required=false)]
+                public string ThreadDetail { get; set; }
+
+                [NameInMap("ThreadTag")]
+                [Validation(Required=false)]
+                public string ThreadTag { get; set; }
+
+            }
+
+            [NameInMap("Uuid")]
+            [Validation(Required=false)]
+            public string Uuid { get; set; }
 
         }
 
