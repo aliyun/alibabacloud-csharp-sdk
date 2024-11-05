@@ -1,3 +1,9 @@
+2024-11-05 Version: 3.1.0
+- Support API DescribeCdnTypes.
+- Support API DescribeUserCdnStatus.
+- Support API ModifyCdnService.
+
+
 2024-11-03 Version: 3.0.1
 - Update API PushObjectCache: add param QueryHashkey.
 
