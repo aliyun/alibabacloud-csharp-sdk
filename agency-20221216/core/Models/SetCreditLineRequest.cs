@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class SetCreditLineRequest : TeaModel {
         /// <summary>
-        /// New Credit Line
+        /// <para>New Credit Line</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("CreditLine")]
         [Validation(Required=false)]
         public string CreditLine { get; set; }
 
         /// <summary>
-        /// The UID of Sub Account.
+        /// <para>The UID of Sub Account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1263644979775567</para>
         /// </summary>
         [NameInMap("Uid")]
         [Validation(Required=false)]

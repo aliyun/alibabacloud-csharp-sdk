@@ -10,43 +10,54 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class CreateCustomerRequest : TeaModel {
         /// <summary>
-        /// Customer\\"s name.
+        /// <para>Customer\&quot;s name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>DoorBell Marketing</para>
         /// </summary>
         [NameInMap("CustomerName")]
         [Validation(Required=false)]
         public string CustomerName { get; set; }
 
         /// <summary>
-        /// The source/channel that allow client to connected with us. Please enumerate with Customer Source.
+        /// <para>The source/channel that allow client to connected with us. Please enumerate with Customer Source.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>website</para>
         /// </summary>
         [NameInMap("CustomerSource")]
         [Validation(Required=false)]
         public string CustomerSource { get; set; }
 
         /// <summary>
-        /// The sub-industry that Customer\\"s business belongs to. Please enumerate with Customer Trade.
+        /// <para>The sub-industry that Customer\&quot;s business belongs to. Please enumerate with Customer Trade.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0101</para>
         /// </summary>
         [NameInMap("CustomerSubTrade")]
         [Validation(Required=false)]
         public string CustomerSubTrade { get; set; }
 
         /// <summary>
-        /// The industry that Customer\\"s business belongs to. Please enumerate with Customer Trade.
+        /// <para>The industry that Customer\&quot;s business belongs to. Please enumerate with Customer Trade.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>01</para>
         /// </summary>
         [NameInMap("CustomerTrade")]
         [Validation(Required=false)]
         public string CustomerTrade { get; set; }
 
         /// <summary>
-        /// The region that Customer choose to launch the Cloud Service. Please use ListCountries to confirm the valid region list for current UID.
+        /// <para>The region that Customer choose to launch the Cloud Service. Please use ListCountries to confirm the valid region list for current UID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>AR</para>
         /// </summary>
         [NameInMap("Nation")]
         [Validation(Required=false)]

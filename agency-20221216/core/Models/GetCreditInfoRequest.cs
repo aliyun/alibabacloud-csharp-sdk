@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetCreditInfoRequest : TeaModel {
         /// <summary>
-        /// Sub Account UID
+        /// <para>Sub Account UID</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1792155717328010</para>
         /// </summary>
         [NameInMap("Uid")]
         [Validation(Required=false)]

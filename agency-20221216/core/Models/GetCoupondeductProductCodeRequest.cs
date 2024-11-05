@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetCoupondeductProductCodeRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]

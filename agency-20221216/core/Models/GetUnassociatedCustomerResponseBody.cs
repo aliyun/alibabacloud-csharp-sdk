@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetUnassociatedCustomerResponseBody : TeaModel {
         /// <summary>
-        /// Error Code, Candidate Value：
-        /// * 200: OK
-        /// * 1109: System error
+        /// <para>Error Code, Candidate Value：</para>
+        /// <list type="bullet">
+        /// <item><description>200: OK</description></item>
+        /// <item><description>1109: System error</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// List of Invitation Information
+        /// <para>List of Invitation Information</para>
         /// </summary>
         [NameInMap("InviteInfoList")]
         [Validation(Required=false)]
@@ -30,39 +35,56 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public List<GetUnassociatedCustomerResponseBodyInviteInfoListInviteInfo> InviteInfo { get; set; }
             public class GetUnassociatedCustomerResponseBodyInviteInfoListInviteInfo : TeaModel {
                 /// <summary>
-                /// The name of Customer who are to be invited.
+                /// <para>The name of Customer who are to be invited.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>My Client</para>
                 /// </summary>
                 [NameInMap("AccountNickname")]
                 [Validation(Required=false)]
                 public string AccountNickname { get; set; }
 
                 /// <summary>
-                /// The Email of Customer who are to be invited.
+                /// <para>The Email of Customer who are to be invited.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="mailto:12345@qq.com">12345@qq.com</a></para>
                 /// </summary>
                 [NameInMap("Email")]
                 [Validation(Required=false)]
                 public string Email { get; set; }
 
                 /// <summary>
-                /// The time of email been sent out.
+                /// <para>The time of email been sent out.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2023-05-10</para>
                 /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// Invitation ID
+                /// <para>Invitation ID</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>190</para>
                 /// </summary>
                 [NameInMap("InviteId")]
                 [Validation(Required=false)]
                 public long? InviteId { get; set; }
 
                 /// <summary>
-                /// Invitation Status:
-                /// * 0 No visit on registration URL
-                /// * 1 Successful Registration
-                /// * 2 Unsuccessful Registration
-                /// * 3 Registration URL have been visited, but no submitted sheet/ticket.
+                /// <para>Invitation Status:</para>
+                /// <list type="bullet">
+                /// <item><description>0 No visit on registration URL</description></item>
+                /// <item><description>1 Successful Registration</description></item>
+                /// <item><description>2 Unsuccessful Registration</description></item>
+                /// <item><description>3 Registration URL have been visited, but no submitted sheet/ticket.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -73,35 +95,47 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
-        /// Message information
+        /// <para>Message information</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Pagination Information
+        /// <para>Pagination Information</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public GetUnassociatedCustomerResponseBodyPageInfo PageInfo { get; set; }
         public class GetUnassociatedCustomerResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// Pagination, current page.
+            /// <para>Pagination, current page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Page")]
             [Validation(Required=false)]
             public int? Page { get; set; }
 
             /// <summary>
-            /// Pagination, record number on each page.
+            /// <para>Pagination, record number on each page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// Pagination, page volume in total.
+            /// <para>Pagination, page volume in total.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>12</para>
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
@@ -110,14 +144,20 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
-        /// Request ID, Alibaba Cloud will track errors with this.
+        /// <para>Request ID, Alibaba Cloud will track errors with this.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>23309219-4A34-589D-A3E0-9B2A3BFFD24F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.
+        /// <para>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

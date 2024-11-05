@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetCoupondeductProductCodeResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>code</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -17,6 +21,10 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         [Validation(Required=false)]
         public List<GetCoupondeductProductCodeResponseBodyData> Data { get; set; }
         public class GetCoupondeductProductCodeResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>code1</para>
+            /// </summary>
             [NameInMap("ProductType")]
             [Validation(Required=false)]
             public object ProductType { get; set; }
@@ -28,12 +36,19 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>210e876f16704666020714468dab35</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

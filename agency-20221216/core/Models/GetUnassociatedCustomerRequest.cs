@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetUnassociatedCustomerRequest : TeaModel {
         /// <summary>
-        /// Pagination, current page.
+        /// <para>Pagination, current page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// Pagination, record number on each page.
+        /// <para>Pagination, record number on each page.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

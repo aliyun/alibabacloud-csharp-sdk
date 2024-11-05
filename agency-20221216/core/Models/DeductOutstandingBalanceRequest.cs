@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class DeductOutstandingBalanceRequest : TeaModel {
         /// <summary>
-        /// The Deducted Credit to be offset.
+        /// <para>The Deducted Credit to be offset.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>300</para>
         /// </summary>
         [NameInMap("DeductAmount")]
         [Validation(Required=false)]
         public string DeductAmount { get; set; }
 
         /// <summary>
-        /// Account UID of Distribution Customer.
+        /// <para>Account UID of Distribution Customer.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1133166938931507</para>
         /// </summary>
         [NameInMap("Uid")]
         [Validation(Required=false)]
