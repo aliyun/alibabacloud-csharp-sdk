@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of resource. Set the value to instance.</para>
+        /// <para>The type of the resource. Set the value to instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

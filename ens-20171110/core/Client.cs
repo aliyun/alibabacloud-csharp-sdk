@@ -1027,8 +1027,24 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用AssociateHaVip接口将高可用VIP绑定到同地域的云产品实例上。</para>
+        /// <para>Associates a high-availability virtual IP address (HAVIP) with an Edge Node Service (ENS) instance or elastic network interface (ENI).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation to associate an HAVIP, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>An HAVIP immediately takes effect after it is associated. You do not need to restart the ENS instance. However, you need to associate the HAVIP with the ENI of the ENS instance.</description></item>
+        /// <item><description>The HAVIP and ENS instance must belong to the same vSwitch.</description></item>
+        /// <item><description>The ENS instance must be in the Running or Stopped state.</description></item>
+        /// <item><description>The HAVIP must be in the Available or InUse state.</description></item>
+        /// <item><description>AssociateHaVip is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the DescribeHaVips operation to query the status of an HAVIP:<list type="bullet">
+        /// <item><description>If the HAVIP is in the Associating state, the HAVIP is being associated.<!----></description></item>
+        /// <item><description>If the HAVIP is in the InUse state, the HAVIP is associated.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AssociateHaVipRequest
@@ -1077,8 +1093,24 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用AssociateHaVip接口将高可用VIP绑定到同地域的云产品实例上。</para>
+        /// <para>Associates a high-availability virtual IP address (HAVIP) with an Edge Node Service (ENS) instance or elastic network interface (ENI).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation to associate an HAVIP, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>An HAVIP immediately takes effect after it is associated. You do not need to restart the ENS instance. However, you need to associate the HAVIP with the ENI of the ENS instance.</description></item>
+        /// <item><description>The HAVIP and ENS instance must belong to the same vSwitch.</description></item>
+        /// <item><description>The ENS instance must be in the Running or Stopped state.</description></item>
+        /// <item><description>The HAVIP must be in the Available or InUse state.</description></item>
+        /// <item><description>AssociateHaVip is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the DescribeHaVips operation to query the status of an HAVIP:<list type="bullet">
+        /// <item><description>If the HAVIP is in the Associating state, the HAVIP is being associated.<!----></description></item>
+        /// <item><description>If the HAVIP is in the InUse state, the HAVIP is associated.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AssociateHaVipRequest
@@ -1127,8 +1159,24 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用AssociateHaVip接口将高可用VIP绑定到同地域的云产品实例上。</para>
+        /// <para>Associates a high-availability virtual IP address (HAVIP) with an Edge Node Service (ENS) instance or elastic network interface (ENI).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation to associate an HAVIP, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>An HAVIP immediately takes effect after it is associated. You do not need to restart the ENS instance. However, you need to associate the HAVIP with the ENI of the ENS instance.</description></item>
+        /// <item><description>The HAVIP and ENS instance must belong to the same vSwitch.</description></item>
+        /// <item><description>The ENS instance must be in the Running or Stopped state.</description></item>
+        /// <item><description>The HAVIP must be in the Available or InUse state.</description></item>
+        /// <item><description>AssociateHaVip is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the DescribeHaVips operation to query the status of an HAVIP:<list type="bullet">
+        /// <item><description>If the HAVIP is in the Associating state, the HAVIP is being associated.<!----></description></item>
+        /// <item><description>If the HAVIP is in the InUse state, the HAVIP is associated.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AssociateHaVipRequest
@@ -1145,8 +1193,24 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用AssociateHaVip接口将高可用VIP绑定到同地域的云产品实例上。</para>
+        /// <para>Associates a high-availability virtual IP address (HAVIP) with an Edge Node Service (ENS) instance or elastic network interface (ENI).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation to associate an HAVIP, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>An HAVIP immediately takes effect after it is associated. You do not need to restart the ENS instance. However, you need to associate the HAVIP with the ENI of the ENS instance.</description></item>
+        /// <item><description>The HAVIP and ENS instance must belong to the same vSwitch.</description></item>
+        /// <item><description>The ENS instance must be in the Running or Stopped state.</description></item>
+        /// <item><description>The HAVIP must be in the Available or InUse state.</description></item>
+        /// <item><description>AssociateHaVip is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the DescribeHaVips operation to query the status of an HAVIP:<list type="bullet">
+        /// <item><description>If the HAVIP is in the Associating state, the HAVIP is being associated.<!----></description></item>
+        /// <item><description>If the HAVIP is in the InUse state, the HAVIP is associated.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AssociateHaVipRequest
@@ -2456,6 +2520,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["EnsRegionId"] = request.EnsRegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentVar))
+            {
+                query["EnvironmentVar"] = request.EnvironmentVar;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Frequency))
             {
                 query["Frequency"] = request.Frequency;
@@ -2553,6 +2621,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
                 query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentVar))
+            {
+                query["EnvironmentVar"] = request.EnvironmentVar;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Frequency))
             {
@@ -2927,8 +2999,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘容器集群</para>
+        /// <para>Creates a Container Service for Kubernetes (ACK) edge cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 10 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>Creating a cluster is an asynchronous operation. After this operation returns the response, it takes 10 to 20 minutes to initialize the cluster. You can call the DescribeCluster operation to query the cluster status. After you create a cluster, you can call the DescribeClusterKubeConfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateClusterRequest
@@ -2973,8 +3053,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘容器集群</para>
+        /// <para>Creates a Container Service for Kubernetes (ACK) edge cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 10 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>Creating a cluster is an asynchronous operation. After this operation returns the response, it takes 10 to 20 minutes to initialize the cluster. You can call the DescribeCluster operation to query the cluster status. After you create a cluster, you can call the DescribeClusterKubeConfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateClusterRequest
@@ -3019,8 +3107,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘容器集群</para>
+        /// <para>Creates a Container Service for Kubernetes (ACK) edge cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 10 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>Creating a cluster is an asynchronous operation. After this operation returns the response, it takes 10 to 20 minutes to initialize the cluster. You can call the DescribeCluster operation to query the cluster status. After you create a cluster, you can call the DescribeClusterKubeConfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateClusterRequest
@@ -3037,8 +3133,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘容器集群</para>
+        /// <para>Creates a Container Service for Kubernetes (ACK) edge cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 10 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>Creating a cluster is an asynchronous operation. After this operation returns the response, it takes 10 to 20 minutes to initialize the cluster. You can call the DescribeCluster operation to query the cluster status. After you create a cluster, you can call the DescribeClusterKubeConfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateClusterRequest
@@ -9603,7 +9707,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Network Attached Storage (NAS) file system.</para>
+        /// <para>Deletes a File Storage NAS file system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9641,7 +9745,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Network Attached Storage (NAS) file system.</para>
+        /// <para>Deletes a File Storage NAS file system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9679,7 +9783,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Network Attached Storage (NAS) file system.</para>
+        /// <para>Deletes a File Storage NAS file system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9697,7 +9801,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Network Attached Storage (NAS) file system.</para>
+        /// <para>Deletes a File Storage NAS file system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13495,8 +13599,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘容器集群</para>
+        /// <para>Queries Container Service for Kubernetes (ACK) edge clusters.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterRequest
@@ -13537,8 +13646,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘容器集群</para>
+        /// <para>Queries Container Service for Kubernetes (ACK) edge clusters.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterRequest
@@ -13579,8 +13693,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘容器集群</para>
+        /// <para>Queries Container Service for Kubernetes (ACK) edge clusters.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterRequest
@@ -13597,8 +13716,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘容器集群</para>
+        /// <para>Queries Container Service for Kubernetes (ACK) edge clusters.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterRequest
@@ -13615,8 +13739,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘容器集群证书</para>
+        /// <para>Queries the certificate of a Container Service for Kubernetes (ACK) edge cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The maximum number of times that each user can call this operation per second is 100.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterKubeConfigRequest
@@ -13657,8 +13786,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘容器集群证书</para>
+        /// <para>Queries the certificate of a Container Service for Kubernetes (ACK) edge cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The maximum number of times that each user can call this operation per second is 100.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterKubeConfigRequest
@@ -13699,8 +13833,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘容器集群证书</para>
+        /// <para>Queries the certificate of a Container Service for Kubernetes (ACK) edge cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The maximum number of times that each user can call this operation per second is 100.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterKubeConfigRequest
@@ -13717,8 +13856,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘容器集群证书</para>
+        /// <para>Queries the certificate of a Container Service for Kubernetes (ACK) edge cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The maximum number of times that each user can call this operation per second is 100.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterKubeConfigRequest
@@ -18155,7 +18299,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高可用VIP</para>
+        /// <para>Queries high-availability virtual IP addresses (HAVIPs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18193,7 +18337,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高可用VIP</para>
+        /// <para>Queries high-availability virtual IP addresses (HAVIPs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18231,7 +18375,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高可用VIP</para>
+        /// <para>Queries high-availability virtual IP addresses (HAVIPs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18249,7 +18393,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高可用VIP</para>
+        /// <para>Queries high-availability virtual IP addresses (HAVIPs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20319,8 +20463,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>LB监听级监控数据查询</para>
+        /// <para>Queries monitoring data of an edge load balancer (ELB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeLoadBalancerListenMonitorRequest
@@ -20357,8 +20509,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>LB监听级监控数据查询</para>
+        /// <para>Queries monitoring data of an edge load balancer (ELB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeLoadBalancerListenMonitorRequest
@@ -20395,8 +20555,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>LB监听级监控数据查询</para>
+        /// <para>Queries monitoring data of an edge load balancer (ELB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeLoadBalancerListenMonitorRequest
@@ -20413,8 +20581,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>LB监听级监控数据查询</para>
+        /// <para>Queries monitoring data of an edge load balancer (ELB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeLoadBalancerListenMonitorRequest
@@ -20431,7 +20607,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeLoadBalancerListeners查询负载均衡实例监听列表。</para>
+        /// <para>Queries listeners of Edge Load Balancer (ELB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20481,7 +20657,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeLoadBalancerListeners查询负载均衡实例监听列表。</para>
+        /// <para>Queries listeners of Edge Load Balancer (ELB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20531,7 +20707,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeLoadBalancerListeners查询负载均衡实例监听列表。</para>
+        /// <para>Queries listeners of Edge Load Balancer (ELB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20549,7 +20725,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeLoadBalancerListeners查询负载均衡实例监听列表。</para>
+        /// <para>Queries listeners of Edge Load Balancer (ELB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24289,8 +24465,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ESLB实例监听级监控数据</para>
+        /// <para>Queries the monitoring data of an edge load balancer (ELB) instance based on the listener.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeServerLoadBalancerListenMonitorRequest
@@ -24327,8 +24511,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ESLB实例监听级监控数据</para>
+        /// <para>Queries the monitoring data of an edge load balancer (ELB) instance based on the listener.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeServerLoadBalancerListenMonitorRequest
@@ -24365,8 +24557,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ESLB实例监听级监控数据</para>
+        /// <para>Queries the monitoring data of an edge load balancer (ELB) instance based on the listener.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeServerLoadBalancerListenMonitorRequest
@@ -24383,8 +24583,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ESLB实例监听级监控数据</para>
+        /// <para>Queries the monitoring data of an edge load balancer (ELB) instance based on the listener.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeServerLoadBalancerListenMonitorRequest
@@ -24401,8 +24609,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ESLB实例请求监控数据</para>
+        /// <para>Queries the request monitoring data of an edge load balancer (ELB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeServerLoadBalancerMonitorRequest
@@ -24439,8 +24655,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ESLB实例请求监控数据</para>
+        /// <para>Queries the request monitoring data of an edge load balancer (ELB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeServerLoadBalancerMonitorRequest
@@ -24477,8 +24701,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ESLB实例请求监控数据</para>
+        /// <para>Queries the request monitoring data of an edge load balancer (ELB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeServerLoadBalancerMonitorRequest
@@ -24495,8 +24727,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ESLB实例请求监控数据</para>
+        /// <para>Queries the request monitoring data of an edge load balancer (ELB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeServerLoadBalancerMonitorRequest
@@ -35281,9 +35521,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The disk must be in the In Use (In_Use) or Unattached (Available) state.</description></item>
-        /// <item><description>The instance to which the disk is attached must be in the Stopped (Stopped) state. You can call the <b>StopInstance</b> operation to stop an instance.</description></item>
-        /// <item><description>The snapshot specified by the SnapshotId parameter must be created from the disk specified by the DiskId parameter.</description></item>
-        /// <item><description>When you call the <b>DescribeInstance</b> operation to query instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c> for an instance, the instance is locked for security reasons and you cannot perform operations on the instance.</description></item>
+        /// <item><description>The instance to which the disk is attached must be in the Stopped (Stopped) state. You can call the <a href="~~StopInstance~~">StopInstance</a> operation to stop an instance.</description></item>
+        /// <item><description>The specified snapshot must be created from the disk specified by the DiskId parameter.</description></item>
+        /// <item><description>If the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c> when you query information about an ENS instance by calling the <a href="~~DescribeInstances~~">DescribeInstances</a> operation, the instance is locked for security reasons and no operations are allowed on the instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35338,9 +35578,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The disk must be in the In Use (In_Use) or Unattached (Available) state.</description></item>
-        /// <item><description>The instance to which the disk is attached must be in the Stopped (Stopped) state. You can call the <b>StopInstance</b> operation to stop an instance.</description></item>
-        /// <item><description>The snapshot specified by the SnapshotId parameter must be created from the disk specified by the DiskId parameter.</description></item>
-        /// <item><description>When you call the <b>DescribeInstance</b> operation to query instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c> for an instance, the instance is locked for security reasons and you cannot perform operations on the instance.</description></item>
+        /// <item><description>The instance to which the disk is attached must be in the Stopped (Stopped) state. You can call the <a href="~~StopInstance~~">StopInstance</a> operation to stop an instance.</description></item>
+        /// <item><description>The specified snapshot must be created from the disk specified by the DiskId parameter.</description></item>
+        /// <item><description>If the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c> when you query information about an ENS instance by calling the <a href="~~DescribeInstances~~">DescribeInstances</a> operation, the instance is locked for security reasons and no operations are allowed on the instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35395,9 +35635,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The disk must be in the In Use (In_Use) or Unattached (Available) state.</description></item>
-        /// <item><description>The instance to which the disk is attached must be in the Stopped (Stopped) state. You can call the <b>StopInstance</b> operation to stop an instance.</description></item>
-        /// <item><description>The snapshot specified by the SnapshotId parameter must be created from the disk specified by the DiskId parameter.</description></item>
-        /// <item><description>When you call the <b>DescribeInstance</b> operation to query instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c> for an instance, the instance is locked for security reasons and you cannot perform operations on the instance.</description></item>
+        /// <item><description>The instance to which the disk is attached must be in the Stopped (Stopped) state. You can call the <a href="~~StopInstance~~">StopInstance</a> operation to stop an instance.</description></item>
+        /// <item><description>The specified snapshot must be created from the disk specified by the DiskId parameter.</description></item>
+        /// <item><description>If the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c> when you query information about an ENS instance by calling the <a href="~~DescribeInstances~~">DescribeInstances</a> operation, the instance is locked for security reasons and no operations are allowed on the instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35424,9 +35664,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The disk must be in the In Use (In_Use) or Unattached (Available) state.</description></item>
-        /// <item><description>The instance to which the disk is attached must be in the Stopped (Stopped) state. You can call the <b>StopInstance</b> operation to stop an instance.</description></item>
-        /// <item><description>The snapshot specified by the SnapshotId parameter must be created from the disk specified by the DiskId parameter.</description></item>
-        /// <item><description>When you call the <b>DescribeInstance</b> operation to query instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c> for an instance, the instance is locked for security reasons and you cannot perform operations on the instance.</description></item>
+        /// <item><description>The instance to which the disk is attached must be in the Stopped (Stopped) state. You can call the <a href="~~StopInstance~~">StopInstance</a> operation to stop an instance.</description></item>
+        /// <item><description>The specified snapshot must be created from the disk specified by the DiskId parameter.</description></item>
+        /// <item><description>If the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c> when you query information about an ENS instance by calling the <a href="~~DescribeInstances~~">DescribeInstances</a> operation, the instance is locked for security reasons and no operations are allowed on the instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -40597,7 +40837,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from specific Edge Node Service (ENS) resources. After a tag is removed from a resource, the tag is automatically deleted if it is not added to other resources.</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40651,7 +40891,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from specific Edge Node Service (ENS) resources. After a tag is removed from a resource, the tag is automatically deleted if it is not added to other resources.</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40705,7 +40945,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from specific Edge Node Service (ENS) resources. After a tag is removed from a resource, the tag is automatically deleted if it is not added to other resources.</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40723,7 +40963,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from specific Edge Node Service (ENS) resources. After a tag is removed from a resource, the tag is automatically deleted if it is not added to other resources.</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">

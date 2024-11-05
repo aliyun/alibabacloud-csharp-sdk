@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AddBackendServersShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of backend servers that you want to add. You can add at most 20 backend servers.</para>
+        /// <para>The list of backend servers that you want to add to the Edge Load Balancer (ELB) instance. You can add up to 20 backend servers at a time.</para>
         /// <remarks>
-        /// <para> Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.</para>
+        /// <para> Only Edge Node Service (ENS) instances that are in the running state can be added to the ELB instance as backend servers.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>

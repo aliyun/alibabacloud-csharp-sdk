@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>IPv6 addresses N of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</para>
+        /// </summary>
         [NameInMap("Ipv6Address")]
         [Validation(Required=false)]
         public string Ipv6AddressShrink { get; set; }
@@ -122,7 +125,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The type of the ENI. Valid Values:</para>
+        /// <para>The type of the ENI. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Primary: primary ENI.</description></item>
         /// <item><description>Secondary: secondary ENI.</description></item>

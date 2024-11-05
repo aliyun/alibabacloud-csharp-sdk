@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The transport layer protocol. The value of this parameter is case-sensitive. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>tcp: TCP.</description></item>
-        /// <item><description>udp: UDP.</description></item>
-        /// <item><description>icmp: ICMP.</description></item>
-        /// <item><description>gre: GRE.</description></item>
+        /// <item><description>tcp</description></item>
+        /// <item><description>udp</description></item>
+        /// <item><description>icmp</description></item>
+        /// <item><description>gre</description></item>
         /// <item><description>all: all protocols.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>The authorization policy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>accept: allows access. This is the default value.</description></item>
-        /// <item><description>drop: denies access and returns no responses.</description></item>
+        /// <item><description>drop: denies access and does not return responses.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PortRange { get; set; }
 
         /// <summary>
-        /// <para>The priority of security group rule N. Valid values: <b>1</b> to <b>100</b>. Default value: <b>1</b>.</para>
+        /// <para>The priority of the security group rule. Valid values: <b>1</b> to <b>100</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

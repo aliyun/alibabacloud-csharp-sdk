@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateSnatEntryRequest : TeaModel {
+        /// <summary>
+        /// <para>The timeout period for idle connections. Valid values: <b>1</b> to <b>86400</b>. Unit: seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>15</para>
+        /// </summary>
         [NameInMap("IdleTimeout")]
         [Validation(Required=false)]
         public int? IdleTimeout { get; set; }

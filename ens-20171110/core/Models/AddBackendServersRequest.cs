@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AddBackendServersRequest : TeaModel {
         /// <summary>
-        /// <para>The list of backend servers that you want to add. You can add at most 20 backend servers.</para>
+        /// <para>The list of backend servers that you want to add to the Edge Load Balancer (ELB) instance. You can add up to 20 backend servers at a time.</para>
         /// <remarks>
-        /// <para> Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.</para>
+        /// <para> Only Edge Node Service (ENS) instances that are in the running state can be added to the ELB instance as backend servers.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <para>The IP address of the backend server.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>192.168.0.1</para>
+            /// <para>192.168.X.X</para>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ENS instance.</para>
+            /// <para>The ID of the backend server.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The type of the backend server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ens</b>: ENS instance.</description></item>
-            /// <item><description><b>eni</b>: ENI.</description></item>
+            /// <item><description><b>ens</b>: ENS instance</description></item>
+            /// <item><description><b>eni</b>: elastic network interface (ENI)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

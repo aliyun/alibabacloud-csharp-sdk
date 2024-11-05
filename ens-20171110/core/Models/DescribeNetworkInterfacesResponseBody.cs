@@ -60,6 +60,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                /// <summary>
+                /// <para>The IPv6 addresses of the ENIs.</para>
+                /// </summary>
                 [NameInMap("Ipv6Sets")]
                 [Validation(Required=false)]
                 public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets Ipv6Sets { get; set; }
@@ -68,6 +71,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     [Validation(Required=false)]
                     public List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set> Ipv6Set { get; set; }
                     public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set : TeaModel {
+                        /// <summary>
+                        /// <para>The IPv6 address of the ENI.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2605:340:cdb1:XXXX:XXXX:XXXX:XXXX:e2d6</para>
+                        /// </summary>
                         [NameInMap("Ipv6Address")]
                         [Validation(Required=false)]
                         public string Ipv6Address { get; set; }

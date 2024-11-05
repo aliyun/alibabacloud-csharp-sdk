@@ -39,11 +39,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OSSPrefix { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>cn-beijing</description></item>
-        /// </list>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

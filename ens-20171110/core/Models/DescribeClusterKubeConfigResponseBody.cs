@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeClusterKubeConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c8f0377146d104687ac562eef9403****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The cluster certificate.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>apiVersion: v1
         /// clusters:</para>
@@ -44,6 +48,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Kubeconfig { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>

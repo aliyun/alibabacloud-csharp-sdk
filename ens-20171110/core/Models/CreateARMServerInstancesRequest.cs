@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        [NameInMap("EnvironmentVar")]
+        [Validation(Required=false)]
+        public string EnvironmentVar { get; set; }
+
         /// <summary>
         /// <para>The refresh rate. Unit: Hz. Valid values: 30 and 60.</para>
         /// 

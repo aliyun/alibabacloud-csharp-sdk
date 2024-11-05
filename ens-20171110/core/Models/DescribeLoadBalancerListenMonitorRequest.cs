@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeLoadBalancerListenMonitorRequest : TeaModel {
         /// <summary>
+        /// <para>The end of the time range to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the ELB instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string LoadBalancerId { get; set; }
 
         /// <summary>
+        /// <para>The network protocol, such as tcp or udp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tcp</para>
         /// </summary>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Proto { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The virtual IP address (VIP) port of the ELB instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
