@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostGroupsResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the host groups.
+        /// <para>The asset groups returned.</para>
         /// </summary>
         [NameInMap("HostGroups")]
         [Validation(Required=false)]
         public List<ListHostGroupsResponseBodyHostGroups> HostGroups { get; set; }
         public class ListHostGroupsResponseBodyHostGroups : TeaModel {
             /// <summary>
-            /// The description of the host group.
+            /// <para>The remarks of the asset group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Description</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
-            /// The ID of the host group.
+            /// <para>The asset group ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("HostGroupId")]
             [Validation(Required=false)]
             public string HostGroupId { get; set; }
 
             /// <summary>
-            /// The name of the host group.
+            /// <para>The name of the asset group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Host group 1</para>
             /// </summary>
             [NameInMap("HostGroupName")]
             [Validation(Required=false)]
             public string HostGroupName { get; set; }
 
             /// <summary>
-            /// The number of hosts in the host group.
+            /// <para>The number of hosts in the asset group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("MemberCount")]
             [Validation(Required=false)]
@@ -47,14 +59,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of host groups returned.
+        /// <para>The total number of asset groups returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

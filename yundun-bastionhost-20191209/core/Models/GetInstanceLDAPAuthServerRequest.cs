@@ -10,17 +10,27 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetInstanceLDAPAuthServerRequest : TeaModel {
         /// <summary>
-        /// Indicates whether passwords are required. Valid values:
+        /// <para>The ID of the bastion host.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **true**: required
-        /// *   **false**: not required
+        /// <b>Example:</b>
+        /// <para>bastionhost-cn-st220aw****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **GetInstanceLDAPAuthServer**.
+        /// <para>The region ID of the bastion host.</para>
+        /// <remarks>
+        /// <para> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

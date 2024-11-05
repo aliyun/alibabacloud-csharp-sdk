@@ -10,28 +10,55 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DetachHostAccountsFromHostShareKeyRequest : TeaModel {
         /// <summary>
-        /// The IDs of the host accounts.
+        /// <para>The host account IDs.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/462975.html">ListHostAccountsForHostShareKey</a> operation to query the host account IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]</para>
         /// </summary>
         [NameInMap("HostAccountIds")]
         [Validation(Required=false)]
         public string HostAccountIds { get; set; }
 
         /// <summary>
-        /// The ID of the shared key.
+        /// <para>The shared key ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to query the shared key ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>11</para>
         /// </summary>
         [NameInMap("HostShareKeyId")]
         [Validation(Required=false)]
         public string HostShareKeyId { get; set; }
 
         /// <summary>
-        /// The ID of the bastion host. You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+        /// <para>The bastion host ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bastionhost-cn-st220aw****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region ID of the bastion host. For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// <para>The region ID of the bastion host.</para>
+        /// <remarks>
+        /// <para> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

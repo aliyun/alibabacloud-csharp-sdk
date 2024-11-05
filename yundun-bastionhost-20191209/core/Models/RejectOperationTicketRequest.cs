@@ -9,26 +9,46 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class RejectOperationTicketRequest : TeaModel {
+        [NameInMap("Comment")]
+        [Validation(Required=false)]
+        public string Comment { get; set; }
+
         /// <summary>
-        /// The ID of the bastion host.
+        /// <para>The ID of the bastion host.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+        /// <b>Example:</b>
+        /// <para>bastionhost-cn-st220aw****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the O\&M application that you want to reject. You can call the ListOperationTickets operation to query the IDs of all O\&M applications that require review.
+        /// <para>The ID of the O\&amp;M application that you want to reject.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2584313.html">ListOperationTickets</a> operation to query the IDs of all O\&amp;M applications that require review.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("OperationTicketId")]
         [Validation(Required=false)]
         public string OperationTicketId { get; set; }
 
         /// <summary>
-        /// The region ID of the bastion host.
+        /// <para>The region ID of the bastion host.</para>
+        /// <remarks>
+        /// <para> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// </remarks>
         /// 
-        /// >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

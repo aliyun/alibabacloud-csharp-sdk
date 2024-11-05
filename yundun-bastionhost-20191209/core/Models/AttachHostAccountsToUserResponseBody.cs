@@ -10,69 +10,88 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class AttachHostAccountsToUserResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result of the call.
+        /// <para>The result of the call.</para>
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<AttachHostAccountsToUserResponseBodyResults> Results { get; set; }
         public class AttachHostAccountsToUserResponseBodyResults : TeaModel {
             /// <summary>
-            /// The return code that indicates whether the call was successful. Valid values:
+            /// <para>The return code that indicates whether the call was successful. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>OK</b>: The call was successful.</para>
+            /// </description></item>
+            /// <item><description><para><b>UNEXPECTED</b>: An unknown error occurred.</para>
+            /// </description></item>
+            /// <item><description><para><b>INVALID_ARGUMENT</b>: A request parameter is invalid.</para>
+            /// </description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>Make sure that the request parameters are valid and call the operation again.</para>
+            /// </remarks>
+            /// <list type="bullet">
+            /// <item><description><b>OBJECT_NOT_FOUND</b>: The specified object on which you want to perform the operation does not exist.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.</para>
+            /// </remarks>
+            /// <list type="bullet">
+            /// <item><description><b>OBJECT_AlREADY_EXISTS</b>: The specified object on which you want to perform the operation already exists.</description></item>
+            /// </list>
             /// 
-            /// *   **OK**: The call was successful.
-            /// 
-            /// *   **UNEXPECTED**: An unknown error occurred.
-            /// 
-            /// *   **INVALID_ARGUMENT**: A request parameter is invalid.
-            /// 
-            /// > Make sure that the request parameters are valid and call the operation again.
-            /// 
-            /// *   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.
-            /// 
-            /// > Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.
-            /// 
-            /// *   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.
+            /// <b>Example:</b>
+            /// <para>OK</para>
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
             /// <summary>
-            /// The result of authorizing the specified user to manage the specified host accounts.
+            /// <para>The result of authorizing the user to manage the host accounts.</para>
             /// </summary>
             [NameInMap("HostAccounts")]
             [Validation(Required=false)]
             public List<AttachHostAccountsToUserResponseBodyResultsHostAccounts> HostAccounts { get; set; }
             public class AttachHostAccountsToUserResponseBodyResultsHostAccounts : TeaModel {
                 /// <summary>
-                /// The return code that indicates whether the user was authorized to manage the specified host account. Valid values:
+                /// <para>The return code that indicates whether the user was authorized to manage the host accounts. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>OK</b>: The call was successful.</description></item>
+                /// <item><description><b>UNEXPECTED</b>: An unknown error occurred.</description></item>
+                /// <item><description><b>INVALID_ARGUMENT</b>: A request parameter is invalid.</description></item>
+                /// <item><description><b>OBJECT_NOT_FOUND</b>: The specified object on which you want to perform the operation does not exist.</description></item>
+                /// <item><description><b>OBJECT_AlREADY_EXISTS</b>: The specified object on which you want to perform the operation already exists.</description></item>
+                /// </list>
                 /// 
-                /// *   **OK**: The call was successful.
-                /// *   **UNEXPECTED**: An unknown error occurred.
-                /// *   **INVALID_ARGUMENT**: A request parameter is invalid.
-                /// *   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.
-                /// *   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.
+                /// <b>Example:</b>
+                /// <para>OK</para>
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
                 /// <summary>
-                /// The ID of the host account.
+                /// <para>The ID of the host account.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("HostAccountId")]
                 [Validation(Required=false)]
                 public string HostAccountId { get; set; }
 
                 /// <summary>
-                /// This parameter is deprecated.
+                /// <para>This parameter is deprecated.</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -81,21 +100,27 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             }
 
             /// <summary>
-            /// The ID of the host.
+            /// <para>The ID of the host.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("HostId")]
             [Validation(Required=false)]
             public string HostId { get; set; }
 
             /// <summary>
-            /// This parameter is deprecated.
+            /// <para>This parameter is deprecated.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// The ID of the user.
+            /// <para>The ID of the user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]

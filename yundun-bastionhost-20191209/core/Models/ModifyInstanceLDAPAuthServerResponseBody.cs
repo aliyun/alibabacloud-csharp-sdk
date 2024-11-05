@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyInstanceLDAPAuthServerResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8F1085E3-F048-5F34-B650-F145216E4AA4</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

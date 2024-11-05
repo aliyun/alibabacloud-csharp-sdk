@@ -10,88 +10,136 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetInstanceLDAPAuthServerResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether SSL is supported. Valid values:
-        /// 
-        /// *   **true**: supported
-        /// *   **false**: not supported
+        /// <para>The settings of LDAP authentication.</para>
         /// </summary>
         [NameInMap("LDAP")]
         [Validation(Required=false)]
         public GetInstanceLDAPAuthServerResponseBodyLDAP LDAP { get; set; }
         public class GetInstanceLDAPAuthServerResponseBodyLDAP : TeaModel {
             /// <summary>
-            /// The ID of the bastion host.
+            /// <para>The account of the LDAP server.</para>
             /// 
-            /// >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+            /// <b>Example:</b>
+            /// <para>cn=Manager,dc=test,dc=com</para>
             /// </summary>
             [NameInMap("Account")]
             [Validation(Required=false)]
             public string Account { get; set; }
 
             /// <summary>
-            /// The field that is used to indicate the logon name of a user on the LDAP server.
+            /// <para>The Base distinguished name (DN).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dc=test,dc=com</para>
             /// </summary>
             [NameInMap("BaseDN")]
             [Validation(Required=false)]
             public string BaseDN { get; set; }
 
             /// <summary>
-            /// The address of the secondary LDAP server.
+            /// <para>The field that is used to indicate the email address of a user on the LDAP server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>emailAttr</para>
             /// </summary>
             [NameInMap("EmailMapping")]
             [Validation(Required=false)]
             public string EmailMapping { get; set; }
 
             /// <summary>
-            /// The Base distinguished name (DN).
+            /// <para>The condition that is used to filter users.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>(&amp;(objectClass=top))</para>
             /// </summary>
             [NameInMap("Filter")]
             [Validation(Required=false)]
             public string Filter { get; set; }
 
             /// <summary>
-            /// The ID of the request, which is used to locate and troubleshoot issues.
+            /// <para>Indicates whether passwords are required. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: required</description></item>
+            /// <item><description><b>false</b>: not required</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("HasPassword")]
             [Validation(Required=false)]
             public string HasPassword { get; set; }
 
             /// <summary>
-            /// The condition that is used to filter users.
+            /// <para>Indicates whether SSL is supported. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: supported</description></item>
+            /// <item><description><b>false</b>: not supported</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("IsSSL")]
             [Validation(Required=false)]
             public bool? IsSSL { get; set; }
 
             /// <summary>
-            /// The port that is used to access the LDAP server.
+            /// <para>The field that is used to indicate the logon name of a user on the LDAP server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>userNameAttr</para>
             /// </summary>
             [NameInMap("LoginNameMapping")]
             [Validation(Required=false)]
             public string LoginNameMapping { get; set; }
 
             /// <summary>
-            /// The field that is used to indicate the email address of a user on the LDAP server.
+            /// <para>The field that is used to indicate the mobile phone number of a user on the LDAP server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mobileAttr</para>
             /// </summary>
             [NameInMap("MobileMapping")]
             [Validation(Required=false)]
             public string MobileMapping { get; set; }
 
             /// <summary>
-            /// The field that is used to indicate the mobile phone number of a user on the LDAP server.
+            /// <para>The field that is used to indicate the name of a user on the LDAP server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>nameAttr</para>
             /// </summary>
             [NameInMap("NameMapping")]
             [Validation(Required=false)]
             public string NameMapping { get; set; }
 
+            /// <summary>
+            /// <para>The port that is used to access the LDAP server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>389</para>
+            /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public long? Port { get; set; }
 
+            /// <summary>
+            /// <para>The address of the LDAP server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.XX.XX</para>
+            /// </summary>
             [NameInMap("Server")]
             [Validation(Required=false)]
             public string Server { get; set; }
 
+            /// <summary>
+            /// <para>The address of the secondary LDAP server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.XX.XX</para>
+            /// </summary>
             [NameInMap("StandbyServer")]
             [Validation(Required=false)]
             public string StandbyServer { get; set; }
@@ -99,7 +147,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// The settings of LDAP authentication.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1C60E741-102D-5E8F-9710-B06D3F0183FE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

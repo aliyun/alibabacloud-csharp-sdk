@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetHostGroupResponseBody : TeaModel {
         /// <summary>
-        /// The details of the host group returned.
+        /// <para>The returned detailed information about the asset group.</para>
         /// </summary>
         [NameInMap("HostGroup")]
         [Validation(Required=false)]
         public GetHostGroupResponseBodyHostGroup HostGroup { get; set; }
         public class GetHostGroupResponseBodyHostGroup : TeaModel {
             /// <summary>
-            /// The description of the host group.
+            /// <para>The remarks of the asset group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Description</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
-            /// The ID of the host group.
+            /// <para>The asset group ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("HostGroupId")]
             [Validation(Required=false)]
             public string HostGroupId { get; set; }
 
             /// <summary>
-            /// The name of the host group.
+            /// <para>The name of the asset group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Host group 1</para>
             /// </summary>
             [NameInMap("HostGroupName")]
             [Validation(Required=false)]
@@ -40,7 +49,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

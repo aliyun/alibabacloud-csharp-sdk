@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The information about regions where you can create bastion hosts.
+        /// <para>The information about regions where you can create bastion hosts.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// The name of the region.
+            /// <para>The name of the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>China (Hangzhou)</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// The endpoint of the region.
+            /// <para>The endpoint of the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>yundun-bastionhost.aliyuncs.com</para>
             /// </summary>
             [NameInMap("RegionEndpoint")]
             [Validation(Required=false)]
             public string RegionEndpoint { get; set; }
 
             /// <summary>
-            /// The ID of the region.
+            /// <para>The ID of the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -40,7 +49,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// The ID of request.
+        /// <para>The ID of request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B7281856-F27D-4ECE-B4F1-50511E550xxx</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

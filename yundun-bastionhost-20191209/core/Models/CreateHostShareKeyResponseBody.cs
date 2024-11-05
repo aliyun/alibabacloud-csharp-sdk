@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateHostShareKeyResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the shared key.
+        /// <para>The ID of the shared key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10235</para>
         /// </summary>
         [NameInMap("HostShareKeyId")]
         [Validation(Required=false)]
         public long? HostShareKeyId { get; set; }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

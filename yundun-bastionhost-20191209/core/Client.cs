@@ -37,6 +37,27 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If an O\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation as a Bastionhost administrator to approve the request to run a command of an O\&amp;M engineer.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AcceptApproveCommandRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AcceptApproveCommandResponse
+        /// </returns>
         public AcceptApproveCommandResponse AcceptApproveCommandWithOptions(AcceptApproveCommandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -72,6 +93,27 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AcceptApproveCommandResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If an O\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation as a Bastionhost administrator to approve the request to run a command of an O\&amp;M engineer.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AcceptApproveCommandRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AcceptApproveCommandResponse
+        /// </returns>
         public async Task<AcceptApproveCommandResponse> AcceptApproveCommandWithOptionsAsync(AcceptApproveCommandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -107,30 +149,83 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AcceptApproveCommandResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If an O\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation as a Bastionhost administrator to approve the request to run a command of an O\&amp;M engineer.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AcceptApproveCommandRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AcceptApproveCommandResponse
+        /// </returns>
         public AcceptApproveCommandResponse AcceptApproveCommand(AcceptApproveCommandRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AcceptApproveCommandWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If an O\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation as a Bastionhost administrator to approve the request to run a command of an O\&amp;M engineer.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AcceptApproveCommandRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AcceptApproveCommandResponse
+        /// </returns>
         public async Task<AcceptApproveCommandResponse> AcceptApproveCommandAsync(AcceptApproveCommandRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AcceptApproveCommandWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * You can call this operation as a Bastionhost administrator to approve an O\\&M application of an O\\&M engineer.
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request AcceptOperationTicketRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AcceptOperationTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Approves an O\\\&amp;M application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation as a Bastionhost administrator to approve an O\&amp;M application of an O\&amp;M engineer.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AcceptOperationTicketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AcceptOperationTicketResponse
+        /// </returns>
         public AcceptOperationTicketResponse AcceptOperationTicketWithOptions(AcceptOperationTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["Comment"] = request.Comment;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectCount))
             {
                 query["EffectCount"] = request.EffectCount;
@@ -174,18 +269,35 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AcceptOperationTicketResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * You can call this operation as a Bastionhost administrator to approve an O\\&M application of an O\\&M engineer.
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request AcceptOperationTicketRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AcceptOperationTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Approves an O\\\&amp;M application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation as a Bastionhost administrator to approve an O\&amp;M application of an O\&amp;M engineer.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AcceptOperationTicketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AcceptOperationTicketResponse
+        /// </returns>
         public async Task<AcceptOperationTicketResponse> AcceptOperationTicketWithOptionsAsync(AcceptOperationTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["Comment"] = request.Comment;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectCount))
             {
                 query["EffectCount"] = request.EffectCount;
@@ -229,32 +341,69 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AcceptOperationTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * You can call this operation as a Bastionhost administrator to approve an O\\&M application of an O\\&M engineer.
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request AcceptOperationTicketRequest
-          * @return AcceptOperationTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Approves an O\\\&amp;M application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation as a Bastionhost administrator to approve an O\&amp;M application of an O\&amp;M engineer.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AcceptOperationTicketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AcceptOperationTicketResponse
+        /// </returns>
         public AcceptOperationTicketResponse AcceptOperationTicket(AcceptOperationTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AcceptOperationTicketWithOptions(request, runtime);
         }
 
-        /**
-          * You can call this operation as a Bastionhost administrator to approve an O\\&M application of an O\\&M engineer.
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request AcceptOperationTicketRequest
-          * @return AcceptOperationTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Approves an O\\\&amp;M application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation as a Bastionhost administrator to approve an O\&amp;M application of an O\&amp;M engineer.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AcceptOperationTicketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AcceptOperationTicketResponse
+        /// </returns>
         public async Task<AcceptOperationTicketResponse> AcceptOperationTicketAsync(AcceptOperationTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AcceptOperationTicketWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds multiple databases to a specified asset group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDatabasesToGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDatabasesToGroupResponse
+        /// </returns>
         public AddDatabasesToGroupResponse AddDatabasesToGroupWithOptions(AddDatabasesToGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -294,6 +443,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AddDatabasesToGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds multiple databases to a specified asset group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDatabasesToGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDatabasesToGroupResponse
+        /// </returns>
         public async Task<AddDatabasesToGroupResponse> AddDatabasesToGroupWithOptionsAsync(AddDatabasesToGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -333,27 +497,64 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AddDatabasesToGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds multiple databases to a specified asset group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDatabasesToGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDatabasesToGroupResponse
+        /// </returns>
         public AddDatabasesToGroupResponse AddDatabasesToGroup(AddDatabasesToGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddDatabasesToGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds multiple databases to a specified asset group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDatabasesToGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDatabasesToGroupResponse
+        /// </returns>
         public async Task<AddDatabasesToGroupResponse> AddDatabasesToGroupAsync(AddDatabasesToGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddDatabasesToGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-          *
-          * @param request AddHostsToGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AddHostsToGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds one or more hosts to the specified host group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.</para>
+        /// <h1>Limits</h1>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddHostsToGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddHostsToGroupResponse
+        /// </returns>
         public AddHostsToGroupResponse AddHostsToGroupWithOptions(AddHostsToGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -393,15 +594,28 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AddHostsToGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-          *
-          * @param request AddHostsToGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AddHostsToGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds one or more hosts to the specified host group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.</para>
+        /// <h1>Limits</h1>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddHostsToGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddHostsToGroupResponse
+        /// </returns>
         public async Task<AddHostsToGroupResponse> AddHostsToGroupWithOptionsAsync(AddHostsToGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -441,44 +655,79 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AddHostsToGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-          *
-          * @param request AddHostsToGroupRequest
-          * @return AddHostsToGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds one or more hosts to the specified host group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.</para>
+        /// <h1>Limits</h1>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddHostsToGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddHostsToGroupResponse
+        /// </returns>
         public AddHostsToGroupResponse AddHostsToGroup(AddHostsToGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddHostsToGroupWithOptions(request, runtime);
         }
 
-        /**
-          * You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-          *
-          * @param request AddHostsToGroupRequest
-          * @return AddHostsToGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds one or more hosts to the specified host group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.</para>
+        /// <h1>Limits</h1>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddHostsToGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddHostsToGroupResponse
+        /// </returns>
         public async Task<AddHostsToGroupResponse> AddHostsToGroupAsync(AddHostsToGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddHostsToGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * #
-          * You can call this operation to add one or more users to a user group. After you call the [CreateUserGroup](~~204596~~) operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.
-          * # Limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request AddUsersToGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AddUsersToGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add one or more users to a user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1></h1>
+        /// <para>You can call this operation to add one or more users to a user group. After you call the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.</para>
+        /// <h1>Limit</h1>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddUsersToGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUsersToGroupResponse
+        /// </returns>
         public AddUsersToGroupResponse AddUsersToGroupWithOptions(AddUsersToGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -518,16 +767,29 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AddUsersToGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * #
-          * You can call this operation to add one or more users to a user group. After you call the [CreateUserGroup](~~204596~~) operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.
-          * # Limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request AddUsersToGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AddUsersToGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add one or more users to a user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1></h1>
+        /// <para>You can call this operation to add one or more users to a user group. After you call the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.</para>
+        /// <h1>Limit</h1>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddUsersToGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUsersToGroupResponse
+        /// </returns>
         public async Task<AddUsersToGroupResponse> AddUsersToGroupWithOptionsAsync(AddUsersToGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -567,36 +829,73 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AddUsersToGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * #
-          * You can call this operation to add one or more users to a user group. After you call the [CreateUserGroup](~~204596~~) operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.
-          * # Limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request AddUsersToGroupRequest
-          * @return AddUsersToGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add one or more users to a user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1></h1>
+        /// <para>You can call this operation to add one or more users to a user group. After you call the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.</para>
+        /// <h1>Limit</h1>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddUsersToGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUsersToGroupResponse
+        /// </returns>
         public AddUsersToGroupResponse AddUsersToGroup(AddUsersToGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddUsersToGroupWithOptions(request, runtime);
         }
 
-        /**
-          * #
-          * You can call this operation to add one or more users to a user group. After you call the [CreateUserGroup](~~204596~~) operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.
-          * # Limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request AddUsersToGroupRequest
-          * @return AddUsersToGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add one or more users to a user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1></h1>
+        /// <para>You can call this operation to add one or more users to a user group. After you call the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.</para>
+        /// <h1>Limit</h1>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddUsersToGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUsersToGroupResponse
+        /// </returns>
         public async Task<AddUsersToGroupResponse> AddUsersToGroupAsync(AddUsersToGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddUsersToGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user to manage databases and database accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachDatabaseAccountsToUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachDatabaseAccountsToUserResponse
+        /// </returns>
         public AttachDatabaseAccountsToUserResponse AttachDatabaseAccountsToUserWithOptions(AttachDatabaseAccountsToUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -636,6 +935,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AttachDatabaseAccountsToUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user to manage databases and database accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachDatabaseAccountsToUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachDatabaseAccountsToUserResponse
+        /// </returns>
         public async Task<AttachDatabaseAccountsToUserResponse> AttachDatabaseAccountsToUserWithOptionsAsync(AttachDatabaseAccountsToUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -675,18 +989,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AttachDatabaseAccountsToUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user to manage databases and database accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachDatabaseAccountsToUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachDatabaseAccountsToUserResponse
+        /// </returns>
         public AttachDatabaseAccountsToUserResponse AttachDatabaseAccountsToUser(AttachDatabaseAccountsToUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AttachDatabaseAccountsToUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user to manage databases and database accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachDatabaseAccountsToUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachDatabaseAccountsToUserResponse
+        /// </returns>
         public async Task<AttachDatabaseAccountsToUserResponse> AttachDatabaseAccountsToUserAsync(AttachDatabaseAccountsToUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AttachDatabaseAccountsToUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user group to manage databases and database accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachDatabaseAccountsToUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachDatabaseAccountsToUserGroupResponse
+        /// </returns>
         public AttachDatabaseAccountsToUserGroupResponse AttachDatabaseAccountsToUserGroupWithOptions(AttachDatabaseAccountsToUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -726,6 +1079,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AttachDatabaseAccountsToUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user group to manage databases and database accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachDatabaseAccountsToUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachDatabaseAccountsToUserGroupResponse
+        /// </returns>
         public async Task<AttachDatabaseAccountsToUserGroupResponse> AttachDatabaseAccountsToUserGroupWithOptionsAsync(AttachDatabaseAccountsToUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -765,18 +1133,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AttachDatabaseAccountsToUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user group to manage databases and database accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachDatabaseAccountsToUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachDatabaseAccountsToUserGroupResponse
+        /// </returns>
         public AttachDatabaseAccountsToUserGroupResponse AttachDatabaseAccountsToUserGroup(AttachDatabaseAccountsToUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AttachDatabaseAccountsToUserGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user group to manage databases and database accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachDatabaseAccountsToUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachDatabaseAccountsToUserGroupResponse
+        /// </returns>
         public async Task<AttachDatabaseAccountsToUserGroupResponse> AttachDatabaseAccountsToUserGroupAsync(AttachDatabaseAccountsToUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AttachDatabaseAccountsToUserGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates host accounts with a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachHostAccountsToHostShareKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostAccountsToHostShareKeyResponse
+        /// </returns>
         public AttachHostAccountsToHostShareKeyResponse AttachHostAccountsToHostShareKeyWithOptions(AttachHostAccountsToHostShareKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -816,6 +1223,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AttachHostAccountsToHostShareKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates host accounts with a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachHostAccountsToHostShareKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostAccountsToHostShareKeyResponse
+        /// </returns>
         public async Task<AttachHostAccountsToHostShareKeyResponse> AttachHostAccountsToHostShareKeyWithOptionsAsync(AttachHostAccountsToHostShareKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -855,18 +1277,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AttachHostAccountsToHostShareKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates host accounts with a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachHostAccountsToHostShareKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostAccountsToHostShareKeyResponse
+        /// </returns>
         public AttachHostAccountsToHostShareKeyResponse AttachHostAccountsToHostShareKey(AttachHostAccountsToHostShareKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AttachHostAccountsToHostShareKeyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates host accounts with a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachHostAccountsToHostShareKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostAccountsToHostShareKeyResponse
+        /// </returns>
         public async Task<AttachHostAccountsToHostShareKeyResponse> AttachHostAccountsToHostShareKeyAsync(AttachHostAccountsToHostShareKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AttachHostAccountsToHostShareKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user to manage the hosts and host accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachHostAccountsToUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostAccountsToUserResponse
+        /// </returns>
         public AttachHostAccountsToUserResponse AttachHostAccountsToUserWithOptions(AttachHostAccountsToUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -906,6 +1367,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AttachHostAccountsToUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user to manage the hosts and host accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachHostAccountsToUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostAccountsToUserResponse
+        /// </returns>
         public async Task<AttachHostAccountsToUserResponse> AttachHostAccountsToUserWithOptionsAsync(AttachHostAccountsToUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -945,25 +1421,62 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AttachHostAccountsToUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user to manage the hosts and host accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachHostAccountsToUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostAccountsToUserResponse
+        /// </returns>
         public AttachHostAccountsToUserResponse AttachHostAccountsToUser(AttachHostAccountsToUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AttachHostAccountsToUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user to manage the hosts and host accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachHostAccountsToUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostAccountsToUserResponse
+        /// </returns>
         public async Task<AttachHostAccountsToUserResponse> AttachHostAccountsToUserAsync(AttachHostAccountsToUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AttachHostAccountsToUserWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * After you authorize a user group to manage specific hosts and host accounts, all the users in the user group have access to the authorized hosts and host accounts.
-          *
-          * @param request AttachHostAccountsToUserGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AttachHostAccountsToUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user group to manage one or more hosts and host accounts.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you authorize a user group to manage specific hosts and host accounts, all the users in the user group have access to the authorized hosts and host accounts.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachHostAccountsToUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostAccountsToUserGroupResponse
+        /// </returns>
         public AttachHostAccountsToUserGroupResponse AttachHostAccountsToUserGroupWithOptions(AttachHostAccountsToUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1003,13 +1516,26 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AttachHostAccountsToUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * After you authorize a user group to manage specific hosts and host accounts, all the users in the user group have access to the authorized hosts and host accounts.
-          *
-          * @param request AttachHostAccountsToUserGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AttachHostAccountsToUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user group to manage one or more hosts and host accounts.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you authorize a user group to manage specific hosts and host accounts, all the users in the user group have access to the authorized hosts and host accounts.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachHostAccountsToUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostAccountsToUserGroupResponse
+        /// </returns>
         public async Task<AttachHostAccountsToUserGroupResponse> AttachHostAccountsToUserGroupWithOptionsAsync(AttachHostAccountsToUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1049,30 +1575,67 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AttachHostAccountsToUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * After you authorize a user group to manage specific hosts and host accounts, all the users in the user group have access to the authorized hosts and host accounts.
-          *
-          * @param request AttachHostAccountsToUserGroupRequest
-          * @return AttachHostAccountsToUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user group to manage one or more hosts and host accounts.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you authorize a user group to manage specific hosts and host accounts, all the users in the user group have access to the authorized hosts and host accounts.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachHostAccountsToUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostAccountsToUserGroupResponse
+        /// </returns>
         public AttachHostAccountsToUserGroupResponse AttachHostAccountsToUserGroup(AttachHostAccountsToUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AttachHostAccountsToUserGroupWithOptions(request, runtime);
         }
 
-        /**
-          * After you authorize a user group to manage specific hosts and host accounts, all the users in the user group have access to the authorized hosts and host accounts.
-          *
-          * @param request AttachHostAccountsToUserGroupRequest
-          * @return AttachHostAccountsToUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user group to manage one or more hosts and host accounts.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you authorize a user group to manage specific hosts and host accounts, all the users in the user group have access to the authorized hosts and host accounts.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachHostAccountsToUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostAccountsToUserGroupResponse
+        /// </returns>
         public async Task<AttachHostAccountsToUserGroupResponse> AttachHostAccountsToUserGroupAsync(AttachHostAccountsToUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AttachHostAccountsToUserGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user to manage one or more host groups and host accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachHostGroupAccountsToUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostGroupAccountsToUserResponse
+        /// </returns>
         public AttachHostGroupAccountsToUserResponse AttachHostGroupAccountsToUserWithOptions(AttachHostGroupAccountsToUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1112,6 +1675,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AttachHostGroupAccountsToUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user to manage one or more host groups and host accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachHostGroupAccountsToUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostGroupAccountsToUserResponse
+        /// </returns>
         public async Task<AttachHostGroupAccountsToUserResponse> AttachHostGroupAccountsToUserWithOptionsAsync(AttachHostGroupAccountsToUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1151,18 +1729,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AttachHostGroupAccountsToUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user to manage one or more host groups and host accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachHostGroupAccountsToUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostGroupAccountsToUserResponse
+        /// </returns>
         public AttachHostGroupAccountsToUserResponse AttachHostGroupAccountsToUser(AttachHostGroupAccountsToUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AttachHostGroupAccountsToUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user to manage one or more host groups and host accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachHostGroupAccountsToUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostGroupAccountsToUserResponse
+        /// </returns>
         public async Task<AttachHostGroupAccountsToUserResponse> AttachHostGroupAccountsToUserAsync(AttachHostGroupAccountsToUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AttachHostGroupAccountsToUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user to manage one or more host groups and host accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachHostGroupAccountsToUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostGroupAccountsToUserGroupResponse
+        /// </returns>
         public AttachHostGroupAccountsToUserGroupResponse AttachHostGroupAccountsToUserGroupWithOptions(AttachHostGroupAccountsToUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1202,6 +1819,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AttachHostGroupAccountsToUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user to manage one or more host groups and host accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachHostGroupAccountsToUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostGroupAccountsToUserGroupResponse
+        /// </returns>
         public async Task<AttachHostGroupAccountsToUserGroupResponse> AttachHostGroupAccountsToUserGroupWithOptionsAsync(AttachHostGroupAccountsToUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1241,18 +1873,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<AttachHostGroupAccountsToUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user to manage one or more host groups and host accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachHostGroupAccountsToUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostGroupAccountsToUserGroupResponse
+        /// </returns>
         public AttachHostGroupAccountsToUserGroupResponse AttachHostGroupAccountsToUserGroup(AttachHostGroupAccountsToUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AttachHostGroupAccountsToUserGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a user to manage one or more host groups and host accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachHostGroupAccountsToUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachHostGroupAccountsToUserGroupResponse
+        /// </returns>
         public async Task<AttachHostGroupAccountsToUserGroupResponse> AttachHostGroupAccountsToUserGroupAsync(AttachHostGroupAccountsToUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AttachHostGroupAccountsToUserGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures security groups for a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConfigInstanceSecurityGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigInstanceSecurityGroupsResponse
+        /// </returns>
         public ConfigInstanceSecurityGroupsResponse ConfigInstanceSecurityGroupsWithOptions(ConfigInstanceSecurityGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1292,6 +1963,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ConfigInstanceSecurityGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures security groups for a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConfigInstanceSecurityGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigInstanceSecurityGroupsResponse
+        /// </returns>
         public async Task<ConfigInstanceSecurityGroupsResponse> ConfigInstanceSecurityGroupsWithOptionsAsync(ConfigInstanceSecurityGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1331,28 +2017,65 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ConfigInstanceSecurityGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures security groups for a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConfigInstanceSecurityGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigInstanceSecurityGroupsResponse
+        /// </returns>
         public ConfigInstanceSecurityGroupsResponse ConfigInstanceSecurityGroups(ConfigInstanceSecurityGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigInstanceSecurityGroupsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures security groups for a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConfigInstanceSecurityGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigInstanceSecurityGroupsResponse
+        /// </returns>
         public async Task<ConfigInstanceSecurityGroupsResponse> ConfigInstanceSecurityGroupsAsync(ConfigInstanceSecurityGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigInstanceSecurityGroupsWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ## Usage notes
-          * You can call this operation to configure a whitelist of public IP addresses for a bastion host. By default, a bastion host is accessible from all public IP addresses. If you want to allow the requests from specific public IP addresses, you can call this operation to add trusted IP addresses to the whitelist of the bastion host.  
-          * ## Limits
-          * You can call this operation up to 30 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ConfigInstanceWhiteListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ConfigInstanceWhiteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a whitelist of public IP addresses for a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <para>You can call this operation to configure a whitelist of public IP addresses for a bastion host. By default, a bastion host is accessible from all public IP addresses. If you want to allow the requests from specific public IP addresses, you can call this operation to add trusted IP addresses to the whitelist of the bastion host.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 30 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigInstanceWhiteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigInstanceWhiteListResponse
+        /// </returns>
         public ConfigInstanceWhiteListResponse ConfigInstanceWhiteListWithOptions(ConfigInstanceWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1388,16 +2111,29 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ConfigInstanceWhiteListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Usage notes
-          * You can call this operation to configure a whitelist of public IP addresses for a bastion host. By default, a bastion host is accessible from all public IP addresses. If you want to allow the requests from specific public IP addresses, you can call this operation to add trusted IP addresses to the whitelist of the bastion host.  
-          * ## Limits
-          * You can call this operation up to 30 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ConfigInstanceWhiteListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ConfigInstanceWhiteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a whitelist of public IP addresses for a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <para>You can call this operation to configure a whitelist of public IP addresses for a bastion host. By default, a bastion host is accessible from all public IP addresses. If you want to allow the requests from specific public IP addresses, you can call this operation to add trusted IP addresses to the whitelist of the bastion host.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 30 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigInstanceWhiteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigInstanceWhiteListResponse
+        /// </returns>
         public async Task<ConfigInstanceWhiteListResponse> ConfigInstanceWhiteListWithOptionsAsync(ConfigInstanceWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1433,36 +2169,73 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ConfigInstanceWhiteListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Usage notes
-          * You can call this operation to configure a whitelist of public IP addresses for a bastion host. By default, a bastion host is accessible from all public IP addresses. If you want to allow the requests from specific public IP addresses, you can call this operation to add trusted IP addresses to the whitelist of the bastion host.  
-          * ## Limits
-          * You can call this operation up to 30 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ConfigInstanceWhiteListRequest
-          * @return ConfigInstanceWhiteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a whitelist of public IP addresses for a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <para>You can call this operation to configure a whitelist of public IP addresses for a bastion host. By default, a bastion host is accessible from all public IP addresses. If you want to allow the requests from specific public IP addresses, you can call this operation to add trusted IP addresses to the whitelist of the bastion host.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 30 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigInstanceWhiteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigInstanceWhiteListResponse
+        /// </returns>
         public ConfigInstanceWhiteListResponse ConfigInstanceWhiteList(ConfigInstanceWhiteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigInstanceWhiteListWithOptions(request, runtime);
         }
 
-        /**
-          * ## Usage notes
-          * You can call this operation to configure a whitelist of public IP addresses for a bastion host. By default, a bastion host is accessible from all public IP addresses. If you want to allow the requests from specific public IP addresses, you can call this operation to add trusted IP addresses to the whitelist of the bastion host.  
-          * ## Limits
-          * You can call this operation up to 30 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ConfigInstanceWhiteListRequest
-          * @return ConfigInstanceWhiteListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a whitelist of public IP addresses for a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <para>You can call this operation to configure a whitelist of public IP addresses for a bastion host. By default, a bastion host is accessible from all public IP addresses. If you want to allow the requests from specific public IP addresses, you can call this operation to add trusted IP addresses to the whitelist of the bastion host.  </para>
+        /// <h2>Limits</h2>
+        /// <para>You can call this operation up to 30 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfigInstanceWhiteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigInstanceWhiteListResponse
+        /// </returns>
         public async Task<ConfigInstanceWhiteListResponse> ConfigInstanceWhiteListAsync(ConfigInstanceWhiteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigInstanceWhiteListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports an ApsaraDB RDS for MySQL instance, ApsaraDB RDS for SQL Server instance, ApsaraDB RDS for PostgreSQL instance, PolarDB for MySQL cluster, PolarDB for PostgreSQL cluster, PolarDB for PostgreSQL (Compatible with Oracle) cluster, self-managed MySQL database, self-managed SQL Server database, self-managed PostgreSQL database, or self-managed Oracle database to a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatabaseResponse
+        /// </returns>
         public CreateDatabaseResponse CreateDatabaseWithOptions(CreateDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1542,6 +2315,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateDatabaseResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports an ApsaraDB RDS for MySQL instance, ApsaraDB RDS for SQL Server instance, ApsaraDB RDS for PostgreSQL instance, PolarDB for MySQL cluster, PolarDB for PostgreSQL cluster, PolarDB for PostgreSQL (Compatible with Oracle) cluster, self-managed MySQL database, self-managed SQL Server database, self-managed PostgreSQL database, or self-managed Oracle database to a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatabaseResponse
+        /// </returns>
         public async Task<CreateDatabaseResponse> CreateDatabaseWithOptionsAsync(CreateDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1621,18 +2409,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateDatabaseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports an ApsaraDB RDS for MySQL instance, ApsaraDB RDS for SQL Server instance, ApsaraDB RDS for PostgreSQL instance, PolarDB for MySQL cluster, PolarDB for PostgreSQL cluster, PolarDB for PostgreSQL (Compatible with Oracle) cluster, self-managed MySQL database, self-managed SQL Server database, self-managed PostgreSQL database, or self-managed Oracle database to a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatabaseResponse
+        /// </returns>
         public CreateDatabaseResponse CreateDatabase(CreateDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDatabaseWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports an ApsaraDB RDS for MySQL instance, ApsaraDB RDS for SQL Server instance, ApsaraDB RDS for PostgreSQL instance, PolarDB for MySQL cluster, PolarDB for PostgreSQL cluster, PolarDB for PostgreSQL (Compatible with Oracle) cluster, self-managed MySQL database, self-managed SQL Server database, self-managed PostgreSQL database, or self-managed Oracle database to a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatabaseResponse
+        /// </returns>
         public async Task<CreateDatabaseResponse> CreateDatabaseAsync(CreateDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDatabaseWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After a database is created, you can create a database account for the database. After the account is created, O\&amp;M engineers can use the account to log on to and perform O\&amp;M operations on the database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatabaseAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatabaseAccountResponse
+        /// </returns>
         public CreateDatabaseAccountResponse CreateDatabaseAccountWithOptions(CreateDatabaseAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1684,6 +2511,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateDatabaseAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After a database is created, you can create a database account for the database. After the account is created, O\&amp;M engineers can use the account to log on to and perform O\&amp;M operations on the database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatabaseAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatabaseAccountResponse
+        /// </returns>
         public async Task<CreateDatabaseAccountResponse> CreateDatabaseAccountWithOptionsAsync(CreateDatabaseAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1735,18 +2577,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateDatabaseAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After a database is created, you can create a database account for the database. After the account is created, O\&amp;M engineers can use the account to log on to and perform O\&amp;M operations on the database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatabaseAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatabaseAccountResponse
+        /// </returns>
         public CreateDatabaseAccountResponse CreateDatabaseAccount(CreateDatabaseAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDatabaseAccountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After a database is created, you can create a database account for the database. After the account is created, O\&amp;M engineers can use the account to log on to and perform O\&amp;M operations on the database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatabaseAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatabaseAccountResponse
+        /// </returns>
         public async Task<CreateDatabaseAccountResponse> CreateDatabaseAccountAsync(CreateDatabaseAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDatabaseAccountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Bastionhost allows you to perform O\&amp;M operations on hosts from different sources, such as Alibaba Cloud Elastic Compute Service (ECS) instances, servers in on-premises data centers, and servers on other cloud platforms. Before you perform O\&amp;M operations on hosts by using a bastion host, you must import the hosts to the bastion host. You can call this operation to import a host to a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHostRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHostResponse
+        /// </returns>
         public CreateHostResponse CreateHostWithOptions(CreateHostRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1818,6 +2699,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateHostResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Bastionhost allows you to perform O\&amp;M operations on hosts from different sources, such as Alibaba Cloud Elastic Compute Service (ECS) instances, servers in on-premises data centers, and servers on other cloud platforms. Before you perform O\&amp;M operations on hosts by using a bastion host, you must import the hosts to the bastion host. You can call this operation to import a host to a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHostRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHostResponse
+        /// </returns>
         public async Task<CreateHostResponse> CreateHostWithOptionsAsync(CreateHostRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1889,18 +2785,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateHostResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Bastionhost allows you to perform O\&amp;M operations on hosts from different sources, such as Alibaba Cloud Elastic Compute Service (ECS) instances, servers in on-premises data centers, and servers on other cloud platforms. Before you perform O\&amp;M operations on hosts by using a bastion host, you must import the hosts to the bastion host. You can call this operation to import a host to a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHostRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHostResponse
+        /// </returns>
         public CreateHostResponse CreateHost(CreateHostRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateHostWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Bastionhost allows you to perform O\&amp;M operations on hosts from different sources, such as Alibaba Cloud Elastic Compute Service (ECS) instances, servers in on-premises data centers, and servers on other cloud platforms. Before you perform O\&amp;M operations on hosts by using a bastion host, you must import the hosts to the bastion host. You can call this operation to import a host to a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHostRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHostResponse
+        /// </returns>
         public async Task<CreateHostResponse> CreateHostAsync(CreateHostRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateHostWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After you import a host to a bastion host, you must add an account of the host to the bastion host. This way, O\&amp;M engineers can use the account to log on to and perform O\&amp;M operations on the host by using the bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHostAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHostAccountResponse
+        /// </returns>
         public CreateHostAccountResponse CreateHostAccountWithOptions(CreateHostAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1960,6 +2895,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateHostAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After you import a host to a bastion host, you must add an account of the host to the bastion host. This way, O\&amp;M engineers can use the account to log on to and perform O\&amp;M operations on the host by using the bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHostAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHostAccountResponse
+        /// </returns>
         public async Task<CreateHostAccountResponse> CreateHostAccountWithOptionsAsync(CreateHostAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2019,18 +2969,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateHostAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After you import a host to a bastion host, you must add an account of the host to the bastion host. This way, O\&amp;M engineers can use the account to log on to and perform O\&amp;M operations on the host by using the bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHostAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHostAccountResponse
+        /// </returns>
         public CreateHostAccountResponse CreateHostAccount(CreateHostAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateHostAccountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After you import a host to a bastion host, you must add an account of the host to the bastion host. This way, O\&amp;M engineers can use the account to log on to and perform O\&amp;M operations on the host by using the bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHostAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHostAccountResponse
+        /// </returns>
         public async Task<CreateHostAccountResponse> CreateHostAccountAsync(CreateHostAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateHostAccountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can create asset groups based on your business requirements and add assets of the same type to an asset group. This allows you to classify assets and manage multiple assets at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHostGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHostGroupResponse
+        /// </returns>
         public CreateHostGroupResponse CreateHostGroupWithOptions(CreateHostGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2070,6 +3059,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateHostGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can create asset groups based on your business requirements and add assets of the same type to an asset group. This allows you to classify assets and manage multiple assets at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHostGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHostGroupResponse
+        /// </returns>
         public async Task<CreateHostGroupResponse> CreateHostGroupWithOptionsAsync(CreateHostGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2109,18 +3113,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateHostGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can create asset groups based on your business requirements and add assets of the same type to an asset group. This allows you to classify assets and manage multiple assets at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHostGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHostGroupResponse
+        /// </returns>
         public CreateHostGroupResponse CreateHostGroup(CreateHostGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateHostGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can create asset groups based on your business requirements and add assets of the same type to an asset group. This allows you to classify assets and manage multiple assets at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHostGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHostGroupResponse
+        /// </returns>
         public async Task<CreateHostGroupResponse> CreateHostGroupAsync(CreateHostGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateHostGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Bastionhost provides the shared key feature. This feature allows you to manage the private key that is used to log on to a host in a bastion host. This way, you can associate the private key with multiple accounts of the host to make host account management more efficient.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHostShareKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHostShareKeyResponse
+        /// </returns>
         public CreateHostShareKeyResponse CreateHostShareKeyWithOptions(CreateHostShareKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2164,6 +3207,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateHostShareKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Bastionhost provides the shared key feature. This feature allows you to manage the private key that is used to log on to a host in a bastion host. This way, you can associate the private key with multiple accounts of the host to make host account management more efficient.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHostShareKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHostShareKeyResponse
+        /// </returns>
         public async Task<CreateHostShareKeyResponse> CreateHostShareKeyWithOptionsAsync(CreateHostShareKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2207,18 +3265,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateHostShareKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Bastionhost provides the shared key feature. This feature allows you to manage the private key that is used to log on to a host in a bastion host. This way, you can associate the private key with multiple accounts of the host to make host account management more efficient.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHostShareKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHostShareKeyResponse
+        /// </returns>
         public CreateHostShareKeyResponse CreateHostShareKey(CreateHostShareKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateHostShareKeyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Bastionhost provides the shared key feature. This feature allows you to manage the private key that is used to log on to a host in a bastion host. This way, you can associate the private key with multiple accounts of the host to make host account management more efficient.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHostShareKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHostShareKeyResponse
+        /// </returns>
         public async Task<CreateHostShareKeyResponse> CreateHostShareKeyAsync(CreateHostShareKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateHostShareKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a network domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateNetworkDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNetworkDomainResponse
+        /// </returns>
         public CreateNetworkDomainResponse CreateNetworkDomainWithOptions(CreateNetworkDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2266,6 +3363,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateNetworkDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a network domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateNetworkDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNetworkDomainResponse
+        /// </returns>
         public async Task<CreateNetworkDomainResponse> CreateNetworkDomainWithOptionsAsync(CreateNetworkDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2313,18 +3425,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateNetworkDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a network domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateNetworkDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNetworkDomainResponse
+        /// </returns>
         public CreateNetworkDomainResponse CreateNetworkDomain(CreateNetworkDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateNetworkDomainWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a network domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateNetworkDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNetworkDomainResponse
+        /// </returns>
         public async Task<CreateNetworkDomainResponse> CreateNetworkDomainAsync(CreateNetworkDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateNetworkDomainWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a command control, command approval, protocol control, or access control policy to manage O\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\&amp;M security.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePolicyResponse
+        /// </returns>
         public CreatePolicyResponse CreatePolicyWithOptions(CreatePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2368,6 +3519,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreatePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a command control, command approval, protocol control, or access control policy to manage O\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\&amp;M security.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePolicyResponse
+        /// </returns>
         public async Task<CreatePolicyResponse> CreatePolicyWithOptionsAsync(CreatePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2411,18 +3577,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreatePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a command control, command approval, protocol control, or access control policy to manage O\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\&amp;M security.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePolicyResponse
+        /// </returns>
         public CreatePolicyResponse CreatePolicy(CreatePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreatePolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a command control, command approval, protocol control, or access control policy to manage O\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\&amp;M security.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePolicyResponse
+        /// </returns>
         public async Task<CreatePolicyResponse> CreatePolicyAsync(CreatePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreatePolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can create authorization rules to authorize multiple users to manage assets. You can also specify a validity period for an authorization rule. This way, you can manage users and assets in a more efficient manner and limit the time periods during which users can access assets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRuleResponse
+        /// </returns>
         public CreateRuleResponse CreateRuleWithOptions(CreateRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2490,6 +3695,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can create authorization rules to authorize multiple users to manage assets. You can also specify a validity period for an authorization rule. This way, you can manage users and assets in a more efficient manner and limit the time periods during which users can access assets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRuleResponse
+        /// </returns>
         public async Task<CreateRuleResponse> CreateRuleWithOptionsAsync(CreateRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2557,28 +3777,63 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can create authorization rules to authorize multiple users to manage assets. You can also specify a validity period for an authorization rule. This way, you can manage users and assets in a more efficient manner and limit the time periods during which users can access assets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRuleResponse
+        /// </returns>
         public CreateRuleResponse CreateRule(CreateRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can create authorization rules to authorize multiple users to manage assets. You can also specify a validity period for an authorization rule. This way, you can manage users and assets in a more efficient manner and limit the time periods during which users can access assets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRuleResponse
+        /// </returns>
         public async Task<CreateRuleResponse> CreateRuleAsync(CreateRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ## Usage notes
-          * You can call this operation to add a user to a bastion host. You can add local users and Resource Access Management (RAM) users. After a Bastionhost administrator adds a user to a bastion host, the O&M personnel can log on to the bastion host as the user to perform O&M operations on the host on which they have permissions.  
-          * ## Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateUserRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a user to a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateUser operation to add local users, Resource Access Management (RAM) users, Active Directory (AD)-authenticated users, or Lightweight Directory Access Protocol (LDAP)-authenticated users to a bastion host. After a Bastionhost administrator adds a user to a bastion host, O\&amp;M engineers can log on to the bastion host as the user to perform O\&amp;M operations on the hosts that the user is authorized to manage.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserResponse
+        /// </returns>
         public CreateUserResponse CreateUserWithOptions(CreateUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2674,16 +3929,27 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateUserResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Usage notes
-          * You can call this operation to add a user to a bastion host. You can add local users and Resource Access Management (RAM) users. After a Bastionhost administrator adds a user to a bastion host, the O&M personnel can log on to the bastion host as the user to perform O&M operations on the host on which they have permissions.  
-          * ## Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateUserRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a user to a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateUser operation to add local users, Resource Access Management (RAM) users, Active Directory (AD)-authenticated users, or Lightweight Directory Access Protocol (LDAP)-authenticated users to a bastion host. After a Bastionhost administrator adds a user to a bastion host, O\&amp;M engineers can log on to the bastion host as the user to perform O\&amp;M operations on the hosts that the user is authorized to manage.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserResponse
+        /// </returns>
         public async Task<CreateUserResponse> CreateUserWithOptionsAsync(CreateUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2779,44 +4045,75 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Usage notes
-          * You can call this operation to add a user to a bastion host. You can add local users and Resource Access Management (RAM) users. After a Bastionhost administrator adds a user to a bastion host, the O&M personnel can log on to the bastion host as the user to perform O&M operations on the host on which they have permissions.  
-          * ## Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateUserRequest
-          * @return CreateUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a user to a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateUser operation to add local users, Resource Access Management (RAM) users, Active Directory (AD)-authenticated users, or Lightweight Directory Access Protocol (LDAP)-authenticated users to a bastion host. After a Bastionhost administrator adds a user to a bastion host, O\&amp;M engineers can log on to the bastion host as the user to perform O\&amp;M operations on the hosts that the user is authorized to manage.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserResponse
+        /// </returns>
         public CreateUserResponse CreateUser(CreateUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateUserWithOptions(request, runtime);
         }
 
-        /**
-          * ## Usage notes
-          * You can call this operation to add a user to a bastion host. You can add local users and Resource Access Management (RAM) users. After a Bastionhost administrator adds a user to a bastion host, the O&M personnel can log on to the bastion host as the user to perform O&M operations on the host on which they have permissions.  
-          * ## Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateUserRequest
-          * @return CreateUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a user to a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateUser operation to add local users, Resource Access Management (RAM) users, Active Directory (AD)-authenticated users, or Lightweight Directory Access Protocol (LDAP)-authenticated users to a bastion host. After a Bastionhost administrator adds a user to a bastion host, O\&amp;M engineers can log on to the bastion host as the user to perform O\&amp;M operations on the hosts that the user is authorized to manage.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserResponse
+        /// </returns>
         public async Task<CreateUserResponse> CreateUserAsync(CreateUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateUserWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the [AddUsersToGroup](~~204600~~) operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateUserGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user group for the specified bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserGroupResponse
+        /// </returns>
         public CreateUserGroupResponse CreateUserGroupWithOptions(CreateUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2856,14 +4153,27 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the [AddUsersToGroup](~~204600~~) operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateUserGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user group for the specified bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserGroupResponse
+        /// </returns>
         public async Task<CreateUserGroupResponse> CreateUserGroupWithOptionsAsync(CreateUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2903,39 +4213,74 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the [AddUsersToGroup](~~204600~~) operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateUserGroupRequest
-          * @return CreateUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user group for the specified bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserGroupResponse
+        /// </returns>
         public CreateUserGroupResponse CreateUserGroup(CreateUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateUserGroupWithOptions(request, runtime);
         }
 
-        /**
-          * You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the [AddUsersToGroup](~~204600~~) operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateUserGroupRequest
-          * @return CreateUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user group for the specified bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserGroupResponse
+        /// </returns>
         public async Task<CreateUserGroupResponse> CreateUserGroupAsync(CreateUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateUserGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * You can call the CreateUserPublicKey operation to create a public key for the specified user of a bastion host.
-          *
-          * @param request CreateUserPublicKeyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateUserPublicKeyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a public key for a bastion host user and hosts the public key in the bastion host. This way, O\&amp;M engineers can use the private key that corresponds to the public key to log on to the bastion host from an O\&amp;M client.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateUserPublicKey operation to create a public key for the specified user of a bastion host.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserPublicKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserPublicKeyResponse
+        /// </returns>
         public CreateUserPublicKeyResponse CreateUserPublicKeyWithOptions(CreateUserPublicKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2983,13 +4328,26 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateUserPublicKeyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * You can call the CreateUserPublicKey operation to create a public key for the specified user of a bastion host.
-          *
-          * @param request CreateUserPublicKeyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateUserPublicKeyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a public key for a bastion host user and hosts the public key in the bastion host. This way, O\&amp;M engineers can use the private key that corresponds to the public key to log on to the bastion host from an O\&amp;M client.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateUserPublicKey operation to create a public key for the specified user of a bastion host.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserPublicKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserPublicKeyResponse
+        /// </returns>
         public async Task<CreateUserPublicKeyResponse> CreateUserPublicKeyWithOptionsAsync(CreateUserPublicKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3037,30 +4395,67 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateUserPublicKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * You can call the CreateUserPublicKey operation to create a public key for the specified user of a bastion host.
-          *
-          * @param request CreateUserPublicKeyRequest
-          * @return CreateUserPublicKeyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a public key for a bastion host user and hosts the public key in the bastion host. This way, O\&amp;M engineers can use the private key that corresponds to the public key to log on to the bastion host from an O\&amp;M client.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateUserPublicKey operation to create a public key for the specified user of a bastion host.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserPublicKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserPublicKeyResponse
+        /// </returns>
         public CreateUserPublicKeyResponse CreateUserPublicKey(CreateUserPublicKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateUserPublicKeyWithOptions(request, runtime);
         }
 
-        /**
-          * You can call the CreateUserPublicKey operation to create a public key for the specified user of a bastion host.
-          *
-          * @param request CreateUserPublicKeyRequest
-          * @return CreateUserPublicKeyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a public key for a bastion host user and hosts the public key in the bastion host. This way, O\&amp;M engineers can use the private key that corresponds to the public key to log on to the bastion host from an O\&amp;M client.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateUserPublicKey operation to create a public key for the specified user of a bastion host.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserPublicKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserPublicKeyResponse
+        /// </returns>
         public async Task<CreateUserPublicKeyResponse> CreateUserPublicKeyAsync(CreateUserPublicKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateUserPublicKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatabaseResponse
+        /// </returns>
         public DeleteDatabaseResponse DeleteDatabaseWithOptions(DeleteDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3096,6 +4491,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteDatabaseResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatabaseResponse
+        /// </returns>
         public async Task<DeleteDatabaseResponse> DeleteDatabaseWithOptionsAsync(DeleteDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3131,18 +4541,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteDatabaseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatabaseResponse
+        /// </returns>
         public DeleteDatabaseResponse DeleteDatabase(DeleteDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDatabaseWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatabaseResponse
+        /// </returns>
         public async Task<DeleteDatabaseResponse> DeleteDatabaseAsync(DeleteDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDatabaseWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatabaseAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatabaseAccountResponse
+        /// </returns>
         public DeleteDatabaseAccountResponse DeleteDatabaseAccountWithOptions(DeleteDatabaseAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3178,6 +4627,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteDatabaseAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatabaseAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatabaseAccountResponse
+        /// </returns>
         public async Task<DeleteDatabaseAccountResponse> DeleteDatabaseAccountWithOptionsAsync(DeleteDatabaseAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3213,18 +4677,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteDatabaseAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatabaseAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatabaseAccountResponse
+        /// </returns>
         public DeleteDatabaseAccountResponse DeleteDatabaseAccount(DeleteDatabaseAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDatabaseAccountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatabaseAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatabaseAccountResponse
+        /// </returns>
         public async Task<DeleteDatabaseAccountResponse> DeleteDatabaseAccountAsync(DeleteDatabaseAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDatabaseAccountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the specified host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHostRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHostResponse
+        /// </returns>
         public DeleteHostResponse DeleteHostWithOptions(DeleteHostRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3260,6 +4763,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteHostResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the specified host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHostRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHostResponse
+        /// </returns>
         public async Task<DeleteHostResponse> DeleteHostWithOptionsAsync(DeleteHostRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3295,29 +4813,68 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteHostResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the specified host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHostRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHostResponse
+        /// </returns>
         public DeleteHostResponse DeleteHost(DeleteHostRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteHostWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the specified host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHostRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHostResponse
+        /// </returns>
         public async Task<DeleteHostResponse> DeleteHostAsync(DeleteHostRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteHostWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ## Usage notes
-          * This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.
-          * >  After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  
-          * ## QPS Limit
-          * The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.
-          *
-          * @param request DeleteHostAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteHostAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a host account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <para>This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.</para>
+        /// <remarks>
+        /// <para> After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  </para>
+        /// </remarks>
+        /// <h2>QPS Limit</h2>
+        /// <para>The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteHostAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHostAccountResponse
+        /// </returns>
         public DeleteHostAccountResponse DeleteHostAccountWithOptions(DeleteHostAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3353,17 +4910,32 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteHostAccountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Usage notes
-          * This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.
-          * >  After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  
-          * ## QPS Limit
-          * The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.
-          *
-          * @param request DeleteHostAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteHostAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a host account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <para>This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.</para>
+        /// <remarks>
+        /// <para> After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  </para>
+        /// </remarks>
+        /// <h2>QPS Limit</h2>
+        /// <para>The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteHostAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHostAccountResponse
+        /// </returns>
         public async Task<DeleteHostAccountResponse> DeleteHostAccountWithOptionsAsync(DeleteHostAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3399,47 +4971,86 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteHostAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Usage notes
-          * This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.
-          * >  After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  
-          * ## QPS Limit
-          * The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.
-          *
-          * @param request DeleteHostAccountRequest
-          * @return DeleteHostAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a host account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <para>This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.</para>
+        /// <remarks>
+        /// <para> After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  </para>
+        /// </remarks>
+        /// <h2>QPS Limit</h2>
+        /// <para>The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteHostAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHostAccountResponse
+        /// </returns>
         public DeleteHostAccountResponse DeleteHostAccount(DeleteHostAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteHostAccountWithOptions(request, runtime);
         }
 
-        /**
-          * ## Usage notes
-          * This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.
-          * >  After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  
-          * ## QPS Limit
-          * The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.
-          *
-          * @param request DeleteHostAccountRequest
-          * @return DeleteHostAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a host account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <para>This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.</para>
+        /// <remarks>
+        /// <para> After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  </para>
+        /// </remarks>
+        /// <h2>QPS Limit</h2>
+        /// <para>The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteHostAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHostAccountResponse
+        /// </returns>
         public async Task<DeleteHostAccountResponse> DeleteHostAccountAsync(DeleteHostAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteHostAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * You can call this operation to delete a single host group. If you no longer need to perform O\\&M operations on all hosts in a host group, you can call this operation to delete the host group.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteHostGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteHostGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a host group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to delete a single host group. If you no longer need to perform O\&amp;M operations on all hosts in a host group, you can call this operation to delete the host group.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteHostGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHostGroupResponse
+        /// </returns>
         public DeleteHostGroupResponse DeleteHostGroupWithOptions(DeleteHostGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3475,15 +5086,28 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteHostGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * You can call this operation to delete a single host group. If you no longer need to perform O\\&M operations on all hosts in a host group, you can call this operation to delete the host group.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteHostGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteHostGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a host group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to delete a single host group. If you no longer need to perform O\&amp;M operations on all hosts in a host group, you can call this operation to delete the host group.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteHostGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHostGroupResponse
+        /// </returns>
         public async Task<DeleteHostGroupResponse> DeleteHostGroupWithOptionsAsync(DeleteHostGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3519,34 +5143,71 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteHostGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * You can call this operation to delete a single host group. If you no longer need to perform O\\&M operations on all hosts in a host group, you can call this operation to delete the host group.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteHostGroupRequest
-          * @return DeleteHostGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a host group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to delete a single host group. If you no longer need to perform O\&amp;M operations on all hosts in a host group, you can call this operation to delete the host group.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteHostGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHostGroupResponse
+        /// </returns>
         public DeleteHostGroupResponse DeleteHostGroup(DeleteHostGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteHostGroupWithOptions(request, runtime);
         }
 
-        /**
-          * You can call this operation to delete a single host group. If you no longer need to perform O\\&M operations on all hosts in a host group, you can call this operation to delete the host group.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteHostGroupRequest
-          * @return DeleteHostGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a host group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to delete a single host group. If you no longer need to perform O\&amp;M operations on all hosts in a host group, you can call this operation to delete the host group.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteHostGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHostGroupResponse
+        /// </returns>
         public async Task<DeleteHostGroupResponse> DeleteHostGroupAsync(DeleteHostGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteHostGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHostShareKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHostShareKeyResponse
+        /// </returns>
         public DeleteHostShareKeyResponse DeleteHostShareKeyWithOptions(DeleteHostShareKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3582,6 +5243,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteHostShareKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHostShareKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHostShareKeyResponse
+        /// </returns>
         public async Task<DeleteHostShareKeyResponse> DeleteHostShareKeyWithOptionsAsync(DeleteHostShareKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3617,18 +5293,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteHostShareKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHostShareKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHostShareKeyResponse
+        /// </returns>
         public DeleteHostShareKeyResponse DeleteHostShareKey(DeleteHostShareKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteHostShareKeyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHostShareKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHostShareKeyResponse
+        /// </returns>
         public async Task<DeleteHostShareKeyResponse> DeleteHostShareKeyAsync(DeleteHostShareKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteHostShareKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a network domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteNetworkDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNetworkDomainResponse
+        /// </returns>
         public DeleteNetworkDomainResponse DeleteNetworkDomainWithOptions(DeleteNetworkDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3664,6 +5379,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteNetworkDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a network domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteNetworkDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNetworkDomainResponse
+        /// </returns>
         public async Task<DeleteNetworkDomainResponse> DeleteNetworkDomainWithOptionsAsync(DeleteNetworkDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3699,18 +5429,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteNetworkDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a network domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteNetworkDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNetworkDomainResponse
+        /// </returns>
         public DeleteNetworkDomainResponse DeleteNetworkDomain(DeleteNetworkDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteNetworkDomainWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a network domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteNetworkDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNetworkDomainResponse
+        /// </returns>
         public async Task<DeleteNetworkDomainResponse> DeleteNetworkDomainAsync(DeleteNetworkDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteNetworkDomainWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolicyResponse
+        /// </returns>
         public DeletePolicyResponse DeletePolicyWithOptions(DeletePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3746,6 +5515,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeletePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolicyResponse
+        /// </returns>
         public async Task<DeletePolicyResponse> DeletePolicyWithOptionsAsync(DeletePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3781,18 +5565,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeletePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolicyResponse
+        /// </returns>
         public DeletePolicyResponse DeletePolicy(DeletePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeletePolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolicyResponse
+        /// </returns>
         public async Task<DeletePolicyResponse> DeletePolicyAsync(DeletePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeletePolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRuleResponse
+        /// </returns>
         public DeleteRuleResponse DeleteRuleWithOptions(DeleteRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3828,6 +5651,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRuleResponse
+        /// </returns>
         public async Task<DeleteRuleResponse> DeleteRuleWithOptionsAsync(DeleteRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3863,18 +5701,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRuleResponse
+        /// </returns>
         public DeleteRuleResponse DeleteRule(DeleteRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRuleResponse
+        /// </returns>
         public async Task<DeleteRuleResponse> DeleteRuleAsync(DeleteRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a bastion host user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserResponse
+        /// </returns>
         public DeleteUserResponse DeleteUserWithOptions(DeleteUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3910,6 +5787,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a bastion host user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserResponse
+        /// </returns>
         public async Task<DeleteUserResponse> DeleteUserWithOptionsAsync(DeleteUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3945,18 +5837,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a bastion host user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserResponse
+        /// </returns>
         public DeleteUserResponse DeleteUser(DeleteUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a bastion host user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserResponse
+        /// </returns>
         public async Task<DeleteUserResponse> DeleteUserAsync(DeleteUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified user group from a specified bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserGroupResponse
+        /// </returns>
         public DeleteUserGroupResponse DeleteUserGroupWithOptions(DeleteUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3992,6 +5923,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified user group from a specified bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserGroupResponse
+        /// </returns>
         public async Task<DeleteUserGroupResponse> DeleteUserGroupWithOptionsAsync(DeleteUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4027,25 +5973,62 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified user group from a specified bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserGroupResponse
+        /// </returns>
         public DeleteUserGroupResponse DeleteUserGroup(DeleteUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteUserGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified user group from a specified bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserGroupResponse
+        /// </returns>
         public async Task<DeleteUserGroupResponse> DeleteUserGroupAsync(DeleteUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteUserGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * You can call the DeleteUserPublicKey operation to delete a public key from the specified user of a bastion host.
-          *
-          * @param request DeleteUserPublicKeyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteUserPublicKeyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a public key from the specified user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteUserPublicKey operation to delete a public key from the specified user of a bastion host.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteUserPublicKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserPublicKeyResponse
+        /// </returns>
         public DeleteUserPublicKeyResponse DeleteUserPublicKeyWithOptions(DeleteUserPublicKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4081,13 +6064,26 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteUserPublicKeyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * You can call the DeleteUserPublicKey operation to delete a public key from the specified user of a bastion host.
-          *
-          * @param request DeleteUserPublicKeyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteUserPublicKeyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a public key from the specified user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteUserPublicKey operation to delete a public key from the specified user of a bastion host.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteUserPublicKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserPublicKeyResponse
+        /// </returns>
         public async Task<DeleteUserPublicKeyResponse> DeleteUserPublicKeyWithOptionsAsync(DeleteUserPublicKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4123,30 +6119,72 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DeleteUserPublicKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * You can call the DeleteUserPublicKey operation to delete a public key from the specified user of a bastion host.
-          *
-          * @param request DeleteUserPublicKeyRequest
-          * @return DeleteUserPublicKeyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a public key from the specified user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteUserPublicKey operation to delete a public key from the specified user of a bastion host.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteUserPublicKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserPublicKeyResponse
+        /// </returns>
         public DeleteUserPublicKeyResponse DeleteUserPublicKey(DeleteUserPublicKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteUserPublicKeyWithOptions(request, runtime);
         }
 
-        /**
-          * You can call the DeleteUserPublicKey operation to delete a public key from the specified user of a bastion host.
-          *
-          * @param request DeleteUserPublicKeyRequest
-          * @return DeleteUserPublicKeyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a public key from the specified user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteUserPublicKey operation to delete a public key from the specified user of a bastion host.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteUserPublicKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserPublicKeyResponse
+        /// </returns>
         public async Task<DeleteUserPublicKeyResponse> DeleteUserPublicKeyAsync(DeleteUserPublicKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteUserPublicKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attribute information about the specified bastion host. The information includes the ID and remarks of the bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceAttributeResponse
+        /// </returns>
         public DescribeInstanceAttributeResponse DescribeInstanceAttributeWithOptions(DescribeInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4178,6 +6216,26 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DescribeInstanceAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attribute information about the specified bastion host. The information includes the ID and remarks of the bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceAttributeResponse
+        /// </returns>
         public async Task<DescribeInstanceAttributeResponse> DescribeInstanceAttributeWithOptionsAsync(DescribeInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4209,18 +6267,62 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DescribeInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attribute information about the specified bastion host. The information includes the ID and remarks of the bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceAttributeResponse
+        /// </returns>
         public DescribeInstanceAttributeResponse DescribeInstanceAttribute(DescribeInstanceAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceAttributeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attribute information about the specified bastion host. The information includes the ID and remarks of the bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceAttributeResponse
+        /// </returns>
         public async Task<DescribeInstanceAttributeResponse> DescribeInstanceAttributeAsync(DescribeInstanceAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceAttributeWithOptionsAsync(request, runtime);
         }
 
+        /// <param name="request">
+        /// DescribeInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstancesResponse
+        /// </returns>
         public DescribeInstancesResponse DescribeInstancesWithOptions(DescribeInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4276,6 +6378,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DescribeInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// DescribeInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstancesResponse
+        /// </returns>
         public async Task<DescribeInstancesResponse> DescribeInstancesWithOptionsAsync(DescribeInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4331,18 +6443,47 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DescribeInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// DescribeInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstancesResponse
+        /// </returns>
         public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstancesWithOptions(request, runtime);
         }
 
+        /// <param name="request">
+        /// DescribeInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstancesResponse
+        /// </returns>
         public async Task<DescribeInstancesResponse> DescribeInstancesAsync(DescribeInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstancesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions where you can create bastion hosts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4374,6 +6515,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions where you can create bastion hosts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4405,18 +6561,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions where you can create bastion hosts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRegionsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions where you can create bastion hosts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRegionsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes permissions on databases and database accounts from a user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachDatabaseAccountsFromUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachDatabaseAccountsFromUserResponse
+        /// </returns>
         public DetachDatabaseAccountsFromUserResponse DetachDatabaseAccountsFromUserWithOptions(DetachDatabaseAccountsFromUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4456,6 +6651,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DetachDatabaseAccountsFromUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes permissions on databases and database accounts from a user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachDatabaseAccountsFromUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachDatabaseAccountsFromUserResponse
+        /// </returns>
         public async Task<DetachDatabaseAccountsFromUserResponse> DetachDatabaseAccountsFromUserWithOptionsAsync(DetachDatabaseAccountsFromUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4495,18 +6705,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DetachDatabaseAccountsFromUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes permissions on databases and database accounts from a user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachDatabaseAccountsFromUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachDatabaseAccountsFromUserResponse
+        /// </returns>
         public DetachDatabaseAccountsFromUserResponse DetachDatabaseAccountsFromUser(DetachDatabaseAccountsFromUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachDatabaseAccountsFromUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes permissions on databases and database accounts from a user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachDatabaseAccountsFromUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachDatabaseAccountsFromUserResponse
+        /// </returns>
         public async Task<DetachDatabaseAccountsFromUserResponse> DetachDatabaseAccountsFromUserAsync(DetachDatabaseAccountsFromUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachDatabaseAccountsFromUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes permissions on databases and database accounts from a user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachDatabaseAccountsFromUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachDatabaseAccountsFromUserGroupResponse
+        /// </returns>
         public DetachDatabaseAccountsFromUserGroupResponse DetachDatabaseAccountsFromUserGroupWithOptions(DetachDatabaseAccountsFromUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4546,6 +6795,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DetachDatabaseAccountsFromUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes permissions on databases and database accounts from a user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachDatabaseAccountsFromUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachDatabaseAccountsFromUserGroupResponse
+        /// </returns>
         public async Task<DetachDatabaseAccountsFromUserGroupResponse> DetachDatabaseAccountsFromUserGroupWithOptionsAsync(DetachDatabaseAccountsFromUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4585,18 +6849,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DetachDatabaseAccountsFromUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes permissions on databases and database accounts from a user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachDatabaseAccountsFromUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachDatabaseAccountsFromUserGroupResponse
+        /// </returns>
         public DetachDatabaseAccountsFromUserGroupResponse DetachDatabaseAccountsFromUserGroup(DetachDatabaseAccountsFromUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachDatabaseAccountsFromUserGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes permissions on databases and database accounts from a user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachDatabaseAccountsFromUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachDatabaseAccountsFromUserGroupResponse
+        /// </returns>
         public async Task<DetachDatabaseAccountsFromUserGroupResponse> DetachDatabaseAccountsFromUserGroupAsync(DetachDatabaseAccountsFromUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachDatabaseAccountsFromUserGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociate host accounts from a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachHostAccountsFromHostShareKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostAccountsFromHostShareKeyResponse
+        /// </returns>
         public DetachHostAccountsFromHostShareKeyResponse DetachHostAccountsFromHostShareKeyWithOptions(DetachHostAccountsFromHostShareKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4636,6 +6939,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DetachHostAccountsFromHostShareKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociate host accounts from a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachHostAccountsFromHostShareKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostAccountsFromHostShareKeyResponse
+        /// </returns>
         public async Task<DetachHostAccountsFromHostShareKeyResponse> DetachHostAccountsFromHostShareKeyWithOptionsAsync(DetachHostAccountsFromHostShareKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4675,18 +6993,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DetachHostAccountsFromHostShareKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociate host accounts from a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachHostAccountsFromHostShareKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostAccountsFromHostShareKeyResponse
+        /// </returns>
         public DetachHostAccountsFromHostShareKeyResponse DetachHostAccountsFromHostShareKey(DetachHostAccountsFromHostShareKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachHostAccountsFromHostShareKeyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociate host accounts from a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachHostAccountsFromHostShareKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostAccountsFromHostShareKeyResponse
+        /// </returns>
         public async Task<DetachHostAccountsFromHostShareKeyResponse> DetachHostAccountsFromHostShareKeyAsync(DetachHostAccountsFromHostShareKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachHostAccountsFromHostShareKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes permissions on hosts and host accounts from a user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachHostAccountsFromUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostAccountsFromUserResponse
+        /// </returns>
         public DetachHostAccountsFromUserResponse DetachHostAccountsFromUserWithOptions(DetachHostAccountsFromUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4726,6 +7083,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DetachHostAccountsFromUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes permissions on hosts and host accounts from a user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachHostAccountsFromUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostAccountsFromUserResponse
+        /// </returns>
         public async Task<DetachHostAccountsFromUserResponse> DetachHostAccountsFromUserWithOptionsAsync(DetachHostAccountsFromUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4765,18 +7137,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DetachHostAccountsFromUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes permissions on hosts and host accounts from a user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachHostAccountsFromUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostAccountsFromUserResponse
+        /// </returns>
         public DetachHostAccountsFromUserResponse DetachHostAccountsFromUser(DetachHostAccountsFromUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachHostAccountsFromUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes permissions on hosts and host accounts from a user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachHostAccountsFromUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostAccountsFromUserResponse
+        /// </returns>
         public async Task<DetachHostAccountsFromUserResponse> DetachHostAccountsFromUserAsync(DetachHostAccountsFromUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachHostAccountsFromUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes the permissions on one or more hosts and host accounts from a user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachHostAccountsFromUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostAccountsFromUserGroupResponse
+        /// </returns>
         public DetachHostAccountsFromUserGroupResponse DetachHostAccountsFromUserGroupWithOptions(DetachHostAccountsFromUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4816,6 +7227,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DetachHostAccountsFromUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes the permissions on one or more hosts and host accounts from a user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachHostAccountsFromUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostAccountsFromUserGroupResponse
+        /// </returns>
         public async Task<DetachHostAccountsFromUserGroupResponse> DetachHostAccountsFromUserGroupWithOptionsAsync(DetachHostAccountsFromUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4855,18 +7281,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DetachHostAccountsFromUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes the permissions on one or more hosts and host accounts from a user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachHostAccountsFromUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostAccountsFromUserGroupResponse
+        /// </returns>
         public DetachHostAccountsFromUserGroupResponse DetachHostAccountsFromUserGroup(DetachHostAccountsFromUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachHostAccountsFromUserGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes the permissions on one or more hosts and host accounts from a user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachHostAccountsFromUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostAccountsFromUserGroupResponse
+        /// </returns>
         public async Task<DetachHostAccountsFromUserGroupResponse> DetachHostAccountsFromUserGroupAsync(DetachHostAccountsFromUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachHostAccountsFromUserGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes host groups and host accounts from the list of host groups and host accounts that a user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachHostGroupAccountsFromUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostGroupAccountsFromUserResponse
+        /// </returns>
         public DetachHostGroupAccountsFromUserResponse DetachHostGroupAccountsFromUserWithOptions(DetachHostGroupAccountsFromUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4906,6 +7371,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DetachHostGroupAccountsFromUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes host groups and host accounts from the list of host groups and host accounts that a user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachHostGroupAccountsFromUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostGroupAccountsFromUserResponse
+        /// </returns>
         public async Task<DetachHostGroupAccountsFromUserResponse> DetachHostGroupAccountsFromUserWithOptionsAsync(DetachHostGroupAccountsFromUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4945,25 +7425,62 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DetachHostGroupAccountsFromUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes host groups and host accounts from the list of host groups and host accounts that a user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachHostGroupAccountsFromUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostGroupAccountsFromUserResponse
+        /// </returns>
         public DetachHostGroupAccountsFromUserResponse DetachHostGroupAccountsFromUser(DetachHostGroupAccountsFromUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachHostGroupAccountsFromUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes host groups and host accounts from the list of host groups and host accounts that a user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachHostGroupAccountsFromUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostGroupAccountsFromUserResponse
+        /// </returns>
         public async Task<DetachHostGroupAccountsFromUserResponse> DetachHostGroupAccountsFromUserAsync(DetachHostGroupAccountsFromUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachHostGroupAccountsFromUserWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ****
-          *
-          * @param request DetachHostGroupAccountsFromUserGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DetachHostGroupAccountsFromUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes permissions on one or more host groups and host accounts from a user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachHostGroupAccountsFromUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostGroupAccountsFromUserGroupResponse
+        /// </returns>
         public DetachHostGroupAccountsFromUserGroupResponse DetachHostGroupAccountsFromUserGroupWithOptions(DetachHostGroupAccountsFromUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5003,13 +7520,26 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DetachHostGroupAccountsFromUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ****
-          *
-          * @param request DetachHostGroupAccountsFromUserGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DetachHostGroupAccountsFromUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes permissions on one or more host groups and host accounts from a user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachHostGroupAccountsFromUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostGroupAccountsFromUserGroupResponse
+        /// </returns>
         public async Task<DetachHostGroupAccountsFromUserGroupResponse> DetachHostGroupAccountsFromUserGroupWithOptionsAsync(DetachHostGroupAccountsFromUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5049,30 +7579,67 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DetachHostGroupAccountsFromUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ****
-          *
-          * @param request DetachHostGroupAccountsFromUserGroupRequest
-          * @return DetachHostGroupAccountsFromUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes permissions on one or more host groups and host accounts from a user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachHostGroupAccountsFromUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostGroupAccountsFromUserGroupResponse
+        /// </returns>
         public DetachHostGroupAccountsFromUserGroupResponse DetachHostGroupAccountsFromUserGroup(DetachHostGroupAccountsFromUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachHostGroupAccountsFromUserGroupWithOptions(request, runtime);
         }
 
-        /**
-          * ****
-          *
-          * @param request DetachHostGroupAccountsFromUserGroupRequest
-          * @return DetachHostGroupAccountsFromUserGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes permissions on one or more host groups and host accounts from a user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachHostGroupAccountsFromUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachHostGroupAccountsFromUserGroupResponse
+        /// </returns>
         public async Task<DetachHostGroupAccountsFromUserGroupResponse> DetachHostGroupAccountsFromUserGroupAsync(DetachHostGroupAccountsFromUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachHostGroupAccountsFromUserGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables Internet access for a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableInstancePublicAccessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableInstancePublicAccessResponse
+        /// </returns>
         public DisableInstancePublicAccessResponse DisableInstancePublicAccessWithOptions(DisableInstancePublicAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5104,6 +7671,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DisableInstancePublicAccessResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables Internet access for a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableInstancePublicAccessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableInstancePublicAccessResponse
+        /// </returns>
         public async Task<DisableInstancePublicAccessResponse> DisableInstancePublicAccessWithOptionsAsync(DisableInstancePublicAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5135,18 +7717,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DisableInstancePublicAccessResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables Internet access for a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableInstancePublicAccessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableInstancePublicAccessResponse
+        /// </returns>
         public DisableInstancePublicAccessResponse DisableInstancePublicAccess(DisableInstancePublicAccessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableInstancePublicAccessWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables Internet access for a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableInstancePublicAccessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableInstancePublicAccessResponse
+        /// </returns>
         public async Task<DisableInstancePublicAccessResponse> DisableInstancePublicAccessAsync(DisableInstancePublicAccessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableInstancePublicAccessWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableRuleResponse
+        /// </returns>
         public DisableRuleResponse DisableRuleWithOptions(DisableRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5182,6 +7803,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DisableRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableRuleResponse
+        /// </returns>
         public async Task<DisableRuleResponse> DisableRuleWithOptionsAsync(DisableRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5217,18 +7853,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<DisableRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableRuleResponse
+        /// </returns>
         public DisableRuleResponse DisableRule(DisableRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableRuleResponse
+        /// </returns>
         public async Task<DisableRuleResponse> DisableRuleAsync(DisableRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables Internet access for a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableInstancePublicAccessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableInstancePublicAccessResponse
+        /// </returns>
         public EnableInstancePublicAccessResponse EnableInstancePublicAccessWithOptions(EnableInstancePublicAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5260,6 +7935,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<EnableInstancePublicAccessResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables Internet access for a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableInstancePublicAccessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableInstancePublicAccessResponse
+        /// </returns>
         public async Task<EnableInstancePublicAccessResponse> EnableInstancePublicAccessWithOptionsAsync(EnableInstancePublicAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5291,18 +7981,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<EnableInstancePublicAccessResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables Internet access for a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableInstancePublicAccessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableInstancePublicAccessResponse
+        /// </returns>
         public EnableInstancePublicAccessResponse EnableInstancePublicAccess(EnableInstancePublicAccessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableInstancePublicAccessWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables Internet access for a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableInstancePublicAccessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableInstancePublicAccessResponse
+        /// </returns>
         public async Task<EnableInstancePublicAccessResponse> EnableInstancePublicAccessAsync(EnableInstancePublicAccessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableInstancePublicAccessWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableRuleResponse
+        /// </returns>
         public EnableRuleResponse EnableRuleWithOptions(EnableRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5338,6 +8067,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<EnableRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableRuleResponse
+        /// </returns>
         public async Task<EnableRuleResponse> EnableRuleWithOptionsAsync(EnableRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5373,18 +8117,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<EnableRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableRuleResponse
+        /// </returns>
         public EnableRuleResponse EnableRule(EnableRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableRuleResponse
+        /// </returns>
         public async Task<EnableRuleResponse> EnableRuleAsync(EnableRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for an O&amp;M token.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateAssetOperationTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateAssetOperationTokenResponse
+        /// </returns>
         public GenerateAssetOperationTokenResponse GenerateAssetOperationTokenWithOptions(GenerateAssetOperationTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5413,13 +8196,29 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["AssetType"] = request.AssetType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseSchema))
+            {
+                query["DatabaseSchema"] = request.DatabaseSchema;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginAttribute))
+            {
+                query["LoginAttribute"] = request.LoginAttribute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationMode))
+            {
+                query["OperationMode"] = request.OperationMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SsoClient))
+            {
+                query["SsoClient"] = request.SsoClient;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5440,6 +8239,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GenerateAssetOperationTokenResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for an O&amp;M token.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateAssetOperationTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateAssetOperationTokenResponse
+        /// </returns>
         public async Task<GenerateAssetOperationTokenResponse> GenerateAssetOperationTokenWithOptionsAsync(GenerateAssetOperationTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5468,13 +8282,29 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["AssetType"] = request.AssetType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseSchema))
+            {
+                query["DatabaseSchema"] = request.DatabaseSchema;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginAttribute))
+            {
+                query["LoginAttribute"] = request.LoginAttribute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationMode))
+            {
+                query["OperationMode"] = request.OperationMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SsoClient))
+            {
+                query["SsoClient"] = request.SsoClient;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5495,18 +8325,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GenerateAssetOperationTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for an O&amp;M token.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateAssetOperationTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateAssetOperationTokenResponse
+        /// </returns>
         public GenerateAssetOperationTokenResponse GenerateAssetOperationToken(GenerateAssetOperationTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GenerateAssetOperationTokenWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for an O&amp;M token.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateAssetOperationTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateAssetOperationTokenResponse
+        /// </returns>
         public async Task<GenerateAssetOperationTokenResponse> GenerateAssetOperationTokenAsync(GenerateAssetOperationTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GenerateAssetOperationTokenWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatabaseResponse
+        /// </returns>
         public GetDatabaseResponse GetDatabaseWithOptions(GetDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5542,6 +8411,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetDatabaseResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatabaseResponse
+        /// </returns>
         public async Task<GetDatabaseResponse> GetDatabaseWithOptionsAsync(GetDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5577,18 +8461,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetDatabaseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatabaseResponse
+        /// </returns>
         public GetDatabaseResponse GetDatabase(GetDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDatabaseWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatabaseResponse
+        /// </returns>
         public async Task<GetDatabaseResponse> GetDatabaseAsync(GetDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDatabaseWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDatabaseAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatabaseAccountResponse
+        /// </returns>
         public GetDatabaseAccountResponse GetDatabaseAccountWithOptions(GetDatabaseAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5624,6 +8547,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetDatabaseAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDatabaseAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatabaseAccountResponse
+        /// </returns>
         public async Task<GetDatabaseAccountResponse> GetDatabaseAccountWithOptionsAsync(GetDatabaseAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5659,18 +8597,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetDatabaseAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDatabaseAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatabaseAccountResponse
+        /// </returns>
         public GetDatabaseAccountResponse GetDatabaseAccount(GetDatabaseAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDatabaseAccountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDatabaseAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatabaseAccountResponse
+        /// </returns>
         public async Task<GetDatabaseAccountResponse> GetDatabaseAccountAsync(GetDatabaseAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDatabaseAccountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a host, such as the name, source, address, protocol, and service port of the host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHostRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHostResponse
+        /// </returns>
         public GetHostResponse GetHostWithOptions(GetHostRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5706,6 +8683,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetHostResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a host, such as the name, source, address, protocol, and service port of the host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHostRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHostResponse
+        /// </returns>
         public async Task<GetHostResponse> GetHostWithOptionsAsync(GetHostRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5741,18 +8733,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetHostResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a host, such as the name, source, address, protocol, and service port of the host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHostRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHostResponse
+        /// </returns>
         public GetHostResponse GetHost(GetHostRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetHostWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a host, such as the name, source, address, protocol, and service port of the host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHostRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHostResponse
+        /// </returns>
         public async Task<GetHostResponse> GetHostAsync(GetHostRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetHostWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified host account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHostAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHostAccountResponse
+        /// </returns>
         public GetHostAccountResponse GetHostAccountWithOptions(GetHostAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5788,6 +8819,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetHostAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified host account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHostAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHostAccountResponse
+        /// </returns>
         public async Task<GetHostAccountResponse> GetHostAccountWithOptionsAsync(GetHostAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5823,18 +8869,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetHostAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified host account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHostAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHostAccountResponse
+        /// </returns>
         public GetHostAccountResponse GetHostAccount(GetHostAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetHostAccountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified host account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHostAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHostAccountResponse
+        /// </returns>
         public async Task<GetHostAccountResponse> GetHostAccountAsync(GetHostAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetHostAccountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified host group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHostGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHostGroupResponse
+        /// </returns>
         public GetHostGroupResponse GetHostGroupWithOptions(GetHostGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5870,6 +8955,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetHostGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified host group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHostGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHostGroupResponse
+        /// </returns>
         public async Task<GetHostGroupResponse> GetHostGroupWithOptionsAsync(GetHostGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5905,18 +9005,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetHostGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified host group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHostGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHostGroupResponse
+        /// </returns>
         public GetHostGroupResponse GetHostGroup(GetHostGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetHostGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified host group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHostGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHostGroupResponse
+        /// </returns>
         public async Task<GetHostGroupResponse> GetHostGroupAsync(GetHostGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetHostGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHostShareKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHostShareKeyResponse
+        /// </returns>
         public GetHostShareKeyResponse GetHostShareKeyWithOptions(GetHostShareKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5952,6 +9091,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetHostShareKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHostShareKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHostShareKeyResponse
+        /// </returns>
         public async Task<GetHostShareKeyResponse> GetHostShareKeyWithOptionsAsync(GetHostShareKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5987,28 +9141,65 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetHostShareKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHostShareKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHostShareKeyResponse
+        /// </returns>
         public GetHostShareKeyResponse GetHostShareKey(GetHostShareKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetHostShareKeyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHostShareKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHostShareKeyResponse
+        /// </returns>
         public async Task<GetHostShareKeyResponse> GetHostShareKeyAsync(GetHostShareKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetHostShareKeyWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ###
-          * You can call this operation to query the settings of AD authentication on a bastion host. After you configure AD authentication on a bastion host, you can import AD-authenticated users into the bastion host. After the AD-authenticated users are imported into the bastion host, the AD-authenticated users can log on to the bastion host to perform O\\&M operations on servers.
-          * ### Limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request GetInstanceADAuthServerRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetInstanceADAuthServerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the settings of Active Directory (AD) authentication on a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <para>You can call this operation to query the settings of AD authentication on a bastion host. After you configure AD authentication on a bastion host, you can import AD-authenticated users into the bastion host. After the AD-authenticated users are imported into the bastion host, the AD-authenticated users can log on to the bastion host to perform O\&amp;M operations on servers.</para>
+        /// <h3>Limit</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetInstanceADAuthServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceADAuthServerResponse
+        /// </returns>
         public GetInstanceADAuthServerResponse GetInstanceADAuthServerWithOptions(GetInstanceADAuthServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6040,16 +9231,29 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetInstanceADAuthServerResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ###
-          * You can call this operation to query the settings of AD authentication on a bastion host. After you configure AD authentication on a bastion host, you can import AD-authenticated users into the bastion host. After the AD-authenticated users are imported into the bastion host, the AD-authenticated users can log on to the bastion host to perform O\\&M operations on servers.
-          * ### Limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request GetInstanceADAuthServerRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetInstanceADAuthServerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the settings of Active Directory (AD) authentication on a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <para>You can call this operation to query the settings of AD authentication on a bastion host. After you configure AD authentication on a bastion host, you can import AD-authenticated users into the bastion host. After the AD-authenticated users are imported into the bastion host, the AD-authenticated users can log on to the bastion host to perform O\&amp;M operations on servers.</para>
+        /// <h3>Limit</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetInstanceADAuthServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceADAuthServerResponse
+        /// </returns>
         public async Task<GetInstanceADAuthServerResponse> GetInstanceADAuthServerWithOptionsAsync(GetInstanceADAuthServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6081,36 +9285,73 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetInstanceADAuthServerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ###
-          * You can call this operation to query the settings of AD authentication on a bastion host. After you configure AD authentication on a bastion host, you can import AD-authenticated users into the bastion host. After the AD-authenticated users are imported into the bastion host, the AD-authenticated users can log on to the bastion host to perform O\\&M operations on servers.
-          * ### Limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request GetInstanceADAuthServerRequest
-          * @return GetInstanceADAuthServerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the settings of Active Directory (AD) authentication on a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <para>You can call this operation to query the settings of AD authentication on a bastion host. After you configure AD authentication on a bastion host, you can import AD-authenticated users into the bastion host. After the AD-authenticated users are imported into the bastion host, the AD-authenticated users can log on to the bastion host to perform O\&amp;M operations on servers.</para>
+        /// <h3>Limit</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetInstanceADAuthServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceADAuthServerResponse
+        /// </returns>
         public GetInstanceADAuthServerResponse GetInstanceADAuthServer(GetInstanceADAuthServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetInstanceADAuthServerWithOptions(request, runtime);
         }
 
-        /**
-          * ###
-          * You can call this operation to query the settings of AD authentication on a bastion host. After you configure AD authentication on a bastion host, you can import AD-authenticated users into the bastion host. After the AD-authenticated users are imported into the bastion host, the AD-authenticated users can log on to the bastion host to perform O\\&M operations on servers.
-          * ### Limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request GetInstanceADAuthServerRequest
-          * @return GetInstanceADAuthServerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the settings of Active Directory (AD) authentication on a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <para>You can call this operation to query the settings of AD authentication on a bastion host. After you configure AD authentication on a bastion host, you can import AD-authenticated users into the bastion host. After the AD-authenticated users are imported into the bastion host, the AD-authenticated users can log on to the bastion host to perform O\&amp;M operations on servers.</para>
+        /// <h3>Limit</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetInstanceADAuthServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceADAuthServerResponse
+        /// </returns>
         public async Task<GetInstanceADAuthServerResponse> GetInstanceADAuthServerAsync(GetInstanceADAuthServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetInstanceADAuthServerWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the settings of Lightweight Directory Access Protocol (LDAP) authentication on a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceLDAPAuthServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceLDAPAuthServerResponse
+        /// </returns>
         public GetInstanceLDAPAuthServerResponse GetInstanceLDAPAuthServerWithOptions(GetInstanceLDAPAuthServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6142,6 +9383,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetInstanceLDAPAuthServerResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the settings of Lightweight Directory Access Protocol (LDAP) authentication on a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceLDAPAuthServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceLDAPAuthServerResponse
+        /// </returns>
         public async Task<GetInstanceLDAPAuthServerResponse> GetInstanceLDAPAuthServerWithOptionsAsync(GetInstanceLDAPAuthServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6173,27 +9429,64 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetInstanceLDAPAuthServerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the settings of Lightweight Directory Access Protocol (LDAP) authentication on a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceLDAPAuthServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceLDAPAuthServerResponse
+        /// </returns>
         public GetInstanceLDAPAuthServerResponse GetInstanceLDAPAuthServer(GetInstanceLDAPAuthServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetInstanceLDAPAuthServerWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the settings of Lightweight Directory Access Protocol (LDAP) authentication on a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceLDAPAuthServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceLDAPAuthServerResponse
+        /// </returns>
         public async Task<GetInstanceLDAPAuthServerResponse> GetInstanceLDAPAuthServerAsync(GetInstanceLDAPAuthServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetInstanceLDAPAuthServerWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * You can call this operation to query the settings of two-factor authentication on a bastion host. After you enable two-factor authentication, Bastionhost sends a verification code to a local user when the local user logs on to a bastion host. A local user can log on to the bastion host only when the local user enters the valid username and password and the verification code. This reduces the security risks caused by account information leaks.
-          * ### Limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request GetInstanceTwoFactorRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetInstanceTwoFactorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the settings of two-factor authentication on a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the settings of two-factor authentication on a bastion host. After you enable two-factor authentication, Bastionhost sends a verification code to a local user when the local user logs on to a bastion host. A local user can log on to the bastion host only when the local user enters the valid username and password and the verification code. This reduces the security risks caused by account information leaks.</para>
+        /// <h3>Limit</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetInstanceTwoFactorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceTwoFactorResponse
+        /// </returns>
         public GetInstanceTwoFactorResponse GetInstanceTwoFactorWithOptions(GetInstanceTwoFactorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6225,15 +9518,28 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetInstanceTwoFactorResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * You can call this operation to query the settings of two-factor authentication on a bastion host. After you enable two-factor authentication, Bastionhost sends a verification code to a local user when the local user logs on to a bastion host. A local user can log on to the bastion host only when the local user enters the valid username and password and the verification code. This reduces the security risks caused by account information leaks.
-          * ### Limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request GetInstanceTwoFactorRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetInstanceTwoFactorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the settings of two-factor authentication on a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the settings of two-factor authentication on a bastion host. After you enable two-factor authentication, Bastionhost sends a verification code to a local user when the local user logs on to a bastion host. A local user can log on to the bastion host only when the local user enters the valid username and password and the verification code. This reduces the security risks caused by account information leaks.</para>
+        /// <h3>Limit</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetInstanceTwoFactorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceTwoFactorResponse
+        /// </returns>
         public async Task<GetInstanceTwoFactorResponse> GetInstanceTwoFactorWithOptionsAsync(GetInstanceTwoFactorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6265,34 +9571,71 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetInstanceTwoFactorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * You can call this operation to query the settings of two-factor authentication on a bastion host. After you enable two-factor authentication, Bastionhost sends a verification code to a local user when the local user logs on to a bastion host. A local user can log on to the bastion host only when the local user enters the valid username and password and the verification code. This reduces the security risks caused by account information leaks.
-          * ### Limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request GetInstanceTwoFactorRequest
-          * @return GetInstanceTwoFactorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the settings of two-factor authentication on a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the settings of two-factor authentication on a bastion host. After you enable two-factor authentication, Bastionhost sends a verification code to a local user when the local user logs on to a bastion host. A local user can log on to the bastion host only when the local user enters the valid username and password and the verification code. This reduces the security risks caused by account information leaks.</para>
+        /// <h3>Limit</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetInstanceTwoFactorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceTwoFactorResponse
+        /// </returns>
         public GetInstanceTwoFactorResponse GetInstanceTwoFactor(GetInstanceTwoFactorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetInstanceTwoFactorWithOptions(request, runtime);
         }
 
-        /**
-          * You can call this operation to query the settings of two-factor authentication on a bastion host. After you enable two-factor authentication, Bastionhost sends a verification code to a local user when the local user logs on to a bastion host. A local user can log on to the bastion host only when the local user enters the valid username and password and the verification code. This reduces the security risks caused by account information leaks.
-          * ### Limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request GetInstanceTwoFactorRequest
-          * @return GetInstanceTwoFactorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the settings of two-factor authentication on a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the settings of two-factor authentication on a bastion host. After you enable two-factor authentication, Bastionhost sends a verification code to a local user when the local user logs on to a bastion host. A local user can log on to the bastion host only when the local user enters the valid username and password and the verification code. This reduces the security risks caused by account information leaks.</para>
+        /// <h3>Limit</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetInstanceTwoFactorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceTwoFactorResponse
+        /// </returns>
         public async Task<GetInstanceTwoFactorResponse> GetInstanceTwoFactorAsync(GetInstanceTwoFactorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetInstanceTwoFactorWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a network domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkDomainResponse
+        /// </returns>
         public GetNetworkDomainResponse GetNetworkDomainWithOptions(GetNetworkDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6328,6 +9671,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetNetworkDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a network domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkDomainResponse
+        /// </returns>
         public async Task<GetNetworkDomainResponse> GetNetworkDomainWithOptionsAsync(GetNetworkDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6363,18 +9721,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetNetworkDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a network domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkDomainResponse
+        /// </returns>
         public GetNetworkDomainResponse GetNetworkDomain(GetNetworkDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetNetworkDomainWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a network domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkDomainResponse
+        /// </returns>
         public async Task<GetNetworkDomainResponse> GetNetworkDomainAsync(GetNetworkDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetNetworkDomainWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyResponse
+        /// </returns>
         public GetPolicyResponse GetPolicyWithOptions(GetPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6410,6 +9807,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyResponse
+        /// </returns>
         public async Task<GetPolicyResponse> GetPolicyWithOptionsAsync(GetPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6445,18 +9857,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyResponse
+        /// </returns>
         public GetPolicyResponse GetPolicy(GetPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyResponse
+        /// </returns>
         public async Task<GetPolicyResponse> GetPolicyAsync(GetPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetPolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the assets to which a control policy applies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPolicyAssetScopeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyAssetScopeResponse
+        /// </returns>
         public GetPolicyAssetScopeResponse GetPolicyAssetScopeWithOptions(GetPolicyAssetScopeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6492,6 +9943,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetPolicyAssetScopeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the assets to which a control policy applies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPolicyAssetScopeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyAssetScopeResponse
+        /// </returns>
         public async Task<GetPolicyAssetScopeResponse> GetPolicyAssetScopeWithOptionsAsync(GetPolicyAssetScopeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6527,18 +9993,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetPolicyAssetScopeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the assets to which a control policy applies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPolicyAssetScopeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyAssetScopeResponse
+        /// </returns>
         public GetPolicyAssetScopeResponse GetPolicyAssetScope(GetPolicyAssetScopeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetPolicyAssetScopeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the assets to which a control policy applies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPolicyAssetScopeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyAssetScopeResponse
+        /// </returns>
         public async Task<GetPolicyAssetScopeResponse> GetPolicyAssetScopeAsync(GetPolicyAssetScopeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetPolicyAssetScopeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scope of users to whom a control policy applies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPolicyUserScopeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyUserScopeResponse
+        /// </returns>
         public GetPolicyUserScopeResponse GetPolicyUserScopeWithOptions(GetPolicyUserScopeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6574,6 +10079,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetPolicyUserScopeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scope of users to whom a control policy applies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPolicyUserScopeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyUserScopeResponse
+        /// </returns>
         public async Task<GetPolicyUserScopeResponse> GetPolicyUserScopeWithOptionsAsync(GetPolicyUserScopeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6609,18 +10129,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetPolicyUserScopeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scope of users to whom a control policy applies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPolicyUserScopeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyUserScopeResponse
+        /// </returns>
         public GetPolicyUserScopeResponse GetPolicyUserScope(GetPolicyUserScopeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetPolicyUserScopeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scope of users to whom a control policy applies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPolicyUserScopeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPolicyUserScopeResponse
+        /// </returns>
         public async Task<GetPolicyUserScopeResponse> GetPolicyUserScopeAsync(GetPolicyUserScopeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetPolicyUserScopeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRuleResponse
+        /// </returns>
         public GetRuleResponse GetRuleWithOptions(GetRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6656,6 +10215,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRuleResponse
+        /// </returns>
         public async Task<GetRuleResponse> GetRuleWithOptionsAsync(GetRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6691,18 +10265,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRuleResponse
+        /// </returns>
         public GetRuleResponse GetRule(GetRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRuleResponse
+        /// </returns>
         public async Task<GetRuleResponse> GetRuleAsync(GetRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a user of the specified bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserResponse
+        /// </returns>
         public GetUserResponse GetUserWithOptions(GetUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6738,6 +10351,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a user of the specified bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserResponse
+        /// </returns>
         public async Task<GetUserResponse> GetUserWithOptionsAsync(GetUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6773,18 +10401,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a user of the specified bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserResponse
+        /// </returns>
         public GetUserResponse GetUser(GetUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a user of the specified bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserResponse
+        /// </returns>
         public async Task<GetUserResponse> GetUserAsync(GetUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a user group in a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserGroupResponse
+        /// </returns>
         public GetUserGroupResponse GetUserGroupWithOptions(GetUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6820,6 +10487,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a user group in a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserGroupResponse
+        /// </returns>
         public async Task<GetUserGroupResponse> GetUserGroupWithOptionsAsync(GetUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6855,18 +10537,63 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a user group in a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserGroupResponse
+        /// </returns>
         public GetUserGroupResponse GetUserGroup(GetUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetUserGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a user group in a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserGroupResponse
+        /// </returns>
         public async Task<GetUserGroupResponse> GetUserGroupAsync(GetUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetUserGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries commands to be reviewed.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query commands to be reviewed by a Bastionhost administrator.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListApproveCommandsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApproveCommandsResponse
+        /// </returns>
         public ListApproveCommandsResponse ListApproveCommandsWithOptions(ListApproveCommandsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6906,6 +10633,27 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListApproveCommandsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries commands to be reviewed.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query commands to be reviewed by a Bastionhost administrator.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListApproveCommandsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApproveCommandsResponse
+        /// </returns>
         public async Task<ListApproveCommandsResponse> ListApproveCommandsWithOptionsAsync(ListApproveCommandsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6945,18 +10693,69 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListApproveCommandsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries commands to be reviewed.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query commands to be reviewed by a Bastionhost administrator.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListApproveCommandsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApproveCommandsResponse
+        /// </returns>
         public ListApproveCommandsResponse ListApproveCommands(ListApproveCommandsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListApproveCommandsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries commands to be reviewed.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query commands to be reviewed by a Bastionhost administrator.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListApproveCommandsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApproveCommandsResponse
+        /// </returns>
         public async Task<ListApproveCommandsResponse> ListApproveCommandsAsync(ListApproveCommandsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListApproveCommandsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database accounts of a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabaseAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabaseAccountsResponse
+        /// </returns>
         public ListDatabaseAccountsResponse ListDatabaseAccountsWithOptions(ListDatabaseAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7004,6 +10803,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListDatabaseAccountsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database accounts of a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabaseAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabaseAccountsResponse
+        /// </returns>
         public async Task<ListDatabaseAccountsResponse> ListDatabaseAccountsWithOptionsAsync(ListDatabaseAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7051,18 +10865,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListDatabaseAccountsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database accounts of a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabaseAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabaseAccountsResponse
+        /// </returns>
         public ListDatabaseAccountsResponse ListDatabaseAccounts(ListDatabaseAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDatabaseAccountsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database accounts of a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabaseAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabaseAccountsResponse
+        /// </returns>
         public async Task<ListDatabaseAccountsResponse> ListDatabaseAccountsAsync(ListDatabaseAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDatabaseAccountsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database accounts of a database and whether a user is authorized to manage each database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabaseAccountsForUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabaseAccountsForUserResponse
+        /// </returns>
         public ListDatabaseAccountsForUserResponse ListDatabaseAccountsForUserWithOptions(ListDatabaseAccountsForUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7114,6 +10967,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListDatabaseAccountsForUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database accounts of a database and whether a user is authorized to manage each database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabaseAccountsForUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabaseAccountsForUserResponse
+        /// </returns>
         public async Task<ListDatabaseAccountsForUserResponse> ListDatabaseAccountsForUserWithOptionsAsync(ListDatabaseAccountsForUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7165,18 +11033,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListDatabaseAccountsForUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database accounts of a database and whether a user is authorized to manage each database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabaseAccountsForUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabaseAccountsForUserResponse
+        /// </returns>
         public ListDatabaseAccountsForUserResponse ListDatabaseAccountsForUser(ListDatabaseAccountsForUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDatabaseAccountsForUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database accounts of a database and whether a user is authorized to manage each database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabaseAccountsForUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabaseAccountsForUserResponse
+        /// </returns>
         public async Task<ListDatabaseAccountsForUserResponse> ListDatabaseAccountsForUserAsync(ListDatabaseAccountsForUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDatabaseAccountsForUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database accounts of a database and whether a user group is authorized to manage each database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabaseAccountsForUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabaseAccountsForUserGroupResponse
+        /// </returns>
         public ListDatabaseAccountsForUserGroupResponse ListDatabaseAccountsForUserGroupWithOptions(ListDatabaseAccountsForUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7228,6 +11135,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListDatabaseAccountsForUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database accounts of a database and whether a user group is authorized to manage each database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabaseAccountsForUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabaseAccountsForUserGroupResponse
+        /// </returns>
         public async Task<ListDatabaseAccountsForUserGroupResponse> ListDatabaseAccountsForUserGroupWithOptionsAsync(ListDatabaseAccountsForUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7279,18 +11201,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListDatabaseAccountsForUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database accounts of a database and whether a user group is authorized to manage each database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabaseAccountsForUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabaseAccountsForUserGroupResponse
+        /// </returns>
         public ListDatabaseAccountsForUserGroupResponse ListDatabaseAccountsForUserGroup(ListDatabaseAccountsForUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDatabaseAccountsForUserGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database accounts of a database and whether a user group is authorized to manage each database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabaseAccountsForUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabaseAccountsForUserGroupResponse
+        /// </returns>
         public async Task<ListDatabaseAccountsForUserGroupResponse> ListDatabaseAccountsForUserGroupAsync(ListDatabaseAccountsForUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDatabaseAccountsForUserGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the databases that are managed by a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabasesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabasesResponse
+        /// </returns>
         public ListDatabasesResponse ListDatabasesWithOptions(ListDatabasesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7346,6 +11307,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListDatabasesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the databases that are managed by a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabasesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabasesResponse
+        /// </returns>
         public async Task<ListDatabasesResponse> ListDatabasesWithOptionsAsync(ListDatabasesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7401,18 +11377,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListDatabasesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the databases that are managed by a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabasesResponse
+        /// </returns>
         public ListDatabasesResponse ListDatabases(ListDatabasesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDatabasesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the databases that are managed by a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabasesResponse
+        /// </returns>
         public async Task<ListDatabasesResponse> ListDatabasesAsync(ListDatabasesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDatabasesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the databases that a user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabasesForUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabasesForUserResponse
+        /// </returns>
         public ListDatabasesForUserResponse ListDatabasesForUserWithOptions(ListDatabasesForUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7472,6 +11487,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListDatabasesForUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the databases that a user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabasesForUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabasesForUserResponse
+        /// </returns>
         public async Task<ListDatabasesForUserResponse> ListDatabasesForUserWithOptionsAsync(ListDatabasesForUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7531,18 +11561,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListDatabasesForUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the databases that a user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabasesForUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabasesForUserResponse
+        /// </returns>
         public ListDatabasesForUserResponse ListDatabasesForUser(ListDatabasesForUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDatabasesForUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the databases that a user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabasesForUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabasesForUserResponse
+        /// </returns>
         public async Task<ListDatabasesForUserResponse> ListDatabasesForUserAsync(ListDatabasesForUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDatabasesForUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the databases that a user group is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabasesForUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabasesForUserGroupResponse
+        /// </returns>
         public ListDatabasesForUserGroupResponse ListDatabasesForUserGroupWithOptions(ListDatabasesForUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7602,6 +11671,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListDatabasesForUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the databases that a user group is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabasesForUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabasesForUserGroupResponse
+        /// </returns>
         public async Task<ListDatabasesForUserGroupResponse> ListDatabasesForUserGroupWithOptionsAsync(ListDatabasesForUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7661,18 +11745,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListDatabasesForUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the databases that a user group is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabasesForUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabasesForUserGroupResponse
+        /// </returns>
         public ListDatabasesForUserGroupResponse ListDatabasesForUserGroup(ListDatabasesForUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDatabasesForUserGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the databases that a user group is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabasesForUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabasesForUserGroupResponse
+        /// </returns>
         public async Task<ListDatabasesForUserGroupResponse> ListDatabasesForUserGroupAsync(ListDatabasesForUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDatabasesForUserGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries accounts of a specified host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostAccountsResponse
+        /// </returns>
         public ListHostAccountsResponse ListHostAccountsWithOptions(ListHostAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7724,6 +11847,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostAccountsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries accounts of a specified host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostAccountsResponse
+        /// </returns>
         public async Task<ListHostAccountsResponse> ListHostAccountsWithOptionsAsync(ListHostAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7775,18 +11913,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostAccountsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries accounts of a specified host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostAccountsResponse
+        /// </returns>
         public ListHostAccountsResponse ListHostAccounts(ListHostAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListHostAccountsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries accounts of a specified host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostAccountsResponse
+        /// </returns>
         public async Task<ListHostAccountsResponse> ListHostAccountsAsync(ListHostAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListHostAccountsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the host accounts that are associated with a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostAccountsForHostShareKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostAccountsForHostShareKeyResponse
+        /// </returns>
         public ListHostAccountsForHostShareKeyResponse ListHostAccountsForHostShareKeyWithOptions(ListHostAccountsForHostShareKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7830,6 +12007,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostAccountsForHostShareKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the host accounts that are associated with a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostAccountsForHostShareKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostAccountsForHostShareKeyResponse
+        /// </returns>
         public async Task<ListHostAccountsForHostShareKeyResponse> ListHostAccountsForHostShareKeyWithOptionsAsync(ListHostAccountsForHostShareKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7873,18 +12065,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostAccountsForHostShareKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the host accounts that are associated with a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostAccountsForHostShareKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostAccountsForHostShareKeyResponse
+        /// </returns>
         public ListHostAccountsForHostShareKeyResponse ListHostAccountsForHostShareKey(ListHostAccountsForHostShareKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListHostAccountsForHostShareKeyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the host accounts that are associated with a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostAccountsForHostShareKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostAccountsForHostShareKeyResponse
+        /// </returns>
         public async Task<ListHostAccountsForHostShareKeyResponse> ListHostAccountsForHostShareKeyAsync(ListHostAccountsForHostShareKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListHostAccountsForHostShareKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the host accounts that the specified user is authorized to manage on the specified host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostAccountsForUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostAccountsForUserResponse
+        /// </returns>
         public ListHostAccountsForUserResponse ListHostAccountsForUserWithOptions(ListHostAccountsForUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7936,6 +12167,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostAccountsForUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the host accounts that the specified user is authorized to manage on the specified host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostAccountsForUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostAccountsForUserResponse
+        /// </returns>
         public async Task<ListHostAccountsForUserResponse> ListHostAccountsForUserWithOptionsAsync(ListHostAccountsForUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7987,18 +12233,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostAccountsForUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the host accounts that the specified user is authorized to manage on the specified host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostAccountsForUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostAccountsForUserResponse
+        /// </returns>
         public ListHostAccountsForUserResponse ListHostAccountsForUser(ListHostAccountsForUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListHostAccountsForUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the host accounts that the specified user is authorized to manage on the specified host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostAccountsForUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostAccountsForUserResponse
+        /// </returns>
         public async Task<ListHostAccountsForUserResponse> ListHostAccountsForUserAsync(ListHostAccountsForUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListHostAccountsForUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the host accounts of the specified host that the specified user group is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostAccountsForUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostAccountsForUserGroupResponse
+        /// </returns>
         public ListHostAccountsForUserGroupResponse ListHostAccountsForUserGroupWithOptions(ListHostAccountsForUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8050,6 +12335,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostAccountsForUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the host accounts of the specified host that the specified user group is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostAccountsForUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostAccountsForUserGroupResponse
+        /// </returns>
         public async Task<ListHostAccountsForUserGroupResponse> ListHostAccountsForUserGroupWithOptionsAsync(ListHostAccountsForUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8101,18 +12401,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostAccountsForUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the host accounts of the specified host that the specified user group is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostAccountsForUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostAccountsForUserGroupResponse
+        /// </returns>
         public ListHostAccountsForUserGroupResponse ListHostAccountsForUserGroup(ListHostAccountsForUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListHostAccountsForUserGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the host accounts of the specified host that the specified user group is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostAccountsForUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostAccountsForUserGroupResponse
+        /// </returns>
         public async Task<ListHostAccountsForUserGroupResponse> ListHostAccountsForUserGroupAsync(ListHostAccountsForUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListHostAccountsForUserGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the names of the host accounts that a specified user is authorized to manage in a specified host group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupAccountNamesForUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupAccountNamesForUserResponse
+        /// </returns>
         public ListHostGroupAccountNamesForUserResponse ListHostGroupAccountNamesForUserWithOptions(ListHostGroupAccountNamesForUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8152,6 +12491,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostGroupAccountNamesForUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the names of the host accounts that a specified user is authorized to manage in a specified host group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupAccountNamesForUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupAccountNamesForUserResponse
+        /// </returns>
         public async Task<ListHostGroupAccountNamesForUserResponse> ListHostGroupAccountNamesForUserWithOptionsAsync(ListHostGroupAccountNamesForUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8191,18 +12545,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostGroupAccountNamesForUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the names of the host accounts that a specified user is authorized to manage in a specified host group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupAccountNamesForUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupAccountNamesForUserResponse
+        /// </returns>
         public ListHostGroupAccountNamesForUserResponse ListHostGroupAccountNamesForUser(ListHostGroupAccountNamesForUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListHostGroupAccountNamesForUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the names of the host accounts that a specified user is authorized to manage in a specified host group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupAccountNamesForUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupAccountNamesForUserResponse
+        /// </returns>
         public async Task<ListHostGroupAccountNamesForUserResponse> ListHostGroupAccountNamesForUserAsync(ListHostGroupAccountNamesForUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListHostGroupAccountNamesForUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the names of the host accounts that a user group is authorized to manage in a host group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupAccountNamesForUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupAccountNamesForUserGroupResponse
+        /// </returns>
         public ListHostGroupAccountNamesForUserGroupResponse ListHostGroupAccountNamesForUserGroupWithOptions(ListHostGroupAccountNamesForUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8242,6 +12635,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostGroupAccountNamesForUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the names of the host accounts that a user group is authorized to manage in a host group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupAccountNamesForUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupAccountNamesForUserGroupResponse
+        /// </returns>
         public async Task<ListHostGroupAccountNamesForUserGroupResponse> ListHostGroupAccountNamesForUserGroupWithOptionsAsync(ListHostGroupAccountNamesForUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8281,18 +12689,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostGroupAccountNamesForUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the names of the host accounts that a user group is authorized to manage in a host group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupAccountNamesForUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupAccountNamesForUserGroupResponse
+        /// </returns>
         public ListHostGroupAccountNamesForUserGroupResponse ListHostGroupAccountNamesForUserGroup(ListHostGroupAccountNamesForUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListHostGroupAccountNamesForUserGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the names of the host accounts that a user group is authorized to manage in a host group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupAccountNamesForUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupAccountNamesForUserGroupResponse
+        /// </returns>
         public async Task<ListHostGroupAccountNamesForUserGroupResponse> ListHostGroupAccountNamesForUserGroupAsync(ListHostGroupAccountNamesForUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListHostGroupAccountNamesForUserGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of asset groups that are managed by a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupsResponse
+        /// </returns>
         public ListHostGroupsResponse ListHostGroupsWithOptions(ListHostGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8336,6 +12783,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of asset groups that are managed by a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupsResponse
+        /// </returns>
         public async Task<ListHostGroupsResponse> ListHostGroupsWithOptionsAsync(ListHostGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8379,18 +12841,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of asset groups that are managed by a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupsResponse
+        /// </returns>
         public ListHostGroupsResponse ListHostGroups(ListHostGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListHostGroupsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of asset groups that are managed by a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupsResponse
+        /// </returns>
         public async Task<ListHostGroupsResponse> ListHostGroupsAsync(ListHostGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListHostGroupsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of host groups that a bastion host user is authorized or is not authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupsForUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupsForUserResponse
+        /// </returns>
         public ListHostGroupsForUserResponse ListHostGroupsForUserWithOptions(ListHostGroupsForUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8442,6 +12943,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostGroupsForUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of host groups that a bastion host user is authorized or is not authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupsForUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupsForUserResponse
+        /// </returns>
         public async Task<ListHostGroupsForUserResponse> ListHostGroupsForUserWithOptionsAsync(ListHostGroupsForUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8493,18 +13009,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostGroupsForUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of host groups that a bastion host user is authorized or is not authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupsForUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupsForUserResponse
+        /// </returns>
         public ListHostGroupsForUserResponse ListHostGroupsForUser(ListHostGroupsForUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListHostGroupsForUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of host groups that a bastion host user is authorized or is not authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupsForUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupsForUserResponse
+        /// </returns>
         public async Task<ListHostGroupsForUserResponse> ListHostGroupsForUserAsync(ListHostGroupsForUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListHostGroupsForUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hosts that a specified user group is authorized or not authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupsForUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupsForUserGroupResponse
+        /// </returns>
         public ListHostGroupsForUserGroupResponse ListHostGroupsForUserGroupWithOptions(ListHostGroupsForUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8556,6 +13111,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostGroupsForUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hosts that a specified user group is authorized or not authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupsForUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupsForUserGroupResponse
+        /// </returns>
         public async Task<ListHostGroupsForUserGroupResponse> ListHostGroupsForUserGroupWithOptionsAsync(ListHostGroupsForUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8607,18 +13177,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostGroupsForUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hosts that a specified user group is authorized or not authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupsForUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupsForUserGroupResponse
+        /// </returns>
         public ListHostGroupsForUserGroupResponse ListHostGroupsForUserGroup(ListHostGroupsForUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListHostGroupsForUserGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hosts that a specified user group is authorized or not authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostGroupsForUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostGroupsForUserGroupResponse
+        /// </returns>
         public async Task<ListHostGroupsForUserGroupResponse> ListHostGroupsForUserGroupAsync(ListHostGroupsForUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListHostGroupsForUserGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the shared keys that are associated with a host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostShareKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostShareKeysResponse
+        /// </returns>
         public ListHostShareKeysResponse ListHostShareKeysWithOptions(ListHostShareKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8658,6 +13267,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostShareKeysResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the shared keys that are associated with a host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostShareKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostShareKeysResponse
+        /// </returns>
         public async Task<ListHostShareKeysResponse> ListHostShareKeysWithOptionsAsync(ListHostShareKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8697,18 +13321,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostShareKeysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the shared keys that are associated with a host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostShareKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostShareKeysResponse
+        /// </returns>
         public ListHostShareKeysResponse ListHostShareKeys(ListHostShareKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListHostShareKeysWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the shared keys that are associated with a host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostShareKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostShareKeysResponse
+        /// </returns>
         public async Task<ListHostShareKeysResponse> ListHostShareKeysAsync(ListHostShareKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListHostShareKeysWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hosts in a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostsResponse
+        /// </returns>
         public ListHostsResponse ListHostsWithOptions(ListHostsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8776,6 +13439,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hosts in a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostsResponse
+        /// </returns>
         public async Task<ListHostsResponse> ListHostsWithOptionsAsync(ListHostsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8843,18 +13521,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hosts in a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostsResponse
+        /// </returns>
         public ListHostsResponse ListHosts(ListHostsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListHostsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hosts in a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostsResponse
+        /// </returns>
         public async Task<ListHostsResponse> ListHostsAsync(ListHostsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListHostsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hosts that a user group is authorized or not authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostsForUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostsForUserResponse
+        /// </returns>
         public ListHostsForUserResponse ListHostsForUserWithOptions(ListHostsForUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8914,6 +13631,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostsForUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hosts that a user group is authorized or not authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostsForUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostsForUserResponse
+        /// </returns>
         public async Task<ListHostsForUserResponse> ListHostsForUserWithOptionsAsync(ListHostsForUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8973,18 +13705,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostsForUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hosts that a user group is authorized or not authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostsForUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostsForUserResponse
+        /// </returns>
         public ListHostsForUserResponse ListHostsForUser(ListHostsForUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListHostsForUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hosts that a user group is authorized or not authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostsForUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostsForUserResponse
+        /// </returns>
         public async Task<ListHostsForUserResponse> ListHostsForUserAsync(ListHostsForUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListHostsForUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hosts that a user group is authorized or not authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostsForUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostsForUserGroupResponse
+        /// </returns>
         public ListHostsForUserGroupResponse ListHostsForUserGroupWithOptions(ListHostsForUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9044,6 +13815,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostsForUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hosts that a user group is authorized or not authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostsForUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostsForUserGroupResponse
+        /// </returns>
         public async Task<ListHostsForUserGroupResponse> ListHostsForUserGroupWithOptionsAsync(ListHostsForUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9103,18 +13889,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListHostsForUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hosts that a user group is authorized or not authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostsForUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostsForUserGroupResponse
+        /// </returns>
         public ListHostsForUserGroupResponse ListHostsForUserGroup(ListHostsForUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListHostsForUserGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hosts that a user group is authorized or not authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHostsForUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHostsForUserGroupResponse
+        /// </returns>
         public async Task<ListHostsForUserGroupResponse> ListHostsForUserGroupAsync(ListHostsForUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListHostsForUserGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the network domains created in a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNetworkDomainsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNetworkDomainsResponse
+        /// </returns>
         public ListNetworkDomainsResponse ListNetworkDomainsWithOptions(ListNetworkDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9162,6 +13987,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListNetworkDomainsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the network domains created in a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNetworkDomainsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNetworkDomainsResponse
+        /// </returns>
         public async Task<ListNetworkDomainsResponse> ListNetworkDomainsWithOptionsAsync(ListNetworkDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9209,18 +14049,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListNetworkDomainsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the network domains created in a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNetworkDomainsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNetworkDomainsResponse
+        /// </returns>
         public ListNetworkDomainsResponse ListNetworkDomains(ListNetworkDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListNetworkDomainsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the network domains created in a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNetworkDomainsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNetworkDomainsResponse
+        /// </returns>
         public async Task<ListNetworkDomainsResponse> ListNetworkDomainsAsync(ListNetworkDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListNetworkDomainsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of database accounts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationDatabaseAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationDatabaseAccountsResponse
+        /// </returns>
         public ListOperationDatabaseAccountsResponse ListOperationDatabaseAccountsWithOptions(ListOperationDatabaseAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9268,6 +14147,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListOperationDatabaseAccountsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of database accounts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationDatabaseAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationDatabaseAccountsResponse
+        /// </returns>
         public async Task<ListOperationDatabaseAccountsResponse> ListOperationDatabaseAccountsWithOptionsAsync(ListOperationDatabaseAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9315,18 +14209,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListOperationDatabaseAccountsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of database accounts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationDatabaseAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationDatabaseAccountsResponse
+        /// </returns>
         public ListOperationDatabaseAccountsResponse ListOperationDatabaseAccounts(ListOperationDatabaseAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListOperationDatabaseAccountsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of database accounts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationDatabaseAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationDatabaseAccountsResponse
+        /// </returns>
         public async Task<ListOperationDatabaseAccountsResponse> ListOperationDatabaseAccountsAsync(ListOperationDatabaseAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListOperationDatabaseAccountsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of databases that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationDatabasesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationDatabasesResponse
+        /// </returns>
         public ListOperationDatabasesResponse ListOperationDatabasesWithOptions(ListOperationDatabasesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9390,6 +14323,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListOperationDatabasesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of databases that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationDatabasesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationDatabasesResponse
+        /// </returns>
         public async Task<ListOperationDatabasesResponse> ListOperationDatabasesWithOptionsAsync(ListOperationDatabasesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9453,18 +14401,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListOperationDatabasesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of databases that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationDatabasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationDatabasesResponse
+        /// </returns>
         public ListOperationDatabasesResponse ListOperationDatabases(ListOperationDatabasesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListOperationDatabasesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of databases that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationDatabasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationDatabasesResponse
+        /// </returns>
         public async Task<ListOperationDatabasesResponse> ListOperationDatabasesAsync(ListOperationDatabasesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListOperationDatabasesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of host accounts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationHostAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationHostAccountsResponse
+        /// </returns>
         public ListOperationHostAccountsResponse ListOperationHostAccountsWithOptions(ListOperationHostAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9512,6 +14499,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListOperationHostAccountsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of host accounts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationHostAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationHostAccountsResponse
+        /// </returns>
         public async Task<ListOperationHostAccountsResponse> ListOperationHostAccountsWithOptionsAsync(ListOperationHostAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9559,18 +14561,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListOperationHostAccountsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of host accounts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationHostAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationHostAccountsResponse
+        /// </returns>
         public ListOperationHostAccountsResponse ListOperationHostAccounts(ListOperationHostAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListOperationHostAccountsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of host accounts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationHostAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationHostAccountsResponse
+        /// </returns>
         public async Task<ListOperationHostAccountsResponse> ListOperationHostAccountsAsync(ListOperationHostAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListOperationHostAccountsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of hosts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationHostsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationHostsResponse
+        /// </returns>
         public ListOperationHostsResponse ListOperationHostsWithOptions(ListOperationHostsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9634,6 +14675,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListOperationHostsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of hosts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationHostsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationHostsResponse
+        /// </returns>
         public async Task<ListOperationHostsResponse> ListOperationHostsWithOptionsAsync(ListOperationHostsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9697,18 +14753,63 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListOperationHostsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of hosts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationHostsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationHostsResponse
+        /// </returns>
         public ListOperationHostsResponse ListOperationHosts(ListOperationHostsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListOperationHostsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of hosts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationHostsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationHostsResponse
+        /// </returns>
         public async Task<ListOperationHostsResponse> ListOperationHostsAsync(ListOperationHostsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListOperationHostsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries O\\\&amp;M applications to be reviewed.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the O\&amp;M applications to be reviewed by a Bastionhost administrator.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListOperationTicketsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationTicketsResponse
+        /// </returns>
         public ListOperationTicketsResponse ListOperationTicketsWithOptions(ListOperationTicketsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9752,6 +14853,27 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListOperationTicketsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries O\\\&amp;M applications to be reviewed.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the O\&amp;M applications to be reviewed by a Bastionhost administrator.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListOperationTicketsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationTicketsResponse
+        /// </returns>
         public async Task<ListOperationTicketsResponse> ListOperationTicketsWithOptionsAsync(ListOperationTicketsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9795,18 +14917,69 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListOperationTicketsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries O\\\&amp;M applications to be reviewed.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the O\&amp;M applications to be reviewed by a Bastionhost administrator.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListOperationTicketsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationTicketsResponse
+        /// </returns>
         public ListOperationTicketsResponse ListOperationTickets(ListOperationTicketsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListOperationTicketsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries O\\\&amp;M applications to be reviewed.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the O\&amp;M applications to be reviewed by a Bastionhost administrator.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListOperationTicketsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationTicketsResponse
+        /// </returns>
         public async Task<ListOperationTicketsResponse> ListOperationTicketsAsync(ListOperationTicketsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListOperationTicketsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of control policies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPoliciesResponse
+        /// </returns>
         public ListPoliciesResponse ListPoliciesWithOptions(ListPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9850,6 +15023,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListPoliciesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of control policies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPoliciesResponse
+        /// </returns>
         public async Task<ListPoliciesResponse> ListPoliciesWithOptionsAsync(ListPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9893,18 +15081,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListPoliciesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of control policies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPoliciesResponse
+        /// </returns>
         public ListPoliciesResponse ListPolicies(ListPoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListPoliciesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of control policies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPoliciesResponse
+        /// </returns>
         public async Task<ListPoliciesResponse> ListPoliciesAsync(ListPoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListPoliciesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of authorization rules of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRulesResponse
+        /// </returns>
         public ListRulesResponse ListRulesWithOptions(ListRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9952,6 +15179,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of authorization rules of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRulesResponse
+        /// </returns>
         public async Task<ListRulesResponse> ListRulesWithOptionsAsync(ListRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9999,18 +15241,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of authorization rules of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRulesResponse
+        /// </returns>
         public ListRulesResponse ListRules(ListRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListRulesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of authorization rules of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRulesResponse
+        /// </returns>
         public async Task<ListRulesResponse> ListRulesAsync(ListRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListRulesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to a resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagKeysResponse
+        /// </returns>
         public ListTagKeysResponse ListTagKeysWithOptions(ListTagKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10050,6 +15331,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListTagKeysResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to a resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagKeysResponse
+        /// </returns>
         public async Task<ListTagKeysResponse> ListTagKeysWithOptionsAsync(ListTagKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10089,18 +15385,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListTagKeysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to a resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagKeysResponse
+        /// </returns>
         public ListTagKeysResponse ListTagKeys(ListTagKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagKeysWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to a resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagKeysResponse
+        /// </returns>
         public async Task<ListTagKeysResponse> ListTagKeysAsync(ListTagKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagKeysWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags bound to one or more Bastionhost instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10144,6 +15479,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags bound to one or more Bastionhost instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10187,18 +15537,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags bound to one or more Bastionhost instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags bound to one or more Bastionhost instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of user groups on a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserGroupsResponse
+        /// </returns>
         public ListUserGroupsResponse ListUserGroupsWithOptions(ListUserGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10242,6 +15631,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListUserGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of user groups on a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserGroupsResponse
+        /// </returns>
         public async Task<ListUserGroupsResponse> ListUserGroupsWithOptionsAsync(ListUserGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10285,18 +15689,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListUserGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of user groups on a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserGroupsResponse
+        /// </returns>
         public ListUserGroupsResponse ListUserGroups(ListUserGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListUserGroupsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of user groups on a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserGroupsResponse
+        /// </returns>
         public async Task<ListUserGroupsResponse> ListUserGroupsAsync(ListUserGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListUserGroupsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all public keys of the specified user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserPublicKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserPublicKeysResponse
+        /// </returns>
         public ListUserPublicKeysResponse ListUserPublicKeysWithOptions(ListUserPublicKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10340,6 +15783,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListUserPublicKeysResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all public keys of the specified user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserPublicKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserPublicKeysResponse
+        /// </returns>
         public async Task<ListUserPublicKeysResponse> ListUserPublicKeysWithOptionsAsync(ListUserPublicKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10383,18 +15841,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListUserPublicKeysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all public keys of the specified user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserPublicKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserPublicKeysResponse
+        /// </returns>
         public ListUserPublicKeysResponse ListUserPublicKeys(ListUserPublicKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListUserPublicKeysWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all public keys of the specified user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserPublicKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserPublicKeysResponse
+        /// </returns>
         public async Task<ListUserPublicKeysResponse> ListUserPublicKeysAsync(ListUserPublicKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListUserPublicKeysWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of users of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUsersResponse
+        /// </returns>
         public ListUsersResponse ListUsersWithOptions(ListUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10462,6 +15959,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of users of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUsersResponse
+        /// </returns>
         public async Task<ListUsersResponse> ListUsersWithOptionsAsync(ListUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10529,28 +16041,65 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ListUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of users of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUsersResponse
+        /// </returns>
         public ListUsersResponse ListUsers(ListUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListUsersWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of users of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUsersResponse
+        /// </returns>
         public async Task<ListUsersResponse> ListUsersAsync(ListUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListUsersWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * # Description
-          * You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O\\&M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O\\&M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the [UnlockUsers](~~204590~~) operation.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request LockUsersRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return LockUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Locks one or more users of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Description</h1>
+        /// <para>You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O\&amp;M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O\&amp;M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the <a href="https://help.aliyun.com/document_detail/204590.html">UnlockUsers</a> operation.</para>
+        /// <h1>Limits</h1>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// LockUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LockUsersResponse
+        /// </returns>
         public LockUsersResponse LockUsersWithOptions(LockUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10586,16 +16135,29 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<LockUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * # Description
-          * You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O\\&M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O\\&M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the [UnlockUsers](~~204590~~) operation.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request LockUsersRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return LockUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Locks one or more users of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Description</h1>
+        /// <para>You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O\&amp;M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O\&amp;M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the <a href="https://help.aliyun.com/document_detail/204590.html">UnlockUsers</a> operation.</para>
+        /// <h1>Limits</h1>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// LockUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LockUsersResponse
+        /// </returns>
         public async Task<LockUsersResponse> LockUsersWithOptionsAsync(LockUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10631,36 +16193,73 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<LockUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * # Description
-          * You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O\\&M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O\\&M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the [UnlockUsers](~~204590~~) operation.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request LockUsersRequest
-          * @return LockUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Locks one or more users of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Description</h1>
+        /// <para>You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O\&amp;M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O\&amp;M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the <a href="https://help.aliyun.com/document_detail/204590.html">UnlockUsers</a> operation.</para>
+        /// <h1>Limits</h1>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// LockUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LockUsersResponse
+        /// </returns>
         public LockUsersResponse LockUsers(LockUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return LockUsersWithOptions(request, runtime);
         }
 
-        /**
-          * # Description
-          * You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O\\&M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O\\&M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the [UnlockUsers](~~204590~~) operation.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request LockUsersRequest
-          * @return LockUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Locks one or more users of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Description</h1>
+        /// <para>You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O\&amp;M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O\&amp;M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the <a href="https://help.aliyun.com/document_detail/204590.html">UnlockUsers</a> operation.</para>
+        /// <h1>Limits</h1>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// LockUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LockUsersResponse
+        /// </returns>
         public async Task<LockUsersResponse> LockUsersAsync(LockUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await LockUsersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDatabaseResponse
+        /// </returns>
         public ModifyDatabaseResponse ModifyDatabaseWithOptions(ModifyDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10728,6 +16327,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyDatabaseResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDatabaseResponse
+        /// </returns>
         public async Task<ModifyDatabaseResponse> ModifyDatabaseWithOptionsAsync(ModifyDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10795,18 +16409,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyDatabaseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDatabaseResponse
+        /// </returns>
         public ModifyDatabaseResponse ModifyDatabase(ModifyDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDatabaseWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDatabaseResponse
+        /// </returns>
         public async Task<ModifyDatabaseResponse> ModifyDatabaseAsync(ModifyDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDatabaseWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about a database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDatabaseAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDatabaseAccountResponse
+        /// </returns>
         public ModifyDatabaseAccountResponse ModifyDatabaseAccountWithOptions(ModifyDatabaseAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10854,6 +16507,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyDatabaseAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about a database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDatabaseAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDatabaseAccountResponse
+        /// </returns>
         public async Task<ModifyDatabaseAccountResponse> ModifyDatabaseAccountWithOptionsAsync(ModifyDatabaseAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10901,26 +16569,65 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyDatabaseAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about a database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDatabaseAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDatabaseAccountResponse
+        /// </returns>
         public ModifyDatabaseAccountResponse ModifyDatabaseAccount(ModifyDatabaseAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDatabaseAccountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about a database account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDatabaseAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDatabaseAccountResponse
+        /// </returns>
         public async Task<ModifyDatabaseAccountResponse> ModifyDatabaseAccountAsync(ModifyDatabaseAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDatabaseAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.
-          * > The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.
-          *
-          * @param request ModifyHostRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyHostResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies information about a host. The information includes the address, name, and description of the host and the operating system that the host runs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.</para>
+        /// <remarks>
+        /// <para>The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyHostRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostResponse
+        /// </returns>
         public ModifyHostResponse ModifyHostWithOptions(ModifyHostRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10980,14 +16687,29 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyHostResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.
-          * > The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.
-          *
-          * @param request ModifyHostRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyHostResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies information about a host. The information includes the address, name, and description of the host and the operating system that the host runs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.</para>
+        /// <remarks>
+        /// <para>The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyHostRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostResponse
+        /// </returns>
         public async Task<ModifyHostResponse> ModifyHostWithOptionsAsync(ModifyHostRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11047,32 +16769,73 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyHostResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.
-          * > The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.
-          *
-          * @param request ModifyHostRequest
-          * @return ModifyHostResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies information about a host. The information includes the address, name, and description of the host and the operating system that the host runs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.</para>
+        /// <remarks>
+        /// <para>The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyHostRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostResponse
+        /// </returns>
         public ModifyHostResponse ModifyHost(ModifyHostRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHostWithOptions(request, runtime);
         }
 
-        /**
-          * You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.
-          * > The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.
-          *
-          * @param request ModifyHostRequest
-          * @return ModifyHostResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies information about a host. The information includes the address, name, and description of the host and the operating system that the host runs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.</para>
+        /// <remarks>
+        /// <para>The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyHostRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostResponse
+        /// </returns>
         public async Task<ModifyHostResponse> ModifyHostAsync(ModifyHostRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyHostWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a host account, such as the username, password, and private key of the host account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHostAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostAccountResponse
+        /// </returns>
         public ModifyHostAccountResponse ModifyHostAccountWithOptions(ModifyHostAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11128,6 +16891,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyHostAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a host account, such as the username, password, and private key of the host account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHostAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostAccountResponse
+        /// </returns>
         public async Task<ModifyHostAccountResponse> ModifyHostAccountWithOptionsAsync(ModifyHostAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11183,18 +16961,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyHostAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a host account, such as the username, password, and private key of the host account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHostAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostAccountResponse
+        /// </returns>
         public ModifyHostAccountResponse ModifyHostAccount(ModifyHostAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHostAccountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a host account, such as the username, password, and private key of the host account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHostAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostAccountResponse
+        /// </returns>
         public async Task<ModifyHostAccountResponse> ModifyHostAccountAsync(ModifyHostAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyHostAccountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name or description of the specified host group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHostGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostGroupResponse
+        /// </returns>
         public ModifyHostGroupResponse ModifyHostGroupWithOptions(ModifyHostGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11238,6 +17055,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyHostGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name or description of the specified host group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHostGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostGroupResponse
+        /// </returns>
         public async Task<ModifyHostGroupResponse> ModifyHostGroupWithOptionsAsync(ModifyHostGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11281,18 +17113,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyHostGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name or description of the specified host group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHostGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostGroupResponse
+        /// </returns>
         public ModifyHostGroupResponse ModifyHostGroup(ModifyHostGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHostGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name or description of the specified host group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHostGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostGroupResponse
+        /// </returns>
         public async Task<ModifyHostGroupResponse> ModifyHostGroupAsync(ModifyHostGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyHostGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHostShareKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostShareKeyResponse
+        /// </returns>
         public ModifyHostShareKeyResponse ModifyHostShareKeyWithOptions(ModifyHostShareKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11340,6 +17211,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyHostShareKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHostShareKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostShareKeyResponse
+        /// </returns>
         public async Task<ModifyHostShareKeyResponse> ModifyHostShareKeyWithOptionsAsync(ModifyHostShareKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11387,18 +17273,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyHostShareKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHostShareKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostShareKeyResponse
+        /// </returns>
         public ModifyHostShareKeyResponse ModifyHostShareKey(ModifyHostShareKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHostShareKeyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a shared key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHostShareKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostShareKeyResponse
+        /// </returns>
         public async Task<ModifyHostShareKeyResponse> ModifyHostShareKeyAsync(ModifyHostShareKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyHostShareKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the portal type of one or more hosts for O\&amp;M.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHostsActiveAddressTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostsActiveAddressTypeResponse
+        /// </returns>
         public ModifyHostsActiveAddressTypeResponse ModifyHostsActiveAddressTypeWithOptions(ModifyHostsActiveAddressTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11438,6 +17363,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyHostsActiveAddressTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the portal type of one or more hosts for O\&amp;M.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHostsActiveAddressTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostsActiveAddressTypeResponse
+        /// </returns>
         public async Task<ModifyHostsActiveAddressTypeResponse> ModifyHostsActiveAddressTypeWithOptionsAsync(ModifyHostsActiveAddressTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11477,29 +17417,68 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyHostsActiveAddressTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the portal type of one or more hosts for O\&amp;M.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHostsActiveAddressTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostsActiveAddressTypeResponse
+        /// </returns>
         public ModifyHostsActiveAddressTypeResponse ModifyHostsActiveAddressType(ModifyHostsActiveAddressTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHostsActiveAddressTypeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the portal type of one or more hosts for O\&amp;M.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHostsActiveAddressTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostsActiveAddressTypeResponse
+        /// </returns>
         public async Task<ModifyHostsActiveAddressTypeResponse> ModifyHostsActiveAddressTypeAsync(ModifyHostsActiveAddressTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyHostsActiveAddressTypeWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ## Usage notes
-          * You can call this operation to change the port for the O&M protocol on one or more hosts. If the standard port for the O&M protocol on your host is vulnerable to attacks, you can call this operation to specify a custom port. For example, the standard port for SSH is port 22.  
-          * >  Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O&M protocol to a reserved port.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyHostsPortRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyHostsPortResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the port for the O\\\\\\&amp;M protocol on one or more hosts.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <para>You can call this operation to change the port for the O&amp;M protocol on one or more hosts. If the standard port for the O&amp;M protocol on your host is vulnerable to attacks, you can call this operation to specify a custom port. For example, the standard port for SSH is port 22.  </para>
+        /// <remarks>
+        /// <para> Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O&amp;M protocol to a reserved port.  </para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyHostsPortRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostsPortResponse
+        /// </returns>
         public ModifyHostsPortResponse ModifyHostsPortWithOptions(ModifyHostsPortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11543,17 +17522,32 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyHostsPortResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Usage notes
-          * You can call this operation to change the port for the O&M protocol on one or more hosts. If the standard port for the O&M protocol on your host is vulnerable to attacks, you can call this operation to specify a custom port. For example, the standard port for SSH is port 22.  
-          * >  Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O&M protocol to a reserved port.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyHostsPortRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyHostsPortResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the port for the O\\\\\\&amp;M protocol on one or more hosts.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <para>You can call this operation to change the port for the O&amp;M protocol on one or more hosts. If the standard port for the O&amp;M protocol on your host is vulnerable to attacks, you can call this operation to specify a custom port. For example, the standard port for SSH is port 22.  </para>
+        /// <remarks>
+        /// <para> Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O&amp;M protocol to a reserved port.  </para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyHostsPortRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostsPortResponse
+        /// </returns>
         public async Task<ModifyHostsPortResponse> ModifyHostsPortWithOptionsAsync(ModifyHostsPortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11597,38 +17591,79 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyHostsPortResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Usage notes
-          * You can call this operation to change the port for the O&M protocol on one or more hosts. If the standard port for the O&M protocol on your host is vulnerable to attacks, you can call this operation to specify a custom port. For example, the standard port for SSH is port 22.  
-          * >  Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O&M protocol to a reserved port.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyHostsPortRequest
-          * @return ModifyHostsPortResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the port for the O\\\\\\&amp;M protocol on one or more hosts.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <para>You can call this operation to change the port for the O&amp;M protocol on one or more hosts. If the standard port for the O&amp;M protocol on your host is vulnerable to attacks, you can call this operation to specify a custom port. For example, the standard port for SSH is port 22.  </para>
+        /// <remarks>
+        /// <para> Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O&amp;M protocol to a reserved port.  </para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyHostsPortRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostsPortResponse
+        /// </returns>
         public ModifyHostsPortResponse ModifyHostsPort(ModifyHostsPortRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHostsPortWithOptions(request, runtime);
         }
 
-        /**
-          * ## Usage notes
-          * You can call this operation to change the port for the O&M protocol on one or more hosts. If the standard port for the O&M protocol on your host is vulnerable to attacks, you can call this operation to specify a custom port. For example, the standard port for SSH is port 22.  
-          * >  Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O&M protocol to a reserved port.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyHostsPortRequest
-          * @return ModifyHostsPortResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the port for the O\\\\\\&amp;M protocol on one or more hosts.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <para>You can call this operation to change the port for the O&amp;M protocol on one or more hosts. If the standard port for the O&amp;M protocol on your host is vulnerable to attacks, you can call this operation to specify a custom port. For example, the standard port for SSH is port 22.  </para>
+        /// <remarks>
+        /// <para> Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O&amp;M protocol to a reserved port.  </para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyHostsPortRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHostsPortResponse
+        /// </returns>
         public async Task<ModifyHostsPortResponse> ModifyHostsPortAsync(ModifyHostsPortRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyHostsPortWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the settings of the Active Directory (AD) authentication server of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceADAuthServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceADAuthServerResponse
+        /// </returns>
         public ModifyInstanceADAuthServerResponse ModifyInstanceADAuthServerWithOptions(ModifyInstanceADAuthServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11708,6 +17743,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyInstanceADAuthServerResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the settings of the Active Directory (AD) authentication server of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceADAuthServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceADAuthServerResponse
+        /// </returns>
         public async Task<ModifyInstanceADAuthServerResponse> ModifyInstanceADAuthServerWithOptionsAsync(ModifyInstanceADAuthServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11787,18 +17837,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyInstanceADAuthServerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the settings of the Active Directory (AD) authentication server of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceADAuthServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceADAuthServerResponse
+        /// </returns>
         public ModifyInstanceADAuthServerResponse ModifyInstanceADAuthServer(ModifyInstanceADAuthServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceADAuthServerWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the settings of the Active Directory (AD) authentication server of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceADAuthServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceADAuthServerResponse
+        /// </returns>
         public async Task<ModifyInstanceADAuthServerResponse> ModifyInstanceADAuthServerAsync(ModifyInstanceADAuthServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceADAuthServerWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceAttributeResponse
+        /// </returns>
         public ModifyInstanceAttributeResponse ModifyInstanceAttributeWithOptions(ModifyInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11834,6 +17923,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyInstanceAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceAttributeResponse
+        /// </returns>
         public async Task<ModifyInstanceAttributeResponse> ModifyInstanceAttributeWithOptionsAsync(ModifyInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11869,18 +17973,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceAttributeResponse
+        /// </returns>
         public ModifyInstanceAttributeResponse ModifyInstanceAttribute(ModifyInstanceAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceAttributeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceAttributeResponse
+        /// </returns>
         public async Task<ModifyInstanceAttributeResponse> ModifyInstanceAttributeAsync(ModifyInstanceAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceAttributeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the settings of the Lightweight Directory Access Protocol (LDAP) authentication server of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceLDAPAuthServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceLDAPAuthServerResponse
+        /// </returns>
         public ModifyInstanceLDAPAuthServerResponse ModifyInstanceLDAPAuthServerWithOptions(ModifyInstanceLDAPAuthServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11960,6 +18103,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyInstanceLDAPAuthServerResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the settings of the Lightweight Directory Access Protocol (LDAP) authentication server of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceLDAPAuthServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceLDAPAuthServerResponse
+        /// </returns>
         public async Task<ModifyInstanceLDAPAuthServerResponse> ModifyInstanceLDAPAuthServerWithOptionsAsync(ModifyInstanceLDAPAuthServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12039,18 +18197,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyInstanceLDAPAuthServerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the settings of the Lightweight Directory Access Protocol (LDAP) authentication server of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceLDAPAuthServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceLDAPAuthServerResponse
+        /// </returns>
         public ModifyInstanceLDAPAuthServerResponse ModifyInstanceLDAPAuthServer(ModifyInstanceLDAPAuthServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceLDAPAuthServerWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the settings of the Lightweight Directory Access Protocol (LDAP) authentication server of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceLDAPAuthServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceLDAPAuthServerResponse
+        /// </returns>
         public async Task<ModifyInstanceLDAPAuthServerResponse> ModifyInstanceLDAPAuthServerAsync(ModifyInstanceLDAPAuthServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceLDAPAuthServerWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the two-factor authentication settings of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceTwoFactorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceTwoFactorResponse
+        /// </returns>
         public ModifyInstanceTwoFactorResponse ModifyInstanceTwoFactorWithOptions(ModifyInstanceTwoFactorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12094,6 +18291,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyInstanceTwoFactorResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the two-factor authentication settings of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceTwoFactorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceTwoFactorResponse
+        /// </returns>
         public async Task<ModifyInstanceTwoFactorResponse> ModifyInstanceTwoFactorWithOptionsAsync(ModifyInstanceTwoFactorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12137,18 +18349,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyInstanceTwoFactorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the two-factor authentication settings of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceTwoFactorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceTwoFactorResponse
+        /// </returns>
         public ModifyInstanceTwoFactorResponse ModifyInstanceTwoFactor(ModifyInstanceTwoFactorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceTwoFactorWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the two-factor authentication settings of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceTwoFactorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceTwoFactorResponse
+        /// </returns>
         public async Task<ModifyInstanceTwoFactorResponse> ModifyInstanceTwoFactorAsync(ModifyInstanceTwoFactorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceTwoFactorWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about a network domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyNetworkDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNetworkDomainResponse
+        /// </returns>
         public ModifyNetworkDomainResponse ModifyNetworkDomainWithOptions(ModifyNetworkDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12200,6 +18451,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyNetworkDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about a network domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyNetworkDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNetworkDomainResponse
+        /// </returns>
         public async Task<ModifyNetworkDomainResponse> ModifyNetworkDomainWithOptionsAsync(ModifyNetworkDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12251,18 +18517,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyNetworkDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about a network domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyNetworkDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNetworkDomainResponse
+        /// </returns>
         public ModifyNetworkDomainResponse ModifyNetworkDomain(ModifyNetworkDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyNetworkDomainWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about a network domain.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyNetworkDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNetworkDomainResponse
+        /// </returns>
         public async Task<ModifyNetworkDomainResponse> ModifyNetworkDomainAsync(ModifyNetworkDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyNetworkDomainWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPolicyResponse
+        /// </returns>
         public ModifyPolicyResponse ModifyPolicyWithOptions(ModifyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12310,6 +18615,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPolicyResponse
+        /// </returns>
         public async Task<ModifyPolicyResponse> ModifyPolicyWithOptionsAsync(ModifyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12357,18 +18677,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPolicyResponse
+        /// </returns>
         public ModifyPolicyResponse ModifyPolicy(ModifyPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPolicyResponse
+        /// </returns>
         public async Task<ModifyPolicyResponse> ModifyPolicyAsync(ModifyPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyPolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information of an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRuleResponse
+        /// </returns>
         public ModifyRuleResponse ModifyRuleWithOptions(ModifyRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12440,6 +18799,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information of an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRuleResponse
+        /// </returns>
         public async Task<ModifyRuleResponse> ModifyRuleWithOptionsAsync(ModifyRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12511,18 +18885,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information of an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRuleResponse
+        /// </returns>
         public ModifyRuleResponse ModifyRule(ModifyRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information of an authorization rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRuleResponse
+        /// </returns>
         public async Task<ModifyRuleResponse> ModifyRuleAsync(ModifyRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a user of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserResponse
+        /// </returns>
         public ModifyUserResponse ModifyUserWithOptions(ModifyUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12610,6 +19023,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a user of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserResponse
+        /// </returns>
         public async Task<ModifyUserResponse> ModifyUserWithOptionsAsync(ModifyUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12697,18 +19125,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a user of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserResponse
+        /// </returns>
         public ModifyUserResponse ModifyUser(ModifyUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a user of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserResponse
+        /// </returns>
         public async Task<ModifyUserResponse> ModifyUserAsync(ModifyUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about the specified user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserGroupResponse
+        /// </returns>
         public ModifyUserGroupResponse ModifyUserGroupWithOptions(ModifyUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12752,6 +19219,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about the specified user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserGroupResponse
+        /// </returns>
         public async Task<ModifyUserGroupResponse> ModifyUserGroupWithOptionsAsync(ModifyUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12795,18 +19277,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about the specified user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserGroupResponse
+        /// </returns>
         public ModifyUserGroupResponse ModifyUserGroup(ModifyUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyUserGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about the specified user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserGroupResponse
+        /// </returns>
         public async Task<ModifyUserGroupResponse> ModifyUserGroupAsync(ModifyUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyUserGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the public key of the user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserPublicKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserPublicKeyResponse
+        /// </returns>
         public ModifyUserPublicKeyResponse ModifyUserPublicKeyWithOptions(ModifyUserPublicKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12854,6 +19375,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyUserPublicKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the public key of the user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserPublicKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserPublicKeyResponse
+        /// </returns>
         public async Task<ModifyUserPublicKeyResponse> ModifyUserPublicKeyWithOptionsAsync(ModifyUserPublicKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12901,18 +19437,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ModifyUserPublicKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the public key of the user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserPublicKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserPublicKeyResponse
+        /// </returns>
         public ModifyUserPublicKeyResponse ModifyUserPublicKey(ModifyUserPublicKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyUserPublicKeyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the public key of the user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserPublicKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserPublicKeyResponse
+        /// </returns>
         public async Task<ModifyUserPublicKeyResponse> ModifyUserPublicKeyAsync(ModifyUserPublicKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyUserPublicKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds multiple databases to a network domain at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveDatabasesToNetworkDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveDatabasesToNetworkDomainResponse
+        /// </returns>
         public MoveDatabasesToNetworkDomainResponse MoveDatabasesToNetworkDomainWithOptions(MoveDatabasesToNetworkDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12952,6 +19527,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<MoveDatabasesToNetworkDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds multiple databases to a network domain at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveDatabasesToNetworkDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveDatabasesToNetworkDomainResponse
+        /// </returns>
         public async Task<MoveDatabasesToNetworkDomainResponse> MoveDatabasesToNetworkDomainWithOptionsAsync(MoveDatabasesToNetworkDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12991,18 +19581,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<MoveDatabasesToNetworkDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds multiple databases to a network domain at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveDatabasesToNetworkDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveDatabasesToNetworkDomainResponse
+        /// </returns>
         public MoveDatabasesToNetworkDomainResponse MoveDatabasesToNetworkDomain(MoveDatabasesToNetworkDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return MoveDatabasesToNetworkDomainWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds multiple databases to a network domain at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveDatabasesToNetworkDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveDatabasesToNetworkDomainResponse
+        /// </returns>
         public async Task<MoveDatabasesToNetworkDomainResponse> MoveDatabasesToNetworkDomainAsync(MoveDatabasesToNetworkDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await MoveDatabasesToNetworkDomainWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds multiple hosts to a network domain at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveHostsToNetworkDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveHostsToNetworkDomainResponse
+        /// </returns>
         public MoveHostsToNetworkDomainResponse MoveHostsToNetworkDomainWithOptions(MoveHostsToNetworkDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13042,6 +19671,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<MoveHostsToNetworkDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds multiple hosts to a network domain at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveHostsToNetworkDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveHostsToNetworkDomainResponse
+        /// </returns>
         public async Task<MoveHostsToNetworkDomainResponse> MoveHostsToNetworkDomainWithOptionsAsync(MoveHostsToNetworkDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13081,18 +19725,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<MoveHostsToNetworkDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds multiple hosts to a network domain at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveHostsToNetworkDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveHostsToNetworkDomainResponse
+        /// </returns>
         public MoveHostsToNetworkDomainResponse MoveHostsToNetworkDomain(MoveHostsToNetworkDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return MoveHostsToNetworkDomainWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds multiple hosts to a network domain at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveHostsToNetworkDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveHostsToNetworkDomainResponse
+        /// </returns>
         public async Task<MoveHostsToNetworkDomainResponse> MoveHostsToNetworkDomainAsync(MoveHostsToNetworkDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await MoveHostsToNetworkDomainWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves a bastion host from one resource group to another resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveResourceGroupResponse
+        /// </returns>
         public MoveResourceGroupResponse MoveResourceGroupWithOptions(MoveResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13132,6 +19815,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<MoveResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves a bastion host from one resource group to another resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveResourceGroupResponse
+        /// </returns>
         public async Task<MoveResourceGroupResponse> MoveResourceGroupWithOptionsAsync(MoveResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13171,18 +19869,63 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<MoveResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves a bastion host from one resource group to another resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveResourceGroupResponse
+        /// </returns>
         public MoveResourceGroupResponse MoveResourceGroup(MoveResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return MoveResourceGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves a bastion host from one resource group to another resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveResourceGroupResponse
+        /// </returns>
         public async Task<MoveResourceGroupResponse> MoveResourceGroupAsync(MoveResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await MoveResourceGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If an O\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation as a Bastionhost administrator to reject the request to run a command of an O\&amp;M engineer.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RejectApproveCommandRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RejectApproveCommandResponse
+        /// </returns>
         public RejectApproveCommandResponse RejectApproveCommandWithOptions(RejectApproveCommandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13218,6 +19961,27 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<RejectApproveCommandResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If an O\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation as a Bastionhost administrator to reject the request to run a command of an O\&amp;M engineer.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RejectApproveCommandRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RejectApproveCommandResponse
+        /// </returns>
         public async Task<RejectApproveCommandResponse> RejectApproveCommandWithOptionsAsync(RejectApproveCommandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13253,30 +20017,83 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<RejectApproveCommandResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If an O\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation as a Bastionhost administrator to reject the request to run a command of an O\&amp;M engineer.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RejectApproveCommandRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RejectApproveCommandResponse
+        /// </returns>
         public RejectApproveCommandResponse RejectApproveCommand(RejectApproveCommandRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RejectApproveCommandWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If an O\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation as a Bastionhost administrator to reject the request to run a command of an O\&amp;M engineer.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RejectApproveCommandRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RejectApproveCommandResponse
+        /// </returns>
         public async Task<RejectApproveCommandResponse> RejectApproveCommandAsync(RejectApproveCommandRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RejectApproveCommandWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * You can call this operation to reject an O\\&M application of an O\\&M engineer as a Bastionhost administrator.
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request RejectOperationTicketRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RejectOperationTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If a Bastionhost administrator enables O\&amp;M Approval on the Create Control Policy page, O\&amp;M engineers can log on to assets to perform O\&amp;M operations only after the administrator approves their O\&amp;M applications.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to reject an O\&amp;M application of an O\&amp;M engineer as a Bastionhost administrator.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RejectOperationTicketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RejectOperationTicketResponse
+        /// </returns>
         public RejectOperationTicketResponse RejectOperationTicketWithOptions(RejectOperationTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["Comment"] = request.Comment;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -13308,18 +20125,35 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<RejectOperationTicketResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * You can call this operation to reject an O\\&M application of an O\\&M engineer as a Bastionhost administrator.
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request RejectOperationTicketRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RejectOperationTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If a Bastionhost administrator enables O\&amp;M Approval on the Create Control Policy page, O\&amp;M engineers can log on to assets to perform O\&amp;M operations only after the administrator approves their O\&amp;M applications.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to reject an O\&amp;M application of an O\&amp;M engineer as a Bastionhost administrator.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RejectOperationTicketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RejectOperationTicketResponse
+        /// </returns>
         public async Task<RejectOperationTicketResponse> RejectOperationTicketWithOptionsAsync(RejectOperationTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["Comment"] = request.Comment;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -13351,32 +20185,69 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<RejectOperationTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * You can call this operation to reject an O\\&M application of an O\\&M engineer as a Bastionhost administrator.
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request RejectOperationTicketRequest
-          * @return RejectOperationTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If a Bastionhost administrator enables O\&amp;M Approval on the Create Control Policy page, O\&amp;M engineers can log on to assets to perform O\&amp;M operations only after the administrator approves their O\&amp;M applications.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to reject an O\&amp;M application of an O\&amp;M engineer as a Bastionhost administrator.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RejectOperationTicketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RejectOperationTicketResponse
+        /// </returns>
         public RejectOperationTicketResponse RejectOperationTicket(RejectOperationTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RejectOperationTicketWithOptions(request, runtime);
         }
 
-        /**
-          * You can call this operation to reject an O\\&M application of an O\\&M engineer as a Bastionhost administrator.
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request RejectOperationTicketRequest
-          * @return RejectOperationTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If a Bastionhost administrator enables O\&amp;M Approval on the Create Control Policy page, O\&amp;M engineers can log on to assets to perform O\&amp;M operations only after the administrator approves their O\&amp;M applications.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to reject an O\&amp;M application of an O\&amp;M engineer as a Bastionhost administrator.
+        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RejectOperationTicketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RejectOperationTicketResponse
+        /// </returns>
         public async Task<RejectOperationTicketResponse> RejectOperationTicketAsync(RejectOperationTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RejectOperationTicketWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes multiple databases from an asset group at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveDatabasesFromGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveDatabasesFromGroupResponse
+        /// </returns>
         public RemoveDatabasesFromGroupResponse RemoveDatabasesFromGroupWithOptions(RemoveDatabasesFromGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13416,6 +20287,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<RemoveDatabasesFromGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes multiple databases from an asset group at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveDatabasesFromGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveDatabasesFromGroupResponse
+        /// </returns>
         public async Task<RemoveDatabasesFromGroupResponse> RemoveDatabasesFromGroupWithOptionsAsync(RemoveDatabasesFromGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13455,18 +20341,64 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<RemoveDatabasesFromGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes multiple databases from an asset group at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveDatabasesFromGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveDatabasesFromGroupResponse
+        /// </returns>
         public RemoveDatabasesFromGroupResponse RemoveDatabasesFromGroup(RemoveDatabasesFromGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveDatabasesFromGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes multiple databases from an asset group at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveDatabasesFromGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveDatabasesFromGroupResponse
+        /// </returns>
         public async Task<RemoveDatabasesFromGroupResponse> RemoveDatabasesFromGroupAsync(RemoveDatabasesFromGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveDatabasesFromGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes multiple hosts from an asset group at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the RemoveHostsFromGroup operation to remove multiple hosts from an asset group at a time. If you no longer need to manage some hosts in an asset group, you can call this operation to remove the hosts from the asset group.</para>
+        /// <h1><a href="#qps-"></a>QPS limit</h1>
+        /// <para>You can call this API operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveHostsFromGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveHostsFromGroupResponse
+        /// </returns>
         public RemoveHostsFromGroupResponse RemoveHostsFromGroupWithOptions(RemoveHostsFromGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13506,6 +20438,28 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<RemoveHostsFromGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes multiple hosts from an asset group at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the RemoveHostsFromGroup operation to remove multiple hosts from an asset group at a time. If you no longer need to manage some hosts in an asset group, you can call this operation to remove the hosts from the asset group.</para>
+        /// <h1><a href="#qps-"></a>QPS limit</h1>
+        /// <para>You can call this API operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveHostsFromGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveHostsFromGroupResponse
+        /// </returns>
         public async Task<RemoveHostsFromGroupResponse> RemoveHostsFromGroupWithOptionsAsync(RemoveHostsFromGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13545,27 +20499,78 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<RemoveHostsFromGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes multiple hosts from an asset group at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the RemoveHostsFromGroup operation to remove multiple hosts from an asset group at a time. If you no longer need to manage some hosts in an asset group, you can call this operation to remove the hosts from the asset group.</para>
+        /// <h1><a href="#qps-"></a>QPS limit</h1>
+        /// <para>You can call this API operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveHostsFromGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveHostsFromGroupResponse
+        /// </returns>
         public RemoveHostsFromGroupResponse RemoveHostsFromGroup(RemoveHostsFromGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveHostsFromGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes multiple hosts from an asset group at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the RemoveHostsFromGroup operation to remove multiple hosts from an asset group at a time. If you no longer need to manage some hosts in an asset group, you can call this operation to remove the hosts from the asset group.</para>
+        /// <h1><a href="#qps-"></a>QPS limit</h1>
+        /// <para>You can call this API operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveHostsFromGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveHostsFromGroupResponse
+        /// </returns>
         public async Task<RemoveHostsFromGroupResponse> RemoveHostsFromGroupAsync(RemoveHostsFromGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveHostsFromGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request RemoveUsersFromGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RemoveUsersFromGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes one or more users from a user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  </para>
+        /// <h2>QPS limit</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveUsersFromGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveUsersFromGroupResponse
+        /// </returns>
         public RemoveUsersFromGroupResponse RemoveUsersFromGroupWithOptions(RemoveUsersFromGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13605,15 +20610,28 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<RemoveUsersFromGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request RemoveUsersFromGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RemoveUsersFromGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes one or more users from a user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  </para>
+        /// <h2>QPS limit</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveUsersFromGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveUsersFromGroupResponse
+        /// </returns>
         public async Task<RemoveUsersFromGroupResponse> RemoveUsersFromGroupWithOptionsAsync(RemoveUsersFromGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13653,34 +20671,71 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<RemoveUsersFromGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request RemoveUsersFromGroupRequest
-          * @return RemoveUsersFromGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes one or more users from a user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  </para>
+        /// <h2>QPS limit</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveUsersFromGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveUsersFromGroupResponse
+        /// </returns>
         public RemoveUsersFromGroupResponse RemoveUsersFromGroup(RemoveUsersFromGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveUsersFromGroupWithOptions(request, runtime);
         }
 
-        /**
-          * You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  
-          * ## QPS limit
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request RemoveUsersFromGroupRequest
-          * @return RemoveUsersFromGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes one or more users from a user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  </para>
+        /// <h2>QPS limit</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveUsersFromGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveUsersFromGroupResponse
+        /// </returns>
         public async Task<RemoveUsersFromGroupResponse> RemoveUsersFromGroupAsync(RemoveUsersFromGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveUsersFromGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews an O\&amp;M token for one hour.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewAssetOperationTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewAssetOperationTokenResponse
+        /// </returns>
         public RenewAssetOperationTokenResponse RenewAssetOperationTokenWithOptions(RenewAssetOperationTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13716,6 +20771,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<RenewAssetOperationTokenResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews an O\&amp;M token for one hour.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewAssetOperationTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewAssetOperationTokenResponse
+        /// </returns>
         public async Task<RenewAssetOperationTokenResponse> RenewAssetOperationTokenWithOptionsAsync(RenewAssetOperationTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13751,18 +20821,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<RenewAssetOperationTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews an O\&amp;M token for one hour.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewAssetOperationTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewAssetOperationTokenResponse
+        /// </returns>
         public RenewAssetOperationTokenResponse RenewAssetOperationToken(RenewAssetOperationTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RenewAssetOperationTokenWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews an O\&amp;M token for one hour.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewAssetOperationTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewAssetOperationTokenResponse
+        /// </returns>
         public async Task<RenewAssetOperationTokenResponse> RenewAssetOperationTokenAsync(RenewAssetOperationTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RenewAssetOperationTokenWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the logon credential of a specified host account. The logon credential can be the password or Secure Shell (SSH) private key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetHostAccountCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetHostAccountCredentialResponse
+        /// </returns>
         public ResetHostAccountCredentialResponse ResetHostAccountCredentialWithOptions(ResetHostAccountCredentialRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13802,6 +20911,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ResetHostAccountCredentialResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the logon credential of a specified host account. The logon credential can be the password or Secure Shell (SSH) private key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetHostAccountCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetHostAccountCredentialResponse
+        /// </returns>
         public async Task<ResetHostAccountCredentialResponse> ResetHostAccountCredentialWithOptionsAsync(ResetHostAccountCredentialRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13841,18 +20965,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<ResetHostAccountCredentialResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the logon credential of a specified host account. The logon credential can be the password or Secure Shell (SSH) private key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetHostAccountCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetHostAccountCredentialResponse
+        /// </returns>
         public ResetHostAccountCredentialResponse ResetHostAccountCredential(ResetHostAccountCredentialRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetHostAccountCredentialWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the logon credential of a specified host account. The logon credential can be the password or Secure Shell (SSH) private key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetHostAccountCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetHostAccountCredentialResponse
+        /// </returns>
         public async Task<ResetHostAccountCredentialResponse> ResetHostAccountCredentialAsync(ResetHostAccountCredentialRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetHostAccountCredentialWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the logon period limits in a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SetPolicyAccessTimeRangeConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyAccessTimeRangeConfigResponse
+        /// </returns>
         public SetPolicyAccessTimeRangeConfigResponse SetPolicyAccessTimeRangeConfigWithOptions(SetPolicyAccessTimeRangeConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -13898,6 +21061,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<SetPolicyAccessTimeRangeConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the logon period limits in a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SetPolicyAccessTimeRangeConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyAccessTimeRangeConfigResponse
+        /// </returns>
         public async Task<SetPolicyAccessTimeRangeConfigResponse> SetPolicyAccessTimeRangeConfigWithOptionsAsync(SetPolicyAccessTimeRangeConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -13943,18 +21121,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<SetPolicyAccessTimeRangeConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the logon period limits in a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolicyAccessTimeRangeConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyAccessTimeRangeConfigResponse
+        /// </returns>
         public SetPolicyAccessTimeRangeConfigResponse SetPolicyAccessTimeRangeConfig(SetPolicyAccessTimeRangeConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetPolicyAccessTimeRangeConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the logon period limits in a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolicyAccessTimeRangeConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyAccessTimeRangeConfigResponse
+        /// </returns>
         public async Task<SetPolicyAccessTimeRangeConfigResponse> SetPolicyAccessTimeRangeConfigAsync(SetPolicyAccessTimeRangeConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetPolicyAccessTimeRangeConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the O&amp;M approval setting in a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SetPolicyApprovalConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyApprovalConfigResponse
+        /// </returns>
         public SetPolicyApprovalConfigResponse SetPolicyApprovalConfigWithOptions(SetPolicyApprovalConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14000,6 +21217,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<SetPolicyApprovalConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the O&amp;M approval setting in a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SetPolicyApprovalConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyApprovalConfigResponse
+        /// </returns>
         public async Task<SetPolicyApprovalConfigResponse> SetPolicyApprovalConfigWithOptionsAsync(SetPolicyApprovalConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14045,18 +21277,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<SetPolicyApprovalConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the O&amp;M approval setting in a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolicyApprovalConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyApprovalConfigResponse
+        /// </returns>
         public SetPolicyApprovalConfigResponse SetPolicyApprovalConfig(SetPolicyApprovalConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetPolicyApprovalConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the O&amp;M approval setting in a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolicyApprovalConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyApprovalConfigResponse
+        /// </returns>
         public async Task<SetPolicyApprovalConfigResponse> SetPolicyApprovalConfigAsync(SetPolicyApprovalConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetPolicyApprovalConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies the assets to which a control policy applies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolicyAssetScopeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyAssetScopeResponse
+        /// </returns>
         public SetPolicyAssetScopeResponse SetPolicyAssetScopeWithOptions(SetPolicyAssetScopeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14108,6 +21379,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<SetPolicyAssetScopeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies the assets to which a control policy applies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolicyAssetScopeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyAssetScopeResponse
+        /// </returns>
         public async Task<SetPolicyAssetScopeResponse> SetPolicyAssetScopeWithOptionsAsync(SetPolicyAssetScopeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14159,18 +21445,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<SetPolicyAssetScopeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies the assets to which a control policy applies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolicyAssetScopeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyAssetScopeResponse
+        /// </returns>
         public SetPolicyAssetScopeResponse SetPolicyAssetScope(SetPolicyAssetScopeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetPolicyAssetScopeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies the assets to which a control policy applies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolicyAssetScopeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyAssetScopeResponse
+        /// </returns>
         public async Task<SetPolicyAssetScopeResponse> SetPolicyAssetScopeAsync(SetPolicyAssetScopeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetPolicyAssetScopeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies the commands that can or cannot be run by the users or on the assets associated with the policy and the commands that must be reviewed.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SetPolicyCommandConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyCommandConfigResponse
+        /// </returns>
         public SetPolicyCommandConfigResponse SetPolicyCommandConfigWithOptions(SetPolicyCommandConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14216,6 +21541,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<SetPolicyCommandConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies the commands that can or cannot be run by the users or on the assets associated with the policy and the commands that must be reviewed.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SetPolicyCommandConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyCommandConfigResponse
+        /// </returns>
         public async Task<SetPolicyCommandConfigResponse> SetPolicyCommandConfigWithOptionsAsync(SetPolicyCommandConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14261,18 +21601,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<SetPolicyCommandConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies the commands that can or cannot be run by the users or on the assets associated with the policy and the commands that must be reviewed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolicyCommandConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyCommandConfigResponse
+        /// </returns>
         public SetPolicyCommandConfigResponse SetPolicyCommandConfig(SetPolicyCommandConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetPolicyCommandConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies the commands that can or cannot be run by the users or on the assets associated with the policy and the commands that must be reviewed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolicyCommandConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyCommandConfigResponse
+        /// </returns>
         public async Task<SetPolicyCommandConfigResponse> SetPolicyCommandConfigAsync(SetPolicyCommandConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetPolicyCommandConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures access control settings in a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SetPolicyIPAclConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyIPAclConfigResponse
+        /// </returns>
         public SetPolicyIPAclConfigResponse SetPolicyIPAclConfigWithOptions(SetPolicyIPAclConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14318,6 +21697,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<SetPolicyIPAclConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures access control settings in a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SetPolicyIPAclConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyIPAclConfigResponse
+        /// </returns>
         public async Task<SetPolicyIPAclConfigResponse> SetPolicyIPAclConfigWithOptionsAsync(SetPolicyIPAclConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14363,18 +21757,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<SetPolicyIPAclConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures access control settings in a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolicyIPAclConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyIPAclConfigResponse
+        /// </returns>
         public SetPolicyIPAclConfigResponse SetPolicyIPAclConfig(SetPolicyIPAclConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetPolicyIPAclConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures access control settings in a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolicyIPAclConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyIPAclConfigResponse
+        /// </returns>
         public async Task<SetPolicyIPAclConfigResponse> SetPolicyIPAclConfigAsync(SetPolicyIPAclConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetPolicyIPAclConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the protocol control settings in a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SetPolicyProtocolConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyProtocolConfigResponse
+        /// </returns>
         public SetPolicyProtocolConfigResponse SetPolicyProtocolConfigWithOptions(SetPolicyProtocolConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14420,6 +21853,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<SetPolicyProtocolConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the protocol control settings in a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SetPolicyProtocolConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyProtocolConfigResponse
+        /// </returns>
         public async Task<SetPolicyProtocolConfigResponse> SetPolicyProtocolConfigWithOptionsAsync(SetPolicyProtocolConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14465,18 +21913,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<SetPolicyProtocolConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the protocol control settings in a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolicyProtocolConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyProtocolConfigResponse
+        /// </returns>
         public SetPolicyProtocolConfigResponse SetPolicyProtocolConfig(SetPolicyProtocolConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetPolicyProtocolConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the protocol control settings in a control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolicyProtocolConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyProtocolConfigResponse
+        /// </returns>
         public async Task<SetPolicyProtocolConfigResponse> SetPolicyProtocolConfigAsync(SetPolicyProtocolConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetPolicyProtocolConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies the users to whom a control policy applies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolicyUserScopeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyUserScopeResponse
+        /// </returns>
         public SetPolicyUserScopeResponse SetPolicyUserScopeWithOptions(SetPolicyUserScopeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14524,6 +22011,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<SetPolicyUserScopeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies the users to whom a control policy applies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolicyUserScopeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyUserScopeResponse
+        /// </returns>
         public async Task<SetPolicyUserScopeResponse> SetPolicyUserScopeWithOptionsAsync(SetPolicyUserScopeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14571,18 +22073,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<SetPolicyUserScopeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies the users to whom a control policy applies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolicyUserScopeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyUserScopeResponse
+        /// </returns>
         public SetPolicyUserScopeResponse SetPolicyUserScope(SetPolicyUserScopeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetPolicyUserScopeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies the users to whom a control policy applies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolicyUserScopeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolicyUserScopeResponse
+        /// </returns>
         public async Task<SetPolicyUserScopeResponse> SetPolicyUserScopeAsync(SetPolicyUserScopeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetPolicyUserScopeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the specified bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartInstanceResponse
+        /// </returns>
         public StartInstanceResponse StartInstanceWithOptions(StartInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14622,6 +22163,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<StartInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the specified bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartInstanceResponse
+        /// </returns>
         public async Task<StartInstanceResponse> StartInstanceWithOptionsAsync(StartInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14661,18 +22217,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<StartInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the specified bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartInstanceResponse
+        /// </returns>
         public StartInstanceResponse StartInstance(StartInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the specified bastion host.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartInstanceResponse
+        /// </returns>
         public async Task<StartInstanceResponse> StartInstanceAsync(StartInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates and adds tags to specified bastion hosts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14712,6 +22307,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates and adds tags to specified bastion hosts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14751,27 +22361,64 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates and adds tags to specified bastion hosts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates and adds tags to specified bastion hosts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * After you call the [LockUsers](~~204591~~) operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O\\&M operations by using the bastion host.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request UnlockUsersRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UnlockUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlocks one or more users of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you call the <a href="https://help.aliyun.com/document_detail/204591.html">LockUsers</a> operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O\&amp;M operations by using the bastion host.</para>
+        /// <h1>Limits</h1>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UnlockUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockUsersResponse
+        /// </returns>
         public UnlockUsersResponse UnlockUsersWithOptions(UnlockUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14807,15 +22454,28 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<UnlockUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * After you call the [LockUsers](~~204591~~) operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O\\&M operations by using the bastion host.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request UnlockUsersRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UnlockUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlocks one or more users of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you call the <a href="https://help.aliyun.com/document_detail/204591.html">LockUsers</a> operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O\&amp;M operations by using the bastion host.</para>
+        /// <h1>Limits</h1>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UnlockUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockUsersResponse
+        /// </returns>
         public async Task<UnlockUsersResponse> UnlockUsersWithOptionsAsync(UnlockUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14851,34 +22511,71 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<UnlockUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * After you call the [LockUsers](~~204591~~) operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O\\&M operations by using the bastion host.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request UnlockUsersRequest
-          * @return UnlockUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlocks one or more users of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you call the <a href="https://help.aliyun.com/document_detail/204591.html">LockUsers</a> operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O\&amp;M operations by using the bastion host.</para>
+        /// <h1>Limits</h1>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UnlockUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockUsersResponse
+        /// </returns>
         public UnlockUsersResponse UnlockUsers(UnlockUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnlockUsersWithOptions(request, runtime);
         }
 
-        /**
-          * After you call the [LockUsers](~~204591~~) operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O\\&M operations by using the bastion host.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request UnlockUsersRequest
-          * @return UnlockUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlocks one or more users of a bastion host.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you call the <a href="https://help.aliyun.com/document_detail/204591.html">LockUsers</a> operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O\&amp;M operations by using the bastion host.</para>
+        /// <h1>Limits</h1>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UnlockUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockUsersResponse
+        /// </returns>
         public async Task<UnlockUsersResponse> UnlockUsersAsync(UnlockUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UnlockUsersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from the specified bastion host and deletes the tags at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14922,6 +22619,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from the specified bastion host and deletes the tags at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14965,18 +22677,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from the specified bastion host and deletes the tags at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UntagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from the specified bastion host and deletes the tags at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证实例AD服务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyInstanceADAuthServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyInstanceADAuthServerResponse
+        /// </returns>
         public VerifyInstanceADAuthServerResponse VerifyInstanceADAuthServerWithOptions(VerifyInstanceADAuthServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15044,6 +22795,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<VerifyInstanceADAuthServerResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证实例AD服务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyInstanceADAuthServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyInstanceADAuthServerResponse
+        /// </returns>
         public async Task<VerifyInstanceADAuthServerResponse> VerifyInstanceADAuthServerWithOptionsAsync(VerifyInstanceADAuthServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15111,18 +22877,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<VerifyInstanceADAuthServerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证实例AD服务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyInstanceADAuthServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyInstanceADAuthServerResponse
+        /// </returns>
         public VerifyInstanceADAuthServerResponse VerifyInstanceADAuthServer(VerifyInstanceADAuthServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return VerifyInstanceADAuthServerWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证实例AD服务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyInstanceADAuthServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyInstanceADAuthServerResponse
+        /// </returns>
         public async Task<VerifyInstanceADAuthServerResponse> VerifyInstanceADAuthServerAsync(VerifyInstanceADAuthServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await VerifyInstanceADAuthServerWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证实例LDAP服务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyInstanceLDAPAuthServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyInstanceLDAPAuthServerResponse
+        /// </returns>
         public VerifyInstanceLDAPAuthServerResponse VerifyInstanceLDAPAuthServerWithOptions(VerifyInstanceLDAPAuthServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15186,6 +22991,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<VerifyInstanceLDAPAuthServerResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证实例LDAP服务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyInstanceLDAPAuthServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyInstanceLDAPAuthServerResponse
+        /// </returns>
         public async Task<VerifyInstanceLDAPAuthServerResponse> VerifyInstanceLDAPAuthServerWithOptionsAsync(VerifyInstanceLDAPAuthServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15249,12 +23069,36 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<VerifyInstanceLDAPAuthServerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证实例LDAP服务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyInstanceLDAPAuthServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyInstanceLDAPAuthServerResponse
+        /// </returns>
         public VerifyInstanceLDAPAuthServerResponse VerifyInstanceLDAPAuthServer(VerifyInstanceLDAPAuthServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return VerifyInstanceLDAPAuthServerWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证实例LDAP服务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyInstanceLDAPAuthServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyInstanceLDAPAuthServerResponse
+        /// </returns>
         public async Task<VerifyInstanceLDAPAuthServerResponse> VerifyInstanceLDAPAuthServerAsync(VerifyInstanceLDAPAuthServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

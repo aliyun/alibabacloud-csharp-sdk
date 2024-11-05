@@ -10,42 +10,61 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListUserPublicKeysRequest : TeaModel {
         /// <summary>
-        /// The ID of the bastion host on which you want to query all public keys of the user.
+        /// <para>The ID of the bastion host on which you want to query all public keys of the user.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+        /// <b>Example:</b>
+        /// <para>bastionhost-cn-st220aw****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: 1.
+        /// <para>The number of the page to return. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.\
-        /// Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+        /// <para>The number of entries to return on each page.\
+        /// Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <remarks>
+        /// <para>We recommend that you do not leave this parameter empty.</para>
+        /// </remarks>
         /// 
-        /// > We recommend that you do not leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the bastion host on which you want to query all public keys of the user.
+        /// <para>The region ID of the bastion host on which you want to query all public keys of the user.</para>
+        /// <remarks>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// </remarks>
         /// 
-        /// > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the user whose public keys you want to query.
+        /// <para>The ID of the user whose public keys you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

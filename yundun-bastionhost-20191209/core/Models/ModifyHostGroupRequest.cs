@@ -10,41 +10,61 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyHostGroupRequest : TeaModel {
         /// <summary>
-        /// The new description of the host group. The value can be up to 500 characters in length.
+        /// <para>The new remarks of the asset group. The remarks can be up to 500 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>comment</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// The ID of the host group that you want to modify.
+        /// <para>The ID of the asset group that you want to modify.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the ID of the host group.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("HostGroupId")]
         [Validation(Required=false)]
         public string HostGroupId { get; set; }
 
         /// <summary>
-        /// The new name of the host group. The name can be up to 128 characters in length.
+        /// <para>The new name of the asset group. The name can be up to 128 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Group01</para>
         /// </summary>
         [NameInMap("HostGroupName")]
         [Validation(Required=false)]
         public string HostGroupName { get; set; }
 
         /// <summary>
-        /// The ID of the bastion host on which you want to modify the information about the host group.
+        /// <para>The ID of the bastion host whose asset group you want to modify.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+        /// <b>Example:</b>
+        /// <para>bastionhost-cn-st220aw****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region ID of the bastion host on which you want to modify the information about the host group.
+        /// <para>The region ID of the bastion host whose asset group you want to modify.</para>
+        /// <remarks>
+        /// <para> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// </remarks>
         /// 
-        /// > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,42 +10,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class AttachHostAccountsToHostShareKeyResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result of the call.
+        /// <para>The result of the call.</para>
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<AttachHostAccountsToHostShareKeyResponseBodyResults> Results { get; set; }
         public class AttachHostAccountsToHostShareKeyResponseBodyResults : TeaModel {
             /// <summary>
-            /// The error code returned. If **OK** is returned, the association was successful. If another error code is returned, the association failed.
+            /// <para>The error code returned. If <b>OK</b> is returned, the association was successful. If another error code is returned, the association failed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>OK</para>
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
             /// <summary>
-            /// The ID of the host account.
+            /// <para>The ID of the host account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1201</para>
             /// </summary>
             [NameInMap("HostAccountId")]
             [Validation(Required=false)]
             public string HostAccountId { get; set; }
 
             /// <summary>
-            /// The ID of the shared key.
+            /// <para>The ID of the shared key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10267</para>
             /// </summary>
             [NameInMap("HostShareKeyId")]
             [Validation(Required=false)]
             public string HostShareKeyId { get; set; }
 
             /// <summary>
-            /// The error message returned.
+            /// <para>The error message returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The host account does not exist</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]

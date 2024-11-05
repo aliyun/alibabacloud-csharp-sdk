@@ -10,27 +10,40 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// The description of the bastion host.
+        /// <para>The description of the bastion host.</para>
+        /// <remarks>
+        /// <para>The description must be up to 30 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// </remarks>
         /// 
-        /// > The description can contain only letters, digits, underscores (\_), and hyphens (-). The description can be up to 30 characters in length.
+        /// <b>Example:</b>
+        /// <para>Bastionhost demo</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the bastion host.
+        /// <para>The ID of the bastion host.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+        /// <b>Example:</b>
+        /// <para>bastionhost-cn-78v1gh****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region ID of the bastion host.
+        /// <para>The region ID of the bastion host.</para>
+        /// <remarks>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// </remarks>
         /// 
-        /// > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

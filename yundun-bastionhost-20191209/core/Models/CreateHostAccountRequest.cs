@@ -10,78 +10,114 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateHostAccountRequest : TeaModel {
         /// <summary>
-        /// The name of the host account.
+        /// <para>The name of the host account. The name can be up to 128 characters in length.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>abc</para>
         /// </summary>
         [NameInMap("HostAccountName")]
         [Validation(Required=false)]
         public string HostAccountName { get; set; }
 
         /// <summary>
-        /// The ID of the host to which you want to add a host account.
+        /// <para>The ID of the host to which you want to add a host account.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the ID of the host.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("HostId")]
         [Validation(Required=false)]
         public string HostId { get; set; }
 
         /// <summary>
-        /// The ID of the shared key.
+        /// <para>The ID of the shared key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("HostShareKeyId")]
         [Validation(Required=false)]
         public string HostShareKeyId { get; set; }
 
         /// <summary>
-        /// The ID of the bastion host in which you want to add a host account to the host.
+        /// <para>The ID of the bastion host in which you want to add a host account to the host.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+        /// <b>Example:</b>
+        /// <para>bastionhost-cn-st220aw****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The passphrase of the private key for the host account.
+        /// <para>The passphrase for the private key of the host account.</para>
+        /// <remarks>
+        /// <para>You can configure this parameter only if ProtocolName is set to SSH. You do not need to configure this parameter if ProtocolName is set to RDP.</para>
+        /// </remarks>
         /// 
-        /// >  You can specify this parameter when the ProtocolName parameter is set to SSH. If the ProtocolName parameter is set to RDP, you do not need to specify this parameter.
+        /// <b>Example:</b>
+        /// <hr>
         /// </summary>
         [NameInMap("PassPhrase")]
         [Validation(Required=false)]
         public string PassPhrase { get; set; }
 
         /// <summary>
-        /// The password of the host account.
+        /// <para>The password of the host account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// The private key of the host account. The value is a Base64-encoded string.
+        /// <para>The private key of the host account. Specify a Base64-encoded string.</para>
+        /// <remarks>
+        /// <para>This parameter is valid only if ProtocolName is set to SSH. You do not need to configure this parameter if ProtocolName is set to RDP. You can configure a password and a private key for the host account at the same time. If both a password and a private key are configured for the host account, Bastionhost preferentially uses the private key for logon.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter takes effect only when the ProtocolName parameter is set to SSH. If the ProtocolName parameter is set to RDP, you do not need to specify this parameter. You can configure a password and a private key for the host account at the same time. If both a password and a private key are configured for the host account, Bastionhost preferentially uses the private key to log on to the host.
+        /// <b>Example:</b>
+        /// <hr>
         /// </summary>
         [NameInMap("PrivateKey")]
         [Validation(Required=false)]
         public string PrivateKey { get; set; }
 
         /// <summary>
-        /// The protocol of the host to which you want to add a host account.
+        /// <para>The protocol of the host to which you want to add a host account.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>SSH</description></item>
+        /// <item><description>RDP</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Valid values:
-        /// 
-        /// *   SSH
-        /// *   RDP
+        /// <b>Example:</b>
+        /// <para>SSH</para>
         /// </summary>
         [NameInMap("ProtocolName")]
         [Validation(Required=false)]
         public string ProtocolName { get; set; }
 
         /// <summary>
-        /// The region ID of the bastion host in which you want to add a host account to the host.
+        /// <para>The region ID of the bastion host in which you want to add a host account to the host.</para>
+        /// <remarks>
+        /// <para> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// </remarks>
         /// 
-        /// >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

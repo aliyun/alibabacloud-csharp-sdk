@@ -10,166 +10,238 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListUsersResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of users that were queried.
+        /// <para>The total number of users returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The list of users that were queried.
+        /// <para>The users returned.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<ListUsersResponseBodyUsers> Users { get; set; }
         public class ListUsersResponseBodyUsers : TeaModel {
             /// <summary>
-            /// The description of the user.
+            /// <para>The remarks of the user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>comment</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
-            /// The display name of the user.
+            /// <para>The display name of the user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Bob</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// The end of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.
+            /// <para>The end time of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1672502400</para>
             /// </summary>
             [NameInMap("EffectiveEndTime")]
             [Validation(Required=false)]
             public long? EffectiveEndTime { get; set; }
 
             /// <summary>
-            /// The beginning of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.
+            /// <para>The start time of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1669630029</para>
             /// </summary>
             [NameInMap("EffectiveStartTime")]
             [Validation(Required=false)]
             public long? EffectiveStartTime { get; set; }
 
             /// <summary>
-            /// The email address of the user.
+            /// <para>The email address of the user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1099**@qq.com</para>
             /// </summary>
             [NameInMap("Email")]
             [Validation(Required=false)]
             public string Email { get; set; }
 
+            /// <summary>
+            /// <para>This parameter is required if LanguageStatus is set to Custom. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>zh-cn</b>: simplified Chinese.</description></item>
+            /// <item><description><b>en</b>: English.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>en</para>
+            /// </summary>
             [NameInMap("Language")]
             [Validation(Required=false)]
             public string Language { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether notifications are sent in the language specified in the global settings or a custom language.</para>
+            /// <list type="bullet">
+            /// <item><description><b>Global</b></description></item>
+            /// <item><description><b>Custom</b></description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Custom</para>
+            /// </summary>
             [NameInMap("LanguageStatus")]
             [Validation(Required=false)]
             public string LanguageStatus { get; set; }
 
             /// <summary>
-            /// The mobile number of the user.
+            /// <para>The mobile phone number of the user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1359999****</para>
             /// </summary>
             [NameInMap("Mobile")]
             [Validation(Required=false)]
             public string Mobile { get; set; }
 
             /// <summary>
-            /// The country where the mobile number of the user is registered. Valid values:
+            /// <para>The location where the mobile phone number of the user is registered. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>CN</b>: the Chinese mainland, whose international dialing code is +86.</description></item>
+            /// <item><description><b>HK</b>: Hong Kong (China), whose international dialing code is +852.</description></item>
+            /// <item><description><b>MO</b>: Macao (China), whose international dialing code is +853.</description></item>
+            /// <item><description><b>TW</b>: Taiwan (China), whose international dialing code is +886.</description></item>
+            /// <item><description><b>RU</b>: Russia, whose international dialing code is +7.</description></item>
+            /// <item><description><b>SG</b>: Singapore, whose international dialing code is +65.</description></item>
+            /// <item><description><b>MY</b>: Malaysia, whose international dialing code is +60.</description></item>
+            /// <item><description><b>ID</b>: Indonesia, whose international dialing code is +62.</description></item>
+            /// <item><description><b>DE</b>: Germany, whose international dialing code is +49.</description></item>
+            /// <item><description><b>AU</b>: Australia, whose international dialing code is +61.</description></item>
+            /// <item><description><b>US</b>: US, whose international dialing code is +1.</description></item>
+            /// <item><description><b>AE</b>: United Arab Emirates, whose international dialing code is +971.</description></item>
+            /// <item><description><b>JP:</b> Japan, whose international dialing code is +81.</description></item>
+            /// <item><description><b>GB</b>: UK, whose international dialing code is +44.</description></item>
+            /// <item><description><b>IN</b>: India, whose international dialing code is +91.</description></item>
+            /// <item><description><b>KR</b>: Republic of Korea, whose international dialing code is +82.</description></item>
+            /// <item><description><b>PH</b>: Philippines, whose international dialing code is +63.</description></item>
+            /// <item><description><b>CH</b>: Switzerland, whose international dialing code is +41.</description></item>
+            /// <item><description><b>SE</b>: Sweden, whose international dialing code is +46.</description></item>
+            /// </list>
             /// 
-            /// *   **CN**: the Chinese mainland, whose country calling code is +86
-            /// *   **HK**: Hong Kong (China), whose country calling code is +852
-            /// *   **MO**: Macau (China), whose country calling code is +853
-            /// *   **TW**: Taiwan (China), whose country calling code is +886
-            /// *   **RU**: Russia, whose country calling code is +7
-            /// *   **SG**: Singapore, whose country calling code is +65
-            /// *   **MY**: Malaysia, whose country calling code is +60
-            /// *   **ID**: Indonesia, whose country calling code is +62
-            /// *   **DE**: Germany, whose country calling code is +49
-            /// *   **AU**: Australia, whose country calling code is +61
-            /// *   **US**: United States, whose country calling code is +1
-            /// *   **AE**: United Arab Emirates, whose country calling code is +971
-            /// *   **JP**: Japan, whose country calling code is +81
-            /// *   **GB**: United Kingdom, whose country calling code is +44
-            /// *   **IN**: India, whose country calling code is +91
-            /// *   **KR**: South Korea, whose country calling code is +82
-            /// *   **PH**: Philippines, whose country calling code is +63
-            /// *   **CH**: Switzerland, whose country calling code is +41
-            /// *   **SE**: Sweden, whose country calling code is +46
+            /// <b>Example:</b>
+            /// <para>CN</para>
             /// </summary>
             [NameInMap("MobileCountryCode")]
             [Validation(Required=false)]
             public string MobileCountryCode { get; set; }
 
             /// <summary>
-            /// Specifies whether password reset is required upon the next logon. Valid values:
+            /// <para>Indicates whether password reset is required upon the next logon. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// - true: yes
-            /// - false: no
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("NeedResetPassword")]
             [Validation(Required=false)]
             public bool? NeedResetPassword { get; set; }
 
             /// <summary>
-            /// The source of the user. Valid values:
+            /// <para>The type of the user. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Local</b>: a local user.</description></item>
+            /// <item><description><b>Ram</b>: a RAM user.</description></item>
+            /// <item><description><b>AD</b>: an AD-authenticated user.</description></item>
+            /// <item><description><b>LDAP</b>: an LDAP-authenticated user.</description></item>
+            /// </list>
             /// 
-            /// *   **Local**: a local user
-            /// *   **Ram**: a RAM user
+            /// <b>Example:</b>
+            /// <para>Local</para>
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
             public string Source { get; set; }
 
             /// <summary>
-            /// The unique ID of the user.
+            /// <para>The unique ID of the user.</para>
+            /// <remarks>
+            /// <para> This parameter uniquely identifies a RAM user of the bastion host. A value is returned for this parameter if <b>Source</b> is set to <b>Ram</b>. No value is returned for this parameter if <b>Source</b> is set to <b>Local</b>.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter uniquely identifies a RAM user of the Bastionhost instance. A value is returned for this parameter if the **Source** parameter is set to **Ram**. No value is returned for this parameter if the **Source** parameter is set to **Local**.
+            /// <b>Example:</b>
+            /// <para>122748924538****</para>
             /// </summary>
             [NameInMap("SourceUserId")]
             [Validation(Required=false)]
             public string SourceUserId { get; set; }
 
             /// <summary>
-            /// The two-factor authentication method.
+            /// <para>An array of the enabled two-factor authentication methods.</para>
             /// </summary>
             [NameInMap("TwoFactorMethods")]
             [Validation(Required=false)]
             public List<string> TwoFactorMethods { get; set; }
 
             /// <summary>
-            /// The two-factor authentication status of the user. Valid values:
+            /// <para>Indicates whether two-factor authentication is enabled for the user. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Global</b>: The global setting applies.</description></item>
+            /// <item><description><b>Disable</b>: Two-factor authentication is disabled.</description></item>
+            /// <item><description><b>Enable</b>: Two-factor authentication is enabled. The user-specific setting for the authentication method applies.</description></item>
+            /// </list>
             /// 
-            /// *   **Global:** follows the global settings
-            /// *   **Disable:** disables two-factor authentication
-            /// *   **Enable:** enable two-factor authentication and follows settings of the single user
+            /// <b>Example:</b>
+            /// <para>Enable</para>
             /// </summary>
             [NameInMap("TwoFactorStatus")]
             [Validation(Required=false)]
             public string TwoFactorStatus { get; set; }
 
             /// <summary>
-            /// The ID of the user.
+            /// <para>The user ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
 
             /// <summary>
-            /// The logon name of the user.
+            /// <para>The logon name of the user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>abc_def</para>
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
             public string UserName { get; set; }
 
             /// <summary>
-            /// The statuses of the user.
+            /// <para>An array that lists the states of users.</para>
             /// </summary>
             [NameInMap("UserState")]
             [Validation(Required=false)]

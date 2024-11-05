@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ConfigInstanceSecurityGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the bastion host for which security groups were configured.
+        /// <para>The ID of the bastion host for which security groups were configured.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bastionhost-cn-78v1gh****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0ECCC399-4D35-48A7-8379-5C6180E66235</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

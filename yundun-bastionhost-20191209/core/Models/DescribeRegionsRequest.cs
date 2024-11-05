@@ -10,18 +10,25 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The natural language in which responses are returned. Valid values:
+        /// <para>The natural language in which responses are returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh-CN</b>: Chinese. This is the default value.</description></item>
+        /// <item><description><b>en-US</b>: English.</description></item>
+        /// <item><description><b>ja</b>: Japanese.</description></item>
+        /// </list>
         /// 
-        /// *   **zh-CN**: Chinese. This is the default value.
-        /// *   **en-US**: English.
-        /// *   **ja**: Japanese.
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shenzhen</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

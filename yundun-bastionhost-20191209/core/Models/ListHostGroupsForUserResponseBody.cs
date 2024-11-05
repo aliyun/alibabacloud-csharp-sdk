@@ -10,26 +10,38 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostGroupsForUserResponseBody : TeaModel {
         /// <summary>
-        /// ListHostGroupsForUser
+        /// <para>The host groups returned.</para>
         /// </summary>
         [NameInMap("HostGroups")]
         [Validation(Required=false)]
         public List<ListHostGroupsForUserResponseBodyHostGroups> HostGroups { get; set; }
         public class ListHostGroupsForUserResponseBodyHostGroups : TeaModel {
             /// <summary>
-            /// ListHostGroupsForUser
+            /// <para>The remarks of the host group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>comment</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
-            /// WB662865
+            /// <para>The host group ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>１</para>
             /// </summary>
             [NameInMap("HostGroupId")]
             [Validation(Required=false)]
             public string HostGroupId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the host group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>group</para>
+            /// </summary>
             [NameInMap("HostGroupName")]
             [Validation(Required=false)]
             public string HostGroupName { get; set; }
@@ -37,16 +49,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// Queries the host groups that a specified user is authorized or not authorized to manage.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// All Bastionhost API requests must include common request parameters. For more information about common request parameters, see [Common parameters](~~148139~~).
+        /// <para>The total number of host groups returned.</para>
         /// 
-        /// For more information about sample requests, see the "Examples" section of this topic.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

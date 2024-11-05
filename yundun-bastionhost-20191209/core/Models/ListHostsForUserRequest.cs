@@ -10,78 +10,113 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostsForUserRequest : TeaModel {
         /// <summary>
-        /// The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.
+        /// <para>The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.168.XX.XX</para>
         /// </summary>
         [NameInMap("HostAddress")]
         [Validation(Required=false)]
         public string HostAddress { get; set; }
 
         /// <summary>
-        /// The name of the host that you want to query. Only exact match is supported.
+        /// <para>The name of the host that you want to query. Only exact match is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>abc</para>
         /// </summary>
         [NameInMap("HostName")]
         [Validation(Required=false)]
         public string HostName { get; set; }
 
         /// <summary>
-        /// The ID of the bastion host on which you want to query the hosts that the user is authorized or not authorized to manage.
+        /// <para>The ID of the bastion host on which you want to query the hosts that the user is authorized or not authorized to manage.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+        /// <b>Example:</b>
+        /// <para>bastionhost-cn-st220aw****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// Specifies the category of the hosts that you want to query. Valid values:
+        /// <para>Specifies the category of the hosts that you want to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Authorized</b>: queries the hosts that the user is authorized to manage. This is the default value.</description></item>
+        /// <item><description><b>Unauthorized</b>: queries the hosts that the user is not authorized to manage.</description></item>
+        /// </list>
         /// 
-        /// *   **Authorized**: queries the hosts that the user is authorized to manage. This is the default value.
-        /// *   **Unauthorized**: queries the hosts that the user is not authorized to manage.
+        /// <b>Example:</b>
+        /// <para>Authorized</para>
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
 
         /// <summary>
-        /// The operating system of the host that you want to query. Valid values:
+        /// <para>The operating system of the host that you want to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Linux</b></description></item>
+        /// <item><description><b>Windows</b></description></item>
+        /// </list>
         /// 
-        /// *   **Linux**
-        /// *   **Windows**
+        /// <b>Example:</b>
+        /// <para>Linux</para>
         /// </summary>
         [NameInMap("OSType")]
         [Validation(Required=false)]
         public string OSType { get; set; }
 
         /// <summary>
-        /// The number of the page. Default value: 1.
+        /// <para>The number of the page. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.\
-        /// Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.
+        /// <para>The number of entries per page.\
+        /// Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</para>
+        /// <remarks>
+        /// <para>We recommend that you do not leave this parameter empty.</para>
+        /// </remarks>
         /// 
-        /// > We recommend that you do not leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the bastion host on which you want to query the hosts that the user is authorized or not authorized to manage.
+        /// <para>The region ID of the bastion host on which you want to query the hosts that the user is authorized or not authorized to manage.</para>
+        /// <remarks>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// </remarks>
         /// 
-        /// > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the user.
+        /// <para>The ID of the user.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the ID of the user.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [ListUsers](~~204522~~) operation to query the ID of the user.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

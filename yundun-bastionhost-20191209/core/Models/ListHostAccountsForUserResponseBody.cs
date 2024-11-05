@@ -10,48 +10,65 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostAccountsForUserResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the queried host accounts.
+        /// <para>An array that consists of the queried host accounts.</para>
         /// </summary>
         [NameInMap("HostAccounts")]
         [Validation(Required=false)]
         public List<ListHostAccountsForUserResponseBodyHostAccounts> HostAccounts { get; set; }
         public class ListHostAccountsForUserResponseBodyHostAccounts : TeaModel {
             /// <summary>
-            /// The ID of the host account.
+            /// <para>The ID of the host account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("HostAccountId")]
             [Validation(Required=false)]
             public string HostAccountId { get; set; }
 
             /// <summary>
-            /// The name of the host account.
+            /// <para>The name of the host account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>root</para>
             /// </summary>
             [NameInMap("HostAccountName")]
             [Validation(Required=false)]
             public string HostAccountName { get; set; }
 
             /// <summary>
-            /// The ID of the host for which the host accounts were queried.
+            /// <para>The ID of the host for which the host accounts were queried.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("HostId")]
             [Validation(Required=false)]
             public string HostId { get; set; }
 
             /// <summary>
-            /// Indicates whether the user is authorized to manage the host account. Valid values:
+            /// <para>Indicates whether the user is authorized to manage the host account. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: yes</description></item>
+            /// <item><description><b>false</b>: no</description></item>
+            /// </list>
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("IsAuthorized")]
             [Validation(Required=false)]
             public bool? IsAuthorized { get; set; }
 
             /// <summary>
-            /// The protocol that is used by the host. Valid values:
+            /// <para>The protocol that is used by the host. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>SSH</b></description></item>
+            /// <item><description><b>RDP</b></description></item>
+            /// </list>
             /// 
-            /// *   **SSH**
-            /// *   **RDP**
+            /// <b>Example:</b>
+            /// <para>SSH</para>
             /// </summary>
             [NameInMap("ProtocolName")]
             [Validation(Required=false)]
@@ -60,14 +77,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of host accounts that were queried.
+        /// <para>The total number of host accounts that were queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

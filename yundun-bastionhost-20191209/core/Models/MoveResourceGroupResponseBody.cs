@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class MoveResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1DEEC28D-27B1-4358-B6DC-E1285AE655C5</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

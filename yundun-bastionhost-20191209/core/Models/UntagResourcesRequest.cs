@@ -10,48 +10,60 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to delete all tags that are added to the bastion host.
+        /// <para>Specifies whether to delete all tags that are added to the bastion host.</para>
+        /// <list type="bullet">
+        /// <item><description>If you specify TagKey.N, the value of this parameter can only be <b>false</b>, which indicates that only a specified tag is deleted.</description></item>
+        /// <item><description>If you do not specify TagKey.N and the value of this parameter is <b>true</b>, all tags are deleted. If you do not specify TagKey.N and the value of this parameter is <b>false</b>, no tags are deleted.</description></item>
+        /// </list>
         /// 
-        /// *   If you specify TagKey.N, the value of this parameter can only be **false**, which indicates that only a specified tag is deleted.
-        /// *   If you do not specify TagKey.N and the value of this parameter is **true**, all tags are deleted. If you do not specify TagKey.N and the value of this parameter is **false**, no tags are deleted.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
 
         /// <summary>
-        /// The region ID of the bastion host to query.
+        /// <para>The region ID of the bastion host to query.</para>
+        /// <remarks>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// An array that consists of IDs of bastion hosts.
-        /// 
-        /// Valid values: 1 to 20.
-        /// 
-        /// > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+        /// <para>An array that consists of IDs of bastion hosts.</para>
+        /// <para>Valid values: 1 to 20.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource.
+        /// <para>The type of the resource.</para>
+        /// <para>Set the value to <b>INSTANCE</b>, which indicates that the resource is a bastion host.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Set the value to **INSTANCE**, which indicates that the resource is a bastion host.
+        /// <b>Example:</b>
+        /// <para>INSTANCE</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The key of tag N.
-        /// 
-        /// Valid values of N: 1 to 20.
+        /// <para>The key of tag N.</para>
+        /// <para>Valid values of N: 1 to 20.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

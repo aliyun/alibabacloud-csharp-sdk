@@ -9,26 +9,73 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyDatabaseAccountRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the database account to modify.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to query the database account ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("DatabaseAccountId")]
         [Validation(Required=false)]
         public string DatabaseAccountId { get; set; }
 
+        /// <summary>
+        /// <para>The new username of the database account. The username can be up to 128 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aaa</para>
+        /// </summary>
         [NameInMap("DatabaseAccountName")]
         [Validation(Required=false)]
         public string DatabaseAccountName { get; set; }
 
+        /// <summary>
+        /// <para>The new name of the database. This parameter is required if the database engine is PostgreSQL or Oracle.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>orcl</para>
+        /// </summary>
         [NameInMap("DatabaseSchema")]
         [Validation(Required=false)]
         public string DatabaseSchema { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the bastion host that manages the database account to modify.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bastionhost-cn-zpr2zyqx603</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The new password of the database account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>14SZ!******</para>
+        /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        /// <summary>
+        /// <para>The region ID of the bastion host that manages the database account to modify.</para>
+        /// <remarks>
+        /// <para> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

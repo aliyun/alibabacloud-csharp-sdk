@@ -10,136 +10,188 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DescribeInstancesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the queried bastion hosts.
+        /// <para>An array that consists of the bastion hosts returned.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeInstancesResponseBodyInstances> Instances { get; set; }
         public class DescribeInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// The description of the bastion host.
+            /// <para>The remarks of the bastion host.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test API</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The timestamp when the bastion host expires. Unit: milliseconds.
+            /// <para>The timestamp when the bastion host expires. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1578326400000</para>
             /// </summary>
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public long? ExpireTime { get; set; }
 
             /// <summary>
-            /// The image version of the bastion host.
+            /// <para>The image version of the bastion host.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3.0.0</para>
             /// </summary>
             [NameInMap("ImageVersion")]
             [Validation(Required=false)]
             public string ImageVersion { get; set; }
 
             /// <summary>
-            /// The ID of the bastion host.
+            /// <para>The bastion host ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>bastionhost-cn-78v1gh****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The status of the bastion host. Valid values:
+            /// <para>The status of the bastion host. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>PENDING</b>: The bastion host is not initialized.</description></item>
+            /// <item><description><b>CREATING</b>: The bastion host is being created.</description></item>
+            /// <item><description><b>RUNNING</b>: The bastion host is running.</description></item>
+            /// <item><description><b>EXPIRED</b>: The bastion host expired.</description></item>
+            /// <item><description><b>CREATE_FAILED</b>: The bastion host fails to be created.</description></item>
+            /// <item><description><b>UPGRADING</b>: The configurations of the bastion host are being changed.</description></item>
+            /// <item><description><b>UPGRADE_FAILED</b>: The configurations of the bastion host fail to be changed.</description></item>
+            /// </list>
             /// 
-            /// *   **PENDING**: The bastion host is not initialized.
-            /// *   **CREATING**: The bastion host is being created.
-            /// *   **RUNNING**: The bastion host is running.
-            /// *   **EXPIRED**: The bastion host expired.
-            /// *   **CREATE_FAILED**: The bastion host fails to be created.
-            /// *   **UPGRADING**: The configurations of the bastion host are being changed.
-            /// *   **UPGRADE_FAILED**: The configurations of the bastion host fail to be changed.
+            /// <b>Example:</b>
+            /// <para>RUNNING</para>
             /// </summary>
             [NameInMap("InstanceStatus")]
             [Validation(Required=false)]
             public string InstanceStatus { get; set; }
 
             /// <summary>
-            /// The public O\&M address of the bastion host.
+            /// <para>The public O\&amp;M address of the bastion host.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>drawvxalwb-public.bastionhost.aliyuncs.com</para>
             /// </summary>
             [NameInMap("InternetEndpoint")]
             [Validation(Required=false)]
             public string InternetEndpoint { get; set; }
 
             /// <summary>
-            /// The private O\&M address of the bastion host.
+            /// <para>The private O\&amp;M address of the bastion host.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>drawvxalwb.bastionhost.aliyuncs.com</para>
             /// </summary>
             [NameInMap("IntranetEndpoint")]
             [Validation(Required=false)]
             public string IntranetEndpoint { get; set; }
 
             /// <summary>
-            /// Indicates whether the bastion host runs an earlier version. Valid values:
+            /// <para>Indicates whether the bastion host runs an earlier version. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: The bastion host runs V2 or V3.1.</description></item>
+            /// <item><description><b>false</b>: The bastion host runs V3.2.</description></item>
+            /// </list>
             /// 
-            /// *   **true**: indicates that the bastion host runs V2 or V3.1.
-            /// *   **false**:indicates that the bastion host runs V3.2.
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Legacy")]
             [Validation(Required=false)]
             public bool? Legacy { get; set; }
 
             /// <summary>
-            /// The license code of the bastion host.
+            /// <para>The license code of the bastion host.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>bhah_ent_50_asset</para>
             /// </summary>
             [NameInMap("LicenseCode")]
             [Validation(Required=false)]
             public string LicenseCode { get; set; }
 
             /// <summary>
-            /// The edition of the bastion host. Valid values:
+            /// <para>The edition of the bastion host. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>cloudbastion</b>: Basic Edition.</description></item>
+            /// <item><description><b>cloudbastion_ha</b>: Enterprise Edition.</description></item>
+            /// </list>
             /// 
-            /// *   **cloudbastion**: Basic
-            /// *   **cloudbastion_ha**: Enterprise
+            /// <b>Example:</b>
+            /// <para>cloudbastion_ha</para>
             /// </summary>
             [NameInMap("PlanCode")]
             [Validation(Required=false)]
             public string PlanCode { get; set; }
 
             /// <summary>
-            /// Indicates whether the bastion host can be accessed from the Internet. Valid values:
+            /// <para>Indicates whether the bastion host can be accessed from the Internet. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**: The bastion host can be accessed from the Internet.
-            /// *   **false**: The bastion host cannot be accessed from the Internet.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("PublicNetworkAccess")]
             [Validation(Required=false)]
             public bool? PublicNetworkAccess { get; set; }
 
             /// <summary>
-            /// The region ID of the bastion host.
+            /// <para>The region ID of the bastion host.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The ID of the resource group to which the bastion host belongs.
+            /// <para>The ID of the resource group to which the bastion host belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>g-acfm26ougi****</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The timestamp when the bastion host is purchased or renewed. Unit: milliseconds.
+            /// <para>The timestamp when the bastion host is purchased or renewed. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1577681345000</para>
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// The ID of the virtual private cloud (VPC) to which the bastion host belongs.
+            /// <para>The ID of the virtual private cloud (VPC) to which the bastion host belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpc-bp1c85tzgqu1bf5b****</para>
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
 
             /// <summary>
-            /// The ID of the vSwitch to which the bastion host belongs.
+            /// <para>The ID of the vSwitch to which the bastion host belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vsw-bp1xfwzzfti0kjbf****</para>
             /// </summary>
             [NameInMap("VswitchId")]
             [Validation(Required=false)]
@@ -148,14 +200,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>61D36C55-AAFC-4678-8FAD-34FEF9E7182E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of bastion hosts that are queried.
+        /// <para>The total number of bastion hosts that are queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

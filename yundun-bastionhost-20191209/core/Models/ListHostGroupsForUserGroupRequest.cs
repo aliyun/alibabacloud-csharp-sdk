@@ -10,61 +10,89 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostGroupsForUserGroupRequest : TeaModel {
         /// <summary>
-        /// The name of the host group that you want to query. Only exact match is supported.
+        /// <para>The name of the host group that you want to query. Only exact match is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>group</para>
         /// </summary>
         [NameInMap("HostGroupName")]
         [Validation(Required=false)]
         public string HostGroupName { get; set; }
 
         /// <summary>
-        /// The ID of the bastion host to which the user group belongs.
+        /// <para>The ID of the bastion host to which the user group belongs.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+        /// <b>Example:</b>
+        /// <para>bastionhost-cn-st220aw****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// Specifies the category of the host group that you want to query. Valid values:
+        /// <para>Specifies the category of the host group that you want to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Authorized</b>: queries the host groups that the user group is authorized to manage. This is the default value.</description></item>
+        /// <item><description><b>Unauthorized</b>: queries the host groups that the user group is not authorized to manage.</description></item>
+        /// </list>
         /// 
-        /// *   **Authorized**: queries the host groups that the user group is authorized to manage. This is the default value.
-        /// *   **Unauthorized**: queries the host groups that the user group is not authorized to manage.
+        /// <b>Example:</b>
+        /// <para>Authorized</para>
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.\
-        /// Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+        /// <para>The number of entries to return on each page.\
+        /// Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <remarks>
+        /// <para>We recommend that you do not leave this parameter empty.</para>
+        /// </remarks>
         /// 
-        /// > We recommend that you do not leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the bastion host to which the user group belongs.
+        /// <para>The region ID of the bastion host to which the user group belongs.</para>
+        /// <remarks>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// </remarks>
         /// 
-        /// > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the user group.
+        /// <para>The ID of the user group.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the ID of the user group.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("UserGroupId")]
         [Validation(Required=false)]

@@ -10,42 +10,57 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostShareKeysResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the shared keys.
+        /// <para>An array that consists of the shared keys.</para>
         /// </summary>
         [NameInMap("HostShareKeys")]
         [Validation(Required=false)]
         public List<ListHostShareKeysResponseBodyHostShareKeys> HostShareKeys { get; set; }
         public class ListHostShareKeysResponseBodyHostShareKeys : TeaModel {
             /// <summary>
-            /// The number of the associated host accounts.
+            /// <para>The number of the associated host accounts.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("HostAccountCount")]
             [Validation(Required=false)]
             public long? HostAccountCount { get; set; }
 
             /// <summary>
-            /// The ID of the host account.
+            /// <para>The shared key ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10247</para>
             /// </summary>
             [NameInMap("HostShareKeyId")]
             [Validation(Required=false)]
             public string HostShareKeyId { get; set; }
 
             /// <summary>
-            /// The name of the shared key.
+            /// <para>The name of the shared key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>name</para>
             /// </summary>
             [NameInMap("HostShareKeyName")]
             [Validation(Required=false)]
             public string HostShareKeyName { get; set; }
 
             /// <summary>
-            /// The time when the shared key was last modified.
+            /// <para>The time when the shared key was last modified. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1644806406</para>
             /// </summary>
             [NameInMap("LastModifyKeyAt")]
             [Validation(Required=false)]
             public long? LastModifyKeyAt { get; set; }
 
             /// <summary>
-            /// The fingerprint of the private key.
+            /// <para>The fingerprint of the private key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <hr>
             /// </summary>
             [NameInMap("PrivateKeyFingerPrint")]
             [Validation(Required=false)]
@@ -54,14 +69,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of the shared keys.
+        /// <para>The total number of the shared keys.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

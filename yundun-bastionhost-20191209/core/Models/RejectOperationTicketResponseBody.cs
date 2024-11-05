@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class RejectOperationTicketResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

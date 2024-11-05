@@ -10,27 +10,41 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DeleteHostAccountRequest : TeaModel {
         /// <summary>
-        /// The ID of the host account that you want to remove.
+        /// <para>The ID of the host account that you want to remove.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query the ID of the host account.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [ListHostAccounts](~~204372~~) operation to query the ID of the host account.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("HostAccountId")]
         [Validation(Required=false)]
         public string HostAccountId { get; set; }
 
         /// <summary>
-        /// The ID of the bastion host from which you want to remove the host account.
+        /// <para>The ID of the bastion host from which you want to remove the host account.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+        /// <b>Example:</b>
+        /// <para>bastionhost-cn-st220aw****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region ID of the bastion host from which you want to remove the host account.
+        /// <para>The region ID of the bastion host from which you want to remove the host account.</para>
+        /// <remarks>
+        /// <para> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// </remarks>
         /// 
-        /// >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
