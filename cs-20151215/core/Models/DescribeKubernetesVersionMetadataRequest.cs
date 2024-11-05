@@ -39,11 +39,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The query mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>supported</c>: queries all supported versions.</description></item>
-        /// <item><description><c>creatable</c>: queries only versions that allow you to create clusters.</description></item>
+        /// <item><description><c>supported</c>: queries all supported Kubernetes versions.</description></item>
+        /// <item><description><c>creatable</c>: queries only Kubernetes versions of clusters that you can create.</description></item>
         /// </list>
         /// <para>If you specify <c>KubernetesVersion</c>, this parameter does not take effect.</para>
-        /// <para>Default value: creatable.</para>
+        /// <para>If you do not specify a query mode, Kubernetes versions of clusters that you can create are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>supported</para>

@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeClustersV1ResponseBodyClusters> Clusters { get; set; }
         public class DescribeClustersV1ResponseBodyClusters : TeaModel {
             /// <summary>
+            /// <para>The domain name of the cluster.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cluster.local</para>
             /// </summary>
@@ -63,6 +65,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterType { get; set; }
 
             /// <summary>
+            /// <para>The pod CIDR block.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>172.20.0.0/16</para>
             /// </summary>
@@ -137,6 +141,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InitVersion { get; set; }
 
             /// <summary>
+            /// <para>The IP stack of the cluster. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ipv4: The cluster is an IPv4 cluster.</description></item>
+            /// <item><description>dual: The cluster is a dual-stack cluster.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>ipv4</para>
             /// </summary>
@@ -208,18 +218,42 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string NextVersion { get; set; }
 
+            /// <summary>
+            /// <para>The automatic O\&amp;M policy of the cluster.</para>
+            /// </summary>
             [NameInMap("operation_policy")]
             [Validation(Required=false)]
             public DescribeClustersV1ResponseBodyClustersOperationPolicy OperationPolicy { get; set; }
             public class DescribeClustersV1ResponseBodyClustersOperationPolicy : TeaModel {
+                /// <summary>
+                /// <para>The configurations of auto cluster update.</para>
+                /// </summary>
                 [NameInMap("cluster_auto_upgrade")]
                 [Validation(Required=false)]
                 public DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade ClusterAutoUpgrade { get; set; }
                 public class DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade : TeaModel {
+                    /// <summary>
+                    /// <para>The frequency of auto cluster updates. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Update frequency</a>.</para>
+                    /// <para>Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>patch: the latest patch version.</description></item>
+                    /// <item><description>stables: the second-latest minor version.</description></item>
+                    /// <item><description>rapid: the latest minor version.</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>patch</para>
+                    /// </summary>
                     [NameInMap("channel")]
                     [Validation(Required=false)]
                     public string Channel { get; set; }
 
+                    /// <summary>
+                    /// <para>Specifies whether to enable auto cluster update.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
                     [NameInMap("enabled")]
                     [Validation(Required=false)]
                     public bool? Enabled { get; set; }
@@ -259,6 +293,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Profile { get; set; }
 
             /// <summary>
+            /// <para>The kube-proxy mode. Valid values: ipvs and iptables.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ipvs</para>
             /// </summary>
@@ -297,6 +333,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
+            /// <para>The Service CIDR block.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -307,7 +344,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ServiceCidr { get; set; }
 
             /// <summary>
-            /// <para>The number of nodes in the cluster, including master nodes and worker nodes.</para>
+            /// <para>The number of nodes in the cluster, including control planes and worker nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -348,7 +385,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description>192.168.0.0/16</description></item>
             /// </list>
             /// <para>The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</para>
-            /// <para>For more information about the network planning of ACK clusters, see <a href="https://help.aliyun.com/document_detail/86500.html">Plan CIDR blocks for an ACK cluster</a>.</para>
+            /// <para>For more information about the network planning of Container Service for Kubernetes (ACK) clusters, see <a href="https://help.aliyun.com/document_detail/86500.html">Plan CIDR blocks for an ACK cluster</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.21.0.0/16</para>
@@ -366,6 +403,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<Tag> Tags { get; set; }
 
             /// <summary>
+            /// <para>The time zone.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Asia/Shanghai</para>
             /// </summary>
@@ -396,7 +435,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. We recommend that you select vSwitches in different zones to ensure high availability.</para>
+            /// <para>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. To ensure the high availability of the cluster, we recommend that you select vSwitches in different zones.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-2vc41xuumx5z2rdma****,vsw-2vc41xuumx5z2rdma****</para>
@@ -406,6 +445,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Obsolete]
             public string VswitchId { get; set; }
 
+            /// <summary>
+            /// <para>The vSwitches of the control planes.</para>
+            /// </summary>
             [NameInMap("vswitch_ids")]
             [Validation(Required=false)]
             public List<string> VswitchIds { get; set; }

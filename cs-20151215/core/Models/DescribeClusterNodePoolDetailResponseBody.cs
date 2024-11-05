@@ -106,6 +106,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        [NameInMap("host_network")]
+        [Validation(Required=false)]
+        public bool? HostNetwork { get; set; }
+
         /// <summary>
         /// <para>The network configuration of the edge node pool. This parameter takes effect only for edge node pools.</para>
         /// </summary>
@@ -175,8 +179,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string InterconnectMode { get; set; }
 
+        [NameInMap("intranet")]
+        [Validation(Required=false)]
+        public bool? Intranet { get; set; }
+
         /// <summary>
-        /// <para>The configuration of the cluster where the node pool is deployed.</para>
+        /// <para>The configurations of the cluster in which the node pool is deployed.</para>
         /// </summary>
         [NameInMap("kubernetes_config")]
         [Validation(Required=false)]
@@ -236,6 +244,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string NodeNameMode { get; set; }
 
+            /// <summary>
+            /// <para>The custom script to be executed before nodes in the node pool are initialized. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</para>
+            /// </summary>
             [NameInMap("pre_user_data")]
             [Validation(Required=false)]
             public string PreUserData { get; set; }
@@ -278,7 +289,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Unschedulable { get; set; }
 
             /// <summary>
-            /// <para>The user data of the node pool. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user data</a>.</para>
+            /// <para>The custom script to be executed after nodes in the node pool are initialized. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IyEvYmluL3NoCmVjaG8gIkhlbGxvIEFDSyEi</para>

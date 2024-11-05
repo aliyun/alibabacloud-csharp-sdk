@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of labels that you want to query. You can specify at most 20 labels.</para>
+        /// <para>The labels that you want to query. You can specify up to 20 labels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;key\&quot;:\&quot;env\&quot;,\&quot;value\&quot;,\&quot;dev\&quot;},{\&quot;key\&quot;:\&quot;dev\&quot;, \&quot;value\&quot;:\&quot;IT\&quot;}]</para>

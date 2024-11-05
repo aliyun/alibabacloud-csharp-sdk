@@ -10,16 +10,22 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyNodePoolNodeConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The parameter settings of the kubelet.</para>
+        /// <para>The parameters of the kubelet.</para>
         /// </summary>
         [NameInMap("kubelet_config")]
         [Validation(Required=false)]
         public KubeletConfig KubeletConfig { get; set; }
 
+        /// <summary>
+        /// <para>Operating system parameter configuration.</para>
+        /// </summary>
         [NameInMap("os_config")]
         [Validation(Required=false)]
         public ModifyNodePoolNodeConfigRequestOsConfig OsConfig { get; set; }
         public class ModifyNodePoolNodeConfigRequestOsConfig : TeaModel {
+            /// <summary>
+            /// <para>sysctl parameter configuration</para>
+            /// </summary>
             [NameInMap("sysctl")]
             [Validation(Required=false)]
             public Dictionary<string, object> Sysctl { get; set; }

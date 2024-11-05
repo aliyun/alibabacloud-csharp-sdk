@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? BatchInterval { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of unavailable nodes.</para>
+            /// <para>The maximum number of nodes per batch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RuntimeType { get; set; }
 
         /// <summary>
-        /// <para>The version of the container runtime that is used by the nodes. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation to query the runtime version information returned in the runtime parameter.</para>
+        /// <para>The version of the container runtime that is used by the nodes. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation to query the runtime version returned in the runtime parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.5.10</para>

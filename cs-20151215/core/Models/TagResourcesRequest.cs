@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID of the resource.</para>
+        /// <para>The ID of the region in which the resource resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The type of resource that you want to label. Set the value to <c>CLUSTER</c>.</para>
+        /// <para>The type of resources that you want to label. Valid value: <c>CLUSTER</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,11 +40,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The labels that you want to add to the resources in key-value pairs. You can add up to 20 labels. Usage notes:</para>
+        /// <para>The tags that you want to add to the resources in key-value pairs. You can add up to 20 key-value pairs. Note:</para>
         /// <list type="bullet">
-        /// <item><description>Label values must not be empty strings. A label value must be 1 to 128 characters in length.</description></item>
-        /// <item><description>The label value must not start with <c>aliyun</c> or <c>acs:</c>.</description></item>
-        /// <item><description>The label value must not contain <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The values must not be empty strings. A value must be 1 to 128 characters in length.</description></item>
+        /// <item><description>A key or value must not start with <c>aliyun</c> or <c>acs:</c>.</description></item>
+        /// <item><description>A key or value must not contain <c>http://</c> or <c>https://</c>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// </summary>

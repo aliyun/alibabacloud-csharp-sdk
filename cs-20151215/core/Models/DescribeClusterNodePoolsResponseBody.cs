@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string CpuPolicy { get; set; }
 
                 /// <summary>
-                /// <para>The labels that you want to add to the nodes in the cluster. You must add labels based on the following rules:</para>
+                /// <para>The labels that are added to the nodes in the cluster. You must add labels based on the following rules:</para>
                 /// <list type="bullet">
                 /// <item><description>A label is a case-sensitive key-value pair. You can add up to 20 labels.</description></item>
                 /// <item><description>The key must be unique and can be up to 64 characters in length. The value can be empty and can be up to 128 characters in length. Keys and values cannot start with <c>aliyun</c>, <c>acs:</c>, <c>https://</c>, or <c>http://</c>. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</description></item>
@@ -249,6 +249,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public string NodeNameMode { get; set; }
 
+                /// <summary>
+                /// <para>The user-defined script that is executed before nodes are initialized. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>IyEvYmluL3NoCmVjaG8gIkhlbGxvIEFD</para>
+                /// </summary>
                 [NameInMap("pre_user_data")]
                 [Validation(Required=false)]
                 public string PreUserData { get; set; }
@@ -274,7 +280,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string RuntimeVersion { get; set; }
 
                 /// <summary>
-                /// <para>The taints of the nodes in the node pool. Taints can be used together with tolerations to prevent pods from being scheduled to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</para>
+                /// <para>The taints of the nodes in the node pool. Taints can be used together with tolerations to prevent pods from being scheduled to specific nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</para>
                 /// </summary>
                 [NameInMap("taints")]
                 [Validation(Required=false)]
@@ -291,7 +297,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? Unschedulable { get; set; }
 
                 /// <summary>
-                /// <para>The user data of the node pool. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</para>
+                /// <para>The user-defined script that is executed after nodes are initialized. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IyEvYmluL3NoCmVjaG8gIkhlbGxvIEFD****</para>
@@ -499,7 +505,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig NodeConfig { get; set; }
             public class DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig : TeaModel {
                 /// <summary>
-                /// <para>The parameter settings of the kubelet.</para>
+                /// <para>The configurations of the kubelet.</para>
                 /// </summary>
                 [NameInMap("kubelet_configuration")]
                 [Validation(Required=false)]
@@ -606,7 +612,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>The configuration of the scaling group.</para>
+            /// <para>The configurations of the scaling group.</para>
             /// </summary>
             [NameInMap("scaling_group")]
             [Validation(Required=false)]
@@ -726,7 +732,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string InstanceChargeType { get; set; }
 
                 /// <summary>
-                /// <para>Instance attributes</para>
+                /// <para>The attributes of an instance.</para>
                 /// </summary>
                 [NameInMap("instance_patterns")]
                 [Validation(Required=false)]
@@ -1079,7 +1085,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? SystemDiskBurstingEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The system disk types. The system attempts to create system disks from a disk type with a lower priority when the disk type with a higher priority is unavailable. Valid values: cloud: disk cloud_efficiency: utra disk cloud_ssd: standard SSD cloud_essd: Enterprise SSD (ESSD)</para>
+                /// <para>The types of system disks. The system attempts to create system disks of a disk type with a lower priority if the disk type with a higher priority is unavailable. Valid values: Valid values: cloud (basic disk), cloud_efficiency (ultra disk), cloud_ssd (standard SSD), cloud_essd (Enterprise SSD).</para>
                 /// </summary>
                 [NameInMap("system_disk_categories")]
                 [Validation(Required=false)]
@@ -1100,7 +1106,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string SystemDiskCategory { get; set; }
 
                 /// <summary>
-                /// <para>The algorithm that you want to use to encrypt the system disk. Set the value to aes-256.</para>
+                /// <para>The encryption algorithm that is used to encrypt the system disk. The value is aes-256.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aes-256</para>
@@ -1165,7 +1171,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public long? SystemDiskSize { get; set; }
 
                 /// <summary>
-                /// <para>The tag that you want to add only to ECS instances.</para>
+                /// <para>The labels that you want to add only to Elastic Compute Service (ECS) instances.</para>
                 /// <para>The tag key must be unique and cannot exceed 128 characters in length. The tag key and value must not start with aliyun or acs: or contain https:// or http://.</para>
                 /// </summary>
                 [NameInMap("tags")]

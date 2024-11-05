@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the event.</para>
+        /// <para>The details of the events.</para>
         /// </summary>
         [NameInMap("events")]
         [Validation(Required=false)]
@@ -34,7 +34,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public DescribeEventsResponseBodyEventsData Data { get; set; }
             public class DescribeEventsResponseBodyEventsData : TeaModel {
                 /// <summary>
-                /// <para>The severity level of the event.</para>
+                /// <para>The severity level of the event. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>info</description></item>
+                /// <item><description>warning</description></item>
+                /// <item><description>error</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>info</para>

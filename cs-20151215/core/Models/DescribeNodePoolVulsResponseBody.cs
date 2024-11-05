@@ -88,6 +88,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
                 /// <summary>
                 /// <para>Indicates whether a restart is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("need_reboot")]
                 [Validation(Required=false)]

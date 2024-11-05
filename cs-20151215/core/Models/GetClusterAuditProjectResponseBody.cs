@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class GetClusterAuditProjectResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the cluster auditing feature is enabled for the cluster. <c>true</c>: The cluster auditing feature is enabled for the cluster. <c>false</c>: The cluster auditing feature is disabled for the cluster.</para>
+        /// <para>Indicates whether the cluster auditing feature is enabled for the cluster. </para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The cluster auditing feature is enabled for the cluster. </description></item>
+        /// <item><description><c>false</c>: The cluster auditing feature is disabled for the cluster.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

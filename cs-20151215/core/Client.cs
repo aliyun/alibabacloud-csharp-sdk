@@ -1322,7 +1322,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</description></item>
+        /// <item><description>To call this operation, make sure that you have the AliyunCSFullAccess permission.</description></item>
         /// <item><description>You cannot revoke the permissions of an Alibaba Cloud account.</description></item>
         /// <item><description>You cannot revoke the permissions of the account that you use to call this operation.</description></item>
         /// </list>
@@ -1389,7 +1389,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</description></item>
+        /// <item><description>To call this operation, make sure that you have the AliyunCSFullAccess permission.</description></item>
         /// <item><description>You cannot revoke the permissions of an Alibaba Cloud account.</description></item>
         /// <item><description>You cannot revoke the permissions of the account that you use to call this operation.</description></item>
         /// </list>
@@ -1456,7 +1456,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</description></item>
+        /// <item><description>To call this operation, make sure that you have the AliyunCSFullAccess permission.</description></item>
         /// <item><description>You cannot revoke the permissions of an Alibaba Cloud account.</description></item>
         /// <item><description>You cannot revoke the permissions of the account that you use to call this operation.</description></item>
         /// </list>
@@ -1486,7 +1486,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</description></item>
+        /// <item><description>To call this operation, make sure that you have the AliyunCSFullAccess permission.</description></item>
         /// <item><description>You cannot revoke the permissions of an Alibaba Cloud account.</description></item>
         /// <item><description>You cannot revoke the permissions of the account that you use to call this operation.</description></item>
         /// </list>
@@ -2831,7 +2831,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\&amp;M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\&amp;M workload.</para>
+        /// <para>Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\&amp;M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\&amp;M workload.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2859,6 +2859,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["count"] = request.Count;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostNetwork))
+            {
+                body["host_network"] = request.HostNetwork;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterconnectConfig))
             {
                 body["interconnect_config"] = request.InterconnectConfig;
@@ -2866,6 +2870,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterconnectMode))
             {
                 body["interconnect_mode"] = request.InterconnectMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Intranet))
+            {
+                body["intranet"] = request.Intranet;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesConfig))
             {
@@ -2917,7 +2925,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\&amp;M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\&amp;M workload.</para>
+        /// <para>Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\&amp;M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\&amp;M workload.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2945,6 +2953,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["count"] = request.Count;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostNetwork))
+            {
+                body["host_network"] = request.HostNetwork;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterconnectConfig))
             {
                 body["interconnect_config"] = request.InterconnectConfig;
@@ -2952,6 +2964,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterconnectMode))
             {
                 body["interconnect_mode"] = request.InterconnectMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Intranet))
+            {
+                body["intranet"] = request.Intranet;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesConfig))
             {
@@ -3003,7 +3019,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\&amp;M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\&amp;M workload.</para>
+        /// <para>Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\&amp;M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\&amp;M workload.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3022,7 +3038,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\&amp;M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\&amp;M workload.</para>
+        /// <para>Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\&amp;M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\&amp;M workload.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6827,7 +6843,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries node pools in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Queries the information about all node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6873,7 +6889,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries node pools in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Queries the information about all node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6919,7 +6935,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries node pools in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Queries the information about all node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6938,7 +6954,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries node pools in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Queries the information about all node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6957,7 +6973,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterNodes operation to query the details about all nodes in a cluster by cluster ID.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7019,7 +7035,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterNodes operation to query the details about all nodes in a cluster by cluster ID.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7081,7 +7097,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterNodes operation to query the details about all nodes in a cluster by cluster ID.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7100,7 +7116,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterNodes operation to query the details about all nodes in a cluster by cluster ID.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8641,7 +8657,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about a type of events, including the severity level, status, and start time of each event. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.</para>
+        /// <para>Queries the detailed information about a type of events, including the severity level, status, and time. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8699,7 +8715,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about a type of events, including the severity level, status, and start time of each event. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.</para>
+        /// <para>Queries the detailed information about a type of events, including the severity level, status, and time. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8757,7 +8773,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about a type of events, including the severity level, status, and start time of each event. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.</para>
+        /// <para>Queries the detailed information about a type of events, including the severity level, status, and time. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8776,7 +8792,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about a type of events, including the severity level, status, and start time of each event. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.</para>
+        /// <para>Queries the detailed information about a type of events, including the severity level, status, and time. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9261,7 +9277,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the policies for a Container Service for Kubernetes (ACK) cluster. Container security policies for ACK clusters offer a variety of built-in policies, including cis-k8s, infra, k8s-general, and PodSecurityPolicy. You can use these policies to ensure the security of containers running in a production environment.</para>
+        /// <para>Queries a list of security policies. Container Service for Kubernetes (ACK) clusters offer a variety of built-in container security policies, such as Compliance, Infra, K8s-general, and pod security policy (PSP). You can use these policies to ensure the security of containers running in a production environment.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -9297,7 +9313,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the policies for a Container Service for Kubernetes (ACK) cluster. Container security policies for ACK clusters offer a variety of built-in policies, including cis-k8s, infra, k8s-general, and PodSecurityPolicy. You can use these policies to ensure the security of containers running in a production environment.</para>
+        /// <para>Queries a list of security policies. Container Service for Kubernetes (ACK) clusters offer a variety of built-in container security policies, such as Compliance, Infra, K8s-general, and pod security policy (PSP). You can use these policies to ensure the security of containers running in a production environment.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -9333,7 +9349,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the policies for a Container Service for Kubernetes (ACK) cluster. Container security policies for ACK clusters offer a variety of built-in policies, including cis-k8s, infra, k8s-general, and PodSecurityPolicy. You can use these policies to ensure the security of containers running in a production environment.</para>
+        /// <para>Queries a list of security policies. Container Service for Kubernetes (ACK) clusters offer a variety of built-in container security policies, such as Compliance, Infra, K8s-general, and pod security policy (PSP). You can use these policies to ensure the security of containers running in a production environment.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9348,7 +9364,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the policies for a Container Service for Kubernetes (ACK) cluster. Container security policies for ACK clusters offer a variety of built-in policies, including cis-k8s, infra, k8s-general, and PodSecurityPolicy. You can use these policies to ensure the security of containers running in a production environment.</para>
+        /// <para>Queries a list of security policies. Container Service for Kubernetes (ACK) clusters offer a variety of built-in container security policies, such as Compliance, Infra, K8s-general, and pod security policy (PSP). You can use these policies to ensure the security of containers running in a production environment.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11421,6 +11437,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return await GetClusterAddonInstanceWithOptionsAsync(clusterId, instanceName, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the GetClusterAuditProject operation to query the Simple Log Service (SLS) project that stores the audit logs of the API server of a cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -11452,6 +11473,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<GetClusterAuditProjectResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the GetClusterAuditProject operation to query the Simple Log Service (SLS) project that stores the audit logs of the API server of a cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -11483,6 +11509,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<GetClusterAuditProjectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the GetClusterAuditProject operation to query the Simple Log Service (SLS) project that stores the audit logs of the API server of a cluster.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetClusterAuditProjectResponse
         /// </returns>
@@ -11493,6 +11524,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return GetClusterAuditProjectWithOptions(clusterid, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the GetClusterAuditProject operation to query the Simple Log Service (SLS) project that stores the audit logs of the API server of a cluster.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetClusterAuditProjectResponse
         /// </returns>
@@ -12098,8 +12134,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <description>
         /// <para><em>Precautions</em>*:</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that you have attached a RAM policy that has at least the read-only permissions on the cluster to the RAM user or RAM role in the RAM console. Otherwise, the <c>ErrorRamPolicyConfig</c> error code is returned when you call the operation. For more information about how to authorize a RAM user by attaching RAM policies, see <a href="https://help.aliyun.com/document_detail/86485.html">Create a custom RAM policy</a>.</description></item>
-        /// <item><description>If you use a RAM user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned when you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</description></item>
+        /// <item><description>If you use a Resource Access Management (RAM) user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned after you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</description></item>
         /// <item><description>If you update full permissions, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.</description></item>
         /// </list>
         /// </description>
@@ -12149,8 +12184,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <description>
         /// <para><em>Precautions</em>*:</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that you have attached a RAM policy that has at least the read-only permissions on the cluster to the RAM user or RAM role in the RAM console. Otherwise, the <c>ErrorRamPolicyConfig</c> error code is returned when you call the operation. For more information about how to authorize a RAM user by attaching RAM policies, see <a href="https://help.aliyun.com/document_detail/86485.html">Create a custom RAM policy</a>.</description></item>
-        /// <item><description>If you use a RAM user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned when you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</description></item>
+        /// <item><description>If you use a Resource Access Management (RAM) user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned after you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</description></item>
         /// <item><description>If you update full permissions, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.</description></item>
         /// </list>
         /// </description>
@@ -12200,8 +12234,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <description>
         /// <para><em>Precautions</em>*:</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that you have attached a RAM policy that has at least the read-only permissions on the cluster to the RAM user or RAM role in the RAM console. Otherwise, the <c>ErrorRamPolicyConfig</c> error code is returned when you call the operation. For more information about how to authorize a RAM user by attaching RAM policies, see <a href="https://help.aliyun.com/document_detail/86485.html">Create a custom RAM policy</a>.</description></item>
-        /// <item><description>If you use a RAM user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned when you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</description></item>
+        /// <item><description>If you use a Resource Access Management (RAM) user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned after you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</description></item>
         /// <item><description>If you update full permissions, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.</description></item>
         /// </list>
         /// </description>
@@ -12229,8 +12262,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <description>
         /// <para><em>Precautions</em>*:</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that you have attached a RAM policy that has at least the read-only permissions on the cluster to the RAM user or RAM role in the RAM console. Otherwise, the <c>ErrorRamPolicyConfig</c> error code is returned when you call the operation. For more information about how to authorize a RAM user by attaching RAM policies, see <a href="https://help.aliyun.com/document_detail/86485.html">Create a custom RAM policy</a>.</description></item>
-        /// <item><description>If you use a RAM user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned when you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</description></item>
+        /// <item><description>If you use a Resource Access Management (RAM) user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned after you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</description></item>
         /// <item><description>If you update full permissions, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.</description></item>
         /// </list>
         /// </description>
@@ -15715,7 +15747,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Fixes issues on abnormal nodes in a node pool to ensure that the nodes can run as normal.</para>
+        /// <para>Repairs a node pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15769,7 +15801,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Fixes issues on abnormal nodes in a node pool to ensure that the nodes can run as normal.</para>
+        /// <para>Repairs a node pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15823,7 +15855,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Fixes issues on abnormal nodes in a node pool to ensure that the nodes can run as normal.</para>
+        /// <para>Repairs a node pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15842,7 +15874,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Fixes issues on abnormal nodes in a node pool to ensure that the nodes can run as normal.</para>
+        /// <para>Repairs a node pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15987,7 +16019,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ResumeTask operation to resume a task.</para>
+        /// <para>Resumes a task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -16023,7 +16055,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ResumeTask operation to resume a task.</para>
+        /// <para>Resumes a task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -16059,7 +16091,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ResumeTask operation to resume a task.</para>
+        /// <para>Resumes a task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -16074,7 +16106,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ResumeTask operation to resume a task.</para>
+        /// <para>Resumes a task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -16761,7 +16793,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ScaleClusterNodePool operation to scale out a node pool by node pool ID.</para>
+        /// <para>Scales out a node pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16807,7 +16839,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ScaleClusterNodePool operation to scale out a node pool by node pool ID.</para>
+        /// <para>Scales out a node pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16853,7 +16885,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ScaleClusterNodePool operation to scale out a node pool by node pool ID.</para>
+        /// <para>Scales out a node pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16872,7 +16904,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ScaleClusterNodePool operation to scale out a node pool by node pool ID.</para>
+        /// <para>Scales out a node pool.</para>
         /// </summary>
         /// 
         /// <param name="request">

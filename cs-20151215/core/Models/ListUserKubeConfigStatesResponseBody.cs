@@ -93,8 +93,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The cluster name.</para>
-            /// <para>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</para>
+            /// <para>The name of the cluster.</para>
+            /// <para>The name must be 1 to 63 characters in length, and can contain digits, underscores (_), and hyphens (-). The name must start with a letter or number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cluster-demo</para>
@@ -112,8 +112,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description><c>updating</c>: The cluster is being upgraded.</description></item>
             /// <item><description><c>updating_failed</c>: The cluster failed to be updated.</description></item>
             /// <item><description><c>scaling</c>: The cluster is being scaled.</description></item>
-            /// <item><description><c>waiting</c>: The cluster is waiting for connection requests.</description></item>
-            /// <item><description><c>disconnected</c>: The cluster is disconnected.</description></item>
             /// <item><description><c>stopped</c>: The cluster is stopped.</description></item>
             /// <item><description><c>deleting</c>: The cluster is being deleted.</description></item>
             /// <item><description><c>deleted</c>: The cluster is deleted.</description></item>
