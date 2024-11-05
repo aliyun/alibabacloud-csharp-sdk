@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UpdateFileInfoRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>f-16713accddtgtj6340jgnclhwsg1813f718db2f7</para>
         /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]

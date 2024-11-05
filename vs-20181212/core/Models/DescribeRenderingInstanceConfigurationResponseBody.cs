@@ -17,22 +17,38 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public List<DescribeRenderingInstanceConfigurationResponseBodyConfigurationAttributes> Attributes { get; set; }
             public class DescribeRenderingInstanceConfigurationResponseBodyConfigurationAttributes : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>lon</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>100</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public object Value { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>location</para>
+            /// </summary>
             [NameInMap("ModuleName")]
             [Validation(Required=false)]
             public string ModuleName { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

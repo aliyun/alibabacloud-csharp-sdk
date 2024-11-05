@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UpdateCloudAppInfoRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cap-b06b26edfhytbn b94a75ae1a79efc90eb</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

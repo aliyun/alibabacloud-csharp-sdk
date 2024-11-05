@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ResumeVsStreamRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxxApp</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
@@ -21,14 +24,20 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ControlStreamAction { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.aliyundoc.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>publisher</para>
         /// </summary>
         [NameInMap("LiveStreamType")]
         [Validation(Required=false)]
@@ -39,7 +48,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxxStream</para>
         /// </summary>
         [NameInMap("StreamName")]
         [Validation(Required=false)]

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchDeleteVsDomainConfigsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.aliyundoc.com</para>
         /// </summary>
         [NameInMap("DomainNames")]
         [Validation(Required=false)]
         public string DomainNames { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>https_force</para>
         /// </summary>
         [NameInMap("FunctionNames")]
         [Validation(Required=false)]

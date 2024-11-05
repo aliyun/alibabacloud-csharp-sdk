@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UploadPublicKeyRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>verify_dffeb6610035dcb77b413a59c3*****</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -20,16 +23,27 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>g-test</para>
+        /// </summary>
         [NameInMap("KeyGroup")]
         [Validation(Required=false)]
         public string KeyGroup { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mykey-v1.0</para>
         /// </summary>
         [NameInMap("KeyName")]
         [Validation(Required=false)]
         public string KeyName { get; set; }
+
+        [NameInMap("KeyType")]
+        [Validation(Required=false)]
+        public string KeyType { get; set; }
 
     }
 

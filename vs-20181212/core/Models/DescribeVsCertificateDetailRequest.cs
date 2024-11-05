@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsCertificateDetailRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cert-539xxxx</para>
         /// </summary>
         [NameInMap("CertName")]
         [Validation(Required=false)]

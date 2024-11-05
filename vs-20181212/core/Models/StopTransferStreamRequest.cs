@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class StopTransferStreamRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>323434****83423432</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -20,6 +23,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>sd</para>
+        /// </summary>
         [NameInMap("Transcode")]
         [Validation(Required=false)]
         public string Transcode { get; set; }

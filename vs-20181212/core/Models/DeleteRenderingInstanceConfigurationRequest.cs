@@ -18,7 +18,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public List<string> AttributeNames { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>location</para>
             /// </summary>
             [NameInMap("ModuleName")]
             [Validation(Required=false)]
@@ -27,7 +30,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
         /// </summary>
         [NameInMap("RenderingInstanceId")]
         [Validation(Required=false)]

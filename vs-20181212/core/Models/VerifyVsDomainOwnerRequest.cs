@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class VerifyVsDomainOwnerRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.aliyundoc.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dnsCheck</para>
         /// </summary>
         [NameInMap("VerifyType")]
         [Validation(Required=false)]

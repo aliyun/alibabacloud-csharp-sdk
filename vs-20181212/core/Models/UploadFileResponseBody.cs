@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UploadFileResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>f-1671330gr7934d4771813f7141d28db2f7</para>
+        /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]
         public string FileId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

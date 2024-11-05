@@ -9,19 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchBindTemplateRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("ApplyAll")]
         [Validation(Required=false)]
         public bool? ApplyAll { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>323*****994-cn-qingdao</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>group</para>
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -31,12 +41,19 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("Replace")]
         [Validation(Required=false)]
         public bool? Replace { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>323*****998-cn-qingdao</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

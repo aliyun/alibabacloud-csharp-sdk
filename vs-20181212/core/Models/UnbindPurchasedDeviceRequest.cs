@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UnbindPurchasedDeviceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3939*****6580539-cn-qingdao</para>
         /// </summary>
         [NameInMap("DeviceId")]
         [Validation(Required=false)]

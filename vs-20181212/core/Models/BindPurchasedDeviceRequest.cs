@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BindPurchasedDeviceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3939*****6580539-cn-qingdao</para>
         /// </summary>
         [NameInMap("DeviceId")]
         [Validation(Required=false)]
         public string DeviceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3484*****8732174-cn-qingdao</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -28,7 +34,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-qingdao</para>
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]

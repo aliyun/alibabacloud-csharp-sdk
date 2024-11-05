@@ -13,23 +13,37 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public bool? Auth { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3600</para>
+        /// </summary>
         [NameInMap("Expire")]
         [Validation(Required=false)]
         public long? Expire { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>348*****380-cn-qingdao</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>push</para>
+        /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rtmp</para>
         /// </summary>
         [NameInMap("OutProtocol")]
         [Validation(Required=false)]
@@ -40,7 +54,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>live001</para>
         /// </summary>
         [NameInMap("Stream")]
         [Validation(Required=false)]

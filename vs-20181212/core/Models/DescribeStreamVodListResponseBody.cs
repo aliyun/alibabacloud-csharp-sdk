@@ -13,16 +13,28 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public List<DescribeStreamVodListResponseBodyRecords> Records { get; set; }
         public class DescribeStreamVodListResponseBodyRecords : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1634873413</para>
+            /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1639077653</para>
+            /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public long? StartTime { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

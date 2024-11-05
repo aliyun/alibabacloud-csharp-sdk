@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DeleteParentPlatformRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>359*****374-cn-qingdao</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

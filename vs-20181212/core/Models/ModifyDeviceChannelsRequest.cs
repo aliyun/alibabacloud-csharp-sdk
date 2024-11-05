@@ -10,22 +10,33 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ModifyDeviceChannelsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Channels")]
         [Validation(Required=false)]
         public string Channels { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>on</para>
+        /// </summary>
         [NameInMap("DeviceStatus")]
         [Validation(Required=false)]
         public string DeviceStatus { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>210235C3GN32090008286cf17e130d</para>
+        /// </summary>
         [NameInMap("Dsn")]
         [Validation(Required=false)]
         public string Dsn { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>348*****380-cn-qingdao</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://xxx/xxx.mp4">http://xxx/xxx.mp4</a></para>
         /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]

@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string MaintainTime { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
