@@ -10,19 +10,29 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class UAIDConversionRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("Carrier")]
         [Validation(Required=false)]
         public string Carrier { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值示例值示例值</para>
+        /// </summary>
         [NameInMap("OutId")]
         [Validation(Required=false)]
         public string OutId { get; set; }
@@ -39,6 +49,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值示例值示例值</para>
+        /// </summary>
         [NameInMap("UaidList")]
         [Validation(Required=false)]
         public string UaidList { get; set; }

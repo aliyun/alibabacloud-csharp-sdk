@@ -10,22 +10,36 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class UAIDCollectionRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值</para>
+        /// </summary>
         [NameInMap("Carrier")]
         [Validation(Required=false)]
         public string Carrier { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值示例值示例值</para>
+        /// </summary>
         [NameInMap("Ip")]
         [Validation(Required=false)]
         public string Ip { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("OutId")]
         [Validation(Required=false)]
@@ -35,6 +49,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值示例值</para>
+        /// </summary>
         [NameInMap("Province")]
         [Validation(Required=false)]
         public string Province { get; set; }
@@ -48,12 +66,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("Token")]
         [Validation(Required=false)]
         public string Token { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值示例值</para>
+        /// </summary>
         [NameInMap("UserGrantId")]
         [Validation(Required=false)]
         public string UserGrantId { get; set; }

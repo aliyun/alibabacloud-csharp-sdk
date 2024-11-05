@@ -21,10 +21,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public QueryPhoneNumberOnlineTimeResponseBodyData Data { get; set; }
         public class QueryPhoneNumberOnlineTimeResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值示例值示例值</para>
+            /// </summary>
             [NameInMap("CarrierCode")]
             [Validation(Required=false)]
             public string CarrierCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>29</para>
+            /// </summary>
             [NameInMap("VerifyResult")]
             [Validation(Required=false)]
             public long? VerifyResult { get; set; }

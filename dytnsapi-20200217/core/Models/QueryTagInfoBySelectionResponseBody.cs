@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class QueryTagInfoBySelectionResponseBody : TeaModel {
         /// <summary>
-        /// The response code. **OK** indicates that the request is successful.
+        /// <para>The response code. <b>OK</b> indicates that the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<QueryTagInfoBySelectionResponseBodyData> Data { get; set; }
         public class QueryTagInfoBySelectionResponseBodyData : TeaModel {
             /// <summary>
-            /// The list of available authorization codes.
+            /// <para>The list of available authorization codes.</para>
             /// </summary>
             [NameInMap("AuthCodeList")]
             [Validation(Required=false)]
@@ -35,105 +38,144 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public string ComplexityType { get; set; }
 
             /// <summary>
-            /// The URL for the API demo.
+            /// <para>The URL for the API demo.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.2573870.0.0.3aa921cbOrtqJz">https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.2573870.0.0.3aa921cbOrtqJz</a></para>
             /// </summary>
             [NameInMap("DemoAddress")]
             [Validation(Required=false)]
             public string DemoAddress { get; set; }
 
             /// <summary>
-            /// The URL for the API documentation.
+            /// <para>The URL for the API documentation.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.2573870.0.0.3aa921cbOrtqJz">https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.2573870.0.0.3aa921cbOrtqJz</a></para>
             /// </summary>
             [NameInMap("DocAddress")]
             [Validation(Required=false)]
             public string DocAddress { get; set; }
 
             /// <summary>
-            /// The URL for the definitions of the enumerated values.
+            /// <para>The URL for the definitions of the enumerated values.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example.aliyundoc.com</para>
             /// </summary>
             [NameInMap("EnumDefinitionAddress")]
             [Validation(Required=false)]
             public string EnumDefinitionAddress { get; set; }
 
             /// <summary>
-            /// The flow name.
+            /// <para>The flow name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>process name</para>
             /// </summary>
             [NameInMap("FlowName")]
             [Validation(Required=false)]
             public string FlowName { get; set; }
 
             /// <summary>
-            /// The industry ID.
+            /// <para>The industry ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>83</para>
             /// </summary>
             [NameInMap("IndustryId")]
             [Validation(Required=false)]
             public long? IndustryId { get; set; }
 
             /// <summary>
-            /// The industry name.
+            /// <para>The industry name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>logistics</para>
             /// </summary>
             [NameInMap("IndustryName")]
             [Validation(Required=false)]
             public string IndustryName { get; set; }
 
             /// <summary>
-            /// The list of tag parameters.
+            /// <para>The list of tag parameters.</para>
             /// </summary>
             [NameInMap("ParamList")]
             [Validation(Required=false)]
             public List<QueryTagInfoBySelectionResponseBodyDataParamList> ParamList { get; set; }
             public class QueryTagInfoBySelectionResponseBodyDataParamList : TeaModel {
                 /// <summary>
-                /// The English name of the parameter.
+                /// <para>The English name of the parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>preame</para>
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
                 /// <summary>
-                /// The input hint.
+                /// <para>The input hint.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>none</para>
                 /// </summary>
                 [NameInMap("Hint")]
                 [Validation(Required=false)]
                 public string Hint { get; set; }
 
                 /// <summary>
-                /// Indicates whether the parameter is required.
+                /// <para>Indicates whether the parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Must")]
                 [Validation(Required=false)]
                 public bool? Must { get; set; }
 
                 /// <summary>
-                /// The Chinese name of the parameter.
+                /// <para>The Chinese name of the parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>none</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The type. The code that corresponds to EnumUIWidgetTypes.
+                /// <para>The type. The code that corresponds to EnumUIWidgetTypes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aqzx</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The definitions of the enumerated values such as Code or Desc.
+                /// <para>The definitions of the enumerated values such as Code or Desc.</para>
                 /// </summary>
                 [NameInMap("ValueDict")]
                 [Validation(Required=false)]
                 public List<QueryTagInfoBySelectionResponseBodyDataParamListValueDict> ValueDict { get; set; }
                 public class QueryTagInfoBySelectionResponseBodyDataParamListValueDict : TeaModel {
                     /// <summary>
-                    /// The English name.
+                    /// <para>The English name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Aliyun</para>
                     /// </summary>
                     [NameInMap("Code")]
                     [Validation(Required=false)]
                     public string Code { get; set; }
 
                     /// <summary>
-                    /// The Chinese name.
+                    /// <para>The Chinese name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>阿里云</para>
                     /// </summary>
                     [NameInMap("Desc")]
                     [Validation(Required=false)]
@@ -148,28 +190,40 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public string RichTextDescription { get; set; }
 
             /// <summary>
-            /// The scene ID.
+            /// <para>The scene ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>41</para>
             /// </summary>
             [NameInMap("SceneId")]
             [Validation(Required=false)]
             public long? SceneId { get; set; }
 
             /// <summary>
-            /// The scene name.
+            /// <para>The scene name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>General scenario</para>
             /// </summary>
             [NameInMap("SceneName")]
             [Validation(Required=false)]
             public string SceneName { get; set; }
 
             /// <summary>
-            /// The tag ID.
+            /// <para>The tag ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>31</para>
             /// </summary>
             [NameInMap("TagId")]
             [Validation(Required=false)]
             public long? TagId { get; set; }
 
             /// <summary>
-            /// The tag name.
+            /// <para>The tag name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Number ownership</para>
             /// </summary>
             [NameInMap("TagName")]
             [Validation(Required=false)]
@@ -178,24 +232,34 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1C3B8084-3A7D-570B-BC84-BF945A9CF65E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,69 +10,87 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class ThreeElementsVerificationRequest : TeaModel {
         /// <summary>
-        /// The authorization code.
+        /// <para>The authorization code.</para>
+        /// <remarks>
+        /// <para> On the <b>My Applications</b> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>QASDW@#**</para>
         /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
         /// <summary>
-        /// The ID card number to be verified.
+        /// <para>The ID card number to be verified.</para>
+        /// <list type="bullet">
+        /// <item><description>If the value of Mask is NORMAL, specify a value in plaintext for this field.</description></item>
+        /// <item><description>If the value of Mask is MD5, specify a MD5-encrypted value for this field.</description></item>
+        /// <item><description>If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> Letters in the encrypted strings are not case-sensitive.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   If the value of Mask is NORMAL, specify a value in plaintext for this field.
-        /// *   If the value of Mask is MD5, specify a MD5-encrypted value for this field.
-        /// *   If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.
-        /// 
-        /// >  Letters in the encrypted strings are not case-sensitive.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>83d8040d3cb2181e04****dc6ff5566d4493876a4a5da782887446356b0a787e</para>
         /// </summary>
         [NameInMap("CertCode")]
         [Validation(Required=false)]
         public string CertCode { get; set; }
 
         /// <summary>
-        /// The phone number to be verified.
+        /// <para>The phone number to be verified.</para>
+        /// <list type="bullet">
+        /// <item><description>If the value of Mask is NORMAL, specify a value in plaintext for this field.</description></item>
+        /// <item><description>If the value of Mask is MD5, specify a MD5-encrypted value for this field.</description></item>
+        /// <item><description>If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> Letters in the encrypted strings are not case-sensitive.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   If the value of Mask is NORMAL, specify a value in plaintext for this field.
-        /// *   If the value of Mask is MD5, specify a MD5-encrypted value for this field.
-        /// *   If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.
-        /// 
-        /// >  Letters in the encrypted strings are not case-sensitive.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1390000****</para>
         /// </summary>
         [NameInMap("InputNumber")]
         [Validation(Required=false)]
         public string InputNumber { get; set; }
 
         /// <summary>
-        /// The encryption method. Valid values:
+        /// <para>The encryption method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>NORMAL</b>: The phone number is not encrypted.</description></item>
+        /// <item><description><b>MD5</b></description></item>
+        /// <item><description><b>SHA256</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **NORMAL**: The phone number is not encrypted.
-        /// *   **MD5**
-        /// *   **SHA256**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>MD5</para>
         /// </summary>
         [NameInMap("Mask")]
         [Validation(Required=false)]
         public string Mask { get; set; }
 
         /// <summary>
-        /// The name to be verified.
+        /// <para>The name to be verified.</para>
+        /// <list type="bullet">
+        /// <item><description>If the value of Mask is NORMAL, specify a value in plaintext for this field.</description></item>
+        /// <item><description>If the value of Mask is MD5, specify a MD5-encrypted value for this field.</description></item>
+        /// <item><description>If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> Letters in the encrypted strings are not case-sensitive.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   If the value of Mask is NORMAL, specify a value in plaintext for this field.
-        /// *   If the value of Mask is MD5, specify a MD5-encrypted value for this field.
-        /// *   If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.
-        /// 
-        /// >  Letters in the encrypted strings are not case-sensitive.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Aliyun</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

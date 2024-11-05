@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class QueryPhoneTwiceTelVerifyRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("InputNumber")]
         [Validation(Required=false)]
         public string InputNumber { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("Mask")]
         [Validation(Required=false)]
@@ -43,7 +52,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

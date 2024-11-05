@@ -10,23 +10,37 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class DescribePhoneNumberAnalysisRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>QASDW@#**</para>
         /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1310000****</para>
         /// </summary>
         [NameInMap("InputNumber")]
         [Validation(Required=false)]
         public string InputNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>MD5</para>
+        /// </summary>
         [NameInMap("Mask")]
         [Validation(Required=false)]
         public string Mask { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("NumberType")]
         [Validation(Required=false)]
         public long? NumberType { get; set; }
@@ -35,6 +49,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("Rate")]
         [Validation(Required=false)]
         public long? Rate { get; set; }

@@ -8,44 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
-    public class UAIDConversionResponseBody : TeaModel {
+    public class DescribePhoneNumberAnalysisPaiResponseBody : TeaModel {
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public List<string> Data { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("Model")]
-        [Validation(Required=false)]
-        public UAIDConversionResponseBodyModel Model { get; set; }
-        public class UAIDConversionResponseBodyModel : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>示例值示例值示例值</para>
-            /// </summary>
-            [NameInMap("PhoneList")]
-            [Validation(Required=false)]
-            public string PhoneList { get; set; }
-
-        }
-
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

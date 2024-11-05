@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,33 +10,49 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class CertNoThreeElementVerificationRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>QASDW@#**</para>
         /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("CertName")]
         [Validation(Required=false)]
         public string CertName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3***************0</para>
         /// </summary>
         [NameInMap("CertNo")]
         [Validation(Required=false)]
         public string CertNo { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>iVBOFMKODOFNDFP123DFSMOO...</para>
         /// </summary>
         [NameInMap("CertPicture")]
         [Validation(Required=false)]
         public string CertPicture { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值示例值</para>
+        /// </summary>
         [NameInMap("Mask")]
         [Validation(Required=false)]
         public string Mask { get; set; }

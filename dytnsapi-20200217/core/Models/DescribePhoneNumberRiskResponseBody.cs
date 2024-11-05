@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public DescribePhoneNumberRiskResponseBodyData Data { get; set; }
         public class DescribePhoneNumberRiskResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值</para>
+            /// </summary>
             [NameInMap("VerifyResult")]
             [Validation(Required=false)]
             public string VerifyResult { get; set; }

@@ -10,39 +10,49 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class PhoneNumberStatusForVirtualRequest : TeaModel {
         /// <summary>
-        /// The authorization code.
+        /// <para>The authorization code.</para>
+        /// <remarks>
+        /// <para> On the <b>My Applications</b> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Dd1r***4id</para>
         /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
         /// <summary>
-        /// The phone number to be queried.
+        /// <para>The phone number to be queried.</para>
+        /// <list type="bullet">
+        /// <item><description>If the value of Mask is NORMAL, the value of this field is an 11-digit phone number.</description></item>
+        /// <item><description>If the value of Mask is MD5, the value of this field is a 32-bit encrypted string.</description></item>
+        /// <item><description>If the value of Mask is SHA256, the value of this field is a 64-bit encrypted string.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> Letters in the encrypted strings are not case-sensitive.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   If the value of Mask is NORMAL, the value of this field is an 11-digit phone number.
-        /// *   If the value of Mask is MD5, the value of this field is a 32-bit encrypted string.
-        /// *   If the value of Mask is SHA256, the value of this field is a 64-bit encrypted string.
-        /// 
-        /// >  Letters in the encrypted strings are not case-sensitive.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>139****0000</para>
         /// </summary>
         [NameInMap("InputNumber")]
         [Validation(Required=false)]
         public string InputNumber { get; set; }
 
         /// <summary>
-        /// The encryption method of the phone number. Valid values:
+        /// <para>The encryption method of the phone number. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>NORMAL</b>: The phone number is not encrypted.</description></item>
+        /// <item><description><b>MD5</b></description></item>
+        /// <item><description><b>SHA256</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **NORMAL**: The phone number is not encrypted.
-        /// *   **MD5**
-        /// *   **SHA256**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>NORMAL</para>
         /// </summary>
         [NameInMap("Mask")]
         [Validation(Required=false)]

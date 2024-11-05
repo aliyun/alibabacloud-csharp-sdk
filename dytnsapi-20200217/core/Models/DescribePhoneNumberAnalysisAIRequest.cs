@@ -10,27 +10,35 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class DescribePhoneNumberAnalysisAIRequest : TeaModel {
         /// <summary>
-        /// The authorization code.
+        /// <para>The authorization code.</para>
+        /// <remarks>
+        /// <para> On the ****<a href="https://dytns.console.aliyun.com/analysis/square"><b>Labels</b></a> page, find the label that you want to use, click Activate Now, enter the required information, and then submit your application. After your application is approved, you can obtain an authorization code.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  On the ****[**Labels**](https://dytns.console.aliyun.com/analysis/square) page, find the label that you want to use, click Activate Now, enter the required information, and then submit your application. After your application is approved, you can obtain an authorization code.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>HwD***nG</para>
         /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
         /// <summary>
-        /// The phone number to be queried.
+        /// <para>The phone number to be queried.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>187****5620</para>
         /// </summary>
         [NameInMap("InputNumber")]
         [Validation(Required=false)]
         public string InputNumber { get; set; }
 
         /// <summary>
-        /// The model parameter configuration. This field is required by some labels.
+        /// <para>The model parameter configuration. This field is required by some labels.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;trainingJobId&quot;: &quot;17**********48&quot;}</para>
         /// </summary>
         [NameInMap("ModelConfig")]
         [Validation(Required=false)]
@@ -41,9 +49,13 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The score threshold for the phone number. Valid values: **0 to 100**.
+        /// <para>The score threshold for the phone number. Valid values: <b>0 to 100</b>.</para>
+        /// <remarks>
+        /// <para> The system provided by Alibaba Cloud determines whether to accept the specified score threshold. When the system does not accept the specified score threshold, the value of this field is invalid.</para>
+        /// </remarks>
         /// 
-        /// >  The system provided by Alibaba Cloud determines whether to accept the specified score threshold. When the system does not accept the specified score threshold, the value of this field is invalid.
+        /// <b>Example:</b>
+        /// <para>96</para>
         /// </summary>
         [NameInMap("Rate")]
         [Validation(Required=false)]

@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class QueryPhoneNumberOnlineTimeRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值示例值示例值</para>
+        /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值</para>
+        /// </summary>
         [NameInMap("InputNumber")]
         [Validation(Required=false)]
         public string InputNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值示例值</para>
+        /// </summary>
         [NameInMap("Mask")]
         [Validation(Required=false)]
         public string Mask { get; set; }

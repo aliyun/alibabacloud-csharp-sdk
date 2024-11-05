@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值示例值</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -25,12 +33,20 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public UAIDCollectionResponseBodyModel Model { get; set; }
         public class UAIDCollectionResponseBodyModel : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值</para>
+            /// </summary>
             [NameInMap("Uaid")]
             [Validation(Required=false)]
             public string Uaid { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值示例值示例值</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

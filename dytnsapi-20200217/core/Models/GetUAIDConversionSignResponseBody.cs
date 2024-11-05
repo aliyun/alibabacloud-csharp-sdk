@@ -21,14 +21,26 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public GetUAIDConversionSignResponseBodyData Data { get; set; }
         public class GetUAIDConversionSignResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值示例值示例值</para>
+            /// </summary>
             [NameInMap("Carrier")]
             [Validation(Required=false)]
             public string Carrier { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值示例值</para>
+            /// </summary>
             [NameInMap("OutId")]
             [Validation(Required=false)]
             public string OutId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值</para>
+            /// </summary>
             [NameInMap("Sign")]
             [Validation(Required=false)]
             public string Sign { get; set; }

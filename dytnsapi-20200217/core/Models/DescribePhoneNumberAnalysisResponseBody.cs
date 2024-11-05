@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class DescribePhoneNumberAnalysisResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>OK</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -21,10 +29,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             [Validation(Required=false)]
             public List<DescribePhoneNumberAnalysisResponseBodyDataList> List { get; set; }
             public class DescribePhoneNumberAnalysisResponseBodyDataList : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>NO</para>
+                /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>18752785620</para>
+                /// </summary>
                 [NameInMap("Number")]
                 [Validation(Required=false)]
                 public string Number { get; set; }
@@ -33,10 +49,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>OK</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

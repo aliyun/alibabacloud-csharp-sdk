@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class QueryTagInfoBySelectionRequest : TeaModel {
         /// <summary>
-        /// The industry ID.
+        /// <para>The industry ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>58</para>
         /// </summary>
         [NameInMap("IndustryId")]
         [Validation(Required=false)]
@@ -29,14 +32,20 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The scene ID.
+        /// <para>The scene ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>83</para>
         /// </summary>
         [NameInMap("SceneId")]
         [Validation(Required=false)]
         public long? SceneId { get; set; }
 
         /// <summary>
-        /// The tag ID.
+        /// <para>The tag ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>71</para>
         /// </summary>
         [NameInMap("TagId")]
         [Validation(Required=false)]
