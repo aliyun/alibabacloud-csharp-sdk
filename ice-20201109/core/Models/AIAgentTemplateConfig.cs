@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string AvatarId { get; set; }
 
+            [NameInMap("BailianAppParams")]
+            [Validation(Required=false)]
+            public string BailianAppParams { get; set; }
+
+            [NameInMap("EnablePushToTalk")]
+            [Validation(Required=false)]
+            public bool? EnablePushToTalk { get; set; }
+
             [NameInMap("EnableVoiceInterrupt")]
             [Validation(Required=false)]
             public bool? EnableVoiceInterrupt { get; set; }
@@ -33,9 +41,25 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Greeting { get; set; }
 
+            [NameInMap("UseVoiceprint")]
+            [Validation(Required=false)]
+            public bool? UseVoiceprint { get; set; }
+
+            [NameInMap("UserOfflineTimeout")]
+            [Validation(Required=false)]
+            public int? UserOfflineTimeout { get; set; }
+
+            [NameInMap("UserOnlineTimeout")]
+            [Validation(Required=false)]
+            public int? UserOnlineTimeout { get; set; }
+
             [NameInMap("VoiceId")]
             [Validation(Required=false)]
             public string VoiceId { get; set; }
+
+            [NameInMap("VoiceprintId")]
+            [Validation(Required=false)]
+            public string VoiceprintId { get; set; }
 
             [NameInMap("Volume")]
             [Validation(Required=false)]
@@ -51,9 +75,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public int? AsrMaxSilence { get; set; }
 
+            [NameInMap("BailianAppParams")]
+            [Validation(Required=false)]
+            public string BailianAppParams { get; set; }
+
             [NameInMap("EnableIntelligentSegment")]
             [Validation(Required=false)]
             public bool? EnableIntelligentSegment { get; set; }
+
+            [NameInMap("EnablePushToTalk")]
+            [Validation(Required=false)]
+            public bool? EnablePushToTalk { get; set; }
 
             [NameInMap("EnableVoiceInterrupt")]
             [Validation(Required=false)]
@@ -67,9 +99,25 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Greeting { get; set; }
 
+            [NameInMap("UseVoiceprint")]
+            [Validation(Required=false)]
+            public bool? UseVoiceprint { get; set; }
+
+            [NameInMap("UserOfflineTimeout")]
+            [Validation(Required=false)]
+            public int? UserOfflineTimeout { get; set; }
+
+            [NameInMap("UserOnlineTimeout")]
+            [Validation(Required=false)]
+            public int? UserOnlineTimeout { get; set; }
+
             [NameInMap("VoiceId")]
             [Validation(Required=false)]
             public string VoiceId { get; set; }
+
+            [NameInMap("VoiceprintId")]
+            [Validation(Required=false)]
+            public string VoiceprintId { get; set; }
 
             [NameInMap("Volume")]
             [Validation(Required=false)]
@@ -85,6 +133,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public int? AsrMaxSilence { get; set; }
 
+            [NameInMap("BailianAppParams")]
+            [Validation(Required=false)]
+            public string BailianAppParams { get; set; }
+
+            [NameInMap("EnablePushToTalk")]
+            [Validation(Required=false)]
+            public bool? EnablePushToTalk { get; set; }
+
             [NameInMap("EnableVoiceInterrupt")]
             [Validation(Required=false)]
             public bool? EnableVoiceInterrupt { get; set; }
@@ -97,9 +153,25 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Greeting { get; set; }
 
+            [NameInMap("UseVoiceprint")]
+            [Validation(Required=false)]
+            public bool? UseVoiceprint { get; set; }
+
+            [NameInMap("UserOfflineTimeout")]
+            [Validation(Required=false)]
+            public int? UserOfflineTimeout { get; set; }
+
+            [NameInMap("UserOnlineTimeout")]
+            [Validation(Required=false)]
+            public int? UserOnlineTimeout { get; set; }
+
             [NameInMap("VoiceId")]
             [Validation(Required=false)]
             public string VoiceId { get; set; }
+
+            [NameInMap("VoiceprintId")]
+            [Validation(Required=false)]
+            public string VoiceprintId { get; set; }
 
             [NameInMap("Volume")]
             [Validation(Required=false)]

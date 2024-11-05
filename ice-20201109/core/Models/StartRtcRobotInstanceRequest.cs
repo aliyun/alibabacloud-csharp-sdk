@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public StartRtcRobotInstanceRequestConfig Config { get; set; }
         public class StartRtcRobotInstanceRequestConfig : TeaModel {
+            [NameInMap("AsrMaxSilence")]
+            [Validation(Required=false)]
+            public int? AsrMaxSilence { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>true</para>
@@ -45,6 +49,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Greeting { get; set; }
 
+            [NameInMap("UseVoiceprint")]
+            [Validation(Required=false)]
+            public bool? UseVoiceprint { get; set; }
+
+            [NameInMap("UserOfflineTimeout")]
+            [Validation(Required=false)]
+            public int? UserOfflineTimeout { get; set; }
+
+            [NameInMap("UserOnlineTimeout")]
+            [Validation(Required=false)]
+            public int? UserOnlineTimeout { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>zhixiaoxia</para>
@@ -52,6 +68,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("VoiceId")]
             [Validation(Required=false)]
             public string VoiceId { get; set; }
+
+            [NameInMap("VoiceprintId")]
+            [Validation(Required=false)]
+            public string VoiceprintId { get; set; }
 
         }
 

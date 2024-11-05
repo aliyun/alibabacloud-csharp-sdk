@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string JobParams { get; set; }
 
+        [NameInMap("ModelId")]
+        [Validation(Required=false)]
+        public string ModelId { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

@@ -25300,6 +25300,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["JobParams"] = request.JobParams;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                query["ModelId"] = request.ModelId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -25383,6 +25387,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobParams))
             {
                 query["JobParams"] = request.JobParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                query["ModelId"] = request.ModelId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
