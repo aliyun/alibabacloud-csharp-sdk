@@ -1,3 +1,6 @@
+2024-11-06 Version: 3.1.1
+- Generated csharp 2018-05-10 for Cdn.
+
 2024-11-05 Version: 3.1.0
 - Support API DescribeCdnTypes.
 - Support API DescribeUserCdnStatus.
