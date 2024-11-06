@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class BatchPutDcdnKvRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("KvList")]
         [Validation(Required=false)]
@@ -25,14 +25,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public long? ExpirationTtl { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -41,9 +41,11 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The name of the namespace.
+        /// <para>The name of the namespace.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ns1</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

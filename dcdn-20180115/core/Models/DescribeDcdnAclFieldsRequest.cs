@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnAclFieldsRequest : TeaModel {
         /// <summary>
-        /// The access language. Default value: en. Valid values:
+        /// <para>The access language. Default value: en. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **en**: English
-        /// *   **zh**: Chinese
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

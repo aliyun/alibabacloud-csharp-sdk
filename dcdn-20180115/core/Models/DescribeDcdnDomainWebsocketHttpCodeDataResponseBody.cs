@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody : TeaModel {
         /// <summary>
-        /// The time interval between the data entries returned. Unit: seconds.
+        /// <para>The time interval between the data entries returned. Unit: seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3600</para>
         /// </summary>
         [NameInMap("DataInterval")]
         [Validation(Required=false)]
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// The accelerated domain name.
+        /// <para>The accelerated domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range during which data was queried.
+        /// <para>The end of the time range during which data was queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2018-03-01T13:00:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
         /// </summary>
         [NameInMap("HttpCodeDataPerInterval")]
         [Validation(Required=false)]
@@ -42,14 +51,17 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerIntervalDataModule : TeaModel {
                 /// <summary>
-                /// The timestamp of the returned data.
+                /// <para>The timestamp of the returned data.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2018-03-01T13:00:00Z</para>
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
                 /// <summary>
-                /// The proportions of the HTTP status codes.
+                /// <para>The proportions of the HTTP status codes.</para>
                 /// </summary>
                 [NameInMap("WebsocketHttpCode")]
                 [Validation(Required=false)]
@@ -60,21 +72,30 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                     public List<DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerIntervalDataModuleWebsocketHttpCodeHttpCodeDataModule> HttpCodeDataModule { get; set; }
                     public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerIntervalDataModuleWebsocketHttpCodeHttpCodeDataModule : TeaModel {
                         /// <summary>
-                        /// The HTTP status code returned.
+                        /// <para>The HTTP status code returned.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>404</para>
                         /// </summary>
                         [NameInMap("Code")]
                         [Validation(Required=false)]
                         public int? Code { get; set; }
 
                         /// <summary>
-                        /// The total number of entries returned.
+                        /// <para>The total number of entries returned.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>16</para>
                         /// </summary>
                         [NameInMap("Count")]
                         [Validation(Required=false)]
                         public float? Count { get; set; }
 
                         /// <summary>
-                        /// The proportion of the HTTP status code.
+                        /// <para>The proportion of the HTTP status code.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>100</para>
                         /// </summary>
                         [NameInMap("Proportion")]
                         [Validation(Required=false)]
@@ -89,14 +110,20 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>91FC2D9D-B042-4634-8A5C-7B8E7482C22D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The start of the time range during which data was queried.
+        /// <para>The start of the time range during which data was queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2018-03-01T05:00:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

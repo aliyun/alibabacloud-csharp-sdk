@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DeleteDcdnWafGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the custom WAF rule group.
+        /// <para>The ID of the custom WAF rule group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30000135</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnL2IpsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C370DAF1-C838-4288-A1A0-9A87633D248E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The CIDR blocks of the POPs.
+        /// <para>The CIDR blocks of the POPs.</para>
         /// </summary>
         [NameInMap("Vips")]
         [Validation(Required=false)]

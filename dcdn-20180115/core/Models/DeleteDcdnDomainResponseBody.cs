@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DeleteDcdnDomainResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

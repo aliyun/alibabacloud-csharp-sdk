@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnSSLCertificateListRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain secured by the SSL certificate. HTTPS secure acceleration is enabled for the accelerated domain name.
+        /// <para>The accelerated domain secured by the SSL certificate. HTTPS secure acceleration is enabled for the accelerated domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com">www.example.com</a></para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -21,21 +24,30 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page. Default value: 1.
+        /// <para>The number of the page. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page. Valid values: **1 to 1000**.
+        /// <para>The maximum number of entries to return on each page. Valid values: <b>1 to 1000</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The keyword that is used to query the certificate.
+        /// <para>The keyword that is used to query the certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>taobao</para>
         /// </summary>
         [NameInMap("SearchKeyword")]
         [Validation(Required=false)]

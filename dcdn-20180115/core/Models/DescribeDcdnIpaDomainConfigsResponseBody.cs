@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnIpaDomainConfigsResponseBody : TeaModel {
         /// <summary>
-        /// The configurations of the domain name.
+        /// <para>The configurations of the domain name.</para>
         /// </summary>
         [NameInMap("DomainConfigs")]
         [Validation(Required=false)]
@@ -21,14 +21,17 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnIpaDomainConfigsResponseBodyDomainConfigsDomainConfig> DomainConfig { get; set; }
             public class DescribeDcdnIpaDomainConfigsResponseBodyDomainConfigsDomainConfig : TeaModel {
                 /// <summary>
-                /// The ID of the configuration.
+                /// <para>The ID of the configuration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5003576</para>
                 /// </summary>
                 [NameInMap("ConfigId")]
                 [Validation(Required=false)]
                 public string ConfigId { get; set; }
 
                 /// <summary>
-                /// The list of features.
+                /// <para>The list of features.</para>
                 /// </summary>
                 [NameInMap("FunctionArgs")]
                 [Validation(Required=false)]
@@ -39,14 +42,20 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                     public List<DescribeDcdnIpaDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgsFunctionArg> FunctionArg { get; set; }
                     public class DescribeDcdnIpaDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgsFunctionArg : TeaModel {
                         /// <summary>
-                        /// The name of the configuration.
+                        /// <para>The name of the configuration.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>file_type</para>
                         /// </summary>
                         [NameInMap("ArgName")]
                         [Validation(Required=false)]
                         public string ArgName { get; set; }
 
                         /// <summary>
-                        /// The value of the configuration.
+                        /// <para>The value of the configuration.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>txt</para>
                         /// </summary>
                         [NameInMap("ArgValue")]
                         [Validation(Required=false)]
@@ -57,19 +66,26 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 }
 
                 /// <summary>
-                /// The name of the feature.
+                /// <para>The name of the feature.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>protogw</para>
                 /// </summary>
                 [NameInMap("FunctionName")]
                 [Validation(Required=false)]
                 public string FunctionName { get; set; }
 
                 /// <summary>
-                /// The configuration status of the feature. Valid values:
+                /// <para>The configuration status of the feature. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>success</b></description></item>
+                /// <item><description><b>testing</b></description></item>
+                /// <item><description><b>failed</b></description></item>
+                /// <item><description><b>configuring</b></description></item>
+                /// </list>
                 /// 
-                /// *   **success**
-                /// *   **testing**
-                /// *   **failed**
-                /// *   **configuring**
+                /// <b>Example:</b>
+                /// <para>success</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -80,7 +96,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F8AA0364-0FDB-4AD5-AC74-D69FAB8924ED</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

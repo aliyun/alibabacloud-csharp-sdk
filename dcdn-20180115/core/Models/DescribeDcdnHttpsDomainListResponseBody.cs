@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnHttpsDomainListResponseBody : TeaModel {
         /// <summary>
-        /// The information about the certificate.
+        /// <para>The information about the certificate.</para>
         /// </summary>
         [NameInMap("CertInfos")]
         [Validation(Required=false)]
@@ -21,64 +21,90 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnHttpsDomainListResponseBodyCertInfosCertInfo> CertInfo { get; set; }
             public class DescribeDcdnHttpsDomainListResponseBodyCertInfosCertInfo : TeaModel {
                 /// <summary>
-                /// The returned primary domain name of the certificate.
+                /// <para>The returned primary domain name of the certificate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>*.com</para>
                 /// </summary>
                 [NameInMap("CertCommonName")]
                 [Validation(Required=false)]
                 public string CertCommonName { get; set; }
 
                 /// <summary>
-                /// The time at which the certificate expires.
+                /// <para>The time at which the certificate expires.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2018-12-26 14:45:09</para>
                 /// </summary>
                 [NameInMap("CertExpireTime")]
                 [Validation(Required=false)]
                 public string CertExpireTime { get; set; }
 
                 /// <summary>
-                /// The name of the certificate.
+                /// <para>The name of the certificate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cert</para>
                 /// </summary>
                 [NameInMap("CertName")]
                 [Validation(Required=false)]
                 public string CertName { get; set; }
 
                 /// <summary>
-                /// The time at which the certificate became effective.
+                /// <para>The time at which the certificate became effective.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2018-11-26 14:45:09</para>
                 /// </summary>
                 [NameInMap("CertStartTime")]
                 [Validation(Required=false)]
                 public string CertStartTime { get; set; }
 
                 /// <summary>
-                /// The status of the certificate. Valid values:
+                /// <para>The status of the certificate. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>ok</b>: The certificate is working as expected.</description></item>
+                /// <item><description><b>mismatch</b>: The certificate does not match the specified domain name.</description></item>
+                /// <item><description><b>expired</b>: The certificate has expired.</description></item>
+                /// <item><description><b>expire_soon</b>: The certificate is about to expire.</description></item>
+                /// </list>
                 /// 
-                /// *   **ok**: The certificate is working as expected.
-                /// *   **mismatch**: The certificate does not match the specified domain name.
-                /// *   **expired**: The certificate has expired.
-                /// *   **expire_soon**: The certificate is about to expire.
+                /// <b>Example:</b>
+                /// <para>mismatch</para>
                 /// </summary>
                 [NameInMap("CertStatus")]
                 [Validation(Required=false)]
                 public string CertStatus { get; set; }
 
                 /// <summary>
-                /// The type of the certificate. Valid values:
+                /// <para>The type of the certificate. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>cas</b>: a certificate that is purchased by using Certificate Management Service</description></item>
+                /// <item><description><b>upload</b>: a custom certificate that you upload</description></item>
+                /// </list>
                 /// 
-                /// *   **cas**: a certificate that is purchased by using Certificate Management Service
-                /// *   **upload**: a custom certificate that you upload
+                /// <b>Example:</b>
+                /// <para>upload</para>
                 /// </summary>
                 [NameInMap("CertType")]
                 [Validation(Required=false)]
                 public string CertType { get; set; }
 
                 /// <summary>
-                /// The time at which the certificate was updated.
+                /// <para>The time at which the certificate was updated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-01-08 18:33:16</para>
                 /// </summary>
                 [NameInMap("CertUpdateTime")]
                 [Validation(Required=false)]
                 public string CertUpdateTime { get; set; }
 
                 /// <summary>
-                /// The accelerated domain name.
+                /// <para>The accelerated domain name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>*.com</para>
                 /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
@@ -89,14 +115,20 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F5E8DF64-7175-4186-9B06-F002C0BBD0C5</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

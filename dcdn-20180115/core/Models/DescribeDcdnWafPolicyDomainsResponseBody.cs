@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafPolicyDomainsResponseBody : TeaModel {
         /// <summary>
-        /// The accelerated domain names.
+        /// <para>The accelerated domain names.</para>
         /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public List<DescribeDcdnWafPolicyDomainsResponseBodyDomains> Domains { get; set; }
         public class DescribeDcdnWafPolicyDomainsResponseBodyDomains : TeaModel {
             /// <summary>
-            /// The accelerated domain name that is protected by the specified protection policy.
+            /// <para>The accelerated domain name that is protected by the specified protection policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example.com</para>
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
@@ -26,28 +29,40 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The page number of the returned page, which is the same as the PageNumber parameter in request parameters.
+        /// <para>The page number of the returned page, which is the same as the PageNumber parameter in request parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of domain names returned per page, which is the same as the PageSize parameter in request parameters.
+        /// <para>The number of domain names returned per page, which is the same as the PageSize parameter in request parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>153ca2cd-3c01-44be-b480-64dbc6c88630</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of domain names returned.
+        /// <para>The total number of domain names returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

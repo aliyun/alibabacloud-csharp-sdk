@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class UpdateDcdnUserRealTimeDeliveryFieldResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3EACD23C-F49F-4BF7-B9AD-C2CD3BA888C4</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

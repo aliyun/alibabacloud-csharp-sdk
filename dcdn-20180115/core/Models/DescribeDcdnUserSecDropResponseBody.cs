@@ -10,31 +10,44 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnUserSecDropResponseBody : TeaModel {
         /// <summary>
-        /// The number of packets that are blocked.
+        /// <para>The number of packets that are blocked.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>233023208</para>
         /// </summary>
         [NameInMap("Drops")]
         [Validation(Required=false)]
         public int? Drops { get; set; }
 
         /// <summary>
-        /// Indicates whether the information is found.
+        /// <para>Indicates whether the information is found.</para>
+        /// <list type="bullet">
+        /// <item><description>Found</description></item>
+        /// <item><description>Not Found</description></item>
+        /// </list>
         /// 
-        /// *   Found
-        /// *   Not Found
+        /// <b>Example:</b>
+        /// <para>Found</para>
         /// </summary>
         [NameInMap("Msg")]
         [Validation(Required=false)]
         public string Msg { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4A1295C0-7A5C-4F27-8D70-C3A648E7037F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The character string that is concatenated based on the request parameters and is used to locate causes when data is not found.
+        /// <para>The character string that is concatenated based on the request parameters and is used to locate causes when data is not found.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1day10811******6429wafDCDN</para>
         /// </summary>
         [NameInMap("UuidStr")]
         [Validation(Required=false)]

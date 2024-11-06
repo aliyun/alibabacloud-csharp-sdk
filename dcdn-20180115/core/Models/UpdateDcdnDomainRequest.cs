@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class UpdateDcdnDomainRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name. You can specify only one domain name in each call.
+        /// <para>The accelerated domain name. You can specify only one domain name in each call.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -23,7 +25,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-xxxxx</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -34,14 +39,20 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The information about the addresses of origin servers.
+        /// <para>The information about the addresses of origin servers.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;content&quot;:&quot;10.10.10.10&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80}]</para>
         /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]
         public string Sources { get; set; }
 
         /// <summary>
-        /// The top-level domain.
+        /// <para>The top-level domain.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>yourTopLevelDomain</para>
         /// </summary>
         [NameInMap("TopLevelDomain")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnBlockedRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The information about the country or region.
+        /// <para>The information about the country or region.</para>
         /// </summary>
         [NameInMap("InfoList")]
         [Validation(Required=false)]
@@ -21,21 +21,30 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnBlockedRegionsResponseBodyInfoListInfoItem> InfoItem { get; set; }
             public class DescribeDcdnBlockedRegionsResponseBodyInfoListInfoItem : TeaModel {
                 /// <summary>
-                /// The larger region to which the country or region belongs.
+                /// <para>The larger region to which the country or region belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Middle East</para>
                 /// </summary>
                 [NameInMap("Continent")]
                 [Validation(Required=false)]
                 public string Continent { get; set; }
 
                 /// <summary>
-                /// The abbreviation of the name of the country or region.
+                /// <para>The abbreviation of the name of the country or region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>AE</para>
                 /// </summary>
                 [NameInMap("CountriesAndRegions")]
                 [Validation(Required=false)]
                 public string CountriesAndRegions { get; set; }
 
                 /// <summary>
-                /// The name of the country or region.
+                /// <para>The name of the country or region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>United Arab Emirates</para>
                 /// </summary>
                 [NameInMap("CountriesAndRegionsName")]
                 [Validation(Required=false)]
@@ -46,7 +55,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BFFCDFAD-DACC-484E-9BE6-0AF3B3A0DD23</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

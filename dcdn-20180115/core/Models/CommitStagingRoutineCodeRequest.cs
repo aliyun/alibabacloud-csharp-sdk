@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class CommitStagingRoutineCodeRequest : TeaModel {
         /// <summary>
-        /// The description of the code version.
+        /// <para>The description of the code version.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Hello World</para>
         /// </summary>
         [NameInMap("CodeDescription")]
         [Validation(Required=false)]
         public string CodeDescription { get; set; }
 
         /// <summary>
-        /// The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
+        /// <para>The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

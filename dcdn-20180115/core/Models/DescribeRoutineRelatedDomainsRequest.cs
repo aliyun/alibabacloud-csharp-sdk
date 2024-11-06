@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeRoutineRelatedDomainsRequest : TeaModel {
         /// <summary>
-        /// The name of the routine. The name is unique in the same account.
+        /// <para>The name of the routine. The name is unique in the same account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>routine_test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

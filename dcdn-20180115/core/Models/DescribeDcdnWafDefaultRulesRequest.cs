@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafDefaultRulesRequest : TeaModel {
         /// <summary>
-        /// The query conditions. The value is a string in the JSON format. Format: `QueryArgs={"DefenseScene":"anti_scan"}`
+        /// <para>The query conditions. The value is a string in the JSON format. Format: <c>QueryArgs={&quot;DefenseScene&quot;:&quot;anti_scan&quot;}</c></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;DefenseScene&quot;:&quot;anti_scan&quot;}</para>
         /// </summary>
         [NameInMap("QueryArgs")]
         [Validation(Required=false)]

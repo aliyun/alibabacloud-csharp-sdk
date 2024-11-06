@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnVerifyContentRequest : TeaModel {
         /// <summary>
-        /// The domain name for which you want to query the ownership verification content. You can specify only one domain name in one request.
+        /// <para>The domain name for which you want to query the ownership verification content. You can specify only one domain name in one request.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para><b>example</b>.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

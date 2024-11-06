@@ -10,36 +10,49 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnRefreshTasksRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name. You can specify only one domain name in each request.
+        /// <para>The accelerated domain name. You can specify only one domain name in each request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para>The end time must be later than the start time.</para>
+        /// </remarks>
         /// 
-        /// > The end time must be later than the start time.
+        /// <b>Example:</b>
+        /// <para>2017-01-01T12:13:20Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The path of the object. The path is used as a condition for exact matching.
+        /// <para>The path of the object. The path is used as a condition for exact matching.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://example.com/examplefile.txt">http://example.com/examplefile.txt</a></para>
         /// </summary>
         [NameInMap("ObjectPath")]
         [Validation(Required=false)]
         public string ObjectPath { get; set; }
 
         /// <summary>
-        /// The type of the task.
+        /// <para>The type of the task.</para>
+        /// <list type="bullet">
+        /// <item><description><b>file</b>: URL-based refresh</description></item>
+        /// <item><description><b>directory</b>: directory-based refresh</description></item>
+        /// <item><description><b>preload</b>: URL-based prefetch</description></item>
+        /// </list>
+        /// <para>If you set <b>DomainName</b> or <b>Status</b>, you must also set this parameter.</para>
         /// 
-        /// *   **file**: URL-based refresh
-        /// *   **directory**: directory-based refresh
-        /// *   **preload**: URL-based prefetch
-        /// 
-        /// If you set **DomainName** or **Status**, you must also set this parameter.
+        /// <b>Example:</b>
+        /// <para>file</para>
         /// </summary>
         [NameInMap("ObjectType")]
         [Validation(Required=false)]
@@ -50,14 +63,20 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Valid values: **1** to **100000**.
+        /// <para>The number of the page to return. Valid values: <b>1</b> to <b>100000</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **20**. Maximum value: **50**. Valid values: **1** to **50**.
+        /// <para>The number of entries to return on each page. Default value: <b>20</b>. Maximum value: <b>50</b>. Valid values: <b>1</b> to <b>50</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -68,25 +87,35 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2017-01-01T12:12:20Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The status of the task.
+        /// <para>The status of the task.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Complete</b>: The task is complete.</description></item>
+        /// <item><description><b>Refreshing</b>: The task is in progress.</description></item>
+        /// <item><description><b>Failed</b>: The task failed.</description></item>
+        /// </list>
         /// 
-        /// *   **Complete**: The task is complete.
-        /// *   **Refreshing**: The task is in progress.
-        /// *   **Failed**: The task failed.
+        /// <b>Example:</b>
+        /// <para>Complete</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The ID of the task. A task ID is assigned when you create a refresh or prefetch task.
+        /// <para>The ID of the task. A task ID is assigned when you create a refresh or prefetch task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>704225667</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

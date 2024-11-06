@@ -10,17 +10,21 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class CheckDcdnProjectExistResponseBody : TeaModel {
         /// <summary>
-        /// The returned results.
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public CheckDcdnProjectExistResponseBodyContent Content { get; set; }
         public class CheckDcdnProjectExistResponseBodyContent : TeaModel {
             /// <summary>
-            /// Indicates whether the real-time log delivery project exists. Valid values:
+            /// <para>Indicates whether the real-time log delivery project exists. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b></description></item>
+            /// </list>
             /// 
-            /// *   **false**
-            /// *   **true**
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Exist")]
             [Validation(Required=false)]
@@ -29,7 +33,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>b021e538-9dde-46ed-a1f2-9469da8f3e77</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

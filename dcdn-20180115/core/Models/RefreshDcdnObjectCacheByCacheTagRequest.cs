@@ -10,19 +10,29 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class RefreshDcdnObjectCacheByCacheTagRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tag1,tag2</para>
         /// </summary>
         [NameInMap("CacheTag")]
         [Validation(Required=false)]
         public string CacheTag { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]
         public bool? Force { get; set; }

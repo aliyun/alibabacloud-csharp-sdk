@@ -10,21 +10,26 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnUserVipsByDomainRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to query the virtual IP addresses of only healthy POPs. Valid value:
+        /// <para>Specifies whether to query the virtual IP addresses of only healthy POPs. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b>: queries healthy VIPs.</description></item>
+        /// <item><description><b>off</b>: queries all VIPs.</description></item>
+        /// </list>
         /// 
-        /// *   **on**: queries healthy VIPs.
-        /// *   **off**: queries all VIPs.
+        /// <b>Example:</b>
+        /// <para>on</para>
         /// </summary>
         [NameInMap("Available")]
         [Validation(Required=false)]
         public string Available { get; set; }
 
         /// <summary>
-        /// The accelerated domain name. You can specify only one domain name.
+        /// <para>The accelerated domain name. You can specify only one domain name.</para>
+        /// <para>Enumeration values: example.com</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Enumeration values: example.com
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

@@ -10,20 +10,23 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DeleteDcdnSpecificStagingConfigRequest : TeaModel {
         /// <summary>
-        /// The ID of the configuration to be deleted. You can specify multiple configuration IDs and separate them with commas (,).
+        /// <para>The ID of the configuration to be deleted. You can specify multiple configuration IDs and separate them with commas (,).</para>
+        /// <para>You can call the DescribeDcdnDomainStagingConfig operation to query the environment configuration.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the DescribeDcdnDomainStagingConfig operation to query the environment configuration.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2317</para>
         /// </summary>
         [NameInMap("ConfigId")]
         [Validation(Required=false)]
         public string ConfigId { get; set; }
 
         /// <summary>
-        /// The accelerated domain name. You can specify only one domain name in each call.
+        /// <para>The accelerated domain name. You can specify only one domain name in each call.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

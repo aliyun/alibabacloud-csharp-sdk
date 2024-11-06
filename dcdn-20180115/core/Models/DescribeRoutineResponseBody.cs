@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeRoutineResponseBody : TeaModel {
         /// <summary>
-        /// The metadata of the routine. The following table describes the fields.
+        /// <para>The metadata of the routine. The following table describes the fields.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public Dictionary<string, object> Content { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4DBA68F5-04A9-406B-B1E4-F2CB635E103F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

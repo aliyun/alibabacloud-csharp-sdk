@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DeleteRoutineConfEnvsShrinkRequest : TeaModel {
         /// <summary>
-        /// The custom canary release environments that you want to delete.
+        /// <para>The custom canary release environments that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[&quot;presetCanaryZheJiang&quot;]</para>
         /// </summary>
         [NameInMap("Envs")]
         [Validation(Required=false)]
         public string EnvsShrink { get; set; }
 
         /// <summary>
-        /// The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
+        /// <para>The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

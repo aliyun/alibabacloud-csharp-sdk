@@ -10,49 +10,64 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnSecSpecInfoResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>32f6cbb7-13e5-403a-9941-4d4e978dd227</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The code and configurations of the security rules.
+        /// <para>The code and configurations of the security rules.</para>
         /// </summary>
         [NameInMap("SpecInfos")]
         [Validation(Required=false)]
         public List<DescribeDcdnSecSpecInfoResponseBodySpecInfos> SpecInfos { get; set; }
         public class DescribeDcdnSecSpecInfoResponseBodySpecInfos : TeaModel {
             /// <summary>
-            /// The code of the security rule.
+            /// <para>The code of the security rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>accurate_***</para>
             /// </summary>
             [NameInMap("RuleCode")]
             [Validation(Required=false)]
             public string RuleCode { get; set; }
 
             /// <summary>
-            /// The configurations of the security rule.
+            /// <para>The configurations of the security rule.</para>
             /// </summary>
             [NameInMap("RuleConfigs")]
             [Validation(Required=false)]
             public List<DescribeDcdnSecSpecInfoResponseBodySpecInfosRuleConfigs> RuleConfigs { get; set; }
             public class DescribeDcdnSecSpecInfoResponseBodySpecInfosRuleConfigs : TeaModel {
                 /// <summary>
-                /// The configuration code of the security rule.
+                /// <para>The configuration code of the security rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>custom_****_number</para>
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
                 /// <summary>
-                /// The configuration expression of the security rule.
+                /// <para>The configuration expression of the security rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>equal</para>
                 /// </summary>
                 [NameInMap("Expr")]
                 [Validation(Required=false)]
                 public string Expr { get; set; }
 
                 /// <summary>
-                /// The value of the configuration expression of the security rule.
+                /// <para>The value of the configuration expression of the security rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -63,7 +78,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The version of secure DCDN.
+        /// <para>The version of secure DCDN.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>enterprise</para>
         /// </summary>
         [NameInMap("Version")]
         [Validation(Required=false)]

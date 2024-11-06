@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainHitRateDataResponseBody : TeaModel {
         /// <summary>
-        /// The time interval between the data entries returned. Unit: seconds.
+        /// <para>The time interval between the data entries returned. Unit: seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3600</para>
         /// </summary>
         [NameInMap("DataInterval")]
         [Validation(Required=false)]
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// The accelerated domain name.
+        /// <para>The accelerated domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range during which data was queried.
+        /// <para>The end of the time range during which data was queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2018-03-02T15:00:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The byte hit ratio at each time interval. The byte hit ratio is measured in percentage.
+        /// <para>The byte hit ratio at each time interval. The byte hit ratio is measured in percentage.</para>
         /// </summary>
         [NameInMap("HitRatePerInterval")]
         [Validation(Required=false)]
@@ -42,21 +51,30 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnDomainHitRateDataResponseBodyHitRatePerIntervalDataModule> DataModule { get; set; }
             public class DescribeDcdnDomainHitRateDataResponseBodyHitRatePerIntervalDataModule : TeaModel {
                 /// <summary>
-                /// The byte hit ratio.
+                /// <para>The byte hit ratio.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("ByteHitRate")]
                 [Validation(Required=false)]
                 public float? ByteHitRate { get; set; }
 
                 /// <summary>
-                /// The request hit ratio.
+                /// <para>The request hit ratio.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("ReqHitRate")]
                 [Validation(Required=false)]
                 public float? ReqHitRate { get; set; }
 
                 /// <summary>
-                /// The timestamp of the returned data.
+                /// <para>The timestamp of the returned data.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2018-03-02T13:00:00Z</para>
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
@@ -67,14 +85,20 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4D07ABFE-4737-4834-B1B9-A661308C47B4</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range during which data was queried.
+        /// <para>The beginning of the time range during which data was queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2018-03-02T12:00:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

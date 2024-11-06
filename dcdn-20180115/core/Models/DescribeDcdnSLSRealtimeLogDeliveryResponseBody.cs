@@ -10,91 +10,126 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody : TeaModel {
         /// <summary>
-        /// The configuration results of the domain name.
+        /// <para>The configuration results of the domain name.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public DescribeDcdnSLSRealtimeLogDeliveryResponseBodyContent Content { get; set; }
         public class DescribeDcdnSLSRealtimeLogDeliveryResponseBodyContent : TeaModel {
             /// <summary>
-            /// The type of the collected logs. Default value: cdn_log_access_l1. Valid values:
+            /// <para>The type of the collected logs. Default value: cdn_log_access_l1. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>cdn_log_access_l1</b>: access logs of Dynamic Content Delivery Network (DCDN) points of presence (POPs)</description></item>
+            /// <item><description><b>cdn_log_origin</b>: back-to-origin logs</description></item>
+            /// <item><description><b>cdn_log_er</b>: EdgeRoutine logs</description></item>
+            /// </list>
             /// 
-            /// *   **cdn_log_access_l1**: access logs of Dynamic Content Delivery Network (DCDN) points of presence (POPs)
-            /// *   **cdn_log_origin**: back-to-origin logs
-            /// *   **cdn_log_er**: EdgeRoutine logs
+            /// <b>Example:</b>
+            /// <para>cdn_log_access_l1</para>
             /// </summary>
             [NameInMap("BusinessType")]
             [Validation(Required=false)]
             public string BusinessType { get; set; }
 
             /// <summary>
-            /// The region from which logs were collected.
+            /// <para>The region from which logs were collected.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn</para>
             /// </summary>
             [NameInMap("DataCenter")]
             [Validation(Required=false)]
             public string DataCenter { get; set; }
 
             /// <summary>
-            /// The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).
+            /// <para>The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example.com,example.org</para>
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
 
             /// <summary>
-            /// The name of the field. For more information about fields in real-time log entries, see [Fields in a real-time log](https://help.aliyun.com/document_detail/324199.html).
+            /// <para>The name of the field. For more information about fields in real-time log entries, see <a href="https://help.aliyun.com/document_detail/324199.html">Fields in a real-time log</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>field1,field2</para>
             /// </summary>
             [NameInMap("FieldName")]
             [Validation(Required=false)]
             public string FieldName { get; set; }
 
             /// <summary>
-            /// The name of the project.
+            /// <para>The name of the project.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example</para>
             /// </summary>
             [NameInMap("ProjectName")]
             [Validation(Required=false)]
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// The name of the Logstore.
+            /// <para>The name of the Logstore.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example-cn</para>
             /// </summary>
             [NameInMap("SLSLogStore")]
             [Validation(Required=false)]
             public string SLSLogStore { get; set; }
 
             /// <summary>
-            /// The name of the log file.
+            /// <para>The name of the log file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example-cn</para>
             /// </summary>
             [NameInMap("SLSProject")]
             [Validation(Required=false)]
             public string SLSProject { get; set; }
 
             /// <summary>
-            /// The region to which logs were delivered.
+            /// <para>The region to which logs were delivered.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("SLSRegion")]
             [Validation(Required=false)]
             public string SLSRegion { get; set; }
 
             /// <summary>
-            /// The sampling rate.
+            /// <para>The sampling rate.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.0</para>
             /// </summary>
             [NameInMap("SamplingRate")]
             [Validation(Required=false)]
             public string SamplingRate { get; set; }
 
             /// <summary>
-            /// The status of real-time logs.
+            /// <para>The status of real-time logs.</para>
+            /// <list type="bullet">
+            /// <item><description><b>success</b></description></item>
+            /// <item><description><b>fail</b></description></item>
+            /// </list>
             /// 
-            /// *   **success**
-            /// *   **fail**
+            /// <b>Example:</b>
+            /// <para>success</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The type of log delivery. Only **SLS_POST** is supported.
+            /// <para>The type of log delivery. Only <b>SLS_POST</b> is supported.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SLS_POST</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -103,7 +138,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F32C57AA-7BF8-49AE-A2CC-9F42390F5A19</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

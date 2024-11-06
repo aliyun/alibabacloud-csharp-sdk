@@ -10,29 +10,37 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class AddDcdnDomainRequest : TeaModel {
         /// <summary>
-        /// The URL that is used for health checks.
+        /// <para>The URL that is used for health checks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("CheckUrl")]
         [Validation(Required=false)]
         public string CheckUrl { get; set; }
 
         /// <summary>
-        /// The domain name that you want to add. You can specify only one domain name in each request.
+        /// <para>The domain name that you want to add. You can specify only one domain name in each request.</para>
+        /// <para>Wildcard domain names are supported. A wildcard domain name must start with a period (.), such as .example.com.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Wildcard domain names are supported. A wildcard domain name must start with a period (.), such as .example.com.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// Computing service type. Valid values:
+        /// <para>Computing service type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>routine</b></description></item>
+        /// <item><description><b>image</b></description></item>
+        /// <item><description><b>cloudFunction</b></description></item>
+        /// </list>
         /// 
-        /// *   **routine**
-        /// *   **image**
-        /// *   **cloudFunction**
+        /// <b>Example:</b>
+        /// <para>routine</para>
         /// </summary>
         [NameInMap("FunctionType")]
         [Validation(Required=false)]
@@ -47,32 +55,42 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. If you do not specify a value for this parameter, the system automatically assigns the ID of the default resource group.
+        /// <para>The ID of the resource group. If you do not specify a value for this parameter, the system automatically assigns the ID of the default resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmyuji4b6r4**</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The Acceleration scen. Supported:
+        /// <para>The Acceleration scen. Supported:</para>
+        /// <list type="bullet">
+        /// <item><description>apiscene:API acceleration.</description></item>
+        /// <item><description>webservicescene: accelerate website business.</description></item>
+        /// <item><description>staticscene: video and graphic acceleration.</description></item>
+        /// <item><description>(Empty): no scene.</description></item>
+        /// </list>
         /// 
-        /// * apiscene:API acceleration.
-        /// * webservicescene: accelerate website business.
-        /// * staticscene: video and graphic acceleration.
-        /// * (Empty): no scene.
+        /// <b>Example:</b>
+        /// <para>apiscene</para>
         /// </summary>
         [NameInMap("Scene")]
         [Validation(Required=false)]
         public string Scene { get; set; }
 
         /// <summary>
-        /// The acceleration region. Valid values:
+        /// <para>The acceleration region. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>domestic</b>: Chinese mainland</description></item>
+        /// <item><description><b>overseas</b>: outside the Chinese mainland</description></item>
+        /// <item><description><b>global</b>: global</description></item>
+        /// </list>
+        /// <para>Default value: <b>domestic</b>.</para>
         /// 
-        /// *   **domestic**: Chinese mainland
-        /// *   **overseas**: outside the Chinese mainland
-        /// *   **global**: global
-        /// 
-        /// Default value: **domestic**.
+        /// <b>Example:</b>
+        /// <para>domestic</para>
         /// </summary>
         [NameInMap("Scope")]
         [Validation(Required=false)]
@@ -83,28 +101,37 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The information about the addresses of origin servers.
+        /// <para>The information about the addresses of origin servers.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;content&quot;:&quot;10.10.10.10&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80}]</para>
         /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]
         public string Sources { get; set; }
 
         /// <summary>
-        /// The information about the tags.
+        /// <para>The information about the tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<AddDcdnDomainRequestTag> Tag { get; set; }
         public class AddDcdnDomainRequestTag : TeaModel {
             /// <summary>
-            /// The key of a tag. Valid values of N: **1 to 20**.
+            /// <para>The key of a tag. Valid values of N: <b>1 to 20</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>env</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of a tag. Valid values of N: **1 to 20**.
+            /// <para>The value of a tag. Valid values of N: <b>1 to 20</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -113,7 +140,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The top-level domain.
+        /// <para>The top-level domain.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>yourTopLevelDomain</para>
         /// </summary>
         [NameInMap("TopLevelDomain")]
         [Validation(Required=false)]

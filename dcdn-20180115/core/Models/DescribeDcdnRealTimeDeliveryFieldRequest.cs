@@ -10,11 +10,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnRealTimeDeliveryFieldRequest : TeaModel {
         /// <summary>
-        /// The type of the collected logs. Default value: cdn_log_access_l1. Valid values:
+        /// <para>The type of the collected logs. Default value: cdn_log_access_l1. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cdn_log_access_l1</b>: access logs of Dynamic Content Delivery Network (DCDN) points of presence (POPs)</description></item>
+        /// <item><description><b>cdn_log_origin</b>: back-to-origin logs</description></item>
+        /// <item><description><b>cdn_log_er</b>: EdgeRoutine logs</description></item>
+        /// </list>
         /// 
-        /// *   **cdn_log_access_l1**: access logs of Dynamic Content Delivery Network (DCDN) points of presence (POPs)
-        /// *   **cdn_log_origin**: back-to-origin logs
-        /// *   **cdn_log_er**: EdgeRoutine logs
+        /// <b>Example:</b>
+        /// <para>cdn_log_access_l1</para>
         /// </summary>
         [NameInMap("BusinessType")]
         [Validation(Required=false)]

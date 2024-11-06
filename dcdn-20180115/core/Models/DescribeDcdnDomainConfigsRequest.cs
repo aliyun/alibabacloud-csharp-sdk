@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainConfigsRequest : TeaModel {
         /// <summary>
-        /// The ID of the configuration.
+        /// <para>The ID of the configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5003576</para>
         /// </summary>
         [NameInMap("ConfigId")]
         [Validation(Required=false)]
         public string ConfigId { get; set; }
 
         /// <summary>
-        /// The accelerated domain name. You can specify only one domain name in each request.
+        /// <para>The accelerated domain name. You can specify only one domain name in each request.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The names of the features to query. Separate features with commas (,).
+        /// <para>The names of the features to query. Separate features with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>filetype_based_ttl_set,set_req_host_header</para>
         /// </summary>
         [NameInMap("FunctionNames")]
         [Validation(Required=false)]

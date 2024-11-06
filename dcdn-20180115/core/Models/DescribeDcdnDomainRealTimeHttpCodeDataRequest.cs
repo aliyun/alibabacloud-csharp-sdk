@@ -10,47 +10,58 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainRealTimeHttpCodeDataRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name. Separate multiple accelerated domain names with commas (,).
+        /// <para>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range to query.
+        /// <para>The end of the time range to query.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para>The end time must be later than the start time.</para>
+        /// </remarks>
         /// 
-        /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-        /// 
-        /// > The end time must be later than the start time.
+        /// <b>Example:</b>
+        /// <para>2017-12-10T21:00:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The name of the Internet service provider (ISP).
+        /// <para>The name of the Internet service provider (ISP).</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/207199.html">DescribeDcdnRegionAndIsp</a> operation to query ISPs.</para>
         /// 
-        /// You can call the [DescribeDcdnRegionAndIsp](https://help.aliyun.com/document_detail/207199.html) operation to query ISPs.
+        /// <b>Example:</b>
+        /// <para>unicom</para>
         /// </summary>
         [NameInMap("IspNameEn")]
         [Validation(Required=false)]
         public string IspNameEn { get; set; }
 
         /// <summary>
-        /// The name of the region.
+        /// <para>The name of the region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/207199.html">DescribeDcdnRegionAndIsp</a> operation to query regions.</para>
         /// 
-        /// You can call the [DescribeDcdnRegionAndIsp](https://help.aliyun.com/document_detail/207199.html) operation to query regions.
+        /// <b>Example:</b>
+        /// <para>beijing</para>
         /// </summary>
         [NameInMap("LocationNameEn")]
         [Validation(Required=false)]
         public string LocationNameEn { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query.
+        /// <para>The beginning of the time range to query.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
-        /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// <b>Example:</b>
+        /// <para>2017-12-10T20:00:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

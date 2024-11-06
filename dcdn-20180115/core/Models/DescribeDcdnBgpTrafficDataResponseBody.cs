@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnBgpTrafficDataResponseBody : TeaModel {
         /// <summary>
-        /// The BGP traffic at each time interval.
+        /// <para>The BGP traffic at each time interval.</para>
         /// </summary>
         [NameInMap("BgpDataInterval")]
         [Validation(Required=false)]
         public List<DescribeDcdnBgpTrafficDataResponseBodyBgpDataInterval> BgpDataInterval { get; set; }
         public class DescribeDcdnBgpTrafficDataResponseBodyBgpDataInterval : TeaModel {
             /// <summary>
-            /// The inbound traffic. Unit: bytes.
+            /// <para>The inbound traffic. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>318</para>
             /// </summary>
             [NameInMap("In")]
             [Validation(Required=false)]
             public long? In { get; set; }
 
             /// <summary>
-            /// The outbound traffic. Unit: bytes.
+            /// <para>The outbound traffic. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>183</para>
             /// </summary>
             [NameInMap("Out")]
             [Validation(Required=false)]
             public long? Out { get; set; }
 
             /// <summary>
-            /// The timestamp of the data returned.
+            /// <para>The timestamp of the data returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2018-11-29T20:00:00Z</para>
             /// </summary>
             [NameInMap("TimeStamp")]
             [Validation(Required=false)]
@@ -40,21 +49,30 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The end of the time range during which data was queried.
+        /// <para>The end of the time range during which data was queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2018-11-30T00:00:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E9D3257A-1B7C-414C-90C1-8D07AC47BCAC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The start of the time range during which data was queried.
+        /// <para>The start of the time range during which data was queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2018-11-29T00:00:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

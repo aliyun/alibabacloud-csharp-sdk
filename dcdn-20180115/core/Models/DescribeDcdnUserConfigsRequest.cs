@@ -10,13 +10,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnUserConfigsRequest : TeaModel {
         /// <summary>
-        /// The configuration that you want to query. Valid values:
+        /// <para>The configuration that you want to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>domain_business_control: user configurations</description></item>
+        /// <item><description>bot_basic: the basic edition of bot traffic management, which supports authorized crawlers and provides threat intelligence</description></item>
+        /// <item><description>bot_Advance: the advanced edition of bot traffic management, which supports authorized crawlers and AI intelligent protection and provides threat intelligence</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   domain_business_control: user configurations
-        /// *   bot_basic: the basic edition of bot traffic management, which supports authorized crawlers and provides threat intelligence
-        /// *   bot_Advance: the advanced edition of bot traffic management, which supports authorized crawlers and AI intelligent protection and provides threat intelligence
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>domain_business_control</para>
         /// </summary>
         [NameInMap("FunctionName")]
         [Validation(Required=false)]

@@ -10,76 +10,103 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnRefreshTaskByIdResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E0C2EF95-B1EC-4C93-855E-2059A7DA2B7B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// A list of prefetch or refresh tasks.
+        /// <para>A list of prefetch or refresh tasks.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<DescribeDcdnRefreshTaskByIdResponseBodyTasks> Tasks { get; set; }
         public class DescribeDcdnRefreshTaskByIdResponseBodyTasks : TeaModel {
             /// <summary>
-            /// The time when the task was created. The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
+            /// <para>The time when the task was created. The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-05-10T08:54:23Z</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The error returned when the refresh or prefetch task failed. Valid values:
+            /// <para>The error returned when the refresh or prefetch task failed. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Internal Error</b>: An internal error occurred.</description></item>
+            /// <item><description><b>Origin Timeout</b>: The response from the origin server timed out.</description></item>
+            /// <item><description><b>Origin Return StatusCode 5XX</b>: The origin server returned a 5XX error.</description></item>
+            /// </list>
             /// 
-            /// *   **Internal Error**: An internal error occurred.
-            /// *   **Origin Timeout**: The response from the origin server timed out.
-            /// *   **Origin Return StatusCode 5XX**: The origin server returned a 5XX error.
+            /// <b>Example:</b>
+            /// <para>Internal Error</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The path of the refresh or prefetch object.
+            /// <para>The path of the refresh or prefetch object.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://example.com/image_01.png">http://example.com/image_01.png</a></para>
             /// </summary>
             [NameInMap("ObjectPath")]
             [Validation(Required=false)]
             public string ObjectPath { get; set; }
 
             /// <summary>
-            /// The type of the refresh or prefetch task. Valid values:
+            /// <para>The type of the refresh or prefetch task. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>file</b>: refreshes an individual file.</description></item>
+            /// <item><description><b>directory</b>: refreshes files under the specified directory.</description></item>
+            /// <item><description><b>preload</b>: prefetches an individual file.</description></item>
+            /// </list>
             /// 
-            /// *   **file**: refreshes an individual file.
-            /// *   **directory**: refreshes files under the specified directory.
-            /// *   **preload**: prefetches an individual file.
+            /// <b>Example:</b>
+            /// <para>file</para>
             /// </summary>
             [NameInMap("ObjectType")]
             [Validation(Required=false)]
             public string ObjectType { get; set; }
 
             /// <summary>
-            /// The progress of the task, in percentage.
+            /// <para>The progress of the task, in percentage.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100%</para>
             /// </summary>
             [NameInMap("Process")]
             [Validation(Required=false)]
             public string Process { get; set; }
 
             /// <summary>
-            /// The task status. Valid values:
+            /// <para>The task status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Complete</b>: The task is complete.</description></item>
+            /// <item><description><b>Pending</b>: The task is pending.</description></item>
+            /// <item><description><b>Refreshing</b>: The task is running.</description></item>
+            /// <item><description><b>Failed</b>: The task failed.</description></item>
+            /// </list>
             /// 
-            /// *   **Complete**: The task is complete.
-            /// *   **Pending**: The task is pending.
-            /// *   **Refreshing**: The task is running.
-            /// *   **Failed**: The task failed.
+            /// <b>Example:</b>
+            /// <para>Complete</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The ID of the task.
+            /// <para>The ID of the task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>113681**</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
@@ -88,7 +115,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The total number of tasks.
+        /// <para>The total number of tasks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

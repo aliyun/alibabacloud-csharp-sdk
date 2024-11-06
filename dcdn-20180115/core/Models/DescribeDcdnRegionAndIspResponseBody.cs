@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnRegionAndIspResponseBody : TeaModel {
         /// <summary>
-        /// The list of ISPs.
+        /// <para>The list of ISPs.</para>
         /// </summary>
         [NameInMap("Isps")]
         [Validation(Required=false)]
@@ -21,14 +21,20 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnRegionAndIspResponseBodyIspsIsp> Isp { get; set; }
             public class DescribeDcdnRegionAndIspResponseBodyIspsIsp : TeaModel {
                 /// <summary>
-                /// The English name of the region.
+                /// <para>The English name of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>unicom</para>
                 /// </summary>
                 [NameInMap("NameEn")]
                 [Validation(Required=false)]
                 public string NameEn { get; set; }
 
                 /// <summary>
-                /// The Chinese name of the ISP.
+                /// <para>The Chinese name of the ISP.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>联通</para>
                 /// </summary>
                 [NameInMap("NameZh")]
                 [Validation(Required=false)]
@@ -39,7 +45,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The list of regions.
+        /// <para>The list of regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -50,14 +56,20 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnRegionAndIspResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeDcdnRegionAndIspResponseBodyRegionsRegion : TeaModel {
                 /// <summary>
-                /// The English name of the region.
+                /// <para>The English name of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>liaoning</para>
                 /// </summary>
                 [NameInMap("NameEn")]
                 [Validation(Required=false)]
                 public string NameEn { get; set; }
 
                 /// <summary>
-                /// The Chinese name of the region.
+                /// <para>The Chinese name of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>辽宁省</para>
                 /// </summary>
                 [NameInMap("NameZh")]
                 [Validation(Required=false)]
@@ -68,7 +80,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2387C335-932C-4E1E-862C-1C4363B6DE72</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

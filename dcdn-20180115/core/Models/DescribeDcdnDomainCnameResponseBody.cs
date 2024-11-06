@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainCnameResponseBody : TeaModel {
         /// <summary>
-        /// The CNAME information.
+        /// <para>The CNAME information.</para>
         /// </summary>
         [NameInMap("CnameDatas")]
         [Validation(Required=false)]
@@ -21,21 +21,30 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnDomainCnameResponseBodyCnameDatasData> Data { get; set; }
             public class DescribeDcdnDomainCnameResponseBodyCnameDatasData : TeaModel {
                 /// <summary>
-                /// The CNAME assigned to the domain name.
+                /// <para>The CNAME assigned to the domain name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>*.com</para>
                 /// </summary>
                 [NameInMap("Cname")]
                 [Validation(Required=false)]
                 public string Cname { get; set; }
 
                 /// <summary>
-                /// The accelerated domain name.
+                /// <para>The accelerated domain name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>.example.com</para>
                 /// </summary>
                 [NameInMap("Domain")]
                 [Validation(Required=false)]
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// The configuration status of the CNAME record. If the operation returns 0 for the parameter, the configuration was successful. Otherwise, the configuration failed.
+                /// <para>The configuration status of the CNAME record. If the operation returns 0 for the parameter, the configuration was successful. Otherwise, the configuration failed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -46,7 +55,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>15C66C7B-671A-4297-9187-2C4477247A74</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

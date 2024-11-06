@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnIpInfoRequest : TeaModel {
         /// <summary>
-        /// The IP address. You can specify only one IP address.
+        /// <para>The IP address. You can specify only one IP address.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10.10.10.10</para>
         /// </summary>
         [NameInMap("IP")]
         [Validation(Required=false)]

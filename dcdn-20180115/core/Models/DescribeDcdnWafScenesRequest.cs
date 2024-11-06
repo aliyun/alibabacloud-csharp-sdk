@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafScenesRequest : TeaModel {
         /// <summary>
-        /// The types of the protection policies that you want to query. Separate multiple types with commas (,). Valid values:
+        /// <para>The types of the protection policies that you want to query. Separate multiple types with commas (,). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>waf_group: basic web protection</description></item>
+        /// <item><description>custom_acl: custom protection</description></item>
+        /// <item><description>whitelist: IP address whitelist</description></item>
+        /// <item><description>ip_blacklist: IP address blacklist</description></item>
+        /// <item><description>region_block: region blacklist</description></item>
+        /// <item><description>bot: bot management</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If you do not set this parameter, all types of protection policies are queried.</para>
+        /// </remarks>
         /// 
-        /// *   waf_group: basic web protection
-        /// *   custom_acl: custom protection
-        /// *   whitelist: IP address whitelist
-        /// *   ip_blacklist: IP address blacklist
-        /// *   region_block: region blacklist
-        /// *   bot: bot management
-        /// 
-        /// > If you do not set this parameter, all types of protection policies are queried.
+        /// <b>Example:</b>
+        /// <para>waf_group,custom_acl,whitelist</para>
         /// </summary>
         [NameInMap("DefenseScenes")]
         [Validation(Required=false)]

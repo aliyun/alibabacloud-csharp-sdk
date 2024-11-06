@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnCertificateListRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name. Separate multiple accelerated domain names with commas (,).
+        /// <para>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</para>
+        /// <para>By default, this operation queries the certificates of all accelerated domain names.</para>
         /// 
-        /// By default, this operation queries the certificates of all accelerated domain names.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

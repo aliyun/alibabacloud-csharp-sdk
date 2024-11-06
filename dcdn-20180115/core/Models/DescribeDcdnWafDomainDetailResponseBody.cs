@@ -10,39 +10,49 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafDomainDetailResponseBody : TeaModel {
         /// <summary>
-        /// The information about the accelerated domain name.
+        /// <para>The information about the accelerated domain name.</para>
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public DescribeDcdnWafDomainDetailResponseBodyDomain Domain { get; set; }
         public class DescribeDcdnWafDomainDetailResponseBodyDomain : TeaModel {
             /// <summary>
-            /// The types of the protection policies.
+            /// <para>The types of the protection policies.</para>
             /// </summary>
             [NameInMap("DefenseScenes")]
             [Validation(Required=false)]
             public List<DescribeDcdnWafDomainDetailResponseBodyDomainDefenseScenes> DefenseScenes { get; set; }
             public class DescribeDcdnWafDomainDetailResponseBodyDomainDefenseScenes : TeaModel {
                 /// <summary>
-                /// The type of the protection policy. Valid values:
+                /// <para>The type of the protection policy. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>waf_group: basic web protection</description></item>
+                /// <item><description>custom_acl: custom protection</description></item>
+                /// <item><description>whitelist: whitelist</description></item>
+                /// </list>
                 /// 
-                /// *   waf_group: basic web protection
-                /// *   custom_acl: custom protection
-                /// *   whitelist: whitelist
+                /// <b>Example:</b>
+                /// <para>waf_group</para>
                 /// </summary>
                 [NameInMap("DefenseScene")]
                 [Validation(Required=false)]
                 public string DefenseScene { get; set; }
 
                 /// <summary>
-                /// The ID of the protection policy.
+                /// <para>The ID of the protection policy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10000002</para>
                 /// </summary>
                 [NameInMap("PolicyId")]
                 [Validation(Required=false)]
                 public long? PolicyId { get; set; }
 
                 /// <summary>
-                /// The IDs of the protection policy.
+                /// <para>The IDs of the protection policy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10000001,10000004</para>
                 /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
@@ -51,7 +61,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             }
 
             /// <summary>
-            /// The accelerated domain name.
+            /// <para>The accelerated domain name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example.com</para>
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
@@ -60,7 +73,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>153ca2cd-3c01-44be-82C0-64dbc6c88630</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,42 +10,51 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafGeoInfoResponseBody : TeaModel {
         /// <summary>
-        /// The type of information about the country or region.
+        /// <para>The type of information about the country or region.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public List<DescribeDcdnWafGeoInfoResponseBodyContent> Content { get; set; }
         public class DescribeDcdnWafGeoInfoResponseBodyContent : TeaModel {
             /// <summary>
-            /// The information about the country or region.
+            /// <para>The information about the country or region.</para>
             /// </summary>
             [NameInMap("Continents")]
             [Validation(Required=false)]
             public List<DescribeDcdnWafGeoInfoResponseBodyContentContinents> Continents { get; set; }
             public class DescribeDcdnWafGeoInfoResponseBodyContentContinents : TeaModel {
                 /// <summary>
-                /// The district to which the country or region belongs.
+                /// <para>The district to which the country or region belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>China</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The region information.
+                /// <para>The region information.</para>
                 /// </summary>
                 [NameInMap("Regions")]
                 [Validation(Required=false)]
                 public List<DescribeDcdnWafGeoInfoResponseBodyContentContinentsRegions> Regions { get; set; }
                 public class DescribeDcdnWafGeoInfoResponseBodyContentContinentsRegions : TeaModel {
                     /// <summary>
-                    /// The name of the country or region.
+                    /// <para>The name of the country or region.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Beijing</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// The code of the country or region.
+                    /// <para>The code of the country or region.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>110000</para>
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
@@ -56,10 +65,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             }
 
             /// <summary>
-            /// The type of the region.
+            /// <para>The type of the region.</para>
+            /// <list type="bullet">
+            /// <item><description>CN: China</description></item>
+            /// <item><description>Other: outside China</description></item>
+            /// </list>
             /// 
-            /// *   CN: China
-            /// *   Other: outside China
+            /// <b>Example:</b>
+            /// <para>CN</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -68,7 +81,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>66A98669-CC6E-4F3E-80A6-3014697B11AE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

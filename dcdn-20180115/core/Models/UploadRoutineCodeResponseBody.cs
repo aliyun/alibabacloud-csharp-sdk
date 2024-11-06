@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class UploadRoutineCodeResponseBody : TeaModel {
         /// <summary>
-        /// The content returned, such as the code version number and information about the code upload.
+        /// <para>The content returned, such as the code version number and information about the code upload.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public Dictionary<string, object> Content { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DFA2027F-86C0-4421-9593-581A7993696C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

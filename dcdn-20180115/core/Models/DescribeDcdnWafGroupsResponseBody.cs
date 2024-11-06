@@ -10,87 +10,118 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page. Default value: 1.
+        /// <para>The page number of the returned page. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **20**.
+        /// <para>The number of entries to return on each page. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of WAF rule groups.
+        /// <para>The number of WAF rule groups.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The list of WAF rule groups.
+        /// <para>The list of WAF rule groups.</para>
         /// </summary>
         [NameInMap("WafGroups")]
         [Validation(Required=false)]
         public List<DescribeDcdnWafGroupsResponseBodyWafGroups> WafGroups { get; set; }
         public class DescribeDcdnWafGroupsResponseBodyWafGroups : TeaModel {
             /// <summary>
-            /// The time when the WAF rule group was modified.
+            /// <para>The time when the WAF rule group was modified.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-04-12 22:25:11</para>
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// The ID of the custom WAF rule group.
+            /// <para>The ID of the custom WAF rule group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30000156</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// The name of the WAF rule.
+            /// <para>The name of the WAF rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>DCDN-test-operation-reports-1</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The policy that is associated with the WAF rule group.
+            /// <para>The policy that is associated with the WAF rule group.</para>
             /// </summary>
             [NameInMap("Policies")]
             [Validation(Required=false)]
             public List<DescribeDcdnWafGroupsResponseBodyWafGroupsPolicies> Policies { get; set; }
             public class DescribeDcdnWafGroupsResponseBodyWafGroupsPolicies : TeaModel {
                 /// <summary>
-                /// The ID of the policy.
+                /// <para>The ID of the policy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>30000165</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// The name of the policy.
+                /// <para>The name of the policy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>wasm-testmaster</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The type of the policy. Valid values:
+                /// <para>The type of the policy. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>custom</b>: a custom policy</description></item>
+                /// <item><description><b>default</b>: the default policy</description></item>
+                /// </list>
                 /// 
-                /// *   **custom**: a custom policy
-                /// *   **default**: the default policy
+                /// <b>Example:</b>
+                /// <para>default</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -99,24 +130,34 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             }
 
             /// <summary>
-            /// The number of WAF rules.
+            /// <para>The number of WAF rules.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>452</para>
             /// </summary>
             [NameInMap("RuleCount")]
             [Validation(Required=false)]
             public int? RuleCount { get; set; }
 
             /// <summary>
-            /// Indicates whether to enable subscription. Valid values:
+            /// <para>Indicates whether to enable subscription. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>on</b></description></item>
+            /// <item><description><b>off</b></description></item>
+            /// </list>
             /// 
-            /// *   **on**
-            /// *   **off**
+            /// <b>Example:</b>
+            /// <para>on</para>
             /// </summary>
             [NameInMap("Subscribe")]
             [Validation(Required=false)]
             public string Subscribe { get; set; }
 
             /// <summary>
-            /// The ID of the template.
+            /// <para>The ID of the template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1012</para>
             /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]

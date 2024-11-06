@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DeleteDcdnIpaSpecificConfigRequest : TeaModel {
         /// <summary>
-        /// The ID of the configuration. You can call the [DescribeDcdnDomainConfigs](https://help.aliyun.com/document_detail/130625.html) operation to query configuration IDs.
+        /// <para>The ID of the configuration. You can call the <a href="https://help.aliyun.com/document_detail/130625.html">DescribeDcdnDomainConfigs</a> operation to query configuration IDs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>50035**</para>
         /// </summary>
         [NameInMap("ConfigId")]
         [Validation(Required=false)]
         public string ConfigId { get; set; }
 
         /// <summary>
-        /// The accelerated domain name. You can specify only one domain name in each request.
+        /// <para>The accelerated domain name. You can specify only one domain name in each request.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

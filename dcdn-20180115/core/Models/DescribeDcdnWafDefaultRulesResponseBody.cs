@@ -10,71 +10,93 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafDefaultRulesResponseBody : TeaModel {
         /// <summary>
-        /// The rule configurations.
+        /// <para>The rule configurations.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public List<DescribeDcdnWafDefaultRulesResponseBodyContent> Content { get; set; }
         public class DescribeDcdnWafDefaultRulesResponseBodyContent : TeaModel {
             /// <summary>
-            /// The protection scenario. Valid values:
+            /// <para>The protection scenario. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>waf_group</b>: basic web protection.</description></item>
+            /// <item><description><b>anti_scan</b>: scan protection.</description></item>
+            /// </list>
             /// 
-            /// *   **waf_group**: basic web protection.
-            /// *   **anti_scan**: scan protection.
+            /// <b>Example:</b>
+            /// <para>anti_scan</para>
             /// </summary>
             [NameInMap("DefenseScene")]
             [Validation(Required=false)]
             public string DefenseScene { get; set; }
 
             /// <summary>
-            /// The rules.
+            /// <para>The rules.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<DescribeDcdnWafDefaultRulesResponseBodyContentRules> Rules { get; set; }
             public class DescribeDcdnWafDefaultRulesResponseBodyContentRules : TeaModel {
                 /// <summary>
-                /// The default action of the rule. Valid values:
+                /// <para>The default action of the rule. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>monitor</b></description></item>
+                /// <item><description><b>deny</b></description></item>
+                /// <item><description><b>block</b></description></item>
+                /// </list>
                 /// 
-                /// *   **monitor**
-                /// *   **deny**
-                /// *   **block**
+                /// <b>Example:</b>
+                /// <para>block</para>
                 /// </summary>
                 [NameInMap("Action")]
                 [Validation(Required=false)]
                 public string Action { get; set; }
 
                 /// <summary>
-                /// The default configuration of the rule.
+                /// <para>The default configuration of the rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{\&quot;wafGroupIds\&quot;:\&quot;1012\&quot;}</para>
                 /// </summary>
                 [NameInMap("Config")]
                 [Validation(Required=false)]
                 public string Config { get; set; }
 
                 /// <summary>
-                /// The default name of the rule.
+                /// <para>The default name of the rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Default_WafGroup_Rule</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The default status of the rule. Valid values:
+                /// <para>The default status of the rule. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>on</b></description></item>
+                /// <item><description><b>off</b></description></item>
+                /// </list>
                 /// 
-                /// *   **on**
-                /// *   **off**
+                /// <b>Example:</b>
+                /// <para>on</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The type of the rule. Valid values:
+                /// <para>The type of the rule. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>waf_group</b>: basic web protection.</description></item>
+                /// <item><description><b>high_frequency</b>: high-frequency scanning blocking.</description></item>
+                /// <item><description><b>directory_traversal</b>: directory traversal blocking.</description></item>
+                /// <item><description><b>scan_tools</b>: scanner blocking.</description></item>
+                /// </list>
                 /// 
-                /// *   **waf_group**: basic web protection.
-                /// *   **high_frequency**: high-frequency scanning blocking.
-                /// *   **directory_traversal**: directory traversal blocking.
-                /// *   **scan_tools**: scanner blocking.
+                /// <b>Example:</b>
+                /// <para>waf_group</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -85,7 +107,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>15C66C7B-671A-4297-9187-2C4477247A123425345</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

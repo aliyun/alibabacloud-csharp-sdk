@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class StopDcdnIpaDomainRequest : TeaModel {
         /// <summary>
-        /// The name of the accelerated domain that you want to disable. You can specify only one domain name at a time.
+        /// <para>The name of the accelerated domain that you want to disable. You can specify only one domain name at a time.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

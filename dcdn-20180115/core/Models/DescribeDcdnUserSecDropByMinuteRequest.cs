@@ -10,69 +10,95 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnUserSecDropByMinuteRequest : TeaModel {
         /// <summary>
-        /// The domain name.
+        /// <para>The domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2006-01-02T15:05:04Z.
+        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2006-01-02T15:05:04Z.</para>
+        /// <remarks>
+        /// <para>The end time must be later than the start time.</para>
+        /// </remarks>
         /// 
-        /// > The end time must be later than the start time.
+        /// <b>Example:</b>
+        /// <para>2006-01-02T15:05:04Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The language. Valid values: en and zh. Default value: en
+        /// <para>The language. Valid values: en and zh. Default value: en</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The object that triggered rate limiting.
+        /// <para>The object that triggered rate limiting.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>robot_fingerprint_ai</para>
         /// </summary>
         [NameInMap("Object")]
         [Validation(Required=false)]
         public string Object { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1.
+        /// <para>The number of the page to return. Pages start from page 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 100.
+        /// <para>The number of entries to return on each page. Maximum value: 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The rule that was triggered.
+        /// <para>The rule that was triggered.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>robot_ai</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The name of the security feature.
+        /// <para>The name of the security feature.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>robot</para>
         /// </summary>
         [NameInMap("SecFunc")]
         [Validation(Required=false)]
         public string SecFunc { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2006-01-02T15:04:04Z.
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2006-01-02T15:04:04Z.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2006-01-02T15:04:04Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

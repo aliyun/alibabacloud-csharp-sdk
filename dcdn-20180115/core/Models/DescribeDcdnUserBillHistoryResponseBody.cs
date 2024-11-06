@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnUserBillHistoryResponseBody : TeaModel {
         /// <summary>
-        /// The billing history returned.
+        /// <para>The billing history returned.</para>
         /// </summary>
         [NameInMap("BillHistoryData")]
         [Validation(Required=false)]
@@ -21,21 +21,27 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem> BillHistoryDataItem { get; set; }
             public class DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem : TeaModel {
                 /// <summary>
-                /// The beginning of the time range that was queried.
+                /// <para>The beginning of the time range that was queried.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2018-09-30T17:00:00Z</para>
                 /// </summary>
                 [NameInMap("BillTime")]
                 [Validation(Required=false)]
                 public string BillTime { get; set; }
 
                 /// <summary>
-                /// The metering method.
+                /// <para>The metering method.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>month_4th_day_bandwidth</para>
                 /// </summary>
                 [NameInMap("BillType")]
                 [Validation(Required=false)]
                 public string BillType { get; set; }
 
                 /// <summary>
-                /// The billable items.
+                /// <para>The billable items.</para>
                 /// </summary>
                 [NameInMap("BillingData")]
                 [Validation(Required=false)]
@@ -46,35 +52,50 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                     public List<DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem> BillingDataItem { get; set; }
                     public class DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem : TeaModel {
                         /// <summary>
-                        /// The bandwidth. Unit: bit/s.
+                        /// <para>The bandwidth. Unit: bit/s.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>4839</para>
                         /// </summary>
                         [NameInMap("Bandwidth")]
                         [Validation(Required=false)]
                         public float? Bandwidth { get; set; }
 
                         /// <summary>
-                        /// The region for which the billing records are generated. Valid values: **CN**, **OverSeas**, **AP1**, **AP2**, **AP3**, **NA**, **SA**, **EU**, and **MEAA**.
+                        /// <para>The region for which the billing records are generated. Valid values: <b>CN</b>, <b>OverSeas</b>, <b>AP1</b>, <b>AP2</b>, <b>AP3</b>, <b>NA</b>, <b>SA</b>, <b>EU</b>, and <b>MEAA</b>.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>AP1</para>
                         /// </summary>
                         [NameInMap("CdnRegion")]
                         [Validation(Required=false)]
                         public string CdnRegion { get; set; }
 
                         /// <summary>
-                        /// The billing method of the disk. Valid values: **StaticHttp**, **DynamicHttp**, and **DynamicHttps**.
+                        /// <para>The billing method of the disk. Valid values: <b>StaticHttp</b>, <b>DynamicHttp</b>, and <b>DynamicHttps</b>.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>DynamicHttp</para>
                         /// </summary>
                         [NameInMap("ChargeType")]
                         [Validation(Required=false)]
                         public string ChargeType { get; set; }
 
                         /// <summary>
-                        /// The number of billing entries.
+                        /// <para>The number of billing entries.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>205624</para>
                         /// </summary>
                         [NameInMap("Count")]
                         [Validation(Required=false)]
                         public float? Count { get; set; }
 
                         /// <summary>
-                        /// The amount of network traffic. Unit: bytes.
+                        /// <para>The amount of network traffic. Unit: bytes.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2456</para>
                         /// </summary>
                         [NameInMap("Flow")]
                         [Validation(Required=false)]
@@ -85,7 +106,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 }
 
                 /// <summary>
-                /// The dimension.
+                /// <para>The dimension.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vas</para>
                 /// </summary>
                 [NameInMap("Dimension")]
                 [Validation(Required=false)]
@@ -96,7 +120,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ED61C6C3-8241-4187-AAA7-5157AE175CEC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class UpdateDcdnIpaDomainRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name that you want to modify. You can specify only one domain name in each request.
+        /// <para>The accelerated domain name that you want to modify. You can specify only one domain name in each request.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -23,7 +25,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The resource group ID.
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmyuji4b6r4**</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -34,14 +39,20 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The information about the addresses of the origin server.
+        /// <para>The information about the addresses of the origin server.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;content&quot;:&quot;10.10.10.10&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80,&quot;weight&quot;:&quot;15&quot;}]</para>
         /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]
         public string Sources { get; set; }
 
         /// <summary>
-        /// The top-level domain name.
+        /// <para>The top-level domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.edu</para>
         /// </summary>
         [NameInMap("TopLevelDomain")]
         [Validation(Required=false)]

@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeRDDomainConfigRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name.
+        /// <para>The accelerated domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The name of the feature. Default value: source_group.
+        /// <para>The name of the feature. Default value: source_group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>source_group</para>
         /// </summary>
         [NameInMap("FunctionName")]
         [Validation(Required=false)]

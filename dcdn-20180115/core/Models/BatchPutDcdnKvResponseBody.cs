@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class BatchPutDcdnKvResponseBody : TeaModel {
         /// <summary>
-        /// The keys that failed to be written.
+        /// <para>The keys that failed to be written.</para>
         /// </summary>
         [NameInMap("FailKeys")]
         [Validation(Required=false)]
         public List<string> FailKeys { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>156A6B-677B1A-4297B7-9187B7-2B44792</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The keys that were written.
+        /// <para>The keys that were written.</para>
         /// </summary>
         [NameInMap("SuccessKeys")]
         [Validation(Required=false)]

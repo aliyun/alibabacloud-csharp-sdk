@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class SetDcdnUserConfigResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F8AA0364-0FDB-4AD5-AC74-D69FAB8924ED</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

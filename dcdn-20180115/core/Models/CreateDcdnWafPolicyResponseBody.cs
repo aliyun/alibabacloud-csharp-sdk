@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class CreateDcdnWafPolicyResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the protection policy that you created.
+        /// <para>The ID of the protection policy that you created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10000001</para>
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
         public long? PolicyId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

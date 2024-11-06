@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnSMCertificateListRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name whose SM certificates you want to query.
+        /// <para>The accelerated domain name whose SM certificates you want to query.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

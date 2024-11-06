@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafDomainRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name. If you do not specify an accelerated domain name, all accelerated domain names are queried.
+        /// <para>The accelerated domain name. If you do not specify an accelerated domain name, all accelerated domain names are queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The region where WAF is enabled.
+        /// <para>The region where WAF is enabled.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. If you leave this parameter empty, the default resource group is used.
+        /// <para>The ID of the resource group. If you leave this parameter empty, the default resource group is used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

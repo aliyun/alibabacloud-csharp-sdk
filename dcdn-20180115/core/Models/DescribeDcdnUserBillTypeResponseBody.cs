@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnUserBillTypeResponseBody : TeaModel {
         /// <summary>
-        /// The information about the metering method.
+        /// <para>The information about the metering method.</para>
         /// </summary>
         [NameInMap("BillTypeData")]
         [Validation(Required=false)]
@@ -21,60 +21,80 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem> BillTypeDataItem { get; set; }
             public class DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem : TeaModel {
                 /// <summary>
-                /// The metering method. Valid values:
+                /// <para>The metering method. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>hour_flow</b>: pay by hourly traffic</description></item>
+                /// <item><description><b>day_bandwidth</b>: pay by daily bandwidth</description></item>
+                /// <item><description><b>month_95</b>: pay by monthly 95th percentile</description></item>
+                /// <item><description><b>month_avg_day_bandwidth</b>: pay by average daily peak bandwidth per month</description></item>
+                /// <item><description><b>month_4th_day_bandwidth</b>: pay by 4th peak bandwidth per month</description></item>
+                /// <item><description><b>month_avg_day_95</b>: pay by average daily 95th percentile per month</description></item>
+                /// <item><description><b>month_95_night_half</b>: pay by 95th percentile (50% off during nighttime)</description></item>
+                /// <item><description><b>hour_vas</b>: pay by value-added service per month</description></item>
+                /// <item><description><b>quic_hour_count</b>: pay by QUIC request per hour</description></item>
+                /// <item><description><b>hour_count</b>: pay by request per hour</description></item>
+                /// <item><description><b>rtlog_count_day</b>: pay by the number of real-time logs per day</description></item>
+                /// </list>
                 /// 
-                /// *   **hour_flow**: pay by hourly traffic
-                /// *   **day_bandwidth**: pay by daily bandwidth
-                /// *   **month_95**: pay by monthly 95th percentile
-                /// *   **month_avg_day_bandwidth**: pay by average daily peak bandwidth per month
-                /// *   **month_4th_day_bandwidth**: pay by 4th peak bandwidth per month
-                /// *   **month_avg_day_95**: pay by average daily 95th percentile per month
-                /// *   **month_95_night_half**: pay by 95th percentile (50% off during nighttime)
-                /// *   **hour_vas**: pay by value-added service per month
-                /// *   **quic_hour_count**: pay by QUIC request per hour
-                /// *   **hour_count**: pay by request per hour
-                /// *   **rtlog_count_day**: pay by the number of real-time logs per day
+                /// <b>Example:</b>
+                /// <para>month_avg_day_bandwidth_overseas</para>
                 /// </summary>
                 [NameInMap("BillType")]
                 [Validation(Required=false)]
                 public string BillType { get; set; }
 
                 /// <summary>
-                /// The metering cycle.
+                /// <para>The metering cycle.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>month</para>
                 /// </summary>
                 [NameInMap("BillingCycle")]
                 [Validation(Required=false)]
                 public string BillingCycle { get; set; }
 
                 /// <summary>
-                /// The dimension. Valid values:
+                /// <para>The dimension. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>flow</b>: network traffic and bandwidth</description></item>
+                /// <item><description><b>vas</b>: value-added services (HTTPS and requests for dynamic content)</description></item>
+                /// <item><description><b>websocket</b>: WebSocket</description></item>
+                /// <item><description><b>quic</b>: QUIC requests</description></item>
+                /// <item><description><b>rtlog2sls</b>: log entries delivered to Log Service in real time</description></item>
+                /// </list>
                 /// 
-                /// *   **flow**: network traffic and bandwidth
-                /// *   **vas**: value-added services (HTTPS and requests for dynamic content)
-                /// *   **websocket**: WebSocket
-                /// *   **quic**: QUIC requests
-                /// *   **rtlog2sls**: log entries delivered to Log Service in real time
+                /// <b>Example:</b>
+                /// <para>flow</para>
                 /// </summary>
                 [NameInMap("Dimension")]
                 [Validation(Required=false)]
                 public string Dimension { get; set; }
 
                 /// <summary>
-                /// The time when the metering method ends.
+                /// <para>The time when the metering method ends.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2018-10-31T16:00:00Z</para>
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// The name of the service.
+                /// <para>The name of the service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dcdn</para>
                 /// </summary>
                 [NameInMap("Product")]
                 [Validation(Required=false)]
                 public string Product { get; set; }
 
                 /// <summary>
-                /// The time when the metering method takes effect.
+                /// <para>The time when the metering method takes effect.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2018-10-30T16:00:00Z</para>
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
@@ -85,7 +105,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C370DAF1-C838-4288-A1A0-9A87633D248E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

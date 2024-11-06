@@ -10,35 +10,44 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainStagingConfigResponseBody : TeaModel {
         /// <summary>
-        /// The configurations of accelerated domain names returned.
+        /// <para>The configurations of accelerated domain names returned.</para>
         /// </summary>
         [NameInMap("DomainConfigs")]
         [Validation(Required=false)]
         public List<DescribeDcdnDomainStagingConfigResponseBodyDomainConfigs> DomainConfigs { get; set; }
         public class DescribeDcdnDomainStagingConfigResponseBodyDomainConfigs : TeaModel {
             /// <summary>
-            /// The ID of the configuration.
+            /// <para>The ID of the configuration.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6295</para>
             /// </summary>
             [NameInMap("ConfigId")]
             [Validation(Required=false)]
             public string ConfigId { get; set; }
 
             /// <summary>
-            /// The following table describes the features.
+            /// <para>The following table describes the features.</para>
             /// </summary>
             [NameInMap("FunctionArgs")]
             [Validation(Required=false)]
             public List<DescribeDcdnDomainStagingConfigResponseBodyDomainConfigsFunctionArgs> FunctionArgs { get; set; }
             public class DescribeDcdnDomainStagingConfigResponseBodyDomainConfigsFunctionArgs : TeaModel {
                 /// <summary>
-                /// The name of the configuration.
+                /// <para>The name of the configuration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>auth_type</para>
                 /// </summary>
                 [NameInMap("ArgName")]
                 [Validation(Required=false)]
                 public string ArgName { get; set; }
 
                 /// <summary>
-                /// The value of the configuration.
+                /// <para>The value of the configuration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>req_auth</para>
                 /// </summary>
                 [NameInMap("ArgValue")]
                 [Validation(Required=false)]
@@ -47,19 +56,26 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             }
 
             /// <summary>
-            /// The name of the feature.
+            /// <para>The name of the feature.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>aliauth</para>
             /// </summary>
             [NameInMap("FunctionName")]
             [Validation(Required=false)]
             public string FunctionName { get; set; }
 
             /// <summary>
-            /// The status. Valid values:
+            /// <para>The status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>success: The configuration is successful.</description></item>
+            /// <item><description>testing: The configuration is under testing.</description></item>
+            /// <item><description>failed: The task failed.</description></item>
+            /// <item><description>configuring: The feature is being configured.</description></item>
+            /// </list>
             /// 
-            /// *   success: The configuration is successful.
-            /// *   testing: The configuration is under testing.
-            /// *   failed: The task failed.
-            /// *   configuring: The feature is being configured.
+            /// <b>Example:</b>
+            /// <para>success</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -68,7 +84,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C80705BF-0F76-41FA-BAD1-5B59296A4E59</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class PutDcdnKvNamespaceRequest : TeaModel {
         /// <summary>
-        /// The description of the namespace.
+        /// <para>The description of the namespace.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>the first namespace</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the namespace. The name can contain letters, digits, hyphens (-), and underscores (_).
+        /// <para>The name of the namespace. The name can contain letters, digits, hyphens (-), and underscores (_).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ns1</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

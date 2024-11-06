@@ -10,105 +10,141 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnIpaDomainDetailResponseBody : TeaModel {
         /// <summary>
-        /// The details about the accelerated domain name.
+        /// <para>The details about the accelerated domain name.</para>
         /// </summary>
         [NameInMap("DomainDetail")]
         [Validation(Required=false)]
         public DescribeDcdnIpaDomainDetailResponseBodyDomainDetail DomainDetail { get; set; }
         public class DescribeDcdnIpaDomainDetailResponseBodyDomainDetail : TeaModel {
             /// <summary>
-            /// Indicates the name of the certificate if the HTTPS protocol is enabled.
+            /// <para>Indicates the name of the certificate if the HTTPS protocol is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>yourCertName</para>
             /// </summary>
             [NameInMap("CertName")]
             [Validation(Required=false)]
             public string CertName { get; set; }
 
             /// <summary>
-            /// The CNAME assigned to the domain name.
+            /// <para>The CNAME assigned to the domain name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example.com</para>
             /// </summary>
             [NameInMap("Cname")]
             [Validation(Required=false)]
             public string Cname { get; set; }
 
             /// <summary>
-            /// The description.
+            /// <para>The description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>audit failed</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The accelerated domain names.
+            /// <para>The accelerated domain names.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example.com</para>
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
 
             /// <summary>
-            /// The status of the accelerated domain name. Valid values:
+            /// <para>The status of the accelerated domain name. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>online</b>: enabled</description></item>
+            /// <item><description><b>offline</b>: disabled</description></item>
+            /// <item><description><b>configuring</b>: configuring</description></item>
+            /// <item><description><b>configure_failed</b>: configuration failed</description></item>
+            /// <item><description><b>checking</b>: reviewing</description></item>
+            /// <item><description><b>check_failed:</b> review failed</description></item>
+            /// </list>
             /// 
-            /// *   **online**: enabled
-            /// *   **offline**: disabled
-            /// *   **configuring**: configuring
-            /// *   **configure_failed**: configuration failed
-            /// *   **checking**: reviewing
-            /// *   **check_failed:** review failed
+            /// <b>Example:</b>
+            /// <para>online</para>
             /// </summary>
             [NameInMap("DomainStatus")]
             [Validation(Required=false)]
             public string DomainStatus { get; set; }
 
             /// <summary>
-            /// The creation time.
+            /// <para>The creation time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2017-11-27T06:51:26Z</para>
             /// </summary>
             [NameInMap("GmtCreated")]
             [Validation(Required=false)]
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// The time when the domain name was last modified.
+            /// <para>The time when the domain name was last modified.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2017-11-27T06:51:26Z</para>
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// <para>The ID of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-acfmyuji4b6xxxx</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// Indicates whether the Security Socket Layer (SSL) certificate is enabled. Valid values:
+            /// <para>Indicates whether the Security Socket Layer (SSL) certificate is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>on</b></description></item>
+            /// <item><description><b>off</b>.</description></item>
+            /// </list>
             /// 
-            /// *   **on**
-            /// *   **off**.
+            /// <b>Example:</b>
+            /// <para>on</para>
             /// </summary>
             [NameInMap("SSLProtocol")]
             [Validation(Required=false)]
             public string SSLProtocol { get; set; }
 
             /// <summary>
-            /// The public key of the certificate if HTTPS is enabled.
+            /// <para>The public key of the certificate if HTTPS is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SSLPub</para>
             /// </summary>
             [NameInMap("SSLPub")]
             [Validation(Required=false)]
             public string SSLPub { get; set; }
 
             /// <summary>
-            /// The acceleration region. Valid values:
+            /// <para>The acceleration region. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>domestic: Chinese mainland</description></item>
+            /// <item><description>overseas: outside the Chinese mainland</description></item>
+            /// <item><description>global: global</description></item>
+            /// </list>
             /// 
-            /// *   domestic: Chinese mainland
-            /// *   overseas: outside the Chinese mainland
-            /// *   global: global
+            /// <b>Example:</b>
+            /// <para>overseas</para>
             /// </summary>
             [NameInMap("Scope")]
             [Validation(Required=false)]
             public string Scope { get; set; }
 
             /// <summary>
-            /// The information about the origin server.
+            /// <para>The information about the origin server.</para>
             /// </summary>
             [NameInMap("Sources")]
             [Validation(Required=false)]
@@ -119,46 +155,65 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public List<DescribeDcdnIpaDomainDetailResponseBodyDomainDetailSourcesSource> Source { get; set; }
                 public class DescribeDcdnIpaDomainDetailResponseBodyDomainDetailSourcesSource : TeaModel {
                     /// <summary>
-                    /// The address of the origin server.
+                    /// <para>The address of the origin server.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>xxx.oss-cn-hangzhou.aliyuncs.com</para>
                     /// </summary>
                     [NameInMap("Content")]
                     [Validation(Required=false)]
                     public string Content { get; set; }
 
                     /// <summary>
-                    /// The status.
+                    /// <para>The status.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>online</para>
                     /// </summary>
                     [NameInMap("Enabled")]
                     [Validation(Required=false)]
                     public string Enabled { get; set; }
 
                     /// <summary>
-                    /// The custom port. Valid values: **0** to **65535**.
+                    /// <para>The custom port. Valid values: <b>0</b> to <b>65535</b>.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>80</para>
                     /// </summary>
                     [NameInMap("Port")]
                     [Validation(Required=false)]
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// The priority.
+                    /// <para>The priority.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>50</para>
                     /// </summary>
                     [NameInMap("Priority")]
                     [Validation(Required=false)]
                     public string Priority { get; set; }
 
                     /// <summary>
-                    /// The type of the origin server. Valid values:
+                    /// <para>The type of the origin server. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>ipaddr</b>: an origin IP address</description></item>
+                    /// <item><description><b>domain</b>: a domain name.</description></item>
+                    /// <item><description><b>oss</b>: Object Storage Service (OSS) buckets are not supported.</description></item>
+                    /// </list>
                     /// 
-                    /// *   **ipaddr**: an origin IP address
-                    /// *   **domain**: a domain name.
-                    /// *   **oss**: Object Storage Service (OSS) buckets are not supported.
+                    /// <b>Example:</b>
+                    /// <para>oss</para>
                     /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// The weight of the origin server if multiple origin servers have been specified.
+                    /// <para>The weight of the origin server if multiple origin servers have been specified.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10</para>
                     /// </summary>
                     [NameInMap("Weight")]
                     [Validation(Required=false)]
@@ -171,7 +226,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>09ABE829-6CD3-4FE0-AFEE-556113E29727</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnRefreshTaskByIdRequest : TeaModel {
         /// <summary>
-        /// The ID of the task that you want to query. The following signature algorithms require different message digest algorithms:
+        /// <para>The ID of the task that you want to query. The following signature algorithms require different message digest algorithms:</para>
+        /// <list type="bullet">
+        /// <item><description>Perform the <a href="https://help.aliyun.com/document_detail/130620.html">RefreshDcdnObjectCaches</a> operation to query refresh task IDs.</description></item>
+        /// <item><description>Perform the <a href="https://help.aliyun.com/document_detail/130636.html">PreloadDcdnObjectCaches</a> operation to query prefetch task IDs.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>You can specify at most 10 task IDs in each call. Separate IDs with commas (,).</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Perform the [RefreshDcdnObjectCaches](https://help.aliyun.com/document_detail/130620.html) operation to query refresh task IDs.
-        /// *   Perform the [PreloadDcdnObjectCaches](https://help.aliyun.com/document_detail/130636.html) operation to query prefetch task IDs.
-        /// 
-        /// > You can specify at most 10 task IDs in each call. Separate IDs with commas (,).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>113681**</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

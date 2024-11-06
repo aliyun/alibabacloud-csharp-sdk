@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnIpaDomainDetailRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain names for which you want to query basic information. You can specify only one domain name in each request.
+        /// <para>The accelerated domain names for which you want to query basic information. You can specify only one domain name in each request.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainCertificateInfoResponseBody : TeaModel {
         /// <summary>
-        /// The information about the certificate.
+        /// <para>The information about the certificate.</para>
         /// </summary>
         [NameInMap("CertInfos")]
         [Validation(Required=false)]
@@ -21,101 +21,140 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnDomainCertificateInfoResponseBodyCertInfosCertInfo> CertInfo { get; set; }
             public class DescribeDcdnDomainCertificateInfoResponseBodyCertInfosCertInfo : TeaModel {
                 /// <summary>
-                /// The domain name that matches the certificate.
+                /// <para>The domain name that matches the certificate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example.com</para>
                 /// </summary>
                 [NameInMap("CertDomainName")]
                 [Validation(Required=false)]
                 public string CertDomainName { get; set; }
 
                 /// <summary>
-                /// The time at which the certificate expires.
+                /// <para>The time at which the certificate expires.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2018-06-03T22:03:39Z</para>
                 /// </summary>
                 [NameInMap("CertExpireTime")]
                 [Validation(Required=false)]
                 public string CertExpireTime { get; set; }
 
                 /// <summary>
-                /// The ID of the certificate.
+                /// <para>The ID of the certificate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>9002448</para>
                 /// </summary>
                 [NameInMap("CertId")]
                 [Validation(Required=false)]
                 public string CertId { get; set; }
 
                 /// <summary>
-                /// The validity period of the certificate. Unit: **months** or **years**.
+                /// <para>The validity period of the certificate. Unit: <b>months</b> or <b>years</b>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3 months</para>
                 /// </summary>
                 [NameInMap("CertLife")]
                 [Validation(Required=false)]
                 public string CertLife { get; set; }
 
                 /// <summary>
-                /// The name of the certificate.
+                /// <para>The name of the certificate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cert-example.com</para>
                 /// </summary>
                 [NameInMap("CertName")]
                 [Validation(Required=false)]
                 public string CertName { get; set; }
 
                 /// <summary>
-                /// The certificate authority (CA) that issued the certificate.
+                /// <para>The certificate authority (CA) that issued the certificate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Let\&quot;s Encrypt</para>
                 /// </summary>
                 [NameInMap("CertOrg")]
                 [Validation(Required=false)]
                 public string CertOrg { get; set; }
 
                 /// <summary>
-                /// The region where the certificate is used.
+                /// <para>The region where the certificate is used.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("CertRegion")]
                 [Validation(Required=false)]
                 public string CertRegion { get; set; }
 
                 /// <summary>
-                /// The type of the certificate.
+                /// <para>The type of the certificate.</para>
+                /// <list type="bullet">
+                /// <item><description><b>cas</b>: a certificate that is purchased by using Certificates Management Service</description></item>
+                /// <item><description><b>upload</b>: a custom certificate that you upload</description></item>
+                /// </list>
                 /// 
-                /// *   **cas**: a certificate that is purchased by using Certificates Management Service
-                /// *   **upload**: a custom certificate that you upload
+                /// <b>Example:</b>
+                /// <para>cas</para>
                 /// </summary>
                 [NameInMap("CertType")]
                 [Validation(Required=false)]
                 public string CertType { get; set; }
 
                 /// <summary>
-                /// The accelerated domain name.
+                /// <para>The accelerated domain name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example.com</para>
                 /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// The status of HTTPS. Valid values:
+                /// <para>The status of HTTPS. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>on</b></description></item>
+                /// <item><description><b>off</b></description></item>
+                /// </list>
                 /// 
-                /// *   **on**
-                /// *   **off**
+                /// <b>Example:</b>
+                /// <para>on</para>
                 /// </summary>
                 [NameInMap("SSLProtocol")]
                 [Validation(Required=false)]
                 public string SSLProtocol { get; set; }
 
                 /// <summary>
-                /// The public key of the certificate.
+                /// <para>The public key of the certificate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>xxxx</para>
                 /// </summary>
                 [NameInMap("SSLPub")]
                 [Validation(Required=false)]
                 public string SSLPub { get; set; }
 
                 /// <summary>
-                /// The status of the certificate. Valid values:
+                /// <para>The status of the certificate. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>success</b>: The certificate has taken effect.</description></item>
+                /// <item><description><b>checking</b>: The system is checking whether the domain name is using Dynamic Route for CDN (DCDN).</description></item>
+                /// <item><description><b>cname_error</b>: The domain name is not using DCDN.</description></item>
+                /// <item><description><b>domain_invalid</b>: The domain name contains invalid characters.</description></item>
+                /// <item><description><b>unsupport_wildcard</b>: The wildcard domain name is not supported.</description></item>
+                /// <item><description><b>applying</b>: Certificate application is in progress.</description></item>
+                /// <item><description><b>get_token_timeout</b>: The certificate application request has timed out.</description></item>
+                /// <item><description><b>check_token_timeout</b>: The verification has timed out.</description></item>
+                /// <item><description><b>get_cert_timeout</b>: The request to obtain the certificate has timed out.</description></item>
+                /// <item><description><b>failed</b>: The certificate application request failed.</description></item>
+                /// </list>
                 /// 
-                /// *   **success**: The certificate has taken effect.
-                /// *   **checking**: The system is checking whether the domain name is using Dynamic Route for CDN (DCDN).
-                /// *   **cname_error**: The domain name is not using DCDN.
-                /// *   **domain_invalid**: The domain name contains invalid characters.
-                /// *   **unsupport_wildcard**: The wildcard domain name is not supported.
-                /// *   **applying**: Certificate application is in progress.
-                /// *   **get_token_timeout**: The certificate application request has timed out.
-                /// *   **check_token_timeout**: The verification has timed out.
-                /// *   **get_cert_timeout**: The request to obtain the certificate has timed out.
-                /// *   **failed**: The certificate application request failed.
+                /// <b>Example:</b>
+                /// <para>success</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -126,7 +165,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5C1E43DC-9E51-4771-82C0-7D5ECEB547A1</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

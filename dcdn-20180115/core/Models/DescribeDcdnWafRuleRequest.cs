@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafRuleRequest : TeaModel {
         /// <summary>
-        /// The ID of the protection rule. You can specify only one ID in each request.
+        /// <para>The ID of the protection rule. You can specify only one ID in each request.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1000001</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

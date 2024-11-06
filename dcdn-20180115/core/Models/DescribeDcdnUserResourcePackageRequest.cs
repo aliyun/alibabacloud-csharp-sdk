@@ -18,11 +18,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The status of the resource plan. Valid values:
+        /// <para>The status of the resource plan. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>valid</b>: valid</description></item>
+        /// <item><description><b>closed</b>: expired</description></item>
+        /// <item><description>If you leave this parameter empty, all resource plans are queried.</description></item>
+        /// </list>
         /// 
-        /// *   **valid**: valid
-        /// *   **closed**: expired
-        /// *   If you leave this parameter empty, all resource plans are queried.
+        /// <b>Example:</b>
+        /// <para>valid</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

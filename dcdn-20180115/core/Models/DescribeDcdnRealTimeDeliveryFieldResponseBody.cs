@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnRealTimeDeliveryFieldResponseBody : TeaModel {
         /// <summary>
-        /// The returned results.
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -21,14 +21,20 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnRealTimeDeliveryFieldResponseBodyContentFields> Fields { get; set; }
             public class DescribeDcdnRealTimeDeliveryFieldResponseBodyContentFields : TeaModel {
                 /// <summary>
-                /// The description of the field.
+                /// <para>The description of the field.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Access time</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The name of the field. For more information about fields in real-time log entries, see [Fields in a real-time log](https://help.aliyun.com/document_detail/324199.html).
+                /// <para>The name of the field. For more information about fields in real-time log entries, see <a href="https://help.aliyun.com/document_detail/324199.html">Fields in a real-time log</a>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>unixtime</para>
                 /// </summary>
                 [NameInMap("FieldName")]
                 [Validation(Required=false)]
@@ -39,7 +45,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3EACD23C-F49F-4BF7-B9AD-C2CD3BA888C4</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

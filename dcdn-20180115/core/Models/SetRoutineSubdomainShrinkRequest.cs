@@ -10,15 +10,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class SetRoutineSubdomainShrinkRequest : TeaModel {
         /// <summary>
-        /// The parameters of the subdomain.
+        /// <para>The parameters of the subdomain.</para>
+        /// <para>The parameters are in the following format:</para>
+        /// <pre><c>Subdomains: [
+        ///     &quot;subdomain-test&quot;
+        /// ]
+        /// </c></pre>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The parameters are in the following format:
-        /// 
-        ///     Subdomains: [
-        ///         "subdomain-test"
-        ///     ]
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[&quot;subdomain-test&quot;]</para>
         /// </summary>
         [NameInMap("Subdomains")]
         [Validation(Required=false)]

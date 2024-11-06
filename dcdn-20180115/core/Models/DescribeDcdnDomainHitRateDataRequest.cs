@@ -10,34 +10,43 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainHitRateDataRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name. You can specify only one domain name.
+        /// <para>The accelerated domain name. You can specify only one domain name.</para>
+        /// <para>If you do not specify a value for this parameter, all domain names are queried.</para>
         /// 
-        /// If you do not specify a value for this parameter, all domain names are queried.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time needs to be in UTC.
+        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time needs to be in UTC.</para>
+        /// <para>The end time needs to be later than the start time.</para>
         /// 
-        /// The end time needs to be later than the start time.
+        /// <b>Example:</b>
+        /// <para>2018-03-02T15:00:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The time granularity for a query. Unit: seconds.
+        /// <para>The time granularity for a query. Unit: seconds.</para>
+        /// <para>The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see <b>Usage notes</b>.</para>
         /// 
-        /// The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Usage notes**.
+        /// <b>Example:</b>
+        /// <para>300</para>
         /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
         public string Interval { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time needs to be in UTC.
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time needs to be in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2018-03-02T12:00:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

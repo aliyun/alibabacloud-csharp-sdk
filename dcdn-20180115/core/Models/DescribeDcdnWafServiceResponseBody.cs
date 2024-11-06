@@ -10,57 +10,80 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafServiceResponseBody : TeaModel {
         /// <summary>
-        /// The edition of WAF.
+        /// <para>The edition of WAF.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dcdnwaf_afterpay</para>
         /// </summary>
         [NameInMap("Edition")]
         [Validation(Required=false)]
         public string Edition { get; set; }
 
         /// <summary>
-        /// The status of WAF. Valid values:
+        /// <para>The status of WAF. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>on</description></item>
+        /// <item><description>off</description></item>
+        /// </list>
         /// 
-        /// *   on
-        /// *   off
+        /// <b>Example:</b>
+        /// <para>on</para>
         /// </summary>
         [NameInMap("Enabled")]
         [Validation(Required=false)]
         public string Enabled { get; set; }
 
         /// <summary>
-        /// The time when WAF was enabled.
+        /// <para>The time when WAF was enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-09-26T16:00:00Z</para>
         /// </summary>
         [NameInMap("OpeningTime")]
         [Validation(Required=false)]
         public string OpeningTime { get; set; }
 
         /// <summary>
-        /// The metering method for requests.
+        /// <para>The metering method for requests.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dcdn_waf_req</para>
         /// </summary>
         [NameInMap("RequestBillingType")]
         [Validation(Required=false)]
         public string RequestBillingType { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4A95CA90-E0F2-1BF6-99E0-8C1510CAF649</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The metering method for rules. You are charged for the number of SeCUs.
+        /// <para>The metering method for rules. You are charged for the number of SeCUs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dcdn_waf_rule</para>
         /// </summary>
         [NameInMap("RuleBillingType")]
         [Validation(Required=false)]
         public string RuleBillingType { get; set; }
 
         /// <summary>
-        /// The status of WAF. Valid values:
+        /// <para>The status of WAF. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Normal</description></item>
+        /// <item><description>WaitForExpire</description></item>
+        /// <item><description>Expired</description></item>
+        /// <item><description>Released</description></item>
+        /// </list>
         /// 
-        /// *   Normal
-        /// *   WaitForExpire
-        /// *   Expired
-        /// *   Released
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

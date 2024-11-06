@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnIpaUserDomainsResponseBody : TeaModel {
         /// <summary>
-        /// The array that consists of multiple PageData parameters. The details about each accelerated domain name are included in a separate PageData parameter.
+        /// <para>The array that consists of multiple PageData parameters. The details about each accelerated domain name are included in a separate PageData parameter.</para>
         /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
@@ -21,80 +21,109 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnIpaUserDomainsResponseBodyDomainsPageData> PageData { get; set; }
             public class DescribeDcdnIpaUserDomainsResponseBodyDomainsPageData : TeaModel {
                 /// <summary>
-                /// The CNAME assigned to the accelerated domain name.
+                /// <para>The CNAME assigned to the accelerated domain name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example.com.*.com</para>
                 /// </summary>
                 [NameInMap("Cname")]
                 [Validation(Required=false)]
                 public string Cname { get; set; }
 
                 /// <summary>
-                /// The reason why the accelerated domain name failed the review.
+                /// <para>The reason why the accelerated domain name failed the review.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>audit failed</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The accelerated domain name.
+                /// <para>The accelerated domain name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example.com</para>
                 /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// The status of the accelerated domain name. Valid values:
+                /// <para>The status of the accelerated domain name. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>online</b>: enabled</description></item>
+                /// <item><description><b>offline</b>: disabled</description></item>
+                /// <item><description><b>configuring</b>: configuring</description></item>
+                /// <item><description><b>configure_failed</b>: configuration failed</description></item>
+                /// <item><description><b>checking</b>: reviewing</description></item>
+                /// <item><description><b>check_failed:</b> review failed</description></item>
+                /// </list>
                 /// 
-                /// *   **online**: enabled
-                /// *   **offline**: disabled
-                /// *   **configuring**: configuring
-                /// *   **configure_failed**: configuration failed
-                /// *   **checking**: reviewing
-                /// *   **check_failed:** review failed
+                /// <b>Example:</b>
+                /// <para>online</para>
                 /// </summary>
                 [NameInMap("DomainStatus")]
                 [Validation(Required=false)]
                 public string DomainStatus { get; set; }
 
                 /// <summary>
-                /// The time when the accelerated domain name was added to Alibaba Cloud CDN.
+                /// <para>The time when the accelerated domain name was added to Alibaba Cloud CDN.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2015-10-28T09:32:51Z</para>
                 /// </summary>
                 [NameInMap("GmtCreated")]
                 [Validation(Required=false)]
                 public string GmtCreated { get; set; }
 
                 /// <summary>
-                /// The time when the accelerated domain name was modified.
+                /// <para>The time when the accelerated domain name was modified.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2015-10-28T11:05:52Z</para>
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// <para>The ID of the resource group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>abcd1234abcd****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The status of HTTPS.
+                /// <para>The status of HTTPS.</para>
+                /// <list type="bullet">
+                /// <item><description><b>on</b></description></item>
+                /// <item><description><b>off</b></description></item>
+                /// </list>
                 /// 
-                /// *   **on**
-                /// *   **off**
+                /// <b>Example:</b>
+                /// <para>on</para>
                 /// </summary>
                 [NameInMap("SSLProtocol")]
                 [Validation(Required=false)]
                 public string SSLProtocol { get; set; }
 
                 /// <summary>
-                /// Indicates whether the accelerated domain name was in a sandbox.
+                /// <para>Indicates whether the accelerated domain name was in a sandbox.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>normal</para>
                 /// </summary>
                 [NameInMap("Sandbox")]
                 [Validation(Required=false)]
                 public string Sandbox { get; set; }
 
                 /// <summary>
-                /// The information about the origin server.
+                /// <para>The information about the origin server.</para>
                 /// </summary>
                 [NameInMap("Sources")]
                 [Validation(Required=false)]
@@ -105,35 +134,50 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                     public List<DescribeDcdnIpaUserDomainsResponseBodyDomainsPageDataSourcesSource> Source { get; set; }
                     public class DescribeDcdnIpaUserDomainsResponseBodyDomainsPageDataSourcesSource : TeaModel {
                         /// <summary>
-                        /// The address of the origin server.
+                        /// <para>The address of the origin server.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>*.aliyuncs.com</para>
                         /// </summary>
                         [NameInMap("Content")]
                         [Validation(Required=false)]
                         public string Content { get; set; }
 
                         /// <summary>
-                        /// The port of the origin server.
+                        /// <para>The port of the origin server.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>80</para>
                         /// </summary>
                         [NameInMap("Port")]
                         [Validation(Required=false)]
                         public int? Port { get; set; }
 
                         /// <summary>
-                        /// The priority.
+                        /// <para>The priority.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>20</para>
                         /// </summary>
                         [NameInMap("Priority")]
                         [Validation(Required=false)]
                         public string Priority { get; set; }
 
                         /// <summary>
-                        /// The type of the origin server.
+                        /// <para>The type of the origin server.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>OSS Domain</para>
                         /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// The weight of the origin server if multiple origin servers have been specified.
+                        /// <para>The weight of the origin server if multiple origin servers have been specified.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>20</para>
                         /// </summary>
                         [NameInMap("Weight")]
                         [Validation(Required=false)]
@@ -148,28 +192,40 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of domain names returned per page.
+        /// <para>The number of domain names returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AA75AADB-5E25-4970-B480-EAA1F5658483</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of domain names returned.
+        /// <para>The total number of domain names returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

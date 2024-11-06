@@ -10,25 +10,33 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafFilterInfoRequest : TeaModel {
         /// <summary>
-        /// The type of the protection policy. Separate multiple types with commas (,). Valid values:
+        /// <para>The type of the protection policy. Separate multiple types with commas (,). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>waf_group: basic web protection</description></item>
+        /// <item><description>custom_acl: custom protection</description></item>
+        /// <item><description>whitelist: IP address whitelist</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, all types are returned.</para>
+        /// </remarks>
         /// 
-        /// *   waf_group: basic web protection
-        /// *   custom_acl: custom protection
-        /// *   whitelist: IP address whitelist
-        /// 
-        /// >If you do not specify this parameter, all types are returned.
+        /// <b>Example:</b>
+        /// <para>custom_acl</para>
         /// </summary>
         [NameInMap("DefenseScenes")]
         [Validation(Required=false)]
         public string DefenseScenes { get; set; }
 
         /// <summary>
-        /// The language of the returned information. Valid values:
+        /// <para>The language of the returned information. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en: English</description></item>
+        /// <item><description>cn: Simplified Chinese</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   en: English
-        /// *   cn: Simplified Chinese
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn</para>
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]

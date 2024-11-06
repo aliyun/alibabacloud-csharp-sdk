@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class BatchSetDcdnIpaDomainConfigsRequest : TeaModel {
         /// <summary>
-        /// The domain names accelerated by IPA. Separate multiple domain names with commas (,).
+        /// <para>The domain names accelerated by IPA. Separate multiple domain names with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainNames")]
         [Validation(Required=false)]
         public string DomainNames { get; set; }
 
         /// <summary>
-        /// The list of features. `[{"functionArgs":[{"argName":"parameter name","argValue":"parameter value"}],"functionName":"feature name"}]`
+        /// <para>The list of features. <c>[{&quot;functionArgs&quot;:[{&quot;argName&quot;:&quot;parameter name&quot;,&quot;argValue&quot;:&quot;parameter value&quot;}],&quot;functionName&quot;:&quot;feature name&quot;}]</c></para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[{&quot;functionArgs&quot;:[{&quot;argName&quot;:&quot;domain_name&quot;,&quot;argValue&quot;:&quot;api.*com&quot;}],&quot;functionName&quot;:&quot;protogw&quot;}]</para>
         /// </summary>
         [NameInMap("Functions")]
         [Validation(Required=false)]

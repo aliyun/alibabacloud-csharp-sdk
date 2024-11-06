@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class PublishDcdnStagingConfigToProductionRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name. You can specify only one domain name in each request.
+        /// <para>The accelerated domain name. You can specify only one domain name in each request.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The name of the feature.
+        /// <para>The name of the feature.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>aliauth</para>
         /// </summary>
         [NameInMap("FunctionName")]
         [Validation(Required=false)]

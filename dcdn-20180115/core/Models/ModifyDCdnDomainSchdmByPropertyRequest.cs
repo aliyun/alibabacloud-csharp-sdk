@@ -10,22 +10,27 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class ModifyDCdnDomainSchdmByPropertyRequest : TeaModel {
         /// <summary>
-        /// The name of the accelerated domain for which you want to change the acceleration region. You can specify only one domain name.
+        /// <para>The name of the accelerated domain for which you want to change the acceleration region. You can specify only one domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The region where the acceleration service is deployed. Valid values:
+        /// <para>The region where the acceleration service is deployed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>domestic</b>: Chinese mainland</description></item>
+        /// <item><description><b>overseas</b>: global (excluding mainland China)</description></item>
+        /// <item><description><b>global</b>: global</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **domestic**: Chinese mainland
-        /// *   **overseas**: global (excluding mainland China)
-        /// *   **global**: global
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>{&quot;coverage&quot;:&quot;overseas&quot;}</para>
         /// </summary>
         [NameInMap("Property")]
         [Validation(Required=false)]

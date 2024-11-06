@@ -10,23 +10,33 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafRulesRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return. Valid values: **1** to **100000**. Default value: **1**.
+        /// <para>The number of the page to return. Valid values: <b>1</b> to <b>100000</b>. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of protection rules to return per page. Valid values: integers from **1** to **500**. Default value: **20**.
+        /// <para>The number of protection rules to return per page. Valid values: integers from <b>1</b> to <b>500</b>. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The query conditions. The value needs to be a JSON string in the following format: `QueryArgs={"PolicyIds":"The range of protection policy IDs","RuleIds":"The range of protection rule IDs","RuleNameLike":"The name of the protection rule","DomainNames":"The protected domain names","DefenseScenes":"waf_group","RuleStatus":"on","OrderBy":"GmtModified","Desc":"false"}`.
+        /// <para>The query conditions. The value needs to be a JSON string in the following format: <c>QueryArgs={&quot;PolicyIds&quot;:&quot;The range of protection policy IDs&quot;,&quot;RuleIds&quot;:&quot;The range of protection rule IDs&quot;,&quot;RuleNameLike&quot;:&quot;The name of the protection rule&quot;,&quot;DomainNames&quot;:&quot;The protected domain names&quot;,&quot;DefenseScenes&quot;:&quot;waf_group&quot;,&quot;RuleStatus&quot;:&quot;on&quot;,&quot;OrderBy&quot;:&quot;GmtModified&quot;,&quot;Desc&quot;:&quot;false&quot;}</c>.</para>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, all protection rules are queried.</para>
+        /// </remarks>
         /// 
-        /// > If you do not specify this parameter, all protection rules are queried.
+        /// <b>Example:</b>
+        /// <para>{&quot;RuleIds&quot;:&quot;100001,200002&quot;}</para>
         /// </summary>
         [NameInMap("QueryArgs")]
         [Validation(Required=false)]

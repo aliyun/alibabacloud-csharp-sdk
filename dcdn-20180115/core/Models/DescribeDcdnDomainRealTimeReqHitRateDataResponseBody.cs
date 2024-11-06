@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainRealTimeReqHitRateDataResponseBody : TeaModel {
         /// <summary>
-        /// The list of byte hit ratios.
+        /// <para>The list of byte hit ratios.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -21,14 +21,20 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnDomainRealTimeReqHitRateDataResponseBodyDataReqHitRateDataModel> ReqHitRateDataModel { get; set; }
             public class DescribeDcdnDomainRealTimeReqHitRateDataResponseBodyDataReqHitRateDataModel : TeaModel {
                 /// <summary>
-                /// The request hit ratio.
+                /// <para>The request hit ratio.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.8956940476262277</para>
                 /// </summary>
                 [NameInMap("ReqHitRate")]
                 [Validation(Required=false)]
                 public float? ReqHitRate { get; set; }
 
                 /// <summary>
-                /// The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+                /// <para>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2016-10-20T04:00:00Z</para>
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
@@ -39,7 +45,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B955107D-E658-4E77-B913-E0AC3D31693E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,37 +10,49 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class SetDcdnDomainCertificateRequest : TeaModel {
         /// <summary>
-        /// The certificate name.
+        /// <para>The certificate name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>yourCertName</para>
         /// </summary>
         [NameInMap("CertName")]
         [Validation(Required=false)]
         public string CertName { get; set; }
 
         /// <summary>
-        /// The certificate type.
+        /// <para>The certificate type.</para>
+        /// <list type="bullet">
+        /// <item><description><b>upload</b>: a user-uploaded SSL certificate.</description></item>
+        /// <item><description><b>cas</b>: a certificate that is acquired through Certificate Management Service.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If the value of the CertType parameter is <b>cas</b>, the <b>SSLPri</b> parameter is not required.</para>
+        /// </remarks>
         /// 
-        /// *   **upload**: a user-uploaded SSL certificate.
-        /// *   **cas**: a certificate that is acquired through Certificate Management Service.
-        /// 
-        /// > If the value of the CertType parameter is **cas**, the **SSLPri** parameter is not required.
+        /// <b>Example:</b>
+        /// <para>cas</para>
         /// </summary>
         [NameInMap("CertType")]
         [Validation(Required=false)]
         public string CertType { get; set; }
 
         /// <summary>
-        /// The accelerated domain name. You can specify only one domain name.
+        /// <para>The accelerated domain name. You can specify only one domain name.</para>
+        /// <para>HTTPS acceleration must be enabled for the accelerated domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// HTTPS acceleration must be enabled for the accelerated domain name.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information about the existing certificate that uses the same name.
+        /// <para>Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information about the existing certificate that uses the same name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ForceSet")]
         [Validation(Required=false)]
@@ -51,33 +63,45 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region. Default value: ch-hangzhou.
+        /// <para>The region. Default value: ch-hangzhou.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// The private key. This parameter is required only if you enable the SSL certificate.
+        /// <para>The private key. This parameter is required only if you enable the SSL certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SSLPri</para>
         /// </summary>
         [NameInMap("SSLPri")]
         [Validation(Required=false)]
         public string SSLPri { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the SSL certificate.
+        /// <para>Specifies whether to enable the SSL certificate.</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b></description></item>
+        /// <item><description><b>off</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **on**
-        /// *   **off**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>on</para>
         /// </summary>
         [NameInMap("SSLProtocol")]
         [Validation(Required=false)]
         public string SSLProtocol { get; set; }
 
         /// <summary>
-        /// The certificate content. This parameter is required only if you enable the SSL certificate.
+        /// <para>The certificate content. This parameter is required only if you enable the SSL certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SSLPub</para>
         /// </summary>
         [NameInMap("SSLPub")]
         [Validation(Required=false)]

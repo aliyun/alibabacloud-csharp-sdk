@@ -10,47 +10,65 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class SetDcdnDomainSSLCertificateRequest : TeaModel {
         /// <summary>
-        /// The certificate ID. This parameter is required and valid only when **CertType** is set to **cas**. If you specify this parameter, an existing certificate is used.
+        /// <para>The certificate ID. This parameter is required and valid only when <b>CertType</b> is set to <b>cas</b>. If you specify this parameter, an existing certificate is used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8089870</para>
         /// </summary>
         [NameInMap("CertId")]
         [Validation(Required=false)]
         public long? CertId { get; set; }
 
         /// <summary>
-        /// The name of the new certificate. You can specify only one certificate name. This parameter is optional and valid only when **CertType** is set to **upload**.
+        /// <para>The name of the new certificate. You can specify only one certificate name. This parameter is optional and valid only when <b>CertType</b> is set to <b>upload</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>yourCertName</para>
         /// </summary>
         [NameInMap("CertName")]
         [Validation(Required=false)]
         public string CertName { get; set; }
 
         /// <summary>
-        /// The region of the SSL certificate. This parameter takes effect only when **CertType** is set to **cas**. Default value: **cn-hangzhou**. Valid values: **cn-hangzhou** and **ap-southeast-1**.
+        /// <para>The region of the SSL certificate. This parameter takes effect only when <b>CertType</b> is set to <b>cas</b>. Default value: <b>cn-hangzhou</b>. Valid values: <b>cn-hangzhou</b> and <b>ap-southeast-1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("CertRegion")]
         [Validation(Required=false)]
         public string CertRegion { get; set; }
 
         /// <summary>
-        /// The type of the certificate. Valid values:
+        /// <para>The type of the certificate. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>upload</b>: a user-uploaded SSL certificate.</description></item>
+        /// <item><description><b>cas</b>: a certificate that is acquired through Certificate Management Service.</description></item>
+        /// </list>
         /// 
-        /// *   **upload**: a user-uploaded SSL certificate.
-        /// *   **cas**: a certificate that is acquired through Certificate Management Service.
+        /// <b>Example:</b>
+        /// <para>upload</para>
         /// </summary>
         [NameInMap("CertType")]
         [Validation(Required=false)]
         public string CertType { get; set; }
 
         /// <summary>
-        /// The domain name that is secured by the SSL certificate.
+        /// <para>The domain name that is secured by the SSL certificate.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// Specifies whether the certificate is issued in canary releases. If you set this parameter to **staging**, the certificate is issued in canary releases. If you do not specify this parameter or set this parameter to other values, the certificate is officially issued.
+        /// <para>Specifies whether the certificate is issued in canary releases. If you set this parameter to <b>staging</b>, the certificate is issued in canary releases. If you do not specify this parameter or set this parameter to other values, the certificate is officially issued.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>staging</para>
         /// </summary>
         [NameInMap("Env")]
         [Validation(Required=false)]
@@ -61,26 +79,35 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The private key. Specify the private key only if you want to enable the SSL certificate.
+        /// <para>The private key. Specify the private key only if you want to enable the SSL certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>y****</para>
         /// </summary>
         [NameInMap("SSLPri")]
         [Validation(Required=false)]
         public string SSLPri { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the SSL certificate. Valid values:
+        /// <para>Specifies whether to enable the SSL certificate. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b></description></item>
+        /// <item><description><b>off</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **on**
-        /// *   **off**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>off</para>
         /// </summary>
         [NameInMap("SSLProtocol")]
         [Validation(Required=false)]
         public string SSLProtocol { get; set; }
 
         /// <summary>
-        /// The content of the SSL certificate. Specify the content of the SSL certificate only if you want to enable the SSL certificate.
+        /// <para>The content of the SSL certificate. Specify the content of the SSL certificate only if you want to enable the SSL certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("SSLPub")]
         [Validation(Required=false)]

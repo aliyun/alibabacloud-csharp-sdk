@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainByCertificateResponseBody : TeaModel {
         /// <summary>
-        /// The information about the certificate.
+        /// <para>The information about the certificate.</para>
         /// </summary>
         [NameInMap("CertInfos")]
         [Validation(Required=false)]
@@ -21,71 +21,99 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo> CertInfo { get; set; }
             public class DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo : TeaModel {
                 /// <summary>
-                /// Indicates whether the SSL certificate is obsolete. Valid values:
+                /// <para>Indicates whether the SSL certificate is obsolete. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>yes</b>: The SSL certificate is obsolete.</description></item>
+                /// <item><description><b>no</b>: The SSL certificate is working as expected.</description></item>
+                /// </list>
                 /// 
-                /// *   **yes**: The SSL certificate is obsolete.
-                /// *   **no**: The SSL certificate is working as expected.
+                /// <b>Example:</b>
+                /// <para>yes</para>
                 /// </summary>
                 [NameInMap("CertCaIsLegacy")]
                 [Validation(Required=false)]
                 public string CertCaIsLegacy { get; set; }
 
                 /// <summary>
-                /// The time at which the certificate expires.
+                /// <para>The time at which the certificate expires.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Nov 29 00:00:00 2016 GMT</para>
                 /// </summary>
                 [NameInMap("CertExpireTime")]
                 [Validation(Required=false)]
                 public string CertExpireTime { get; set; }
 
                 /// <summary>
-                /// Indicates whether the SSL certificate is expired. Valid values:
+                /// <para>Indicates whether the SSL certificate is expired. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>yes</b>: The SSL certificate is expired.</description></item>
+                /// <item><description><b>no</b>: The SSL certificate is not expired.</description></item>
+                /// </list>
                 /// 
-                /// *   **yes**: The SSL certificate is expired.
-                /// *   **no**: The SSL certificate is not expired.
+                /// <b>Example:</b>
+                /// <para>yes</para>
                 /// </summary>
                 [NameInMap("CertExpired")]
                 [Validation(Required=false)]
                 public string CertExpired { get; set; }
 
                 /// <summary>
-                /// The time at which the certificate became effective.
+                /// <para>The time at which the certificate became effective.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Nov 29 23:59:59 2017 GMT</para>
                 /// </summary>
                 [NameInMap("CertStartTime")]
                 [Validation(Required=false)]
                 public string CertStartTime { get; set; }
 
                 /// <summary>
-                /// The name of the SSL certificate owner.
+                /// <para>The name of the SSL certificate owner.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example.aliyundoc.com</para>
                 /// </summary>
                 [NameInMap("CertSubjectCommonName")]
                 [Validation(Required=false)]
                 public string CertSubjectCommonName { get; set; }
 
                 /// <summary>
-                /// The type of the certificate. Valid values: **RSA**, **DSA**, and **ECDSA**.
+                /// <para>The type of the certificate. Valid values: <b>RSA</b>, <b>DSA</b>, and <b>ECDSA</b>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>RSA</para>
                 /// </summary>
                 [NameInMap("CertType")]
                 [Validation(Required=false)]
                 public string CertType { get; set; }
 
                 /// <summary>
-                /// The list of domain names that use the certificate.
+                /// <para>The list of domain names that use the certificate.</para>
+                /// <para>If one or more domain names are returned, the domain names are matched with the specified certificate. Multiple domain names are separated with commas (,).</para>
                 /// 
-                /// If one or more domain names are returned, the domain names are matched with the specified certificate. Multiple domain names are separated with commas (,).
+                /// <b>Example:</b>
+                /// <para>example.com,example.org</para>
                 /// </summary>
                 [NameInMap("DomainList")]
                 [Validation(Required=false)]
                 public string DomainList { get; set; }
 
                 /// <summary>
-                /// The domain names (DNS fields) that match the certificate. Multiple domain names are separated with commas (,).
+                /// <para>The domain names (DNS fields) that match the certificate. Multiple domain names are separated with commas (,).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>*.example.com,example.org</para>
                 /// </summary>
                 [NameInMap("DomainNames")]
                 [Validation(Required=false)]
                 public string DomainNames { get; set; }
 
                 /// <summary>
-                /// The certificate authority (CA) that issued the certificate.
+                /// <para>The certificate authority (CA) that issued the certificate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>C=US, O=Symantec Corporation, OU=Symantec Trust Network, OU=Domain Validated SSL, CN=Symantec Basic DV SSL CA - G1</para>
                 /// </summary>
                 [NameInMap("Issuer")]
                 [Validation(Required=false)]
@@ -96,7 +124,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ASAF2FDS-12SADSA-DDSAE3D-DSADCD4C-CDADS2D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

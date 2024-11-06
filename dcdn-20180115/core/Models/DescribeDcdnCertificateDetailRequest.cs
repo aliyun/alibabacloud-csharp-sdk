@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnCertificateDetailRequest : TeaModel {
         /// <summary>
-        /// The name of the certificate.
+        /// <para>The name of the certificate.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("CertName")]
         [Validation(Required=false)]

@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class OpenDcdnServiceRequest : TeaModel {
         /// <summary>
-        /// The metering method of DCDN. Valid values:
+        /// <para>The metering method of DCDN. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PayByTraffic</b>: pay-by-traffic</description></item>
+        /// <item><description><b>PayByBandwidth</b>: pay-by-bandwidth</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **PayByTraffic**: pay-by-traffic
-        /// *   **PayByBandwidth**: pay-by-bandwidth
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>PayByTraffic</para>
         /// </summary>
         [NameInMap("BillType")]
         [Validation(Required=false)]
@@ -30,12 +33,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The metering method of WebSocket. Valid values:
+        /// <para>The metering method of WebSocket. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>websockettraffic</b>: pay-by-data-transfer</description></item>
+        /// <item><description><b>websocketbps</b>: pay-by-bandwidth</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **websockettraffic**: pay-by-data-transfer
-        /// *   **websocketbps**: pay-by-bandwidth
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>websockettraffic</para>
         /// </summary>
         [NameInMap("WebsocketBillType")]
         [Validation(Required=false)]

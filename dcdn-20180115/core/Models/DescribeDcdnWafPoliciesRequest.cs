@@ -10,23 +10,33 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafPoliciesRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return. Valid values: **1** to **100000**. Default value: **1**.
+        /// <para>The number of the page to return. Valid values: <b>1</b> to <b>100000</b>. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of protection policies to return on each page. Valid values: an integer from **1** to **500**. Default value: **20**.
+        /// <para>The number of protection policies to return on each page. Valid values: an integer from <b>1</b> to <b>500</b>. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The query conditions. The value is a JSON string. The format is `QueryArgs={"PolicyIds":"The IDs of protection policies","RuleIds":"The IDs of protection rules","PolicyNameLike":"The name of the protection policy","DomainNames":"The protected domain names","PolicyType":"default","DefenseScenes":"waf_group","PolicyStatus":"on","OrderBy":"GmtModified","Desc":"false"}`
+        /// <para>The query conditions. The value is a JSON string. The format is <c>QueryArgs={&quot;PolicyIds&quot;:&quot;The IDs of protection policies&quot;,&quot;RuleIds&quot;:&quot;The IDs of protection rules&quot;,&quot;PolicyNameLike&quot;:&quot;The name of the protection policy&quot;,&quot;DomainNames&quot;:&quot;The protected domain names&quot;,&quot;PolicyType&quot;:&quot;default&quot;,&quot;DefenseScenes&quot;:&quot;waf_group&quot;,&quot;PolicyStatus&quot;:&quot;on&quot;,&quot;OrderBy&quot;:&quot;GmtModified&quot;,&quot;Desc&quot;:&quot;false&quot;}</c></para>
+        /// <remarks>
+        /// <para>If you do not set this parameter, all protection policies are queried.</para>
+        /// </remarks>
         /// 
-        /// > If you do not set this parameter, all protection policies are queried.
+        /// <b>Example:</b>
+        /// <para>{&quot;PolicyNameLIike&quot;:&quot;test_policy&quot;}</para>
         /// </summary>
         [NameInMap("QueryArgs")]
         [Validation(Required=false)]

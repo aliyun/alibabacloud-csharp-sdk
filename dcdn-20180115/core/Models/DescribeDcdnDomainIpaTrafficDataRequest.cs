@@ -10,77 +10,98 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainIpaTrafficDataRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name.
+        /// <para>The accelerated domain name.</para>
+        /// <para>Separate multiple domain names with commas (,). If you do not specify a value for this parameter, data for all accelerated domain names is queried.</para>
         /// 
-        /// Separate multiple domain names with commas (,). If you do not specify a value for this parameter, data for all accelerated domain names is queried.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range to query.
+        /// <para>The end of the time range to query.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para>The end time must be later than the start time.</para>
+        /// </remarks>
         /// 
-        /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-        /// 
-        /// > The end time must be later than the start time.
+        /// <b>Example:</b>
+        /// <para>2017-12-10T21:00:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// Specify whether to implement padding with zeros. Valid values:
+        /// <para>Specify whether to implement padding with zeros. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("FixTimeGap")]
         [Validation(Required=false)]
         public string FixTimeGap { get; set; }
 
         /// <summary>
-        /// The time granularity of data entries. Unit: seconds.
+        /// <para>The time granularity of data entries. Unit: seconds.</para>
+        /// <para>The time granularity varies with the time range specified by <b>StartTime</b> and <b>EndTime</b>.</para>
+        /// <list type="bullet">
+        /// <item><description>If the time range between StartTime and EndTime is less than 3 days, the valid values are <b>300</b>, <b>3600</b>, and <b>86400</b>. If you do not specify a value for this parameter, <b>300</b> is used.</description></item>
+        /// <item><description>If the time range between StartTime and EndTime is greater than or equal to 3 days and less than 31 days, the valid values are <b>3600</b> and <b>86400</b>. Default value: <b>3600</b>.</description></item>
+        /// <item><description>If the time range between StartTime and EndTime is 31 days or longer, the valid value is <b>86400</b>. Default value: <b>86400</b>.</description></item>
+        /// </list>
         /// 
-        /// The time granularity varies with the time range specified by **StartTime** and **EndTime**.
-        /// 
-        /// *   If the time range between StartTime and EndTime is less than 3 days, the valid values are **300**, **3600**, and **86400**. If you do not specify a value for this parameter, **300** is used.
-        /// *   If the time range between StartTime and EndTime is greater than or equal to 3 days and less than 31 days, the valid values are **3600** and **86400**. Default value: **3600**.
-        /// *   If the time range between StartTime and EndTime is 31 days or longer, the valid value is **86400**. Default value: **86400**.
+        /// <b>Example:</b>
+        /// <para>300</para>
         /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
         public string Interval { get; set; }
 
         /// <summary>
-        /// The name of the Internet service provider (ISP).
+        /// <para>The name of the Internet service provider (ISP).</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/207199.html">DescribeDcdnRegionAndIsp</a> operation to query ISPs.</para>
         /// 
-        /// You can call the [DescribeDcdnRegionAndIsp](https://help.aliyun.com/document_detail/207199.html) operation to query ISPs.
+        /// <b>Example:</b>
+        /// <para>unicom</para>
         /// </summary>
         [NameInMap("IspNameEn")]
         [Validation(Required=false)]
         public string IspNameEn { get; set; }
 
         /// <summary>
-        /// The name of the region.
+        /// <para>The name of the region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/207199.html">DescribeDcdnRegionAndIsp</a> operation to query regions.</para>
         /// 
-        /// You can call the [DescribeDcdnRegionAndIsp](https://help.aliyun.com/document_detail/207199.html) operation to query regions.
+        /// <b>Example:</b>
+        /// <para>beijing</para>
         /// </summary>
         [NameInMap("LocationNameEn")]
         [Validation(Required=false)]
         public string LocationNameEn { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query.
+        /// <para>The beginning of the time range to query.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
-        /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// <b>Example:</b>
+        /// <para>2017-12-10T20:00:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// Specifies whether to automatically calculate the value of the **interval**. If the **timeMerge** parameter is set to **1**, the value of **inteval** is calculated based on **StartTime** and **EndTime**. You can set either this parameter or the **interval** parameter.
+        /// <para>Specifies whether to automatically calculate the value of the <b>interval</b>. If the <b>timeMerge</b> parameter is set to <b>1</b>, the value of <b>inteval</b> is calculated based on <b>StartTime</b> and <b>EndTime</b>. You can set either this parameter or the <b>interval</b> parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TimeMerge")]
         [Validation(Required=false)]

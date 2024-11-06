@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class CheckDcdnProjectExistRequest : TeaModel {
         /// <summary>
-        /// The name of a real-time log delivery project.
+        /// <para>The name of a real-time log delivery project.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]

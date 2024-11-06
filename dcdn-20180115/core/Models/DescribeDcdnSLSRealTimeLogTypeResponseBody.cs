@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnSLSRealTimeLogTypeResponseBody : TeaModel {
         /// <summary>
-        /// The returned results.
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -21,18 +21,25 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnSLSRealTimeLogTypeResponseBodyContentBusiness> Business { get; set; }
             public class DescribeDcdnSLSRealTimeLogTypeResponseBodyContentBusiness : TeaModel {
                 /// <summary>
-                /// The type of real-time logs. Valid values:
+                /// <para>The type of real-time logs. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>dcdn_log_access_l1</b>: access logs.</description></item>
+                /// <item><description><b>dcdn_log_er</b>: EdgeRoutine logs</description></item>
+                /// <item><description><b>dcdn_log_waf</b>: WAF interception logs</description></item>
+                /// </list>
                 /// 
-                /// *   **dcdn_log_access_l1**: access logs.
-                /// *   **dcdn_log_er**: EdgeRoutine logs
-                /// *   **dcdn_log_waf**: WAF interception logs
+                /// <b>Example:</b>
+                /// <para>dcdn_log_access_l1</para>
                 /// </summary>
                 [NameInMap("BusinessType")]
                 [Validation(Required=false)]
                 public string BusinessType { get; set; }
 
                 /// <summary>
-                /// The description of the real-time log type.
+                /// <para>The description of the real-time log type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>product_U8JE</para>
                 /// </summary>
                 [NameInMap("Desc")]
                 [Validation(Required=false)]
@@ -43,7 +50,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

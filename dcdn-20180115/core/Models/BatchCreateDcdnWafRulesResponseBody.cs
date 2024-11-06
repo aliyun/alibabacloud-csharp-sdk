@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class BatchCreateDcdnWafRulesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The IDs of created rules.
+        /// <para>The IDs of created rules.</para>
         /// </summary>
         [NameInMap("RuleIds")]
         [Validation(Required=false)]

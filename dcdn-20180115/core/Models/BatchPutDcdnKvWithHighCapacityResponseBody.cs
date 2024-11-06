@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public List<string> FailKeys { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

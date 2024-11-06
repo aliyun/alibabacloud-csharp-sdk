@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class CreateDcdnSLSRealTimeLogDeliveryResponseBody : TeaModel {
         /// <summary>
-        /// The configuration results of the domain name.
+        /// <para>The configuration results of the domain name.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -21,28 +21,40 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<CreateDcdnSLSRealTimeLogDeliveryResponseBodyContentDomains> Domains { get; set; }
             public class CreateDcdnSLSRealTimeLogDeliveryResponseBodyContentDomains : TeaModel {
                 /// <summary>
-                /// The description of the returned result.
+                /// <para>The description of the returned result.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ok</para>
                 /// </summary>
                 [NameInMap("Desc")]
                 [Validation(Required=false)]
                 public string Desc { get; set; }
 
                 /// <summary>
-                /// The domain name from which real-time logs were collected.
+                /// <para>The domain name from which real-time logs were collected.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example.com</para>
                 /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// The region to which real-time logs were delivered.
+                /// <para>The region to which real-time logs were delivered.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn</para>
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
                 /// <summary>
-                /// The status of real-time logs.
+                /// <para>The status of real-time logs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>success</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -53,7 +65,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F32C57AA-7BF8-49AE-A2CC-9F42390F5A19</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
