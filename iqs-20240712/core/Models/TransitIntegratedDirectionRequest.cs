@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IQS20240712.Models
 {
-    public class DrivingDirectionNovaRequest : TeaModel {
-        [NameInMap("carType")]
+    public class TransitIntegratedDirectionRequest : TeaModel {
+        [NameInMap("destinationCity")]
         [Validation(Required=false)]
-        public string CarType { get; set; }
+        public string DestinationCity { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>43.345456</para>
+        /// <para>40.345456</para>
         /// </summary>
         [NameInMap("destinationLatitude")]
         [Validation(Required=false)]
@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
         [NameInMap("destinationLongitude")]
         [Validation(Required=false)]
         public string DestinationLongitude { get; set; }
+
+        [NameInMap("originCity")]
+        [Validation(Required=false)]
+        public string OriginCity { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -44,10 +48,6 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
         [NameInMap("originLongitude")]
         [Validation(Required=false)]
         public string OriginLongitude { get; set; }
-
-        [NameInMap("plate")]
-        [Validation(Required=false)]
-        public string Plate { get; set; }
 
     }
 

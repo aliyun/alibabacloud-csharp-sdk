@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
         [Validation(Required=false)]
         public BicyclingDirectionNovaResponseBodyData Data { get; set; }
         public class BicyclingDirectionNovaResponseBodyData : TeaModel {
+            [NameInMap("count")]
+            [Validation(Required=false)]
+            public string Count { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>39.995197</para>
@@ -168,6 +172,10 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
                     [NameInMap("orientation")]
                     [Validation(Required=false)]
                     public string Orientation { get; set; }
+
+                    [NameInMap("polyline")]
+                    [Validation(Required=false)]
+                    public string Polyline { get; set; }
 
                     [NameInMap("roadName")]
                     [Validation(Required=false)]
