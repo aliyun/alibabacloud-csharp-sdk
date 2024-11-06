@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListSessionClustersRequest : TeaModel {
+        /// <summary>
+        /// <para>The session type.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NOTEBOOK</description></item>
+        /// <item><description>THRIFT</description></item>
+        /// <item><description>SQL</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SQL</para>
+        /// </summary>
         [NameInMap("kind")]
         [Validation(Required=false)]
         public string Kind { get; set; }

@@ -1157,6 +1157,160 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取日志内容</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLogContentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogContentsResponse
+        /// </returns>
+        public ListLogContentsResponse ListLogContentsWithOptions(string workspaceId, ListLogContentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["fileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Length))
+            {
+                query["length"] = request.Length;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLogContents",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/action/listLogContents",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLogContentsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取日志内容</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLogContentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogContentsResponse
+        /// </returns>
+        public async Task<ListLogContentsResponse> ListLogContentsWithOptionsAsync(string workspaceId, ListLogContentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["fileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Length))
+            {
+                query["length"] = request.Length;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLogContents",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/action/listLogContents",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLogContentsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取日志内容</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLogContentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogContentsResponse
+        /// </returns>
+        public ListLogContentsResponse ListLogContents(string workspaceId, ListLogContentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListLogContentsWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取日志内容</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLogContentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogContentsResponse
+        /// </returns>
+        public async Task<ListLogContentsResponse> ListLogContentsAsync(string workspaceId, ListLogContentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListLogContentsWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.</para>
         /// </summary>
         /// 
@@ -1319,7 +1473,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询run列表</para>
+        /// <para>Queries a list of sessions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1385,7 +1539,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询run列表</para>
+        /// <para>Queries a list of sessions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1451,7 +1605,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询run列表</para>
+        /// <para>Queries a list of sessions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1470,7 +1624,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询run列表</para>
+        /// <para>Queries a list of sessions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2019,7 +2173,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动session集群</para>
+        /// <para>Starts a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2075,7 +2229,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动session集群</para>
+        /// <para>Starts a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2131,7 +2285,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动session集群</para>
+        /// <para>Starts a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2150,7 +2304,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动session集群</para>
+        /// <para>Starts a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2169,7 +2323,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动session集群</para>
+        /// <para>Stops a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2225,7 +2379,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动session集群</para>
+        /// <para>Stops a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2281,7 +2435,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动session集群</para>
+        /// <para>Stops a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2300,7 +2454,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动session集群</para>
+        /// <para>Stops a session.</para>
         /// </summary>
         /// 
         /// <param name="request">

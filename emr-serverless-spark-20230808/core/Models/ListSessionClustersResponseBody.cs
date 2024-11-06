@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The SQL computes.</para>
+        /// <para>The list of sessions.</para>
         /// </summary>
         [NameInMap("sessionClusters")]
         [Validation(Required=false)]
         public List<ListSessionClustersResponseBodySessionClusters> SessionClusters { get; set; }
         public class ListSessionClustersResponseBodySessionClusters : TeaModel {
             /// <summary>
-            /// <para>The SQL Compute configurations, which are equivalent to the configurations of the Spark job.</para>
+            /// <para>The session configurations, which are equivalent to the configurations of the Spark job.</para>
             /// </summary>
             [NameInMap("applicationConfigs")]
             [Validation(Required=false)]
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>The automatic termination configurations.</para>
+            /// <para>The configurations of automatic termination.</para>
             /// </summary>
             [NameInMap("autoStopConfiguration")]
             [Validation(Required=false)]
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// <para>The idle timeout period. The SQL Compute is automatically terminated if the idle timeout period is exceeded.</para>
+                /// <para>The idle timeout period. The session is automatically terminated when the idle timeout period is exceeded.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>45</para>
@@ -133,6 +133,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             }
 
+            /// <summary>
+            /// <para>The version of the Spark engine.</para>
+            /// </summary>
             [NameInMap("displayReleaseVersion")]
             [Validation(Required=false)]
             public string DisplayReleaseVersion { get; set; }
@@ -141,20 +144,44 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string Domain { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the job that is associated with the session.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TSK-xxxxxxxxx</para>
+            /// </summary>
             [NameInMap("draftId")]
             [Validation(Required=false)]
             public string DraftId { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the Fusion engine is used for acceleration.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("fusion")]
             [Validation(Required=false)]
             public bool? Fusion { get; set; }
 
+            /// <summary>
+            /// <para>The session type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NOTEBOOK</description></item>
+            /// <item><description>THRIFT</description></item>
+            /// <item><description>SQL</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SQL</para>
+            /// </summary>
             [NameInMap("kind")]
             [Validation(Required=false)]
             public string Kind { get; set; }
 
             /// <summary>
-            /// <para>The name of the SQL Compute.</para>
+            /// <para>The name of the session.</para>
             /// 
             /// <b>Example:</b>
             /// <para>adhoc_query</para>
@@ -164,7 +191,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The name of the queue on which the SQL Compute runs.</para>
+            /// <para>The name of the queue that is used to run the session.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev_queue</para>
@@ -173,12 +200,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string QueueName { get; set; }
 
+            /// <summary>
+            /// <para>The version of EMR Serverless Spark.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>esr-2.1</para>
+            /// </summary>
             [NameInMap("releaseVersion")]
             [Validation(Required=false)]
             public string ReleaseVersion { get; set; }
 
             /// <summary>
-            /// <para>The SQL Compute ID.</para>
+            /// <para>The session ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sc-123131</para>
@@ -188,7 +221,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string SessionClusterId { get; set; }
 
             /// <summary>
-            /// <para>The status of the SQL Compute.</para>
+            /// <para>The status of the session.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -198,7 +231,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The details of the last status change of the SQL Compute.</para>
+            /// <para>The details of the most recent status change of the session.</para>
             /// </summary>
             [NameInMap("stateChangeReason")]
             [Validation(Required=false)]
@@ -246,6 +279,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string UserName { get; set; }
 
+            /// <summary>
+            /// <para>The Spark UI of the session.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://spark-ui-xxxx">http://spark-ui-xxxx</a></para>
+            /// </summary>
             [NameInMap("webUI")]
             [Validation(Required=false)]
             public string WebUI { get; set; }

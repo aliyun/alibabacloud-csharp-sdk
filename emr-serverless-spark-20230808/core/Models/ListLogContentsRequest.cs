@@ -8,30 +8,28 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
-    public class StartSessionClusterRequest : TeaModel {
-        /// <summary>
-        /// <para>The queue name.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>root_queue</para>
-        /// </summary>
-        [NameInMap("queueName")]
+    public class ListLogContentsRequest : TeaModel {
+        [NameInMap("fileName")]
         [Validation(Required=false)]
-        public string QueueName { get; set; }
+        public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The session ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>sc-xxxxxxxxxxx</para>
+        /// <para>9999</para>
         /// </summary>
-        [NameInMap("sessionClusterId")]
+        [NameInMap("length")]
         [Validation(Required=false)]
-        public string SessionClusterId { get; set; }
+        public int? Length { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
-        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("offset")]
+        [Validation(Required=false)]
+        public int? Offset { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
