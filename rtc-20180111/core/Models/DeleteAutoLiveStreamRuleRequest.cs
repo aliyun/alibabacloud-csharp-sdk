@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DeleteAutoLiveStreamRuleRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eo85****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

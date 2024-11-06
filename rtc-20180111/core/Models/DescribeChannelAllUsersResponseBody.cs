@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public bool? ChannelExist { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public List<DescribeChannelAllUsersResponseBodyUsers> Users { get; set; }
         public class DescribeChannelAllUsersResponseBodyUsers : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1811****</para>
+            /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }

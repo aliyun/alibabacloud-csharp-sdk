@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class StartCloudRecordResponseBody : TeaModel {
         /// <summary>
-        /// requestId
+        /// <para>requestId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// taskId
+        /// <para>taskId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DeleteAppStreamingOutTemplateRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wv7N****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("StreamingOutTemplate")]
         [Validation(Required=false)]
         public DeleteAppStreamingOutTemplateRequestStreamingOutTemplate StreamingOutTemplate { get; set; }
         public class DeleteAppStreamingOutTemplateRequestStreamingOutTemplate : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xd4c****</para>
             /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]

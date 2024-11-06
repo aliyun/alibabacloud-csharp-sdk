@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class StopMPUTaskRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>yourAppId</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>yourTaskId</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

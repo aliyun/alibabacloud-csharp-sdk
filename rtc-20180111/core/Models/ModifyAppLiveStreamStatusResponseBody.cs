@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class ModifyAppLiveStreamStatusResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

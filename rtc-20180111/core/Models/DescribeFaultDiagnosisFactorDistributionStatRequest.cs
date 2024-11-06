@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeFaultDiagnosisFactorDistributionStatRequest : TeaModel {
         /// <summary>
-        /// APP ID。
+        /// <para>APP ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0rbd****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1615892596****</para>
         /// </summary>
         [NameInMap("EndTs")]
         [Validation(Required=false)]
         public long? EndTs { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1615892596</para>
         /// </summary>
         [NameInMap("StartTs")]
         [Validation(Required=false)]

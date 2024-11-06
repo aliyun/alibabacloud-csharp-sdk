@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeAppKeyRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0cho****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
