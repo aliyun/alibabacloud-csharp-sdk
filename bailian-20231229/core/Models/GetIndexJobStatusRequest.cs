@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class GetIndexJobStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The primary key ID of the knowledge base, which is the <c>Data.Id</c> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</para>
+        /// <para>The primary key ID of the knowledge base, which is the <c>Data.Id</c> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string IndexId { get; set; }
 
         /// <summary>
-        /// <para>The knowledge base job ID, which is the <c>Data.Id</c> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> or <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operations.</para>
+        /// <para>The knowledge base job ID, which is the <c>Data.Id</c> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> or <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>Both the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> and <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operations support batch import of documents. This operation returns both the overall <c>Status</c> of the job and the <c>Document.Status</c> of each document. If there are a large number of documents, you can use the <c>PageNumber</c> parameter to perform a paged query. Pages start from page 1. Default value: 1.</para>
+        /// <para>Both the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> and <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operations support batch import of documents. This operation returns both the overall <c>Status</c> of the job and the <c>Document.Status</c> of each document. If there are a large number of documents, you can use the <c>PageNumber</c> parameter to perform a paged query. Pages start from page 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

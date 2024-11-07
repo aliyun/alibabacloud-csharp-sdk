@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public int? Size { get; set; }
 
                 /// <summary>
-                /// <para>For unstructured knowledge base, this parameter is the category ID, which is the <c>CategoryId</c> returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addcategory">AddCategory</a> interface. To view the category ID, you can click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page.</para>
+                /// <para>For unstructured knowledge base, this parameter is the category ID. To view the category ID, you can click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page.</para>
                 /// <para>For structured knowledge base, this parameter is the data table ID. To view the table ID, you can click the ID icon next to the table name on the Structured Data tab of the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page.</para>
                 /// 
                 /// <b>Example:</b>

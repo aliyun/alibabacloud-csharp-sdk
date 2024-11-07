@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public SubmitIndexJobResponseBodyData Data { get; set; }
         public class SubmitIndexJobResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The primary key ID of the job, which is the <c>JobId</c> parameter of the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</para>
+            /// <para>The primary key ID of the job, which is the <c>JobId</c> parameter of the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eFDr2fGRzP9gdDZWAdo3YQ==</para>

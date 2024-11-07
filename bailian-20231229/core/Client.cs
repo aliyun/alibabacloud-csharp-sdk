@@ -391,7 +391,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>  This operation returns an HTTP URL that can be used to upload an unstructured document (the lease) and parameters required for the upload. Structured documents are not supported.</para>
         /// <list type="bullet">
         /// <item><description>The HTTP URL returned by this operation is valid only for minutes. Upload the document before the URL expires.</description></item>
-        /// <item><description>After you apply for a lease and upload a document, the document is stored in a temporary storage space for 12 hours. Call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> interface in time to import the document to the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page.</description></item>
+        /// <item><description>After you apply for a lease and upload a document, the document is stored in a temporary storage space for 12 hours. </description></item>
         /// <item><description>This interface is not idempotent.</description></item>
         /// </list>
         /// </description>
@@ -455,7 +455,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>  This operation returns an HTTP URL that can be used to upload an unstructured document (the lease) and parameters required for the upload. Structured documents are not supported.</para>
         /// <list type="bullet">
         /// <item><description>The HTTP URL returned by this operation is valid only for minutes. Upload the document before the URL expires.</description></item>
-        /// <item><description>After you apply for a lease and upload a document, the document is stored in a temporary storage space for 12 hours. Call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> interface in time to import the document to the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page.</description></item>
+        /// <item><description>After you apply for a lease and upload a document, the document is stored in a temporary storage space for 12 hours. </description></item>
         /// <item><description>This interface is not idempotent.</description></item>
         /// </list>
         /// </description>
@@ -519,7 +519,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>  This operation returns an HTTP URL that can be used to upload an unstructured document (the lease) and parameters required for the upload. Structured documents are not supported.</para>
         /// <list type="bullet">
         /// <item><description>The HTTP URL returned by this operation is valid only for minutes. Upload the document before the URL expires.</description></item>
-        /// <item><description>After you apply for a lease and upload a document, the document is stored in a temporary storage space for 12 hours. Call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> interface in time to import the document to the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page.</description></item>
+        /// <item><description>After you apply for a lease and upload a document, the document is stored in a temporary storage space for 12 hours. </description></item>
         /// <item><description>This interface is not idempotent.</description></item>
         /// </list>
         /// </description>
@@ -548,7 +548,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>  This operation returns an HTTP URL that can be used to upload an unstructured document (the lease) and parameters required for the upload. Structured documents are not supported.</para>
         /// <list type="bullet">
         /// <item><description>The HTTP URL returned by this operation is valid only for minutes. Upload the document before the URL expires.</description></item>
-        /// <item><description>After you apply for a lease and upload a document, the document is stored in a temporary storage space for 12 hours. Call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> interface in time to import the document to the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page.</description></item>
+        /// <item><description>After you apply for a lease and upload a document, the document is stored in a temporary storage space for 12 hours. </description></item>
         /// <item><description>This interface is not idempotent.</description></item>
         /// </list>
         /// </description>
@@ -741,8 +741,8 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must first upload documents to <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> and obtain the <c>FileId</c>. The documents are the knowledge source of the knowledge base. To upload documents, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation.</description></item>
-        /// <item><description>This operation only initializes a knowledge base creation job. You must also call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to complete the job.</description></item>
+        /// <item><description>You must first upload documents to <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> and obtain the <c>FileId</c>. The documents are the knowledge source of the knowledge base. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/data-import-instructions">Import Data</a>.</description></item>
+        /// <item><description>This operation only initializes a knowledge base creation job. You must also call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to complete the job.</description></item>
         /// <item><description>This interface is not idempotent.</description></item>
         /// </ol>
         /// </description>
@@ -781,6 +781,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 request.DocumentIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocumentIds, "DocumentIds", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MetaExtractColumns))
+            {
+                request.MetaExtractColumnsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MetaExtractColumns, "metaExtractColumns", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryIdsShrink))
             {
@@ -850,6 +854,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 query["StructureType"] = request.StructureType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaExtractColumnsShrink))
+            {
+                query["metaExtractColumns"] = request.MetaExtractColumnsShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -878,8 +886,8 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must first upload documents to <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> and obtain the <c>FileId</c>. The documents are the knowledge source of the knowledge base. To upload documents, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation.</description></item>
-        /// <item><description>This operation only initializes a knowledge base creation job. You must also call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to complete the job.</description></item>
+        /// <item><description>You must first upload documents to <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> and obtain the <c>FileId</c>. The documents are the knowledge source of the knowledge base. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/data-import-instructions">Import Data</a>.</description></item>
+        /// <item><description>This operation only initializes a knowledge base creation job. You must also call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to complete the job.</description></item>
         /// <item><description>This interface is not idempotent.</description></item>
         /// </ol>
         /// </description>
@@ -918,6 +926,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 request.DocumentIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocumentIds, "DocumentIds", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MetaExtractColumns))
+            {
+                request.MetaExtractColumnsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MetaExtractColumns, "metaExtractColumns", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryIdsShrink))
             {
@@ -987,6 +999,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 query["StructureType"] = request.StructureType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaExtractColumnsShrink))
+            {
+                query["metaExtractColumns"] = request.MetaExtractColumnsShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1015,8 +1031,8 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must first upload documents to <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> and obtain the <c>FileId</c>. The documents are the knowledge source of the knowledge base. To upload documents, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation.</description></item>
-        /// <item><description>This operation only initializes a knowledge base creation job. You must also call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to complete the job.</description></item>
+        /// <item><description>You must first upload documents to <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> and obtain the <c>FileId</c>. The documents are the knowledge source of the knowledge base. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/data-import-instructions">Import Data</a>.</description></item>
+        /// <item><description>This operation only initializes a knowledge base creation job. You must also call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to complete the job.</description></item>
         /// <item><description>This interface is not idempotent.</description></item>
         /// </ol>
         /// </description>
@@ -1043,8 +1059,8 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must first upload documents to <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> and obtain the <c>FileId</c>. The documents are the knowledge source of the knowledge base. To upload documents, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation.</description></item>
-        /// <item><description>This operation only initializes a knowledge base creation job. You must also call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to complete the job.</description></item>
+        /// <item><description>You must first upload documents to <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> and obtain the <c>FileId</c>. The documents are the knowledge source of the knowledge base. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/data-import-instructions">Import Data</a>.</description></item>
+        /// <item><description>This operation only initializes a knowledge base creation job. You must also call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to complete the job.</description></item>
         /// <item><description>This interface is not idempotent.</description></item>
         /// </ol>
         /// </description>
@@ -1756,7 +1772,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <description>
         /// <para>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <c>IndexId</c> is valid.</para>
         /// <list type="bullet">
-        /// <item><description>If a knowledge base is being called by an application, disassociate the knowledge base before you can delete it. To disassociate the knowledge base, you must use the console. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>.</description></item>
+        /// <item><description>If a knowledge base is being called by an application, disassociate the knowledge base before you can delete it. To disassociate the knowledge base, you must use the console. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>.</description></item>
         /// <item><description>After you delete a knowledge base, it cannot be recovered. We recommend that you proceed with caution.</description></item>
         /// <item><description>Imported documents are not deleted from the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> if you call this operation.</description></item>
         /// <item><description>This interface is idempotent.</description></item>
@@ -1813,7 +1829,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <description>
         /// <para>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <c>IndexId</c> is valid.</para>
         /// <list type="bullet">
-        /// <item><description>If a knowledge base is being called by an application, disassociate the knowledge base before you can delete it. To disassociate the knowledge base, you must use the console. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>.</description></item>
+        /// <item><description>If a knowledge base is being called by an application, disassociate the knowledge base before you can delete it. To disassociate the knowledge base, you must use the console. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>.</description></item>
         /// <item><description>After you delete a knowledge base, it cannot be recovered. We recommend that you proceed with caution.</description></item>
         /// <item><description>Imported documents are not deleted from the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> if you call this operation.</description></item>
         /// <item><description>This interface is idempotent.</description></item>
@@ -1870,7 +1886,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <description>
         /// <para>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <c>IndexId</c> is valid.</para>
         /// <list type="bullet">
-        /// <item><description>If a knowledge base is being called by an application, disassociate the knowledge base before you can delete it. To disassociate the knowledge base, you must use the console. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>.</description></item>
+        /// <item><description>If a knowledge base is being called by an application, disassociate the knowledge base before you can delete it. To disassociate the knowledge base, you must use the console. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>.</description></item>
         /// <item><description>After you delete a knowledge base, it cannot be recovered. We recommend that you proceed with caution.</description></item>
         /// <item><description>Imported documents are not deleted from the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> if you call this operation.</description></item>
         /// <item><description>This interface is idempotent.</description></item>
@@ -1900,7 +1916,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <description>
         /// <para>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <c>IndexId</c> is valid.</para>
         /// <list type="bullet">
-        /// <item><description>If a knowledge base is being called by an application, disassociate the knowledge base before you can delete it. To disassociate the knowledge base, you must use the console. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>.</description></item>
+        /// <item><description>If a knowledge base is being called by an application, disassociate the knowledge base before you can delete it. To disassociate the knowledge base, you must use the console. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>.</description></item>
         /// <item><description>After you delete a knowledge base, it cannot be recovered. We recommend that you proceed with caution.</description></item>
         /// <item><description>Imported documents are not deleted from the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> if you call this operation.</description></item>
         /// <item><description>This interface is idempotent.</description></item>
@@ -1930,8 +1946,8 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <description>
         /// <para>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <c>IndexId</c> is valid.</para>
         /// <list type="bullet">
-        /// <item><description>Only documents with the INSERT_ERROR and FINISH states can be deleted. To query the status of documents in a specified knowledge base, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-listindexdocuments">ListIndexDocuments</a> operation.</description></item>
-        /// <item><description>After you delete a document, it cannot be recovered and the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-retrieve">Retrieve</a> operation cannot query information about the document. We recommend that you proceed with caution.</description></item>
+        /// <item><description>Only documents with the INSERT_ERROR and FINISH states can be deleted. To query the status of documents in a specified knowledge base, call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-listindexdocuments">ListIndexDocuments</a> operation.</description></item>
+        /// <item><description>After you delete a document, it cannot be recovered and the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-retrieve">Retrieve</a> operation cannot query information about the document. We recommend that you proceed with caution.</description></item>
         /// <item><description>Imported documents are not deleted from the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> if you call this operation.</description></item>
         /// <item><description>This interface is idempotent.</description></item>
         /// </list>
@@ -1997,8 +2013,8 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <description>
         /// <para>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <c>IndexId</c> is valid.</para>
         /// <list type="bullet">
-        /// <item><description>Only documents with the INSERT_ERROR and FINISH states can be deleted. To query the status of documents in a specified knowledge base, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-listindexdocuments">ListIndexDocuments</a> operation.</description></item>
-        /// <item><description>After you delete a document, it cannot be recovered and the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-retrieve">Retrieve</a> operation cannot query information about the document. We recommend that you proceed with caution.</description></item>
+        /// <item><description>Only documents with the INSERT_ERROR and FINISH states can be deleted. To query the status of documents in a specified knowledge base, call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-listindexdocuments">ListIndexDocuments</a> operation.</description></item>
+        /// <item><description>After you delete a document, it cannot be recovered and the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-retrieve">Retrieve</a> operation cannot query information about the document. We recommend that you proceed with caution.</description></item>
         /// <item><description>Imported documents are not deleted from the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> if you call this operation.</description></item>
         /// <item><description>This interface is idempotent.</description></item>
         /// </list>
@@ -2064,8 +2080,8 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <description>
         /// <para>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <c>IndexId</c> is valid.</para>
         /// <list type="bullet">
-        /// <item><description>Only documents with the INSERT_ERROR and FINISH states can be deleted. To query the status of documents in a specified knowledge base, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-listindexdocuments">ListIndexDocuments</a> operation.</description></item>
-        /// <item><description>After you delete a document, it cannot be recovered and the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-retrieve">Retrieve</a> operation cannot query information about the document. We recommend that you proceed with caution.</description></item>
+        /// <item><description>Only documents with the INSERT_ERROR and FINISH states can be deleted. To query the status of documents in a specified knowledge base, call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-listindexdocuments">ListIndexDocuments</a> operation.</description></item>
+        /// <item><description>After you delete a document, it cannot be recovered and the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-retrieve">Retrieve</a> operation cannot query information about the document. We recommend that you proceed with caution.</description></item>
         /// <item><description>Imported documents are not deleted from the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> if you call this operation.</description></item>
         /// <item><description>This interface is idempotent.</description></item>
         /// </list>
@@ -2094,8 +2110,8 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <description>
         /// <para>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <c>IndexId</c> is valid.</para>
         /// <list type="bullet">
-        /// <item><description>Only documents with the INSERT_ERROR and FINISH states can be deleted. To query the status of documents in a specified knowledge base, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-listindexdocuments">ListIndexDocuments</a> operation.</description></item>
-        /// <item><description>After you delete a document, it cannot be recovered and the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-retrieve">Retrieve</a> operation cannot query information about the document. We recommend that you proceed with caution.</description></item>
+        /// <item><description>Only documents with the INSERT_ERROR and FINISH states can be deleted. To query the status of documents in a specified knowledge base, call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-listindexdocuments">ListIndexDocuments</a> operation.</description></item>
+        /// <item><description>After you delete a document, it cannot be recovered and the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-retrieve">Retrieve</a> operation cannot query information about the document. We recommend that you proceed with caution.</description></item>
         /// <item><description>Imported documents are not deleted from the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> if you call this operation.</description></item>
         /// <item><description>This interface is idempotent.</description></item>
         /// </list>
@@ -2430,7 +2446,6 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <description>
         /// <para>Before you call this API, make sure that your document is uploaded to the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page of Alibaba Cloud Model Studio.</para>
         /// <list type="bullet">
-        /// <item><description>If you upload the document by calling an API, make sure that you have called the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation to obtain <c>FileId</c>.</description></item>
         /// <item><description>You can also call this operation to query unstructured documents that you upload on the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page.</description></item>
         /// <item><description>This operation is idempotent.
         /// <b>Throttling:</b> Make sure that the interval between the two queries is at least 15 seconds. Otherwise, you may trigger system throttling. If throttling is triggered, try again later.</description></item>
@@ -2477,7 +2492,6 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <description>
         /// <para>Before you call this API, make sure that your document is uploaded to the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page of Alibaba Cloud Model Studio.</para>
         /// <list type="bullet">
-        /// <item><description>If you upload the document by calling an API, make sure that you have called the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation to obtain <c>FileId</c>.</description></item>
         /// <item><description>You can also call this operation to query unstructured documents that you upload on the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page.</description></item>
         /// <item><description>This operation is idempotent.
         /// <b>Throttling:</b> Make sure that the interval between the two queries is at least 15 seconds. Otherwise, you may trigger system throttling. If throttling is triggered, try again later.</description></item>
@@ -2524,7 +2538,6 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <description>
         /// <para>Before you call this API, make sure that your document is uploaded to the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page of Alibaba Cloud Model Studio.</para>
         /// <list type="bullet">
-        /// <item><description>If you upload the document by calling an API, make sure that you have called the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation to obtain <c>FileId</c>.</description></item>
         /// <item><description>You can also call this operation to query unstructured documents that you upload on the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page.</description></item>
         /// <item><description>This operation is idempotent.
         /// <b>Throttling:</b> Make sure that the interval between the two queries is at least 15 seconds. Otherwise, you may trigger system throttling. If throttling is triggered, try again later.</description></item>
@@ -2550,7 +2563,6 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <description>
         /// <para>Before you call this API, make sure that your document is uploaded to the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page of Alibaba Cloud Model Studio.</para>
         /// <list type="bullet">
-        /// <item><description>If you upload the document by calling an API, make sure that you have called the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation to obtain <c>FileId</c>.</description></item>
         /// <item><description>You can also call this operation to query unstructured documents that you upload on the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page.</description></item>
         /// <item><description>This operation is idempotent.
         /// <b>Throttling:</b> Make sure that the interval between the two queries is at least 15 seconds. Otherwise, you may trigger system throttling. If throttling is triggered, try again later.</description></item>
@@ -2575,7 +2587,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>A knowledge base job is running. You can call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to create a creation job or the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operation to create a add document job. Then, obtain the <c>JobId</c> returned by the operations.</description></item>
+        /// <item><description>A knowledge base job is running. You can call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to create a creation job or the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operation to create a add document job. Then, obtain the <c>JobId</c> returned by the operations.</description></item>
         /// <item><description>We recommend that you call this operation at intervals of more than 5 seconds.</description></item>
         /// <item><description>This interface is idempotent.</description></item>
         /// </ol>
@@ -2642,7 +2654,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>A knowledge base job is running. You can call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to create a creation job or the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operation to create a add document job. Then, obtain the <c>JobId</c> returned by the operations.</description></item>
+        /// <item><description>A knowledge base job is running. You can call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to create a creation job or the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operation to create a add document job. Then, obtain the <c>JobId</c> returned by the operations.</description></item>
         /// <item><description>We recommend that you call this operation at intervals of more than 5 seconds.</description></item>
         /// <item><description>This interface is idempotent.</description></item>
         /// </ol>
@@ -2709,7 +2721,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>A knowledge base job is running. You can call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to create a creation job or the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operation to create a add document job. Then, obtain the <c>JobId</c> returned by the operations.</description></item>
+        /// <item><description>A knowledge base job is running. You can call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to create a creation job or the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operation to create a add document job. Then, obtain the <c>JobId</c> returned by the operations.</description></item>
         /// <item><description>We recommend that you call this operation at intervals of more than 5 seconds.</description></item>
         /// <item><description>This interface is idempotent.</description></item>
         /// </ol>
@@ -2737,7 +2749,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>A knowledge base job is running. You can call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to create a creation job or the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operation to create a add document job. Then, obtain the <c>JobId</c> returned by the operations.</description></item>
+        /// <item><description>A knowledge base job is running. You can call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to create a creation job or the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operation to create a add document job. Then, obtain the <c>JobId</c> returned by the operations.</description></item>
         /// <item><description>We recommend that you call this operation at intervals of more than 5 seconds.</description></item>
         /// <item><description>This interface is idempotent.</description></item>
         /// </ol>
@@ -4900,10 +4912,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <c>IndexId</c> is valid.</para>
+        /// <para>  You must first upload documents to <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> and obtain the <c>FileId</c>. The documents are the knowledge source of the knowledge base. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/data-import-instructions">Import Data</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation to upload the documents to Model Studio.</description></item>
-        /// <item><description>After you call this operation, you can call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation to query the status of the job. More than 20 calls to the GetIndexJobStatus operation per minute may trigger throttling.</description></item>
+        /// <item><description>Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <c>IndexId</c> is valid.</description></item>
+        /// <item><description>After you call this operation, you can call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation to query the status of the job. More than 20 calls to the GetIndexJobStatus operation per minute may trigger throttling.</description></item>
         /// <item><description>Execution takes a period of time after this operation is called. Do not make new request before the request is returned. This interface is not idempotent.</description></item>
         /// </list>
         /// </description>
@@ -4978,10 +4990,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <c>IndexId</c> is valid.</para>
+        /// <para>  You must first upload documents to <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> and obtain the <c>FileId</c>. The documents are the knowledge source of the knowledge base. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/data-import-instructions">Import Data</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation to upload the documents to Model Studio.</description></item>
-        /// <item><description>After you call this operation, you can call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation to query the status of the job. More than 20 calls to the GetIndexJobStatus operation per minute may trigger throttling.</description></item>
+        /// <item><description>Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <c>IndexId</c> is valid.</description></item>
+        /// <item><description>After you call this operation, you can call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation to query the status of the job. More than 20 calls to the GetIndexJobStatus operation per minute may trigger throttling.</description></item>
         /// <item><description>Execution takes a period of time after this operation is called. Do not make new request before the request is returned. This interface is not idempotent.</description></item>
         /// </list>
         /// </description>
@@ -5056,10 +5068,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <c>IndexId</c> is valid.</para>
+        /// <para>  You must first upload documents to <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> and obtain the <c>FileId</c>. The documents are the knowledge source of the knowledge base. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/data-import-instructions">Import Data</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation to upload the documents to Model Studio.</description></item>
-        /// <item><description>After you call this operation, you can call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation to query the status of the job. More than 20 calls to the GetIndexJobStatus operation per minute may trigger throttling.</description></item>
+        /// <item><description>Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <c>IndexId</c> is valid.</description></item>
+        /// <item><description>After you call this operation, you can call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation to query the status of the job. More than 20 calls to the GetIndexJobStatus operation per minute may trigger throttling.</description></item>
         /// <item><description>Execution takes a period of time after this operation is called. Do not make new request before the request is returned. This interface is not idempotent.</description></item>
         /// </list>
         /// </description>
@@ -5085,10 +5097,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <c>IndexId</c> is valid.</para>
+        /// <para>  You must first upload documents to <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> and obtain the <c>FileId</c>. The documents are the knowledge source of the knowledge base. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/data-import-instructions">Import Data</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation to upload the documents to Model Studio.</description></item>
-        /// <item><description>After you call this operation, you can call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation to query the status of the job. More than 20 calls to the GetIndexJobStatus operation per minute may trigger throttling.</description></item>
+        /// <item><description>Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <c>IndexId</c> is valid.</description></item>
+        /// <item><description>After you call this operation, you can call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation to query the status of the job. More than 20 calls to the GetIndexJobStatus operation per minute may trigger throttling.</description></item>
         /// <item><description>Execution takes a period of time after this operation is called. Do not make new request before the request is returned. This interface is not idempotent.</description></item>
         /// </list>
         /// </description>
@@ -5115,9 +5127,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Before you call this operation, you must call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation and obtain the <c>IndexId</c>.</description></item>
+        /// <item><description>Before you call this operation, you must call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation and obtain the <c>IndexId</c>.</description></item>
         /// <item><description>Execution takes a period of time after this operation is called. Do not make new request before the request is returned.</description></item>
-        /// <item><description>If you want to query the execution status of the job after you call this operation, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</description></item>
+        /// <item><description>If you want to query the execution status of the job after you call this operation, call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</description></item>
         /// <item><description>This interface is not idempotent.</description></item>
         /// </ol>
         /// </description>
@@ -5171,9 +5183,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Before you call this operation, you must call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation and obtain the <c>IndexId</c>.</description></item>
+        /// <item><description>Before you call this operation, you must call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation and obtain the <c>IndexId</c>.</description></item>
         /// <item><description>Execution takes a period of time after this operation is called. Do not make new request before the request is returned.</description></item>
-        /// <item><description>If you want to query the execution status of the job after you call this operation, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</description></item>
+        /// <item><description>If you want to query the execution status of the job after you call this operation, call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</description></item>
         /// <item><description>This interface is not idempotent.</description></item>
         /// </ol>
         /// </description>
@@ -5227,9 +5239,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Before you call this operation, you must call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation and obtain the <c>IndexId</c>.</description></item>
+        /// <item><description>Before you call this operation, you must call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation and obtain the <c>IndexId</c>.</description></item>
         /// <item><description>Execution takes a period of time after this operation is called. Do not make new request before the request is returned.</description></item>
-        /// <item><description>If you want to query the execution status of the job after you call this operation, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</description></item>
+        /// <item><description>If you want to query the execution status of the job after you call this operation, call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</description></item>
         /// <item><description>This interface is not idempotent.</description></item>
         /// </ol>
         /// </description>
@@ -5256,9 +5268,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Before you call this operation, you must call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation and obtain the <c>IndexId</c>.</description></item>
+        /// <item><description>Before you call this operation, you must call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation and obtain the <c>IndexId</c>.</description></item>
         /// <item><description>Execution takes a period of time after this operation is called. Do not make new request before the request is returned.</description></item>
-        /// <item><description>If you want to query the execution status of the job after you call this operation, call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</description></item>
+        /// <item><description>If you want to query the execution status of the job after you call this operation, call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</description></item>
         /// <item><description>This interface is not idempotent.</description></item>
         /// </ol>
         /// </description>

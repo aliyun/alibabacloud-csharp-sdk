@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public List<string> Fields { get; set; }
 
         /// <summary>
-        /// <para>The primary key ID of the document, which is the <c>FieldID</c> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation. This parameter is not required for structured knowledge base, but is required for unstructured knowledge base. To view the ID, you can click the ID icon next to the file name on the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page. You can filter returned chunks by the document ID. This parameter is left empty by default.</para>
+        /// <para>The primary key ID of the document. This parameter is not required for structured knowledge base, but is required for unstructured knowledge base. To view the ID, you can click the ID icon next to the file name on the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page. You can filter returned chunks by the document ID. This parameter is left empty by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>file_5f03dfea56da4050ab68d61871fc4cb3_10151493</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Filed { get; set; }
 
         /// <summary>
-        /// <para>The primary key ID of the knowledge base, which is the <c>Data.Id</c> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</para>
+        /// <para>The primary key ID of the knowledge base, which is the <c>Data.Id</c> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

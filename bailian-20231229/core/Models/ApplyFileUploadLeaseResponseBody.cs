@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public ApplyFileUploadLeaseResponseBodyData Data { get; set; }
         public class ApplyFileUploadLeaseResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The unique ID of the lease. You need to specify this parameter when you call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation.</para>
+            /// <para>The unique ID of the lease.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1e6a159107384782be5e45ac4759b247.1719325231035</para>

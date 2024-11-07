@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string CategoryIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The estimated length of chunks. The maximum number of characters for a chunk. Texts exceeding this limit are splited. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [1-2048].</para>
+        /// <para>The estimated length of chunks. The maximum number of characters for a chunk. Texts exceeding this limit are splited. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [1-2048].</para>
         /// <para>The default value is empty, which means using the intelligent splitting method.</para>
         /// <remarks>
         /// <para> If you specify the <c>ChunkSize</c> parameter, you must also specify the <c>OverlapSize</c> and <c>Separator</c> parameters. If you do not specify these three parameters, the system uses the intelligent splitting method by default.</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string DocumentIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the embedding model. The embedding model converts the original input prompt and knowledge text into numerical vectors for similarity comparison. The default and only model available is DashScope text-embedding-v2. It supports multiple languages including Chinese and English and normalizes the vector results. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid value:</para>
+        /// <para>The name of the embedding model. The embedding model converts the original input prompt and knowledge text into numerical vectors for similarity comparison. The default and only model available is DashScope text-embedding-v2. It supports multiple languages including Chinese and English and normalizes the vector results. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid value:</para>
         /// <list type="bullet">
         /// <item><description>text-embedding-v2</description></item>
         /// </list>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The overlap length. The number of overlapping characters between two consecutive chunks. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: 0 to 1024.</para>
+        /// <para>The overlap length. The number of overlapping characters between two consecutive chunks. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: 0 to 1024.</para>
         /// <para>The default value is empty, which means using the intelligent splitting method.</para>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public int? OverlapSize { get; set; }
 
         /// <summary>
-        /// <para>Similarity Threshold. The lowest similarity score of chunks that can be returned. This parameter is used to filter text chunks returned by the rank model. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [0.01-1.00].</para>
+        /// <para>Similarity Threshold. The lowest similarity score of chunks that can be returned. This parameter is used to filter text chunks returned by the rank model. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [0.01-1.00].</para>
         /// <para>Default value: 0.20.</para>
         /// 
         /// <b>Example:</b>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public double? RerankMinScore { get; set; }
 
         /// <summary>
-        /// <para>The name of the rank model. The rank model is a scoring system outside the knowledge base. It calculates the similarity score of each text chunk in the input question and knowledge base and ranks them in descending order. Then, the model returns the top K chunks with the highest scores. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</para>
+        /// <para>The name of the rank model. The rank model is a scoring system outside the knowledge base. It calculates the similarity score of each text chunk in the input question and knowledge base and ranks them in descending order. Then, the model returns the top K chunks with the highest scores. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>gte-rerank-hybrid</description></item>
         /// <item><description>gte-rerank</description></item>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RerankModelName { get; set; }
 
         /// <summary>
-        /// <para>The clause identifier. The document is split into chunks based on this identifier. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. You can specify multiple identifiers and do not need to add any other characters to separate them. For example: !,\\\n. Valid values:</para>
+        /// <para>The clause identifier. The document is split into chunks based on this identifier. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. You can specify multiple identifiers and do not need to add any other characters to separate them. For example: !,\\\n. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>\n: line break</description></item>
         /// <item><description>，: Chinese comma</description></item>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <item><description>! : English exclamation point</description></item>
         /// <item><description>；: Chinese semicolon</description></item>
         /// <item><description>;: English semicolon</description></item>
-        /// <item><description>？ : Chinese question mark</description></item>
+        /// <item><description>？: Chinese question mark</description></item>
         /// <item><description>?: English question mark</description></item>
         /// </list>
         /// <para>The default value is empty, which means using the intelligent splitting method.</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string SinkInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region of the vector storage instance. This parameter is available only when SinkType is set to ADB. You can call the <a href="https://help.aliyun.com/zh/analyticdb-for-postgresql/developer-reference/api-gpdb-2016-05-03-describeregions">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region of the vector storage instance. This parameter is available only when SinkType is set to ADB. You can call the <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/developer-reference/api-gpdb-2016-05-03-describeregions">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string SinkRegion { get; set; }
 
         /// <summary>
-        /// <para>The vector storage type of the knowledge base. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</para>
+        /// <para>The vector storage type of the knowledge base. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>DEFAULT: The built-in vector database.</description></item>
         /// <item><description>ADB: AnalyticDB for PostgreSQL database. If you need advanced features, such as managing, auditing, and monitoring, we recommend that you specify ADB.</description></item>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string SinkType { get; set; }
 
         /// <summary>
-        /// <para>The data type of <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a>. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</para>
+        /// <para>The data type of <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a>. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>DATA_CENTER_CATEGORY: The category type. Import all documents from one or more categories in Data Center.</description></item>
         /// <item><description>DATA_CENTER_FILE: The document type. Import one or more documents from Data Center.</description></item>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The data type of the knowledge base. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid value:</para>
+        /// <para>The data type of the knowledge base. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid value:</para>
         /// <list type="bullet">
         /// <item><description>unstructured</description></item>
         /// </list>
@@ -221,6 +221,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [NameInMap("StructureType")]
         [Validation(Required=false)]
         public string StructureType { get; set; }
+
+        [NameInMap("metaExtractColumns")]
+        [Validation(Required=false)]
+        public string MetaExtractColumnsShrink { get; set; }
 
     }
 

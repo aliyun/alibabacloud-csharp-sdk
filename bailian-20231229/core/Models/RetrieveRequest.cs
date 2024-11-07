@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public int? DenseSimilarityTopK { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable reranking. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</para>
+        /// <para>Specifies whether to enable reranking. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public bool? EnableReranking { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable multi-round conversation rewriting. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</para>
+        /// <para>Specifies whether to enable multi-round conversation rewriting. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public List<string> Images { get; set; }
 
         /// <summary>
-        /// <para>The primary key ID of the knowledge base, which is the <c>Data.Id</c> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</para>
+        /// <para>The primary key ID of the knowledge base, which is the <c>Data.Id</c> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public List<RetrieveRequestRerank> Rerank { get; set; }
         public class RetrieveRequestRerank : TeaModel {
             /// <summary>
-            /// <para>The name of the rank model. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</para>
+            /// <para>The name of the rank model. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>gte-rerank-hybrid: Recommended official model.</description></item>
             /// <item><description>gte-rerank</description></item>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         }
 
         /// <summary>
-        /// <para>Similarity Threshold The lowest similarity score of chunks that can be returned. This parameter is used to filter text chunks returned by the rank model. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [0.01-1.00]. The priority of this parameter is greater than the similarity threshold configured for the knowledge base.</para>
+        /// <para>Similarity Threshold The lowest similarity score of chunks that can be returned. This parameter is used to filter text chunks returned by the rank model. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [0.01-1.00]. The priority of this parameter is greater than the similarity threshold configured for the knowledge base.</para>
         /// <para>By default, this parameter is left empty. In this case, the similarity threshold of the knowledge base is used.</para>
         /// 
         /// <b>Example:</b>
