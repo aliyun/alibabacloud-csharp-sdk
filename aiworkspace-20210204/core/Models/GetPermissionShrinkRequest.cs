@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
-    public class GetPermissionRequest : TeaModel {
+    public class GetPermissionShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>PUBLIC</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         [NameInMap("Labels")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Labels { get; set; }
+        public string LabelsShrink { get; set; }
 
         [NameInMap("Option")]
         [Validation(Required=false)]

@@ -5904,7 +5904,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <para>获取权限，若无权限则返回错误</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetPermissionRequest
         /// </param>
         /// <param name="headers">
@@ -5917,9 +5917,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <returns>
         /// GetPermissionResponse
         /// </returns>
-        public GetPermissionResponse GetPermissionWithOptions(string WorkspaceId, string PermissionCode, GetPermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetPermissionResponse GetPermissionWithOptions(string WorkspaceId, string PermissionCode, GetPermissionRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetPermissionShrinkRequest request = new GetPermissionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Labels))
+            {
+                request.LabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Labels, "Labels", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
             {
@@ -5928,6 +5934,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Creator))
             {
                 query["Creator"] = request.Creator;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsShrink))
+            {
+                query["Labels"] = request.LabelsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Option))
             {
@@ -5962,7 +5972,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <para>获取权限，若无权限则返回错误</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetPermissionRequest
         /// </param>
         /// <param name="headers">
@@ -5975,9 +5985,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <returns>
         /// GetPermissionResponse
         /// </returns>
-        public async Task<GetPermissionResponse> GetPermissionWithOptionsAsync(string WorkspaceId, string PermissionCode, GetPermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetPermissionResponse> GetPermissionWithOptionsAsync(string WorkspaceId, string PermissionCode, GetPermissionRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetPermissionShrinkRequest request = new GetPermissionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Labels))
+            {
+                request.LabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Labels, "Labels", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
             {
@@ -5986,6 +6002,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Creator))
             {
                 query["Creator"] = request.Creator;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsShrink))
+            {
+                query["Labels"] = request.LabelsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Option))
             {
@@ -10321,6 +10341,192 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await SetExperimentLabelsWithOptionsAsync(ExperimentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新代码配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCodeSourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCodeSourceResponse
+        /// </returns>
+        public UpdateCodeSourceResponse UpdateCodeSourceWithOptions(string CodeSourceId, UpdateCodeSourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeBranch))
+            {
+                body["CodeBranch"] = request.CodeBranch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeCommit))
+            {
+                body["CodeCommit"] = request.CodeCommit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeRepo))
+            {
+                body["CodeRepo"] = request.CodeRepo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeRepoAccessToken))
+            {
+                body["CodeRepoAccessToken"] = request.CodeRepoAccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeRepoUserName))
+            {
+                body["CodeRepoUserName"] = request.CodeRepoUserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["DisplayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MountPath))
+            {
+                body["MountPath"] = request.MountPath;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCodeSource",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/codesources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(CodeSourceId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCodeSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新代码配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCodeSourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCodeSourceResponse
+        /// </returns>
+        public async Task<UpdateCodeSourceResponse> UpdateCodeSourceWithOptionsAsync(string CodeSourceId, UpdateCodeSourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeBranch))
+            {
+                body["CodeBranch"] = request.CodeBranch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeCommit))
+            {
+                body["CodeCommit"] = request.CodeCommit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeRepo))
+            {
+                body["CodeRepo"] = request.CodeRepo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeRepoAccessToken))
+            {
+                body["CodeRepoAccessToken"] = request.CodeRepoAccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeRepoUserName))
+            {
+                body["CodeRepoUserName"] = request.CodeRepoUserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["DisplayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MountPath))
+            {
+                body["MountPath"] = request.MountPath;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCodeSource",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/codesources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(CodeSourceId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCodeSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新代码配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCodeSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCodeSourceResponse
+        /// </returns>
+        public UpdateCodeSourceResponse UpdateCodeSource(string CodeSourceId, UpdateCodeSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateCodeSourceWithOptions(CodeSourceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新代码配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCodeSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCodeSourceResponse
+        /// </returns>
+        public async Task<UpdateCodeSourceResponse> UpdateCodeSourceAsync(string CodeSourceId, UpdateCodeSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateCodeSourceWithOptionsAsync(CodeSourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

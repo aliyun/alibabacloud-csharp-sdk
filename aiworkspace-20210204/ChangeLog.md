@@ -1,3 +1,8 @@
+2024-11-07 Version: 3.1.0
+- Support API UpdateCodeSource.
+- Update API GetPermission: add param Labels.
+
+
 2024-10-30 Version: 3.0.0
 - Support API CreateDatasetVersion.
 - Support API CreateDatasetVersionLabels.
