@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class VoiceModerationResultRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the moderation service.</para>
+        /// <para>The type of the moderation service. Valid values: nickname_detection: user nickname</para>
         /// 
         /// <b>Example:</b>
         /// <para>nickname_detection</para>
@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Service { get; set; }
 
         /// <summary>
-        /// <para>The parameters required by the moderation service. The value is a JSON string.</para>
+        /// <para>The parameters of API requests that are sent from API Gateway to the backend service.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/43988.html">ServiceParameter</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;taskId&quot;:&quot;xxxxx-xxxx&quot;}</para>

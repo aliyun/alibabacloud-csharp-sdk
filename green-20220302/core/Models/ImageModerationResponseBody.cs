@@ -845,6 +845,16 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
                 }
 
+                [NameInMap("VlContent")]
+                [Validation(Required=false)]
+                public ImageModerationResponseBodyDataExtVlContent VlContent { get; set; }
+                public class ImageModerationResponseBodyDataExtVlContent : TeaModel {
+                    [NameInMap("OutputText")]
+                    [Validation(Required=false)]
+                    public string OutputText { get; set; }
+
+                }
+
             }
 
             /// <summary>

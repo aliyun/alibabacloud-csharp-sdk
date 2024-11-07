@@ -46,19 +46,25 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public string LiveId { get; set; }
 
+            /// <summary>
+            /// <para>Risk Level.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>high</para>
+            /// </summary>
             [NameInMap("RiskLevel")]
             [Validation(Required=false)]
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The details about the audio segments.</para>
+            /// <para>The moderation results of audio segments.</para>
             /// </summary>
             [NameInMap("SliceDetails")]
             [Validation(Required=false)]
             public List<VoiceModerationResultResponseBodyDataSliceDetails> SliceDetails { get; set; }
             public class VoiceModerationResultResponseBodyDataSliceDetails : TeaModel {
                 /// <summary>
-                /// <para>The end time of the text after audio-to-text conversion. Unit: seconds.</para>
+                /// <para>The end time of the audio segment in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -78,7 +84,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public long? EndTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>A reserved parameter.</para>
+                /// <para>Extended fields.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;riskTips\&quot;:\&quot;sexuality_Suggestive\&quot;,\&quot;riskWords\&quot;:\&quot;pxxxxy\&quot;}</para>
@@ -98,7 +104,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public string Labels { get; set; }
 
                 /// <summary>
-                /// <para>Reserved field.</para>
+                /// <para>Reserved parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -107,12 +113,18 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public Dictionary<string, object> OriginAlgoResult { get; set; }
 
+                /// <summary>
+                /// <para>Risk Level.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>high</para>
+                /// </summary>
                 [NameInMap("RiskLevel")]
                 [Validation(Required=false)]
                 public string RiskLevel { get; set; }
 
                 /// <summary>
-                /// <para>The risk details that are hit.</para>
+                /// <para>The details of the risky content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sexuality_Suggestive</para>
@@ -122,7 +134,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public string RiskTips { get; set; }
 
                 /// <summary>
-                /// <para>The risk words that are hit.</para>
+                /// <para>The term hit by the risky content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AAA,BBB,CCC</para>
@@ -132,7 +144,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public string RiskWords { get; set; }
 
                 /// <summary>
-                /// <para>Risk score, default range 0-99.</para>
+                /// <para>The risk score. Default range: 0 to 99.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>87.01</para>
@@ -142,7 +154,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public float? Score { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the text after audio-to-text conversion. Unit: seconds.</para>
+                /// <para>The start time of the audio segment in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -162,7 +174,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public long? StartTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The text converted from voice.</para>
+                /// <para>The text converted from the audio segment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Disgusting</para>
@@ -172,7 +184,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public string Text { get; set; }
 
                 /// <summary>
-                /// <para>The temporary access address of the audio segment. The validity period of the URL is 30 minutes. You must prepare another URL to store the audio segment at the earliest opportunity.</para>
+                /// <para>The temporary URL of the audio segment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://aliyundoc.com">https://aliyundoc.com</a></para>
@@ -194,7 +206,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The URL of the moderation object.</para>
+            /// <para>The URL of the moderated content.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://aliyundoc.com">https://aliyundoc.com</a></para>
@@ -216,7 +228,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>2881AD4F-638B-52A3-BA20-F74C5B1CEAE3</para>

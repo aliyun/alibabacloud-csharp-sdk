@@ -2186,7 +2186,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>语音检测结果获取接口</para>
+        /// <para>Obtains the moderation results of a Voice Moderation 2.0 task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2232,7 +2232,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>语音检测结果获取接口</para>
+        /// <para>Obtains the moderation results of a Voice Moderation 2.0 task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2278,7 +2278,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>语音检测结果获取接口</para>
+        /// <para>Obtains the moderation results of a Voice Moderation 2.0 task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2296,7 +2296,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>语音检测结果获取接口</para>
+        /// <para>Obtains the moderation results of a Voice Moderation 2.0 task.</para>
         /// </summary>
         /// 
         /// <param name="request">
