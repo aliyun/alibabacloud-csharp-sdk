@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             /// </summary>
             [NameInMap("StartTs")]
             [Validation(Required=false)]
-            public int? StartTs { get; set; }
+            public long? StartTs { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
