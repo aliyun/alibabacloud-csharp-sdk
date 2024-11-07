@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public long? PlaybackDuration { get; set; }
 
+        [NameInMap("replayUrl")]
+        [Validation(Required=false)]
+        public string ReplayUrl { get; set; }
+
         /// <summary>
         /// <para>requestId</para>
         /// 
