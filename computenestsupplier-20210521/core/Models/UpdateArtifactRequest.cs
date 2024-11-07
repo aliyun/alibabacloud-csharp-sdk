@@ -9,6 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class UpdateArtifactRequest : TeaModel {
+        [NameInMap("ArtifactBuildProperty")]
+        [Validation(Required=false)]
+        public UpdateArtifactRequestArtifactBuildProperty ArtifactBuildProperty { get; set; }
+        public class UpdateArtifactRequestArtifactBuildProperty : TeaModel {
+            [NameInMap("CommandContent")]
+            [Validation(Required=false)]
+            public string CommandContent { get; set; }
+
+            [NameInMap("CommandType")]
+            [Validation(Required=false)]
+            public string CommandType { get; set; }
+
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
+            [NameInMap("SourceImageId")]
+            [Validation(Required=false)]
+            public string SourceImageId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The ID of the deployment package.</para>
         /// <para>This parameter is required.</para>
@@ -93,6 +115,18 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("RepoId")]
+            [Validation(Required=false)]
+            public string RepoId { get; set; }
+
+            [NameInMap("RepoName")]
+            [Validation(Required=false)]
+            public string RepoName { get; set; }
+
+            [NameInMap("RepoType")]
+            [Validation(Required=false)]
+            public string RepoType { get; set; }
+
             /// <summary>
             /// <para>The script content of the deployment package.</para>
             /// <remarks>
@@ -105,6 +139,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [NameInMap("ScriptMetadata")]
             [Validation(Required=false)]
             public string ScriptMetadata { get; set; }
+
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public string Tag { get; set; }
 
             /// <summary>
             /// <para>The URL of the deployment package object.</para>

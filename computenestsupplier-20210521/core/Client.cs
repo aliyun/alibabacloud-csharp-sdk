@@ -521,11 +521,19 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateArtifactShrinkRequest request = new CreateArtifactShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ArtifactBuildProperty))
+            {
+                request.ArtifactBuildPropertyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ArtifactBuildProperty, "ArtifactBuildProperty", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ArtifactProperty))
             {
                 request.ArtifactPropertyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ArtifactProperty, "ArtifactProperty", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactBuildPropertyShrink))
+            {
+                query["ArtifactBuildProperty"] = request.ArtifactBuildPropertyShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactId))
             {
                 query["ArtifactId"] = request.ArtifactId;
@@ -601,11 +609,19 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateArtifactShrinkRequest request = new CreateArtifactShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ArtifactBuildProperty))
+            {
+                request.ArtifactBuildPropertyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ArtifactBuildProperty, "ArtifactBuildProperty", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ArtifactProperty))
             {
                 request.ArtifactPropertyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ArtifactProperty, "ArtifactProperty", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactBuildPropertyShrink))
+            {
+                query["ArtifactBuildProperty"] = request.ArtifactBuildPropertyShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactId))
             {
                 query["ArtifactId"] = request.ArtifactId;
@@ -3470,7 +3486,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         /// <para>Queries the version information about a deployment package.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListArtifactVersionsRequest
         /// </param>
         /// <param name="runtime">
@@ -3480,13 +3496,23 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         /// <returns>
         /// ListArtifactVersionsResponse
         /// </returns>
-        public ListArtifactVersionsResponse ListArtifactVersionsWithOptions(ListArtifactVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListArtifactVersionsResponse ListArtifactVersionsWithOptions(ListArtifactVersionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListArtifactVersionsShrinkRequest request = new ListArtifactVersionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filters))
+            {
+                request.FiltersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filters, "Filters", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactId))
             {
                 query["ArtifactId"] = request.ArtifactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FiltersShrink))
+            {
+                query["Filters"] = request.FiltersShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -3520,7 +3546,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         /// <para>Queries the version information about a deployment package.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListArtifactVersionsRequest
         /// </param>
         /// <param name="runtime">
@@ -3530,13 +3556,23 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         /// <returns>
         /// ListArtifactVersionsResponse
         /// </returns>
-        public async Task<ListArtifactVersionsResponse> ListArtifactVersionsWithOptionsAsync(ListArtifactVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListArtifactVersionsResponse> ListArtifactVersionsWithOptionsAsync(ListArtifactVersionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListArtifactVersionsShrinkRequest request = new ListArtifactVersionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filters))
+            {
+                request.FiltersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filters, "Filters", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactId))
             {
                 query["ArtifactId"] = request.ArtifactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FiltersShrink))
+            {
+                query["Filters"] = request.FiltersShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -3751,100 +3787,6 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListArtifactsWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>查询服务分类</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ListServiceCategoriesRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ListServiceCategoriesResponse
-        /// </returns>
-        public ListServiceCategoriesResponse ListServiceCategoriesWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListServiceCategories",
-                Version = "2021-05-21",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListServiceCategoriesResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>查询服务分类</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ListServiceCategoriesRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ListServiceCategoriesResponse
-        /// </returns>
-        public async Task<ListServiceCategoriesResponse> ListServiceCategoriesWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListServiceCategories",
-                Version = "2021-05-21",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListServiceCategoriesResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>查询服务分类</para>
-        /// </summary>
-        /// 
-        /// <returns>
-        /// ListServiceCategoriesResponse
-        /// </returns>
-        public ListServiceCategoriesResponse ListServiceCategories()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ListServiceCategoriesWithOptions(runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>查询服务分类</para>
-        /// </summary>
-        /// 
-        /// <returns>
-        /// ListServiceCategoriesResponse
-        /// </returns>
-        public async Task<ListServiceCategoriesResponse> ListServiceCategoriesAsync()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ListServiceCategoriesWithOptionsAsync(runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5005,7 +4947,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商家拒绝服务使用请求</para>
+        /// <para>Reject service usage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5063,7 +5005,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商家拒绝服务使用请求</para>
+        /// <para>Reject service usage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5121,7 +5063,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商家拒绝服务使用请求</para>
+        /// <para>Reject service usage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5139,7 +5081,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商家拒绝服务使用请求</para>
+        /// <para>Reject service usage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5855,11 +5797,19 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateArtifactShrinkRequest request = new UpdateArtifactShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ArtifactBuildProperty))
+            {
+                request.ArtifactBuildPropertyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ArtifactBuildProperty, "ArtifactBuildProperty", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ArtifactProperty))
             {
                 request.ArtifactPropertyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ArtifactProperty, "ArtifactProperty", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactBuildPropertyShrink))
+            {
+                query["ArtifactBuildProperty"] = request.ArtifactBuildPropertyShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactId))
             {
                 query["ArtifactId"] = request.ArtifactId;
@@ -5919,11 +5869,19 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateArtifactShrinkRequest request = new UpdateArtifactShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ArtifactBuildProperty))
+            {
+                request.ArtifactBuildPropertyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ArtifactBuildProperty, "ArtifactBuildProperty", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ArtifactProperty))
             {
                 request.ArtifactPropertyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ArtifactProperty, "ArtifactProperty", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactBuildPropertyShrink))
+            {
+                query["ArtifactBuildProperty"] = request.ArtifactBuildPropertyShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactId))
             {
                 query["ArtifactId"] = request.ArtifactId;

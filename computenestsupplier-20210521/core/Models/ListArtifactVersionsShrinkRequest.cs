@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
-    public class ListArtifactVersionsRequest : TeaModel {
+    public class ListArtifactVersionsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the deployment package.</para>
         /// <para>This parameter is required.</para>
@@ -25,27 +25,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
-        public List<ListArtifactVersionsRequestFilters> Filters { get; set; }
-        public class ListArtifactVersionsRequestFilters : TeaModel {
-            /// <summary>
-            /// <para>The parameter name of the filter. You can specify one or more filters. Valid values:</para>
-            /// <para><b>Status</b>：The artifact status</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>Status</para>
-            /// </summary>
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            /// <summary>
-            /// <para>The parameter values of the filter.</para>
-            /// </summary>
-            [NameInMap("Values")]
-            [Validation(Required=false)]
-            public List<string> Values { get; set; }
-
-        }
+        public string FiltersShrink { get; set; }
 
         /// <summary>
         /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>

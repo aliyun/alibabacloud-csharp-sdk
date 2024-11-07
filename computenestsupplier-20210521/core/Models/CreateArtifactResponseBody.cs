@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class CreateArtifactResponseBody : TeaModel {
         /// <summary>
+        /// <para>The build properties of the artifact, utilized for hosting and building the deployment package.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;{\&quot;RegionId\&quot;:\&quot;xxx\&quot;, \&quot;SourceImageId\&quot;:\&quot;xxx\&quot;, \&quot;\&quot;:\&quot;xxx\&quot;, \&quot;CommandType\&quot;:\&quot;xxx\&quot;, \&quot;CommandContent\&quot;:\&quot;xxx\&quot;}&quot;</para>
+        /// </summary>
+        [NameInMap("ArtifactBuildProperty")]
+        [Validation(Required=false)]
+        public string ArtifactBuildProperty { get; set; }
+
+        /// <summary>
         /// <para>The ID of the deployment package.</para>
         /// 
         /// <b>Example:</b>
@@ -108,6 +118,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        /// <summary>
+        /// <para>The status of the deployment package.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;/usr/local/share/aliyun-assist/work/script/t-hz04zm90y6og0sg.sh: line 1: pip: command not found&quot;</para>
+        /// </summary>
+        [NameInMap("StatusDetail")]
+        [Validation(Required=false)]
+        public string StatusDetail { get; set; }
 
         /// <summary>
         /// <para>The ID of the region that supports the deployment package.</para>

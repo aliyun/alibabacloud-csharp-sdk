@@ -76,6 +76,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string RepoName { get; set; }
 
+            [NameInMap("RepoType")]
+            [Validation(Required=false)]
+            public string RepoType { get; set; }
+
         }
 
         /// <summary>
