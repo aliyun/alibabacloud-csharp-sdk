@@ -7995,6 +7995,184 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询指定地域内全部集群列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClustersForRegionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClustersForRegionResponse
+        /// </returns>
+        public DescribeClustersForRegionResponse DescribeClustersForRegionWithOptions(string regionId, DescribeClustersForRegionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["cluster_id"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSpec))
+            {
+                query["cluster_spec"] = request.ClusterSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterType))
+            {
+                query["cluster_type"] = request.ClusterType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["page_number"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Profile))
+            {
+                query["profile"] = request.Profile;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeClustersForRegion",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/regions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(regionId) + "/clusters",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeClustersForRegionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询指定地域内全部集群列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClustersForRegionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClustersForRegionResponse
+        /// </returns>
+        public async Task<DescribeClustersForRegionResponse> DescribeClustersForRegionWithOptionsAsync(string regionId, DescribeClustersForRegionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["cluster_id"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSpec))
+            {
+                query["cluster_spec"] = request.ClusterSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterType))
+            {
+                query["cluster_type"] = request.ClusterType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["page_number"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Profile))
+            {
+                query["profile"] = request.Profile;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeClustersForRegion",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/regions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(regionId) + "/clusters",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeClustersForRegionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询指定地域内全部集群列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClustersForRegionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClustersForRegionResponse
+        /// </returns>
+        public DescribeClustersForRegionResponse DescribeClustersForRegion(string regionId, DescribeClustersForRegionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeClustersForRegionWithOptions(regionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询指定地域内全部集群列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClustersForRegionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClustersForRegionResponse
+        /// </returns>
+        public async Task<DescribeClustersForRegionResponse> DescribeClustersForRegionAsync(string regionId, DescribeClustersForRegionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeClustersForRegionWithOptionsAsync(regionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details about Container Service for Kubernetes (ACK) clusters of specified types or specifications within an account.</para>
         /// </summary>
         /// 
@@ -8807,6 +8985,152 @@ namespace AlibabaCloud.SDK.CS20151215
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DescribeEventsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询指定地域内全部事件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEventsForRegionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEventsForRegionResponse
+        /// </returns>
+        public DescribeEventsForRegionResponse DescribeEventsForRegionWithOptions(string regionId, DescribeEventsForRegionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["cluster_id"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["page_number"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEventsForRegion",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/regions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(regionId) + "/events",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeEventsForRegionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询指定地域内全部事件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEventsForRegionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEventsForRegionResponse
+        /// </returns>
+        public async Task<DescribeEventsForRegionResponse> DescribeEventsForRegionWithOptionsAsync(string regionId, DescribeEventsForRegionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["cluster_id"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["page_number"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEventsForRegion",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/regions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(regionId) + "/events",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeEventsForRegionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询指定地域内全部事件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEventsForRegionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEventsForRegionResponse
+        /// </returns>
+        public DescribeEventsForRegionResponse DescribeEventsForRegion(string regionId, DescribeEventsForRegionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeEventsForRegionWithOptions(regionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询指定地域内全部事件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEventsForRegionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEventsForRegionResponse
+        /// </returns>
+        public async Task<DescribeEventsForRegionResponse> DescribeEventsForRegionAsync(string regionId, DescribeEventsForRegionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeEventsForRegionWithOptionsAsync(regionId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
