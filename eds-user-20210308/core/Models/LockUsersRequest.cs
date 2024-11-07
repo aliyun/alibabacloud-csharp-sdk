@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class LockUsersRequest : TeaModel {
+        [NameInMap("LogoutSession")]
+        [Validation(Required=false)]
+        public bool? LogoutSession { get; set; }
+
         /// <summary>
-        /// The usernames of the convenience users that you want to lock.
+        /// <para>The usernames of the convenience users that you want to lock.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test1</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]

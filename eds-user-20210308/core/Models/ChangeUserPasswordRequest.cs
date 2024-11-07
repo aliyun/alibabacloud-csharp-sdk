@@ -8,21 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
-    public class BatchSetDesktopManagerRequest : TeaModel {
+    public class ChangeUserPasswordRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>alice***</para>
         /// </summary>
-        [NameInMap("IsDesktopManager")]
+        [NameInMap("EndUserId")]
         [Validation(Required=false)]
-        public string IsDesktopManager { get; set; }
+        public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// <b>Example:</b>
+        /// <para>Admin@12***</para>
         /// </summary>
-        [NameInMap("Users")]
+        [NameInMap("NewPassword")]
         [Validation(Required=false)]
-        public List<string> Users { get; set; }
+        public string NewPassword { get; set; }
 
     }
 

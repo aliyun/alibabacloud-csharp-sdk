@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class ResetUserPasswordRequest : TeaModel {
         /// <summary>
-        /// The method to notify the user after the password is reset.
+        /// <para>The method to notify the user after the password is reset.</para>
+        /// <remarks>
+        /// <para>Alibaba Cloud accounts of the international site do not support sending notification through text messages.</para>
+        /// </remarks>
         /// 
-        /// > Alibaba Cloud accounts of the international site do not support sending notification through text messages.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("NotifyType")]
         [Validation(Required=false)]
         public int? NotifyType { get; set; }
 
         /// <summary>
-        /// The names of the convenience users whose passwords you want to reset.
+        /// <para>The names of the convenience users whose passwords you want to reset.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test1</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]

@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeOrgsResponseBody : TeaModel {
         /// <summary>
-        /// The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the DescribeOrgs operation was called.
+        /// <para>The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the DescribeOrgs operation was called.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAV3MpHK****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The organizations.
+        /// <para>The organizations.</para>
         /// </summary>
         [NameInMap("Orgs")]
         [Validation(Required=false)]
         public List<DescribeOrgsResponseBodyOrgs> Orgs { get; set; }
         public class DescribeOrgsResponseBodyOrgs : TeaModel {
             /// <summary>
-            /// The organization ID.
+            /// <para>The organization ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>org-****</para>
             /// </summary>
             [NameInMap("OrgId")]
             [Validation(Required=false)]
             public string OrgId { get; set; }
 
             /// <summary>
-            /// The name of the organizational unit.
+            /// <para>The name of the organizational unit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>org****</para>
             /// </summary>
             [NameInMap("OrgName")]
             [Validation(Required=false)]
             public string OrgName { get; set; }
 
             /// <summary>
-            /// The parent organization ID.
+            /// <para>The parent organization ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>org-****</para>
             /// </summary>
             [NameInMap("ParentOrgId")]
             [Validation(Required=false)]
@@ -47,7 +59,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0B4BB****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

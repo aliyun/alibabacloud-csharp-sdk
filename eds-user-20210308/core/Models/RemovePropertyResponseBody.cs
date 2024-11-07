@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class RemovePropertyResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

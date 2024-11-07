@@ -8,12 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
-    public class DeleteUserPropertyValueResponseBody : TeaModel {
+    public class ChangeUserPasswordResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>D6C62E40-F937-5803-B008-92E813399BA5</para>
+        /// <para>AA8D67CB-345D-5CDA-986E-FFAC7D0****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

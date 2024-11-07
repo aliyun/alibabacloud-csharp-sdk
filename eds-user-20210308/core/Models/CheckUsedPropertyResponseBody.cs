@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class CheckUsedPropertyResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>22C97624-2405-54AC-BD44-A63FBE97CC2D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of convenience users that are associated with the property.
+        /// <para>The number of convenience users that are associated with the property.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7</para>
         /// </summary>
         [NameInMap("UseCount")]
         [Validation(Required=false)]

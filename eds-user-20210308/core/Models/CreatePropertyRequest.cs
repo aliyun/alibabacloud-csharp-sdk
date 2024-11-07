@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class CreatePropertyRequest : TeaModel {
         /// <summary>
-        /// The property name.
+        /// <para>The property name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>department</para>
         /// </summary>
         [NameInMap("PropertyKey")]
         [Validation(Required=false)]
         public string PropertyKey { get; set; }
 
         /// <summary>
-        /// The values of the property. You can specify up to 50 values for a property.
+        /// <para>The values of the property. You can specify up to 50 values for a property.</para>
         /// </summary>
         [NameInMap("PropertyValues")]
         [Validation(Required=false)]

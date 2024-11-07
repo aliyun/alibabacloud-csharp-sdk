@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class FilterUsersResponseBody : TeaModel {
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DBD276B5-00FF-5E04-8EF7-5CBA09BF112A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the convenience user.
+        /// <para>The information about the convenience user.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
@@ -35,74 +41,93 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string AutoLockTime { get; set; }
 
             /// <summary>
-            /// The number of cloud desktops that are assigned to the convenience user.
+            /// <para>The number of cloud desktops that are assigned to the convenience user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("DesktopCount")]
             [Validation(Required=false)]
             public long? DesktopCount { get; set; }
 
             /// <summary>
-            /// The number of cloud desktop pools that are assigned to the convenience user. This value is returned if you set `IncludeDesktopGroupCount` to `true`.
+            /// <para>The number of cloud desktop pools that are assigned to the convenience user. This value is returned if you set <c>IncludeDesktopGroupCount</c> to <c>true</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("DesktopGroupCount")]
             [Validation(Required=false)]
             public long? DesktopGroupCount { get; set; }
 
             /// <summary>
-            /// The email address of the convenience user.
+            /// <para>The email address of the convenience user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="mailto:testName@example.com">testName@example.com</a></para>
             /// </summary>
             [NameInMap("Email")]
             [Validation(Required=false)]
             public string Email { get; set; }
 
             /// <summary>
-            /// Indicates whether the convenience user is a local administrator.
+            /// <para>Indicates whether the convenience user is a local administrator.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>true</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   true
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   false
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("EnableAdminAccess")]
             [Validation(Required=false)]
             public bool? EnableAdminAccess { get; set; }
 
             /// <summary>
-            /// The username of the convenience user.
+            /// <para>The username of the convenience user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testName</para>
             /// </summary>
             [NameInMap("EndUserId")]
             [Validation(Required=false)]
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// The additional information about the convenience user.
+            /// <para>The additional information about the convenience user.</para>
             /// </summary>
             [NameInMap("ExternalInfo")]
             [Validation(Required=false)]
             public FilterUsersResponseBodyUsersExternalInfo ExternalInfo { get; set; }
             public class FilterUsersResponseBodyUsersExternalInfo : TeaModel {
                 /// <summary>
-                /// The account that is associated with the convenience user.
+                /// <para>The account that is associated with the convenience user.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("ExternalName")]
                 [Validation(Required=false)]
                 public string ExternalName { get; set; }
 
                 /// <summary>
-                /// The account, student ID, or employee ID that is associated with the convenience user.
+                /// <para>The account, student ID, or employee ID that is associated with the convenience user.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>030801</para>
                 /// </summary>
                 [NameInMap("JobNumber")]
                 [Validation(Required=false)]
@@ -111,44 +136,51 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             }
 
             /// <summary>
-            /// The ID of the convenience user.
+            /// <para>The ID of the convenience user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>12345</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// Indicates whether the convenience user is a tenant administrator.
+            /// <para>Indicates whether the convenience user is a tenant administrator.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>true</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   true
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   false
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("IsTenantManager")]
             [Validation(Required=false)]
             public bool? IsTenantManager { get; set; }
 
             /// <summary>
-            /// The type of the account ownership.
+            /// <para>The type of the account ownership.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>CreateFromManager: administrator-activated</description></item>
+            /// <item><description>Normal: user-activated</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   CreateFromManager: administrator-activated
-            /// *   Normal: user-activated
+            /// <b>Example:</b>
+            /// <para>Normal</para>
             /// </summary>
             [NameInMap("OwnerType")]
             [Validation(Required=false)]
@@ -163,95 +195,120 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public int? PasswordExpireRestDays { get; set; }
 
             /// <summary>
-            /// The mobile number of the convenience user.
+            /// <para>The mobile number of the convenience user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1381111****</para>
             /// </summary>
             [NameInMap("Phone")]
             [Validation(Required=false)]
             public string Phone { get; set; }
 
             /// <summary>
-            /// The nickname of the convenience user.
+            /// <para>The nickname of the convenience user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Oliver</para>
             /// </summary>
             [NameInMap("RealNickName")]
             [Validation(Required=false)]
             public string RealNickName { get; set; }
 
             /// <summary>
-            /// The remarks on the convenience user.
+            /// <para>The remarks on the convenience user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
 
             /// <summary>
-            /// The status of the convenience user.
+            /// <para>The status of the convenience user.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>0: The convenience user is normal.</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   0: The convenience user is normal.
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>9: The convenience user is locked.</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   9: The convenience user is locked.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public long? Status { get; set; }
 
             /// <summary>
-            /// The information about the properties.
+            /// <para>The information about the properties.</para>
             /// </summary>
             [NameInMap("UserSetPropertiesModels")]
             [Validation(Required=false)]
             public List<FilterUsersResponseBodyUsersUserSetPropertiesModels> UserSetPropertiesModels { get; set; }
             public class FilterUsersResponseBodyUsersUserSetPropertiesModels : TeaModel {
                 /// <summary>
-                /// The property ID.
+                /// <para>The property ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12</para>
                 /// </summary>
                 [NameInMap("PropertyId")]
                 [Validation(Required=false)]
                 public long? PropertyId { get; set; }
 
                 /// <summary>
-                /// The property name.
+                /// <para>The property name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>department</para>
                 /// </summary>
                 [NameInMap("PropertyKey")]
                 [Validation(Required=false)]
                 public string PropertyKey { get; set; }
 
                 /// <summary>
-                /// The property type.
+                /// <para>The property type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("PropertyType")]
                 [Validation(Required=false)]
                 public int? PropertyType { get; set; }
 
                 /// <summary>
-                /// The property values.
+                /// <para>The property values.</para>
                 /// </summary>
                 [NameInMap("PropertyValues")]
                 [Validation(Required=false)]
                 public List<FilterUsersResponseBodyUsersUserSetPropertiesModelsPropertyValues> PropertyValues { get; set; }
                 public class FilterUsersResponseBodyUsersUserSetPropertiesModelsPropertyValues : TeaModel {
                     /// <summary>
-                    /// The property value.
+                    /// <para>The property value.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>A</para>
                     /// </summary>
                     [NameInMap("PropertyValue")]
                     [Validation(Required=false)]
                     public string PropertyValue { get; set; }
 
                     /// <summary>
-                    /// The ID of the property value.
+                    /// <para>The ID of the property value.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>42</para>
                     /// </summary>
                     [NameInMap("PropertyValueId")]
                     [Validation(Required=false)]
@@ -260,14 +317,20 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 }
 
                 /// <summary>
-                /// The ID of the convenience user that is bound to the property.
+                /// <para>The ID of the convenience user that is bound to the property.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12345</para>
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public long? UserId { get; set; }
 
                 /// <summary>
-                /// The username of the convenience user that is bound to the property.
+                /// <para>The username of the convenience user that is bound to the property.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testName</para>
                 /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]

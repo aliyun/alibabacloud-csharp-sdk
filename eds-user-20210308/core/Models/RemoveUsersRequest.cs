@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class RemoveUsersRequest : TeaModel {
         /// <summary>
-        /// The usernames of the convenience users that you want to remove.
+        /// <para>The usernames of the convenience users that you want to remove.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test1</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]

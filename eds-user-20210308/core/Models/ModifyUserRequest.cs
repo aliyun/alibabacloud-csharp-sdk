@@ -10,25 +10,34 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class ModifyUserRequest : TeaModel {
         /// <summary>
-        /// The email address of the convenience user. For a user-activated convenience user, the email address or mobile number must be verified. You can choose to verify the email address or the mobile number. For an administrator-activated convenience user, the email address and mobile number can be left empty.
+        /// <para>The email address of the convenience user. For a user-activated convenience user, the email address or mobile number must be verified. You can choose to verify the email address or the mobile number. For an administrator-activated convenience user, the email address and mobile number can be left empty.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="mailto:username@example.com">username@example.com</a></para>
         /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]
         public string Email { get; set; }
 
         /// <summary>
-        /// The name of the user.
+        /// <para>The name of the user.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Alice</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// The mobile number of the convenience user. For a user-activated convenience user, the email address or mobile number must be verified. You can choose to verify the email address or the mobile number. For an administrator-activated convenience user, the email address and mobile number can be left empty.
+        /// <para>The mobile number of the convenience user. For a user-activated convenience user, the email address or mobile number must be verified. You can choose to verify the email address or the mobile number. For an administrator-activated convenience user, the email address and mobile number can be left empty.</para>
+        /// <remarks>
+        /// <para> Accounts created on the International site (alibabacloud.com) do not support mobile number-based authentication.</para>
+        /// </remarks>
         /// 
-        /// >  Accounts created on the International site (alibabacloud.com) do not support mobile number-based authentication.
+        /// <b>Example:</b>
+        /// <para>1381111****</para>
         /// </summary>
         [NameInMap("Phone")]
         [Validation(Required=false)]

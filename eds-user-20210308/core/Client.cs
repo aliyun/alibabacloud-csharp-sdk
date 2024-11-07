@@ -38,13 +38,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 批量设置桌面管理员
-         *
-         * @param request BatchSetDesktopManagerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchSetDesktopManagerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量设置桌面管理员</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchSetDesktopManagerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchSetDesktopManagerResponse
+        /// </returns>
         public BatchSetDesktopManagerResponse BatchSetDesktopManagerWithOptions(BatchSetDesktopManagerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -76,13 +84,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<BatchSetDesktopManagerResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量设置桌面管理员
-         *
-         * @param request BatchSetDesktopManagerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchSetDesktopManagerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量设置桌面管理员</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchSetDesktopManagerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchSetDesktopManagerResponse
+        /// </returns>
         public async Task<BatchSetDesktopManagerResponse> BatchSetDesktopManagerWithOptionsAsync(BatchSetDesktopManagerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -114,37 +130,185 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<BatchSetDesktopManagerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量设置桌面管理员
-         *
-         * @param request BatchSetDesktopManagerRequest
-         * @return BatchSetDesktopManagerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量设置桌面管理员</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchSetDesktopManagerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchSetDesktopManagerResponse
+        /// </returns>
         public BatchSetDesktopManagerResponse BatchSetDesktopManager(BatchSetDesktopManagerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BatchSetDesktopManagerWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 批量设置桌面管理员
-         *
-         * @param request BatchSetDesktopManagerRequest
-         * @return BatchSetDesktopManagerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量设置桌面管理员</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchSetDesktopManagerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchSetDesktopManagerResponse
+        /// </returns>
         public async Task<BatchSetDesktopManagerResponse> BatchSetDesktopManagerAsync(BatchSetDesktopManagerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchSetDesktopManagerWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries whether a property is associated with one or more convenience users.
-         *
-         * @param request CheckUsedPropertyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckUsedPropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>管理员修改用户密码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeUserPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeUserPasswordResponse
+        /// </returns>
+        public ChangeUserPasswordResponse ChangeUserPasswordWithOptions(ChangeUserPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                body["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewPassword))
+            {
+                body["NewPassword"] = request.NewPassword;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeUserPassword",
+                Version = "2021-03-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeUserPasswordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>管理员修改用户密码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeUserPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeUserPasswordResponse
+        /// </returns>
+        public async Task<ChangeUserPasswordResponse> ChangeUserPasswordWithOptionsAsync(ChangeUserPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                body["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewPassword))
+            {
+                body["NewPassword"] = request.NewPassword;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeUserPassword",
+                Version = "2021-03-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeUserPasswordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>管理员修改用户密码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeUserPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeUserPasswordResponse
+        /// </returns>
+        public ChangeUserPasswordResponse ChangeUserPassword(ChangeUserPasswordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ChangeUserPasswordWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>管理员修改用户密码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeUserPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeUserPasswordResponse
+        /// </returns>
+        public async Task<ChangeUserPasswordResponse> ChangeUserPasswordAsync(ChangeUserPasswordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ChangeUserPasswordWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether a property is associated with one or more convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckUsedPropertyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckUsedPropertyResponse
+        /// </returns>
         public CheckUsedPropertyResponse CheckUsedPropertyWithOptions(CheckUsedPropertyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -172,13 +336,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<CheckUsedPropertyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether a property is associated with one or more convenience users.
-         *
-         * @param request CheckUsedPropertyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckUsedPropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether a property is associated with one or more convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckUsedPropertyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckUsedPropertyResponse
+        /// </returns>
         public async Task<CheckUsedPropertyResponse> CheckUsedPropertyWithOptionsAsync(CheckUsedPropertyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -206,39 +378,62 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<CheckUsedPropertyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether a property is associated with one or more convenience users.
-         *
-         * @param request CheckUsedPropertyRequest
-         * @return CheckUsedPropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether a property is associated with one or more convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckUsedPropertyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckUsedPropertyResponse
+        /// </returns>
         public CheckUsedPropertyResponse CheckUsedProperty(CheckUsedPropertyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckUsedPropertyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries whether a property is associated with one or more convenience users.
-         *
-         * @param request CheckUsedPropertyRequest
-         * @return CheckUsedPropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether a property is associated with one or more convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckUsedPropertyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckUsedPropertyResponse
+        /// </returns>
         public async Task<CheckUsedPropertyResponse> CheckUsedPropertyAsync(CheckUsedPropertyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CheckUsedPropertyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Checks whether a property value is associated with a user.
-         *
-         * @description Before you call the operation, you can call the [ListProperty](https://help.aliyun.com/document_detail/410890.html) operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).
-         *
-         * @param request CheckUsedPropertyValueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckUsedPropertyValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a property value is associated with a user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call the operation, you can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckUsedPropertyValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckUsedPropertyValueResponse
+        /// </returns>
         public CheckUsedPropertyValueResponse CheckUsedPropertyValueWithOptions(CheckUsedPropertyValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -270,15 +465,26 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<CheckUsedPropertyValueResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Checks whether a property value is associated with a user.
-         *
-         * @description Before you call the operation, you can call the [ListProperty](https://help.aliyun.com/document_detail/410890.html) operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).
-         *
-         * @param request CheckUsedPropertyValueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckUsedPropertyValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a property value is associated with a user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call the operation, you can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckUsedPropertyValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckUsedPropertyValueResponse
+        /// </returns>
         public async Task<CheckUsedPropertyValueResponse> CheckUsedPropertyValueWithOptionsAsync(CheckUsedPropertyValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -310,41 +516,67 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<CheckUsedPropertyValueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Checks whether a property value is associated with a user.
-         *
-         * @description Before you call the operation, you can call the [ListProperty](https://help.aliyun.com/document_detail/410890.html) operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).
-         *
-         * @param request CheckUsedPropertyValueRequest
-         * @return CheckUsedPropertyValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a property value is associated with a user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call the operation, you can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckUsedPropertyValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckUsedPropertyValueResponse
+        /// </returns>
         public CheckUsedPropertyValueResponse CheckUsedPropertyValue(CheckUsedPropertyValueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckUsedPropertyValueWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Checks whether a property value is associated with a user.
-         *
-         * @description Before you call the operation, you can call the [ListProperty](https://help.aliyun.com/document_detail/410890.html) operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).
-         *
-         * @param request CheckUsedPropertyValueRequest
-         * @return CheckUsedPropertyValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a property value is associated with a user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call the operation, you can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckUsedPropertyValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckUsedPropertyValueResponse
+        /// </returns>
         public async Task<CheckUsedPropertyValueResponse> CheckUsedPropertyValueAsync(CheckUsedPropertyValueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CheckUsedPropertyValueWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a user property.
-         *
-         * @param request CreatePropertyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreatePropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user property.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePropertyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePropertyResponse
+        /// </returns>
         public CreatePropertyResponse CreatePropertyWithOptions(CreatePropertyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -376,13 +608,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<CreatePropertyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a user property.
-         *
-         * @param request CreatePropertyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreatePropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user property.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePropertyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePropertyResponse
+        /// </returns>
         public async Task<CreatePropertyResponse> CreatePropertyWithOptionsAsync(CreatePropertyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -414,39 +654,62 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<CreatePropertyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a user property.
-         *
-         * @param request CreatePropertyRequest
-         * @return CreatePropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user property.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePropertyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePropertyResponse
+        /// </returns>
         public CreatePropertyResponse CreateProperty(CreatePropertyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreatePropertyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a user property.
-         *
-         * @param request CreatePropertyRequest
-         * @return CreatePropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user property.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePropertyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePropertyResponse
+        /// </returns>
         public async Task<CreatePropertyResponse> CreatePropertyAsync(CreatePropertyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreatePropertyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a convenience user.
-         *
-         * @description Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.
-         *
-         * @param request CreateUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUsersResponse
+        /// </returns>
         public CreateUsersResponse CreateUsersWithOptions(CreateUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -492,15 +755,26 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<CreateUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a convenience user.
-         *
-         * @description Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.
-         *
-         * @param request CreateUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUsersResponse
+        /// </returns>
         public async Task<CreateUsersResponse> CreateUsersWithOptionsAsync(CreateUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -546,43 +820,72 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<CreateUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a convenience user.
-         *
-         * @description Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.
-         *
-         * @param request CreateUsersRequest
-         * @return CreateUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUsersResponse
+        /// </returns>
         public CreateUsersResponse CreateUsers(CreateUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateUsersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a convenience user.
-         *
-         * @description Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.
-         *
-         * @param request CreateUsersRequest
-         * @return CreateUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUsersResponse
+        /// </returns>
         public async Task<CreateUsersResponse> CreateUsersAsync(CreateUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateUsersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Dissociates a user property from a user.
-         *
-         * @description Before you call this operation, you can call the FilterUsers operation to query the users that are associated with user properties.
-         *
-         * @param request DeleteUserPropertyValueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteUserPropertyValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dissociates a user property from a user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, you can call the FilterUsers operation to query the users that are associated with user properties.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteUserPropertyValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserPropertyValueResponse
+        /// </returns>
         public DeleteUserPropertyValueResponse DeleteUserPropertyValueWithOptions(DeleteUserPropertyValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -618,15 +921,26 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<DeleteUserPropertyValueResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Dissociates a user property from a user.
-         *
-         * @description Before you call this operation, you can call the FilterUsers operation to query the users that are associated with user properties.
-         *
-         * @param request DeleteUserPropertyValueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteUserPropertyValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dissociates a user property from a user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, you can call the FilterUsers operation to query the users that are associated with user properties.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteUserPropertyValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserPropertyValueResponse
+        /// </returns>
         public async Task<DeleteUserPropertyValueResponse> DeleteUserPropertyValueWithOptionsAsync(DeleteUserPropertyValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -662,41 +976,67 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<DeleteUserPropertyValueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Dissociates a user property from a user.
-         *
-         * @description Before you call this operation, you can call the FilterUsers operation to query the users that are associated with user properties.
-         *
-         * @param request DeleteUserPropertyValueRequest
-         * @return DeleteUserPropertyValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dissociates a user property from a user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, you can call the FilterUsers operation to query the users that are associated with user properties.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteUserPropertyValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserPropertyValueResponse
+        /// </returns>
         public DeleteUserPropertyValueResponse DeleteUserPropertyValue(DeleteUserPropertyValueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteUserPropertyValueWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Dissociates a user property from a user.
-         *
-         * @description Before you call this operation, you can call the FilterUsers operation to query the users that are associated with user properties.
-         *
-         * @param request DeleteUserPropertyValueRequest
-         * @return DeleteUserPropertyValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dissociates a user property from a user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, you can call the FilterUsers operation to query the users that are associated with user properties.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteUserPropertyValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserPropertyValueResponse
+        /// </returns>
         public async Task<DeleteUserPropertyValueResponse> DeleteUserPropertyValueAsync(DeleteUserPropertyValueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteUserPropertyValueWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience users.
-         *
-         * @param request DescribeMfaDevicesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMfaDevicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMfaDevicesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMfaDevicesResponse
+        /// </returns>
         public DescribeMfaDevicesResponse DescribeMfaDevicesWithOptions(DescribeMfaDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -740,13 +1080,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<DescribeMfaDevicesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience users.
-         *
-         * @param request DescribeMfaDevicesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMfaDevicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMfaDevicesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMfaDevicesResponse
+        /// </returns>
         public async Task<DescribeMfaDevicesResponse> DescribeMfaDevicesWithOptionsAsync(DescribeMfaDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -790,39 +1138,62 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<DescribeMfaDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience users.
-         *
-         * @param request DescribeMfaDevicesRequest
-         * @return DescribeMfaDevicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMfaDevicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMfaDevicesResponse
+        /// </returns>
         public DescribeMfaDevicesResponse DescribeMfaDevices(DescribeMfaDevicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeMfaDevicesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience users.
-         *
-         * @param request DescribeMfaDevicesRequest
-         * @return DescribeMfaDevicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMfaDevicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMfaDevicesResponse
+        /// </returns>
         public async Task<DescribeMfaDevicesResponse> DescribeMfaDevicesAsync(DescribeMfaDevicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeMfaDevicesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries organizations.
-         *
-         * @description An organization is in a tree structure. The root organization ID is in the following format: org-aliyun-wy-org-id.
-         *
-         * @param request DescribeOrgsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeOrgsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries organizations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An organization is in a tree structure. The root organization ID is in the following format: org-aliyun-wy-org-id.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeOrgsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOrgsResponse
+        /// </returns>
         public DescribeOrgsResponse DescribeOrgsWithOptions(DescribeOrgsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -862,15 +1233,26 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<DescribeOrgsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries organizations.
-         *
-         * @description An organization is in a tree structure. The root organization ID is in the following format: org-aliyun-wy-org-id.
-         *
-         * @param request DescribeOrgsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeOrgsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries organizations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An organization is in a tree structure. The root organization ID is in the following format: org-aliyun-wy-org-id.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeOrgsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOrgsResponse
+        /// </returns>
         public async Task<DescribeOrgsResponse> DescribeOrgsWithOptionsAsync(DescribeOrgsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -910,41 +1292,67 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<DescribeOrgsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries organizations.
-         *
-         * @description An organization is in a tree structure. The root organization ID is in the following format: org-aliyun-wy-org-id.
-         *
-         * @param request DescribeOrgsRequest
-         * @return DescribeOrgsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries organizations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An organization is in a tree structure. The root organization ID is in the following format: org-aliyun-wy-org-id.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeOrgsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOrgsResponse
+        /// </returns>
         public DescribeOrgsResponse DescribeOrgs(DescribeOrgsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeOrgsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries organizations.
-         *
-         * @description An organization is in a tree structure. The root organization ID is in the following format: org-aliyun-wy-org-id.
-         *
-         * @param request DescribeOrgsRequest
-         * @return DescribeOrgsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries organizations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An organization is in a tree structure. The root organization ID is in the following format: org-aliyun-wy-org-id.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeOrgsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOrgsResponse
+        /// </returns>
         public async Task<DescribeOrgsResponse> DescribeOrgsAsync(DescribeOrgsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeOrgsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about convenience users. The information of a convenience user includes a username, an email address, and a description.
-         *
-         * @param tmpReq DescribeUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about convenience users. The information of a convenience user includes a username, an email address, and a description.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUsersResponse
+        /// </returns>
         public DescribeUsersResponse DescribeUsersWithOptions(DescribeUsersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1024,13 +1432,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<DescribeUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about convenience users. The information of a convenience user includes a username, an email address, and a description.
-         *
-         * @param tmpReq DescribeUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about convenience users. The information of a convenience user includes a username, an email address, and a description.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUsersResponse
+        /// </returns>
         public async Task<DescribeUsersResponse> DescribeUsersWithOptionsAsync(DescribeUsersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1110,37 +1526,57 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<DescribeUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about convenience users. The information of a convenience user includes a username, an email address, and a description.
-         *
-         * @param request DescribeUsersRequest
-         * @return DescribeUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about convenience users. The information of a convenience user includes a username, an email address, and a description.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUsersResponse
+        /// </returns>
         public DescribeUsersResponse DescribeUsers(DescribeUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUsersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about convenience users. The information of a convenience user includes a username, an email address, and a description.
-         *
-         * @param request DescribeUsersRequest
-         * @return DescribeUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about convenience users. The information of a convenience user includes a username, an email address, and a description.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUsersResponse
+        /// </returns>
         public async Task<DescribeUsersResponse> DescribeUsersAsync(DescribeUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUsersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Filters convenience users by property.
-         *
-         * @param tmpReq FilterUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return FilterUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Filters convenience users by property.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// FilterUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FilterUsersResponse
+        /// </returns>
         public FilterUsersResponse FilterUsersWithOptions(FilterUsersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1218,13 +1654,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<FilterUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Filters convenience users by property.
-         *
-         * @param tmpReq FilterUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return FilterUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Filters convenience users by property.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// FilterUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FilterUsersResponse
+        /// </returns>
         public async Task<FilterUsersResponse> FilterUsersWithOptionsAsync(FilterUsersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1302,37 +1746,57 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<FilterUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Filters convenience users by property.
-         *
-         * @param request FilterUsersRequest
-         * @return FilterUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Filters convenience users by property.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FilterUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FilterUsersResponse
+        /// </returns>
         public FilterUsersResponse FilterUsers(FilterUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return FilterUsersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Filters convenience users by property.
-         *
-         * @param request FilterUsersRequest
-         * @return FilterUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Filters convenience users by property.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FilterUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FilterUsersResponse
+        /// </returns>
         public async Task<FilterUsersResponse> FilterUsersAsync(FilterUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await FilterUsersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Obtains the information about the current logon administrator based on the authorization code.
-         *
-         * @param request GetManagerInfoByAuthCodeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetManagerInfoByAuthCodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the information about the current logon administrator based on the authorization code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetManagerInfoByAuthCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetManagerInfoByAuthCodeResponse
+        /// </returns>
         public GetManagerInfoByAuthCodeResponse GetManagerInfoByAuthCodeWithOptions(GetManagerInfoByAuthCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1360,13 +1824,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<GetManagerInfoByAuthCodeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtains the information about the current logon administrator based on the authorization code.
-         *
-         * @param request GetManagerInfoByAuthCodeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetManagerInfoByAuthCodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the information about the current logon administrator based on the authorization code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetManagerInfoByAuthCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetManagerInfoByAuthCodeResponse
+        /// </returns>
         public async Task<GetManagerInfoByAuthCodeResponse> GetManagerInfoByAuthCodeWithOptionsAsync(GetManagerInfoByAuthCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1394,37 +1866,57 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<GetManagerInfoByAuthCodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtains the information about the current logon administrator based on the authorization code.
-         *
-         * @param request GetManagerInfoByAuthCodeRequest
-         * @return GetManagerInfoByAuthCodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the information about the current logon administrator based on the authorization code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetManagerInfoByAuthCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetManagerInfoByAuthCodeResponse
+        /// </returns>
         public GetManagerInfoByAuthCodeResponse GetManagerInfoByAuthCode(GetManagerInfoByAuthCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetManagerInfoByAuthCodeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Obtains the information about the current logon administrator based on the authorization code.
-         *
-         * @param request GetManagerInfoByAuthCodeRequest
-         * @return GetManagerInfoByAuthCodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the information about the current logon administrator based on the authorization code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetManagerInfoByAuthCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetManagerInfoByAuthCodeResponse
+        /// </returns>
         public async Task<GetManagerInfoByAuthCodeResponse> GetManagerInfoByAuthCodeAsync(GetManagerInfoByAuthCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetManagerInfoByAuthCodeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries all user properties within an Alibaba Cloud account.
-         *
-         * @param request ListPropertyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListPropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all user properties within an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPropertyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPropertyResponse
+        /// </returns>
         public ListPropertyResponse ListPropertyWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -1443,13 +1935,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<ListPropertyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries all user properties within an Alibaba Cloud account.
-         *
-         * @param request ListPropertyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListPropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all user properties within an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPropertyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPropertyResponse
+        /// </returns>
         public async Task<ListPropertyResponse> ListPropertyWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -1468,35 +1968,49 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<ListPropertyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries all user properties within an Alibaba Cloud account.
-         *
-         * @return ListPropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all user properties within an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListPropertyResponse
+        /// </returns>
         public ListPropertyResponse ListProperty()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListPropertyWithOptions(runtime);
         }
 
-        /**
-         * @summary Queries all user properties within an Alibaba Cloud account.
-         *
-         * @return ListPropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all user properties within an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListPropertyResponse
+        /// </returns>
         public async Task<ListPropertyResponse> ListPropertyAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListPropertyWithOptionsAsync(runtime);
         }
 
-        /**
-         * @summary Queries property values of a user property.
-         *
-         * @param request ListPropertyValueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListPropertyValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries property values of a user property.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPropertyValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPropertyValueResponse
+        /// </returns>
         public ListPropertyValueResponse ListPropertyValueWithOptions(ListPropertyValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1524,13 +2038,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<ListPropertyValueResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries property values of a user property.
-         *
-         * @param request ListPropertyValueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListPropertyValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries property values of a user property.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPropertyValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPropertyValueResponse
+        /// </returns>
         public async Task<ListPropertyValueResponse> ListPropertyValueWithOptionsAsync(ListPropertyValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1558,39 +2080,62 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<ListPropertyValueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries property values of a user property.
-         *
-         * @param request ListPropertyValueRequest
-         * @return ListPropertyValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries property values of a user property.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPropertyValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPropertyValueResponse
+        /// </returns>
         public ListPropertyValueResponse ListPropertyValue(ListPropertyValueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListPropertyValueWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries property values of a user property.
-         *
-         * @param request ListPropertyValueRequest
-         * @return ListPropertyValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries property values of a user property.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPropertyValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPropertyValueResponse
+        /// </returns>
         public async Task<ListPropertyValueResponse> ListPropertyValueAsync(ListPropertyValueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListPropertyValueWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Locks a virtual multi-factor authentication (MFA) device that is bound to a convenience user.
-         *
-         * @description After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the identity of the convenience user cannot be verified based on the virtual MFA device. You can call the [UnlockMfaDevice](https://help.aliyun.com/document_detail/286534.html) operation to unlock the virtual MFA device.
-         *
-         * @param request LockMfaDeviceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return LockMfaDeviceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Locks a virtual multi-factor authentication (MFA) device that is bound to a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the identity of the convenience user cannot be verified based on the virtual MFA device. You can call the <a href="https://help.aliyun.com/document_detail/286534.html">UnlockMfaDevice</a> operation to unlock the virtual MFA device.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// LockMfaDeviceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LockMfaDeviceResponse
+        /// </returns>
         public LockMfaDeviceResponse LockMfaDeviceWithOptions(LockMfaDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1622,15 +2167,26 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<LockMfaDeviceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Locks a virtual multi-factor authentication (MFA) device that is bound to a convenience user.
-         *
-         * @description After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the identity of the convenience user cannot be verified based on the virtual MFA device. You can call the [UnlockMfaDevice](https://help.aliyun.com/document_detail/286534.html) operation to unlock the virtual MFA device.
-         *
-         * @param request LockMfaDeviceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return LockMfaDeviceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Locks a virtual multi-factor authentication (MFA) device that is bound to a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the identity of the convenience user cannot be verified based on the virtual MFA device. You can call the <a href="https://help.aliyun.com/document_detail/286534.html">UnlockMfaDevice</a> operation to unlock the virtual MFA device.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// LockMfaDeviceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LockMfaDeviceResponse
+        /// </returns>
         public async Task<LockMfaDeviceResponse> LockMfaDeviceWithOptionsAsync(LockMfaDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1662,44 +2218,75 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<LockMfaDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Locks a virtual multi-factor authentication (MFA) device that is bound to a convenience user.
-         *
-         * @description After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the identity of the convenience user cannot be verified based on the virtual MFA device. You can call the [UnlockMfaDevice](https://help.aliyun.com/document_detail/286534.html) operation to unlock the virtual MFA device.
-         *
-         * @param request LockMfaDeviceRequest
-         * @return LockMfaDeviceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Locks a virtual multi-factor authentication (MFA) device that is bound to a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the identity of the convenience user cannot be verified based on the virtual MFA device. You can call the <a href="https://help.aliyun.com/document_detail/286534.html">UnlockMfaDevice</a> operation to unlock the virtual MFA device.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// LockMfaDeviceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LockMfaDeviceResponse
+        /// </returns>
         public LockMfaDeviceResponse LockMfaDevice(LockMfaDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return LockMfaDeviceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Locks a virtual multi-factor authentication (MFA) device that is bound to a convenience user.
-         *
-         * @description After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the identity of the convenience user cannot be verified based on the virtual MFA device. You can call the [UnlockMfaDevice](https://help.aliyun.com/document_detail/286534.html) operation to unlock the virtual MFA device.
-         *
-         * @param request LockMfaDeviceRequest
-         * @return LockMfaDeviceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Locks a virtual multi-factor authentication (MFA) device that is bound to a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the identity of the convenience user cannot be verified based on the virtual MFA device. You can call the <a href="https://help.aliyun.com/document_detail/286534.html">UnlockMfaDevice</a> operation to unlock the virtual MFA device.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// LockMfaDeviceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LockMfaDeviceResponse
+        /// </returns>
         public async Task<LockMfaDeviceResponse> LockMfaDeviceAsync(LockMfaDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await LockMfaDeviceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Locks one or more convenience users.
-         *
-         * @param request LockUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return LockUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Locks one or more convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LockUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LockUsersResponse
+        /// </returns>
         public LockUsersResponse LockUsersWithOptions(LockUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogoutSession))
+            {
+                query["LogoutSession"] = request.LogoutSession;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Users))
             {
@@ -1707,6 +2294,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1724,16 +2312,29 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<LockUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Locks one or more convenience users.
-         *
-         * @param request LockUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return LockUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Locks one or more convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LockUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LockUsersResponse
+        /// </returns>
         public async Task<LockUsersResponse> LockUsersWithOptionsAsync(LockUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogoutSession))
+            {
+                query["LogoutSession"] = request.LogoutSession;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Users))
             {
@@ -1741,6 +2342,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1758,37 +2360,57 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<LockUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Locks one or more convenience users.
-         *
-         * @param request LockUsersRequest
-         * @return LockUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Locks one or more convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LockUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LockUsersResponse
+        /// </returns>
         public LockUsersResponse LockUsers(LockUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return LockUsersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Locks one or more convenience users.
-         *
-         * @param request LockUsersRequest
-         * @return LockUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Locks one or more convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LockUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LockUsersResponse
+        /// </returns>
         public async Task<LockUsersResponse> LockUsersAsync(LockUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await LockUsersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies user information.
-         *
-         * @param request ModifyUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies user information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserResponse
+        /// </returns>
         public ModifyUserResponse ModifyUserWithOptions(ModifyUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1824,13 +2446,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<ModifyUserResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies user information.
-         *
-         * @param request ModifyUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies user information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserResponse
+        /// </returns>
         public async Task<ModifyUserResponse> ModifyUserWithOptionsAsync(ModifyUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1866,37 +2496,57 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<ModifyUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies user information.
-         *
-         * @param request ModifyUserRequest
-         * @return ModifyUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies user information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserResponse
+        /// </returns>
         public ModifyUserResponse ModifyUser(ModifyUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyUserWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies user information.
-         *
-         * @param request ModifyUserRequest
-         * @return ModifyUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies user information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyUserResponse
+        /// </returns>
         public async Task<ModifyUserResponse> ModifyUserAsync(ModifyUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyUserWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询edu同步信息
-         *
-         * @param request QuerySyncStatusByAliUidRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QuerySyncStatusByAliUidResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询edu同步信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySyncStatusByAliUidRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySyncStatusByAliUidResponse
+        /// </returns>
         public QuerySyncStatusByAliUidResponse QuerySyncStatusByAliUidWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -1915,13 +2565,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<QuerySyncStatusByAliUidResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询edu同步信息
-         *
-         * @param request QuerySyncStatusByAliUidRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QuerySyncStatusByAliUidResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询edu同步信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySyncStatusByAliUidRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySyncStatusByAliUidResponse
+        /// </returns>
         public async Task<QuerySyncStatusByAliUidResponse> QuerySyncStatusByAliUidWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -1940,37 +2598,54 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<QuerySyncStatusByAliUidResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询edu同步信息
-         *
-         * @return QuerySyncStatusByAliUidResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询edu同步信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// QuerySyncStatusByAliUidResponse
+        /// </returns>
         public QuerySyncStatusByAliUidResponse QuerySyncStatusByAliUid()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QuerySyncStatusByAliUidWithOptions(runtime);
         }
 
-        /**
-         * @summary 查询edu同步信息
-         *
-         * @return QuerySyncStatusByAliUidResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询edu同步信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// QuerySyncStatusByAliUidResponse
+        /// </returns>
         public async Task<QuerySyncStatusByAliUidResponse> QuerySyncStatusByAliUidAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QuerySyncStatusByAliUidWithOptionsAsync(runtime);
         }
 
-        /**
-         * @summary Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience user.
-         *
-         * @description If you remove a virtual MFA device that is bound to a convenience user, the convenience user can no longer use the virtual MFA device to log on to cloud desktops. Before the convenience user can log on to cloud desktops again, a new virtual MFA device must be bound to the convenience user.
-         *
-         * @param request RemoveMfaDeviceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RemoveMfaDeviceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you remove a virtual MFA device that is bound to a convenience user, the convenience user can no longer use the virtual MFA device to log on to cloud desktops. Before the convenience user can log on to cloud desktops again, a new virtual MFA device must be bound to the convenience user.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveMfaDeviceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveMfaDeviceResponse
+        /// </returns>
         public RemoveMfaDeviceResponse RemoveMfaDeviceWithOptions(RemoveMfaDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2002,15 +2677,26 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<RemoveMfaDeviceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience user.
-         *
-         * @description If you remove a virtual MFA device that is bound to a convenience user, the convenience user can no longer use the virtual MFA device to log on to cloud desktops. Before the convenience user can log on to cloud desktops again, a new virtual MFA device must be bound to the convenience user.
-         *
-         * @param request RemoveMfaDeviceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RemoveMfaDeviceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you remove a virtual MFA device that is bound to a convenience user, the convenience user can no longer use the virtual MFA device to log on to cloud desktops. Before the convenience user can log on to cloud desktops again, a new virtual MFA device must be bound to the convenience user.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveMfaDeviceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveMfaDeviceResponse
+        /// </returns>
         public async Task<RemoveMfaDeviceResponse> RemoveMfaDeviceWithOptionsAsync(RemoveMfaDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2042,41 +2728,67 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<RemoveMfaDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience user.
-         *
-         * @description If you remove a virtual MFA device that is bound to a convenience user, the convenience user can no longer use the virtual MFA device to log on to cloud desktops. Before the convenience user can log on to cloud desktops again, a new virtual MFA device must be bound to the convenience user.
-         *
-         * @param request RemoveMfaDeviceRequest
-         * @return RemoveMfaDeviceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you remove a virtual MFA device that is bound to a convenience user, the convenience user can no longer use the virtual MFA device to log on to cloud desktops. Before the convenience user can log on to cloud desktops again, a new virtual MFA device must be bound to the convenience user.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveMfaDeviceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveMfaDeviceResponse
+        /// </returns>
         public RemoveMfaDeviceResponse RemoveMfaDevice(RemoveMfaDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveMfaDeviceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience user.
-         *
-         * @description If you remove a virtual MFA device that is bound to a convenience user, the convenience user can no longer use the virtual MFA device to log on to cloud desktops. Before the convenience user can log on to cloud desktops again, a new virtual MFA device must be bound to the convenience user.
-         *
-         * @param request RemoveMfaDeviceRequest
-         * @return RemoveMfaDeviceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you remove a virtual MFA device that is bound to a convenience user, the convenience user can no longer use the virtual MFA device to log on to cloud desktops. Before the convenience user can log on to cloud desktops again, a new virtual MFA device must be bound to the convenience user.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveMfaDeviceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveMfaDeviceResponse
+        /// </returns>
         public async Task<RemoveMfaDeviceResponse> RemoveMfaDeviceAsync(RemoveMfaDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveMfaDeviceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a user property.
-         *
-         * @param request RemovePropertyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RemovePropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a user property.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemovePropertyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemovePropertyResponse
+        /// </returns>
         public RemovePropertyResponse RemovePropertyWithOptions(RemovePropertyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2104,13 +2816,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<RemovePropertyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a user property.
-         *
-         * @param request RemovePropertyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RemovePropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a user property.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemovePropertyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemovePropertyResponse
+        /// </returns>
         public async Task<RemovePropertyResponse> RemovePropertyWithOptionsAsync(RemovePropertyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2138,37 +2858,57 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<RemovePropertyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a user property.
-         *
-         * @param request RemovePropertyRequest
-         * @return RemovePropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a user property.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemovePropertyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemovePropertyResponse
+        /// </returns>
         public RemovePropertyResponse RemoveProperty(RemovePropertyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemovePropertyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a user property.
-         *
-         * @param request RemovePropertyRequest
-         * @return RemovePropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a user property.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemovePropertyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemovePropertyResponse
+        /// </returns>
         public async Task<RemovePropertyResponse> RemovePropertyAsync(RemovePropertyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemovePropertyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Removes one or more convenience users.
-         *
-         * @param request RemoveUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RemoveUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes one or more convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveUsersResponse
+        /// </returns>
         public RemoveUsersResponse RemoveUsersWithOptions(RemoveUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2196,13 +2936,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<RemoveUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Removes one or more convenience users.
-         *
-         * @param request RemoveUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RemoveUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes one or more convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveUsersResponse
+        /// </returns>
         public async Task<RemoveUsersResponse> RemoveUsersWithOptionsAsync(RemoveUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2230,37 +2978,57 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<RemoveUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Removes one or more convenience users.
-         *
-         * @param request RemoveUsersRequest
-         * @return RemoveUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes one or more convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveUsersResponse
+        /// </returns>
         public RemoveUsersResponse RemoveUsers(RemoveUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveUsersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Removes one or more convenience users.
-         *
-         * @param request RemoveUsersRequest
-         * @return RemoveUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes one or more convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveUsersResponse
+        /// </returns>
         public async Task<RemoveUsersResponse> RemoveUsersAsync(RemoveUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveUsersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Resets the password for a convenience user. If you call this operation, a token that is used to reset the password is generated, and the system sends a password reset email that includes the token to the email address of the convenience user.
-         *
-         * @param request ResetUserPasswordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetUserPasswordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password for a convenience user. If you call this operation, a token that is used to reset the password is generated, and the system sends a password reset email that includes the token to the email address of the convenience user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetUserPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetUserPasswordResponse
+        /// </returns>
         public ResetUserPasswordResponse ResetUserPasswordWithOptions(ResetUserPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2292,13 +3060,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<ResetUserPasswordResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Resets the password for a convenience user. If you call this operation, a token that is used to reset the password is generated, and the system sends a password reset email that includes the token to the email address of the convenience user.
-         *
-         * @param request ResetUserPasswordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetUserPasswordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password for a convenience user. If you call this operation, a token that is used to reset the password is generated, and the system sends a password reset email that includes the token to the email address of the convenience user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetUserPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetUserPasswordResponse
+        /// </returns>
         public async Task<ResetUserPasswordResponse> ResetUserPasswordWithOptionsAsync(ResetUserPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2330,37 +3106,57 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<ResetUserPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Resets the password for a convenience user. If you call this operation, a token that is used to reset the password is generated, and the system sends a password reset email that includes the token to the email address of the convenience user.
-         *
-         * @param request ResetUserPasswordRequest
-         * @return ResetUserPasswordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password for a convenience user. If you call this operation, a token that is used to reset the password is generated, and the system sends a password reset email that includes the token to the email address of the convenience user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetUserPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetUserPasswordResponse
+        /// </returns>
         public ResetUserPasswordResponse ResetUserPassword(ResetUserPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetUserPasswordWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Resets the password for a convenience user. If you call this operation, a token that is used to reset the password is generated, and the system sends a password reset email that includes the token to the email address of the convenience user.
-         *
-         * @param request ResetUserPasswordRequest
-         * @return ResetUserPasswordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password for a convenience user. If you call this operation, a token that is used to reset the password is generated, and the system sends a password reset email that includes the token to the email address of the convenience user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetUserPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetUserPasswordResponse
+        /// </returns>
         public async Task<ResetUserPasswordResponse> ResetUserPasswordAsync(ResetUserPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetUserPasswordWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Associates a user property with a convenience user.
-         *
-         * @param request SetUserPropertyValueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetUserPropertyValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a user property with a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetUserPropertyValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetUserPropertyValueResponse
+        /// </returns>
         public SetUserPropertyValueResponse SetUserPropertyValueWithOptions(SetUserPropertyValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2400,13 +3196,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<SetUserPropertyValueResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Associates a user property with a convenience user.
-         *
-         * @param request SetUserPropertyValueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetUserPropertyValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a user property with a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetUserPropertyValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetUserPropertyValueResponse
+        /// </returns>
         public async Task<SetUserPropertyValueResponse> SetUserPropertyValueWithOptionsAsync(SetUserPropertyValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2446,37 +3250,57 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<SetUserPropertyValueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Associates a user property with a convenience user.
-         *
-         * @param request SetUserPropertyValueRequest
-         * @return SetUserPropertyValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a user property with a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetUserPropertyValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetUserPropertyValueResponse
+        /// </returns>
         public SetUserPropertyValueResponse SetUserPropertyValue(SetUserPropertyValueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetUserPropertyValueWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Associates a user property with a convenience user.
-         *
-         * @param request SetUserPropertyValueRequest
-         * @return SetUserPropertyValueResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a user property with a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetUserPropertyValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetUserPropertyValueResponse
+        /// </returns>
         public async Task<SetUserPropertyValueResponse> SetUserPropertyValueAsync(SetUserPropertyValueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetUserPropertyValueWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 从钉钉手动同步老师学生信息
-         *
-         * @param request SyncAllEduInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SyncAllEduInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从钉钉手动同步老师学生信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SyncAllEduInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncAllEduInfoResponse
+        /// </returns>
         public SyncAllEduInfoResponse SyncAllEduInfoWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -2495,13 +3319,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<SyncAllEduInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 从钉钉手动同步老师学生信息
-         *
-         * @param request SyncAllEduInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SyncAllEduInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从钉钉手动同步老师学生信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SyncAllEduInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncAllEduInfoResponse
+        /// </returns>
         public async Task<SyncAllEduInfoResponse> SyncAllEduInfoWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -2520,35 +3352,49 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<SyncAllEduInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 从钉钉手动同步老师学生信息
-         *
-         * @return SyncAllEduInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从钉钉手动同步老师学生信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// SyncAllEduInfoResponse
+        /// </returns>
         public SyncAllEduInfoResponse SyncAllEduInfo()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SyncAllEduInfoWithOptions(runtime);
         }
 
-        /**
-         * @summary 从钉钉手动同步老师学生信息
-         *
-         * @return SyncAllEduInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从钉钉手动同步老师学生信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// SyncAllEduInfoResponse
+        /// </returns>
         public async Task<SyncAllEduInfoResponse> SyncAllEduInfoAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SyncAllEduInfoWithOptionsAsync(runtime);
         }
 
-        /**
-         * @summary Unlocks a virtual multi-factor authentication (MFA) device that is bound to a convenience user.
-         *
-         * @param request UnlockMfaDeviceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UnlockMfaDeviceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlocks a virtual multi-factor authentication (MFA) device that is bound to a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnlockMfaDeviceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockMfaDeviceResponse
+        /// </returns>
         public UnlockMfaDeviceResponse UnlockMfaDeviceWithOptions(UnlockMfaDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2580,13 +3426,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<UnlockMfaDeviceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Unlocks a virtual multi-factor authentication (MFA) device that is bound to a convenience user.
-         *
-         * @param request UnlockMfaDeviceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UnlockMfaDeviceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlocks a virtual multi-factor authentication (MFA) device that is bound to a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnlockMfaDeviceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockMfaDeviceResponse
+        /// </returns>
         public async Task<UnlockMfaDeviceResponse> UnlockMfaDeviceWithOptionsAsync(UnlockMfaDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2618,37 +3472,57 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<UnlockMfaDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Unlocks a virtual multi-factor authentication (MFA) device that is bound to a convenience user.
-         *
-         * @param request UnlockMfaDeviceRequest
-         * @return UnlockMfaDeviceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlocks a virtual multi-factor authentication (MFA) device that is bound to a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnlockMfaDeviceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockMfaDeviceResponse
+        /// </returns>
         public UnlockMfaDeviceResponse UnlockMfaDevice(UnlockMfaDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnlockMfaDeviceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Unlocks a virtual multi-factor authentication (MFA) device that is bound to a convenience user.
-         *
-         * @param request UnlockMfaDeviceRequest
-         * @return UnlockMfaDeviceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlocks a virtual multi-factor authentication (MFA) device that is bound to a convenience user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnlockMfaDeviceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockMfaDeviceResponse
+        /// </returns>
         public async Task<UnlockMfaDeviceResponse> UnlockMfaDeviceAsync(UnlockMfaDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UnlockMfaDeviceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Unlocks one or more convenience users.
-         *
-         * @param request UnlockUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UnlockUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlocks one or more convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnlockUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockUsersResponse
+        /// </returns>
         public UnlockUsersResponse UnlockUsersWithOptions(UnlockUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2682,13 +3556,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<UnlockUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Unlocks one or more convenience users.
-         *
-         * @param request UnlockUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UnlockUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlocks one or more convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnlockUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockUsersResponse
+        /// </returns>
         public async Task<UnlockUsersResponse> UnlockUsersWithOptionsAsync(UnlockUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2722,37 +3604,57 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<UnlockUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Unlocks one or more convenience users.
-         *
-         * @param request UnlockUsersRequest
-         * @return UnlockUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlocks one or more convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnlockUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockUsersResponse
+        /// </returns>
         public UnlockUsersResponse UnlockUsers(UnlockUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnlockUsersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Unlocks one or more convenience users.
-         *
-         * @param request UnlockUsersRequest
-         * @return UnlockUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlocks one or more convenience users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnlockUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockUsersResponse
+        /// </returns>
         public async Task<UnlockUsersResponse> UnlockUsersAsync(UnlockUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UnlockUsersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies a user property.
-         *
-         * @param request UpdatePropertyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdatePropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a user property.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePropertyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePropertyResponse
+        /// </returns>
         public UpdatePropertyResponse UpdatePropertyWithOptions(UpdatePropertyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2788,13 +3690,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<UpdatePropertyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a user property.
-         *
-         * @param request UpdatePropertyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdatePropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a user property.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePropertyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePropertyResponse
+        /// </returns>
         public async Task<UpdatePropertyResponse> UpdatePropertyWithOptionsAsync(UpdatePropertyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2830,24 +3740,36 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             return TeaModel.ToObject<UpdatePropertyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a user property.
-         *
-         * @param request UpdatePropertyRequest
-         * @return UpdatePropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a user property.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePropertyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePropertyResponse
+        /// </returns>
         public UpdatePropertyResponse UpdateProperty(UpdatePropertyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdatePropertyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies a user property.
-         *
-         * @param request UpdatePropertyRequest
-         * @return UpdatePropertyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a user property.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePropertyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePropertyResponse
+        /// </returns>
         public async Task<UpdatePropertyResponse> UpdatePropertyAsync(UpdatePropertyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
