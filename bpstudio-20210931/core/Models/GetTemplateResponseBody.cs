@@ -123,6 +123,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
                 [Validation(Required=false)]
                 public string DefaultValue { get; set; }
 
+                [NameInMap("Options")]
+                [Validation(Required=false)]
+                public string Options { get; set; }
+
                 /// <summary>
                 /// <para>The value of the variable.</para>
                 /// 
