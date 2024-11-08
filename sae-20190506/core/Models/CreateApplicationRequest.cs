@@ -310,6 +310,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string NasId { get; set; }
 
+        [NameInMap("OidcRoleName")]
+        [Validation(Required=false)]
+        public string OidcRoleName { get; set; }
+
         /// <summary>
         /// <para>xxxxxx</para>
         /// 

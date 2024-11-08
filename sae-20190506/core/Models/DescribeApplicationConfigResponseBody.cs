@@ -562,6 +562,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string NasId { get; set; }
 
+            [NameInMap("OidcRoleName")]
+            [Validation(Required=false)]
+            public string OidcRoleName { get; set; }
+
             /// <summary>
             /// <para>The AccessKey ID that is used to read data from and write data to Object Storage Service (OSS) buckets.</para>
             /// 

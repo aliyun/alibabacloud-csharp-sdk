@@ -982,6 +982,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["NasId"] = request.NasId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OidcRoleName))
+            {
+                query["OidcRoleName"] = request.OidcRoleName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageType))
             {
                 query["PackageType"] = request.PackageType;
@@ -1276,6 +1280,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NasId))
             {
                 query["NasId"] = request.NasId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OidcRoleName))
+            {
+                query["OidcRoleName"] = request.OidcRoleName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageType))
             {
@@ -5139,6 +5147,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["NasId"] = request.NasId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OidcRoleName))
+            {
+                query["OidcRoleName"] = request.OidcRoleName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageType))
             {
                 query["PackageType"] = request.PackageType;
@@ -5434,6 +5446,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NasId))
             {
                 query["NasId"] = request.NasId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OidcRoleName))
+            {
+                query["OidcRoleName"] = request.OidcRoleName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageType))
             {

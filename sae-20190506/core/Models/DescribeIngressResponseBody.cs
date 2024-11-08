@@ -284,6 +284,20 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public string RewritePath { get; set; }
 
+                [NameInMap("RuleActions")]
+                [Validation(Required=false)]
+                public List<DescribeIngressResponseBodyDataRulesRuleActions> RuleActions { get; set; }
+                public class DescribeIngressResponseBodyDataRulesRuleActions : TeaModel {
+                    [NameInMap("ActionConfig")]
+                    [Validation(Required=false)]
+                    public string ActionConfig { get; set; }
+
+                    [NameInMap("ActionType")]
+                    [Validation(Required=false)]
+                    public string ActionType { get; set; }
+
+                }
+
             }
 
             /// <summary>

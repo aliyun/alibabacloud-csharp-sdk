@@ -1,3 +1,10 @@
+2024-11-08 Version: 1.23.4
+- Update API CreateApplication: add param OidcRoleName.
+- Update API DeployApplication: add param OidcRoleName.
+- Update API DescribeApplicationConfig: update response param.
+- Update API DescribeIngress: update response param.
+
+
 2024-10-29 Version: 1.23.3
 - Update API CreateIngress: add param EnableXForwardedFor.
 - Update API CreateIngress: add param EnableXForwardedForClientSrcPort.

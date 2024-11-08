@@ -137,6 +137,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string ConfigMapMountDesc { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
         [NameInMap("Cpu")]
         [Validation(Required=false)]
         public int? Cpu { get; set; }
@@ -349,6 +353,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Liveness { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1024</para>
+        /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public int? Memory { get; set; }
@@ -368,6 +376,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string MicroRegistration { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{\&quot;instanceId\&quot;:\&quot;mse-cn-zvp2bh6h70r\&quot;,\&quot;namespace\&quot;:\&quot;4c0aa74f-57cb-423c-b6af-5d9f2d0e3dbd\&quot;}</para>
+        /// </summary>
         [NameInMap("MicroRegistrationConfig")]
         [Validation(Required=false)]
         public string MicroRegistrationConfig { get; set; }
@@ -444,7 +456,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NasConfigs { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Apsara File Storage NAS file system. After the application is created, you may want to call other operations to manage the application. If you do not want to change the NAS configurations in these subsequent operations, you can omit the <b>NasId</b> parameter in the requests. If you want to unmount the NAS file system, you must set the <b>NasId</b> values in the subsequent requests to an empty string (&quot;&quot;).</para>
+        /// <para>The ID of the File Storage NAS file system. After the application is created, you may want to call other operations to manage the application. If you do not want to change the NAS configurations in these subsequent operations, you can omit the <b>NasId</b> parameter in the requests. If you want to unmount the NAS file system, you must set the <b>NasId</b> values in the subsequent requests to an empty string (&quot;&quot;).</para>
         /// 
         /// <b>Example:</b>
         /// <para>10d3b4****</para>
@@ -452,6 +464,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("NasId")]
         [Validation(Required=false)]
         public string NasId { get; set; }
+
+        [NameInMap("OidcRoleName")]
+        [Validation(Required=false)]
+        public string OidcRoleName { get; set; }
 
         /// <summary>
         /// <para>The AccessKey ID that is used to read data from and write data to Object Storage Service (OSS) buckets.</para>
@@ -632,14 +648,26 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Readiness { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Replicas")]
         [Validation(Required=false)]
         public int? Replicas { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>sg-wz969ngg2e49q5i4****</para>
+        /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{\&quot;alicloud.service.tag\&quot;:\&quot;g1\&quot;}</para>
+        /// </summary>
         [NameInMap("ServiceTags")]
         [Validation(Required=false)]
         public string ServiceTags { get; set; }
@@ -736,6 +764,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string UpdateStrategy { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>vsw-bp12mw1f8k3jgygk9****</para>
+        /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
