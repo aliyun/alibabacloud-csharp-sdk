@@ -374,7 +374,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>The action that Auto Scaling performs when the lifecycle hook times out. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CONTINUE: Auto Scaling continues to respond to a scale-in or scale-out request.</description></item>
+            /// <item><description>CONTINUE: Auto Scaling continues to respond to the scaling request.</description></item>
             /// <item><description>ABANDON: Auto Scaling releases ECS instances that are created during scale-out events, or removes ECS instances from the scaling group during scale-in events.</description></item>
             /// </list>
             /// <para>If multiple lifecycle hooks in the scaling group are triggered during scale-in events, and you set DefaultResult to ABANDON for one of the lifecycle hooks, Auto Scaling immediately performs the action after the lifecycle hook whose DefaultResult is set to ABANDON times out. In this case, other lifecycle hooks time out ahead of schedule. In other cases, Auto Scaling performs the action only after all lifecycle hooks time out. The action that Auto Scaling performs is determined by the value of DefaultResult that you specify for the lifecycle hook that most recently times out.</para>
@@ -389,7 +389,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
             /// <summary>
             /// <para>The period of time before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action that is specified by DefaultResult. Valid values: 30 to 21600. Unit: seconds.</para>
-            /// <para>After you create a lifecycle hook, you can call the RecordLifecycleActionHeartbeat operation to extend the timeout period of the lifecycle hook. You can also call the CompleteLifecycleAction operation to end the timeout period of the lifecycle hook ahead of scheduled.</para>
+            /// <para>After you create a lifecycle hook, you can call the RecordLifecycleActionHeartbeat operation to extend the timeout period of the lifecycle hook. You can also call the CompleteLifecycleAction operation to end the timeout period of the lifecycle hook ahead of schedule.</para>
             /// <para>Default value: 600.</para>
             /// 
             /// <b>Example:</b>
@@ -427,15 +427,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecycleTransition { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the notification recipient party when the lifecycle hook takes effect. You can specify a Message Service (MNS) topic or queue as the notification recipient party. Specify the value in the acs:ess:{region}:{account-id}:{resource-relative-id} format.</para>
+            /// <para>The Alibaba Cloud Resource Name (ARN) of the notification recipient party. You can specify a Simple Message Queue (SMQ, formerly MNS) topic or queue as the recipient party. The value is in the acs:ess:{region}:{account-id}:{resource-relative-id} format.</para>
             /// <list type="bullet">
             /// <item><description>region: the region ID of the scaling group</description></item>
             /// <item><description>account-id: the ID of your Alibaba Cloud account.</description></item>
             /// </list>
             /// <para>Examples:</para>
             /// <list type="bullet">
-            /// <item><description>MNS queue: acs:ess:{region}:{account-id}:queue/{queuename}</description></item>
-            /// <item><description>MNS topic: acs:ess:{region}:{account-id}:topic/{topicname}</description></item>
+            /// <item><description>SMQ queue: acs:ess:{region}:{account-id}:queue/{queuename}</description></item>
+            /// <item><description>SMQ topic: acs:ess:{region}:{account-id}:topic/{topicname}</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -446,7 +446,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string NotificationArn { get; set; }
 
             /// <summary>
-            /// <para>The fixed string that you want to include in a notification. When a lifecycle hook takes effect, Auto Scaling sends a notification. The fixed string can contain up to 4,096 characters in length. When Auto Scaling sends a notification to the recipient party, it includes predefined notification metadata into the notification. This helps in managing and labeling notifications of different categories. notificationmetadata takes effect only if you specify notificationarn.</para>
+            /// <para>The fixed string that you want to include in notifications. When a lifecycle hook takes effect, Auto Scaling sends a notification. The fixed string can contain up to 4,096 characters in length. When Auto Scaling sends a notification to the recipient party, it includes predefined notification metadata into the notification. This helps in managing and labeling notifications of different categories. NotificationMetadata takes effect only if you specify NotificationArn.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test</para>
@@ -764,6 +764,18 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? SpotInstanceRemedy { get; set; }
 
         /// <summary>
+        /// <para>The period of time required by the ECS instance to enter the Stopped state. Unit: seconds. Valid values: 30 to 240.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter takes effect only if you set ScalingPolicy to release.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify this parameter, the system will wait for the ECS instance to enter the Stopped state for the specified period of time before continuing with the scale-in operation, regardless of the status of the ECS instance.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not specify this parameter, the system will wait for the ECS instance to stop before continuing with the scale-in operation. If the ECS instance is not successfully stopped, the scale-in process will be rolled back and considered failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>60</para>
         /// </summary>

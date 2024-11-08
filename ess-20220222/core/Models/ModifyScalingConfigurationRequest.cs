@@ -583,6 +583,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string HpcClusterId { get; set; }
 
+        [NameInMap("HttpEndpoint")]
+        [Validation(Required=false)]
+        public string HttpEndpoint { get; set; }
+
+        [NameInMap("HttpTokens")]
+        [Validation(Required=false)]
+        public string HttpTokens { get; set; }
+
         /// <summary>
         /// <para>The name of the image family. If you specify this parameter, the latest custom images that are available in the specified image family are returned. Then, you can use the images to create instances. If you specify ImageId, you cannot specify ImageFamily.</para>
         /// 
@@ -983,6 +991,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
         public string InternetChargeType { get; set; }
+
+        [NameInMap("InternetMaxBandwidthIn")]
+        [Validation(Required=false)]
+        public int? InternetMaxBandwidthIn { get; set; }
 
         /// <summary>
         /// <para>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values:</para>

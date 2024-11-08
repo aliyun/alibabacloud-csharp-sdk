@@ -772,6 +772,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? StandbyCapacity { get; set; }
 
             /// <summary>
+            /// <para>The period of time that is required by the Elastic Compute Service (ECS) instance to enter the Stopped state during the scale-in process. Unit: seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>60</para>
             /// </summary>

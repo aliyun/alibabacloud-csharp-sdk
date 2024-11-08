@@ -391,6 +391,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string HpcClusterId { get; set; }
 
+            [NameInMap("HttpEndpoint")]
+            [Validation(Required=false)]
+            public string HttpEndpoint { get; set; }
+
+            [NameInMap("HttpTokens")]
+            [Validation(Required=false)]
+            public string HttpTokens { get; set; }
+
             /// <summary>
             /// <para>The name of the image family. You can specify this parameter to obtain the latest available images in the current image family for instance creation. If you specify ImageId, you cannot specify <c>ImageFamily</c>.</para>
             /// 
@@ -482,7 +490,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The information about the intelligent configuration settings, which determine the available instance types.</para>
+            /// <para>The intelligent configuration settings, which determine the available instance types.</para>
             /// </summary>
             [NameInMap("InstancePatternInfos")]
             [Validation(Required=false)]
@@ -1065,17 +1073,17 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<string> SecurityGroupIds { get; set; }
 
             /// <summary>
-            /// <para>The security options.</para>
+            /// <para>安全选项。</para>
             /// </summary>
             [NameInMap("SecurityOptions")]
             [Validation(Required=false)]
             public DescribeScalingConfigurationsResponseBodyScalingConfigurationsSecurityOptions SecurityOptions { get; set; }
             public class DescribeScalingConfigurationsResponseBodyScalingConfigurationsSecurityOptions : TeaModel {
                 /// <summary>
-                /// <para>The confidential computing mode. Valid values:</para>
+                /// <para>机密计算模式。可能值：</para>
                 /// <list type="bullet">
-                /// <item><description>Enclave: An enclave-based confidential computing environment is built on the instance. For more information, see <a href="https://help.aliyun.com/document_detail/203433.html">Build a confidential computing environment by using Enclave</a>.</description></item>
-                /// <item><description>TDX: A Trust Domain Extensions (TDX) confidential computing environment is built on the instance. For more information, see <a href="https://help.aliyun.com/document_detail/479090.html">Build a TDX confidential computing environment</a>.</description></item>
+                /// <item><description>Enclave：表示ECS实例使用Enclave构建机密计算环境。更多信息，请参见<a href="https://help.aliyun.com/document_detail/203433.html">使用Enclave构建机密计算环境</a>。</description></item>
+                /// <item><description>TDX：表示构建TDX机密计算环境。更多信息，请参见<a href="https://help.aliyun.com/document_detail/479090.html">构建TDX机密计算环境</a>。</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

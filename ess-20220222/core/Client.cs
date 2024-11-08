@@ -4236,6 +4236,14 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["HpcClusterId"] = request.HpcClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpEndpoint))
+            {
+                query["HttpEndpoint"] = request.HttpEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpTokens))
+            {
+                query["HttpTokens"] = request.HttpTokens;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageFamily))
             {
                 query["ImageFamily"] = request.ImageFamily;
@@ -4526,6 +4534,14 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HpcClusterId))
             {
                 query["HpcClusterId"] = request.HpcClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpEndpoint))
+            {
+                query["HttpEndpoint"] = request.HttpEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpTokens))
+            {
+                query["HttpTokens"] = request.HttpTokens;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageFamily))
             {
@@ -16217,6 +16233,14 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["HpcClusterId"] = request.HpcClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpEndpoint))
+            {
+                query["HttpEndpoint"] = request.HttpEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpTokens))
+            {
+                query["HttpTokens"] = request.HttpTokens;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageFamily))
             {
                 query["ImageFamily"] = request.ImageFamily;
@@ -16252,6 +16276,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetChargeType))
             {
                 query["InternetChargeType"] = request.InternetChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetMaxBandwidthIn))
+            {
+                query["InternetMaxBandwidthIn"] = request.InternetMaxBandwidthIn;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetMaxBandwidthOut))
             {
@@ -16493,6 +16521,14 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["HpcClusterId"] = request.HpcClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpEndpoint))
+            {
+                query["HttpEndpoint"] = request.HttpEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpTokens))
+            {
+                query["HttpTokens"] = request.HttpTokens;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageFamily))
             {
                 query["ImageFamily"] = request.ImageFamily;
@@ -16528,6 +16564,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetChargeType))
             {
                 query["InternetChargeType"] = request.InternetChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetMaxBandwidthIn))
+            {
+                query["InternetMaxBandwidthIn"] = request.InternetMaxBandwidthIn;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetMaxBandwidthOut))
             {

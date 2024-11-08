@@ -594,6 +594,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string HpcClusterId { get; set; }
 
+        [NameInMap("HttpEndpoint")]
+        [Validation(Required=false)]
+        public string HttpEndpoint { get; set; }
+
+        [NameInMap("HttpTokens")]
+        [Validation(Required=false)]
+        public string HttpTokens { get; set; }
+
         /// <summary>
         /// <para>The name of the image family. If you specify this parameter, the most recent custom images that are available in the specified image family are returned. You can use the images to create instances. If you specify ImageId, you cannot specify ImageFamily.</para>
         /// 
