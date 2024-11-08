@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeDBClusterShardNumberResponseBody : TeaModel {
+        [NameInMap("AvailableShardNumbers")]
+        [Validation(Required=false)]
+        public List<int?> AvailableShardNumbers { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>CBE843D8-964D-5EA3-9D31-822125611B6E</para>

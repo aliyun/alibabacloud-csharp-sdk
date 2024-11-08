@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DeleteBackupsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the backup set that you want to delete. Separate multiple backup set IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string BackupIds { get; set; }
 
         /// <summary>
+        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

@@ -2434,8 +2434,17 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手动删除备份集</para>
+        /// <para>Manually deletes backup sets.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Deleting backup sets is an asynchronous operation and may require 10 to 20 minutes to complete.</para>
+        /// <list type="bullet">
+        /// <item><description>You can delete up to 100 backup sets at a time. If you want to delete more than 100 backup sets, call this operation twice.</description></item>
+        /// <item><description>To ensure data security, the system forcibly retains one valid backup set. If you want to delete the last backup set, the system prohibits your operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteBackupsRequest
@@ -2472,8 +2481,17 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手动删除备份集</para>
+        /// <para>Manually deletes backup sets.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Deleting backup sets is an asynchronous operation and may require 10 to 20 minutes to complete.</para>
+        /// <list type="bullet">
+        /// <item><description>You can delete up to 100 backup sets at a time. If you want to delete more than 100 backup sets, call this operation twice.</description></item>
+        /// <item><description>To ensure data security, the system forcibly retains one valid backup set. If you want to delete the last backup set, the system prohibits your operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteBackupsRequest
@@ -2510,8 +2528,17 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手动删除备份集</para>
+        /// <para>Manually deletes backup sets.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Deleting backup sets is an asynchronous operation and may require 10 to 20 minutes to complete.</para>
+        /// <list type="bullet">
+        /// <item><description>You can delete up to 100 backup sets at a time. If you want to delete more than 100 backup sets, call this operation twice.</description></item>
+        /// <item><description>To ensure data security, the system forcibly retains one valid backup set. If you want to delete the last backup set, the system prohibits your operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteBackupsRequest
@@ -2528,8 +2555,17 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手动删除备份集</para>
+        /// <para>Manually deletes backup sets.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Deleting backup sets is an asynchronous operation and may require 10 to 20 minutes to complete.</para>
+        /// <list type="bullet">
+        /// <item><description>You can delete up to 100 backup sets at a time. If you want to delete more than 100 backup sets, call this operation twice.</description></item>
+        /// <item><description>To ensure data security, the system forcibly retains one valid backup set. If you want to delete the last backup set, the system prohibits your operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteBackupsRequest
