@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeZonesResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>E9116F2D-82F8-501E-9ADB-2BE0C02B6A84</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-i</para>
+            /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListFreeNodesResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>a3f2224a5ec7224116c4f5246120abe4</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -17,10 +21,18 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public List<ListFreeNodesResponseBodyNodes> Nodes { get; set; }
         public class ListFreeNodesResponseBodyNodes : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1652321554</para>
+            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1673107200</para>
+            /// </summary>
             [NameInMap("ExpiredTime")]
             [Validation(Required=false)]
             public string ExpiredTime { get; set; }
@@ -29,10 +41,18 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string HpnZone { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>efg1.nvga1</para>
+            /// </summary>
             [NameInMap("MachineType")]
             [Validation(Required=false)]
             public string MachineType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>e01-cn-7pp2x193801</para>
+            /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
             public string NodeId { get; set; }
@@ -41,16 +61,28 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>sn_pozkHBgicd</para>
+            /// </summary>
             [NameInMap("Sn")]
             [Validation(Required=false)]
             public string Sn { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-j</para>
+            /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>AA14CB86-70C4-5CB7-9E7B-6CCA77F3512B</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

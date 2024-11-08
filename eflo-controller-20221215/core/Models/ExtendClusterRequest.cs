@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ExtendClusterRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>i15b480fbd2fcdbc2869cd80</para>
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>False</para>
+        /// </summary>
         [NameInMap("IgnoreFailedNodeTasks")]
         [Validation(Required=false)]
         public bool? IgnoreFailedNodeTasks { get; set; }
@@ -25,6 +33,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public ExtendClusterRequestIpAllocationPolicyBondPolicy BondPolicy { get; set; }
             public class ExtendClusterRequestIpAllocationPolicyBondPolicy : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>subnet-3od2fe</para>
+                /// </summary>
                 [NameInMap("BondDefaultSubnet")]
                 [Validation(Required=false)]
                 public string BondDefaultSubnet { get; set; }
@@ -33,10 +45,18 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 [Validation(Required=false)]
                 public List<ExtendClusterRequestIpAllocationPolicyBondPolicyBonds> Bonds { get; set; }
                 public class ExtendClusterRequestIpAllocationPolicyBondPolicyBonds : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Bond0</para>
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>subnet-3od2fe</para>
+                    /// </summary>
                     [NameInMap("Subnet")]
                     [Validation(Required=false)]
                     public string Subnet { get; set; }
@@ -53,16 +73,28 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 [Validation(Required=false)]
                 public List<ExtendClusterRequestIpAllocationPolicyMachineTypePolicyBonds> Bonds { get; set; }
                 public class ExtendClusterRequestIpAllocationPolicyMachineTypePolicyBonds : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Bond0</para>
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>subnet-fdo3dv</para>
+                    /// </summary>
                     [NameInMap("Subnet")]
                     [Validation(Required=false)]
                     public string Subnet { get; set; }
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>efg1.nvga1</para>
+                /// </summary>
                 [NameInMap("MachineType")]
                 [Validation(Required=false)]
                 public string MachineType { get; set; }
@@ -77,16 +109,28 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 [Validation(Required=false)]
                 public List<ExtendClusterRequestIpAllocationPolicyNodePolicyBonds> Bonds { get; set; }
                 public class ExtendClusterRequestIpAllocationPolicyNodePolicyBonds : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Bond0</para>
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>subnet-fdo3dv</para>
+                    /// </summary>
                     [NameInMap("Subnet")]
                     [Validation(Required=false)]
                     public string Subnet { get; set; }
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>i-3fdodw2</para>
+                /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
@@ -99,6 +143,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public List<ExtendClusterRequestNodeGroups> NodeGroups { get; set; }
         public class ExtendClusterRequestNodeGroups : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>i16d4883a46cbadeb4bc9</para>
+            /// </summary>
             [NameInMap("NodeGroupId")]
             [Validation(Required=false)]
             public string NodeGroupId { get; set; }
@@ -107,14 +155,26 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public List<ExtendClusterRequestNodeGroupsNodes> Nodes { get; set; }
             public class ExtendClusterRequestNodeGroupsNodes : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>d044d220-33fd-11ed-86a6</para>
+                /// </summary>
                 [NameInMap("Hostname")]
                 [Validation(Required=false)]
                 public string Hostname { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <hr>
+                /// </summary>
                 [NameInMap("LoginPassword")]
                 [Validation(Required=false)]
                 public string LoginPassword { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>e01-cn-zvp2zdpy601</para>
+                /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }

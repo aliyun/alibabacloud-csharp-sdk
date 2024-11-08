@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class UntagResourcesResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>81F648D0-5570-5351-AE98-6F501C7E957F</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

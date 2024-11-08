@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ExtendClusterResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>03668372-18FF-5959-98D9-6B36A4643C7A</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>i158475611663639202234</para>
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
