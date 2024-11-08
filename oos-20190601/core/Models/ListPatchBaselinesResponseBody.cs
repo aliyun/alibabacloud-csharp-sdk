@@ -10,126 +10,168 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListPatchBaselinesResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used to retrieve the next page of results.
+        /// <para>The token that is used to retrieve the next page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The number of entries returned on each page.</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The patch baselines.
+        /// <para>The patch baselines.</para>
         /// </summary>
         [NameInMap("PatchBaselines")]
         [Validation(Required=false)]
         public List<ListPatchBaselinesResponseBodyPatchBaselines> PatchBaselines { get; set; }
         public class ListPatchBaselinesResponseBodyPatchBaselines : TeaModel {
             /// <summary>
-            /// The approved patches.
+            /// <para>The approved patches.</para>
             /// </summary>
             [NameInMap("ApprovedPatches")]
             [Validation(Required=false)]
             public List<string> ApprovedPatches { get; set; }
 
             /// <summary>
-            /// Indicates whether the approved patch involves updates other than security-related updates.
+            /// <para>Indicates whether the approved patch involves updates other than security-related updates.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("ApprovedPatchesEnableNonSecurity")]
             [Validation(Required=false)]
             public bool? ApprovedPatchesEnableNonSecurity { get; set; }
 
             /// <summary>
-            /// The user who created the patch baseline.
+            /// <para>The user who created the patch baseline.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>root(130900000)</para>
             /// </summary>
             [NameInMap("CreatedBy")]
             [Validation(Required=false)]
             public string CreatedBy { get; set; }
 
             /// <summary>
-            /// The time when the patch baseline was created.
+            /// <para>The time when the patch baseline was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-09-08T03:41:23Z</para>
             /// </summary>
             [NameInMap("CreatedDate")]
             [Validation(Required=false)]
             public string CreatedDate { get; set; }
 
             /// <summary>
-            /// The description of the patch baseline.
+            /// <para>The description of the patch baseline.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ListPatchBaseline</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The ID of the patch baseline.
+            /// <para>The ID of the patch baseline.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pb-c2838b5d89b540e19ee6</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// Indicates whether the patch baseline is set as the default patch baseline.
+            /// <para>Indicates whether the patch baseline is set as the default patch baseline.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("IsDefault")]
             [Validation(Required=false)]
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// The name of the patch baseline.
+            /// <para>The name of the patch baseline.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>MyPatchBaseline</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The type of the operating system.
+            /// <para>The type of the operating system.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AliyunLinux</para>
             /// </summary>
             [NameInMap("OperationSystem")]
             [Validation(Required=false)]
             public string OperationSystem { get; set; }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// <para>The ID of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-aek256ia6vhsndy</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The share type of the patch baseline.
+            /// <para>The share type of the patch baseline.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Private</para>
             /// </summary>
             [NameInMap("ShareType")]
             [Validation(Required=false)]
             public string ShareType { get; set; }
 
             /// <summary>
-            /// The configurations of patch sources.
+            /// <para>The configurations of patch sources.</para>
             /// </summary>
             [NameInMap("Sources")]
             [Validation(Required=false)]
             public List<string> Sources { get; set; }
 
             /// <summary>
-            /// The tags of the patch baseline.
+            /// <para>The tags of the patch baseline.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListPatchBaselinesResponseBodyPatchBaselinesTags> Tags { get; set; }
             public class ListPatchBaselinesResponseBodyPatchBaselinesTags : TeaModel {
                 /// <summary>
-                /// The key of the tag.
+                /// <para>The key of the tag.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>key</para>
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The value of the tag.
+                /// <para>The value of the tag.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>value</para>
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
@@ -138,14 +180,20 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             }
 
             /// <summary>
-            /// The user who last updated the patch baseline.
+            /// <para>The user who last updated the patch baseline.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>root(130900000)</para>
             /// </summary>
             [NameInMap("UpdatedBy")]
             [Validation(Required=false)]
             public string UpdatedBy { get; set; }
 
             /// <summary>
-            /// The time when the patch baseline was updated.
+            /// <para>The time when the patch baseline was updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-09-08T03:44:34Z</para>
             /// </summary>
             [NameInMap("UpdatedDate")]
             [Validation(Required=false)]
@@ -154,7 +202,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>432996A1-03C0-5C4C-A8E6-66C4110765B8</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

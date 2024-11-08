@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public bool? IsPrivate { get; set; }
 
+            [NameInMap("RepoId")]
+            [Validation(Required=false)]
+            public long? RepoId { get; set; }
+
         }
 
         [NameInMap("RequestId")]

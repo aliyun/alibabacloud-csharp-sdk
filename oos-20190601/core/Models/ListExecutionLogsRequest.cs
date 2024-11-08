@@ -10,44 +10,61 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListExecutionLogsRequest : TeaModel {
         /// <summary>
-        /// The ID of the execution.
+        /// <para>The ID of the execution.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>exec-xxx</para>
         /// </summary>
         [NameInMap("ExecutionId")]
         [Validation(Required=false)]
         public string ExecutionId { get; set; }
 
         /// <summary>
-        /// The type of the log.
+        /// <para>The type of the log.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>System</para>
         /// </summary>
         [NameInMap("LogType")]
         [Validation(Required=false)]
         public string LogType { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used to retrieve the next page of results.
+        /// <para>The token that is used to retrieve the next page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ3NjFENDdB</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the region in which you want to query the logs of the execution.
+        /// <para>The ID of the region in which you want to query the logs of the execution.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The execution ID of the task.
+        /// <para>The execution ID of the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>exec-1234567zxcvb.t0010</para>
         /// </summary>
         [NameInMap("TaskExecutionId")]
         [Validation(Required=false)]

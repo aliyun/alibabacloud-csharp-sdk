@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class DeleteTemplateRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to delete the related executions when a template is deleted.
+        /// <para>Specifies whether to delete the related executions when a template is deleted.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AutoDeleteExecutions")]
         [Validation(Required=false)]
         public bool? AutoDeleteExecutions { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the template. The name can be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (_). It cannot start with ALIYUN, ACS, ALIBABA, or ALICLOUD.
+        /// <para>The name of the template. The name can be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (_). It cannot start with ALIYUN, ACS, ALIBABA, or ALICLOUD.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>MyTemplate</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

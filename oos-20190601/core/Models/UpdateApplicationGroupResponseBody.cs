@@ -10,63 +10,87 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class UpdateApplicationGroupResponseBody : TeaModel {
         /// <summary>
-        /// The information about the application group.
+        /// <para>The information about the application group.</para>
         /// </summary>
         [NameInMap("ApplicationGroup")]
         [Validation(Required=false)]
         public UpdateApplicationGroupResponseBodyApplicationGroup ApplicationGroup { get; set; }
         public class UpdateApplicationGroupResponseBodyApplicationGroup : TeaModel {
             /// <summary>
-            /// The application name.
+            /// <para>The application name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>MyApplication</para>
             /// </summary>
             [NameInMap("ApplicationName")]
             [Validation(Required=false)]
             public string ApplicationName { get; set; }
 
             /// <summary>
-            /// The time when the application group was created.
+            /// <para>The time when the application group was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-09-07T10:28:25Z</para>
             /// </summary>
             [NameInMap("CreatedDate")]
             [Validation(Required=false)]
             public string CreatedDate { get; set; }
 
             /// <summary>
-            /// The ID of the region in which the related resources reside.
+            /// <para>The ID of the region in which the related resources reside.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("DeployRegionId")]
             [Validation(Required=false)]
             public string DeployRegionId { get; set; }
 
             /// <summary>
-            /// The description of the application group.
+            /// <para>The description of the application group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ApplicationGroup</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The key of the tag.
+            /// <para>The key of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>k1</para>
             /// </summary>
             [NameInMap("ImportTagKey")]
             [Validation(Required=false)]
             public string ImportTagKey { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v1</para>
             /// </summary>
             [NameInMap("ImportTagValue")]
             [Validation(Required=false)]
             public string ImportTagValue { get; set; }
 
             /// <summary>
-            /// The name of the application group.
+            /// <para>The name of the application group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>UpdateMyApplicationGroup</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The time when the application group was updated.
+            /// <para>The time when the application group was updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-09-08T03:01:53Z</para>
             /// </summary>
             [NameInMap("UpdatedDate")]
             [Validation(Required=false)]
@@ -75,7 +99,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AA9FA778-AE4B-55EC-81CC-C46BAF08A166</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class DeletePatchBaselineRequest : TeaModel {
         /// <summary>
-        /// The name of the patch baseline.
+        /// <para>The name of the patch baseline.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>MyPatchBaseline</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetOpsItemRequest : TeaModel {
         /// <summary>
-        /// The O\\&M item ID.
+        /// <para>The O\&amp;M item ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>oi-d52b08695e2b46ae8413</para>
         /// </summary>
         [NameInMap("OpsItemId")]
         [Validation(Required=false)]
         public string OpsItemId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

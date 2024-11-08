@@ -10,86 +10,111 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class UpdatePatchBaselineShrinkRequest : TeaModel {
         /// <summary>
-        /// The rules of scanning and installing patches for the specified operating system.
+        /// <para>The rules of scanning and installing patches for the specified operating system.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;PatchRules&quot;:[{&quot;PatchFilterGroup&quot;:[{&quot;Key&quot;:&quot;PatchSet&quot;,&quot;Values&quot;:[&quot;OS&quot;]},{&quot;Key&quot;:&quot;ProductFamily&quot;,&quot;Values&quot;:[&quot;Windows&quot;]},{&quot;Key&quot;:&quot;Product&quot;,&quot;Values&quot;:[&quot;Windows 10&quot;,&quot;Windows 7&quot;]},{&quot;Key&quot;:&quot;Classification&quot;,&quot;Values&quot;:[&quot;Security Updates&quot;,&quot;Updates&quot;,&quot;Update Rollups&quot;,&quot;Critical Updates&quot;]},{&quot;Key&quot;:&quot;Severity&quot;,&quot;Values&quot;:[&quot;Critical&quot;,&quot;Important&quot;,&quot;Moderate&quot;]}],&quot;ApproveAfterDays&quot;:7,&quot;ApproveUntilDate&quot;:&quot;&quot;,&quot;EnableNonSecurity&quot;:true,&quot;ComplianceLevel&quot;:&quot;Medium&quot;}]}</para>
         /// </summary>
         [NameInMap("ApprovalRules")]
         [Validation(Required=false)]
         public string ApprovalRules { get; set; }
 
         /// <summary>
-        /// The approved patches.
+        /// <para>The approved patches.</para>
         /// </summary>
         [NameInMap("ApprovedPatches")]
         [Validation(Required=false)]
         public string ApprovedPatchesShrink { get; set; }
 
         /// <summary>
-        /// Indicates whether the approved patch involves updates other than security-related updates.
+        /// <para>Indicates whether the approved patch involves updates other than security-related updates.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ApprovedPatchesEnableNonSecurity")]
         [Validation(Required=false)]
         public bool? ApprovedPatchesEnableNonSecurity { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the patch baseline.
+        /// <para>The description of the patch baseline.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UpdatePatchBaseline</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the patch baseline.
+        /// <para>The name of the patch baseline.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>MyPatchBaseline</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The rejected patches.
+        /// <para>The rejected patches.</para>
         /// </summary>
         [NameInMap("RejectedPatches")]
         [Validation(Required=false)]
         public string RejectedPatchesShrink { get; set; }
 
         /// <summary>
-        /// The action of the rejected patch.
+        /// <para>The action of the rejected patch.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ALLOW_AS_DEPENDENCY</para>
         /// </summary>
         [NameInMap("RejectedPatchesAction")]
         [Validation(Required=false)]
         public string RejectedPatchesAction { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmxsn4m4******</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The patch source configurations.
+        /// <para>The patch source configurations.</para>
         /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]
         public string SourcesShrink { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

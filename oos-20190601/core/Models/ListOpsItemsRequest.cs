@@ -10,28 +10,34 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListOpsItemsRequest : TeaModel {
         /// <summary>
-        /// The filter rules for the component.
+        /// <para>The filter rules for the component.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListOpsItemsRequestFilter> Filter { get; set; }
         public class ListOpsItemsRequestFilter : TeaModel {
             /// <summary>
-            /// The parameter name of the filter.
+            /// <para>The parameter name of the filter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Status</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The comparison operator that is used to filter property values.
+            /// <para>The comparison operator that is used to filter property values.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Equal</para>
             /// </summary>
             [NameInMap("Operator")]
             [Validation(Required=false)]
             public string Operator { get; set; }
 
             /// <summary>
-            /// The parameter values of the filter.
+            /// <para>The parameter values of the filter.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -40,35 +46,53 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.
+        /// <para>The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used to retrieve the next page of results.
+        /// <para>The token that is used to retrieve the next page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ3NjFENDdB</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The information about resource tags.
+        /// <para>The information about resource tags.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///       &quot;k1&quot;: &quot;v1&quot;,
+        ///       &quot;k2&quot;: &quot;v2&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("ResourceTags")]
         [Validation(Required=false)]
         public Dictionary<string, object> ResourceTags { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// <para>The tags.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

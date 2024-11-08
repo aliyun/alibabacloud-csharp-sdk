@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetServiceSettingsRequest : TeaModel {
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

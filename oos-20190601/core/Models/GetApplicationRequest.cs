@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetApplicationRequest : TeaModel {
         /// <summary>
-        /// The application name.
+        /// <para>The application name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>MyApplication</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The region ID. Set the value to cn-hangzhou.
+        /// <para>The region ID. Set the value to cn-hangzhou.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,98 +10,137 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class UpdateParameterResponseBody : TeaModel {
         /// <summary>
-        /// The information about the common parameter.
+        /// <para>The information about the common parameter.</para>
         /// </summary>
         [NameInMap("Parameter")]
         [Validation(Required=false)]
         public UpdateParameterResponseBodyParameter Parameter { get; set; }
         public class UpdateParameterResponseBodyParameter : TeaModel {
             /// <summary>
-            /// The constraints of the common parameter.
+            /// <para>The constraints of the common parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;{\&quot;AllowedValues\&quot;:[\&quot;parameter\&quot;],\&quot;AllowedPattern\&quot;:\&quot;parameter\&quot;,\&quot;MinLength\&quot;:0,\&quot;MaxLength\&quot;:20}&quot;</para>
             /// </summary>
             [NameInMap("Constraints")]
             [Validation(Required=false)]
             public string Constraints { get; set; }
 
             /// <summary>
-            /// The user who created the common parameter.
+            /// <para>The user who created the common parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>root(130900000)</para>
             /// </summary>
             [NameInMap("CreatedBy")]
             [Validation(Required=false)]
             public string CreatedBy { get; set; }
 
             /// <summary>
-            /// The time when the common parameter was created.
+            /// <para>The time when the common parameter was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-09-01T08:01:43Z</para>
             /// </summary>
             [NameInMap("CreatedDate")]
             [Validation(Required=false)]
             public string CreatedDate { get; set; }
 
             /// <summary>
-            /// The description of the common parameter.
+            /// <para>The description of the common parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>update</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The parameter ID.
+            /// <para>The parameter ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>p-4c4b401cab6747xxxxxx</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The name of the common parameter.
+            /// <para>The name of the common parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>MyParameter</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The version number of the common parameter.
+            /// <para>The version number of the common parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("ParameterVersion")]
             [Validation(Required=false)]
             public int? ParameterVersion { get; set; }
 
             /// <summary>
-            /// The resource group ID.
+            /// <para>The resource group ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-acfmxsn4m4******</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The share type of the common parameter.
+            /// <para>The share type of the common parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Private</para>
             /// </summary>
             [NameInMap("ShareType")]
             [Validation(Required=false)]
             public string ShareType { get; set; }
 
             /// <summary>
-            /// The tag added to the common parameter.
+            /// <para>The tag added to the common parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public string Tags { get; set; }
 
             /// <summary>
-            /// The data type of the common parameter.
+            /// <para>The data type of the common parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>String</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The user who updated the common parameter.
+            /// <para>The user who updated the common parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>root(130900000)</para>
             /// </summary>
             [NameInMap("UpdatedBy")]
             [Validation(Required=false)]
             public string UpdatedBy { get; set; }
 
             /// <summary>
-            /// The time when the common parameter was updated.
+            /// <para>The time when the common parameter was updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-09-01T08:04:23Z</para>
             /// </summary>
             [NameInMap("UpdatedDate")]
             [Validation(Required=false)]
@@ -110,7 +149,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AF1AE6DE-61C4-435E-8687-072CFACCCEC7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

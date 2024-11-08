@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class DeleteStateConfigurationsResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12345B731-0FCE-48BA-8D42-605abcde</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

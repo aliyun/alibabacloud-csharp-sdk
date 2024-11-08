@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListTagKeysRequest : TeaModel {
         /// <summary>
-        /// The maximum number of entries to return on each page. Valid value: 10 to 100. Default value: 50.
+        /// <para>The maximum number of entries to return on each page. Valid value: 10 to 100. Default value: 50.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used to retrieve the next page.
+        /// <para>The token that is used to retrieve the next page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>djsdlkasd</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The type of the resource to which the tag is added.
+        /// <para>The type of the resource to which the tag is added.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>template</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

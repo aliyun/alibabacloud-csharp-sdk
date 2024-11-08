@@ -10,46 +10,57 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource group to which the cloud resource is to be moved. You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify the resource and permission management of your Alibaba Cloud account. For more information, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)
+        /// <para>The ID of the resource group to which the cloud resource is to be moved. You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify the resource and permission management of your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rg-acfm3peow3k****</para>
         /// </summary>
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the cloud resource that you want to move to another resource group.
+        /// <para>The ID of the cloud resource that you want to move to another resource group.</para>
+        /// <list type="bullet">
+        /// <item><description>If the ResourceType parameter is set to template, set the ResourceId parameter to the name of the template.</description></item>
+        /// <item><description>If the ResourceType parameter is set to parameter, set the ResourceId parameter to the name of the parameter.</description></item>
+        /// <item><description>If the ResourceType parameter is set to secretparameter, set the ResourceId parameter to the name of the encryption parameter.</description></item>
+        /// <item><description>If the ResourceType parameter is set to stateconfiguration, set the ResourceId parameter to the ID of the desired-state configuration.</description></item>
+        /// <item><description>If the ResourceType parameter is set to application, set the ResourceId parameter to the name of the application.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   If the ResourceType parameter is set to template, set the ResourceId parameter to the name of the template.
-        /// *   If the ResourceType parameter is set to parameter, set the ResourceId parameter to the name of the parameter.
-        /// *   If the ResourceType parameter is set to secretparameter, set the ResourceId parameter to the name of the encryption parameter.
-        /// *   If the ResourceType parameter is set to stateconfiguration, set the ResourceId parameter to the ID of the desired-state configuration.
-        /// *   If the ResourceType parameter is set to application, set the ResourceId parameter to the name of the application.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>TemplateName</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the cloud resource. Valid values:
+        /// <para>The type of the cloud resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>template: template</description></item>
+        /// <item><description>parameter: parameter</description></item>
+        /// <item><description>secretparameter: encryption parameter</description></item>
+        /// <item><description>stateconfiguration: desired-state configuration</description></item>
+        /// <item><description>application: application</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   template: template
-        /// *   parameter: parameter
-        /// *   secretparameter: encryption parameter
-        /// *   stateconfiguration: desired-state configuration
-        /// *   application: application
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>template</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

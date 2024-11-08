@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListExecutionRiskyTasksRequest : TeaModel {
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the template.
+        /// <para>The name of the template.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>myTemplate</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

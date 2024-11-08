@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,16 +10,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class CancelExecutionRequest : TeaModel {
         /// <summary>
-        /// The ID of the execution.
+        /// <para>The ID of the execution.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>exec-xxx</para>
         /// </summary>
         [NameInMap("ExecutionId")]
         [Validation(Required=false)]
         public string ExecutionId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

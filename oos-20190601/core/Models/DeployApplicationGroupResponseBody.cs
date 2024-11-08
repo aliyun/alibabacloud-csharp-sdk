@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class DeployApplicationGroupResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8AF4800A-A316-589A-90C4-313B1FEEB084</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

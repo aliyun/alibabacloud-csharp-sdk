@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetParametersRequest : TeaModel {
         /// <summary>
-        /// The names of the common parameters.
+        /// <para>The names of the common parameters.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[&quot;parameter1&quot;,&quot;parameter2&quot;]</para>
         /// </summary>
         [NameInMap("Names")]
         [Validation(Required=false)]
         public string Names { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

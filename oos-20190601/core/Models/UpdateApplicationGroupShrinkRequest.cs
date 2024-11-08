@@ -10,25 +10,32 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class UpdateApplicationGroupShrinkRequest : TeaModel {
         /// <summary>
-        /// The application name.
+        /// <para>The application name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>MyApplication</para>
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
 
         /// <summary>
-        /// The name of the application group.
+        /// <para>The name of the application group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>MyApplicationGroup</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The new name of the application group.
+        /// <para>The new name of the application group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UpdateMyApplicationGroup</para>
         /// </summary>
         [NameInMap("NewName")]
         [Validation(Required=false)]
@@ -43,7 +50,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string ParametersShrink { get; set; }
 
         /// <summary>
-        /// The region ID. Set the value to cn-hangzhou.
+        /// <para>The region ID. Set the value to cn-hangzhou.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

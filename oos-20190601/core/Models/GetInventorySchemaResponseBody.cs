@@ -10,49 +10,64 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetInventorySchemaResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that was used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that was used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gAAAAABfh8MVLQI9AuKGACLgjbsXbWs-Mna47IDM6tr6wK7TZ1</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>89117642-7167-4F4D-B7F1-876582279E3E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The detailed configurations of the configuration list.
+        /// <para>The detailed configurations of the configuration list.</para>
         /// </summary>
         [NameInMap("Schemas")]
         [Validation(Required=false)]
         public List<GetInventorySchemaResponseBodySchemas> Schemas { get; set; }
         public class GetInventorySchemaResponseBodySchemas : TeaModel {
             /// <summary>
-            /// The properties of the configuration list.
+            /// <para>The properties of the configuration list.</para>
             /// </summary>
             [NameInMap("Attributes")]
             [Validation(Required=false)]
             public List<GetInventorySchemaResponseBodySchemasAttributes> Attributes { get; set; }
             public class GetInventorySchemaResponseBodySchemasAttributes : TeaModel {
                 /// <summary>
-                /// The data type of the property.
+                /// <para>The data type of the property.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>STRING</para>
                 /// </summary>
                 [NameInMap("DataType")]
                 [Validation(Required=false)]
                 public string DataType { get; set; }
 
                 /// <summary>
-                /// The name of the property.
+                /// <para>The name of the property.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ApplicationType</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -61,14 +76,20 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             }
 
             /// <summary>
-            /// The name of the configuration list.
+            /// <para>The name of the configuration list.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ACS:Application</para>
             /// </summary>
             [NameInMap("TypeName")]
             [Validation(Required=false)]
             public string TypeName { get; set; }
 
             /// <summary>
-            /// The version of the configuration list.
+            /// <para>The version of the configuration list.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.0</para>
             /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]

@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetTemplateRequest : TeaModel {
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the template. The name can be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (_). The name cannot start with ALIYUN, ACS, ALIBABA, or ALICLOUD.
+        /// <para>The name of the template. The name can be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (_). The name cannot start with ALIYUN, ACS, ALIBABA, or ALICLOUD.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>MyTemplate</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// The version of the template. The default value is the latest version of the template.
+        /// <para>The version of the template. The default value is the latest version of the template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>v1</para>
         /// </summary>
         [NameInMap("TemplateVersion")]
         [Validation(Required=false)]

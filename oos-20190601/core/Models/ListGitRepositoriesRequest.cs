@@ -13,12 +13,16 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("OrgId")]
+        [Validation(Required=false)]
+        public string OrgId { get; set; }
+
         [NameInMap("OrgName")]
         [Validation(Required=false)]
         public string OrgName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Owner")]
         [Validation(Required=false)]
@@ -33,7 +37,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Platform")]
         [Validation(Required=false)]

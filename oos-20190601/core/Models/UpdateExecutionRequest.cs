@@ -10,51 +10,71 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class UpdateExecutionRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-42665544****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the execution.
+        /// <para>The description of the execution.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Execution description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the execution.
+        /// <para>The ID of the execution.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>exec-c223xxxxxxxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("ExecutionId")]
         [Validation(Required=false)]
         public string ExecutionId { get; set; }
 
         /// <summary>
-        /// The information about the parameters.
+        /// <para>The information about the parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Status&quot;:&quot;Running&quot;}</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public string Parameters { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmxsn4m*****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The tags of the execution.
+        /// <para>The tags of the execution.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
