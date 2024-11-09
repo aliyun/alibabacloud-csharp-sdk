@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string ClientId { get; set; }
 
+        [NameInMap("DesktopId")]
+        [Validation(Required=false)]
+        public string DesktopId { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

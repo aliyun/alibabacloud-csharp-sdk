@@ -384,6 +384,10 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             [Validation(Required=false)]
             public string Os { get; set; }
 
+            [NameInMap("OsDescription")]
+            [Validation(Required=false)]
+            public string OsDescription { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Windows</para>
