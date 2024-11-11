@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [Validation(Required=false)]
         public string AndroidPayloadShrink { get; set; }
 
+        [NameInMap("AndroidShortPayload")]
+        [Validation(Required=false)]
+        public string AndroidShortPayloadShrink { get; set; }
+
         [NameInMap("ChannelProperties")]
         [Validation(Required=false)]
         public string ChannelPropertiesShrink { get; set; }

@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [Validation(Required=false)]
         public string VivoCategory { get; set; }
 
+        [NameInMap("vivoPushMode")]
+        [Validation(Required=false)]
+        public string VivoPushMode { get; set; }
+
         [NameInMap("xiaomiChannelId")]
         [Validation(Required=false)]
         public string XiaomiChannelId { get; set; }

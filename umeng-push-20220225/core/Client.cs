@@ -324,6 +324,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 request.AndroidPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidPayload, "AndroidPayload", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AndroidShortPayload))
+            {
+                request.AndroidShortPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidShortPayload, "AndroidShortPayload", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChannelProperties))
             {
                 request.ChannelPropertiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChannelProperties, "ChannelProperties", "json");
@@ -348,6 +352,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidPayloadShrink))
             {
                 body["AndroidPayload"] = request.AndroidPayloadShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidShortPayloadShrink))
+            {
+                body["AndroidShortPayload"] = request.AndroidShortPayloadShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelPropertiesShrink))
             {
@@ -432,6 +440,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 request.AndroidPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidPayload, "AndroidPayload", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AndroidShortPayload))
+            {
+                request.AndroidShortPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidShortPayload, "AndroidShortPayload", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChannelProperties))
             {
                 request.ChannelPropertiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChannelProperties, "ChannelProperties", "json");
@@ -456,6 +468,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidPayloadShrink))
             {
                 body["AndroidPayload"] = request.AndroidPayloadShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidShortPayloadShrink))
+            {
+                body["AndroidShortPayload"] = request.AndroidShortPayloadShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelPropertiesShrink))
             {
@@ -578,6 +594,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 request.AndroidPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidPayload, "AndroidPayload", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AndroidShortPayload))
+            {
+                request.AndroidShortPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidShortPayload, "AndroidShortPayload", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChannelProperties))
             {
                 request.ChannelPropertiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChannelProperties, "ChannelProperties", "json");
@@ -598,6 +618,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidPayloadShrink))
             {
                 body["AndroidPayload"] = request.AndroidPayloadShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidShortPayloadShrink))
+            {
+                body["AndroidShortPayload"] = request.AndroidShortPayloadShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelPropertiesShrink))
             {
@@ -686,6 +710,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 request.AndroidPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidPayload, "AndroidPayload", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AndroidShortPayload))
+            {
+                request.AndroidShortPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidShortPayload, "AndroidShortPayload", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChannelProperties))
             {
                 request.ChannelPropertiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChannelProperties, "ChannelProperties", "json");
@@ -706,6 +734,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidPayloadShrink))
             {
                 body["AndroidPayload"] = request.AndroidPayloadShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidShortPayloadShrink))
+            {
+                body["AndroidShortPayload"] = request.AndroidShortPayloadShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelPropertiesShrink))
             {
@@ -832,6 +864,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 request.AndroidPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidPayload, "AndroidPayload", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AndroidShortPayload))
+            {
+                request.AndroidShortPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidShortPayload, "AndroidShortPayload", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChannelProperties))
             {
                 request.ChannelPropertiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChannelProperties, "ChannelProperties", "json");
@@ -848,6 +884,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidPayloadShrink))
             {
                 body["AndroidPayload"] = request.AndroidPayloadShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidShortPayloadShrink))
+            {
+                body["AndroidShortPayload"] = request.AndroidShortPayloadShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelPropertiesShrink))
             {
@@ -932,6 +972,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 request.AndroidPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidPayload, "AndroidPayload", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AndroidShortPayload))
+            {
+                request.AndroidShortPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidShortPayload, "AndroidShortPayload", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChannelProperties))
             {
                 request.ChannelPropertiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChannelProperties, "ChannelProperties", "json");
@@ -948,6 +992,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidPayloadShrink))
             {
                 body["AndroidPayload"] = request.AndroidPayloadShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidShortPayloadShrink))
+            {
+                body["AndroidShortPayload"] = request.AndroidShortPayloadShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelPropertiesShrink))
             {
@@ -1070,6 +1118,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 request.AndroidPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidPayload, "AndroidPayload", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AndroidShortPayload))
+            {
+                request.AndroidShortPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidShortPayload, "AndroidShortPayload", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChannelProperties))
             {
                 request.ChannelPropertiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChannelProperties, "ChannelProperties", "json");
@@ -1086,6 +1138,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidPayloadShrink))
             {
                 body["AndroidPayload"] = request.AndroidPayloadShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidShortPayloadShrink))
+            {
+                body["AndroidShortPayload"] = request.AndroidShortPayloadShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelPropertiesShrink))
             {
@@ -1174,6 +1230,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 request.AndroidPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidPayload, "AndroidPayload", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AndroidShortPayload))
+            {
+                request.AndroidShortPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidShortPayload, "AndroidShortPayload", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChannelProperties))
             {
                 request.ChannelPropertiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChannelProperties, "ChannelProperties", "json");
@@ -1190,6 +1250,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidPayloadShrink))
             {
                 body["AndroidPayload"] = request.AndroidPayloadShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidShortPayloadShrink))
+            {
+                body["AndroidShortPayload"] = request.AndroidShortPayloadShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelPropertiesShrink))
             {
@@ -1316,6 +1380,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 request.AndroidPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidPayload, "AndroidPayload", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AndroidShortPayload))
+            {
+                request.AndroidShortPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidShortPayload, "AndroidShortPayload", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChannelProperties))
             {
                 request.ChannelPropertiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChannelProperties, "ChannelProperties", "json");
@@ -1332,6 +1400,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidPayloadShrink))
             {
                 body["AndroidPayload"] = request.AndroidPayloadShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidShortPayloadShrink))
+            {
+                body["AndroidShortPayload"] = request.AndroidShortPayloadShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelPropertiesShrink))
             {
@@ -1420,6 +1492,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 request.AndroidPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidPayload, "AndroidPayload", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AndroidShortPayload))
+            {
+                request.AndroidShortPayloadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidShortPayload, "AndroidShortPayload", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChannelProperties))
             {
                 request.ChannelPropertiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChannelProperties, "ChannelProperties", "json");
@@ -1436,6 +1512,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidPayloadShrink))
             {
                 body["AndroidPayload"] = request.AndroidPayloadShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidShortPayloadShrink))
+            {
+                body["AndroidShortPayload"] = request.AndroidShortPayloadShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelPropertiesShrink))
             {
@@ -1579,6 +1659,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 body["AndroidPayload"] = request.AndroidPayloadShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidShortPayload))
+            {
+                body["AndroidShortPayload"] = request.AndroidShortPayload;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelPropertiesShrink))
             {
                 body["ChannelProperties"] = request.ChannelPropertiesShrink;
@@ -1682,6 +1766,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidPayloadShrink))
             {
                 body["AndroidPayload"] = request.AndroidPayloadShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidShortPayload))
+            {
+                body["AndroidShortPayload"] = request.AndroidShortPayload;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelPropertiesShrink))
             {
