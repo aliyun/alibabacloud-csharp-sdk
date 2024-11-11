@@ -3186,6 +3186,118 @@ namespace AlibabaCloud.SDK.Ess20220222
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>CreateDiagnoseReport</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDiagnoseReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDiagnoseReportResponse
+        /// </returns>
+        public CreateDiagnoseReportResponse CreateDiagnoseReportWithOptions(CreateDiagnoseReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDiagnoseReport",
+                Version = "2022-02-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDiagnoseReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateDiagnoseReport</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDiagnoseReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDiagnoseReportResponse
+        /// </returns>
+        public async Task<CreateDiagnoseReportResponse> CreateDiagnoseReportWithOptionsAsync(CreateDiagnoseReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDiagnoseReport",
+                Version = "2022-02-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDiagnoseReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateDiagnoseReport</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDiagnoseReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDiagnoseReportResponse
+        /// </returns>
+        public CreateDiagnoseReportResponse CreateDiagnoseReport(CreateDiagnoseReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDiagnoseReportWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateDiagnoseReport</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDiagnoseReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDiagnoseReportResponse
+        /// </returns>
+        public async Task<CreateDiagnoseReportResponse> CreateDiagnoseReportAsync(CreateDiagnoseReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDiagnoseReportWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a scaling configuration of the Elastic Container Instance type. Auto Scaling uses the scaling configuration as a template to create elastic container instances to meet your business requirements during scale-out events.</para>
         /// </summary>
         /// 
@@ -8050,6 +8162,118 @@ namespace AlibabaCloud.SDK.Ess20220222
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>DescribeDiagnoseReports</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDiagnoseReportsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDiagnoseReportsResponse
+        /// </returns>
+        public DescribeDiagnoseReportsResponse DescribeDiagnoseReportsWithOptions(DescribeDiagnoseReportsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDiagnoseReports",
+                Version = "2022-02-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDiagnoseReportsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeDiagnoseReports</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDiagnoseReportsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDiagnoseReportsResponse
+        /// </returns>
+        public async Task<DescribeDiagnoseReportsResponse> DescribeDiagnoseReportsWithOptionsAsync(DescribeDiagnoseReportsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDiagnoseReports",
+                Version = "2022-02-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDiagnoseReportsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeDiagnoseReports</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDiagnoseReportsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDiagnoseReportsResponse
+        /// </returns>
+        public DescribeDiagnoseReportsResponse DescribeDiagnoseReports(DescribeDiagnoseReportsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDiagnoseReportsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeDiagnoseReports</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDiagnoseReportsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDiagnoseReportsResponse
+        /// </returns>
+        public async Task<DescribeDiagnoseReportsResponse> DescribeDiagnoseReportsAsync(DescribeDiagnoseReportsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDiagnoseReportsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of a scaling configuration. You can query a scaling configuration by its ID to learn about its details such as the temporary storage size, number of IPv6 addresses, and bandwidth of the elastic IP address (EIP). The scaling configuration details can be obtained as a YAML file.</para>
         /// </summary>
         /// 
@@ -10486,6 +10710,118 @@ namespace AlibabaCloud.SDK.Ess20220222
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeScalingGroupDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeScalingGroupDiagnoseDetails</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeScalingGroupDiagnoseDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeScalingGroupDiagnoseDetailsResponse
+        /// </returns>
+        public DescribeScalingGroupDiagnoseDetailsResponse DescribeScalingGroupDiagnoseDetailsWithOptions(DescribeScalingGroupDiagnoseDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeScalingGroupDiagnoseDetails",
+                Version = "2022-02-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeScalingGroupDiagnoseDetailsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeScalingGroupDiagnoseDetails</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeScalingGroupDiagnoseDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeScalingGroupDiagnoseDetailsResponse
+        /// </returns>
+        public async Task<DescribeScalingGroupDiagnoseDetailsResponse> DescribeScalingGroupDiagnoseDetailsWithOptionsAsync(DescribeScalingGroupDiagnoseDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeScalingGroupDiagnoseDetails",
+                Version = "2022-02-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeScalingGroupDiagnoseDetailsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeScalingGroupDiagnoseDetails</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeScalingGroupDiagnoseDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeScalingGroupDiagnoseDetailsResponse
+        /// </returns>
+        public DescribeScalingGroupDiagnoseDetailsResponse DescribeScalingGroupDiagnoseDetails(DescribeScalingGroupDiagnoseDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeScalingGroupDiagnoseDetailsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeScalingGroupDiagnoseDetails</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeScalingGroupDiagnoseDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeScalingGroupDiagnoseDetailsResponse
+        /// </returns>
+        public async Task<DescribeScalingGroupDiagnoseDetailsResponse> DescribeScalingGroupDiagnoseDetailsAsync(DescribeScalingGroupDiagnoseDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeScalingGroupDiagnoseDetailsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
