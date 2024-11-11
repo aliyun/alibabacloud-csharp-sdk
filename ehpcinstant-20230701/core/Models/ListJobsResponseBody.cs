@@ -85,6 +85,20 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListJobsResponseBodyJobListTags> Tags { get; set; }
+            public class ListJobsResponseBodyJobListTags : TeaModel {
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>

@@ -35,6 +35,23 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 
             }
 
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public List<CreateJobRequestDeploymentPolicyTag> Tag { get; set; }
+            public class CreateJobRequestDeploymentPolicyTag : TeaModel {
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
         }
 
         /// <summary>

@@ -109,6 +109,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public string StartTime { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -124,6 +128,20 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [NameInMap("StatusReason")]
             [Validation(Required=false)]
             public string StatusReason { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListExecutorsResponseBodyExecutorsTags> Tags { get; set; }
+            public class ListExecutorsResponseBodyExecutorsTags : TeaModel {
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
 
             /// <summary>
             /// <b>Example:</b>

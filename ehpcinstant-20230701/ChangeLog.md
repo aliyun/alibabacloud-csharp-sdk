@@ -1,3 +1,13 @@
+2024-11-11 Version: 1.1.0
+- Support API ListTagResources.
+- Support API TagResources.
+- Support API UnTagResources.
+- Update API CreateJob: update param DeploymentPolicy.
+- Update API ListExecutors: update response param.
+- Update API ListJobExecutors: update response param.
+- Update API ListJobs: update response param.
+
+
 2024-10-24 Version: 1.0.5
 - Update API AddImage: add param ImageType.
 - Update API CreateJob: update param DeploymentPolicy.
