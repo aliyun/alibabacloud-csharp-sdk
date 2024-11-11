@@ -1,3 +1,8 @@
+2024-11-11 Version: 2.32.0
+- Support API ExportContactFlow.
+- Support API ImportContactFlow.
+
+
 2024-10-28 Version: 2.31.0
 - Support API GetIvrTrackingSummary.
 - Update API BlindTransfer: add param SkillGroupId.
