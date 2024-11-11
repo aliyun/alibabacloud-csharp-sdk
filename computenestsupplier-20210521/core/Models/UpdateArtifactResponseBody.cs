@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class UpdateArtifactResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The build properties of the artifact, utilized for hosting and building the deployment package.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;{\&quot;RegionId\&quot;:\&quot;xxx\&quot;, \&quot;SourceImageId\&quot;:\&quot;xxx\&quot;, \&quot;\&quot;:\&quot;xxx\&quot;, \&quot;CommandType\&quot;:\&quot;xxx\&quot;, \&quot;CommandContent\&quot;:\&quot;xxx\&quot;}&quot;</para>
+        /// </summary>
         [NameInMap("ArtifactBuildProperty")]
         [Validation(Required=false)]
         public string ArtifactBuildProperty { get; set; }

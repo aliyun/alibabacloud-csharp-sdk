@@ -769,6 +769,24 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ServiceDocUrl { get; set; }
 
+        [NameInMap("ServiceDocumentInfos")]
+        [Validation(Required=false)]
+        public List<GetServiceResponseBodyServiceDocumentInfos> ServiceDocumentInfos { get; set; }
+        public class GetServiceResponseBodyServiceDocumentInfos : TeaModel {
+            [NameInMap("DocumentUrl")]
+            [Validation(Required=false)]
+            public string DocumentUrl { get; set; }
+
+            [NameInMap("Locale")]
+            [Validation(Required=false)]
+            public string Locale { get; set; }
+
+            [NameInMap("TemplateName")]
+            [Validation(Required=false)]
+            public string TemplateName { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The service ID.</para>
         /// 

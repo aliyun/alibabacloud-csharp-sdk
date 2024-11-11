@@ -9,22 +9,74 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class UpdateArtifactRequest : TeaModel {
+        /// <summary>
+        /// <para>The build properties of the artifact, utilized for hosting and building the deployment package.</para>
+        /// </summary>
         [NameInMap("ArtifactBuildProperty")]
         [Validation(Required=false)]
         public UpdateArtifactRequestArtifactBuildProperty ArtifactBuildProperty { get; set; }
         public class UpdateArtifactRequestArtifactBuildProperty : TeaModel {
+            /// <summary>
+            /// <para>The command content.</para>
+            /// <remarks>
+            /// <para> This parameter is available only if the deployment package is a ecs image type.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>echo &quot;start run command&quot;</para>
+            /// </summary>
             [NameInMap("CommandContent")]
             [Validation(Required=false)]
             public string CommandContent { get; set; }
 
+            /// <summary>
+            /// <para>The command type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>RunBatScript: batch command, applicable to Windows instances.</description></item>
+            /// <item><description>RunPowerShellScript: PowerShell command, applicable to Windows instances.</description></item>
+            /// <item><description>RunShellScript: shell command, applicable to Linux instances.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> This parameter is available only if the deployment package is a ecs image type.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>RunShellScript</para>
+            /// </summary>
             [NameInMap("CommandType")]
             [Validation(Required=false)]
             public string CommandType { get; set; }
 
+            /// <summary>
+            /// <para>The region ID where the source mirror image is located.</para>
+            /// <remarks>
+            /// <para> This parameter is available only if the deployment package is a ecs image type.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
+            /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <para>The source image id. Supported Types:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Image ID: Pass the Image ID of the Ecs image directly.</para>
+            /// </description></item>
+            /// <item><description><para>OOS Common Parameter Name: Obtain the corresponding Image ID automatically by using the OOS common parameter name.</para>
+            /// </description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> This parameter is available only if the deployment package is a ecs image type.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Image ID：m-t4nhenrdc38pe4*****
+            /// ubuntu_22_04_x64_20G_alibase_20240926.vhd
+            /// OOS Common Parameter Name：aliyun/services/computenest/images/aliyun_3_2104_python_3_11</para>
+            /// </summary>
             [NameInMap("SourceImageId")]
             [Validation(Required=false)]
             public string SourceImageId { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class UpdateArtifactShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The build properties of the artifact, utilized for hosting and building the deployment package.</para>
+        /// </summary>
         [NameInMap("ArtifactBuildProperty")]
         [Validation(Required=false)]
         public string ArtifactBuildPropertyShrink { get; set; }
