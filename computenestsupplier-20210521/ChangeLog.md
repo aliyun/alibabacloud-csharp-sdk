@@ -1,3 +1,6 @@
+2024-11-12 Version: 3.0.2
+- Generated csharp 2021-05-21 for ComputeNestSupplier.
+
 2024-11-11 Version: 3.0.1
 - Update API GetService: update response param.
 
