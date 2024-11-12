@@ -10,43 +10,54 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class ListQueueConsumersRequest : TeaModel {
         /// <summary>
-        /// The ID of the ApsaraMQ for RabbitMQ instance.
+        /// <para>The ID of the ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>188077086902***</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.
+        /// <para>The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The number of data entries to return. If you do not configure this parameter, the default value 1 is used.
+        /// <para>The number of data entries to return. If you do not configure this parameter, the default value 1 is used.</para>
+        /// <para>Valid values: 1 to 100.</para>
         /// 
-        /// Valid values: 1 to 100.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("QueryCount")]
         [Validation(Required=false)]
         public int? QueryCount { get; set; }
 
         /// <summary>
-        /// The name of the queue for which you want to query online consumers.
+        /// <para>The name of the queue for which you want to query online consumers.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>queue-rabbit-springboot-advance5</para>
         /// </summary>
         [NameInMap("Queue")]
         [Validation(Required=false)]
         public string Queue { get; set; }
 
         /// <summary>
-        /// The virtual host (vhost) name.
+        /// <para>The virtual host (vhost) name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("VirtualHost")]
         [Validation(Required=false)]

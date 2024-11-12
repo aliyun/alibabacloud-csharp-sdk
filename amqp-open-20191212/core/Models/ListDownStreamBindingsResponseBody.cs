@@ -10,75 +10,98 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class ListDownStreamBindingsResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. The status code 200 indicates that the request is successful.
+        /// <para>The HTTP status code. The status code 200 indicates that the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListDownStreamBindingsResponseBodyData Data { get; set; }
         public class ListDownStreamBindingsResponseBodyData : TeaModel {
             /// <summary>
-            /// The bindings.
+            /// <para>The bindings.</para>
             /// </summary>
             [NameInMap("Bindings")]
             [Validation(Required=false)]
             public List<ListDownStreamBindingsResponseBodyDataBindings> Bindings { get; set; }
             public class ListDownStreamBindingsResponseBodyDataBindings : TeaModel {
                 /// <summary>
-                /// The x-match attribute. Valid values:
+                /// <para>The x-match attribute. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>all:</b> A headers exchange routes a message to a queue only if all binding attributes of the queue except for x-match match the headers attributes of the message. This value is the default value.</description></item>
+                /// <item><description><b>any:</b> A headers exchange routes a message to a queue if one or more binding attributes of the queue except for x-match match the headers attributes of the message.</description></item>
+                /// </list>
+                /// <para>This parameter is available only for headers exchanges.</para>
                 /// 
-                /// *   **all:** A headers exchange routes a message to a queue only if all binding attributes of the queue except for x-match match the headers attributes of the message. This value is the default value.
-                /// *   **any:** A headers exchange routes a message to a queue if one or more binding attributes of the queue except for x-match match the headers attributes of the message.
-                /// 
-                /// This parameter is available only for headers exchanges.
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Argument")]
                 [Validation(Required=false)]
                 public string Argument { get; set; }
 
                 /// <summary>
-                /// The binding key.
+                /// <para>The binding key.</para>
+                /// <list type="bullet">
+                /// <item><description><para>If the source exchange is not a topic exchange, the binding key must meet the following conventions:</para>
+                /// <list type="bullet">
+                /// <item><description>The binding key can contain only letters, digits, hyphens (-), underscores (_), periods (.), forward slashes (/), and at signs (@).</description></item>
+                /// <item><description>The binding key must be 1 to 255 characters in length.</description></item>
+                /// </list>
+                /// </description></item>
+                /// <item><description><para>If the source exchange is a topic exchange, the binding key must meet the following conventions:</para>
+                /// <list type="bullet">
+                /// <item><description>The binding key can contain letters, digits, hyphens (-), underscores (_), periods (.), number signs (#), forward slashes (/), and at signs (@).</description></item>
+                /// <item><description>The binding key cannot start or end with a period (.). If a binding key starts with a number sign (#) or an asterisk (\<em>), the number sign (#) or asterisk (\</em>) must be followed by a period (.). If the binding key ends with a number sign (#) or an asterisk (\<em>), the number sign (#) or asterisk (\</em>) must be preceded by a period (.). If a number sign (#) or an asterisk (\<em>) is used in the middle of a binding key, the number sign (#) or asterisk (\</em>) must be preceded and followed by a period (.).</description></item>
+                /// <item><description>The binding key must be 1 to 255 characters in length.</description></item>
+                /// </list>
+                /// </description></item>
+                /// </list>
                 /// 
-                /// *   If the source exchange is not a topic exchange, the binding key must meet the following conventions:
-                /// 
-                ///     *   The binding key can contain only letters, digits, hyphens (-), underscores (_), periods (.), forward slashes (/), and at signs (@).
-                ///     *   The binding key must be 1 to 255 characters in length.
-                /// 
-                /// *   If the source exchange is a topic exchange, the binding key must meet the following conventions:
-                /// 
-                ///     *   The binding key can contain letters, digits, hyphens (-), underscores (_), periods (.), number signs (#), forward slashes (/), and at signs (@).
-                ///     *   The binding key cannot start or end with a period (.). If a binding key starts with a number sign (#) or an asterisk (\\*), the number sign (#) or asterisk (\\*) must be followed by a period (.). If the binding key ends with a number sign (#) or an asterisk (\\*), the number sign (#) or asterisk (\\*) must be preceded by a period (.). If a number sign (#) or an asterisk (\\*) is used in the middle of a binding key, the number sign (#) or asterisk (\\*) must be preceded and followed by a period (.).
-                ///     *   The binding key must be 1 to 255 characters in length.
+                /// <b>Example:</b>
+                /// <para>amq.test</para>
                 /// </summary>
                 [NameInMap("BindingKey")]
                 [Validation(Required=false)]
                 public string BindingKey { get; set; }
 
                 /// <summary>
-                /// The type of the object to which the source exchange is bound. Valid values:
+                /// <para>The type of the object to which the source exchange is bound. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>QUEUE</b></description></item>
+                /// <item><description><b>EXCHANGE</b></description></item>
+                /// </list>
                 /// 
-                /// *   **QUEUE**
-                /// *   **EXCHANGE**
+                /// <b>Example:</b>
+                /// <para>QUEUE</para>
                 /// </summary>
                 [NameInMap("BindingType")]
                 [Validation(Required=false)]
                 public string BindingType { get; set; }
 
                 /// <summary>
-                /// The name of the object to which the source exchange is bound.
+                /// <para>The name of the object to which the source exchange is bound.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>QueueTest</para>
                 /// </summary>
                 [NameInMap("DestinationName")]
                 [Validation(Required=false)]
                 public string DestinationName { get; set; }
 
                 /// <summary>
-                /// The name of the source exchange.
+                /// <para>The name of the source exchange.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("SourceExchange")]
                 [Validation(Required=false)]
@@ -87,14 +110,20 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             }
 
             /// <summary>
-            /// The maximum number of entries returned.
+            /// <para>The maximum number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("MaxResults")]
             [Validation(Required=false)]
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.
+            /// <para>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>caebacccb2be03f84eb48b699f0a****</para>
             /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]
@@ -103,21 +132,30 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>operation success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9C1E0502-0790-4FDB-8C96-6D5C8D9B7***</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

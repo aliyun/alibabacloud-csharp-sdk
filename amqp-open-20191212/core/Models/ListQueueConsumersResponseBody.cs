@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class ListQueueConsumersResponseBody : TeaModel {
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListQueueConsumersResponseBodyData Data { get; set; }
         public class ListQueueConsumersResponseBodyData : TeaModel {
             /// <summary>
-            /// The consumers.
+            /// <para>The consumers.</para>
             /// </summary>
             [NameInMap("Consumers")]
             [Validation(Required=false)]
             public List<ListQueueConsumersResponseBodyDataConsumers> Consumers { get; set; }
             public class ListQueueConsumersResponseBodyDataConsumers : TeaModel {
                 /// <summary>
-                /// The consumer tag.
+                /// <para>The consumer tag.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>sgen-1</para>
                 /// </summary>
                 [NameInMap("ConsumerTag")]
                 [Validation(Required=false)]
@@ -33,14 +36,20 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             }
 
             /// <summary>
-            /// The maximum number of entries returned.
+            /// <para>The maximum number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("MaxResults")]
             [Validation(Required=false)]
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.
+            /// <para>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>caebacccb2be03f84eb48b699f0a****</para>
             /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]
@@ -49,7 +58,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4409B7D5-E4EC-4EB5-804A-385DCDFCD***</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

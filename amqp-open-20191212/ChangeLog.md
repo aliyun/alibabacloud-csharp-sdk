@@ -1,3 +1,11 @@
+2024-11-12 Version: 1.3.4
+- Update API CreateBinding: update param BindingKey.
+- Update API CreateInstance: add param ResourceGroupId.
+- Update API DeleteBinding: update param BindingKey.
+- Update API ListInstances: add param ResourceGroupId.
+- Update API ListInstances: update response param.
+
+
 2024-08-15 Version: 1.3.3
 - Update API ListDownStreamBindings: update param MaxResults.
 - Update API ListExchangeUpStreamBindings: update param MaxResults.

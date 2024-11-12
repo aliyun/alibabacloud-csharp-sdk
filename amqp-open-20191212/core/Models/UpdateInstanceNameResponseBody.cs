@@ -10,35 +10,50 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class UpdateInstanceNameResponseBody : TeaModel {
         /// <summary>
-        /// The returned HTTP status code.
+        /// <para>The returned HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// The error message that is returned when an error occurs during the update of the instance name.
+        /// <para>The error message that is returned when an error occurs during the update of the instance name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InstanceNotExist</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6DC68EC9-0E76-5435-B8C0-FF9492B4****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned message that indicates the request is successful.
+        /// <para>The returned message that indicates the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

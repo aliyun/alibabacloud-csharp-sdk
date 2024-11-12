@@ -10,64 +10,75 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class CreateAccountRequest : TeaModel {
         /// <summary>
-        /// The AccessKey ID of your Alibaba Cloud account or RAM user. For information about how to obtain an AccessKey pair, see [Create an AccessKey pair](https://help.aliyun.com/document_detail/116401.html).
+        /// <para>The AccessKey ID of your Alibaba Cloud account or RAM user. For information about how to obtain an AccessKey pair, see <a href="https://help.aliyun.com/document_detail/116401.html">Create an AccessKey pair</a>.</para>
+        /// <remarks>
+        /// <para> If you use the pair of static username and password that is created by using the Accesskey pair of a RAM user to access ApsaraMQ for RabbitMQ to send and receive messages, make sure that the RAM user is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/146559.html">RAM policies</a>.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  If you use the pair of static username and password that is created by using the Accesskey pair of a RAM user to access ApsaraMQ for RabbitMQ to send and receive messages, make sure that the RAM user is granted the required permissions. For more information, see [RAM policies](https://help.aliyun.com/document_detail/146559.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>LTAI5t8be*******tEJ6vfo</para>
         /// </summary>
         [NameInMap("accountAccessKey")]
         [Validation(Required=false)]
         public string AccountAccessKey { get; set; }
 
         /// <summary>
-        /// The timestamp that indicates when the password is created. Unit: milliseconds.
+        /// <para>The timestamp that indicates when the password is created. Unit: milliseconds.</para>
+        /// <remarks>
+        /// <para> This timestamp is specified by you and is used to generate a static password. The timestamp is not the timestamp that indicates when the system generates the password.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  This timestamp is specified by you and is used to generate a static password. The timestamp is not the timestamp that indicates when the system generates the password.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1671175303522</para>
         /// </summary>
         [NameInMap("createTimestamp")]
         [Validation(Required=false)]
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// The ID of the instance for which you want to create a pair of static username and password.
+        /// <para>The ID of the instance for which you want to create a pair of static username and password.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>amqp-cn-*********</para>
         /// </summary>
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The AccessKey secret signature. The system generates a static password based on the signature in the request, the AccessKey secret signature, and the username.
+        /// <para>The AccessKey secret signature. The system generates a static password based on the signature in the request, the AccessKey secret signature, and the username.</para>
+        /// <para>The system uses the HMAC-SHA1 algorithm to generate the AccessKey secret signature based on the timestamp that indicates when the username is created and the AccessKey ID. For more information, see the <b>&quot;Sample code on how to generate a signature&quot;</b> section of this topic.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The system uses the HMAC-SHA1 algorithm to generate the AccessKey secret signature based on the timestamp that indicates when the username is created and the AccessKey ID. For more information, see the **"Sample code on how to generate a signature"** section of this topic.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>4c1a6367ce4c4255e9617326f9133ac6359533f6</para>
         /// </summary>
         [NameInMap("secretSign")]
         [Validation(Required=false)]
         public string SecretSign { get; set; }
 
         /// <summary>
-        /// The signature. The system generates a static password based on the signature in the request, the AccessKey secret signature, and the username.
+        /// <para>The signature. The system generates a static password based on the signature in the request, the AccessKey secret signature, and the username.</para>
+        /// <para>The system uses the HMAC-SHA1 algorithm to generate the signature based on the timestamp that indicates when the username is created and the AccessKey ID. For more information, see the <b>&quot;Sample code on how to generate a signature&quot;</b> section of this topic.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The system uses the HMAC-SHA1 algorithm to generate the signature based on the timestamp that indicates when the username is created and the AccessKey ID. For more information, see the **"Sample code on how to generate a signature"** section of this topic.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>22c2d7d1769cb53c5a6d9213248e2de524c4f799</para>
         /// </summary>
         [NameInMap("signature")]
         [Validation(Required=false)]
         public string Signature { get; set; }
 
         /// <summary>
-        /// The static username that you want to create.
+        /// <para>The static username that you want to create.</para>
+        /// <para>The value of this parameter is a Base64-encoded string that is generated based on the instance ID and AccessKey ID. For more information, see the &quot;<b>Sample code on how to generate a username</b>&quot; section of this topic.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The value of this parameter is a Base64-encoded string that is generated based on the instance ID and AccessKey ID. For more information, see the "**Sample code on how to generate a username**" section of this topic.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>MjphbXFwLWNuLXp***********************Q4YmVNbVZNMWVSWnRFSjZ2Zm8=</para>
         /// </summary>
         [NameInMap("userName")]
         [Validation(Required=false)]

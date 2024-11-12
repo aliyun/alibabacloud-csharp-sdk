@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class DeleteQueueRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1880770869023***</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The queue name.
+        /// <para>The queue name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>DemoQueue</para>
         /// </summary>
         [NameInMap("QueueName")]
         [Validation(Required=false)]
         public string QueueName { get; set; }
 
         /// <summary>
-        /// The vhost name.
+        /// <para>The vhost name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("VirtualHost")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class DeleteExchangeResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6961FFB8-6358-4EDC-9E3C-4A0C56CE6***</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
