@@ -317,6 +317,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public List<string> VSwitchId { get; set; }
 
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public List<string> ZoneId { get; set; }
+
     }
 
 }
