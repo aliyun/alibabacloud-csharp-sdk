@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string CenName { get; set; }
 
+            [NameInMap("CloudFirewallVpcOrderType")]
+            [Validation(Required=false)]
+            public string CloudFirewallVpcOrderType { get; set; }
+
             /// <summary>
             /// <para>The instance ID of the VPC firewall.</para>
             /// 
@@ -185,6 +189,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 [Validation(Required=false)]
                 public int? Count { get; set; }
 
+                [NameInMap("EcrList")]
+                [Validation(Required=false)]
+                public List<string> EcrList { get; set; }
+
                 /// <summary>
                 /// <para>The protected peer transit routers.</para>
                 /// </summary>
@@ -293,6 +301,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public int? Count { get; set; }
+
+                [NameInMap("EcrList")]
+                [Validation(Required=false)]
+                public List<string> EcrList { get; set; }
 
                 /// <summary>
                 /// <para>The unprotected peer transit routers.</para>

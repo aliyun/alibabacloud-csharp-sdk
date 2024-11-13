@@ -1,3 +1,18 @@
+2024-11-13 Version: 3.3.0
+- Support API DescribeAssetStatistic.
+- Update API AddControlPolicy: update param ApplicationNameList.
+- Update API CreateNatFirewallControlPolicy: update param ApplicationNameList.
+- Update API CreateVpcFirewallControlPolicy: update param ApplicationNameList.
+- Update API DescribeAssetList: add param OutStatistic.
+- Update API DescribeAssetList: add param SensitiveStatus.
+- Update API DescribeAssetList: update response param.
+- Update API DescribeRiskEventPayload: update response param.
+- Update API DescribeTrFirewallsV2List: update response param.
+- Update API ModifyControlPolicy: update param ApplicationNameList.
+- Update API ModifyNatFirewallControlPolicy: update param ApplicationNameList.
+- Update API ModifyVpcFirewallControlPolicy: update param ApplicationNameList.
+
+
 2024-10-16 Version: 3.2.1
 - Update API DescribeRiskEventPayload: update response param.
 

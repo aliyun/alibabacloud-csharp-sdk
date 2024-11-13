@@ -55,8 +55,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// <para>The number of entries per page.</para>
-        /// <para>Default value: 10. </para>
-        /// <para> Maximum value: 50.</para>
+        /// <para>Default value: <b>10</b>.**** Maximum value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

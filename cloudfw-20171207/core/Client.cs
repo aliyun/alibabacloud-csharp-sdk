@@ -5392,6 +5392,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["NewResourceTag"] = request.NewResourceTag;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutStatistic))
+            {
+                query["OutStatistic"] = request.OutStatistic;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
@@ -5407,6 +5411,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchItem))
             {
                 query["SearchItem"] = request.SearchItem;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveStatus))
+            {
+                query["SensitiveStatus"] = request.SensitiveStatus;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SgStatus))
             {
@@ -5489,6 +5497,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["NewResourceTag"] = request.NewResourceTag;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutStatistic))
+            {
+                query["OutStatistic"] = request.OutStatistic;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
@@ -5504,6 +5516,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchItem))
             {
                 query["SearchItem"] = request.SearchItem;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveStatus))
+            {
+                query["SensitiveStatus"] = request.SensitiveStatus;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SgStatus))
             {
@@ -5732,6 +5748,142 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAssetRiskListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取资产统计信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAssetStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAssetStatisticResponse
+        /// </returns>
+        public DescribeAssetStatisticResponse DescribeAssetStatisticWithOptions(DescribeAssetStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAssetStatistic",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAssetStatisticResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取资产统计信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAssetStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAssetStatisticResponse
+        /// </returns>
+        public async Task<DescribeAssetStatisticResponse> DescribeAssetStatisticWithOptionsAsync(DescribeAssetStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAssetStatistic",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAssetStatisticResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取资产统计信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAssetStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAssetStatisticResponse
+        /// </returns>
+        public DescribeAssetStatisticResponse DescribeAssetStatistic(DescribeAssetStatisticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAssetStatisticWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取资产统计信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAssetStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAssetStatisticResponse
+        /// </returns>
+        public async Task<DescribeAssetStatisticResponse> DescribeAssetStatisticAsync(DescribeAssetStatisticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAssetStatisticWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -18211,9 +18363,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.</para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// <para>You can call this operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18276,9 +18428,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.</para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// <para>You can call this operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18341,9 +18493,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.</para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// <para>You can call this operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18366,9 +18518,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.</para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// <para>You can call this operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">

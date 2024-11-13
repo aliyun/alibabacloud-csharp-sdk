@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string NewResourceTag { get; set; }
 
+        [NameInMap("OutStatistic")]
+        [Validation(Required=false)]
+        public string OutStatistic { get; set; }
+
         /// <summary>
         /// <para>The number of entries per page. Valid values: 1 to 50.</para>
         /// <para>This parameter is required.</para>
@@ -129,6 +133,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("SearchItem")]
         [Validation(Required=false)]
         public string SearchItem { get; set; }
+
+        [NameInMap("SensitiveStatus")]
+        [Validation(Required=false)]
+        public string SensitiveStatus { get; set; }
 
         /// <summary>
         /// <para>The status of the security group policy. Valid values:</para>

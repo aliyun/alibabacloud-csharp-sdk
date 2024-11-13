@@ -94,6 +94,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public int? IpVersion { get; set; }
 
+            [NameInMap("Last7DayOutTrafficBytes")]
+            [Validation(Required=false)]
+            public long? Last7DayOutTrafficBytes { get; set; }
+
             /// <summary>
             /// <para>The UID of the member.</para>
             /// 
@@ -233,6 +237,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("RiskLevel")]
             [Validation(Required=false)]
             public string RiskLevel { get; set; }
+
+            [NameInMap("SensitiveDataStatus")]
+            [Validation(Required=false)]
+            public string SensitiveDataStatus { get; set; }
 
             /// <summary>
             /// <para>The status of the security group policy. Valid values:</para>
