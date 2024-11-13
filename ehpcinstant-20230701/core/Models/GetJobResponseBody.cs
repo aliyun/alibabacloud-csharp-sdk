@@ -47,6 +47,20 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 
                 }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public List<GetJobResponseBodyJobInfoDeploymentPolicyTags> Tags { get; set; }
+                public class GetJobResponseBodyJobInfoDeploymentPolicyTags : TeaModel {
+                    [NameInMap("TagKey")]
+                    [Validation(Required=false)]
+                    public string TagKey { get; set; }
+
+                    [NameInMap("TagValue")]
+                    [Validation(Required=false)]
+                    public string TagValue { get; set; }
+
+                }
+
             }
 
             /// <summary>
