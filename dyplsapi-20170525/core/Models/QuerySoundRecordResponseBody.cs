@@ -27,15 +27,21 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>通话录音url路径，最大长度1000，有效期1小时</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para><a href="http://www.***.com/temepl/a.mp3">http://www.***.com/temepl/a.mp3</a></para>
-        /// </summary>
-        [NameInMap("FileUrl")]
+        [NameInMap("Data")]
         [Validation(Required=false)]
-        public string FileUrl { get; set; }
+        public QuerySoundRecordResponseBodyData Data { get; set; }
+        public class QuerySoundRecordResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>通话录音url路径，最大长度1000，有效期1小时</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://www.oss.com/temepl/a.mp3">http://www.oss.com/temepl/a.mp3</a></para>
+            /// </summary>
+            [NameInMap("FileUrl")]
+            [Validation(Required=false)]
+            public string FileUrl { get; set; }
+
+        }
 
         /// <summary>
         /// <para>返回信息</para>

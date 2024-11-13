@@ -18,16 +18,6 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>绑定关系ID</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>476567566</para>
-        /// </summary>
-        [NameInMap("BindId")]
-        [Validation(Required=false)]
-        public string BindId { get; set; }
-
-        /// <summary>
         /// <para>返回状态码 0000表示成功 其他表示失败</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +26,22 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public BindAXBCallResponseBodyData Data { get; set; }
+        public class BindAXBCallResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>绑定关系ID</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>476567566</para>
+            /// </summary>
+            [NameInMap("BindId")]
+            [Validation(Required=false)]
+            public string BindId { get; set; }
+
+        }
 
         /// <summary>
         /// <para>返回信息</para>

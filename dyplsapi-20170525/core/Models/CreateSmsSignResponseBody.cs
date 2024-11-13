@@ -18,16 +18,6 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>短信接收者号码签名串(加到短信内容中供解析真实被叫号码)</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>sign*****466</para>
-        /// </summary>
-        [NameInMap("CalledNoSign")]
-        [Validation(Required=false)]
-        public string CalledNoSign { get; set; }
-
-        /// <summary>
         /// <para>返回状态码 0000表示成功 其他表示失败</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +26,22 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public CreateSmsSignResponseBodyData Data { get; set; }
+        public class CreateSmsSignResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>短信接收者号码签名串(加到短信内容中供解析真实被叫号码)</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sign23343466</para>
+            /// </summary>
+            [NameInMap("CalledNoSign")]
+            [Validation(Required=false)]
+            public string CalledNoSign { get; set; }
+
+        }
 
         /// <summary>
         /// <para>返回信息</para>
