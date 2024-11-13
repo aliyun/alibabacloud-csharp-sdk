@@ -37,9 +37,17 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [Validation(Required=false)]
         public string MainActivity { get; set; }
 
+        [NameInMap("oppoCategory")]
+        [Validation(Required=false)]
+        public string OppoCategory { get; set; }
+
         [NameInMap("oppoChannelId")]
         [Validation(Required=false)]
         public string OppoChannelId { get; set; }
+
+        [NameInMap("oppoNotifyLevel")]
+        [Validation(Required=false)]
+        public string OppoNotifyLevel { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
