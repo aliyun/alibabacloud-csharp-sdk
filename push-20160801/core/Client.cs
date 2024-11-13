@@ -1739,6 +1739,14 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["AndroidMessageHuaweiUrgency"] = request.AndroidMessageHuaweiUrgency;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidMessageOppoCategory))
+            {
+                query["AndroidMessageOppoCategory"] = request.AndroidMessageOppoCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidMessageOppoNotifyLevel))
+            {
+                query["AndroidMessageOppoNotifyLevel"] = request.AndroidMessageOppoNotifyLevel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidMessageVivoCategory))
             {
                 query["AndroidMessageVivoCategory"] = request.AndroidMessageVivoCategory;
@@ -2160,6 +2168,14 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidMessageHuaweiUrgency))
             {
                 query["AndroidMessageHuaweiUrgency"] = request.AndroidMessageHuaweiUrgency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidMessageOppoCategory))
+            {
+                query["AndroidMessageOppoCategory"] = request.AndroidMessageOppoCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidMessageOppoNotifyLevel))
+            {
+                query["AndroidMessageOppoNotifyLevel"] = request.AndroidMessageOppoNotifyLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidMessageVivoCategory))
             {

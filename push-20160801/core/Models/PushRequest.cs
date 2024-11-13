@@ -101,6 +101,14 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Validation(Required=false)]
         public string AndroidMessageHuaweiUrgency { get; set; }
 
+        [NameInMap("AndroidMessageOppoCategory")]
+        [Validation(Required=false)]
+        public string AndroidMessageOppoCategory { get; set; }
+
+        [NameInMap("AndroidMessageOppoNotifyLevel")]
+        [Validation(Required=false)]
+        public int? AndroidMessageOppoNotifyLevel { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>TODO</para>
