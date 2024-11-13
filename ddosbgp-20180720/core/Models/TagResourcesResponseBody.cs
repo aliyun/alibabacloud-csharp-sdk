@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class TagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7078CD1E-F609-47A4-9C39-B288CC27C686</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DettachAssetGroupToInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E54BA258-9DE8-59BE-B7A8-DAD28E6E8DAF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

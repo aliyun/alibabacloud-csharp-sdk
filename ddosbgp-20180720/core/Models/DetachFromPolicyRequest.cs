@@ -10,35 +10,43 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DetachFromPolicyRequest : TeaModel {
         /// <summary>
-        /// The protected objects.
-        /// 
-        /// This parameter is required.
+        /// <para>The protected objects.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IpPortProtocolList")]
         [Validation(Required=false)]
         public List<DetachFromPolicyRequestIpPortProtocolList> IpPortProtocolList { get; set; }
         public class DetachFromPolicyRequestIpPortProtocolList : TeaModel {
             /// <summary>
-            /// The IP address of the protected object.
+            /// <para>The IP address of the protected object.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>47.118.172.***</para>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
             /// <summary>
-            /// The port of the protected object.
+            /// <para>The port of the protected object.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8*</para>
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public int? Port { get; set; }
 
             /// <summary>
-            /// The protocol type of the protected object. Valid values:
+            /// <para>The protocol type of the protected object. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>tcp</b></description></item>
+            /// <item><description><b>udp</b></description></item>
+            /// </list>
             /// 
-            /// *   **tcp**
-            /// *   **udp**
+            /// <b>Example:</b>
+            /// <para>tcp</para>
             /// </summary>
             [NameInMap("Protocol")]
             [Validation(Required=false)]
@@ -47,13 +55,16 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// The type of the policy. Valid values:
+        /// <para>The type of the policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>default</b>: the default mitigation policies.</description></item>
+        /// <item><description><b>l3</b>: IP-specific mitigation policies.</description></item>
+        /// <item><description><b>l4</b>: port-specific mitigation policies.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **default**: the default mitigation policies.
-        /// *   **l3**: IP-specific mitigation policies.
-        /// *   **l4**: port-specific mitigation policies.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>l3</para>
         /// </summary>
         [NameInMap("PolicyType")]
         [Validation(Required=false)]

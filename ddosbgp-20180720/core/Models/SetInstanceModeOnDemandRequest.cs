@@ -10,32 +10,42 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class SetInstanceModeOnDemandRequest : TeaModel {
         /// <summary>
-        /// The IDs of on-demand instances.
+        /// <para>The IDs of on-demand instances.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/152120.html">DescribeOnDemandInstance</a> operation to query the IDs of all on-demand instances.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeOnDemandInstance](https://help.aliyun.com/document_detail/152120.html) operation to query the IDs of all on-demand instances.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ddosbgp-cn-z2q1qzxb****</para>
         /// </summary>
         [NameInMap("InstanceIdList")]
         [Validation(Required=false)]
         public List<string> InstanceIdList { get; set; }
 
         /// <summary>
-        /// Specifies the scheduling mode for on-demand instances. Valid values:
+        /// <para>Specifies the scheduling mode for on-demand instances. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>manual</b>: manual scheduling</description></item>
+        /// <item><description><b>netflow-auto</b>: automatic scheduling</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **manual**: manual scheduling
-        /// *   **netflow-auto**: automatic scheduling
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>netflow-auto</para>
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
 
         /// <summary>
-        /// The region ID of the on-demand instance.
+        /// <para>The region ID of the on-demand instance.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query all regions that are supported by Anti-DDoS Origin.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query all regions that are supported by Anti-DDoS Origin.
+        /// <b>Example:</b>
+        /// <para>cn-zhangjiakou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

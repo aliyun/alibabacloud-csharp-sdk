@@ -10,54 +10,73 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeDdosEventResponseBody : TeaModel {
         /// <summary>
-        /// The details about the DDoS attack event.
+        /// <para>The details about the DDoS attack event.</para>
         /// </summary>
         [NameInMap("Events")]
         [Validation(Required=false)]
         public List<DescribeDdosEventResponseBodyEvents> Events { get; set; }
         public class DescribeDdosEventResponseBodyEvents : TeaModel {
             /// <summary>
-            /// The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.
+            /// <para>The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1637554335</para>
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public int? EndTime { get; set; }
 
             /// <summary>
-            /// The attacked IP address.
+            /// <para>The attacked IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>47.89.XX.XX</para>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
             /// <summary>
-            /// The volume of the request traffic at the start of the DDoS attack. Unit: Mbit/s.
+            /// <para>The volume of the request traffic at the start of the DDoS attack. Unit: Mbit/s.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Mbps")]
             [Validation(Required=false)]
             public int? Mbps { get; set; }
 
             /// <summary>
-            /// The number of packets at the start of the DDoS attack. Unit: packets per second (PPS).
+            /// <para>The number of packets at the start of the DDoS attack. Unit: packets per second (PPS).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>456</para>
             /// </summary>
             [NameInMap("Pps")]
             [Validation(Required=false)]
             public int? Pps { get; set; }
 
             /// <summary>
-            /// The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.
+            /// <para>The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1637554034</para>
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public int? StartTime { get; set; }
 
             /// <summary>
-            /// The status of the DDoS attack event. Valid values:
+            /// <para>The status of the DDoS attack event. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>hole_begin</b>: indicates that blackhole filtering is triggered for the attacked IP address.</description></item>
+            /// <item><description><b>hole_end</b>: indicates that blackhole filtering is deactivated for the attacked IP address.</description></item>
+            /// <item><description><b>defense_begin</b>: indicates that attack traffic is being scrubbed.</description></item>
+            /// <item><description><b>defense_end</b>: indicates that attack traffic is scrubbed.</description></item>
+            /// </list>
             /// 
-            /// *   **hole_begin**: indicates that blackhole filtering is triggered for the attacked IP address.
-            /// *   **hole_end**: indicates that blackhole filtering is deactivated for the attacked IP address.
-            /// *   **defense_begin**: indicates that attack traffic is being scrubbed.
-            /// *   **defense_end**: indicates that attack traffic is scrubbed.
+            /// <b>Example:</b>
+            /// <para>defense_end</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -66,14 +85,20 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F3B6C3F9-6B21-519D-B976-A1E14166F909</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of DDoS attack events that are returned.
+        /// <para>The total number of DDoS attack events that are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

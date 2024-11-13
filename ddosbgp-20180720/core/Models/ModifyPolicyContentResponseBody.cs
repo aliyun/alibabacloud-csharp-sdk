@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ModifyPolicyContentResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3777EF25-940B-51F4-BB1D-99B5********</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

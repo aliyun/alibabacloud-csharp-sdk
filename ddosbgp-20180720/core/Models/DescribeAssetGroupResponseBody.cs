@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeAssetGroupResponseBody : TeaModel {
         /// <summary>
-        /// The information about the asset.
+        /// <para>The information about the asset.</para>
         /// </summary>
         [NameInMap("AssetGroupList")]
         [Validation(Required=false)]
         public List<DescribeAssetGroupResponseBodyAssetGroupList> AssetGroupList { get; set; }
         public class DescribeAssetGroupResponseBodyAssetGroupList : TeaModel {
             /// <summary>
-            /// The ID of the asset.
+            /// <para>The ID of the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>waf_v2_public_cn-lbj382l****</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The region to which the asset belongs.
+            /// <para>The region to which the asset belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
             /// <summary>
-            /// The type of the asset.
+            /// <para>The type of the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>waf</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -40,14 +49,20 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>487EC0F7-8D14-504E-914E-3A1BC314B581</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

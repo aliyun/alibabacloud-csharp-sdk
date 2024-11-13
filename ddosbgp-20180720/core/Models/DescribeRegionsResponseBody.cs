@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The information about regions of the cloud assets that are supported by the Anti-DDoS Origin instance. The information includes region IDs and names.
+        /// <para>The information about the regions of cloud assets that can be protected by Anti-DDoS Origin. The information includes region IDs and names.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// The English name of the region where the cloud assets reside.
+            /// <para>The English name of the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>China (Hangzhou)</para>
             /// </summary>
             [NameInMap("RegionEnName")]
             [Validation(Required=false)]
             public string RegionEnName { get; set; }
 
             /// <summary>
-            /// The ID of the region.
+            /// <para>The ID of the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The name of the region where the cloud assets reside.
+            /// <para>The Chinese name of the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>华东1（杭州）</para>
             /// </summary>
             [NameInMap("RegionName")]
             [Validation(Required=false)]
@@ -47,17 +59,24 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F7CA8B4E-FB15-4336-A351-8DC29D66EA82</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**: The request is successful.
-        /// *   **false**: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The region ID to query. The default value is **cn-hangzhou**, which indicates that the regions of cloud assets that are supported by an Anti-DDoS Origin instance in the China (Hangzhou) region are queried.
+        /// <para>The ID of the region. The default value is <b>cn-hangzhou</b>. If the default value is used, the regions of cloud assets that can be protected by Anti-DDoS Origin in the China (Hangzhou) region are queried.</para>
+        /// <para>If you want to specify another value for <b>RegionId</b>, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and Zones</a>.</para>
         /// 
-        /// For more information about the IDs of other regions, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+        /// <para>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin instance belongs to the default resource group.</para>
+        /// <para>For information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</para>
         /// 
-        /// For more information about resource groups, see [Create a resource group](https://help.aliyun.com/document_detail/94485.html).
+        /// <b>Example:</b>
+        /// <para>rg-acfm2pz25js****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

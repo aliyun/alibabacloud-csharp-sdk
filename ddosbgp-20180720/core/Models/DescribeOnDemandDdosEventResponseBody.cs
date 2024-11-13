@@ -10,54 +10,73 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeOnDemandDdosEventResponseBody : TeaModel {
         /// <summary>
-        /// The details about the DDoS attack event.
+        /// <para>The details about the DDoS attack event.</para>
         /// </summary>
         [NameInMap("Events")]
         [Validation(Required=false)]
         public List<DescribeOnDemandDdosEventResponseBodyEvents> Events { get; set; }
         public class DescribeOnDemandDdosEventResponseBodyEvents : TeaModel {
             /// <summary>
-            /// The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.
+            /// <para>The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1557891306</para>
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public int? EndTime { get; set; }
 
             /// <summary>
-            /// The attacked IP address.
+            /// <para>The attacked IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.XX.XX.1</para>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
             /// <summary>
-            /// The attack traffic. Unit: Mbit/s.
+            /// <para>The attack traffic. Unit: Mbit/s.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>110000</para>
             /// </summary>
             [NameInMap("Mbps")]
             [Validation(Required=false)]
             public int? Mbps { get; set; }
 
             /// <summary>
-            /// The packet forwarding rate of the DDoS attack. Unit: packets per second (PPS).
+            /// <para>The packet forwarding rate of the DDoS attack. Unit: packets per second (PPS).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Pps")]
             [Validation(Required=false)]
             public int? Pps { get; set; }
 
             /// <summary>
-            /// The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.
+            /// <para>The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1557889506</para>
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public int? StartTime { get; set; }
 
             /// <summary>
-            /// The status of the DDoS attack event. Valid values:
+            /// <para>The status of the DDoS attack event. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>hole_begin</b>: indicates that blackhole filtering is triggered.</description></item>
+            /// <item><description><b>hole_end</b>: indicates that tblackhole filtering is deactivated.</description></item>
+            /// <item><description><b>defense_begin</b>: indicates that traffic scrubbing is in progress.</description></item>
+            /// <item><description><b>defense_end</b>: indicates that traffic scrubbing is complete.</description></item>
+            /// </list>
             /// 
-            /// *   **hole_begin**: indicates that blackhole filtering is triggered.
-            /// *   **hole_end**: indicates that tblackhole filtering is deactivated.
-            /// *   **defense_begin**: indicates that traffic scrubbing is in progress.
-            /// *   **defense_end**: indicates that traffic scrubbing is complete.
+            /// <b>Example:</b>
+            /// <para>defense_end</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -66,14 +85,20 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6A507DC8-F657-4C13-84E2-D1D1B9400753</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of DDoS attack events that are returned.
+        /// <para>The total number of DDoS attack events that are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

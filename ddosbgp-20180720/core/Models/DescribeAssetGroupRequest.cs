@@ -10,37 +10,49 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeAssetGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the asset. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.
+        /// <para>The ID of the asset. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>waf_v2_public_cn-lbj382l****</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The region ID of the asset.
+        /// <para>The region ID of the asset.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the instance resides.
+        /// <para>The ID of the region in which the instance resides.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The type of the asset. Valid values:
+        /// <para>The type of the asset. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>waf</b>: WAF instance</description></item>
+        /// <item><description><b>ga</b>: Global Accelerator (GA) instance</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **waf**: WAF instance
-        /// *   **ga**: Global Accelerator (GA) instance
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>waf</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

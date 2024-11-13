@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DeletePolicyResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BD06F539-2FBE-450D-9391-7EFF7871****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

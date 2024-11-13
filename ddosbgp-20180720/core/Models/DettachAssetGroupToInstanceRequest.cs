@@ -10,39 +10,45 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DettachAssetGroupToInstanceRequest : TeaModel {
         /// <summary>
-        /// The information about the asset that you want to dissociate.
-        /// 
-        /// This parameter is required.
+        /// <para>The information about the asset that you want to dissociate.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AssetGroupList")]
         [Validation(Required=false)]
         public List<DettachAssetGroupToInstanceRequestAssetGroupList> AssetGroupList { get; set; }
         public class DettachAssetGroupToInstanceRequestAssetGroupList : TeaModel {
             /// <summary>
-            /// The ID of the asset. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.
+            /// <para>The ID of the asset. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>waf_v2_public_cn-lbj382l****</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The region ID of the asset.
+            /// <para>The region ID of the asset.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
             /// <summary>
-            /// The type of the asset. Valid values:
+            /// <para>The type of the asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>waf</b>: WAF instance</description></item>
+            /// <item><description><b>ga</b>: Global Accelerator (GA) instance</description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   **waf**: WAF instance
-            /// *   **ga**: Global Accelerator (GA) instance
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>waf</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -51,20 +57,27 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeInstanceList](https://help.aliyun.com/document_detail/118698.html) operation to query the IDs of all Anti-DDoS Origin instances of paid editions.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ddosbgp-xxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the instance resides.
+        /// <para>The ID of the region in which the instance resides.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

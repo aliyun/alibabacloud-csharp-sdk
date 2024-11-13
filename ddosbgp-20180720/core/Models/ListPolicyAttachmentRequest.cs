@@ -10,33 +10,42 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ListPolicyAttachmentRequest : TeaModel {
         /// <summary>
-        /// The protected objects.
+        /// <para>The protected objects.</para>
         /// </summary>
         [NameInMap("IpPortProtocolList")]
         [Validation(Required=false)]
         public List<ListPolicyAttachmentRequestIpPortProtocolList> IpPortProtocolList { get; set; }
         public class ListPolicyAttachmentRequestIpPortProtocolList : TeaModel {
             /// <summary>
-            /// The IP address of the protected object.
+            /// <para>The IP address of the protected object.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>47.118.172.***</para>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
             /// <summary>
-            /// The port number of the protected object.
+            /// <para>The port number of the protected object.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8*</para>
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public int? Port { get; set; }
 
             /// <summary>
-            /// The protocol type of the protected object. Valid values:
+            /// <para>The protocol type of the protected object. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>tcp</b></description></item>
+            /// <item><description><b>udp</b></description></item>
+            /// </list>
             /// 
-            /// *   **tcp**
-            /// *   **udp**
+            /// <b>Example:</b>
+            /// <para>tcp</para>
             /// </summary>
             [NameInMap("Protocol")]
             [Validation(Required=false)]
@@ -45,32 +54,45 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: **10**.
+        /// <para>The number of entries per page. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the policy.
+        /// <para>The ID of the policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>f38f6520-92b7-451e-b520-9ab3********</para>
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// The type of the policy. Valid values:
+        /// <para>The type of the policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>default</b>: the default mitigation policies.</description></item>
+        /// <item><description><b>l3</b>: IP-specific mitigation policies.</description></item>
+        /// <item><description><b>l4</b>: port-specific mitigation policies.</description></item>
+        /// </list>
         /// 
-        /// *   **default**: the default mitigation policies.
-        /// *   **l3**: IP-specific mitigation policies.
-        /// *   **l4**: port-specific mitigation policies.
+        /// <b>Example:</b>
+        /// <para>l3</para>
         /// </summary>
         [NameInMap("PolicyType")]
         [Validation(Required=false)]

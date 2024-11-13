@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DetachFromPolicyResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1B0F7EC6-51D7-4D70-B0EC-CD8A9E99****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

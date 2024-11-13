@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DeleteRdMemberListRequest : TeaModel {
         /// <summary>
-        /// The list of the members.
-        /// 
-        /// This parameter is required.
+        /// <para>The list of the members.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MemberList")]
         [Validation(Required=false)]
         public List<DeleteRdMemberListRequestMemberList> MemberList { get; set; }
         public class DeleteRdMemberListRequestMemberList : TeaModel {
             /// <summary>
-            /// The Alibaba Cloud account ID of the member.
+            /// <para>The Alibaba Cloud account ID of the member.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>136548010379****</para>
             /// </summary>
             [NameInMap("Uid")]
             [Validation(Required=false)]
