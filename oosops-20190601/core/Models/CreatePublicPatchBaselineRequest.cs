@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Oosops20190601.Models
 {
     public class CreatePublicPatchBaselineRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ApprovalRules")]
         [Validation(Required=false)]
         public string ApprovalRules { get; set; }
@@ -21,10 +24,16 @@ namespace AlibabaCloud.SDK.Oosops20190601.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("OperationSystem")]
         [Validation(Required=false)]
         public string OperationSystem { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Oosops20190601.Models
 {
     public class ListUserInventoryEntriesRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("AliUid")]
         [Validation(Required=false)]
         public string AliUid { get; set; }
@@ -31,6 +34,9 @@ namespace AlibabaCloud.SDK.Oosops20190601.Models
 
         }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -47,6 +53,9 @@ namespace AlibabaCloud.SDK.Oosops20190601.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("TypeName")]
         [Validation(Required=false)]
         public string TypeName { get; set; }

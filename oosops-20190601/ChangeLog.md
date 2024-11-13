@@ -1,3 +1,10 @@
+2024-11-13 Version: 1.0.3
+- Update API CreatePublicTemplate: add param IsExample.
+- Update API CreatePublicTemplate: add param VersionName.
+- Update API ListPublicTemplates: add param IsExample.
+- Update API UpdatePublicTemplate: add param VersionName.
+
+
 2024-01-15 Version: 1.0.2
 - Generated csharp 2019-06-01 for oosops.
 

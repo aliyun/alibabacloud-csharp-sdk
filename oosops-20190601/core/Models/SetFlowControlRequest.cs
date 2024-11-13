@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Oosops20190601.Models
         [Validation(Required=false)]
         public string Service { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public int? Type { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Oosops20190601.Models
         [Validation(Required=false)]
         public string Uid { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]
         public int? Value { get; set; }

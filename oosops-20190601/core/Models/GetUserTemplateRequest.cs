@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Oosops20190601.Models
 {
     public class GetUserTemplateRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("AliUid")]
         [Validation(Required=false)]
         public string AliUid { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Oosops20190601.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }

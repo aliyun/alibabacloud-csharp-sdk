@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Oosops20190601.Models
 {
     public class SetQuotaRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("QuotaName")]
         [Validation(Required=false)]
         public string QuotaName { get; set; }
@@ -17,10 +20,16 @@ namespace AlibabaCloud.SDK.Oosops20190601.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Uid")]
         [Validation(Required=false)]
         public string Uid { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]
         public string Value { get; set; }

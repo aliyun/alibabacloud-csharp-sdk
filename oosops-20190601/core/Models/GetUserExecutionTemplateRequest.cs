@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Oosops20190601.Models
 {
     public class GetUserExecutionTemplateRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("AliUid")]
         [Validation(Required=false)]
         public string AliUid { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ExecutionId")]
         [Validation(Required=false)]
         public string ExecutionId { get; set; }

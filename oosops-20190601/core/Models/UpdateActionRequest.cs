@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Oosops20190601.Models
 {
     public class UpdateActionRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ActionName")]
         [Validation(Required=false)]
         public string ActionName { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ActionType")]
         [Validation(Required=false)]
         public string ActionType { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }

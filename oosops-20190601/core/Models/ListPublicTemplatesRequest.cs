@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Oosops20190601.Models
         [Validation(Required=false)]
         public string CreatedDateBefore { get; set; }
 
+        [NameInMap("IsExample")]
+        [Validation(Required=false)]
+        public bool? IsExample { get; set; }
+
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
