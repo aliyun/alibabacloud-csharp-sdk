@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup vault.</para>
+        /// <para>The ID of the backup vault. This parameter is required if the SourceType parameter is not set to UDM_ECS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v-*********************</para>

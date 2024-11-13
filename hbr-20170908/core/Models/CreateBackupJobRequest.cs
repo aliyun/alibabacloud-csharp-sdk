@@ -88,6 +88,36 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public long? CrossAccountUserId { get; set; }
 
         /// <summary>
+        /// <para>The details about ECS instance backup. The value is a JSON string.</para>
+        /// <list type="bullet">
+        /// <item><description><para>doCopy: specifies whether to enable remote replication.</para>
+        /// </description></item>
+        /// <item><description><para>destinationRegionId: the destination region for remote replication.</para>
+        /// </description></item>
+        /// <item><description><para>destinationRetention: the retention period of the backup point for remote replication.</para>
+        /// </description></item>
+        /// <item><description><para>diskIdList: the IDs of the disks that are to be backed up. If this parameter is left empty, all disks are backed up.</para>
+        /// </description></item>
+        /// <item><description><para>snapshotGroup: specifies whether to use a snapshot-consistent group. This parameter is valid only if all disks of the ECS instance are Enterprise SSDs (ESSDs).</para>
+        /// </description></item>
+        /// <item><description><para>appConsistent: specifies whether to use the application-consistent backup feature. This parameter must be used with the preScriptPath and postScriptPath parameters.</para>
+        /// </description></item>
+        /// <item><description><para>preScriptPath: the path to the pre-freeze scripts.</para>
+        /// </description></item>
+        /// <item><description><para>postScriptPath: the path to the post-thaw scripts.</para>
+        /// </description></item>
+        /// <item><description><para>enableWriters: This parameter is required only if you set the <b>AppConsistent</b> parameter to <b>true</b>. This parameter specifies whether to create application-consistent snapshots.</para>
+        /// <list type="bullet">
+        /// <item><description>true (default): creates application-consistent snapshots.</description></item>
+        /// <item><description>false: creates file system-consistent snapshots.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>enableFsFreeze: This parameter is required only if you set the <b>AppConsistent</b> parameter to <b>true</b>. This parameter specifies whether to enable Linux fsfreeze to put file systems into the read-only state before application-consistent snapshots are created. Default value: true.</para>
+        /// </description></item>
+        /// <item><description><para>timeoutSeconds: This parameter is required only if you set the <b>AppConsistent</b> parameter to <b>true</b>. This parameter specifies the I/O freeze timeout period. Default value: 30. Unit: seconds.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;doCopy&quot;: false,
@@ -138,7 +168,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? InitiatedByAck { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>UDM_ECS</b>. This parameter specifies the ID of the ECS instance.</para>
+        /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>UDM_ECS</b>. This parameter specifies the ID of the Elastic Compute Service (ECS) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp1xxxxxxxxxxxxxxysm</para>

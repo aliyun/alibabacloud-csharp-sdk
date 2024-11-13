@@ -19,10 +19,18 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>HBR_PRIVATE</para>
+        /// </summary>
         [NameInMap("EncryptType")]
         [Validation(Required=false)]
         public string EncryptType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>alias/test</para>
+        /// </summary>
         [NameInMap("KmsKeyId")]
         [Validation(Required=false)]
         public string KmsKeyId { get; set; }

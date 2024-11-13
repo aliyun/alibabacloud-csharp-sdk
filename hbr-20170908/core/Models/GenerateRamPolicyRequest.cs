@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class GenerateRamPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the policy that you want to generate. Valid values:</para>
+        /// <para>The type of policy that you want to generate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>custom: custom policy</description></item>
-        /// <item><description>system: system policy</description></item>
+        /// <item><description>BACKUP: the permission to back up data to a backup vault</description></item>
+        /// <item><description>RESTORE: the permission to restore data from a backup vault</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -29,6 +29,21 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string PolicyName { get; set; }
 
+        /// <summary>
+        /// <para>The policy type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>STANDARD</b>: the general backup policy. This type of policy applies to backups other than Elastic Compute Service (ECS) instance backup.</description></item>
+        /// <item><description><b>UDM_ECS_ONLY</b>: This type of policy applies only to ECS instance backup.</description></item>
+        /// </list>
+        /// <para>If the policy type is not specified, Cloud Backup automatically sets the policy type based on whether the backup vault is specified in the rules of the policy:</para>
+        /// <list type="bullet">
+        /// <item><description>If the backup vault is specified, Cloud Backup sets the policy type to <b>STANDARD</b>.</description></item>
+        /// <item><description>If the backup vault is not specified, Cloud Backup sets the policy type to <b>UDM_ECS_ONLY</b>.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>STANDARD</para>
+        /// </summary>
         [NameInMap("PolicyType")]
         [Validation(Required=false)]
         public string PolicyType { get; set; }
@@ -58,11 +73,19 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public List<string> DataSourceIds { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>UDM_ECS</para>
+                /// </summary>
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]
                 public string SourceType { get; set; }
 
             }
+
+            [NameInMap("Immutable")]
+            [Validation(Required=false)]
+            public bool? Immutable { get; set; }
 
             /// <summary>
             /// <para>Specifies whether to enable the feature of keeping at least one backup version. Valid values:</para>
@@ -112,6 +135,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 /// <summary>
                 /// <para>The type of the special retention rule. Valid values:</para>
                 /// <list type="bullet">
+                /// <item><description><b>DAILY</b>: retains daily backups</description></item>
                 /// <item><description><b>WEEKLY</b>: retains weekly backups</description></item>
                 /// <item><description><b>MONTHLY</b>: retains monthly backups</description></item>
                 /// <item><description><b>YEARLY</b>: retains yearly backups</description></item>
@@ -180,20 +204,36 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public List<CreatePolicyV2RequestRulesTagFilters> TagFilters { get; set; }
             public class CreatePolicyV2RequestRulesTagFilters : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>env</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>EQUAL</para>
+                /// </summary>
                 [NameInMap("Operator")]
                 [Validation(Required=false)]
                 public string Operator { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>prod</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>v-0001************aseg</para>
+            /// </summary>
             [NameInMap("VaultId")]
             [Validation(Required=false)]
             public string VaultId { get; set; }

@@ -107,6 +107,16 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public string PolicyName { get; set; }
 
+            /// <summary>
+            /// <para>The policy type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>STANDARD</b>: the general backup policy. This type of policy applies to backups other than Elastic Compute Service (ECS) instance backup.</description></item>
+            /// <item><description><b>UDM_ECS_ONLY</b>: the ECS instance backup policy. This type of policy applies only to ECS instance backup.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>STANDARD</para>
+            /// </summary>
             [NameInMap("PolicyType")]
             [Validation(Required=false)]
             public string PolicyType { get; set; }
@@ -146,11 +156,19 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     [Validation(Required=false)]
                     public List<string> DataSourceIds { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>UDM_ECS</para>
+                    /// </summary>
                     [NameInMap("SourceType")]
                     [Validation(Required=false)]
                     public string SourceType { get; set; }
 
                 }
+
+                [NameInMap("Immutable")]
+                [Validation(Required=false)]
+                public bool? Immutable { get; set; }
 
                 /// <summary>
                 /// <para>Indicates whether the feature of keeping at least one backup version is enabled. Valid values:</para>
@@ -277,14 +295,26 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public List<DescribePoliciesV2ResponseBodyPoliciesRulesTagFilters> TagFilters { get; set; }
                 public class DescribePoliciesV2ResponseBodyPoliciesRulesTagFilters : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>env</para>
+                    /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>EQUAL</para>
+                    /// </summary>
                     [NameInMap("Operator")]
                     [Validation(Required=false)]
                     public string Operator { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>prod</para>
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }

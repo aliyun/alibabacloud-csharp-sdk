@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public UpdatePolicyBindingRequestAdvancedOptionsOssDetail OssDetail { get; set; }
             public class UpdatePolicyBindingRequestAdvancedOptionsOssDetail : TeaModel {
+                [NameInMap("IgnoreArchiveObject")]
+                [Validation(Required=false)]
+                public bool? IgnoreArchiveObject { get; set; }
+
                 /// <summary>
                 /// <para>Specifies whether the system deletes the inventory lists after a backup is complete. This parameter is available only when OSS inventory lists are used. Valid values:</para>
                 /// <list type="bullet">

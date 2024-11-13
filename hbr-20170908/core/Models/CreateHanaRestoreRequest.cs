@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? SystemCopy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use a catalog backup to restore the database. This parameter is valid only if you set the Mode parameter to <b>RECOVERY_TO_SPECIFIC_BACKUP</b>. If you do not use a catalog backup, you must specify the prefix of a backup file. Then, HBR finds the backup file based on the specified prefix and restores the backup file.</para>
+        /// <para>Specifies whether to use a catalog backup to restore the database. This parameter is required only if you set the Mode parameter to <b>RECOVERY_TO_SPECIFIC_BACKUP</b>. If you turn off Use Catalog, you must specify the prefix of a backup file. Then, Cloud Backup finds the backup file based on the specified prefix and restores the backup file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

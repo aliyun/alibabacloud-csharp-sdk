@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <summary>
         /// <para>The proxy configuration on the data plane. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DISABLE</b>: No proxy is used.</description></item>
+        /// <item><description><b>DISABLE</b>: The proxy is not used.</description></item>
         /// <item><description><b>USE_CONTROL_PROXY</b> (default): The configuration is the same as that on the control plane.</description></item>
         /// <item><description><b>CUSTOM</b>: The configuration is customized (HTTP).</description></item>
         /// </list>

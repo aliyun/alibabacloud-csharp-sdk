@@ -114,6 +114,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     [Validation(Required=false)]
                     public int? Archive { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
                     [NameInMap("CommonFileSystem")]
                     [Validation(Required=false)]
                     public int? CommonFileSystem { get; set; }

@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string VaultRegionId { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the backup vault. Valid value: <b>STANDARD</b>, which indicates standard storage.</para>
+        /// <para>The storage class of the backup vault. Valid value: <b>STANDARD</b>, which indicates standard storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>STANDARD</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string VaultStorageClass { get; set; }
 
         /// <summary>
-        /// <para>The type of the backup vault. Valid value</para>
+        /// <para>The type of the backup vault. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>STANDARD</b>: standard backup vault</description></item>
         /// <item><description><b>OTS_BACKUP</b>: backup vault for Tablestore</description></item>

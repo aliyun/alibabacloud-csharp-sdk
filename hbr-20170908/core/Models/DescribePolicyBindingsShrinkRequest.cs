@@ -40,6 +40,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
+        /// <para>The number of results for each query.</para>
+        /// <para>Valid values: 10 to 100. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

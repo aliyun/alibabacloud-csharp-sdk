@@ -23,11 +23,16 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptions AdvancedOptions { get; set; }
             public class CreatePolicyBindingsRequestPolicyBindingListAdvancedOptions : TeaModel {
+                /// <summary>
+                /// <para>The advanced options for CPFS backup.</para>
+                /// </summary>
                 [NameInMap("CommonFileSystemDetail")]
                 [Validation(Required=false)]
                 public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsCommonFileSystemDetail CommonFileSystemDetail { get; set; }
                 public class CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsCommonFileSystemDetail : TeaModel {
                     /// <summary>
+                    /// <para>The size of backup shards (the number of files).</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>100000</para>
                     /// </summary>
@@ -36,6 +41,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public long? FetchSliceSize { get; set; }
 
                     /// <summary>
+                    /// <para>Specifies whether the system performs full backup if incremental backup fails. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>true</b>: The system performs full backup if incremental backup fails.</description></item>
+                    /// <item><description><b>false</b>: The system does not perform full backup if incremental backup fails.</description></item>
+                    /// </list>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -98,8 +109,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     /// <summary>
                     /// <para>Specifies whether to use an advanced policy. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>true</b></description></item>
-                    /// <item><description><b>false</b></description></item>
+                    /// <item><description><b>true</b>: uses the advanced policy.</description></item>
+                    /// <item><description><b>false</b>: does not use the advanced policy.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -112,8 +123,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     /// <summary>
                     /// <para>Specifies whether to enable the Volume Shadow Copy Service (VSS) feature. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>true</b></description></item>
-                    /// <item><description><b>false</b></description></item>
+                    /// <item><description><b>true</b>: enables the feature.</description></item>
+                    /// <item><description><b>false</b>: disables the feature.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -132,12 +143,16 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsOssDetail OssDetail { get; set; }
                 public class CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsOssDetail : TeaModel {
+                    [NameInMap("IgnoreArchiveObject")]
+                    [Validation(Required=false)]
+                    public bool? IgnoreArchiveObject { get; set; }
+
                     /// <summary>
                     /// <para>Specifies whether the system deletes the inventory lists when a backup is completed. This parameter is valid only when OSS inventories are used. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>NO_CLEANUP</b>: Inventory lists are not deleted.</description></item>
-                    /// <item><description><b>DELETE_CURRENT</b>: The current inventory list is deleted.</description></item>
-                    /// <item><description><b>DELETE_CURRENT_AND_PREVIOUS</b>: All inventory lists are deleted.</description></item>
+                    /// <item><description><b>NO_CLEANUP</b>: does not delete inventory lists.</description></item>
+                    /// <item><description><b>DELETE_CURRENT</b>: deletes the current inventory list.</description></item>
+                    /// <item><description><b>DELETE_CURRENT_AND_PREVIOUS</b>: deletes all inventory lists.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -181,7 +196,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public bool? AppConsistent { get; set; }
 
                     /// <summary>
-                    /// <para>The IDs of the disks that need to be protected. If all disks need to be protected, leave this parameter empty.</para>
+                    /// <para>The IDs of the disks that need to be protected. If all disks need to be protected, this parameter is empty.</para>
                     /// </summary>
                     [NameInMap("DiskIdList")]
                     [Validation(Required=false)]
@@ -240,7 +255,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public string PreScriptPath { get; set; }
 
                     /// <summary>
-                    /// <para>This parameter is required only if you set the <b>AppConsistent</b> parameter to <b>true</b>. This parameter specifies the name of the RAM role that is required to create application-consistent snapshots.</para>
+                    /// <para>This parameter is required only if you set the <b>AppConsistent</b> parameter to <b>true</b>. This parameter specifies the name of the Resource Access Management (RAM) role that is required to create application-consistent snapshots.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>AliyunECSInstanceForHbrRole</para>
@@ -250,7 +265,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public string RamRoleName { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to create a snapshot-consistent group. You can create a snapshot-consistent group only if all disks are enhanced SSDs (ESSDs).</para>
+                    /// <para>Specifies whether to create a snapshot-consistent group. You can create a snapshot-consistent group only if all disks are Enterprise SSDs (ESSDs).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -286,8 +301,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <summary>
             /// <para>Specifies whether to back up and restore data within the same Alibaba Cloud account or across Alibaba Cloud accounts. Default value: SELF_ACCOUNT. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>SELF_ACCOUNT</b>: Data is backed up within the same Alibaba Cloud account.</description></item>
-            /// <item><description><b>CROSS_ACCOUNT</b>: Data is backed up across Alibaba Cloud accounts.</description></item>
+            /// <item><description><b>SELF_ACCOUNT</b>: backs up data within the same Alibaba Cloud account.</description></item>
+            /// <item><description><b>CROSS_ACCOUNT</b>: backs up data across Alibaba Cloud accounts.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -308,7 +323,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? CrossAccountUserId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data source. The meaning of this parameter depends on the <b>SourceType</b> parameter.</para>
+            /// <para>The ID of the data source. The meaning of this parameter depends on the <b>SourceType</b> parameter. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>UDM_ECS</b>: the ID of the Elastic Compute Service (ECS) instance</description></item>
             /// <item><description><b>OSS</b>: the name of the Object Storage Service (OSS) bucket</description></item>
@@ -316,6 +331,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <item><description><b>COMMON_NAS</b>: the ID of the on-premises NAS file system</description></item>
             /// <item><description><b>ECS_FILE</b>: the ID of the ECS instance</description></item>
             /// <item><description><b>File</b>: the ID of the Cloud Backup client</description></item>
+            /// <item><description><b>COMMON_FILE_SYSTEM</b>: the ID of the Cloud Parallel File Storage (CPFS) backup data source</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -326,10 +342,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>策略对该数据源是否暂停生效。</para>
+            /// <para>Specifies whether to disable the backup policy for the data source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true：暂停</description></item>
-            /// <item><description>false：未暂停</description></item>
+            /// <item><description>true: disables the backup policy for the data source</description></item>
+            /// <item><description>false: enables the backup policy for the data source</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -340,7 +356,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string Disabled { get; set; }
 
             /// <summary>
-            /// <para>仅当<b>SourceType</b>取值为<b>ECS_FILE</b>或<b>File</b>时，需要配置该参数。表示不需要进行备份的文件类型，该类型的所有文件都不备份。最多支持255个字符。</para>
+            /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>ECS_FILE</b> or <b>File</b>. This parameter specifies the type of files that do not need to be backed up. No files of the specified type are backed up. The value can be up to 255 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</para>
@@ -350,7 +366,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string Exclude { get; set; }
 
             /// <summary>
-            /// <para>仅当<b>SourceType</b>取值为<b>ECS_FILE</b>或<b>File</b>时，需要配置该参数。表示要进行备份的文件类型，这些类型的所有文件都备份。最多支持255个字符。</para>
+            /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>ECS_FILE</b> or <b>File</b>. This parameter specifies the type of files to be backed up. All files of the specified type are backed up. The value can be up to 255 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</para>
@@ -370,7 +386,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string PolicyBindingDescription { get; set; }
 
             /// <summary>
-            /// <para>The prefix of the path to the folder that you want to back up. By default, the entire OSS bucket is backed up. This parameter is required only if you set the SourceType parameter to <b>OSS</b>.</para>
+            /// <list type="bullet">
+            /// <item><description>If the SourceType parameter is set to <b>OSS</b>, set the Source parameter to the prefix of the path to the folder that you want to back up. If you do not specify the Source parameter, the entire bucket (root directory) is backed up.</description></item>
+            /// <item><description>If the SourceType parameter is set to <b>ECS_FILE</b> or <b>File</b>, set the Source parameter to the path to the files that you want to back up. If you do not specify the Source parameter, all paths backed up.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>backup/</para>
@@ -384,10 +403,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <list type="bullet">
             /// <item><description><b>UDM_ECS</b>: ECS instance</description></item>
             /// <item><description><b>OSS</b>: OSS bucket</description></item>
-            /// <item><description><b>NAS</b>: Apsara File Storage NAS file system</description></item>
+            /// <item><description><b>NAS</b>: NAS file system</description></item>
             /// <item><description><b>COMMON_NAS</b>: on-premises NAS file system</description></item>
-            /// <item><description><b>ECS_FILE</b>: ECS files</description></item>
-            /// <item><description><b>File</b>: on-premises files</description></item>
+            /// <item><description><b>ECS_FILE</b>: ECS file</description></item>
+            /// <item><description><b>File</b>: on-premises file</description></item>
+            /// <item><description><b>COMMON_FILE_SYSTEM</b>: CPFS file system</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -398,11 +418,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>仅当<b>SourceType</b>取值为<b>ECS_FILE</b>或<b>File</b>时，需要配置该参数。表示备份流量控制。格式为<c>{start}{end}{bandwidth}</c>。多个流量控制配置使用分隔，并且配置时间不允许有重叠。</para>
+            /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>ECS_FILE</b> or <b>File</b>. This parameter specifies the throttling rules. Format: <c>{start}{end}{bandwidth}</c>. Separate multiple throttling rules with vertical bars (|). The time ranges of the throttling rules cannot overlap.</para>
             /// <list type="bullet">
-            /// <item><description><b>start</b>：起始小时。</description></item>
-            /// <item><description><b>end</b>：结束小时。</description></item>
-            /// <item><description><b>bandwidth</b>：限制速率，单位KB/s。</description></item>
+            /// <item><description><b>start</b>: the start hour.</description></item>
+            /// <item><description><b>end</b>: the end hour.</description></item>
+            /// <item><description><b>bandwidth</b>: the bandwidth. Unit: KB/s.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

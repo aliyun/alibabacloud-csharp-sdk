@@ -55,11 +55,16 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptions AdvancedOptions { get; set; }
             public class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptions : TeaModel {
+                /// <summary>
+                /// <para>The advanced options for large-scale file system backup.</para>
+                /// </summary>
                 [NameInMap("CommonFileSystemDetail")]
                 [Validation(Required=false)]
                 public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsCommonFileSystemDetail CommonFileSystemDetail { get; set; }
                 public class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsCommonFileSystemDetail : TeaModel {
                     /// <summary>
+                    /// <para>The size of backup shards (the number of files).</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>100000</para>
                     /// </summary>
@@ -68,6 +73,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public long? FetchSliceSize { get; set; }
 
                     /// <summary>
+                    /// <para>Specifies whether the system performs full backup if incremental backup fails. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>true</b>: The system performs full backup if incremental backup fails.</description></item>
+                    /// <item><description><b>false</b>: The system does not perform full backup if incremental backup fails.</description></item>
+                    /// </list>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -95,6 +106,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public string ClientId { get; set; }
 
                     /// <summary>
+                    /// <para>The ID of the client group.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>cl-000gkcofngi04j6k680a</para>
                     /// </summary>
@@ -172,6 +185,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsOssDetail OssDetail { get; set; }
                 public class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsOssDetail : TeaModel {
+                    [NameInMap("IgnoreArchiveObject")]
+                    [Validation(Required=false)]
+                    public bool? IgnoreArchiveObject { get; set; }
+
                     /// <summary>
                     /// <para>Indicates whether the system deletes the inventory lists when a backup is completed. This parameter is valid only when OSS inventories are used. Valid values:</para>
                     /// <list type="bullet">
@@ -323,6 +340,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("CreatedByTag")]
             [Validation(Required=false)]
             public bool? CreatedByTag { get; set; }
@@ -396,6 +417,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public bool? Disabled { get; set; }
 
             /// <summary>
+            /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>ECS_FILE</b> or <b>File</b>. This parameter specifies the type of files that do not need to be backed up. No files of the specified type are backed up. The value can be up to 255 characters in length.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</para>
             /// </summary>
@@ -407,14 +430,26 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public List<DescribePolicyBindingsResponseBodyPolicyBindingsHitTags> HitTags { get; set; }
             public class DescribePolicyBindingsResponseBodyPolicyBindingsHitTags : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>env</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>EQUAL</para>
+                /// </summary>
                 [NameInMap("Operator")]
                 [Validation(Required=false)]
                 public string Operator { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>prod</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -422,6 +457,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             }
 
             /// <summary>
+            /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>ECS_FILE</b> or <b>File</b>. This parameter specifies the type of files to be backed up. All files of the specified type are backed up. The value can be up to 255 characters in length.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</para>
             /// </summary>
@@ -460,6 +497,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string PolicyId { get; set; }
 
             /// <summary>
+            /// <list type="bullet">
+            /// <item><description>If the SourceType parameter is set to <b>OSS</b>, set the Source parameter to the prefix of the path to the folder that you want to back up. If you do not specify the Source parameter, the entire bucket (root directory) is backed up.</description></item>
+            /// <item><description>If the SourceType parameter is set to <b>ECS_FILE</b> or <b>File</b>, set the Source parameter to the path to the files that you want to back up. If you do not specify the Source parameter, all paths backed up.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>backup/</para>
             /// </summary>
@@ -481,6 +523,13 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string SourceType { get; set; }
 
             /// <summary>
+            /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>ECS_FILE</b> or <b>File</b>. This parameter specifies the throttling rules. Format: <c>{start}{end}{bandwidth}</c>. Separate multiple throttling rules with vertical bars (|). The time ranges of the throttling rules cannot overlap.</para>
+            /// <list type="bullet">
+            /// <item><description><b>start</b>: the start hour.</description></item>
+            /// <item><description><b>end</b>: the end hour.</description></item>
+            /// <item><description><b>bandwidth</b>: the bandwidth. Unit: KB/s.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>0:24:10240</para>
             /// </summary>

@@ -84,11 +84,19 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public List<string> DataSourceIds { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>UDM_ECS</para>
+                /// </summary>
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]
                 public string SourceType { get; set; }
 
             }
+
+            [NameInMap("Immutable")]
+            [Validation(Required=false)]
+            public bool? Immutable { get; set; }
 
             /// <summary>
             /// <para>Specifies whether to enable the feature of keeping at least one backup version. Valid values:</para>
@@ -215,14 +223,26 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public List<UpdatePolicyV2RequestRulesTagFilters> TagFilters { get; set; }
             public class UpdatePolicyV2RequestRulesTagFilters : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>env</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>EQUAL</para>
+                /// </summary>
                 [NameInMap("Operator")]
                 [Validation(Required=false)]
                 public string Operator { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>prod</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

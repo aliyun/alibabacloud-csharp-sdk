@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string CrossAccountRoleName { get; set; }
 
                 /// <summary>
-                /// <para>The backup type. Valid values:</para>
+                /// <para>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>SELF_ACCOUNT</b>: Data is backed up within the same Alibaba Cloud account.</description></item>
                 /// <item><description><b>CROSS_ACCOUNT</b>: Data is backed up across Alibaba Cloud accounts.</description></item>

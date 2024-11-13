@@ -125,6 +125,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string DetailShrink { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to disable the plan by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
