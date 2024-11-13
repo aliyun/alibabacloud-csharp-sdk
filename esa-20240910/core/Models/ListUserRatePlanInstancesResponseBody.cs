@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string BillingMode { get; set; }
 
+            [NameInMap("BotInstanceLevel")]
+            [Validation(Required=false)]
+            public string BotInstanceLevel { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>domestic,overseas</para>
@@ -37,6 +41,22 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("CrossborderTraffic")]
+            [Validation(Required=false)]
+            public string CrossborderTraffic { get; set; }
+
+            [NameInMap("DdosBurstableDomesticProtection")]
+            [Validation(Required=false)]
+            public string DdosBurstableDomesticProtection { get; set; }
+
+            [NameInMap("DdosBurstableOverseasProtection")]
+            [Validation(Required=false)]
+            public string DdosBurstableOverseasProtection { get; set; }
+
+            [NameInMap("DdosInstanceLevel")]
+            [Validation(Required=false)]
+            public string DdosInstanceLevel { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>3</para>
@@ -44,6 +64,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [NameInMap("Duration")]
             [Validation(Required=false)]
             public int? Duration { get; set; }
+
+            [NameInMap("EdgeRoutineRquest")]
+            [Validation(Required=false)]
+            public string EdgeRoutineRquest { get; set; }
+
+            [NameInMap("EdgeWafRequest")]
+            [Validation(Required=false)]
+            public string EdgeWafRequest { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -61,6 +89,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            [NameInMap("Layer4Traffic")]
+            [Validation(Required=false)]
+            public string Layer4Traffic { get; set; }
+
+            [NameInMap("Layer4TrafficIntl")]
+            [Validation(Required=false)]
+            public string Layer4TrafficIntl { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>basic</para>
@@ -68,6 +104,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [NameInMap("PlanName")]
             [Validation(Required=false)]
             public string PlanName { get; set; }
+
+            [NameInMap("PlanTraffic")]
+            [Validation(Required=false)]
+            public string PlanTraffic { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -114,6 +154,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string SiteStatus { get; set; }
 
             }
+
+            [NameInMap("SmartRoutingRequest")]
+            [Validation(Required=false)]
+            public string SmartRoutingRequest { get; set; }
+
+            [NameInMap("StaticRequest")]
+            [Validation(Required=false)]
+            public string StaticRequest { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

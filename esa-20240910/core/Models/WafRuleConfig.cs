@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public WafRuleConfigActionsBypass Bypass { get; set; }
             public class WafRuleConfigActionsBypass : TeaModel {
+                [NameInMap("CustomRules")]
+                [Validation(Required=false)]
+                public List<long?> CustomRules { get; set; }
+
                 [NameInMap("RegularRules")]
                 [Validation(Required=false)]
                 public List<long?> RegularRules { get; set; }

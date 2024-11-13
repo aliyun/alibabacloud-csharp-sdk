@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string QueryArgsShrink { get; set; }
 
+        [NameInMap("SiteId")]
+        [Validation(Required=false)]
+        public long? SiteId { get; set; }
+
     }
 
 }

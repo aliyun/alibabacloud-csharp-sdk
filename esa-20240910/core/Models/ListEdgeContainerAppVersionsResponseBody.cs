@@ -107,14 +107,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>sh start.sh</para>
-                /// </summary>
-                [NameInMap("PreStart")]
-                [Validation(Required=false)]
-                public string PreStart { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
                 /// <para>sh stop.sh</para>
                 /// </summary>
                 [NameInMap("PreStop")]

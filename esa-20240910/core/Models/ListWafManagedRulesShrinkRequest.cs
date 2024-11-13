@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("ProtectionLevel")]
+        [Validation(Required=false)]
+        public int? ProtectionLevel { get; set; }
+
         [NameInMap("QueryArgs")]
         [Validation(Required=false)]
         public string QueryArgsShrink { get; set; }

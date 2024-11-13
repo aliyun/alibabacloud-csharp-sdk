@@ -16,6 +16,32 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public List<BatchCreateRecordsRequestRecordList> RecordList { get; set; }
         public class BatchCreateRecordsRequestRecordList : TeaModel {
+            [NameInMap("AuthConf")]
+            [Validation(Required=false)]
+            public BatchCreateRecordsRequestRecordListAuthConf AuthConf { get; set; }
+            public class BatchCreateRecordsRequestRecordListAuthConf : TeaModel {
+                [NameInMap("AccessKey")]
+                [Validation(Required=false)]
+                public string AccessKey { get; set; }
+
+                [NameInMap("AuthType")]
+                [Validation(Required=false)]
+                public string AuthType { get; set; }
+
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+                [NameInMap("SecretKey")]
+                [Validation(Required=false)]
+                public string SecretKey { get; set; }
+
+                [NameInMap("Version")]
+                [Validation(Required=false)]
+                public string Version { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>web</para>

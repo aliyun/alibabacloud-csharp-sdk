@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         }
 
+        [NameInMap("SiteId")]
+        [Validation(Required=false)]
+        public long? SiteId { get; set; }
+
     }
 
 }

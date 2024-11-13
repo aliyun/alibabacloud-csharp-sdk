@@ -17698,6 +17698,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtectionLevel))
+            {
+                query["ProtectionLevel"] = request.ProtectionLevel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryArgsShrink))
             {
                 query["QueryArgs"] = request.QueryArgsShrink;
@@ -17769,6 +17773,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtectionLevel))
+            {
+                query["ProtectionLevel"] = request.ProtectionLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryArgsShrink))
             {
@@ -18338,6 +18346,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["QueryArgs"] = request.QueryArgsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -18389,6 +18401,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryArgsShrink))
             {
                 query["QueryArgs"] = request.QueryArgsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -21143,298 +21159,6 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopScheduledPreloadExecutionWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>将表达式转换为匹配项</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// TransformExpressionToMatchRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// TransformExpressionToMatchResponse
-        /// </returns>
-        public TransformExpressionToMatchResponse TransformExpressionToMatchWithOptions(TransformExpressionToMatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
-            {
-                query["SiteId"] = request.SiteId;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expression))
-            {
-                body["Expression"] = request.Expression;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phase))
-            {
-                body["Phase"] = request.Phase;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "TransformExpressionToMatch",
-                Version = "2024-09-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<TransformExpressionToMatchResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>将表达式转换为匹配项</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// TransformExpressionToMatchRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// TransformExpressionToMatchResponse
-        /// </returns>
-        public async Task<TransformExpressionToMatchResponse> TransformExpressionToMatchWithOptionsAsync(TransformExpressionToMatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
-            {
-                query["SiteId"] = request.SiteId;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expression))
-            {
-                body["Expression"] = request.Expression;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phase))
-            {
-                body["Phase"] = request.Phase;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "TransformExpressionToMatch",
-                Version = "2024-09-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<TransformExpressionToMatchResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>将表达式转换为匹配项</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// TransformExpressionToMatchRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// TransformExpressionToMatchResponse
-        /// </returns>
-        public TransformExpressionToMatchResponse TransformExpressionToMatch(TransformExpressionToMatchRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return TransformExpressionToMatchWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>将表达式转换为匹配项</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// TransformExpressionToMatchRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// TransformExpressionToMatchResponse
-        /// </returns>
-        public async Task<TransformExpressionToMatchResponse> TransformExpressionToMatchAsync(TransformExpressionToMatchRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await TransformExpressionToMatchWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>将匹配项转换为表达式</para>
-        /// </summary>
-        /// 
-        /// <param name="tmpReq">
-        /// TransformMatchToExpressionRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// TransformMatchToExpressionResponse
-        /// </returns>
-        public TransformMatchToExpressionResponse TransformMatchToExpressionWithOptions(TransformMatchToExpressionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            TransformMatchToExpressionShrinkRequest request = new TransformMatchToExpressionShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Match))
-            {
-                request.MatchShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Match, "Match", "json");
-            }
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
-            {
-                query["SiteId"] = request.SiteId;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchShrink))
-            {
-                body["Match"] = request.MatchShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phase))
-            {
-                body["Phase"] = request.Phase;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "TransformMatchToExpression",
-                Version = "2024-09-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<TransformMatchToExpressionResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>将匹配项转换为表达式</para>
-        /// </summary>
-        /// 
-        /// <param name="tmpReq">
-        /// TransformMatchToExpressionRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// TransformMatchToExpressionResponse
-        /// </returns>
-        public async Task<TransformMatchToExpressionResponse> TransformMatchToExpressionWithOptionsAsync(TransformMatchToExpressionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            TransformMatchToExpressionShrinkRequest request = new TransformMatchToExpressionShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Match))
-            {
-                request.MatchShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Match, "Match", "json");
-            }
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
-            {
-                query["SiteId"] = request.SiteId;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchShrink))
-            {
-                body["Match"] = request.MatchShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phase))
-            {
-                body["Phase"] = request.Phase;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "TransformMatchToExpression",
-                Version = "2024-09-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<TransformMatchToExpressionResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>将匹配项转换为表达式</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// TransformMatchToExpressionRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// TransformMatchToExpressionResponse
-        /// </returns>
-        public TransformMatchToExpressionResponse TransformMatchToExpression(TransformMatchToExpressionRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return TransformMatchToExpressionWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>将匹配项转换为表达式</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// TransformMatchToExpressionRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// TransformMatchToExpressionResponse
-        /// </returns>
-        public async Task<TransformMatchToExpressionResponse> TransformMatchToExpressionAsync(TransformMatchToExpressionRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await TransformMatchToExpressionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

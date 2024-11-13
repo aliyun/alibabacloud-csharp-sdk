@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("ProtectionLevel")]
+        [Validation(Required=false)]
+        public int? ProtectionLevel { get; set; }
+
         [NameInMap("QueryArgs")]
         [Validation(Required=false)]
         public ListWafManagedRulesRequestQueryArgs QueryArgs { get; set; }
@@ -72,14 +76,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [NameInMap("IdNameLike")]
             [Validation(Required=false)]
             public string IdNameLike { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
-            [NameInMap("ProtectionLevel")]
-            [Validation(Required=false)]
-            public int? ProtectionLevel { get; set; }
 
             [NameInMap("ProtectionLevels")]
             [Validation(Required=false)]
