@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string CodeBranch { get; set; }
 
+        [NameInMap("CodeCommit")]
+        [Validation(Required=false)]
+        public string CodeCommit { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para><a href="https://code.aliyun.com/">https://code.aliyun.com/</a>******</para>

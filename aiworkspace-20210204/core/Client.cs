@@ -485,6 +485,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 body["CodeBranch"] = request.CodeBranch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeCommit))
+            {
+                body["CodeCommit"] = request.CodeCommit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeRepo))
             {
                 body["CodeRepo"] = request.CodeRepo;
@@ -562,6 +566,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeBranch))
             {
                 body["CodeBranch"] = request.CodeBranch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeCommit))
+            {
+                body["CodeCommit"] = request.CodeCommit;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeRepo))
             {
