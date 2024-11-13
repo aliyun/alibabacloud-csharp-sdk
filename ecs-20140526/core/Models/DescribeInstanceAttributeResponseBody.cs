@@ -305,7 +305,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? InternetMaxBandwidthOut { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the instance is I/O optimized.</para>
+        /// <para>Indicates whether the ECS instance is I/O optimized. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>optimized: The ECS instance is I/O optimized.</description></item>
+        /// <item><description>none: The ECS instance is not I/O optimized.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

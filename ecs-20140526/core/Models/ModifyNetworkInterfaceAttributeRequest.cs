@@ -289,6 +289,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<string> SecurityGroupId { get; set; }
 
+        /// <summary>
+        /// <remarks>
+        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("SourceDestCheck")]
         [Validation(Required=false)]
         public bool? SourceDestCheck { get; set; }

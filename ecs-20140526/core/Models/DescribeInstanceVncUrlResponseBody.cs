@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The VNC logon address.</para>
         /// <remarks>
-        /// <para> **The address returned is valid only for 15 seconds. If a connection is not established within 15 seconds after a successful call, the address expires and you must recall the operation to obtain a new address.</para>
+        /// <para> The VNC logon address returned is valid only for 15 seconds. If a connection is not established within 15 seconds after a successful call, the VNC logon address expires and you must call the DescribeInstanceVncUrl operation to obtain a new logon address.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

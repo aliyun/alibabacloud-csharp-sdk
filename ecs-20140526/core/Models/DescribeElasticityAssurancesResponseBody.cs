@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeElasticityAssurancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the elasticity assurances.</para>
+        /// <para>Details about the elasticity assurances.</para>
         /// </summary>
         [NameInMap("ElasticityAssuranceSet")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem> ElasticityAssuranceItem { get; set; }
             public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem : TeaModel {
                 /// <summary>
-                /// <para>The information about the allocated resources.</para>
+                /// <para>Details of the allocated resources.</para>
                 /// </summary>
                 [NameInMap("AllocatedResources")]
                 [Validation(Required=false)]
@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource> AllocatedResource { get; set; }
                     public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource : TeaModel {
                         /// <summary>
+                        /// <remarks>
+                        /// <para> This parameter is not publicly available.</para>
+                        /// </remarks>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
                         /// </summary>
@@ -39,6 +43,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public int? AvailableAmount { get; set; }
 
+                        /// <summary>
+                        /// <remarks>
+                        /// <para> This parameter is not publicly available.</para>
+                        /// </remarks>
+                        /// </summary>
                         [NameInMap("ElasticityAssuranceUsages")]
                         [Validation(Required=false)]
                         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsages ElasticityAssuranceUsages { get; set; }
@@ -48,6 +57,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage> ElasticityAssuranceUsage { get; set; }
                             public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage : TeaModel {
                                 /// <summary>
+                                /// <remarks>
+                                /// <para> This parameter is not publicly available.</para>
+                                /// </remarks>
+                                /// 
                                 /// <b>Example:</b>
                                 /// <para>1144775968548340</para>
                                 /// </summary>
@@ -56,6 +69,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 public string AccountId { get; set; }
 
                                 /// <summary>
+                                /// <remarks>
+                                /// <para> This parameter is not publicly available.</para>
+                                /// </remarks>
+                                /// 
                                 /// <b>Example:</b>
                                 /// <para>name</para>
                                 /// </summary>
@@ -64,6 +81,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 public string ServiceName { get; set; }
 
                                 /// <summary>
+                                /// <remarks>
+                                /// <para> This parameter is not publicly available.</para>
+                                /// </remarks>
+                                /// 
                                 /// <b>Example:</b>
                                 /// <para>1</para>
                                 /// </summary>
@@ -130,6 +151,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <remarks>
+                /// <para> This parameter is not publicly available.</para>
+                /// </remarks>
+                /// 
                 /// <b>Example:</b>
                 /// <para>e114477596854834</para>
                 /// </summary>

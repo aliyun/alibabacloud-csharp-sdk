@@ -448,13 +448,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The communication model of the ENI. Valid values:</para>
+        /// <para>The communication mode of the ENI. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Standard: The TCP communication mode is used.</description></item>
-        /// <item><description>HighPerformance: The Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.</description></item>
+        /// <item><description>HighPerformance: The Elastic RDMA Interface (ERI) feature is enabled and the remote direct memory access (RDMA) communication mode is used.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter can have a value of HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance that resides in Beijing Zone K.</para>
+        /// <para> This parameter can have a value of HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
