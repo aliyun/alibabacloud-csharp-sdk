@@ -1,3 +1,7 @@
+2024-11-14 Version: 1.1.0
+- Support API CollectFlightLowestPrice.
+
+
 2024-10-29 Version: 1.0.5
 - Update API ChangeApply: update param changed_journeys.
 

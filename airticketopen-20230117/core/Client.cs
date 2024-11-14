@@ -1871,6 +1871,174 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>数据收集-低价航班信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CollectFlightLowestPriceRequest
+        /// </param>
+        /// <param name="headers">
+        /// CollectFlightLowestPriceHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CollectFlightLowestPriceResponse
+        /// </returns>
+        public CollectFlightLowestPriceResponse CollectFlightLowestPriceWithOptions(CollectFlightLowestPriceRequest tmpReq, CollectFlightLowestPriceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CollectFlightLowestPriceShrinkRequest request = new CollectFlightLowestPriceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LowestPriceFlightList))
+            {
+                request.LowestPriceFlightListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LowestPriceFlightList, "lowestPriceFlightList", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowestPriceFlightListShrink))
+            {
+                body["lowestPriceFlightList"] = request.LowestPriceFlightListShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAirticketAccessToken))
+            {
+                realHeaders["x-acs-airticket-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAirticketAccessToken);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAirticketLanguage))
+            {
+                realHeaders["x-acs-airticket-language"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAirticketLanguage);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CollectFlightLowestPrice",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/airticket/v1/data-collect/flight-lowest-price",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CollectFlightLowestPriceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>数据收集-低价航班信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CollectFlightLowestPriceRequest
+        /// </param>
+        /// <param name="headers">
+        /// CollectFlightLowestPriceHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CollectFlightLowestPriceResponse
+        /// </returns>
+        public async Task<CollectFlightLowestPriceResponse> CollectFlightLowestPriceWithOptionsAsync(CollectFlightLowestPriceRequest tmpReq, CollectFlightLowestPriceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CollectFlightLowestPriceShrinkRequest request = new CollectFlightLowestPriceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LowestPriceFlightList))
+            {
+                request.LowestPriceFlightListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LowestPriceFlightList, "lowestPriceFlightList", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowestPriceFlightListShrink))
+            {
+                body["lowestPriceFlightList"] = request.LowestPriceFlightListShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAirticketAccessToken))
+            {
+                realHeaders["x-acs-airticket-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAirticketAccessToken);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAirticketLanguage))
+            {
+                realHeaders["x-acs-airticket-language"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAirticketLanguage);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CollectFlightLowestPrice",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/airticket/v1/data-collect/flight-lowest-price",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CollectFlightLowestPriceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>数据收集-低价航班信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CollectFlightLowestPriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CollectFlightLowestPriceResponse
+        /// </returns>
+        public CollectFlightLowestPriceResponse CollectFlightLowestPrice(CollectFlightLowestPriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CollectFlightLowestPriceHeaders headers = new CollectFlightLowestPriceHeaders();
+            return CollectFlightLowestPriceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>数据收集-低价航班信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CollectFlightLowestPriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CollectFlightLowestPriceResponse
+        /// </returns>
+        public async Task<CollectFlightLowestPriceResponse> CollectFlightLowestPriceAsync(CollectFlightLowestPriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CollectFlightLowestPriceHeaders headers = new CollectFlightLowestPriceHeaders();
+            return await CollectFlightLowestPriceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Search-Enrich</para>
         /// </summary>
         /// 
