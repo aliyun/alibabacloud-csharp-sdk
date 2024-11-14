@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string Desc { get; set; }
 
+        [NameInMap("errMsg")]
+        [Validation(Required=false)]
+        public string ErrMsg { get; set; }
+
         [NameInMap("gmtCreate")]
         [Validation(Required=false)]
         public string GmtCreate { get; set; }

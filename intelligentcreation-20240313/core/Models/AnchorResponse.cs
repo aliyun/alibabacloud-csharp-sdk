@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("supportBgChange")]
+        [Validation(Required=false)]
+        public int? SupportBgChange { get; set; }
+
         [NameInMap("useScene")]
         [Validation(Required=false)]
         public string UseScene { get; set; }
