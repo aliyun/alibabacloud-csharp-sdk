@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
-    public class DescribeDBInstancesRequest : TeaModel {
+    public class DescribeDBInstancesShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The description of the instance.</para>
         /// </summary>
@@ -96,25 +96,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<DescribeDBInstancesRequestTag> Tag { get; set; }
-        public class DescribeDBInstancesRequestTag : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>testKey</para>
-            /// </summary>
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>testValue</para>
-            /// </summary>
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagShrink { get; set; }
 
     }
 

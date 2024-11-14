@@ -8,59 +8,60 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
-    public class CreateDBClusterRequest : TeaModel {
+    public class CreateDBInstanceShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>200GB</para>
         /// </summary>
         [NameInMap("CacheSize")]
         [Validation(Required=false)]
-        public string CacheSize { get; set; }
+        public int? CacheSize { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Prepaid</para>
+        /// <para>PrePaid</para>
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>selectdb.2xlarge</para>
+        /// <para>AB</para>
         /// </summary>
-        [NameInMap("DBClusterClass")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string DBClusterClass { get; set; }
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>selectdb-cn-7213c8y****-public.selectdbfe.pre.rds.aliyuncs.com</para>
+        /// </summary>
+        [NameInMap("ConnectionString")]
+        [Validation(Required=false)]
+        public string ConnectionString { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>testdb</para>
+        /// <para>selectdb.xlarge</para>
         /// </summary>
-        [NameInMap("DBClusterDescription")]
+        [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
-        public string DBClusterDescription { get; set; }
+        public string DBInstanceClass { get; set; }
+
+        [NameInMap("DBInstanceDescription")]
+        [Validation(Required=false)]
+        public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// <para>代表资源一级ID的资源属性字段</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The type of the database. Default value: <b>selectdb</b>.</para>
         /// 
-        /// <b>Example:</b>
-        /// <para>selectdb-cn-7213cjv****</para>
-        /// </summary>
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        /// <summary>
         /// <b>Example:</b>
         /// <para>selectdb</para>
         /// </summary>
@@ -96,9 +97,31 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>代表资源组的资源属性字段</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekzt2zaluvuvqa_fake</para>
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>192.168.1.1</para>
+        /// </summary>
+        [NameInMap("SecurityIPList")]
+        [Validation(Required=false)]
+        public string SecurityIPList { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public string TagShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -106,7 +129,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// </summary>
         [NameInMap("UsedTime")]
         [Validation(Required=false)]
-        public string UsedTime { get; set; }
+        public int? UsedTime { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -133,7 +156,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou-i</para>
+        /// <para>cn-hangzhou-e</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

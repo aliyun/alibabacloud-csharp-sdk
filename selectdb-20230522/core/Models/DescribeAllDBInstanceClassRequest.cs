@@ -8,20 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
-    public class DescribeSecurityIPListRequest : TeaModel {
+    public class DescribeAllDBInstanceClassRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>selectdb-cn-7213cjv****</para>
-        /// </summary>
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        /// <summary>
-        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
