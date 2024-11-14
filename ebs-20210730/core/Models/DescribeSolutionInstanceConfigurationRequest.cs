@@ -10,34 +10,42 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeSolutionInstanceConfigurationRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).
+        /// <para>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-42665544****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The parameters.
+        /// <para>The parameters.</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public List<DescribeSolutionInstanceConfigurationRequestParameters> Parameters { get; set; }
         public class DescribeSolutionInstanceConfigurationRequestParameters : TeaModel {
             /// <summary>
-            /// The key of the parameter.
+            /// <para>The key of the parameter.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <hr>
             /// </summary>
             [NameInMap("ParameterKey")]
             [Validation(Required=false)]
             public string ParameterKey { get; set; }
 
             /// <summary>
-            /// The value of the parameter.
+            /// <para>The value of the parameter.</para>
+            /// <remarks>
+            /// <para>The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.</para>
+            /// </remarks>
+            /// <para>This parameter is required.</para>
             /// 
-            /// > The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <hr>
             /// </summary>
             [NameInMap("ParameterValue")]
             [Validation(Required=false)]
@@ -46,18 +54,22 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the solution.
+        /// <para>The ID of the solution.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sln-xxxxx</para>
         /// </summary>
         [NameInMap("SolutionId")]
         [Validation(Required=false)]

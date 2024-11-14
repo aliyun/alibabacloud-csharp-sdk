@@ -10,93 +10,119 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeEventsRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// <para>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-06-01T04:00:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The name of the event. Valid values:
+        /// <para>The name of the event. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NoSnapshot: indicates the event that is triggered because no snapshot is created for a disk to protect data on the disk.</description></item>
+        /// <item><description>BurstIOTriggered: indicates the event that is triggered when a burst I/O operation is performed on a disk.</description></item>
+        /// <item><description>CostOptimizationNeeded: indicates the event that is triggered when cost optimization is required.</description></item>
+        /// <item><description>DiskSpecNotMatchedWithInstance: indicates the event that is triggered because the specifications of a disk do not match the instance to which the disk is attached.</description></item>
+        /// <item><description>DiskIONo4kAligned: indicates the event that is triggered because the physical and logical sectors involved in a read or write operation are not 4K aligned.</description></item>
+        /// <item><description>DiskIOHang: indicates the event that is triggered when an I/O hang occurs on a disk.</description></item>
+        /// <item><description>InstanceIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on an instance reaches the upper limit.</description></item>
+        /// <item><description>InstanceBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on an instance reaches the upper limit.</description></item>
+        /// <item><description>DiskIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the associated instance.</description></item>
+        /// <item><description>DiskBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the associated instance.</description></item>
+        /// <item><description>DiskIOPSExceedDiskMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the disk.</description></item>
+        /// <item><description>DiskBPSExceedDiskMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the disk.</description></item>
+        /// </list>
         /// 
-        /// *   NoSnapshot: indicates the event that is triggered because no snapshot is created for a disk to protect data on the disk.
-        /// *   BurstIOTriggered: indicates the event that is triggered when a burst I/O operation is performed on a disk.
-        /// *   CostOptimizationNeeded: indicates the event that is triggered when cost optimization is required.
-        /// *   DiskSpecNotMatchedWithInstance: indicates the event that is triggered because the specifications of a disk do not match the instance to which the disk is attached.
-        /// *   DiskIONo4kAligned: indicates the event that is triggered because the physical and logical sectors involved in a read or write operation are not 4K aligned.
-        /// *   DiskIOHang: indicates the event that is triggered when an I/O hang occurs on a disk.
-        /// *   InstanceIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on an instance reaches the upper limit.
-        /// *   InstanceBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on an instance reaches the upper limit.
-        /// *   DiskIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the associated instance.
-        /// *   DiskBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the associated instance.
-        /// *   DiskIOPSExceedDiskMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the disk.
-        /// *   DiskBPSExceedDiskMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the disk.
+        /// <b>Example:</b>
+        /// <para>DiskIOHang</para>
         /// </summary>
         [NameInMap("EventName")]
         [Validation(Required=false)]
         public string EventName { get; set; }
 
         /// <summary>
-        /// The maximum number of entries per page. If you specify MaxResults, `MaxResults` and `NextToken` are used for a paged query.
+        /// <para>The maximum number of entries per page. If you specify MaxResults, <c>MaxResults</c> and <c>NextToken</c> are used for a paged query.</para>
+        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Valid values: 1 to 100.
-        /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results.
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAdDWBF2****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The region ID . You can call the [DescribeRegions](https://help.aliyun.com/document_detail/354276.html) operation to query the most recent list of regions supported.
+        /// <para>The region ID . You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions supported.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource ID.
+        /// <para>The resource ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d-bp67acfmxazb4p****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The type of resource. Valid values:
+        /// <para>The type of resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>disk.</description></item>
+        /// </list>
+        /// <para>Default value: disk.</para>
         /// 
-        /// *   disk.
-        /// 
-        /// Default value: disk.
+        /// <b>Example:</b>
+        /// <para>disk</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// <para>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-06-01T03:00:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The status of event. Valid values:
+        /// <para>The status of event. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>WillExecute</description></item>
+        /// <item><description>Executing</description></item>
+        /// <item><description>Executed</description></item>
+        /// <item><description>Ignore</description></item>
+        /// <item><description>Expired</description></item>
+        /// <item><description>Deleted</description></item>
+        /// </list>
         /// 
-        /// - WillExecute
-        /// - Executing
-        /// - Executed
-        /// - Ignore
-        /// - Expired
-        /// - Deleted
+        /// <b>Example:</b>
+        /// <para>WillExecute</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

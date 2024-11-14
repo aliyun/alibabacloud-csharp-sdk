@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class UnbindEnterpriseSnapshotPolicyResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>061DE1AB-08BA-5ACD-A03A-440117C6939A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

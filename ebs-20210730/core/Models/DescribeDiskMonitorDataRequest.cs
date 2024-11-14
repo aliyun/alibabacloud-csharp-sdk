@@ -10,58 +10,73 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeDiskMonitorDataRequest : TeaModel {
         /// <summary>
-        /// The ID of the disk.
+        /// <para>The ID of the disk.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>d-bp67acfmxazb4p****</para>
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
         public string DiskId { get; set; }
 
         /// <summary>
-        /// The end of the time range during which you want to query the near real-time monitoring data of the disk. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+        /// <para>The end of the time range during which you want to query the near real-time monitoring data of the disk. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2022-06-01T05:00:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The interval at which the near real-time monitoring data is collected. Unit: seconds. Valid values:
+        /// <para>The interval at which the near real-time monitoring data is collected. Unit: seconds. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>5</description></item>
+        /// <item><description>60</description></item>
+        /// </list>
+        /// <para>Default value: 5.</para>
         /// 
-        /// *   5
-        /// *   60
-        /// 
-        /// Default value: 5.
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public long? Period { get; set; }
 
         /// <summary>
-        /// The region ID of the disk.
+        /// <para>The region ID of the disk.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range during which you want to query the near real-time monitoring data of the disk. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+        /// <para>The beginning of the time range during which you want to query the near real-time monitoring data of the disk. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2022-06-01T03:00:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The type of the monitoring data. Valid values:
+        /// <para>The type of the monitoring data. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>basic: baseline performance data.</description></item>
+        /// <item><description>pro: burst performance data, such as burst I/O operations.</description></item>
+        /// </list>
         /// 
-        /// *   basic: baseline performance data.
-        /// *   pro: burst performance data, such as burst I/O operations.
+        /// <b>Example:</b>
+        /// <para>basic</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

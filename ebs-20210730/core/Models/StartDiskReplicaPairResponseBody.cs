@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class StartDiskReplicaPairResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A37597A6-BB99-19B3-85EA-4C2B91F0****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

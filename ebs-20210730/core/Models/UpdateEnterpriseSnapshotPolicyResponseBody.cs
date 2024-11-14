@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class UpdateEnterpriseSnapshotPolicyResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BA903E56-48CE-5B81-9611-ED7962EED3DF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,132 +10,176 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeEventsResponseBody : TeaModel {
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results.
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAdDWBF2****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The events.
+        /// <para>The events.</para>
         /// </summary>
         [NameInMap("ResourceEvents")]
         [Validation(Required=false)]
         public List<DescribeEventsResponseBodyResourceEvents> ResourceEvents { get; set; }
         public class DescribeEventsResponseBodyResourceEvents : TeaModel {
             /// <summary>
-            /// The description of the event.
+            /// <para>The description of the event.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>need snapshot</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The end time of the event, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.
+            /// <para>The end time of the event, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1679538083000</para>
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
             /// <summary>
-            /// The level of the event. Valid values:
+            /// <para>The level of the event. Valid values:</para>
+            /// <ol>
+            /// <item><description>INFO</description></item>
+            /// <item><description>WARN</description></item>
+            /// <item><description>CRITICAL</description></item>
+            /// </ol>
             /// 
-            /// 1.  INFO
-            /// 2.  WARN
-            /// 3.  CRITICAL
+            /// <b>Example:</b>
+            /// <para>INFO</para>
             /// </summary>
             [NameInMap("EventLevel")]
             [Validation(Required=false)]
             public string EventLevel { get; set; }
 
             /// <summary>
-            /// The name of the event. Valid values:
+            /// <para>The name of the event. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NoSnapshot: indicates the event that is triggered because no snapshot is created for a disk to protect data on the disk.</description></item>
+            /// <item><description>BurstIOTriggered: indicates the event that is triggered when a burst I/O operation is performed on a disk.</description></item>
+            /// <item><description>CostOptimizationNeeded: indicates the event that is triggered when cost optimization is required.</description></item>
+            /// <item><description>DiskSpecNotMatchedWithInstance: indicates the event that is triggered because the specifications of a disk do not match the instance to which the disk is attached.</description></item>
+            /// <item><description>DiskIONo4kAligned: indicates the event that is triggered because the physical and logical sectors involved in a read or write operation are not 4K aligned.</description></item>
+            /// <item><description>DiskIOHang: indicates the event that is triggered when an I/O hang occurs on a disk.</description></item>
+            /// <item><description>InstanceIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on an instance reaches the upper limit.</description></item>
+            /// <item><description>InstanceBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on an instance reaches the upper limit.</description></item>
+            /// <item><description>DiskIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the associated instance.</description></item>
+            /// <item><description>DiskBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the associated instance.</description></item>
+            /// <item><description>DiskIOPSExceedDiskMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the disk.</description></item>
+            /// <item><description>DiskBPSExceedDiskMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the disk.</description></item>
+            /// </list>
             /// 
-            /// *   NoSnapshot: indicates the event that is triggered because no snapshot is created for a disk to protect data on the disk.
-            /// *   BurstIOTriggered: indicates the event that is triggered when a burst I/O operation is performed on a disk.
-            /// *   CostOptimizationNeeded: indicates the event that is triggered when cost optimization is required.
-            /// *   DiskSpecNotMatchedWithInstance: indicates the event that is triggered because the specifications of a disk do not match the instance to which the disk is attached.
-            /// *   DiskIONo4kAligned: indicates the event that is triggered because the physical and logical sectors involved in a read or write operation are not 4K aligned.
-            /// *   DiskIOHang: indicates the event that is triggered when an I/O hang occurs on a disk.
-            /// *   InstanceIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on an instance reaches the upper limit.
-            /// *   InstanceBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on an instance reaches the upper limit.
-            /// *   DiskIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the associated instance.
-            /// *   DiskBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the associated instance.
-            /// *   DiskIOPSExceedDiskMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the disk.
-            /// *   DiskBPSExceedDiskMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the disk.
+            /// <b>Example:</b>
+            /// <para>DiskIOHang</para>
             /// </summary>
             [NameInMap("EventName")]
             [Validation(Required=false)]
             public string EventName { get; set; }
 
             /// <summary>
-            /// The type of the event. Valid values:
+            /// <para>The type of the event. Valid values:</para>
+            /// <ol>
+            /// <item><description>Notification</description></item>
+            /// <item><description>SystemException</description></item>
+            /// <item><description>Alert</description></item>
+            /// </ol>
             /// 
-            /// 1.  Notification
-            /// 2.  SystemException
-            /// 3.  Alert
+            /// <b>Example:</b>
+            /// <para>Alert</para>
             /// </summary>
             [NameInMap("EventType")]
             [Validation(Required=false)]
             public string EventType { get; set; }
 
             /// <summary>
-            /// The recommended action after the event occurred. Valid values:
+            /// <para>The recommended action after the event occurred. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ModifyDiskSpec</description></item>
+            /// <item><description>CreateSnapshot</description></item>
+            /// <item><description>ResizeDisk</description></item>
+            /// <item><description>AdjustProvision</description></item>
+            /// <item><description>ModifyInstanceSpec</description></item>
+            /// </list>
             /// 
-            /// *   ModifyDiskSpec
-            /// *   CreateSnapshot
-            /// *   ResizeDisk
-            /// *   AdjustProvision
-            /// *   ModifyInstanceSpec
+            /// <b>Example:</b>
+            /// <para>AdjustProvision</para>
             /// </summary>
             [NameInMap("RecommendAction")]
             [Validation(Required=false)]
             public string RecommendAction { get; set; }
 
             /// <summary>
-            /// The codes of the parameters for the recommended action after the event occurred.
+            /// <para>The codes of the parameters for the recommended action after the event occurred.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4296</para>
             /// </summary>
             [NameInMap("RecommendParams")]
             [Validation(Required=false)]
             public string RecommendParams { get; set; }
 
             /// <summary>
-            /// The ID of the resource.
+            /// <para>The ID of the resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>d-bp67acfmxazb4p****</para>
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The type of the resource.
+            /// <para>The type of the resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>disk</para>
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The start time of the event, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.
+            /// <para>The start time of the event, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1684204822000</para>
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
 
             /// <summary>
-            /// The status of the event. Valid values:
+            /// <para>The status of the event. Valid values:</para>
+            /// <ol>
+            /// <item><description>WillExecute</description></item>
+            /// <item><description>Executing</description></item>
+            /// <item><description>Executed</description></item>
+            /// <item><description>Ignore</description></item>
+            /// <item><description>Expired</description></item>
+            /// <item><description>Deleted</description></item>
+            /// </ol>
             /// 
-            /// 1.  WillExecute
-            /// 2.  Executing
-            /// 3.  Executed
-            /// 4.  Ignore
-            /// 5.  Expired
-            /// 6.  Deleted
+            /// <b>Example:</b>
+            /// <para>WillExecute</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -144,7 +188,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

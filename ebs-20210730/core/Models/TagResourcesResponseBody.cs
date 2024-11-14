@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class TagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request. The request ID is returned regardless of whether the call is successful.
+        /// <para>The ID of the request. The request ID is returned regardless of whether the call is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

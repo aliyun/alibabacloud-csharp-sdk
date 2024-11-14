@@ -1,3 +1,16 @@
+2024-11-14 Version: 3.0.0
+- Support API GetReport.
+- Support API ListReports.
+- Delete API DeleteDisk.
+- Delete API DescribeDisks.
+- Delete API GetDisk.
+- Update API CreateEnterpriseSnapshotPolicy: update response param.
+- Update API DeleteEnterpriseSnapshotPolicy: update response param.
+- Update API DescribeEnterpriseSnapshotPolicy: update response param.
+- Update API DescribeMetricData: add param AggreOps.
+- Update API UpdateEnterpriseSnapshotPolicy: update response param.
+
+
 2024-08-14 Version: 2.8.1
 - Update API DescribeDiskReplicaGroups: add param Name.
 - Update API DescribeDiskReplicaPairs: add param Name.

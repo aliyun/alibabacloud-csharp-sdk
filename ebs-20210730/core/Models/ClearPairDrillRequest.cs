@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class ClearPairDrillRequest : TeaModel {
         /// <summary>
-        /// The ID of the drill. You can call the [DescribePairDrills](https://help.aliyun.com/document_detail/2584480.html) operation to query the disaster recovery drills that were performed on replication pairs in a specific region.
+        /// <para>The ID of the drill. You can call the <a href="https://help.aliyun.com/document_detail/2584480.html">DescribePairDrills</a> operation to query the disaster recovery drills that were performed on replication pairs in a specific region.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>drill-xxxx</para>
         /// </summary>
         [NameInMap("DrillId")]
         [Validation(Required=false)]
         public string DrillId { get; set; }
 
         /// <summary>
-        /// The ID of the replication pair. You can call the [DescribeDiskReplicaPairs](https://help.aliyun.com/document_detail/354206.html) operation to query the most recent list of replication pairs, including replication pair IDs.
+        /// <para>The ID of the replication pair. You can call the <a href="https://help.aliyun.com/document_detail/354206.html">DescribeDiskReplicaPairs</a> operation to query the most recent list of replication pairs, including replication pair IDs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pair-xxxx</para>
         /// </summary>
         [NameInMap("PairId")]
         [Validation(Required=false)]
         public string PairId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/354276.html) operation to query the most recent list of regions in which async replication is supported.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which async replication is supported.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,53 +10,72 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The token used to start the next query.
+        /// <para>The token used to start the next query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request. The request ID is returned regardless of whether the call is successful.
+        /// <para>The ID of the request. The request ID is returned regardless of whether the call is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>484256DA-D816-44D2-9D86-B6EE4D5B****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details about the resources and tags, including resource IDs, resource types, and tag key-value pairs.
+        /// <para>Details about the resources and tags, including resource IDs, resource types, and tag key-value pairs.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// The ID of the resource.
+            /// <para>The ID of the resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pair-cn-c4d2t7f****</para>
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The type of the resource. Valid values:
+            /// <para>The type of the resource. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>dedicatedblockstoragecluster: dedicated block storage cluster</description></item>
+            /// <item><description>diskreplicapair: replication pair</description></item>
+            /// <item><description>diskreplicagroup: replication pair-consistent group</description></item>
+            /// </list>
             /// 
-            /// *   dedicatedblockstoragecluster: dedicated block storage cluster
-            /// *   diskreplicapair: replication pair
-            /// *   diskreplicagroup: replication pair-consistent group
+            /// <b>Example:</b>
+            /// <para>pair</para>
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The tag key of the resource.
+            /// <para>The tag key of the resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
             /// <summary>
-            /// The tag value of the resource.
+            /// <para>The tag value of the resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]

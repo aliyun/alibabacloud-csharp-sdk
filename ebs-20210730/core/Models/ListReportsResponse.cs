@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
-    public class GetDiskResponse : TeaModel {
+    public class ListReportsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public GetDiskResponseBody Body { get; set; }
+        public ListReportsResponseBody Body { get; set; }
 
     }
 

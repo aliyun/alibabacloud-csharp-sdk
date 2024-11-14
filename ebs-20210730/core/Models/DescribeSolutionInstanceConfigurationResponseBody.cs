@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeSolutionInstanceConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Data { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>11B55F58-D3A4-4A9B-9596-342420D0****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
