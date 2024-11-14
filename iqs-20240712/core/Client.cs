@@ -43,6 +43,160 @@ namespace AlibabaCloud.SDK.IQS20240712
         /// </summary>
         /// 
         /// <param name="request">
+        /// BicyclingDirectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BicyclingDirectionResponse
+        /// </returns>
+        public BicyclingDirectionResponse BicyclingDirectionWithOptions(BicyclingDirectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLatitude))
+            {
+                query["destinationLatitude"] = request.DestinationLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLongitude))
+            {
+                query["destinationLongitude"] = request.DestinationLongitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLatitude))
+            {
+                query["originLatitude"] = request.OriginLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLongitude))
+            {
+                query["originLongitude"] = request.OriginLongitude;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BicyclingDirection",
+                Version = "2024-07-12",
+                Protocol = "HTTPS",
+                Pathname = "/ipaas/v1/direction/bicycling",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BicyclingDirectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的骑行路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BicyclingDirectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BicyclingDirectionResponse
+        /// </returns>
+        public async Task<BicyclingDirectionResponse> BicyclingDirectionWithOptionsAsync(BicyclingDirectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLatitude))
+            {
+                query["destinationLatitude"] = request.DestinationLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLongitude))
+            {
+                query["destinationLongitude"] = request.DestinationLongitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLatitude))
+            {
+                query["originLatitude"] = request.OriginLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLongitude))
+            {
+                query["originLongitude"] = request.OriginLongitude;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BicyclingDirection",
+                Version = "2024-07-12",
+                Protocol = "HTTPS",
+                Pathname = "/ipaas/v1/direction/bicycling",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BicyclingDirectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的骑行路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BicyclingDirectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BicyclingDirectionResponse
+        /// </returns>
+        public BicyclingDirectionResponse BicyclingDirection(BicyclingDirectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BicyclingDirectionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的骑行路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BicyclingDirectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BicyclingDirectionResponse
+        /// </returns>
+        public async Task<BicyclingDirectionResponse> BicyclingDirectionAsync(BicyclingDirectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BicyclingDirectionWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的骑行路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
         /// BicyclingDirectionNovaRequest
         /// </param>
         /// <param name="headers">
@@ -193,6 +347,160 @@ namespace AlibabaCloud.SDK.IQS20240712
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>实时查询圆形区域内的交通信息查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CircleTrafficStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CircleTrafficStatusResponse
+        /// </returns>
+        public CircleTrafficStatusResponse CircleTrafficStatusWithOptions(CircleTrafficStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Latitude))
+            {
+                query["latitude"] = request.Latitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Longitude))
+            {
+                query["longitude"] = request.Longitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Radius))
+            {
+                query["radius"] = request.Radius;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoadLevel))
+            {
+                query["roadLevel"] = request.RoadLevel;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CircleTrafficStatus",
+                Version = "2024-07-12",
+                Protocol = "HTTPS",
+                Pathname = "/ipaas/v1/traffic/status/circle",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CircleTrafficStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时查询圆形区域内的交通信息查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CircleTrafficStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CircleTrafficStatusResponse
+        /// </returns>
+        public async Task<CircleTrafficStatusResponse> CircleTrafficStatusWithOptionsAsync(CircleTrafficStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Latitude))
+            {
+                query["latitude"] = request.Latitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Longitude))
+            {
+                query["longitude"] = request.Longitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Radius))
+            {
+                query["radius"] = request.Radius;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoadLevel))
+            {
+                query["roadLevel"] = request.RoadLevel;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CircleTrafficStatus",
+                Version = "2024-07-12",
+                Protocol = "HTTPS",
+                Pathname = "/ipaas/v1/traffic/status/circle",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CircleTrafficStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时查询圆形区域内的交通信息查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CircleTrafficStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CircleTrafficStatusResponse
+        /// </returns>
+        public CircleTrafficStatusResponse CircleTrafficStatus(CircleTrafficStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CircleTrafficStatusWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时查询圆形区域内的交通信息查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CircleTrafficStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CircleTrafficStatusResponse
+        /// </returns>
+        public async Task<CircleTrafficStatusResponse> CircleTrafficStatusAsync(CircleTrafficStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CircleTrafficStatusWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>自然语言通用查询</para>
         /// </summary>
         /// 
@@ -309,6 +617,160 @@ namespace AlibabaCloud.SDK.IQS20240712
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CommonQueryBySceneWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的驾车路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DrivingDirectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DrivingDirectionResponse
+        /// </returns>
+        public DrivingDirectionResponse DrivingDirectionWithOptions(DrivingDirectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLatitude))
+            {
+                query["destinationLatitude"] = request.DestinationLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLongitude))
+            {
+                query["destinationLongitude"] = request.DestinationLongitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLatitude))
+            {
+                query["originLatitude"] = request.OriginLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLongitude))
+            {
+                query["originLongitude"] = request.OriginLongitude;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DrivingDirection",
+                Version = "2024-07-12",
+                Protocol = "HTTPS",
+                Pathname = "/ipaas/v1/direction/driving",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DrivingDirectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的驾车路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DrivingDirectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DrivingDirectionResponse
+        /// </returns>
+        public async Task<DrivingDirectionResponse> DrivingDirectionWithOptionsAsync(DrivingDirectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLatitude))
+            {
+                query["destinationLatitude"] = request.DestinationLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLongitude))
+            {
+                query["destinationLongitude"] = request.DestinationLongitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLatitude))
+            {
+                query["originLatitude"] = request.OriginLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLongitude))
+            {
+                query["originLongitude"] = request.OriginLongitude;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DrivingDirection",
+                Version = "2024-07-12",
+                Protocol = "HTTPS",
+                Pathname = "/ipaas/v1/direction/driving",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DrivingDirectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的驾车路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DrivingDirectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DrivingDirectionResponse
+        /// </returns>
+        public DrivingDirectionResponse DrivingDirection(DrivingDirectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DrivingDirectionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的驾车路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DrivingDirectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DrivingDirectionResponse
+        /// </returns>
+        public async Task<DrivingDirectionResponse> DrivingDirectionAsync(DrivingDirectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DrivingDirectionWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -479,6 +941,160 @@ namespace AlibabaCloud.SDK.IQS20240712
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DrivingDirectionNovaWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的电动车路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ElectrobikeDirectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ElectrobikeDirectionResponse
+        /// </returns>
+        public ElectrobikeDirectionResponse ElectrobikeDirectionWithOptions(ElectrobikeDirectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLatitude))
+            {
+                query["destinationLatitude"] = request.DestinationLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLongitude))
+            {
+                query["destinationLongitude"] = request.DestinationLongitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLatitude))
+            {
+                query["originLatitude"] = request.OriginLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLongitude))
+            {
+                query["originLongitude"] = request.OriginLongitude;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ElectrobikeDirection",
+                Version = "2024-07-12",
+                Protocol = "HTTPS",
+                Pathname = "/ipaas/v1/direction/electrobike",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ElectrobikeDirectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的电动车路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ElectrobikeDirectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ElectrobikeDirectionResponse
+        /// </returns>
+        public async Task<ElectrobikeDirectionResponse> ElectrobikeDirectionWithOptionsAsync(ElectrobikeDirectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLatitude))
+            {
+                query["destinationLatitude"] = request.DestinationLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLongitude))
+            {
+                query["destinationLongitude"] = request.DestinationLongitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLatitude))
+            {
+                query["originLatitude"] = request.OriginLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLongitude))
+            {
+                query["originLongitude"] = request.OriginLongitude;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ElectrobikeDirection",
+                Version = "2024-07-12",
+                Protocol = "HTTPS",
+                Pathname = "/ipaas/v1/direction/electrobike",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ElectrobikeDirectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的电动车路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ElectrobikeDirectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ElectrobikeDirectionResponse
+        /// </returns>
+        public ElectrobikeDirectionResponse ElectrobikeDirection(ElectrobikeDirectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ElectrobikeDirectionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的电动车路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ElectrobikeDirectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ElectrobikeDirectionResponse
+        /// </returns>
+        public async Task<ElectrobikeDirectionResponse> ElectrobikeDirectionAsync(ElectrobikeDirectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ElectrobikeDirectionWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1815,6 +2431,168 @@ namespace AlibabaCloud.SDK.IQS20240712
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>实时查询矩形区域内的交通信息查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RectangleTrafficStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RectangleTrafficStatusResponse
+        /// </returns>
+        public RectangleTrafficStatusResponse RectangleTrafficStatusWithOptions(RectangleTrafficStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowerLeftLatitude))
+            {
+                query["lowerLeftLatitude"] = request.LowerLeftLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowerLeftLongitude))
+            {
+                query["lowerLeftLongitude"] = request.LowerLeftLongitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoadLevel))
+            {
+                query["roadLevel"] = request.RoadLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpperRightLatitude))
+            {
+                query["upperRightLatitude"] = request.UpperRightLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpperRightLongitude))
+            {
+                query["upperRightLongitude"] = request.UpperRightLongitude;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RectangleTrafficStatus",
+                Version = "2024-07-12",
+                Protocol = "HTTPS",
+                Pathname = "/ipaas/v1/traffic/status/rectangle",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RectangleTrafficStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时查询矩形区域内的交通信息查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RectangleTrafficStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RectangleTrafficStatusResponse
+        /// </returns>
+        public async Task<RectangleTrafficStatusResponse> RectangleTrafficStatusWithOptionsAsync(RectangleTrafficStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowerLeftLatitude))
+            {
+                query["lowerLeftLatitude"] = request.LowerLeftLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowerLeftLongitude))
+            {
+                query["lowerLeftLongitude"] = request.LowerLeftLongitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoadLevel))
+            {
+                query["roadLevel"] = request.RoadLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpperRightLatitude))
+            {
+                query["upperRightLatitude"] = request.UpperRightLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpperRightLongitude))
+            {
+                query["upperRightLongitude"] = request.UpperRightLongitude;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RectangleTrafficStatus",
+                Version = "2024-07-12",
+                Protocol = "HTTPS",
+                Pathname = "/ipaas/v1/traffic/status/rectangle",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RectangleTrafficStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时查询矩形区域内的交通信息查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RectangleTrafficStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RectangleTrafficStatusResponse
+        /// </returns>
+        public RectangleTrafficStatusResponse RectangleTrafficStatus(RectangleTrafficStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RectangleTrafficStatusWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时查询矩形区域内的交通信息查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RectangleTrafficStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RectangleTrafficStatusResponse
+        /// </returns>
+        public async Task<RectangleTrafficStatusResponse> RectangleTrafficStatusAsync(RectangleTrafficStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RectangleTrafficStatusWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>逆地理编码，将经纬度转换为详细结构化的地址信息</para>
         /// </summary>
         /// 
@@ -1949,6 +2727,152 @@ namespace AlibabaCloud.SDK.IQS20240712
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await RgeoCodeWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时查询指定线路的交通信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RoadTrafficStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RoadTrafficStatusResponse
+        /// </returns>
+        public RoadTrafficStatusResponse RoadTrafficStatusWithOptions(RoadTrafficStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.City))
+            {
+                query["city"] = request.City;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoadLevel))
+            {
+                query["roadLevel"] = request.RoadLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoadName))
+            {
+                query["roadName"] = request.RoadName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RoadTrafficStatus",
+                Version = "2024-07-12",
+                Protocol = "HTTPS",
+                Pathname = "/ipaas/v1/traffic/status/road",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RoadTrafficStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时查询指定线路的交通信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RoadTrafficStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RoadTrafficStatusResponse
+        /// </returns>
+        public async Task<RoadTrafficStatusResponse> RoadTrafficStatusWithOptionsAsync(RoadTrafficStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.City))
+            {
+                query["city"] = request.City;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoadLevel))
+            {
+                query["roadLevel"] = request.RoadLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoadName))
+            {
+                query["roadName"] = request.RoadName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RoadTrafficStatus",
+                Version = "2024-07-12",
+                Protocol = "HTTPS",
+                Pathname = "/ipaas/v1/traffic/status/road",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RoadTrafficStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时查询指定线路的交通信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RoadTrafficStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RoadTrafficStatusResponse
+        /// </returns>
+        public RoadTrafficStatusResponse RoadTrafficStatus(RoadTrafficStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RoadTrafficStatusWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时查询指定线路的交通信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RoadTrafficStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RoadTrafficStatusResponse
+        /// </returns>
+        public async Task<RoadTrafficStatusResponse> RoadTrafficStatusAsync(RoadTrafficStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RoadTrafficStatusWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2119,6 +3043,330 @@ namespace AlibabaCloud.SDK.IQS20240712
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await TransitIntegratedDirectionWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的公共交通路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransitIntegratedDirectionOldRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransitIntegratedDirectionOldResponse
+        /// </returns>
+        public TransitIntegratedDirectionOldResponse TransitIntegratedDirectionOldWithOptions(TransitIntegratedDirectionOldRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationCity))
+            {
+                query["destinationCity"] = request.DestinationCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLatitude))
+            {
+                query["destinationLatitude"] = request.DestinationLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLongitude))
+            {
+                query["destinationLongitude"] = request.DestinationLongitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginCity))
+            {
+                query["originCity"] = request.OriginCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLatitude))
+            {
+                query["originLatitude"] = request.OriginLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLongitude))
+            {
+                query["originLongitude"] = request.OriginLongitude;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TransitIntegratedDirectionOld",
+                Version = "2024-07-12",
+                Protocol = "HTTPS",
+                Pathname = "/ipaas/v1/direction/transit/integrated",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TransitIntegratedDirectionOldResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的公共交通路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransitIntegratedDirectionOldRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransitIntegratedDirectionOldResponse
+        /// </returns>
+        public async Task<TransitIntegratedDirectionOldResponse> TransitIntegratedDirectionOldWithOptionsAsync(TransitIntegratedDirectionOldRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationCity))
+            {
+                query["destinationCity"] = request.DestinationCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLatitude))
+            {
+                query["destinationLatitude"] = request.DestinationLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLongitude))
+            {
+                query["destinationLongitude"] = request.DestinationLongitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginCity))
+            {
+                query["originCity"] = request.OriginCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLatitude))
+            {
+                query["originLatitude"] = request.OriginLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLongitude))
+            {
+                query["originLongitude"] = request.OriginLongitude;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TransitIntegratedDirectionOld",
+                Version = "2024-07-12",
+                Protocol = "HTTPS",
+                Pathname = "/ipaas/v1/direction/transit/integrated",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TransitIntegratedDirectionOldResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的公共交通路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransitIntegratedDirectionOldRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransitIntegratedDirectionOldResponse
+        /// </returns>
+        public TransitIntegratedDirectionOldResponse TransitIntegratedDirectionOld(TransitIntegratedDirectionOldRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return TransitIntegratedDirectionOldWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的公共交通路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransitIntegratedDirectionOldRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransitIntegratedDirectionOldResponse
+        /// </returns>
+        public async Task<TransitIntegratedDirectionOldResponse> TransitIntegratedDirectionOldAsync(TransitIntegratedDirectionOldRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await TransitIntegratedDirectionOldWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的步行路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WalkingDirectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WalkingDirectionResponse
+        /// </returns>
+        public WalkingDirectionResponse WalkingDirectionWithOptions(WalkingDirectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLatitude))
+            {
+                query["destinationLatitude"] = request.DestinationLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLongitude))
+            {
+                query["destinationLongitude"] = request.DestinationLongitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLatitude))
+            {
+                query["originLatitude"] = request.OriginLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLongitude))
+            {
+                query["originLongitude"] = request.OriginLongitude;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WalkingDirection",
+                Version = "2024-07-12",
+                Protocol = "HTTPS",
+                Pathname = "/ipaas/v1/direction/walking",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WalkingDirectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的步行路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WalkingDirectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WalkingDirectionResponse
+        /// </returns>
+        public async Task<WalkingDirectionResponse> WalkingDirectionWithOptionsAsync(WalkingDirectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLatitude))
+            {
+                query["destinationLatitude"] = request.DestinationLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationLongitude))
+            {
+                query["destinationLongitude"] = request.DestinationLongitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLatitude))
+            {
+                query["originLatitude"] = request.OriginLatitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLongitude))
+            {
+                query["originLongitude"] = request.OriginLongitude;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WalkingDirection",
+                Version = "2024-07-12",
+                Protocol = "HTTPS",
+                Pathname = "/ipaas/v1/direction/walking",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WalkingDirectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的步行路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WalkingDirectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WalkingDirectionResponse
+        /// </returns>
+        public WalkingDirectionResponse WalkingDirection(WalkingDirectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return WalkingDirectionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据起终点坐标检索符合条件的步行路线规划方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WalkingDirectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WalkingDirectionResponse
+        /// </returns>
+        public async Task<WalkingDirectionResponse> WalkingDirectionAsync(WalkingDirectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await WalkingDirectionWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
