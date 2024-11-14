@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class UpdateTaskAssignRuleRequest : TeaModel {
         /// <summary>
-        /// baseMeAgentId
+        /// <para>baseMeAgentId</para>
         /// </summary>
         [NameInMap("BaseMeAgentId")]
         [Validation(Required=false)]
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("JsonStr")]
         [Validation(Required=false)]

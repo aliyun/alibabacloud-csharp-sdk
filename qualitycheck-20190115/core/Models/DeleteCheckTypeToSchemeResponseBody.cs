@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
-    public class UpdateSyncQualityCheckDataResponseBody : TeaModel {
+    public class DeleteCheckTypeToSchemeResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>200</para>
@@ -17,27 +17,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>48864</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public UpdateSyncQualityCheckDataResponseBodyData Data { get; set; }
-        public class UpdateSyncQualityCheckDataResponseBodyData : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>123123D8C-5BD9-42A7-B527-1235F8**</para>
-            /// </summary>
-            [NameInMap("TaskId")]
-            [Validation(Required=false)]
-            public string TaskId { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>20210101-1212121***</para>
-            /// </summary>
-            [NameInMap("Tid")]
-            [Validation(Required=false)]
-            public string Tid { get; set; }
-
-        }
+        public string Data { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -47,9 +33,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        [NameInMap("Messages")]
+        [Validation(Required=false)]
+        public List<string> Messages { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
-        /// <para>76DB5D8C-5BD9-42A7-B527-5AF3A5F8***</para>
+        /// <para>F190ADE9-619A-447D-84E3-7E241A5C428E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

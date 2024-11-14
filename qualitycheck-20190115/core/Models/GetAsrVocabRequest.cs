@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetAsrVocabRequest : TeaModel {
         /// <summary>
-        /// baseMeAgentId
+        /// <para>baseMeAgentId</para>
         /// </summary>
         [NameInMap("BaseMeAgentId")]
         [Validation(Required=false)]

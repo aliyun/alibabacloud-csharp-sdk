@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
-    public class CreateUserResponse : TeaModel {
+    public class DeleteCheckTypeToSchemeResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public CreateUserResponseBody Body { get; set; }
+        public DeleteCheckTypeToSchemeResponseBody Body { get; set; }
 
     }
 
