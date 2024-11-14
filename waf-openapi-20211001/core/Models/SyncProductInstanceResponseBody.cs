@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class SyncProductInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>45BA2382-7C3F-5B29-9A83-C3BCE586****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

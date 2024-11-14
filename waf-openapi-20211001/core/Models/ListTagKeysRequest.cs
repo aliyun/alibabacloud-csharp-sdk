@@ -10,37 +10,50 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ListTagKeysRequest : TeaModel {
         /// <summary>
-        /// The ID of the WAF instance.
+        /// <para>The ID of the WAF instance.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to query the ID of the WAF instance.
+        /// <b>Example:</b>
+        /// <para>waf_v3prepaid_public_cn-wwo****iw02</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0*****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:
+        /// <para>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **cn-hangzhou**: Chinese mainland.
-        /// *   **ap-southeast-1**: outside the Chinese mainland.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.
+        /// <para>The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ALIYUN::WAF::DEFENSERESOURCE</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

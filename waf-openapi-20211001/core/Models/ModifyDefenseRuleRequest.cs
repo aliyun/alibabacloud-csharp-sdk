@@ -10,58 +10,67 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyDefenseRuleRequest : TeaModel {
         /// <summary>
-        /// The scenario in which you want to use the protection rule. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
+        /// <para>The scenario in which you want to use the protection rule. For more information, see the description of the <b>DefenseScene</b> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>waf_group</para>
         /// </summary>
         [NameInMap("DefenseScene")]
         [Validation(Required=false)]
         public string DefenseScene { get; set; }
 
         /// <summary>
-        /// The ID of the Web Application Firewall (WAF) instance.
+        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to obtain the ID of the WAF instance.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>waf_cdnsdf3****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region where the WAF instance resides. Valid values:
+        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cn-hangzhou:</b> the Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1:</b> outside the Chinese mainland.</description></item>
+        /// </list>
         /// 
-        /// *   **cn-hangzhou:** the Chinese mainland.
-        /// *   **ap-southeast-1:** outside the Chinese mainland.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud resource group.
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfm***q</para>
         /// </summary>
         [NameInMap("ResourceManagerResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// The details of the protection rule. Specify a string that contains multiple parameters in the JSON format. You must specify the ID and the new configurations of the protection rule.
-        /// 
-        /// *   **id:** The ID of the protection rule. Data type: long. You must specify this parameter.
-        /// *   The protection rule configurations: The role of this parameter is the same as that of the **Rules** parameter in the **CreateDefenseRule** topic. For more information, see the "**Protection rule parameters**" section in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
-        /// 
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public string Rules { get; set; }
 
         /// <summary>
-        /// The ID of the protection rule template to which the protection rule whose configurations you want to modify belongs.
+        /// <para>The ID of the protection rule template to which the protection rule whose configurations you want to modify belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>5325</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

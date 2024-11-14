@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeUserSlsLogRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The region IDs.
+        /// <para>The region IDs.</para>
         /// </summary>
         [NameInMap("LogRegions")]
         [Validation(Required=false)]
         public List<string> LogRegions { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9D11AC3A-A10C-56E7-A342-E87EC892****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,59 +10,81 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeCertsResponseBody : TeaModel {
         /// <summary>
-        /// The certificates.
+        /// <para>The certificates.</para>
         /// </summary>
         [NameInMap("Certs")]
         [Validation(Required=false)]
         public List<DescribeCertsResponseBodyCerts> Certs { get; set; }
         public class DescribeCertsResponseBodyCerts : TeaModel {
             /// <summary>
-            /// The time when the certificate becomes valid.
+            /// <para>The time when the certificate becomes valid.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1976256736582</para>
             /// </summary>
             [NameInMap("AfterDate")]
             [Validation(Required=false)]
             public long? AfterDate { get; set; }
 
             /// <summary>
-            /// The time when the certificate expires.
+            /// <para>The time when the certificate expires.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1976256836582</para>
             /// </summary>
             [NameInMap("BeforeDate")]
             [Validation(Required=false)]
             public long? BeforeDate { get; set; }
 
             /// <summary>
-            /// The globally unique ID of the certificate. The value is in the "Certificate ID-cn-hangzhou" format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.
+            /// <para>The globally unique ID of the certificate. The value is in the &quot;Certificate ID-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1234567-cn-hangzhou</para>
             /// </summary>
             [NameInMap("CertIdentifier")]
             [Validation(Required=false)]
             public string CertIdentifier { get; set; }
 
             /// <summary>
-            /// The name of the certificate.
+            /// <para>The name of the certificate.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>waf1234</para>
             /// </summary>
             [NameInMap("CertName")]
             [Validation(Required=false)]
             public string CertName { get; set; }
 
             /// <summary>
-            /// The common name.
+            /// <para>The common name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>*.example.com</para>
             /// </summary>
             [NameInMap("CommonName")]
             [Validation(Required=false)]
             public string CommonName { get; set; }
 
             /// <summary>
-            /// The domain name that is added to WAF.
+            /// <para>The domain name that is added to WAF.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://www.example.com">www.example.com</a></para>
             /// </summary>
             [NameInMap("Domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
             /// <summary>
-            /// Indicates whether the certificate chain is complete. Valid values:
+            /// <para>Indicates whether the certificate chain is complete. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("IsChainCompleted")]
             [Validation(Required=false)]
@@ -71,14 +93,20 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>19511B0D-5AE0-5600-BB8A-DC2C8345****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

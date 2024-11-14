@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribePunishedDomainsResponseBody : TeaModel {
         /// <summary>
-        /// The domain names that are penalized for failing to obtain an ICP filing.
+        /// <para>The domain names that are penalized for failing to obtain an ICP filing.</para>
         /// </summary>
         [NameInMap("PunishedDomains")]
         [Validation(Required=false)]
         public List<string> PunishedDomains { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B1F4D802-55A1-5D53-A247-7E79****85E7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

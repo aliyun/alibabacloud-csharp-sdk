@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DeleteMajorProtectionBlackIpResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>66A98669-CC6E-4F3E-80A6-3014697B11AE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

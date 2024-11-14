@@ -10,44 +10,72 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeProductInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The information about the instances.
+        /// <para>The information about the instances.</para>
         /// </summary>
         [NameInMap("ProductInstances")]
         [Validation(Required=false)]
         public List<DescribeProductInstancesResponseBodyProductInstances> ProductInstances { get; set; }
         public class DescribeProductInstancesResponseBodyProductInstances : TeaModel {
             /// <summary>
-            /// The ID of the Alibaba Cloud account to which the resource belongs.
+            /// <para>The ID of the Alibaba Cloud account to which the resource belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1704********9107</para>
             /// </summary>
             [NameInMap("OwnerUserId")]
             [Validation(Required=false)]
             public string OwnerUserId { get; set; }
 
             /// <summary>
-            /// The ID of the instance.
+            /// <para>The ID of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-2ze1tm4pvghp****cluv</para>
             /// </summary>
             [NameInMap("ResourceInstanceId")]
             [Validation(Required=false)]
             public string ResourceInstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The IP address of the instance that is added to WAF.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.X.X.1</para>
+            /// </summary>
             [NameInMap("ResourceInstanceIp")]
             [Validation(Required=false)]
             public string ResourceInstanceIp { get; set; }
 
+            /// <summary>
+            /// <para>The name of the instance that is added to WAF.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>demoInstanceName</para>
+            /// </summary>
             [NameInMap("ResourceInstanceName")]
             [Validation(Required=false)]
             public string ResourceInstanceName { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
-            /// The public IP address of the instance.
+            /// <para>The public IP address of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.X.X.1</para>
             /// </summary>
             [NameInMap("ResourceIp")]
             [Validation(Required=false)]
             [Obsolete]
             public string ResourceIp { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
-            /// The name of the instance.
+            /// <para>The name of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ecs-test</para>
             /// </summary>
             [NameInMap("ResourceName")]
             [Validation(Required=false)]
@@ -55,28 +83,34 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceName { get; set; }
 
             /// <summary>
-            /// The information about the ports.
+            /// <para>The information about the ports.</para>
             /// </summary>
             [NameInMap("ResourcePorts")]
             [Validation(Required=false)]
             public List<DescribeProductInstancesResponseBodyProductInstancesResourcePorts> ResourcePorts { get; set; }
             public class DescribeProductInstancesResponseBodyProductInstancesResourcePorts : TeaModel {
                 /// <summary>
-                /// The information about the certificates.
+                /// <para>The information about the certificates.</para>
                 /// </summary>
                 [NameInMap("Certificates")]
                 [Validation(Required=false)]
                 public List<DescribeProductInstancesResponseBodyProductInstancesResourcePortsCertificates> Certificates { get; set; }
                 public class DescribeProductInstancesResponseBodyProductInstancesResourcePortsCertificates : TeaModel {
                     /// <summary>
-                    /// The ID of the certificate.
+                    /// <para>The ID of the certificate.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10106183</para>
                     /// </summary>
                     [NameInMap("CertificateId")]
                     [Validation(Required=false)]
                     public string CertificateId { get; set; }
 
                     /// <summary>
-                    /// The name of the certificate.
+                    /// <para>The name of the certificate.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>trafficxxxx.cn</para>
                     /// </summary>
                     [NameInMap("CertificateName")]
                     [Validation(Required=false)]
@@ -85,17 +119,24 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 }
 
                 /// <summary>
-                /// The port number.
+                /// <para>The port number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>443</para>
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// The protocol type. Valid values:
+                /// <para>The protocol type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>http</b></description></item>
+                /// <item><description><b>https</b></description></item>
+                /// </list>
                 /// 
-                /// *   **http**
-                /// *   **https**
+                /// <b>Example:</b>
+                /// <para>https</para>
                 /// </summary>
                 [NameInMap("Protocol")]
                 [Validation(Required=false)]
@@ -104,29 +145,37 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// The cloud service to which the instance belongs. Valid values:
+            /// <para>The cloud service to which the instance belongs. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>clb4</b>: Layer 4 CLB.</description></item>
+            /// <item><description><b>clb7</b>: Layer 7 CLB.</description></item>
+            /// <item><description><b>ecs</b>: ECS.</description></item>
+            /// </list>
             /// 
-            /// *   **clb4**: Layer 4 CLB.
-            /// *   **clb7**: Layer 7 CLB.
-            /// *   **ecs**: ECS.
+            /// <b>Example:</b>
+            /// <para>clb4</para>
             /// </summary>
             [NameInMap("ResourceProduct")]
             [Validation(Required=false)]
             public string ResourceProduct { get; set; }
 
             /// <summary>
-            /// The region ID of the instance. Valid values:
+            /// <para>The region ID of the instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>cn-chengdu</b>: China (Chengdu).</description></item>
+            /// <item><description><b>cn-beijing</b>: China (Beijing).</description></item>
+            /// <item><description><b>cn-zhangjiakou</b>: China (Zhangjiakou).</description></item>
+            /// <item><description><b>cn-hangzhou</b>: China (Hangzhou).</description></item>
+            /// <item><description><b>cn-shanghai</b>: China (Shanghai).</description></item>
+            /// <item><description><b>cn-shenzhen</b>: China (Shenzhen).</description></item>
+            /// <item><description><b>cn-qingdao</b>: China (Qingdao).</description></item>
+            /// <item><description><b>cn-hongkong</b>: China (Hong Kong).</description></item>
+            /// <item><description><b>ap-southeast-3</b>: Malaysia (Kuala Lumpur).</description></item>
+            /// <item><description><b>ap-southeast-5</b>: Indonesia (Jakarta).</description></item>
+            /// </list>
             /// 
-            /// *   **cn-chengdu**: China (Chengdu).
-            /// *   **cn-beijing**: China (Beijing).
-            /// *   **cn-zhangjiakou**: China (Zhangjiakou).
-            /// *   **cn-hangzhou**: China (Hangzhou).
-            /// *   **cn-shanghai**: China (Shanghai).
-            /// *   **cn-shenzhen**: China (Shenzhen).
-            /// *   **cn-qingdao**: China (Qingdao).
-            /// *   **cn-hongkong**: China (Hong Kong).
-            /// *   **ap-southeast-3**: Malaysia (Kuala Lumpur).
-            /// *   **ap-southeast-5**: Indonesia (Jakarta).
+            /// <b>Example:</b>
+            /// <para>cn-beijing</para>
             /// </summary>
             [NameInMap("ResourceRegionId")]
             [Validation(Required=false)]
@@ -135,14 +184,20 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FDCBAE1E-2B3F-5C13-AD20-844B9473****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

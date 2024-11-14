@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyDefenseRuleResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1EEA9C98-F166-54FE-ADE3-08D8****BDFA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

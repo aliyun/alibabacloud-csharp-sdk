@@ -64,13 +64,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary ChangeResourceGroup
-         *
-         * @param request ChangeResourceGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group to which a protected object belongs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public ChangeResourceGroupResponse ChangeResourceGroupWithOptions(ChangeResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -114,13 +122,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ChangeResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary ChangeResourceGroup
-         *
-         * @param request ChangeResourceGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group to which a protected object belongs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public async Task<ChangeResourceGroupResponse> ChangeResourceGroupWithOptionsAsync(ChangeResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -164,37 +180,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ChangeResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary ChangeResourceGroup
-         *
-         * @param request ChangeResourceGroupRequest
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group to which a protected object belongs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public ChangeResourceGroupResponse ChangeResourceGroup(ChangeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ChangeResourceGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary ChangeResourceGroup
-         *
-         * @param request ChangeResourceGroupRequest
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group to which a protected object belongs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public async Task<ChangeResourceGroupResponse> ChangeResourceGroupAsync(ChangeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ChangeResourceGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Clears an IP address blacklist for major event protection.
-         *
-         * @param request ClearMajorProtectionBlackIpRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ClearMajorProtectionBlackIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears an IP address blacklist for major event protection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClearMajorProtectionBlackIpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearMajorProtectionBlackIpResponse
+        /// </returns>
         public ClearMajorProtectionBlackIpResponse ClearMajorProtectionBlackIpWithOptions(ClearMajorProtectionBlackIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -238,13 +274,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ClearMajorProtectionBlackIpResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Clears an IP address blacklist for major event protection.
-         *
-         * @param request ClearMajorProtectionBlackIpRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ClearMajorProtectionBlackIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears an IP address blacklist for major event protection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClearMajorProtectionBlackIpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearMajorProtectionBlackIpResponse
+        /// </returns>
         public async Task<ClearMajorProtectionBlackIpResponse> ClearMajorProtectionBlackIpWithOptionsAsync(ClearMajorProtectionBlackIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -288,37 +332,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ClearMajorProtectionBlackIpResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Clears an IP address blacklist for major event protection.
-         *
-         * @param request ClearMajorProtectionBlackIpRequest
-         * @return ClearMajorProtectionBlackIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears an IP address blacklist for major event protection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClearMajorProtectionBlackIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearMajorProtectionBlackIpResponse
+        /// </returns>
         public ClearMajorProtectionBlackIpResponse ClearMajorProtectionBlackIp(ClearMajorProtectionBlackIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ClearMajorProtectionBlackIpWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Clears an IP address blacklist for major event protection.
-         *
-         * @param request ClearMajorProtectionBlackIpRequest
-         * @return ClearMajorProtectionBlackIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears an IP address blacklist for major event protection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClearMajorProtectionBlackIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearMajorProtectionBlackIpResponse
+        /// </returns>
         public async Task<ClearMajorProtectionBlackIpResponse> ClearMajorProtectionBlackIpAsync(ClearMajorProtectionBlackIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ClearMajorProtectionBlackIpWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a new protection template from the copy.
-         *
-         * @param request CopyDefenseTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CopyDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a new protection template from the copy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CopyDefenseTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CopyDefenseTemplateResponse
+        /// </returns>
         public CopyDefenseTemplateResponse CopyDefenseTemplateWithOptions(CopyDefenseTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -358,13 +422,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CopyDefenseTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a new protection template from the copy.
-         *
-         * @param request CopyDefenseTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CopyDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a new protection template from the copy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CopyDefenseTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CopyDefenseTemplateResponse
+        /// </returns>
         public async Task<CopyDefenseTemplateResponse> CopyDefenseTemplateWithOptionsAsync(CopyDefenseTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -404,37 +476,233 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CopyDefenseTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a new protection template from the copy.
-         *
-         * @param request CopyDefenseTemplateRequest
-         * @return CopyDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a new protection template from the copy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CopyDefenseTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CopyDefenseTemplateResponse
+        /// </returns>
         public CopyDefenseTemplateResponse CopyDefenseTemplate(CopyDefenseTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CopyDefenseTemplateWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a new protection template from the copy.
-         *
-         * @param request CopyDefenseTemplateRequest
-         * @return CopyDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a new protection template from the copy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CopyDefenseTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CopyDefenseTemplateResponse
+        /// </returns>
         public async Task<CopyDefenseTemplateResponse> CopyDefenseTemplateAsync(CopyDefenseTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CopyDefenseTemplateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 接入云产品资源
-         *
-         * @param tmpReq CreateCloudResourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateCloudResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data export task in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateApiExportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApiExportResponse
+        /// </returns>
+        public CreateApiExportResponse CreateApiExportWithOptions(CreateApiExportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Param))
+            {
+                query["Param"] = request.Param;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateApiExport",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateApiExportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data export task in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateApiExportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApiExportResponse
+        /// </returns>
+        public async Task<CreateApiExportResponse> CreateApiExportWithOptionsAsync(CreateApiExportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Param))
+            {
+                query["Param"] = request.Param;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateApiExport",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateApiExportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data export task in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateApiExportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApiExportResponse
+        /// </returns>
+        public CreateApiExportResponse CreateApiExport(CreateApiExportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateApiExportWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data export task in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateApiExportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApiExportResponse
+        /// </returns>
+        public async Task<CreateApiExportResponse> CreateApiExportAsync(CreateApiExportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateApiExportWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a service to Web Application Firewall (WAF). This operation is supported for only the Elastic Compute Service (ECS) and Classic Load Balancer (CLB) services.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateCloudResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCloudResourceResponse
+        /// </returns>
         public CreateCloudResourceResponse CreateCloudResourceWithOptions(CreateCloudResourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -492,13 +760,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreateCloudResourceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 接入云产品资源
-         *
-         * @param tmpReq CreateCloudResourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateCloudResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a service to Web Application Firewall (WAF). This operation is supported for only the Elastic Compute Service (ECS) and Classic Load Balancer (CLB) services.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateCloudResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCloudResourceResponse
+        /// </returns>
         public async Task<CreateCloudResourceResponse> CreateCloudResourceWithOptionsAsync(CreateCloudResourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -556,37 +832,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreateCloudResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 接入云产品资源
-         *
-         * @param request CreateCloudResourceRequest
-         * @return CreateCloudResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a service to Web Application Firewall (WAF). This operation is supported for only the Elastic Compute Service (ECS) and Classic Load Balancer (CLB) services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCloudResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCloudResourceResponse
+        /// </returns>
         public CreateCloudResourceResponse CreateCloudResource(CreateCloudResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCloudResourceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 接入云产品资源
-         *
-         * @param request CreateCloudResourceRequest
-         * @return CreateCloudResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a service to Web Application Firewall (WAF). This operation is supported for only the Elastic Compute Service (ECS) and Classic Load Balancer (CLB) services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCloudResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCloudResourceResponse
+        /// </returns>
         public async Task<CreateCloudResourceResponse> CreateCloudResourceAsync(CreateCloudResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCloudResourceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a protected object group.
-         *
-         * @param request CreateDefenseResourceGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDefenseResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDefenseResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDefenseResourceGroupResponse
+        /// </returns>
         public CreateDefenseResourceGroupResponse CreateDefenseResourceGroupWithOptions(CreateDefenseResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -634,13 +930,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreateDefenseResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a protected object group.
-         *
-         * @param request CreateDefenseResourceGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDefenseResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDefenseResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDefenseResourceGroupResponse
+        /// </returns>
         public async Task<CreateDefenseResourceGroupResponse> CreateDefenseResourceGroupWithOptionsAsync(CreateDefenseResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -688,37 +992,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreateDefenseResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a protected object group.
-         *
-         * @param request CreateDefenseResourceGroupRequest
-         * @return CreateDefenseResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDefenseResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDefenseResourceGroupResponse
+        /// </returns>
         public CreateDefenseResourceGroupResponse CreateDefenseResourceGroup(CreateDefenseResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDefenseResourceGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a protected object group.
-         *
-         * @param request CreateDefenseResourceGroupRequest
-         * @return CreateDefenseResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDefenseResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDefenseResourceGroupResponse
+        /// </returns>
         public async Task<CreateDefenseResourceGroupResponse> CreateDefenseResourceGroupAsync(CreateDefenseResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDefenseResourceGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a protection rule.
-         *
-         * @param request CreateDefenseRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDefenseRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDefenseRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDefenseRuleResponse
+        /// </returns>
         public CreateDefenseRuleResponse CreateDefenseRuleWithOptions(CreateDefenseRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -739,17 +1063,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
-            {
-                query["Rules"] = request.Rules;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
+            {
+                body["Rules"] = request.Rules;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -766,13 +1092,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreateDefenseRuleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a protection rule.
-         *
-         * @param request CreateDefenseRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDefenseRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDefenseRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDefenseRuleResponse
+        /// </returns>
         public async Task<CreateDefenseRuleResponse> CreateDefenseRuleWithOptionsAsync(CreateDefenseRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -793,17 +1127,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
-            {
-                query["Rules"] = request.Rules;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
+            {
+                body["Rules"] = request.Rules;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -820,37 +1156,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreateDefenseRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a protection rule.
-         *
-         * @param request CreateDefenseRuleRequest
-         * @return CreateDefenseRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDefenseRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDefenseRuleResponse
+        /// </returns>
         public CreateDefenseRuleResponse CreateDefenseRule(CreateDefenseRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDefenseRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a protection rule.
-         *
-         * @param request CreateDefenseRuleRequest
-         * @return CreateDefenseRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDefenseRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDefenseRuleResponse
+        /// </returns>
         public async Task<CreateDefenseRuleResponse> CreateDefenseRuleAsync(CreateDefenseRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDefenseRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a protection rule template.
-         *
-         * @param request CreateDefenseTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDefenseTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDefenseTemplateResponse
+        /// </returns>
         public CreateDefenseTemplateResponse CreateDefenseTemplateWithOptions(CreateDefenseTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -910,13 +1266,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreateDefenseTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a protection rule template.
-         *
-         * @param request CreateDefenseTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDefenseTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDefenseTemplateResponse
+        /// </returns>
         public async Task<CreateDefenseTemplateResponse> CreateDefenseTemplateWithOptionsAsync(CreateDefenseTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -976,37 +1340,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreateDefenseTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a protection rule template.
-         *
-         * @param request CreateDefenseTemplateRequest
-         * @return CreateDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDefenseTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDefenseTemplateResponse
+        /// </returns>
         public CreateDefenseTemplateResponse CreateDefenseTemplate(CreateDefenseTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDefenseTemplateWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a protection rule template.
-         *
-         * @param request CreateDefenseTemplateRequest
-         * @return CreateDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDefenseTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDefenseTemplateResponse
+        /// </returns>
         public async Task<CreateDefenseTemplateResponse> CreateDefenseTemplateAsync(CreateDefenseTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDefenseTemplateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Adds a domain name to Web Application Firewall (WAF).
-         *
-         * @param tmpReq CreateDomainRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a domain name to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDomainResponse
+        /// </returns>
         public CreateDomainResponse CreateDomainWithOptions(CreateDomainRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1068,13 +1452,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreateDomainResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Adds a domain name to Web Application Firewall (WAF).
-         *
-         * @param tmpReq CreateDomainRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a domain name to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDomainResponse
+        /// </returns>
         public async Task<CreateDomainResponse> CreateDomainWithOptionsAsync(CreateDomainRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1136,37 +1528,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreateDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Adds a domain name to Web Application Firewall (WAF).
-         *
-         * @param request CreateDomainRequest
-         * @return CreateDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a domain name to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDomainResponse
+        /// </returns>
         public CreateDomainResponse CreateDomain(CreateDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDomainWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Adds a domain name to Web Application Firewall (WAF).
-         *
-         * @param request CreateDomainRequest
-         * @return CreateDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a domain name to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDomainResponse
+        /// </returns>
         public async Task<CreateDomainResponse> CreateDomainAsync(CreateDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDomainWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a node group for a hybrid cloud cluster.
-         *
-         * @param request CreateHybridCloudGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateHybridCloudGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a node group for a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHybridCloudGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHybridCloudGroupResponse
+        /// </returns>
         public CreateHybridCloudGroupResponse CreateHybridCloudGroupWithOptions(CreateHybridCloudGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1230,13 +1642,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreateHybridCloudGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a node group for a hybrid cloud cluster.
-         *
-         * @param request CreateHybridCloudGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateHybridCloudGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a node group for a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHybridCloudGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHybridCloudGroupResponse
+        /// </returns>
         public async Task<CreateHybridCloudGroupResponse> CreateHybridCloudGroupWithOptionsAsync(CreateHybridCloudGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1300,39 +1720,62 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreateHybridCloudGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a node group for a hybrid cloud cluster.
-         *
-         * @param request CreateHybridCloudGroupRequest
-         * @return CreateHybridCloudGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a node group for a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHybridCloudGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHybridCloudGroupResponse
+        /// </returns>
         public CreateHybridCloudGroupResponse CreateHybridCloudGroup(CreateHybridCloudGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateHybridCloudGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a node group for a hybrid cloud cluster.
-         *
-         * @param request CreateHybridCloudGroupRequest
-         * @return CreateHybridCloudGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a node group for a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHybridCloudGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHybridCloudGroupResponse
+        /// </returns>
         public async Task<CreateHybridCloudGroupResponse> CreateHybridCloudGroupAsync(CreateHybridCloudGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateHybridCloudGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates an IP address blacklist for major event protection.
-         *
-         * @description This operation is available only on the China site (aliyun.com).
-         *
-         * @param request CreateMajorProtectionBlackIpRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateMajorProtectionBlackIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an IP address blacklist for major event protection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMajorProtectionBlackIpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMajorProtectionBlackIpResponse
+        /// </returns>
         public CreateMajorProtectionBlackIpResponse CreateMajorProtectionBlackIpWithOptions(CreateMajorProtectionBlackIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1388,15 +1831,26 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreateMajorProtectionBlackIpResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an IP address blacklist for major event protection.
-         *
-         * @description This operation is available only on the China site (aliyun.com).
-         *
-         * @param request CreateMajorProtectionBlackIpRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateMajorProtectionBlackIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an IP address blacklist for major event protection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMajorProtectionBlackIpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMajorProtectionBlackIpResponse
+        /// </returns>
         public async Task<CreateMajorProtectionBlackIpResponse> CreateMajorProtectionBlackIpWithOptionsAsync(CreateMajorProtectionBlackIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1452,41 +1906,67 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreateMajorProtectionBlackIpResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an IP address blacklist for major event protection.
-         *
-         * @description This operation is available only on the China site (aliyun.com).
-         *
-         * @param request CreateMajorProtectionBlackIpRequest
-         * @return CreateMajorProtectionBlackIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an IP address blacklist for major event protection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMajorProtectionBlackIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMajorProtectionBlackIpResponse
+        /// </returns>
         public CreateMajorProtectionBlackIpResponse CreateMajorProtectionBlackIp(CreateMajorProtectionBlackIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateMajorProtectionBlackIpWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates an IP address blacklist for major event protection.
-         *
-         * @description This operation is available only on the China site (aliyun.com).
-         *
-         * @param request CreateMajorProtectionBlackIpRequest
-         * @return CreateMajorProtectionBlackIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an IP address blacklist for major event protection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only on the China site (aliyun.com).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMajorProtectionBlackIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMajorProtectionBlackIpResponse
+        /// </returns>
         public async Task<CreateMajorProtectionBlackIpResponse> CreateMajorProtectionBlackIpAsync(CreateMajorProtectionBlackIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateMajorProtectionBlackIpWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Adds members to use the multi-account management feature of Web Application Firewall (WAF).
-         *
-         * @param request CreateMemberAccountsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateMemberAccountsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds members to use the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMemberAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMemberAccountsResponse
+        /// </returns>
         public CreateMemberAccountsResponse CreateMemberAccountsWithOptions(CreateMemberAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1530,13 +2010,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreateMemberAccountsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Adds members to use the multi-account management feature of Web Application Firewall (WAF).
-         *
-         * @param request CreateMemberAccountsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateMemberAccountsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds members to use the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMemberAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMemberAccountsResponse
+        /// </returns>
         public async Task<CreateMemberAccountsResponse> CreateMemberAccountsWithOptionsAsync(CreateMemberAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1580,37 +2068,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreateMemberAccountsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Adds members to use the multi-account management feature of Web Application Firewall (WAF).
-         *
-         * @param request CreateMemberAccountsRequest
-         * @return CreateMemberAccountsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds members to use the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMemberAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMemberAccountsResponse
+        /// </returns>
         public CreateMemberAccountsResponse CreateMemberAccounts(CreateMemberAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateMemberAccountsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Adds members to use the multi-account management feature of Web Application Firewall (WAF).
-         *
-         * @param request CreateMemberAccountsRequest
-         * @return CreateMemberAccountsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds members to use the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMemberAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMemberAccountsResponse
+        /// </returns>
         public async Task<CreateMemberAccountsResponse> CreateMemberAccountsAsync(CreateMemberAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateMemberAccountsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a pay-as-you-go Web Application Firewall (WAF) 3.0 instance.
-         *
-         * @param request CreatePostpaidInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreatePostpaidInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a pay-as-you-go Web Application Firewall (WAF) 3.0 instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePostpaidInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePostpaidInstanceResponse
+        /// </returns>
         public CreatePostpaidInstanceResponse CreatePostpaidInstanceWithOptions(CreatePostpaidInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1642,13 +2150,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreatePostpaidInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a pay-as-you-go Web Application Firewall (WAF) 3.0 instance.
-         *
-         * @param request CreatePostpaidInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreatePostpaidInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a pay-as-you-go Web Application Firewall (WAF) 3.0 instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePostpaidInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePostpaidInstanceResponse
+        /// </returns>
         public async Task<CreatePostpaidInstanceResponse> CreatePostpaidInstanceWithOptionsAsync(CreatePostpaidInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1680,37 +2196,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreatePostpaidInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a pay-as-you-go Web Application Firewall (WAF) 3.0 instance.
-         *
-         * @param request CreatePostpaidInstanceRequest
-         * @return CreatePostpaidInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a pay-as-you-go Web Application Firewall (WAF) 3.0 instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePostpaidInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePostpaidInstanceResponse
+        /// </returns>
         public CreatePostpaidInstanceResponse CreatePostpaidInstance(CreatePostpaidInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreatePostpaidInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a pay-as-you-go Web Application Firewall (WAF) 3.0 instance.
-         *
-         * @param request CreatePostpaidInstanceRequest
-         * @return CreatePostpaidInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a pay-as-you-go Web Application Firewall (WAF) 3.0 instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePostpaidInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePostpaidInstanceResponse
+        /// </returns>
         public async Task<CreatePostpaidInstanceResponse> CreatePostpaidInstanceAsync(CreatePostpaidInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreatePostpaidInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Uploads a ShangMi (SM) certificate for a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.
-         *
-         * @param request CreateSM2CertRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSM2CertResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads a ShangMi (SM) certificate for a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSM2CertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSM2CertResponse
+        /// </returns>
         public CreateSM2CertResponse CreateSM2CertWithOptions(CreateSM2CertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1766,13 +2302,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreateSM2CertResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Uploads a ShangMi (SM) certificate for a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.
-         *
-         * @param request CreateSM2CertRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSM2CertResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads a ShangMi (SM) certificate for a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSM2CertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSM2CertResponse
+        /// </returns>
         public async Task<CreateSM2CertResponse> CreateSM2CertWithOptionsAsync(CreateSM2CertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1828,44 +2372,64 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<CreateSM2CertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Uploads a ShangMi (SM) certificate for a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.
-         *
-         * @param request CreateSM2CertRequest
-         * @return CreateSM2CertResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads a ShangMi (SM) certificate for a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSM2CertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSM2CertResponse
+        /// </returns>
         public CreateSM2CertResponse CreateSM2Cert(CreateSM2CertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSM2CertWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Uploads a ShangMi (SM) certificate for a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.
-         *
-         * @param request CreateSM2CertRequest
-         * @return CreateSM2CertResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads a ShangMi (SM) certificate for a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSM2CertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSM2CertResponse
+        /// </returns>
         public async Task<CreateSM2CertResponse> CreateSM2CertAsync(CreateSM2CertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSM2CertWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除API安全风险
-         *
-         * @param request DeleteApisecAbnormalRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteApisecAbnormalResponse
-         */
-        public DeleteApisecAbnormalResponse DeleteApisecAbnormalWithOptions(DeleteApisecAbnormalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple risks detected by the API security module at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApisecAbnormalsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApisecAbnormalsResponse
+        /// </returns>
+        public DeleteApisecAbnormalsResponse DeleteApisecAbnormalsWithOptions(DeleteApisecAbnormalsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AbnormalId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AbnormalIds))
             {
-                query["AbnormalId"] = request.AbnormalId;
+                query["AbnormalIds"] = request.AbnormalIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
@@ -1874,10 +2438,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
-            {
-                query["Region"] = request.Region;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1893,7 +2453,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DeleteApisecAbnormal",
+                Action = "DeleteApisecAbnormals",
                 Version = "2021-10-01",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -1903,23 +2463,31 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteApisecAbnormalResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DeleteApisecAbnormalsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除API安全风险
-         *
-         * @param request DeleteApisecAbnormalRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteApisecAbnormalResponse
-         */
-        public async Task<DeleteApisecAbnormalResponse> DeleteApisecAbnormalWithOptionsAsync(DeleteApisecAbnormalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple risks detected by the API security module at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApisecAbnormalsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApisecAbnormalsResponse
+        /// </returns>
+        public async Task<DeleteApisecAbnormalsResponse> DeleteApisecAbnormalsWithOptionsAsync(DeleteApisecAbnormalsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AbnormalId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AbnormalIds))
             {
-                query["AbnormalId"] = request.AbnormalId;
+                query["AbnormalIds"] = request.AbnormalIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
@@ -1928,10 +2496,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
-            {
-                query["Region"] = request.Region;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1947,7 +2511,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DeleteApisecAbnormal",
+                Action = "DeleteApisecAbnormals",
                 Version = "2021-10-01",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -1957,41 +2521,61 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteApisecAbnormalResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DeleteApisecAbnormalsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除API安全风险
-         *
-         * @param request DeleteApisecAbnormalRequest
-         * @return DeleteApisecAbnormalResponse
-         */
-        public DeleteApisecAbnormalResponse DeleteApisecAbnormal(DeleteApisecAbnormalRequest request)
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple risks detected by the API security module at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApisecAbnormalsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApisecAbnormalsResponse
+        /// </returns>
+        public DeleteApisecAbnormalsResponse DeleteApisecAbnormals(DeleteApisecAbnormalsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DeleteApisecAbnormalWithOptions(request, runtime);
+            return DeleteApisecAbnormalsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除API安全风险
-         *
-         * @param request DeleteApisecAbnormalRequest
-         * @return DeleteApisecAbnormalResponse
-         */
-        public async Task<DeleteApisecAbnormalResponse> DeleteApisecAbnormalAsync(DeleteApisecAbnormalRequest request)
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple risks detected by the API security module at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApisecAbnormalsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApisecAbnormalsResponse
+        /// </returns>
+        public async Task<DeleteApisecAbnormalsResponse> DeleteApisecAbnormalsAsync(DeleteApisecAbnormalsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DeleteApisecAbnormalWithOptionsAsync(request, runtime);
+            return await DeleteApisecAbnormalsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除API安全事件
-         *
-         * @param request DeleteApisecEventRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteApisecEventResponse
-         */
-        public DeleteApisecEventResponse DeleteApisecEventWithOptions(DeleteApisecEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple security events detected by the API security module at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApisecEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApisecEventsResponse
+        /// </returns>
+        public DeleteApisecEventsResponse DeleteApisecEventsWithOptions(DeleteApisecEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -1999,17 +2583,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["ClusterId"] = request.ClusterId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventIds))
             {
-                query["EventId"] = request.EventId;
+                query["EventIds"] = request.EventIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
-            {
-                query["Region"] = request.Region;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -2025,7 +2605,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DeleteApisecEvent",
+                Action = "DeleteApisecEvents",
                 Version = "2021-10-01",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -2035,17 +2615,25 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteApisecEventResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DeleteApisecEventsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除API安全事件
-         *
-         * @param request DeleteApisecEventRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteApisecEventResponse
-         */
-        public async Task<DeleteApisecEventResponse> DeleteApisecEventWithOptionsAsync(DeleteApisecEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple security events detected by the API security module at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApisecEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApisecEventsResponse
+        /// </returns>
+        public async Task<DeleteApisecEventsResponse> DeleteApisecEventsWithOptionsAsync(DeleteApisecEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -2053,17 +2641,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["ClusterId"] = request.ClusterId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventIds))
             {
-                query["EventId"] = request.EventId;
+                query["EventIds"] = request.EventIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
-            {
-                query["Region"] = request.Region;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -2079,7 +2663,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DeleteApisecEvent",
+                Action = "DeleteApisecEvents",
                 Version = "2021-10-01",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -2089,40 +2673,60 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteApisecEventResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DeleteApisecEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除API安全事件
-         *
-         * @param request DeleteApisecEventRequest
-         * @return DeleteApisecEventResponse
-         */
-        public DeleteApisecEventResponse DeleteApisecEvent(DeleteApisecEventRequest request)
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple security events detected by the API security module at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApisecEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApisecEventsResponse
+        /// </returns>
+        public DeleteApisecEventsResponse DeleteApisecEvents(DeleteApisecEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DeleteApisecEventWithOptions(request, runtime);
+            return DeleteApisecEventsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除API安全事件
-         *
-         * @param request DeleteApisecEventRequest
-         * @return DeleteApisecEventResponse
-         */
-        public async Task<DeleteApisecEventResponse> DeleteApisecEventAsync(DeleteApisecEventRequest request)
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple security events detected by the API security module at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApisecEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApisecEventsResponse
+        /// </returns>
+        public async Task<DeleteApisecEventsResponse> DeleteApisecEventsAsync(DeleteApisecEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DeleteApisecEventWithOptionsAsync(request, runtime);
+            return await DeleteApisecEventsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除云产品资源
-         *
-         * @param request DeleteCloudResourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteCloudResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a service from Web Application Firewall (WAF). This operation is supported for only the Elastic Compute Service (ECS) and Classic Load Balancer (CLB) services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCloudResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCloudResourceResponse
+        /// </returns>
         public DeleteCloudResourceResponse DeleteCloudResourceWithOptions(DeleteCloudResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2170,13 +2774,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DeleteCloudResourceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除云产品资源
-         *
-         * @param request DeleteCloudResourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteCloudResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a service from Web Application Firewall (WAF). This operation is supported for only the Elastic Compute Service (ECS) and Classic Load Balancer (CLB) services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCloudResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCloudResourceResponse
+        /// </returns>
         public async Task<DeleteCloudResourceResponse> DeleteCloudResourceWithOptionsAsync(DeleteCloudResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2224,37 +2836,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DeleteCloudResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除云产品资源
-         *
-         * @param request DeleteCloudResourceRequest
-         * @return DeleteCloudResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a service from Web Application Firewall (WAF). This operation is supported for only the Elastic Compute Service (ECS) and Classic Load Balancer (CLB) services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCloudResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCloudResourceResponse
+        /// </returns>
         public DeleteCloudResourceResponse DeleteCloudResource(DeleteCloudResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteCloudResourceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除云产品资源
-         *
-         * @param request DeleteCloudResourceRequest
-         * @return DeleteCloudResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a service from Web Application Firewall (WAF). This operation is supported for only the Elastic Compute Service (ECS) and Classic Load Balancer (CLB) services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCloudResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCloudResourceResponse
+        /// </returns>
         public async Task<DeleteCloudResourceResponse> DeleteCloudResourceAsync(DeleteCloudResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCloudResourceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a protected object group.
-         *
-         * @param request DeleteDefenseResourceGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDefenseResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDefenseResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDefenseResourceGroupResponse
+        /// </returns>
         public DeleteDefenseResourceGroupResponse DeleteDefenseResourceGroupWithOptions(DeleteDefenseResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2294,13 +2926,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DeleteDefenseResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a protected object group.
-         *
-         * @param request DeleteDefenseResourceGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDefenseResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDefenseResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDefenseResourceGroupResponse
+        /// </returns>
         public async Task<DeleteDefenseResourceGroupResponse> DeleteDefenseResourceGroupWithOptionsAsync(DeleteDefenseResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2340,37 +2980,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DeleteDefenseResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a protected object group.
-         *
-         * @param request DeleteDefenseResourceGroupRequest
-         * @return DeleteDefenseResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDefenseResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDefenseResourceGroupResponse
+        /// </returns>
         public DeleteDefenseResourceGroupResponse DeleteDefenseResourceGroup(DeleteDefenseResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDefenseResourceGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a protected object group.
-         *
-         * @param request DeleteDefenseResourceGroupRequest
-         * @return DeleteDefenseResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDefenseResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDefenseResourceGroupResponse
+        /// </returns>
         public async Task<DeleteDefenseResourceGroupResponse> DeleteDefenseResourceGroupAsync(DeleteDefenseResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDefenseResourceGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a protection rule.
-         *
-         * @param request DeleteDefenseRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDefenseRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDefenseRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDefenseRuleResponse
+        /// </returns>
         public DeleteDefenseRuleResponse DeleteDefenseRuleWithOptions(DeleteDefenseRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2414,13 +3074,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DeleteDefenseRuleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a protection rule.
-         *
-         * @param request DeleteDefenseRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDefenseRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDefenseRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDefenseRuleResponse
+        /// </returns>
         public async Task<DeleteDefenseRuleResponse> DeleteDefenseRuleWithOptionsAsync(DeleteDefenseRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2464,37 +3132,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DeleteDefenseRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a protection rule.
-         *
-         * @param request DeleteDefenseRuleRequest
-         * @return DeleteDefenseRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDefenseRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDefenseRuleResponse
+        /// </returns>
         public DeleteDefenseRuleResponse DeleteDefenseRule(DeleteDefenseRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDefenseRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a protection rule.
-         *
-         * @param request DeleteDefenseRuleRequest
-         * @return DeleteDefenseRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDefenseRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDefenseRuleResponse
+        /// </returns>
         public async Task<DeleteDefenseRuleResponse> DeleteDefenseRuleAsync(DeleteDefenseRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDefenseRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a protection rule template.
-         *
-         * @param request DeleteDefenseTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDefenseTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDefenseTemplateResponse
+        /// </returns>
         public DeleteDefenseTemplateResponse DeleteDefenseTemplateWithOptions(DeleteDefenseTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2534,13 +3222,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DeleteDefenseTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a protection rule template.
-         *
-         * @param request DeleteDefenseTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDefenseTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDefenseTemplateResponse
+        /// </returns>
         public async Task<DeleteDefenseTemplateResponse> DeleteDefenseTemplateWithOptionsAsync(DeleteDefenseTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2580,37 +3276,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DeleteDefenseTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a protection rule template.
-         *
-         * @param request DeleteDefenseTemplateRequest
-         * @return DeleteDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDefenseTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDefenseTemplateResponse
+        /// </returns>
         public DeleteDefenseTemplateResponse DeleteDefenseTemplate(DeleteDefenseTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDefenseTemplateWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a protection rule template.
-         *
-         * @param request DeleteDefenseTemplateRequest
-         * @return DeleteDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDefenseTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDefenseTemplateResponse
+        /// </returns>
         public async Task<DeleteDefenseTemplateResponse> DeleteDefenseTemplateAsync(DeleteDefenseTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDefenseTemplateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a domain name that is added to Web Application Firewall (WAF).
-         *
-         * @param request DeleteDomainRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a domain name that is added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDomainResponse
+        /// </returns>
         public DeleteDomainResponse DeleteDomainWithOptions(DeleteDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2654,13 +3370,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DeleteDomainResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a domain name that is added to Web Application Firewall (WAF).
-         *
-         * @param request DeleteDomainRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a domain name that is added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDomainResponse
+        /// </returns>
         public async Task<DeleteDomainResponse> DeleteDomainWithOptionsAsync(DeleteDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2704,37 +3428,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DeleteDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a domain name that is added to Web Application Firewall (WAF).
-         *
-         * @param request DeleteDomainRequest
-         * @return DeleteDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a domain name that is added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDomainResponse
+        /// </returns>
         public DeleteDomainResponse DeleteDomain(DeleteDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDomainWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a domain name that is added to Web Application Firewall (WAF).
-         *
-         * @param request DeleteDomainRequest
-         * @return DeleteDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a domain name that is added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDomainResponse
+        /// </returns>
         public async Task<DeleteDomainResponse> DeleteDomainAsync(DeleteDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDomainWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes an IP address blacklist for major event protection.
-         *
-         * @param request DeleteMajorProtectionBlackIpRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteMajorProtectionBlackIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IP address blacklist for major event protection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMajorProtectionBlackIpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMajorProtectionBlackIpResponse
+        /// </returns>
         public DeleteMajorProtectionBlackIpResponse DeleteMajorProtectionBlackIpWithOptions(DeleteMajorProtectionBlackIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2782,13 +3526,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DeleteMajorProtectionBlackIpResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an IP address blacklist for major event protection.
-         *
-         * @param request DeleteMajorProtectionBlackIpRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteMajorProtectionBlackIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IP address blacklist for major event protection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMajorProtectionBlackIpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMajorProtectionBlackIpResponse
+        /// </returns>
         public async Task<DeleteMajorProtectionBlackIpResponse> DeleteMajorProtectionBlackIpWithOptionsAsync(DeleteMajorProtectionBlackIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2836,37 +3588,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DeleteMajorProtectionBlackIpResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an IP address blacklist for major event protection.
-         *
-         * @param request DeleteMajorProtectionBlackIpRequest
-         * @return DeleteMajorProtectionBlackIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IP address blacklist for major event protection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMajorProtectionBlackIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMajorProtectionBlackIpResponse
+        /// </returns>
         public DeleteMajorProtectionBlackIpResponse DeleteMajorProtectionBlackIp(DeleteMajorProtectionBlackIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteMajorProtectionBlackIpWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes an IP address blacklist for major event protection.
-         *
-         * @param request DeleteMajorProtectionBlackIpRequest
-         * @return DeleteMajorProtectionBlackIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IP address blacklist for major event protection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMajorProtectionBlackIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMajorProtectionBlackIpResponse
+        /// </returns>
         public async Task<DeleteMajorProtectionBlackIpResponse> DeleteMajorProtectionBlackIpAsync(DeleteMajorProtectionBlackIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteMajorProtectionBlackIpWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Removes the members that are added for multi-account management in Web Application Firewall (WAF).
-         *
-         * @param request DeleteMemberAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteMemberAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes the members that are added for multi-account management in Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMemberAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemberAccountResponse
+        /// </returns>
         public DeleteMemberAccountResponse DeleteMemberAccountWithOptions(DeleteMemberAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2910,13 +3682,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DeleteMemberAccountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Removes the members that are added for multi-account management in Web Application Firewall (WAF).
-         *
-         * @param request DeleteMemberAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteMemberAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes the members that are added for multi-account management in Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMemberAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemberAccountResponse
+        /// </returns>
         public async Task<DeleteMemberAccountResponse> DeleteMemberAccountWithOptionsAsync(DeleteMemberAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2960,37 +3740,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DeleteMemberAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Removes the members that are added for multi-account management in Web Application Firewall (WAF).
-         *
-         * @param request DeleteMemberAccountRequest
-         * @return DeleteMemberAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes the members that are added for multi-account management in Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMemberAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemberAccountResponse
+        /// </returns>
         public DeleteMemberAccountResponse DeleteMemberAccount(DeleteMemberAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteMemberAccountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Removes the members that are added for multi-account management in Web Application Firewall (WAF).
-         *
-         * @param request DeleteMemberAccountRequest
-         * @return DeleteMemberAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes the members that are added for multi-account management in Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMemberAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemberAccountResponse
+        /// </returns>
         public async Task<DeleteMemberAccountResponse> DeleteMemberAccountAsync(DeleteMemberAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteMemberAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries whether an Alibaba Cloud account is the delegated administrator account of a Web Application Firewall (WAF) instance.
-         *
-         * @param request DescribeAccountDelegatedStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAccountDelegatedStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether an Alibaba Cloud account is the delegated administrator account of a Web Application Firewall (WAF) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccountDelegatedStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccountDelegatedStatusResponse
+        /// </returns>
         public DescribeAccountDelegatedStatusResponse DescribeAccountDelegatedStatusWithOptions(DescribeAccountDelegatedStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3026,13 +3826,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeAccountDelegatedStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether an Alibaba Cloud account is the delegated administrator account of a Web Application Firewall (WAF) instance.
-         *
-         * @param request DescribeAccountDelegatedStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAccountDelegatedStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether an Alibaba Cloud account is the delegated administrator account of a Web Application Firewall (WAF) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccountDelegatedStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccountDelegatedStatusResponse
+        /// </returns>
         public async Task<DescribeAccountDelegatedStatusResponse> DescribeAccountDelegatedStatusWithOptionsAsync(DescribeAccountDelegatedStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3068,37 +3876,217 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeAccountDelegatedStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether an Alibaba Cloud account is the delegated administrator account of a Web Application Firewall (WAF) instance.
-         *
-         * @param request DescribeAccountDelegatedStatusRequest
-         * @return DescribeAccountDelegatedStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether an Alibaba Cloud account is the delegated administrator account of a Web Application Firewall (WAF) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccountDelegatedStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccountDelegatedStatusResponse
+        /// </returns>
         public DescribeAccountDelegatedStatusResponse DescribeAccountDelegatedStatus(DescribeAccountDelegatedStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAccountDelegatedStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries whether an Alibaba Cloud account is the delegated administrator account of a Web Application Firewall (WAF) instance.
-         *
-         * @param request DescribeAccountDelegatedStatusRequest
-         * @return DescribeAccountDelegatedStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether an Alibaba Cloud account is the delegated administrator account of a Web Application Firewall (WAF) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccountDelegatedStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccountDelegatedStatusResponse
+        /// </returns>
         public async Task<DescribeAccountDelegatedStatusResponse> DescribeAccountDelegatedStatusAsync(DescribeAccountDelegatedStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAccountDelegatedStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询API安全风险站点统计
-         *
-         * @param request DescribeApisecAbnormalDomainStatisticRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeApisecAbnormalDomainStatisticResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of data export tasks in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApiExportsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApiExportsResponse
+        /// </returns>
+        public DescribeApiExportsResponse DescribeApiExportsWithOptions(DescribeApiExportsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiExports",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiExportsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of data export tasks in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApiExportsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApiExportsResponse
+        /// </returns>
+        public async Task<DescribeApiExportsResponse> DescribeApiExportsWithOptionsAsync(DescribeApiExportsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiExports",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiExportsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of data export tasks in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApiExportsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApiExportsResponse
+        /// </returns>
+        public DescribeApiExportsResponse DescribeApiExports(DescribeApiExportsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeApiExportsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of data export tasks in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApiExportsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApiExportsResponse
+        /// </returns>
+        public async Task<DescribeApiExportsResponse> DescribeApiExportsAsync(DescribeApiExportsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeApiExportsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on domain names on which risks are detected by the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecAbnormalDomainStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecAbnormalDomainStatisticResponse
+        /// </returns>
         public DescribeApisecAbnormalDomainStatisticResponse DescribeApisecAbnormalDomainStatisticWithOptions(DescribeApisecAbnormalDomainStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3126,10 +4114,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
-            {
-                query["Region"] = request.Region;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -3162,13 +4146,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeApisecAbnormalDomainStatisticResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询API安全风险站点统计
-         *
-         * @param request DescribeApisecAbnormalDomainStatisticRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeApisecAbnormalDomainStatisticResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on domain names on which risks are detected by the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecAbnormalDomainStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecAbnormalDomainStatisticResponse
+        /// </returns>
         public async Task<DescribeApisecAbnormalDomainStatisticResponse> DescribeApisecAbnormalDomainStatisticWithOptionsAsync(DescribeApisecAbnormalDomainStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3196,10 +4188,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
-            {
-                query["Region"] = request.Region;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -3232,37 +4220,617 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeApisecAbnormalDomainStatisticResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询API安全风险站点统计
-         *
-         * @param request DescribeApisecAbnormalDomainStatisticRequest
-         * @return DescribeApisecAbnormalDomainStatisticResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on domain names on which risks are detected by the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecAbnormalDomainStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecAbnormalDomainStatisticResponse
+        /// </returns>
         public DescribeApisecAbnormalDomainStatisticResponse DescribeApisecAbnormalDomainStatistic(DescribeApisecAbnormalDomainStatisticRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeApisecAbnormalDomainStatisticWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询API安全风险站点统计
-         *
-         * @param request DescribeApisecAbnormalDomainStatisticRequest
-         * @return DescribeApisecAbnormalDomainStatisticResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on domain names on which risks are detected by the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecAbnormalDomainStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecAbnormalDomainStatisticResponse
+        /// </returns>
         public async Task<DescribeApisecAbnormalDomainStatisticResponse> DescribeApisecAbnormalDomainStatisticAsync(DescribeApisecAbnormalDomainStatisticRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeApisecAbnormalDomainStatisticWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询API安全资产趋势图
-         *
-         * @param request DescribeApisecAssetTrendRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeApisecAssetTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of API security risks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecAbnormalsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecAbnormalsResponse
+        /// </returns>
+        public DescribeApisecAbnormalsResponse DescribeApisecAbnormalsWithOptions(DescribeApisecAbnormalsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AbnormalId))
+            {
+                query["AbnormalId"] = request.AbnormalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AbnormalLevel))
+            {
+                query["AbnormalLevel"] = request.AbnormalLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AbnormalTag))
+            {
+                query["AbnormalTag"] = request.AbnormalTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiFormat))
+            {
+                query["ApiFormat"] = request.ApiFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiTag))
+            {
+                query["ApiTag"] = request.ApiTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchedHost))
+            {
+                query["MatchedHost"] = request.MatchedHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderKey))
+            {
+                query["OrderKey"] = request.OrderKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderWay))
+            {
+                query["OrderWay"] = request.OrderWay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Origin))
+            {
+                query["Origin"] = request.Origin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserStatus))
+            {
+                query["UserStatus"] = request.UserStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecAbnormals",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecAbnormalsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of API security risks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecAbnormalsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecAbnormalsResponse
+        /// </returns>
+        public async Task<DescribeApisecAbnormalsResponse> DescribeApisecAbnormalsWithOptionsAsync(DescribeApisecAbnormalsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AbnormalId))
+            {
+                query["AbnormalId"] = request.AbnormalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AbnormalLevel))
+            {
+                query["AbnormalLevel"] = request.AbnormalLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AbnormalTag))
+            {
+                query["AbnormalTag"] = request.AbnormalTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiFormat))
+            {
+                query["ApiFormat"] = request.ApiFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiTag))
+            {
+                query["ApiTag"] = request.ApiTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchedHost))
+            {
+                query["MatchedHost"] = request.MatchedHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderKey))
+            {
+                query["OrderKey"] = request.OrderKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderWay))
+            {
+                query["OrderWay"] = request.OrderWay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Origin))
+            {
+                query["Origin"] = request.Origin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserStatus))
+            {
+                query["UserStatus"] = request.UserStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecAbnormals",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecAbnormalsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of API security risks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecAbnormalsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecAbnormalsResponse
+        /// </returns>
+        public DescribeApisecAbnormalsResponse DescribeApisecAbnormals(DescribeApisecAbnormalsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeApisecAbnormalsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of API security risks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecAbnormalsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecAbnormalsResponse
+        /// </returns>
+        public async Task<DescribeApisecAbnormalsResponse> DescribeApisecAbnormalsAsync(DescribeApisecAbnormalsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeApisecAbnormalsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries API assets in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecApiResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecApiResourcesResponse
+        /// </returns>
+        public DescribeApisecApiResourcesResponse DescribeApisecApiResourcesWithOptions(DescribeApisecApiResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiFormat))
+            {
+                query["ApiFormat"] = request.ApiFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiMethod))
+            {
+                query["ApiMethod"] = request.ApiMethod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiStatus))
+            {
+                query["ApiStatus"] = request.ApiStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiTag))
+            {
+                query["ApiTag"] = request.ApiTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiType))
+            {
+                query["ApiType"] = request.ApiType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthFlag))
+            {
+                query["AuthFlag"] = request.AuthFlag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Follow))
+            {
+                query["Follow"] = request.Follow;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchedHost))
+            {
+                query["MatchedHost"] = request.MatchedHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Note))
+            {
+                query["Note"] = request.Note;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderKey))
+            {
+                query["OrderKey"] = request.OrderKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderWay))
+            {
+                query["OrderWay"] = request.OrderWay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestSensitiveType))
+            {
+                query["RequestSensitiveType"] = request.RequestSensitiveType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveLevel))
+            {
+                query["SensitiveLevel"] = request.SensitiveLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveType))
+            {
+                query["SensitiveType"] = request.SensitiveType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecApiResources",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecApiResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries API assets in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecApiResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecApiResourcesResponse
+        /// </returns>
+        public async Task<DescribeApisecApiResourcesResponse> DescribeApisecApiResourcesWithOptionsAsync(DescribeApisecApiResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiFormat))
+            {
+                query["ApiFormat"] = request.ApiFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiMethod))
+            {
+                query["ApiMethod"] = request.ApiMethod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiStatus))
+            {
+                query["ApiStatus"] = request.ApiStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiTag))
+            {
+                query["ApiTag"] = request.ApiTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiType))
+            {
+                query["ApiType"] = request.ApiType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthFlag))
+            {
+                query["AuthFlag"] = request.AuthFlag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Follow))
+            {
+                query["Follow"] = request.Follow;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchedHost))
+            {
+                query["MatchedHost"] = request.MatchedHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Note))
+            {
+                query["Note"] = request.Note;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderKey))
+            {
+                query["OrderKey"] = request.OrderKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderWay))
+            {
+                query["OrderWay"] = request.OrderWay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestSensitiveType))
+            {
+                query["RequestSensitiveType"] = request.RequestSensitiveType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveLevel))
+            {
+                query["SensitiveLevel"] = request.SensitiveLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveType))
+            {
+                query["SensitiveType"] = request.SensitiveType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecApiResources",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecApiResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries API assets in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecApiResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecApiResourcesResponse
+        /// </returns>
+        public DescribeApisecApiResourcesResponse DescribeApisecApiResources(DescribeApisecApiResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeApisecApiResourcesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries API assets in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecApiResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecApiResourcesResponse
+        /// </returns>
+        public async Task<DescribeApisecApiResourcesResponse> DescribeApisecApiResourcesAsync(DescribeApisecApiResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeApisecApiResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the asset trends in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecAssetTrendRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecAssetTrendResponse
+        /// </returns>
         public DescribeApisecAssetTrendResponse DescribeApisecAssetTrendWithOptions(DescribeApisecAssetTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3278,10 +4846,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
-            {
-                query["Region"] = request.Region;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -3314,13 +4878,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeApisecAssetTrendResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询API安全资产趋势图
-         *
-         * @param request DescribeApisecAssetTrendRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeApisecAssetTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the asset trends in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecAssetTrendRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecAssetTrendResponse
+        /// </returns>
         public async Task<DescribeApisecAssetTrendResponse> DescribeApisecAssetTrendWithOptionsAsync(DescribeApisecAssetTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3336,10 +4908,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
-            {
-                query["Region"] = request.Region;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -3372,37 +4940,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeApisecAssetTrendResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询API安全资产趋势图
-         *
-         * @param request DescribeApisecAssetTrendRequest
-         * @return DescribeApisecAssetTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the asset trends in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecAssetTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecAssetTrendResponse
+        /// </returns>
         public DescribeApisecAssetTrendResponse DescribeApisecAssetTrend(DescribeApisecAssetTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeApisecAssetTrendWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询API安全资产趋势图
-         *
-         * @param request DescribeApisecAssetTrendRequest
-         * @return DescribeApisecAssetTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the asset trends in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecAssetTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecAssetTrendResponse
+        /// </returns>
         public async Task<DescribeApisecAssetTrendResponse> DescribeApisecAssetTrendAsync(DescribeApisecAssetTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeApisecAssetTrendWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询API安全事件站点统计
-         *
-         * @param request DescribeApisecEventDomainStatisticRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeApisecEventDomainStatisticResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on domain names on which security events are detected by the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecEventDomainStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecEventDomainStatisticResponse
+        /// </returns>
         public DescribeApisecEventDomainStatisticResponse DescribeApisecEventDomainStatisticWithOptions(DescribeApisecEventDomainStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3430,10 +5018,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
-            {
-                query["Region"] = request.Region;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -3466,13 +5050,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeApisecEventDomainStatisticResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询API安全事件站点统计
-         *
-         * @param request DescribeApisecEventDomainStatisticRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeApisecEventDomainStatisticResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on domain names on which security events are detected by the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecEventDomainStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecEventDomainStatisticResponse
+        /// </returns>
         public async Task<DescribeApisecEventDomainStatisticResponse> DescribeApisecEventDomainStatisticWithOptionsAsync(DescribeApisecEventDomainStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3500,10 +5092,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
-            {
-                query["Region"] = request.Region;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -3536,37 +5124,329 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeApisecEventDomainStatisticResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询API安全事件站点统计
-         *
-         * @param request DescribeApisecEventDomainStatisticRequest
-         * @return DescribeApisecEventDomainStatisticResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on domain names on which security events are detected by the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecEventDomainStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecEventDomainStatisticResponse
+        /// </returns>
         public DescribeApisecEventDomainStatisticResponse DescribeApisecEventDomainStatistic(DescribeApisecEventDomainStatisticRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeApisecEventDomainStatisticWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询API安全事件站点统计
-         *
-         * @param request DescribeApisecEventDomainStatisticRequest
-         * @return DescribeApisecEventDomainStatisticResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on domain names on which security events are detected by the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecEventDomainStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecEventDomainStatisticResponse
+        /// </returns>
         public async Task<DescribeApisecEventDomainStatisticResponse> DescribeApisecEventDomainStatisticAsync(DescribeApisecEventDomainStatisticRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeApisecEventDomainStatisticWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the configurations of API security log subscription.
-         *
-         * @param request DescribeApisecLogDeliveriesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeApisecLogDeliveriesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries API security events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecEventsResponse
+        /// </returns>
+        public DescribeApisecEventsResponse DescribeApisecEventsWithOptions(DescribeApisecEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiFormat))
+            {
+                query["ApiFormat"] = request.ApiFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiTag))
+            {
+                query["ApiTag"] = request.ApiTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttackIp))
+            {
+                query["AttackIp"] = request.AttackIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTs))
+            {
+                query["EndTs"] = request.EndTs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventLevel))
+            {
+                query["EventLevel"] = request.EventLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventTag))
+            {
+                query["EventTag"] = request.EventTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchedHost))
+            {
+                query["MatchedHost"] = request.MatchedHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderKey))
+            {
+                query["OrderKey"] = request.OrderKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderWay))
+            {
+                query["OrderWay"] = request.OrderWay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Origin))
+            {
+                query["Origin"] = request.Origin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTs))
+            {
+                query["StartTs"] = request.StartTs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserStatus))
+            {
+                query["UserStatus"] = request.UserStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecEvents",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries API security events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecEventsResponse
+        /// </returns>
+        public async Task<DescribeApisecEventsResponse> DescribeApisecEventsWithOptionsAsync(DescribeApisecEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiFormat))
+            {
+                query["ApiFormat"] = request.ApiFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiTag))
+            {
+                query["ApiTag"] = request.ApiTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttackIp))
+            {
+                query["AttackIp"] = request.AttackIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTs))
+            {
+                query["EndTs"] = request.EndTs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventLevel))
+            {
+                query["EventLevel"] = request.EventLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventTag))
+            {
+                query["EventTag"] = request.EventTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchedHost))
+            {
+                query["MatchedHost"] = request.MatchedHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderKey))
+            {
+                query["OrderKey"] = request.OrderKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderWay))
+            {
+                query["OrderWay"] = request.OrderWay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Origin))
+            {
+                query["Origin"] = request.Origin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTs))
+            {
+                query["StartTs"] = request.StartTs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserStatus))
+            {
+                query["UserStatus"] = request.UserStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecEvents",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecEventsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries API security events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecEventsResponse
+        /// </returns>
+        public DescribeApisecEventsResponse DescribeApisecEvents(DescribeApisecEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeApisecEventsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries API security events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecEventsResponse
+        /// </returns>
+        public async Task<DescribeApisecEventsResponse> DescribeApisecEventsAsync(DescribeApisecEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeApisecEventsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of API security log subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecLogDeliveriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecLogDeliveriesResponse
+        /// </returns>
         public DescribeApisecLogDeliveriesResponse DescribeApisecLogDeliveriesWithOptions(DescribeApisecLogDeliveriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3602,13 +5482,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeApisecLogDeliveriesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the configurations of API security log subscription.
-         *
-         * @param request DescribeApisecLogDeliveriesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeApisecLogDeliveriesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of API security log subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecLogDeliveriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecLogDeliveriesResponse
+        /// </returns>
         public async Task<DescribeApisecLogDeliveriesResponse> DescribeApisecLogDeliveriesWithOptionsAsync(DescribeApisecLogDeliveriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3644,37 +5532,761 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeApisecLogDeliveriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the configurations of API security log subscription.
-         *
-         * @param request DescribeApisecLogDeliveriesRequest
-         * @return DescribeApisecLogDeliveriesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of API security log subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecLogDeliveriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecLogDeliveriesResponse
+        /// </returns>
         public DescribeApisecLogDeliveriesResponse DescribeApisecLogDeliveries(DescribeApisecLogDeliveriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeApisecLogDeliveriesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the configurations of API security log subscription.
-         *
-         * @param request DescribeApisecLogDeliveriesRequest
-         * @return DescribeApisecLogDeliveriesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of API security log subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecLogDeliveriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecLogDeliveriesResponse
+        /// </returns>
         public async Task<DescribeApisecLogDeliveriesResponse> DescribeApisecLogDeliveriesAsync(DescribeApisecLogDeliveriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeApisecLogDeliveriesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询API安全敏感数据类型统计
-         *
-         * @param request DescribeApisecSensitiveDomainStatisticRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeApisecSensitiveDomainStatisticResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of domain names detected in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecMatchedHostsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecMatchedHostsResponse
+        /// </returns>
+        public DescribeApisecMatchedHostsResponse DescribeApisecMatchedHostsWithOptions(DescribeApisecMatchedHostsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchedHost))
+            {
+                query["MatchedHost"] = request.MatchedHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecMatchedHosts",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecMatchedHostsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of domain names detected in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecMatchedHostsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecMatchedHostsResponse
+        /// </returns>
+        public async Task<DescribeApisecMatchedHostsResponse> DescribeApisecMatchedHostsWithOptionsAsync(DescribeApisecMatchedHostsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchedHost))
+            {
+                query["MatchedHost"] = request.MatchedHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecMatchedHosts",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecMatchedHostsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of domain names detected in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecMatchedHostsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecMatchedHostsResponse
+        /// </returns>
+        public DescribeApisecMatchedHostsResponse DescribeApisecMatchedHosts(DescribeApisecMatchedHostsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeApisecMatchedHostsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of domain names detected in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecMatchedHostsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecMatchedHostsResponse
+        /// </returns>
+        public async Task<DescribeApisecMatchedHostsResponse> DescribeApisecMatchedHostsAsync(DescribeApisecMatchedHostsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeApisecMatchedHostsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of protected object groups to which API security policies are applied.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecProtectionGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecProtectionGroupsResponse
+        /// </returns>
+        public DescribeApisecProtectionGroupsResponse DescribeApisecProtectionGroupsWithOptions(DescribeApisecProtectionGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApisecStatus))
+            {
+                query["ApisecStatus"] = request.ApisecStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroup))
+            {
+                query["ResourceGroup"] = request.ResourceGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecProtectionGroups",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecProtectionGroupsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of protected object groups to which API security policies are applied.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecProtectionGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecProtectionGroupsResponse
+        /// </returns>
+        public async Task<DescribeApisecProtectionGroupsResponse> DescribeApisecProtectionGroupsWithOptionsAsync(DescribeApisecProtectionGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApisecStatus))
+            {
+                query["ApisecStatus"] = request.ApisecStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroup))
+            {
+                query["ResourceGroup"] = request.ResourceGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecProtectionGroups",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecProtectionGroupsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of protected object groups to which API security policies are applied.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecProtectionGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecProtectionGroupsResponse
+        /// </returns>
+        public DescribeApisecProtectionGroupsResponse DescribeApisecProtectionGroups(DescribeApisecProtectionGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeApisecProtectionGroupsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of protected object groups to which API security policies are applied.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecProtectionGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecProtectionGroupsResponse
+        /// </returns>
+        public async Task<DescribeApisecProtectionGroupsResponse> DescribeApisecProtectionGroupsAsync(DescribeApisecProtectionGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeApisecProtectionGroupsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of protected objects to which API security policies are applied.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecProtectionResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecProtectionResourcesResponse
+        /// </returns>
+        public DescribeApisecProtectionResourcesResponse DescribeApisecProtectionResourcesWithOptions(DescribeApisecProtectionResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApisecStatus))
+            {
+                query["ApisecStatus"] = request.ApisecStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resource))
+            {
+                query["Resource"] = request.Resource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecProtectionResources",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecProtectionResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of protected objects to which API security policies are applied.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecProtectionResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecProtectionResourcesResponse
+        /// </returns>
+        public async Task<DescribeApisecProtectionResourcesResponse> DescribeApisecProtectionResourcesWithOptionsAsync(DescribeApisecProtectionResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApisecStatus))
+            {
+                query["ApisecStatus"] = request.ApisecStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resource))
+            {
+                query["Resource"] = request.Resource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecProtectionResources",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecProtectionResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of protected objects to which API security policies are applied.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecProtectionResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecProtectionResourcesResponse
+        /// </returns>
+        public DescribeApisecProtectionResourcesResponse DescribeApisecProtectionResources(DescribeApisecProtectionResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeApisecProtectionResourcesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of protected objects to which API security policies are applied.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecProtectionResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecProtectionResourcesResponse
+        /// </returns>
+        public async Task<DescribeApisecProtectionResourcesResponse> DescribeApisecProtectionResourcesAsync(DescribeApisecProtectionResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeApisecProtectionResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the policies configured in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecRulesResponse
+        /// </returns>
+        public DescribeApisecRulesResponse DescribeApisecRulesWithOptions(DescribeApisecRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Origin))
+            {
+                query["Origin"] = request.Origin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecRules",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the policies configured in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecRulesResponse
+        /// </returns>
+        public async Task<DescribeApisecRulesResponse> DescribeApisecRulesWithOptionsAsync(DescribeApisecRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Origin))
+            {
+                query["Origin"] = request.Origin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecRules",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the policies configured in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecRulesResponse
+        /// </returns>
+        public DescribeApisecRulesResponse DescribeApisecRules(DescribeApisecRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeApisecRulesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the policies configured in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecRulesResponse
+        /// </returns>
+        public async Task<DescribeApisecRulesResponse> DescribeApisecRulesAsync(DescribeApisecRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeApisecRulesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on domain names on which sensitive data is detected by the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecSensitiveDomainStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecSensitiveDomainStatisticResponse
+        /// </returns>
         public DescribeApisecSensitiveDomainStatisticResponse DescribeApisecSensitiveDomainStatisticWithOptions(DescribeApisecSensitiveDomainStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3702,10 +6314,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
-            {
-                query["Region"] = request.Region;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -3742,13 +6350,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeApisecSensitiveDomainStatisticResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询API安全敏感数据类型统计
-         *
-         * @param request DescribeApisecSensitiveDomainStatisticRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeApisecSensitiveDomainStatisticResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on domain names on which sensitive data is detected by the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecSensitiveDomainStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecSensitiveDomainStatisticResponse
+        /// </returns>
         public async Task<DescribeApisecSensitiveDomainStatisticResponse> DescribeApisecSensitiveDomainStatisticWithOptionsAsync(DescribeApisecSensitiveDomainStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3776,10 +6392,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
-            {
-                query["Region"] = request.Region;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -3816,37 +6428,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeApisecSensitiveDomainStatisticResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询API安全敏感数据类型统计
-         *
-         * @param request DescribeApisecSensitiveDomainStatisticRequest
-         * @return DescribeApisecSensitiveDomainStatisticResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on domain names on which sensitive data is detected by the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecSensitiveDomainStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecSensitiveDomainStatisticResponse
+        /// </returns>
         public DescribeApisecSensitiveDomainStatisticResponse DescribeApisecSensitiveDomainStatistic(DescribeApisecSensitiveDomainStatisticRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeApisecSensitiveDomainStatisticWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询API安全敏感数据类型统计
-         *
-         * @param request DescribeApisecSensitiveDomainStatisticRequest
-         * @return DescribeApisecSensitiveDomainStatisticResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on domain names on which sensitive data is detected by the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecSensitiveDomainStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecSensitiveDomainStatisticResponse
+        /// </returns>
         public async Task<DescribeApisecSensitiveDomainStatisticResponse> DescribeApisecSensitiveDomainStatisticAsync(DescribeApisecSensitiveDomainStatisticRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeApisecSensitiveDomainStatisticWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the Logstores whose names start with apisec- in Simple Log Service.
-         *
-         * @param request DescribeApisecSlsLogStoresRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeApisecSlsLogStoresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Logstores whose names start with apisec- in Simple Log Service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecSlsLogStoresRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecSlsLogStoresResponse
+        /// </returns>
         public DescribeApisecSlsLogStoresResponse DescribeApisecSlsLogStoresWithOptions(DescribeApisecSlsLogStoresRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3890,13 +6522,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeApisecSlsLogStoresResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the Logstores whose names start with apisec- in Simple Log Service.
-         *
-         * @param request DescribeApisecSlsLogStoresRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeApisecSlsLogStoresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Logstores whose names start with apisec- in Simple Log Service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecSlsLogStoresRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecSlsLogStoresResponse
+        /// </returns>
         public async Task<DescribeApisecSlsLogStoresResponse> DescribeApisecSlsLogStoresWithOptionsAsync(DescribeApisecSlsLogStoresRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3940,37 +6580,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeApisecSlsLogStoresResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the Logstores whose names start with apisec- in Simple Log Service.
-         *
-         * @param request DescribeApisecSlsLogStoresRequest
-         * @return DescribeApisecSlsLogStoresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Logstores whose names start with apisec- in Simple Log Service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecSlsLogStoresRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecSlsLogStoresResponse
+        /// </returns>
         public DescribeApisecSlsLogStoresResponse DescribeApisecSlsLogStores(DescribeApisecSlsLogStoresRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeApisecSlsLogStoresWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the Logstores whose names start with apisec- in Simple Log Service.
-         *
-         * @param request DescribeApisecSlsLogStoresRequest
-         * @return DescribeApisecSlsLogStoresResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Logstores whose names start with apisec- in Simple Log Service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecSlsLogStoresRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecSlsLogStoresResponse
+        /// </returns>
         public async Task<DescribeApisecSlsLogStoresResponse> DescribeApisecSlsLogStoresAsync(DescribeApisecSlsLogStoresRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeApisecSlsLogStoresWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the projects whose names start with apisec- in Simple Log Service.
-         *
-         * @param request DescribeApisecSlsProjectsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeApisecSlsProjectsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the projects whose names start with apisec- in Simple Log Service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecSlsProjectsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecSlsProjectsResponse
+        /// </returns>
         public DescribeApisecSlsProjectsResponse DescribeApisecSlsProjectsWithOptions(DescribeApisecSlsProjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4010,13 +6670,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeApisecSlsProjectsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the projects whose names start with apisec- in Simple Log Service.
-         *
-         * @param request DescribeApisecSlsProjectsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeApisecSlsProjectsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the projects whose names start with apisec- in Simple Log Service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecSlsProjectsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecSlsProjectsResponse
+        /// </returns>
         public async Task<DescribeApisecSlsProjectsResponse> DescribeApisecSlsProjectsWithOptionsAsync(DescribeApisecSlsProjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4056,37 +6724,521 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeApisecSlsProjectsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the projects whose names start with apisec- in Simple Log Service.
-         *
-         * @param request DescribeApisecSlsProjectsRequest
-         * @return DescribeApisecSlsProjectsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the projects whose names start with apisec- in Simple Log Service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecSlsProjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecSlsProjectsResponse
+        /// </returns>
         public DescribeApisecSlsProjectsResponse DescribeApisecSlsProjects(DescribeApisecSlsProjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeApisecSlsProjectsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the projects whose names start with apisec- in Simple Log Service.
-         *
-         * @param request DescribeApisecSlsProjectsRequest
-         * @return DescribeApisecSlsProjectsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the projects whose names start with apisec- in Simple Log Service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecSlsProjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecSlsProjectsResponse
+        /// </returns>
         public async Task<DescribeApisecSlsProjectsResponse> DescribeApisecSlsProjectsAsync(DescribeApisecSlsProjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeApisecSlsProjectsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of a certificate, such as the certificate name, expiration time, issuance time, and associated domain name.
-         *
-         * @param request DescribeCertDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCertDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics of API security-related risks and events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecStatisticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecStatisticsResponse
+        /// </returns>
+        public DescribeApisecStatisticsResponse DescribeApisecStatisticsWithOptions(DescribeApisecStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecStatistics",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecStatisticsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics of API security-related risks and events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecStatisticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecStatisticsResponse
+        /// </returns>
+        public async Task<DescribeApisecStatisticsResponse> DescribeApisecStatisticsWithOptionsAsync(DescribeApisecStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecStatistics",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecStatisticsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics of API security-related risks and events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecStatisticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecStatisticsResponse
+        /// </returns>
+        public DescribeApisecStatisticsResponse DescribeApisecStatistics(DescribeApisecStatisticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeApisecStatisticsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics of API security-related risks and events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecStatisticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecStatisticsResponse
+        /// </returns>
+        public async Task<DescribeApisecStatisticsResponse> DescribeApisecStatisticsAsync(DescribeApisecStatisticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeApisecStatisticsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protection suggestions for APIs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecSuggestionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecSuggestionsResponse
+        /// </returns>
+        public DescribeApisecSuggestionsResponse DescribeApisecSuggestionsWithOptions(DescribeApisecSuggestionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecSuggestions",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecSuggestionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protection suggestions for APIs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecSuggestionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecSuggestionsResponse
+        /// </returns>
+        public async Task<DescribeApisecSuggestionsResponse> DescribeApisecSuggestionsWithOptionsAsync(DescribeApisecSuggestionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecSuggestions",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecSuggestionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protection suggestions for APIs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecSuggestionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecSuggestionsResponse
+        /// </returns>
+        public DescribeApisecSuggestionsResponse DescribeApisecSuggestions(DescribeApisecSuggestionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeApisecSuggestionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protection suggestions for APIs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecSuggestionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecSuggestionsResponse
+        /// </returns>
+        public async Task<DescribeApisecSuggestionsResponse> DescribeApisecSuggestionsAsync(DescribeApisecSuggestionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeApisecSuggestionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user operation records in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecUserOperationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecUserOperationsResponse
+        /// </returns>
+        public DescribeApisecUserOperationsResponse DescribeApisecUserOperationsWithOptions(DescribeApisecUserOperationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectId))
+            {
+                query["ObjectId"] = request.ObjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecUserOperations",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecUserOperationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user operation records in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecUserOperationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecUserOperationsResponse
+        /// </returns>
+        public async Task<DescribeApisecUserOperationsResponse> DescribeApisecUserOperationsWithOptionsAsync(DescribeApisecUserOperationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectId))
+            {
+                query["ObjectId"] = request.ObjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecUserOperations",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecUserOperationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user operation records in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecUserOperationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecUserOperationsResponse
+        /// </returns>
+        public DescribeApisecUserOperationsResponse DescribeApisecUserOperations(DescribeApisecUserOperationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeApisecUserOperationsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user operation records in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApisecUserOperationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApisecUserOperationsResponse
+        /// </returns>
+        public async Task<DescribeApisecUserOperationsResponse> DescribeApisecUserOperationsAsync(DescribeApisecUserOperationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeApisecUserOperationsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a certificate, such as the certificate name, expiration time, issuance time, and associated domain name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCertDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCertDetailResponse
+        /// </returns>
         public DescribeCertDetailResponse DescribeCertDetailWithOptions(DescribeCertDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4126,13 +7278,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeCertDetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a certificate, such as the certificate name, expiration time, issuance time, and associated domain name.
-         *
-         * @param request DescribeCertDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCertDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a certificate, such as the certificate name, expiration time, issuance time, and associated domain name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCertDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCertDetailResponse
+        /// </returns>
         public async Task<DescribeCertDetailResponse> DescribeCertDetailWithOptionsAsync(DescribeCertDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4172,37 +7332,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeCertDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a certificate, such as the certificate name, expiration time, issuance time, and associated domain name.
-         *
-         * @param request DescribeCertDetailRequest
-         * @return DescribeCertDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a certificate, such as the certificate name, expiration time, issuance time, and associated domain name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCertDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCertDetailResponse
+        /// </returns>
         public DescribeCertDetailResponse DescribeCertDetail(DescribeCertDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCertDetailWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of a certificate, such as the certificate name, expiration time, issuance time, and associated domain name.
-         *
-         * @param request DescribeCertDetailRequest
-         * @return DescribeCertDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a certificate, such as the certificate name, expiration time, issuance time, and associated domain name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCertDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCertDetailResponse
+        /// </returns>
         public async Task<DescribeCertDetailResponse> DescribeCertDetailAsync(DescribeCertDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCertDetailWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the certificates issued for your domain names that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeCertsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCertsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the certificates issued for your domain names that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCertsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCertsResponse
+        /// </returns>
         public DescribeCertsResponse DescribeCertsWithOptions(DescribeCertsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4254,13 +7434,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeCertsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the certificates issued for your domain names that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeCertsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCertsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the certificates issued for your domain names that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCertsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCertsResponse
+        /// </returns>
         public async Task<DescribeCertsResponse> DescribeCertsWithOptionsAsync(DescribeCertsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4312,37 +7500,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeCertsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the certificates issued for your domain names that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeCertsRequest
-         * @return DescribeCertsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the certificates issued for your domain names that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCertsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCertsResponse
+        /// </returns>
         public DescribeCertsResponse DescribeCerts(DescribeCertsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCertsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the certificates issued for your domain names that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeCertsRequest
-         * @return DescribeCertsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the certificates issued for your domain names that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCertsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCertsResponse
+        /// </returns>
         public async Task<DescribeCertsResponse> DescribeCertsAsync(DescribeCertsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCertsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询云产品的端口详情
-         *
-         * @param request DescribeCloudResourceAccessPortDetailsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCloudResourceAccessPortDetailsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a port of the cloud service that is added to Web Application Firewall (WAF). This operation is supported for only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudResourceAccessPortDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudResourceAccessPortDetailsResponse
+        /// </returns>
         public DescribeCloudResourceAccessPortDetailsResponse DescribeCloudResourceAccessPortDetailsWithOptions(DescribeCloudResourceAccessPortDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4402,13 +7610,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeCloudResourceAccessPortDetailsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询云产品的端口详情
-         *
-         * @param request DescribeCloudResourceAccessPortDetailsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCloudResourceAccessPortDetailsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a port of the cloud service that is added to Web Application Firewall (WAF). This operation is supported for only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudResourceAccessPortDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudResourceAccessPortDetailsResponse
+        /// </returns>
         public async Task<DescribeCloudResourceAccessPortDetailsResponse> DescribeCloudResourceAccessPortDetailsWithOptionsAsync(DescribeCloudResourceAccessPortDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4468,37 +7684,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeCloudResourceAccessPortDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询云产品的端口详情
-         *
-         * @param request DescribeCloudResourceAccessPortDetailsRequest
-         * @return DescribeCloudResourceAccessPortDetailsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a port of the cloud service that is added to Web Application Firewall (WAF). This operation is supported for only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudResourceAccessPortDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudResourceAccessPortDetailsResponse
+        /// </returns>
         public DescribeCloudResourceAccessPortDetailsResponse DescribeCloudResourceAccessPortDetails(DescribeCloudResourceAccessPortDetailsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCloudResourceAccessPortDetailsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询云产品的端口详情
-         *
-         * @param request DescribeCloudResourceAccessPortDetailsRequest
-         * @return DescribeCloudResourceAccessPortDetailsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a port of the cloud service that is added to Web Application Firewall (WAF). This operation is supported for only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudResourceAccessPortDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudResourceAccessPortDetailsResponse
+        /// </returns>
         public async Task<DescribeCloudResourceAccessPortDetailsResponse> DescribeCloudResourceAccessPortDetailsAsync(DescribeCloudResourceAccessPortDetailsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCloudResourceAccessPortDetailsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询已接入云产品的端口列表
-         *
-         * @param request DescribeCloudResourceAccessedPortsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCloudResourceAccessedPortsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports of the cloud service that is added to Web Application Firewall (WAF). This operation is supported for only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudResourceAccessedPortsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudResourceAccessedPortsResponse
+        /// </returns>
         public DescribeCloudResourceAccessedPortsResponse DescribeCloudResourceAccessedPortsWithOptions(DescribeCloudResourceAccessedPortsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4538,13 +7774,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeCloudResourceAccessedPortsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询已接入云产品的端口列表
-         *
-         * @param request DescribeCloudResourceAccessedPortsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCloudResourceAccessedPortsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports of the cloud service that is added to Web Application Firewall (WAF). This operation is supported for only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudResourceAccessedPortsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudResourceAccessedPortsResponse
+        /// </returns>
         public async Task<DescribeCloudResourceAccessedPortsResponse> DescribeCloudResourceAccessedPortsWithOptionsAsync(DescribeCloudResourceAccessedPortsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4584,37 +7828,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeCloudResourceAccessedPortsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询已接入云产品的端口列表
-         *
-         * @param request DescribeCloudResourceAccessedPortsRequest
-         * @return DescribeCloudResourceAccessedPortsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports of the cloud service that is added to Web Application Firewall (WAF). This operation is supported for only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudResourceAccessedPortsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudResourceAccessedPortsResponse
+        /// </returns>
         public DescribeCloudResourceAccessedPortsResponse DescribeCloudResourceAccessedPorts(DescribeCloudResourceAccessedPortsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCloudResourceAccessedPortsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询已接入云产品的端口列表
-         *
-         * @param request DescribeCloudResourceAccessedPortsRequest
-         * @return DescribeCloudResourceAccessedPortsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports of the cloud service that is added to Web Application Firewall (WAF). This operation is supported for only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudResourceAccessedPortsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudResourceAccessedPortsResponse
+        /// </returns>
         public async Task<DescribeCloudResourceAccessedPortsResponse> DescribeCloudResourceAccessedPortsAsync(DescribeCloudResourceAccessedPortsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCloudResourceAccessedPortsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries cloud service resources that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeCloudResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCloudResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries cloud service resources that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudResourcesResponse
+        /// </returns>
         public DescribeCloudResourcesResponse DescribeCloudResourcesWithOptions(DescribeCloudResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4694,13 +7958,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeCloudResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries cloud service resources that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeCloudResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCloudResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries cloud service resources that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudResourcesResponse
+        /// </returns>
         public async Task<DescribeCloudResourcesResponse> DescribeCloudResourcesWithOptionsAsync(DescribeCloudResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4780,37 +8052,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeCloudResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries cloud service resources that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeCloudResourcesRequest
-         * @return DescribeCloudResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries cloud service resources that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudResourcesResponse
+        /// </returns>
         public DescribeCloudResourcesResponse DescribeCloudResources(DescribeCloudResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCloudResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries cloud service resources that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeCloudResourcesRequest
-         * @return DescribeCloudResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries cloud service resources that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudResourcesResponse
+        /// </returns>
         public async Task<DescribeCloudResourcesResponse> DescribeCloudResourcesAsync(DescribeCloudResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCloudResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询Cname接入的数量
-         *
-         * @param request DescribeCnameCountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCnameCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total number of domain names that are added to Web Application Firewall (WAF) in CNAME record mode and hybrid cloud reverse proxy mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCnameCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCnameCountResponse
+        /// </returns>
         public DescribeCnameCountResponse DescribeCnameCountWithOptions(DescribeCnameCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4846,13 +8138,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeCnameCountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询Cname接入的数量
-         *
-         * @param request DescribeCnameCountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCnameCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total number of domain names that are added to Web Application Firewall (WAF) in CNAME record mode and hybrid cloud reverse proxy mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCnameCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCnameCountResponse
+        /// </returns>
         public async Task<DescribeCnameCountResponse> DescribeCnameCountWithOptionsAsync(DescribeCnameCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4888,37 +8188,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeCnameCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询Cname接入的数量
-         *
-         * @param request DescribeCnameCountRequest
-         * @return DescribeCnameCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total number of domain names that are added to Web Application Firewall (WAF) in CNAME record mode and hybrid cloud reverse proxy mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCnameCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCnameCountResponse
+        /// </returns>
         public DescribeCnameCountResponse DescribeCnameCount(DescribeCnameCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCnameCountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询Cname接入的数量
-         *
-         * @param request DescribeCnameCountRequest
-         * @return DescribeCnameCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total number of domain names that are added to Web Application Firewall (WAF) in CNAME record mode and hybrid cloud reverse proxy mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCnameCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCnameCountResponse
+        /// </returns>
         public async Task<DescribeCnameCountResponse> DescribeCnameCountAsync(DescribeCnameCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCnameCountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Checks whether DDoS attacks occur on specific domain names protected by a Web Application Firewall (WAF) instance.
-         *
-         * @param request DescribeDDoSStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDDoSStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether DDoS attacks occur on specific domain names protected by a Web Application Firewall (WAF) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDDoSStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDDoSStatusResponse
+        /// </returns>
         public DescribeDDoSStatusResponse DescribeDDoSStatusWithOptions(DescribeDDoSStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4954,13 +8274,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDDoSStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Checks whether DDoS attacks occur on specific domain names protected by a Web Application Firewall (WAF) instance.
-         *
-         * @param request DescribeDDoSStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDDoSStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether DDoS attacks occur on specific domain names protected by a Web Application Firewall (WAF) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDDoSStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDDoSStatusResponse
+        /// </returns>
         public async Task<DescribeDDoSStatusResponse> DescribeDDoSStatusWithOptionsAsync(DescribeDDoSStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4996,37 +8324,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDDoSStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Checks whether DDoS attacks occur on specific domain names protected by a Web Application Firewall (WAF) instance.
-         *
-         * @param request DescribeDDoSStatusRequest
-         * @return DescribeDDoSStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether DDoS attacks occur on specific domain names protected by a Web Application Firewall (WAF) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDDoSStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDDoSStatusResponse
+        /// </returns>
         public DescribeDDoSStatusResponse DescribeDDoSStatus(DescribeDDoSStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDDoSStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Checks whether DDoS attacks occur on specific domain names protected by a Web Application Firewall (WAF) instance.
-         *
-         * @param request DescribeDDoSStatusRequest
-         * @return DescribeDDoSStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether DDoS attacks occur on specific domain names protected by a Web Application Firewall (WAF) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDDoSStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDDoSStatusResponse
+        /// </returns>
         public async Task<DescribeDDoSStatusResponse> DescribeDDoSStatusAsync(DescribeDDoSStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDDoSStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询默认HTTPS配置
-         *
-         * @param request DescribeDefaultHttpsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefaultHttpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the default SSL and Transport Layer Security (TLS) settings.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefaultHttpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefaultHttpsResponse
+        /// </returns>
         public DescribeDefaultHttpsResponse DescribeDefaultHttpsWithOptions(DescribeDefaultHttpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5062,13 +8410,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefaultHttpsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询默认HTTPS配置
-         *
-         * @param request DescribeDefaultHttpsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefaultHttpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the default SSL and Transport Layer Security (TLS) settings.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefaultHttpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefaultHttpsResponse
+        /// </returns>
         public async Task<DescribeDefaultHttpsResponse> DescribeDefaultHttpsWithOptionsAsync(DescribeDefaultHttpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5104,37 +8460,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefaultHttpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询默认HTTPS配置
-         *
-         * @param request DescribeDefaultHttpsRequest
-         * @return DescribeDefaultHttpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the default SSL and Transport Layer Security (TLS) settings.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefaultHttpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefaultHttpsResponse
+        /// </returns>
         public DescribeDefaultHttpsResponse DescribeDefaultHttps(DescribeDefaultHttpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDefaultHttpsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询默认HTTPS配置
-         *
-         * @param request DescribeDefaultHttpsRequest
-         * @return DescribeDefaultHttpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the default SSL and Transport Layer Security (TLS) settings.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefaultHttpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefaultHttpsResponse
+        /// </returns>
         public async Task<DescribeDefaultHttpsResponse> DescribeDefaultHttpsAsync(DescribeDefaultHttpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDefaultHttpsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about a protected object.
-         *
-         * @param request DescribeDefenseResourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a protected object.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceResponse
+        /// </returns>
         public DescribeDefenseResourceResponse DescribeDefenseResourceWithOptions(DescribeDefenseResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5174,13 +8550,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseResourceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about a protected object.
-         *
-         * @param request DescribeDefenseResourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a protected object.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceResponse
+        /// </returns>
         public async Task<DescribeDefenseResourceResponse> DescribeDefenseResourceWithOptionsAsync(DescribeDefenseResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5220,37 +8604,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about a protected object.
-         *
-         * @param request DescribeDefenseResourceRequest
-         * @return DescribeDefenseResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a protected object.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceResponse
+        /// </returns>
         public DescribeDefenseResourceResponse DescribeDefenseResource(DescribeDefenseResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDefenseResourceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about a protected object.
-         *
-         * @param request DescribeDefenseResourceRequest
-         * @return DescribeDefenseResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a protected object.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceResponse
+        /// </returns>
         public async Task<DescribeDefenseResourceResponse> DescribeDefenseResourceAsync(DescribeDefenseResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDefenseResourceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about a protected object group.
-         *
-         * @param request DescribeDefenseResourceGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceGroupResponse
+        /// </returns>
         public DescribeDefenseResourceGroupResponse DescribeDefenseResourceGroupWithOptions(DescribeDefenseResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5290,13 +8694,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about a protected object group.
-         *
-         * @param request DescribeDefenseResourceGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceGroupResponse
+        /// </returns>
         public async Task<DescribeDefenseResourceGroupResponse> DescribeDefenseResourceGroupWithOptionsAsync(DescribeDefenseResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5336,37 +8748,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about a protected object group.
-         *
-         * @param request DescribeDefenseResourceGroupRequest
-         * @return DescribeDefenseResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceGroupResponse
+        /// </returns>
         public DescribeDefenseResourceGroupResponse DescribeDefenseResourceGroup(DescribeDefenseResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDefenseResourceGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about a protected object group.
-         *
-         * @param request DescribeDefenseResourceGroupRequest
-         * @return DescribeDefenseResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceGroupResponse
+        /// </returns>
         public async Task<DescribeDefenseResourceGroupResponse> DescribeDefenseResourceGroupAsync(DescribeDefenseResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDefenseResourceGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the names of protected object groups.
-         *
-         * @param request DescribeDefenseResourceGroupNamesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseResourceGroupNamesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the names of protected object groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceGroupNamesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceGroupNamesResponse
+        /// </returns>
         public DescribeDefenseResourceGroupNamesResponse DescribeDefenseResourceGroupNamesWithOptions(DescribeDefenseResourceGroupNamesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5414,13 +8846,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseResourceGroupNamesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the names of protected object groups.
-         *
-         * @param request DescribeDefenseResourceGroupNamesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseResourceGroupNamesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the names of protected object groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceGroupNamesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceGroupNamesResponse
+        /// </returns>
         public async Task<DescribeDefenseResourceGroupNamesResponse> DescribeDefenseResourceGroupNamesWithOptionsAsync(DescribeDefenseResourceGroupNamesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5468,37 +8908,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseResourceGroupNamesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the names of protected object groups.
-         *
-         * @param request DescribeDefenseResourceGroupNamesRequest
-         * @return DescribeDefenseResourceGroupNamesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the names of protected object groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceGroupNamesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceGroupNamesResponse
+        /// </returns>
         public DescribeDefenseResourceGroupNamesResponse DescribeDefenseResourceGroupNames(DescribeDefenseResourceGroupNamesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDefenseResourceGroupNamesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the names of protected object groups.
-         *
-         * @param request DescribeDefenseResourceGroupNamesRequest
-         * @return DescribeDefenseResourceGroupNamesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the names of protected object groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceGroupNamesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceGroupNamesResponse
+        /// </returns>
         public async Task<DescribeDefenseResourceGroupNamesResponse> DescribeDefenseResourceGroupNamesAsync(DescribeDefenseResourceGroupNamesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDefenseResourceGroupNamesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Performs a pagination query to retrieve the information about protected object groups.
-         *
-         * @param request DescribeDefenseResourceGroupsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseResourceGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a pagination query to retrieve the information about protected object groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceGroupsResponse
+        /// </returns>
         public DescribeDefenseResourceGroupsResponse DescribeDefenseResourceGroupsWithOptions(DescribeDefenseResourceGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5550,13 +9010,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseResourceGroupsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Performs a pagination query to retrieve the information about protected object groups.
-         *
-         * @param request DescribeDefenseResourceGroupsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseResourceGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a pagination query to retrieve the information about protected object groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceGroupsResponse
+        /// </returns>
         public async Task<DescribeDefenseResourceGroupsResponse> DescribeDefenseResourceGroupsWithOptionsAsync(DescribeDefenseResourceGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5608,37 +9076,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseResourceGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Performs a pagination query to retrieve the information about protected object groups.
-         *
-         * @param request DescribeDefenseResourceGroupsRequest
-         * @return DescribeDefenseResourceGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a pagination query to retrieve the information about protected object groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceGroupsResponse
+        /// </returns>
         public DescribeDefenseResourceGroupsResponse DescribeDefenseResourceGroups(DescribeDefenseResourceGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDefenseResourceGroupsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Performs a pagination query to retrieve the information about protected object groups.
-         *
-         * @param request DescribeDefenseResourceGroupsRequest
-         * @return DescribeDefenseResourceGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a pagination query to retrieve the information about protected object groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceGroupsResponse
+        /// </returns>
         public async Task<DescribeDefenseResourceGroupsResponse> DescribeDefenseResourceGroupsAsync(DescribeDefenseResourceGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDefenseResourceGroupsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Performs a pagination query to retrieve the names of protected objects.
-         *
-         * @param request DescribeDefenseResourceNamesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseResourceNamesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a pagination query to retrieve the names of protected objects.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceNamesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceNamesResponse
+        /// </returns>
         public DescribeDefenseResourceNamesResponse DescribeDefenseResourceNamesWithOptions(DescribeDefenseResourceNamesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5686,13 +9174,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseResourceNamesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Performs a pagination query to retrieve the names of protected objects.
-         *
-         * @param request DescribeDefenseResourceNamesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseResourceNamesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a pagination query to retrieve the names of protected objects.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceNamesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceNamesResponse
+        /// </returns>
         public async Task<DescribeDefenseResourceNamesResponse> DescribeDefenseResourceNamesWithOptionsAsync(DescribeDefenseResourceNamesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5740,37 +9236,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseResourceNamesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Performs a pagination query to retrieve the names of protected objects.
-         *
-         * @param request DescribeDefenseResourceNamesRequest
-         * @return DescribeDefenseResourceNamesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a pagination query to retrieve the names of protected objects.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceNamesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceNamesResponse
+        /// </returns>
         public DescribeDefenseResourceNamesResponse DescribeDefenseResourceNames(DescribeDefenseResourceNamesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDefenseResourceNamesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Performs a pagination query to retrieve the names of protected objects.
-         *
-         * @param request DescribeDefenseResourceNamesRequest
-         * @return DescribeDefenseResourceNamesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a pagination query to retrieve the names of protected objects.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceNamesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceNamesResponse
+        /// </returns>
         public async Task<DescribeDefenseResourceNamesResponse> DescribeDefenseResourceNamesAsync(DescribeDefenseResourceNamesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDefenseResourceNamesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the protection templates that are associated with a protected object or protected object group.
-         *
-         * @param request DescribeDefenseResourceTemplatesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseResourceTemplatesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protection templates that are associated with a protected object or protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceTemplatesResponse
+        /// </returns>
         public DescribeDefenseResourceTemplatesResponse DescribeDefenseResourceTemplatesWithOptions(DescribeDefenseResourceTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5822,13 +9338,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseResourceTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the protection templates that are associated with a protected object or protected object group.
-         *
-         * @param request DescribeDefenseResourceTemplatesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseResourceTemplatesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protection templates that are associated with a protected object or protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceTemplatesResponse
+        /// </returns>
         public async Task<DescribeDefenseResourceTemplatesResponse> DescribeDefenseResourceTemplatesWithOptionsAsync(DescribeDefenseResourceTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5880,37 +9404,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseResourceTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the protection templates that are associated with a protected object or protected object group.
-         *
-         * @param request DescribeDefenseResourceTemplatesRequest
-         * @return DescribeDefenseResourceTemplatesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protection templates that are associated with a protected object or protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceTemplatesResponse
+        /// </returns>
         public DescribeDefenseResourceTemplatesResponse DescribeDefenseResourceTemplates(DescribeDefenseResourceTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDefenseResourceTemplatesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the protection templates that are associated with a protected object or protected object group.
-         *
-         * @param request DescribeDefenseResourceTemplatesRequest
-         * @return DescribeDefenseResourceTemplatesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protection templates that are associated with a protected object or protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourceTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourceTemplatesResponse
+        /// </returns>
         public async Task<DescribeDefenseResourceTemplatesResponse> DescribeDefenseResourceTemplatesAsync(DescribeDefenseResourceTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDefenseResourceTemplatesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries protected objects by page.
-         *
-         * @param request DescribeDefenseResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries protected objects by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourcesResponse
+        /// </returns>
         public DescribeDefenseResourcesResponse DescribeDefenseResourcesWithOptions(DescribeDefenseResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5962,13 +9506,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries protected objects by page.
-         *
-         * @param request DescribeDefenseResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries protected objects by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourcesResponse
+        /// </returns>
         public async Task<DescribeDefenseResourcesResponse> DescribeDefenseResourcesWithOptionsAsync(DescribeDefenseResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6020,37 +9572,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries protected objects by page.
-         *
-         * @param request DescribeDefenseResourcesRequest
-         * @return DescribeDefenseResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries protected objects by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourcesResponse
+        /// </returns>
         public DescribeDefenseResourcesResponse DescribeDefenseResources(DescribeDefenseResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDefenseResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries protected objects by page.
-         *
-         * @param request DescribeDefenseResourcesRequest
-         * @return DescribeDefenseResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries protected objects by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseResourcesResponse
+        /// </returns>
         public async Task<DescribeDefenseResourcesResponse> DescribeDefenseResourcesAsync(DescribeDefenseResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDefenseResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries a protection rule.
-         *
-         * @param request DescribeDefenseRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseRuleResponse
+        /// </returns>
         public DescribeDefenseRuleResponse DescribeDefenseRuleWithOptions(DescribeDefenseRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6094,13 +9666,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseRuleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a protection rule.
-         *
-         * @param request DescribeDefenseRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseRuleResponse
+        /// </returns>
         public async Task<DescribeDefenseRuleResponse> DescribeDefenseRuleWithOptionsAsync(DescribeDefenseRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6144,37 +9724,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a protection rule.
-         *
-         * @param request DescribeDefenseRuleRequest
-         * @return DescribeDefenseRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseRuleResponse
+        /// </returns>
         public DescribeDefenseRuleResponse DescribeDefenseRule(DescribeDefenseRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDefenseRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries a protection rule.
-         *
-         * @param request DescribeDefenseRuleRequest
-         * @return DescribeDefenseRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseRuleResponse
+        /// </returns>
         public async Task<DescribeDefenseRuleResponse> DescribeDefenseRuleAsync(DescribeDefenseRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDefenseRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries protection rules by page.
-         *
-         * @param request DescribeDefenseRulesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseRulesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries protection rules by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseRulesResponse
+        /// </returns>
         public DescribeDefenseRulesResponse DescribeDefenseRulesWithOptions(DescribeDefenseRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6226,13 +9826,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseRulesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries protection rules by page.
-         *
-         * @param request DescribeDefenseRulesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseRulesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries protection rules by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseRulesResponse
+        /// </returns>
         public async Task<DescribeDefenseRulesResponse> DescribeDefenseRulesWithOptionsAsync(DescribeDefenseRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6284,37 +9892,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries protection rules by page.
-         *
-         * @param request DescribeDefenseRulesRequest
-         * @return DescribeDefenseRulesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries protection rules by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseRulesResponse
+        /// </returns>
         public DescribeDefenseRulesResponse DescribeDefenseRules(DescribeDefenseRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDefenseRulesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries protection rules by page.
-         *
-         * @param request DescribeDefenseRulesRequest
-         * @return DescribeDefenseRulesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries protection rules by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseRulesResponse
+        /// </returns>
         public async Task<DescribeDefenseRulesResponse> DescribeDefenseRulesAsync(DescribeDefenseRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDefenseRulesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries a protection rule template.
-         *
-         * @param request DescribeDefenseTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseTemplateResponse
+        /// </returns>
         public DescribeDefenseTemplateResponse DescribeDefenseTemplateWithOptions(DescribeDefenseTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6354,13 +9982,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a protection rule template.
-         *
-         * @param request DescribeDefenseTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseTemplateResponse
+        /// </returns>
         public async Task<DescribeDefenseTemplateResponse> DescribeDefenseTemplateWithOptionsAsync(DescribeDefenseTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6400,37 +10036,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a protection rule template.
-         *
-         * @param request DescribeDefenseTemplateRequest
-         * @return DescribeDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseTemplateResponse
+        /// </returns>
         public DescribeDefenseTemplateResponse DescribeDefenseTemplate(DescribeDefenseTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDefenseTemplateWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries a protection rule template.
-         *
-         * @param request DescribeDefenseTemplateRequest
-         * @return DescribeDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseTemplateResponse
+        /// </returns>
         public async Task<DescribeDefenseTemplateResponse> DescribeDefenseTemplateAsync(DescribeDefenseTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDefenseTemplateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the names of protected object groups for which a protection template can take effect.
-         *
-         * @param request DescribeDefenseTemplateValidGroupsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseTemplateValidGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the names of protected object groups for which a protection template can take effect.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseTemplateValidGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseTemplateValidGroupsResponse
+        /// </returns>
         public DescribeDefenseTemplateValidGroupsResponse DescribeDefenseTemplateValidGroupsWithOptions(DescribeDefenseTemplateValidGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6486,13 +10142,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseTemplateValidGroupsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the names of protected object groups for which a protection template can take effect.
-         *
-         * @param request DescribeDefenseTemplateValidGroupsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseTemplateValidGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the names of protected object groups for which a protection template can take effect.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseTemplateValidGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseTemplateValidGroupsResponse
+        /// </returns>
         public async Task<DescribeDefenseTemplateValidGroupsResponse> DescribeDefenseTemplateValidGroupsWithOptionsAsync(DescribeDefenseTemplateValidGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6548,37 +10212,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseTemplateValidGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the names of protected object groups for which a protection template can take effect.
-         *
-         * @param request DescribeDefenseTemplateValidGroupsRequest
-         * @return DescribeDefenseTemplateValidGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the names of protected object groups for which a protection template can take effect.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseTemplateValidGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseTemplateValidGroupsResponse
+        /// </returns>
         public DescribeDefenseTemplateValidGroupsResponse DescribeDefenseTemplateValidGroups(DescribeDefenseTemplateValidGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDefenseTemplateValidGroupsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the names of protected object groups for which a protection template can take effect.
-         *
-         * @param request DescribeDefenseTemplateValidGroupsRequest
-         * @return DescribeDefenseTemplateValidGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the names of protected object groups for which a protection template can take effect.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseTemplateValidGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseTemplateValidGroupsResponse
+        /// </returns>
         public async Task<DescribeDefenseTemplateValidGroupsResponse> DescribeDefenseTemplateValidGroupsAsync(DescribeDefenseTemplateValidGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDefenseTemplateValidGroupsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Performs a paging query to retrieve protection templates.
-         *
-         * @param request DescribeDefenseTemplatesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseTemplatesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query to retrieve protection templates.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseTemplatesResponse
+        /// </returns>
         public DescribeDefenseTemplatesResponse DescribeDefenseTemplatesWithOptions(DescribeDefenseTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6646,13 +10330,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Performs a paging query to retrieve protection templates.
-         *
-         * @param request DescribeDefenseTemplatesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDefenseTemplatesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query to retrieve protection templates.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseTemplatesResponse
+        /// </returns>
         public async Task<DescribeDefenseTemplatesResponse> DescribeDefenseTemplatesWithOptionsAsync(DescribeDefenseTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6720,37 +10412,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDefenseTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Performs a paging query to retrieve protection templates.
-         *
-         * @param request DescribeDefenseTemplatesRequest
-         * @return DescribeDefenseTemplatesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query to retrieve protection templates.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseTemplatesResponse
+        /// </returns>
         public DescribeDefenseTemplatesResponse DescribeDefenseTemplates(DescribeDefenseTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDefenseTemplatesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Performs a paging query to retrieve protection templates.
-         *
-         * @param request DescribeDefenseTemplatesRequest
-         * @return DescribeDefenseTemplatesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query to retrieve protection templates.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseTemplatesResponse
+        /// </returns>
         public async Task<DescribeDefenseTemplatesResponse> DescribeDefenseTemplatesAsync(DescribeDefenseTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDefenseTemplatesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Checks whether the Domain Name System (DNS) settings of a domain name are properly configured.
-         *
-         * @param request DescribeDomainDNSRecordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDomainDNSRecordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether the Domain Name System (DNS) settings of a domain name are properly configured.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainDNSRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainDNSRecordResponse
+        /// </returns>
         public DescribeDomainDNSRecordResponse DescribeDomainDNSRecordWithOptions(DescribeDomainDNSRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6790,13 +10502,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDomainDNSRecordResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Checks whether the Domain Name System (DNS) settings of a domain name are properly configured.
-         *
-         * @param request DescribeDomainDNSRecordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDomainDNSRecordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether the Domain Name System (DNS) settings of a domain name are properly configured.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainDNSRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainDNSRecordResponse
+        /// </returns>
         public async Task<DescribeDomainDNSRecordResponse> DescribeDomainDNSRecordWithOptionsAsync(DescribeDomainDNSRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6836,37 +10556,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDomainDNSRecordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Checks whether the Domain Name System (DNS) settings of a domain name are properly configured.
-         *
-         * @param request DescribeDomainDNSRecordRequest
-         * @return DescribeDomainDNSRecordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether the Domain Name System (DNS) settings of a domain name are properly configured.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainDNSRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainDNSRecordResponse
+        /// </returns>
         public DescribeDomainDNSRecordResponse DescribeDomainDNSRecord(DescribeDomainDNSRecordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainDNSRecordWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Checks whether the Domain Name System (DNS) settings of a domain name are properly configured.
-         *
-         * @param request DescribeDomainDNSRecordRequest
-         * @return DescribeDomainDNSRecordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether the Domain Name System (DNS) settings of a domain name are properly configured.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainDNSRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainDNSRecordResponse
+        /// </returns>
         public async Task<DescribeDomainDNSRecordResponse> DescribeDomainDNSRecordAsync(DescribeDomainDNSRecordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDomainDNSRecordWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of a domain name that is added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeDomainDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDomainDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a domain name that is added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainDetailResponse
+        /// </returns>
         public DescribeDomainDetailResponse DescribeDomainDetailWithOptions(DescribeDomainDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6902,13 +10642,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDomainDetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a domain name that is added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeDomainDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDomainDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a domain name that is added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainDetailResponse
+        /// </returns>
         public async Task<DescribeDomainDetailResponse> DescribeDomainDetailWithOptionsAsync(DescribeDomainDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6944,37 +10692,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDomainDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a domain name that is added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeDomainDetailRequest
-         * @return DescribeDomainDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a domain name that is added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainDetailResponse
+        /// </returns>
         public DescribeDomainDetailResponse DescribeDomainDetail(DescribeDomainDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainDetailWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of a domain name that is added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeDomainDetailRequest
-         * @return DescribeDomainDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a domain name that is added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainDetailResponse
+        /// </returns>
         public async Task<DescribeDomainDetailResponse> DescribeDomainDetailAsync(DescribeDomainDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDomainDetailWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the domain names that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeDomainsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDomainsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the domain names that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainsResponse
+        /// </returns>
         public DescribeDomainsResponse DescribeDomainsWithOptions(DescribeDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7030,13 +10798,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDomainsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the domain names that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeDomainsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDomainsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the domain names that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainsResponse
+        /// </returns>
         public async Task<DescribeDomainsResponse> DescribeDomainsWithOptionsAsync(DescribeDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7092,37 +10868,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeDomainsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the domain names that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeDomainsRequest
-         * @return DescribeDomainsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the domain names that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainsResponse
+        /// </returns>
         public DescribeDomainsResponse DescribeDomains(DescribeDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the domain names that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeDomainsRequest
-         * @return DescribeDomainsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the domain names that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainsResponse
+        /// </returns>
         public async Task<DescribeDomainsResponse> DescribeDomainsAsync(DescribeDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDomainsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the traffic statistics of requests that are forwarded to Web Application Firewall (WAF).
-         *
-         * @param request DescribeFlowChartRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeFlowChartResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the traffic statistics of requests that are forwarded to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowChartRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowChartResponse
+        /// </returns>
         public DescribeFlowChartResponse DescribeFlowChartWithOptions(DescribeFlowChartRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7174,13 +10970,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeFlowChartResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the traffic statistics of requests that are forwarded to Web Application Firewall (WAF).
-         *
-         * @param request DescribeFlowChartRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeFlowChartResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the traffic statistics of requests that are forwarded to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowChartRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowChartResponse
+        /// </returns>
         public async Task<DescribeFlowChartResponse> DescribeFlowChartWithOptionsAsync(DescribeFlowChartRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7232,37 +11036,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeFlowChartResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the traffic statistics of requests that are forwarded to Web Application Firewall (WAF).
-         *
-         * @param request DescribeFlowChartRequest
-         * @return DescribeFlowChartResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the traffic statistics of requests that are forwarded to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowChartRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowChartResponse
+        /// </returns>
         public DescribeFlowChartResponse DescribeFlowChart(DescribeFlowChartRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeFlowChartWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the traffic statistics of requests that are forwarded to Web Application Firewall (WAF).
-         *
-         * @param request DescribeFlowChartRequest
-         * @return DescribeFlowChartResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the traffic statistics of requests that are forwarded to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowChartRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowChartResponse
+        /// </returns>
         public async Task<DescribeFlowChartResponse> DescribeFlowChartAsync(DescribeFlowChartRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeFlowChartWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the top 10 protected objects that receive requests.
-         *
-         * @param request DescribeFlowTopResourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeFlowTopResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 protected objects that receive requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowTopResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowTopResourceResponse
+        /// </returns>
         public DescribeFlowTopResourceResponse DescribeFlowTopResourceWithOptions(DescribeFlowTopResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7306,13 +11130,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeFlowTopResourceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the top 10 protected objects that receive requests.
-         *
-         * @param request DescribeFlowTopResourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeFlowTopResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 protected objects that receive requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowTopResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowTopResourceResponse
+        /// </returns>
         public async Task<DescribeFlowTopResourceResponse> DescribeFlowTopResourceWithOptionsAsync(DescribeFlowTopResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7356,37 +11188,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeFlowTopResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the top 10 protected objects that receive requests.
-         *
-         * @param request DescribeFlowTopResourceRequest
-         * @return DescribeFlowTopResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 protected objects that receive requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowTopResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowTopResourceResponse
+        /// </returns>
         public DescribeFlowTopResourceResponse DescribeFlowTopResource(DescribeFlowTopResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeFlowTopResourceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the top 10 protected objects that receive requests.
-         *
-         * @param request DescribeFlowTopResourceRequest
-         * @return DescribeFlowTopResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 protected objects that receive requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowTopResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowTopResourceResponse
+        /// </returns>
         public async Task<DescribeFlowTopResourceResponse> DescribeFlowTopResourceAsync(DescribeFlowTopResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeFlowTopResourceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the top 10 URLs that are used to initiate requests.
-         *
-         * @param request DescribeFlowTopUrlRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeFlowTopUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 URLs that are used to initiate requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowTopUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowTopUrlResponse
+        /// </returns>
         public DescribeFlowTopUrlResponse DescribeFlowTopUrlWithOptions(DescribeFlowTopUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7434,13 +11286,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeFlowTopUrlResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the top 10 URLs that are used to initiate requests.
-         *
-         * @param request DescribeFlowTopUrlRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeFlowTopUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 URLs that are used to initiate requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowTopUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowTopUrlResponse
+        /// </returns>
         public async Task<DescribeFlowTopUrlResponse> DescribeFlowTopUrlWithOptionsAsync(DescribeFlowTopUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7488,37 +11348,601 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeFlowTopUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the top 10 URLs that are used to initiate requests.
-         *
-         * @param request DescribeFlowTopUrlRequest
-         * @return DescribeFlowTopUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 URLs that are used to initiate requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowTopUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowTopUrlResponse
+        /// </returns>
         public DescribeFlowTopUrlResponse DescribeFlowTopUrl(DescribeFlowTopUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeFlowTopUrlWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the top 10 URLs that are used to initiate requests.
-         *
-         * @param request DescribeFlowTopUrlRequest
-         * @return DescribeFlowTopUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 URLs that are used to initiate requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowTopUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowTopUrlResponse
+        /// </returns>
         public async Task<DescribeFlowTopUrlResponse> DescribeFlowTopUrlAsync(DescribeFlowTopUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeFlowTopUrlWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Obtains the rule information about a hybrid cloud cluster.
-         *
-         * @param request DescribeHybridCloudClusterRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeHybridCloudClusterRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the asset statistics provided by basic detection in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFreeUserAssetCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFreeUserAssetCountResponse
+        /// </returns>
+        public DescribeFreeUserAssetCountResponse DescribeFreeUserAssetCountWithOptions(DescribeFreeUserAssetCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFreeUserAssetCount",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFreeUserAssetCountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the asset statistics provided by basic detection in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFreeUserAssetCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFreeUserAssetCountResponse
+        /// </returns>
+        public async Task<DescribeFreeUserAssetCountResponse> DescribeFreeUserAssetCountWithOptionsAsync(DescribeFreeUserAssetCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFreeUserAssetCount",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFreeUserAssetCountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the asset statistics provided by basic detection in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFreeUserAssetCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFreeUserAssetCountResponse
+        /// </returns>
+        public DescribeFreeUserAssetCountResponse DescribeFreeUserAssetCount(DescribeFreeUserAssetCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeFreeUserAssetCountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the asset statistics provided by basic detection in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFreeUserAssetCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFreeUserAssetCountResponse
+        /// </returns>
+        public async Task<DescribeFreeUserAssetCountResponse> DescribeFreeUserAssetCountAsync(DescribeFreeUserAssetCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeFreeUserAssetCountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics of security events that are detected by using the basic detection feature of the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFreeUserEventCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFreeUserEventCountResponse
+        /// </returns>
+        public DescribeFreeUserEventCountResponse DescribeFreeUserEventCountWithOptions(DescribeFreeUserEventCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFreeUserEventCount",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFreeUserEventCountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics of security events that are detected by using the basic detection feature of the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFreeUserEventCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFreeUserEventCountResponse
+        /// </returns>
+        public async Task<DescribeFreeUserEventCountResponse> DescribeFreeUserEventCountWithOptionsAsync(DescribeFreeUserEventCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFreeUserEventCount",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFreeUserEventCountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics of security events that are detected by using the basic detection feature of the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFreeUserEventCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFreeUserEventCountResponse
+        /// </returns>
+        public DescribeFreeUserEventCountResponse DescribeFreeUserEventCount(DescribeFreeUserEventCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeFreeUserEventCountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics of security events that are detected by using the basic detection feature of the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFreeUserEventCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFreeUserEventCountResponse
+        /// </returns>
+        public async Task<DescribeFreeUserEventCountResponse> DescribeFreeUserEventCountAsync(DescribeFreeUserEventCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeFreeUserEventCountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of security events on which basic detection is performed in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFreeUserEventTypesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFreeUserEventTypesResponse
+        /// </returns>
+        public DescribeFreeUserEventTypesResponse DescribeFreeUserEventTypesWithOptions(DescribeFreeUserEventTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFreeUserEventTypes",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFreeUserEventTypesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of security events on which basic detection is performed in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFreeUserEventTypesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFreeUserEventTypesResponse
+        /// </returns>
+        public async Task<DescribeFreeUserEventTypesResponse> DescribeFreeUserEventTypesWithOptionsAsync(DescribeFreeUserEventTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFreeUserEventTypes",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFreeUserEventTypesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of security events on which basic detection is performed in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFreeUserEventTypesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFreeUserEventTypesResponse
+        /// </returns>
+        public DescribeFreeUserEventTypesResponse DescribeFreeUserEventTypes(DescribeFreeUserEventTypesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeFreeUserEventTypesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of security events on which basic detection is performed in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFreeUserEventTypesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFreeUserEventTypesResponse
+        /// </returns>
+        public async Task<DescribeFreeUserEventTypesResponse> DescribeFreeUserEventTypesAsync(DescribeFreeUserEventTypesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeFreeUserEventTypesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of security events on which basic detection is performed in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFreeUserEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFreeUserEventsResponse
+        /// </returns>
+        public DescribeFreeUserEventsResponse DescribeFreeUserEventsWithOptions(DescribeFreeUserEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFreeUserEvents",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFreeUserEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of security events on which basic detection is performed in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFreeUserEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFreeUserEventsResponse
+        /// </returns>
+        public async Task<DescribeFreeUserEventsResponse> DescribeFreeUserEventsWithOptionsAsync(DescribeFreeUserEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFreeUserEvents",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFreeUserEventsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of security events on which basic detection is performed in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFreeUserEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFreeUserEventsResponse
+        /// </returns>
+        public DescribeFreeUserEventsResponse DescribeFreeUserEvents(DescribeFreeUserEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeFreeUserEventsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of security events on which basic detection is performed in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFreeUserEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFreeUserEventsResponse
+        /// </returns>
+        public async Task<DescribeFreeUserEventsResponse> DescribeFreeUserEventsAsync(DescribeFreeUserEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeFreeUserEventsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the rule information about a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudClusterRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudClusterRuleResponse
+        /// </returns>
         public DescribeHybridCloudClusterRuleResponse DescribeHybridCloudClusterRuleWithOptions(DescribeHybridCloudClusterRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7542,13 +11966,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeHybridCloudClusterRuleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtains the rule information about a hybrid cloud cluster.
-         *
-         * @param request DescribeHybridCloudClusterRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeHybridCloudClusterRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the rule information about a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudClusterRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudClusterRuleResponse
+        /// </returns>
         public async Task<DescribeHybridCloudClusterRuleResponse> DescribeHybridCloudClusterRuleWithOptionsAsync(DescribeHybridCloudClusterRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7572,37 +12004,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeHybridCloudClusterRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtains the rule information about a hybrid cloud cluster.
-         *
-         * @param request DescribeHybridCloudClusterRuleRequest
-         * @return DescribeHybridCloudClusterRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the rule information about a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudClusterRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudClusterRuleResponse
+        /// </returns>
         public DescribeHybridCloudClusterRuleResponse DescribeHybridCloudClusterRule(DescribeHybridCloudClusterRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHybridCloudClusterRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Obtains the rule information about a hybrid cloud cluster.
-         *
-         * @param request DescribeHybridCloudClusterRuleRequest
-         * @return DescribeHybridCloudClusterRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the rule information about a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudClusterRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudClusterRuleResponse
+        /// </returns>
         public async Task<DescribeHybridCloudClusterRuleResponse> DescribeHybridCloudClusterRuleAsync(DescribeHybridCloudClusterRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHybridCloudClusterRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询混合云集群列表
-         *
-         * @param request DescribeHybridCloudClustersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeHybridCloudClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of hybrid cloud clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudClustersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudClustersResponse
+        /// </returns>
         public DescribeHybridCloudClustersResponse DescribeHybridCloudClustersWithOptions(DescribeHybridCloudClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7638,13 +12090,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeHybridCloudClustersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询混合云集群列表
-         *
-         * @param request DescribeHybridCloudClustersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeHybridCloudClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of hybrid cloud clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudClustersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudClustersResponse
+        /// </returns>
         public async Task<DescribeHybridCloudClustersResponse> DescribeHybridCloudClustersWithOptionsAsync(DescribeHybridCloudClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7680,37 +12140,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeHybridCloudClustersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询混合云集群列表
-         *
-         * @param request DescribeHybridCloudClustersRequest
-         * @return DescribeHybridCloudClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of hybrid cloud clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudClustersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudClustersResponse
+        /// </returns>
         public DescribeHybridCloudClustersResponse DescribeHybridCloudClusters(DescribeHybridCloudClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHybridCloudClustersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询混合云集群列表
-         *
-         * @param request DescribeHybridCloudClustersRequest
-         * @return DescribeHybridCloudClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of hybrid cloud clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudClustersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudClustersResponse
+        /// </returns>
         public async Task<DescribeHybridCloudClustersResponse> DescribeHybridCloudClustersAsync(DescribeHybridCloudClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHybridCloudClustersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the hybrid cloud node groups that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeHybridCloudGroupsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeHybridCloudGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hybrid cloud node groups that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudGroupsResponse
+        /// </returns>
         public DescribeHybridCloudGroupsResponse DescribeHybridCloudGroupsWithOptions(DescribeHybridCloudGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7770,13 +12250,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeHybridCloudGroupsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the hybrid cloud node groups that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeHybridCloudGroupsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeHybridCloudGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hybrid cloud node groups that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudGroupsResponse
+        /// </returns>
         public async Task<DescribeHybridCloudGroupsResponse> DescribeHybridCloudGroupsWithOptionsAsync(DescribeHybridCloudGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7836,37 +12324,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeHybridCloudGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the hybrid cloud node groups that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeHybridCloudGroupsRequest
-         * @return DescribeHybridCloudGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hybrid cloud node groups that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudGroupsResponse
+        /// </returns>
         public DescribeHybridCloudGroupsResponse DescribeHybridCloudGroups(DescribeHybridCloudGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHybridCloudGroupsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the hybrid cloud node groups that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeHybridCloudGroupsRequest
-         * @return DescribeHybridCloudGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hybrid cloud node groups that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudGroupsResponse
+        /// </returns>
         public async Task<DescribeHybridCloudGroupsResponse> DescribeHybridCloudGroupsAsync(DescribeHybridCloudGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHybridCloudGroupsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the domain names that are added to a Web Application Firewall (WAF) instance in hybrid cloud mode.
-         *
-         * @param request DescribeHybridCloudResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeHybridCloudResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the domain names that are added to a Web Application Firewall (WAF) instance in hybrid cloud mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudResourcesResponse
+        /// </returns>
         public DescribeHybridCloudResourcesResponse DescribeHybridCloudResourcesWithOptions(DescribeHybridCloudResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7922,13 +12430,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeHybridCloudResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the domain names that are added to a Web Application Firewall (WAF) instance in hybrid cloud mode.
-         *
-         * @param request DescribeHybridCloudResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeHybridCloudResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the domain names that are added to a Web Application Firewall (WAF) instance in hybrid cloud mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudResourcesResponse
+        /// </returns>
         public async Task<DescribeHybridCloudResourcesResponse> DescribeHybridCloudResourcesWithOptionsAsync(DescribeHybridCloudResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7984,37 +12500,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeHybridCloudResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the domain names that are added to a Web Application Firewall (WAF) instance in hybrid cloud mode.
-         *
-         * @param request DescribeHybridCloudResourcesRequest
-         * @return DescribeHybridCloudResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the domain names that are added to a Web Application Firewall (WAF) instance in hybrid cloud mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudResourcesResponse
+        /// </returns>
         public DescribeHybridCloudResourcesResponse DescribeHybridCloudResources(DescribeHybridCloudResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHybridCloudResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the domain names that are added to a Web Application Firewall (WAF) instance in hybrid cloud mode.
-         *
-         * @param request DescribeHybridCloudResourcesRequest
-         * @return DescribeHybridCloudResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the domain names that are added to a Web Application Firewall (WAF) instance in hybrid cloud mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudResourcesResponse
+        /// </returns>
         public async Task<DescribeHybridCloudResourcesResponse> DescribeHybridCloudResourcesAsync(DescribeHybridCloudResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHybridCloudResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries information about the regions that the hybrid cloud mode supports, such as the Internet service providers (ISPs), continents, and cities.
-         *
-         * @param request DescribeHybridCloudServerRegionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeHybridCloudServerRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about the regions that the hybrid cloud mode supports, such as the Internet service providers (ISPs), continents, and cities.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudServerRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudServerRegionsResponse
+        /// </returns>
         public DescribeHybridCloudServerRegionsResponse DescribeHybridCloudServerRegionsWithOptions(DescribeHybridCloudServerRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8058,13 +12594,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeHybridCloudServerRegionsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries information about the regions that the hybrid cloud mode supports, such as the Internet service providers (ISPs), continents, and cities.
-         *
-         * @param request DescribeHybridCloudServerRegionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeHybridCloudServerRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about the regions that the hybrid cloud mode supports, such as the Internet service providers (ISPs), continents, and cities.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudServerRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudServerRegionsResponse
+        /// </returns>
         public async Task<DescribeHybridCloudServerRegionsResponse> DescribeHybridCloudServerRegionsWithOptionsAsync(DescribeHybridCloudServerRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8108,37 +12652,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeHybridCloudServerRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries information about the regions that the hybrid cloud mode supports, such as the Internet service providers (ISPs), continents, and cities.
-         *
-         * @param request DescribeHybridCloudServerRegionsRequest
-         * @return DescribeHybridCloudServerRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about the regions that the hybrid cloud mode supports, such as the Internet service providers (ISPs), continents, and cities.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudServerRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudServerRegionsResponse
+        /// </returns>
         public DescribeHybridCloudServerRegionsResponse DescribeHybridCloudServerRegions(DescribeHybridCloudServerRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHybridCloudServerRegionsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries information about the regions that the hybrid cloud mode supports, such as the Internet service providers (ISPs), continents, and cities.
-         *
-         * @param request DescribeHybridCloudServerRegionsRequest
-         * @return DescribeHybridCloudServerRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about the regions that the hybrid cloud mode supports, such as the Internet service providers (ISPs), continents, and cities.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudServerRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudServerRegionsResponse
+        /// </returns>
         public async Task<DescribeHybridCloudServerRegionsResponse> DescribeHybridCloudServerRegionsAsync(DescribeHybridCloudServerRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHybridCloudServerRegionsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries servers that are not assigned to a hybrid cloud cluster.
-         *
-         * @param request DescribeHybridCloudUnassignedMachinesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeHybridCloudUnassignedMachinesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries servers that are not assigned to a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudUnassignedMachinesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudUnassignedMachinesResponse
+        /// </returns>
         public DescribeHybridCloudUnassignedMachinesResponse DescribeHybridCloudUnassignedMachinesWithOptions(DescribeHybridCloudUnassignedMachinesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8194,13 +12758,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeHybridCloudUnassignedMachinesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries servers that are not assigned to a hybrid cloud cluster.
-         *
-         * @param request DescribeHybridCloudUnassignedMachinesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeHybridCloudUnassignedMachinesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries servers that are not assigned to a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudUnassignedMachinesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudUnassignedMachinesResponse
+        /// </returns>
         public async Task<DescribeHybridCloudUnassignedMachinesResponse> DescribeHybridCloudUnassignedMachinesWithOptionsAsync(DescribeHybridCloudUnassignedMachinesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8256,37 +12828,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeHybridCloudUnassignedMachinesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries servers that are not assigned to a hybrid cloud cluster.
-         *
-         * @param request DescribeHybridCloudUnassignedMachinesRequest
-         * @return DescribeHybridCloudUnassignedMachinesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries servers that are not assigned to a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudUnassignedMachinesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudUnassignedMachinesResponse
+        /// </returns>
         public DescribeHybridCloudUnassignedMachinesResponse DescribeHybridCloudUnassignedMachines(DescribeHybridCloudUnassignedMachinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHybridCloudUnassignedMachinesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries servers that are not assigned to a hybrid cloud cluster.
-         *
-         * @param request DescribeHybridCloudUnassignedMachinesRequest
-         * @return DescribeHybridCloudUnassignedMachinesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries servers that are not assigned to a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudUnassignedMachinesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudUnassignedMachinesResponse
+        /// </returns>
         public async Task<DescribeHybridCloudUnassignedMachinesResponse> DescribeHybridCloudUnassignedMachinesAsync(DescribeHybridCloudUnassignedMachinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHybridCloudUnassignedMachinesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the HTTP and HTTPS ports that you can use when you add a domain name to Web Application Firewall (WAF) in hybrid cloud mode.
-         *
-         * @param request DescribeHybridCloudUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeHybridCloudUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the HTTP and HTTPS ports that you can use when you add a domain name to Web Application Firewall (WAF) in hybrid cloud mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudUserResponse
+        /// </returns>
         public DescribeHybridCloudUserResponse DescribeHybridCloudUserWithOptions(DescribeHybridCloudUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8322,13 +12914,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeHybridCloudUserResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the HTTP and HTTPS ports that you can use when you add a domain name to Web Application Firewall (WAF) in hybrid cloud mode.
-         *
-         * @param request DescribeHybridCloudUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeHybridCloudUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the HTTP and HTTPS ports that you can use when you add a domain name to Web Application Firewall (WAF) in hybrid cloud mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudUserResponse
+        /// </returns>
         public async Task<DescribeHybridCloudUserResponse> DescribeHybridCloudUserWithOptionsAsync(DescribeHybridCloudUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8364,37 +12964,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeHybridCloudUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the HTTP and HTTPS ports that you can use when you add a domain name to Web Application Firewall (WAF) in hybrid cloud mode.
-         *
-         * @param request DescribeHybridCloudUserRequest
-         * @return DescribeHybridCloudUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the HTTP and HTTPS ports that you can use when you add a domain name to Web Application Firewall (WAF) in hybrid cloud mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudUserResponse
+        /// </returns>
         public DescribeHybridCloudUserResponse DescribeHybridCloudUser(DescribeHybridCloudUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHybridCloudUserWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the HTTP and HTTPS ports that you can use when you add a domain name to Web Application Firewall (WAF) in hybrid cloud mode.
-         *
-         * @param request DescribeHybridCloudUserRequest
-         * @return DescribeHybridCloudUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the HTTP and HTTPS ports that you can use when you add a domain name to Web Application Firewall (WAF) in hybrid cloud mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudUserResponse
+        /// </returns>
         public async Task<DescribeHybridCloudUserResponse> DescribeHybridCloudUserAsync(DescribeHybridCloudUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHybridCloudUserWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of a Web Application Firewall (WAF) instance within the current Alibaba Cloud account.
-         *
-         * @param request DescribeInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a Web Application Firewall (WAF) instance within the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceResponse
+        /// </returns>
         public DescribeInstanceResponse DescribeInstanceWithOptions(DescribeInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8426,13 +13046,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a Web Application Firewall (WAF) instance within the current Alibaba Cloud account.
-         *
-         * @param request DescribeInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a Web Application Firewall (WAF) instance within the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceResponse
+        /// </returns>
         public async Task<DescribeInstanceResponse> DescribeInstanceWithOptionsAsync(DescribeInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8464,37 +13092,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a Web Application Firewall (WAF) instance within the current Alibaba Cloud account.
-         *
-         * @param request DescribeInstanceRequest
-         * @return DescribeInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a Web Application Firewall (WAF) instance within the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceResponse
+        /// </returns>
         public DescribeInstanceResponse DescribeInstance(DescribeInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of a Web Application Firewall (WAF) instance within the current Alibaba Cloud account.
-         *
-         * @param request DescribeInstanceRequest
-         * @return DescribeInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a Web Application Firewall (WAF) instance within the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceResponse
+        /// </returns>
         public async Task<DescribeInstanceResponse> DescribeInstanceAsync(DescribeInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries IP addresses in an IP address blacklist for major event protection by page.
-         *
-         * @param request DescribeMajorProtectionBlackIpsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMajorProtectionBlackIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP addresses in an IP address blacklist for major event protection by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMajorProtectionBlackIpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMajorProtectionBlackIpsResponse
+        /// </returns>
         public DescribeMajorProtectionBlackIpsResponse DescribeMajorProtectionBlackIpsWithOptions(DescribeMajorProtectionBlackIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8554,13 +13202,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeMajorProtectionBlackIpsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries IP addresses in an IP address blacklist for major event protection by page.
-         *
-         * @param request DescribeMajorProtectionBlackIpsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMajorProtectionBlackIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP addresses in an IP address blacklist for major event protection by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMajorProtectionBlackIpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMajorProtectionBlackIpsResponse
+        /// </returns>
         public async Task<DescribeMajorProtectionBlackIpsResponse> DescribeMajorProtectionBlackIpsWithOptionsAsync(DescribeMajorProtectionBlackIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8620,37 +13276,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeMajorProtectionBlackIpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries IP addresses in an IP address blacklist for major event protection by page.
-         *
-         * @param request DescribeMajorProtectionBlackIpsRequest
-         * @return DescribeMajorProtectionBlackIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP addresses in an IP address blacklist for major event protection by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMajorProtectionBlackIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMajorProtectionBlackIpsResponse
+        /// </returns>
         public DescribeMajorProtectionBlackIpsResponse DescribeMajorProtectionBlackIps(DescribeMajorProtectionBlackIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeMajorProtectionBlackIpsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries IP addresses in an IP address blacklist for major event protection by page.
-         *
-         * @param request DescribeMajorProtectionBlackIpsRequest
-         * @return DescribeMajorProtectionBlackIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP addresses in an IP address blacklist for major event protection by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMajorProtectionBlackIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMajorProtectionBlackIpsResponse
+        /// </returns>
         public async Task<DescribeMajorProtectionBlackIpsResponse> DescribeMajorProtectionBlackIpsAsync(DescribeMajorProtectionBlackIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeMajorProtectionBlackIpsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries information about members.
-         *
-         * @param request DescribeMemberAccountsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMemberAccountsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about members.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMemberAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMemberAccountsResponse
+        /// </returns>
         public DescribeMemberAccountsResponse DescribeMemberAccountsWithOptions(DescribeMemberAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8694,13 +13370,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeMemberAccountsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries information about members.
-         *
-         * @param request DescribeMemberAccountsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeMemberAccountsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about members.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMemberAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMemberAccountsResponse
+        /// </returns>
         public async Task<DescribeMemberAccountsResponse> DescribeMemberAccountsWithOptionsAsync(DescribeMemberAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8744,37 +13428,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeMemberAccountsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries information about members.
-         *
-         * @param request DescribeMemberAccountsRequest
-         * @return DescribeMemberAccountsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about members.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMemberAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMemberAccountsResponse
+        /// </returns>
         public DescribeMemberAccountsResponse DescribeMemberAccounts(DescribeMemberAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeMemberAccountsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries information about members.
-         *
-         * @param request DescribeMemberAccountsRequest
-         * @return DescribeMemberAccountsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about members.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMemberAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMemberAccountsResponse
+        /// </returns>
         public async Task<DescribeMemberAccountsResponse> DescribeMemberAccountsAsync(DescribeMemberAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeMemberAccountsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the protection status of Web Application Firewall (WAF).
-         *
-         * @param request DescribePauseProtectionStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePauseProtectionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protection status of Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePauseProtectionStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePauseProtectionStatusResponse
+        /// </returns>
         public DescribePauseProtectionStatusResponse DescribePauseProtectionStatusWithOptions(DescribePauseProtectionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8810,13 +13514,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribePauseProtectionStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the protection status of Web Application Firewall (WAF).
-         *
-         * @param request DescribePauseProtectionStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePauseProtectionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protection status of Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePauseProtectionStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePauseProtectionStatusResponse
+        /// </returns>
         public async Task<DescribePauseProtectionStatusResponse> DescribePauseProtectionStatusWithOptionsAsync(DescribePauseProtectionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8852,37 +13564,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribePauseProtectionStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the protection status of Web Application Firewall (WAF).
-         *
-         * @param request DescribePauseProtectionStatusRequest
-         * @return DescribePauseProtectionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protection status of Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePauseProtectionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePauseProtectionStatusResponse
+        /// </returns>
         public DescribePauseProtectionStatusResponse DescribePauseProtectionStatus(DescribePauseProtectionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePauseProtectionStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the protection status of Web Application Firewall (WAF).
-         *
-         * @param request DescribePauseProtectionStatusRequest
-         * @return DescribePauseProtectionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protection status of Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePauseProtectionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePauseProtectionStatusResponse
+        /// </returns>
         public async Task<DescribePauseProtectionStatusResponse> DescribePauseProtectionStatusAsync(DescribePauseProtectionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePauseProtectionStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the queries per second (QPS) statistics of a WAF instance.
-         *
-         * @param request DescribePeakTrendRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePeakTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the queries per second (QPS) statistics of a WAF instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePeakTrendRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePeakTrendResponse
+        /// </returns>
         public DescribePeakTrendResponse DescribePeakTrendWithOptions(DescribePeakTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8934,13 +13666,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribePeakTrendResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the queries per second (QPS) statistics of a WAF instance.
-         *
-         * @param request DescribePeakTrendRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePeakTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the queries per second (QPS) statistics of a WAF instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePeakTrendRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePeakTrendResponse
+        /// </returns>
         public async Task<DescribePeakTrendResponse> DescribePeakTrendWithOptionsAsync(DescribePeakTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8992,37 +13732,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribePeakTrendResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the queries per second (QPS) statistics of a WAF instance.
-         *
-         * @param request DescribePeakTrendRequest
-         * @return DescribePeakTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the queries per second (QPS) statistics of a WAF instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePeakTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePeakTrendResponse
+        /// </returns>
         public DescribePeakTrendResponse DescribePeakTrend(DescribePeakTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePeakTrendWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the queries per second (QPS) statistics of a WAF instance.
-         *
-         * @param request DescribePeakTrendRequest
-         * @return DescribePeakTrendResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the queries per second (QPS) statistics of a WAF instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePeakTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePeakTrendResponse
+        /// </returns>
         public async Task<DescribePeakTrendResponse> DescribePeakTrendAsync(DescribePeakTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePeakTrendWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the cloud service instances to be added to Web Application Firewall (WAF) in transparent proxy mode.
-         *
-         * @param request DescribeProductInstancesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeProductInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the cloud service instances to be added to Web Application Firewall (WAF) in transparent proxy mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeProductInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProductInstancesResponse
+        /// </returns>
         public DescribeProductInstancesResponse DescribeProductInstancesWithOptions(DescribeProductInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9098,13 +13858,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeProductInstancesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the cloud service instances to be added to Web Application Firewall (WAF) in transparent proxy mode.
-         *
-         * @param request DescribeProductInstancesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeProductInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the cloud service instances to be added to Web Application Firewall (WAF) in transparent proxy mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeProductInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProductInstancesResponse
+        /// </returns>
         public async Task<DescribeProductInstancesResponse> DescribeProductInstancesWithOptionsAsync(DescribeProductInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9180,37 +13948,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeProductInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the cloud service instances to be added to Web Application Firewall (WAF) in transparent proxy mode.
-         *
-         * @param request DescribeProductInstancesRequest
-         * @return DescribeProductInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the cloud service instances to be added to Web Application Firewall (WAF) in transparent proxy mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeProductInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProductInstancesResponse
+        /// </returns>
         public DescribeProductInstancesResponse DescribeProductInstances(DescribeProductInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeProductInstancesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the cloud service instances to be added to Web Application Firewall (WAF) in transparent proxy mode.
-         *
-         * @param request DescribeProductInstancesRequest
-         * @return DescribeProductInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the cloud service instances to be added to Web Application Firewall (WAF) in transparent proxy mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeProductInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProductInstancesResponse
+        /// </returns>
         public async Task<DescribeProductInstancesResponse> DescribeProductInstancesAsync(DescribeProductInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeProductInstancesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries a list of domain names that are added to Web Application Firewall (WAF) and penalized for failing to obtain an Internet Content Provider (ICP) filing.
-         *
-         * @param request DescribePunishedDomainsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePunishedDomainsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of domain names that are added to Web Application Firewall (WAF) and penalized for failing to obtain an Internet Content Provider (ICP) filing.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePunishedDomainsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePunishedDomainsResponse
+        /// </returns>
         public DescribePunishedDomainsResponse DescribePunishedDomainsWithOptions(DescribePunishedDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9250,13 +14038,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribePunishedDomainsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of domain names that are added to Web Application Firewall (WAF) and penalized for failing to obtain an Internet Content Provider (ICP) filing.
-         *
-         * @param request DescribePunishedDomainsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribePunishedDomainsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of domain names that are added to Web Application Firewall (WAF) and penalized for failing to obtain an Internet Content Provider (ICP) filing.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePunishedDomainsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePunishedDomainsResponse
+        /// </returns>
         public async Task<DescribePunishedDomainsResponse> DescribePunishedDomainsWithOptionsAsync(DescribePunishedDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9296,37 +14092,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribePunishedDomainsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of domain names that are added to Web Application Firewall (WAF) and penalized for failing to obtain an Internet Content Provider (ICP) filing.
-         *
-         * @param request DescribePunishedDomainsRequest
-         * @return DescribePunishedDomainsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of domain names that are added to Web Application Firewall (WAF) and penalized for failing to obtain an Internet Content Provider (ICP) filing.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePunishedDomainsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePunishedDomainsResponse
+        /// </returns>
         public DescribePunishedDomainsResponse DescribePunishedDomains(DescribePunishedDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePunishedDomainsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries a list of domain names that are added to Web Application Firewall (WAF) and penalized for failing to obtain an Internet Content Provider (ICP) filing.
-         *
-         * @param request DescribePunishedDomainsRequest
-         * @return DescribePunishedDomainsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of domain names that are added to Web Application Firewall (WAF) and penalized for failing to obtain an Internet Content Provider (ICP) filing.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePunishedDomainsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePunishedDomainsResponse
+        /// </returns>
         public async Task<DescribePunishedDomainsResponse> DescribePunishedDomainsAsync(DescribePunishedDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePunishedDomainsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the certificates that are used in cloud service instances. The certificates returned include the certificates within the delegated administrator account and the certificates within members to which specific instances belong. For example, the delegated administrator account has certificate 1, instance lb-xx-1 belongs to member B, and member B has certificate 2. If you specify instance lb-xx-1 in the request, certificate 1 and certificate 2 are returned.
-         *
-         * @param request DescribeResourceInstanceCertsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeResourceInstanceCertsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the certificates that are used in cloud service instances. The certificates returned include the certificates within the delegated administrator account and the certificates within members to which specific instances belong. For example, the delegated administrator account has certificate 1, instance lb-xx-1 belongs to member B, and member B has certificate 2. If you specify instance lb-xx-1 in the request, certificate 1 and certificate 2 are returned.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceInstanceCertsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceInstanceCertsResponse
+        /// </returns>
         public DescribeResourceInstanceCertsResponse DescribeResourceInstanceCertsWithOptions(DescribeResourceInstanceCertsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9374,13 +14190,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeResourceInstanceCertsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the certificates that are used in cloud service instances. The certificates returned include the certificates within the delegated administrator account and the certificates within members to which specific instances belong. For example, the delegated administrator account has certificate 1, instance lb-xx-1 belongs to member B, and member B has certificate 2. If you specify instance lb-xx-1 in the request, certificate 1 and certificate 2 are returned.
-         *
-         * @param request DescribeResourceInstanceCertsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeResourceInstanceCertsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the certificates that are used in cloud service instances. The certificates returned include the certificates within the delegated administrator account and the certificates within members to which specific instances belong. For example, the delegated administrator account has certificate 1, instance lb-xx-1 belongs to member B, and member B has certificate 2. If you specify instance lb-xx-1 in the request, certificate 1 and certificate 2 are returned.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceInstanceCertsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceInstanceCertsResponse
+        /// </returns>
         public async Task<DescribeResourceInstanceCertsResponse> DescribeResourceInstanceCertsWithOptionsAsync(DescribeResourceInstanceCertsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9428,37 +14252,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeResourceInstanceCertsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the certificates that are used in cloud service instances. The certificates returned include the certificates within the delegated administrator account and the certificates within members to which specific instances belong. For example, the delegated administrator account has certificate 1, instance lb-xx-1 belongs to member B, and member B has certificate 2. If you specify instance lb-xx-1 in the request, certificate 1 and certificate 2 are returned.
-         *
-         * @param request DescribeResourceInstanceCertsRequest
-         * @return DescribeResourceInstanceCertsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the certificates that are used in cloud service instances. The certificates returned include the certificates within the delegated administrator account and the certificates within members to which specific instances belong. For example, the delegated administrator account has certificate 1, instance lb-xx-1 belongs to member B, and member B has certificate 2. If you specify instance lb-xx-1 in the request, certificate 1 and certificate 2 are returned.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceInstanceCertsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceInstanceCertsResponse
+        /// </returns>
         public DescribeResourceInstanceCertsResponse DescribeResourceInstanceCerts(DescribeResourceInstanceCertsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeResourceInstanceCertsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the certificates that are used in cloud service instances. The certificates returned include the certificates within the delegated administrator account and the certificates within members to which specific instances belong. For example, the delegated administrator account has certificate 1, instance lb-xx-1 belongs to member B, and member B has certificate 2. If you specify instance lb-xx-1 in the request, certificate 1 and certificate 2 are returned.
-         *
-         * @param request DescribeResourceInstanceCertsRequest
-         * @return DescribeResourceInstanceCertsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the certificates that are used in cloud service instances. The certificates returned include the certificates within the delegated administrator account and the certificates within members to which specific instances belong. For example, the delegated administrator account has certificate 1, instance lb-xx-1 belongs to member B, and member B has certificate 2. If you specify instance lb-xx-1 in the request, certificate 1 and certificate 2 are returned.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceInstanceCertsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceInstanceCertsResponse
+        /// </returns>
         public async Task<DescribeResourceInstanceCertsResponse> DescribeResourceInstanceCertsAsync(DescribeResourceInstanceCertsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeResourceInstanceCertsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries whether the log collection feature is enabled for a protected object.
-         *
-         * @param request DescribeResourceLogStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeResourceLogStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the log collection feature is enabled for a protected object.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceLogStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceLogStatusResponse
+        /// </returns>
         public DescribeResourceLogStatusResponse DescribeResourceLogStatusWithOptions(DescribeResourceLogStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9498,13 +14342,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeResourceLogStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether the log collection feature is enabled for a protected object.
-         *
-         * @param request DescribeResourceLogStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeResourceLogStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the log collection feature is enabled for a protected object.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceLogStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceLogStatusResponse
+        /// </returns>
         public async Task<DescribeResourceLogStatusResponse> DescribeResourceLogStatusWithOptionsAsync(DescribeResourceLogStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9544,37 +14396,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeResourceLogStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether the log collection feature is enabled for a protected object.
-         *
-         * @param request DescribeResourceLogStatusRequest
-         * @return DescribeResourceLogStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the log collection feature is enabled for a protected object.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceLogStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceLogStatusResponse
+        /// </returns>
         public DescribeResourceLogStatusResponse DescribeResourceLogStatus(DescribeResourceLogStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeResourceLogStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries whether the log collection feature is enabled for a protected object.
-         *
-         * @param request DescribeResourceLogStatusRequest
-         * @return DescribeResourceLogStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether the log collection feature is enabled for a protected object.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceLogStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceLogStatusResponse
+        /// </returns>
         public async Task<DescribeResourceLogStatusResponse> DescribeResourceLogStatusAsync(DescribeResourceLogStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeResourceLogStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the ports of a cloud service instance that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeResourcePortRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeResourcePortResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports of a cloud service instance that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourcePortRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourcePortResponse
+        /// </returns>
         public DescribeResourcePortResponse DescribeResourcePortWithOptions(DescribeResourcePortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9614,13 +14486,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeResourcePortResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the ports of a cloud service instance that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeResourcePortRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeResourcePortResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports of a cloud service instance that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourcePortRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourcePortResponse
+        /// </returns>
         public async Task<DescribeResourcePortResponse> DescribeResourcePortWithOptionsAsync(DescribeResourcePortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9660,37 +14540,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeResourcePortResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the ports of a cloud service instance that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeResourcePortRequest
-         * @return DescribeResourcePortResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports of a cloud service instance that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourcePortRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourcePortResponse
+        /// </returns>
         public DescribeResourcePortResponse DescribeResourcePort(DescribeResourcePortRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeResourcePortWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the ports of a cloud service instance that are added to Web Application Firewall (WAF).
-         *
-         * @param request DescribeResourcePortRequest
-         * @return DescribeResourcePortResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports of a cloud service instance that are added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourcePortRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourcePortResponse
+        /// </returns>
         public async Task<DescribeResourcePortResponse> DescribeResourcePortAsync(DescribeResourcePortRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeResourcePortWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the region IDs of the resources that are added to Web Application Firewall (WAF) in cloud native mode. The resources include Application Load Balancer (ALB) instances, Microservices Engine (MSE) instances, and custom domain names bound to web applications in Function Compute.
-         *
-         * @param request DescribeResourceRegionIdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeResourceRegionIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the region IDs of the resources that are added to Web Application Firewall (WAF) in cloud native mode. The resources include Application Load Balancer (ALB) instances, Microservices Engine (MSE) instances, and custom domain names bound to web applications in Function Compute.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceRegionIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceRegionIdResponse
+        /// </returns>
         public DescribeResourceRegionIdResponse DescribeResourceRegionIdWithOptions(DescribeResourceRegionIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9726,13 +14626,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeResourceRegionIdResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the region IDs of the resources that are added to Web Application Firewall (WAF) in cloud native mode. The resources include Application Load Balancer (ALB) instances, Microservices Engine (MSE) instances, and custom domain names bound to web applications in Function Compute.
-         *
-         * @param request DescribeResourceRegionIdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeResourceRegionIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the region IDs of the resources that are added to Web Application Firewall (WAF) in cloud native mode. The resources include Application Load Balancer (ALB) instances, Microservices Engine (MSE) instances, and custom domain names bound to web applications in Function Compute.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceRegionIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceRegionIdResponse
+        /// </returns>
         public async Task<DescribeResourceRegionIdResponse> DescribeResourceRegionIdWithOptionsAsync(DescribeResourceRegionIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9768,37 +14676,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeResourceRegionIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the region IDs of the resources that are added to Web Application Firewall (WAF) in cloud native mode. The resources include Application Load Balancer (ALB) instances, Microservices Engine (MSE) instances, and custom domain names bound to web applications in Function Compute.
-         *
-         * @param request DescribeResourceRegionIdRequest
-         * @return DescribeResourceRegionIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the region IDs of the resources that are added to Web Application Firewall (WAF) in cloud native mode. The resources include Application Load Balancer (ALB) instances, Microservices Engine (MSE) instances, and custom domain names bound to web applications in Function Compute.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceRegionIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceRegionIdResponse
+        /// </returns>
         public DescribeResourceRegionIdResponse DescribeResourceRegionId(DescribeResourceRegionIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeResourceRegionIdWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the region IDs of the resources that are added to Web Application Firewall (WAF) in cloud native mode. The resources include Application Load Balancer (ALB) instances, Microservices Engine (MSE) instances, and custom domain names bound to web applications in Function Compute.
-         *
-         * @param request DescribeResourceRegionIdRequest
-         * @return DescribeResourceRegionIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the region IDs of the resources that are added to Web Application Firewall (WAF) in cloud native mode. The resources include Application Load Balancer (ALB) instances, Microservices Engine (MSE) instances, and custom domain names bound to web applications in Function Compute.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceRegionIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceRegionIdResponse
+        /// </returns>
         public async Task<DescribeResourceRegionIdResponse> DescribeResourceRegionIdAsync(DescribeResourceRegionIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeResourceRegionIdWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the region IDs of Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that can be added to Web Application Firewall (WAF) in transparent proxy mode.
-         *
-         * @param request DescribeResourceSupportRegionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeResourceSupportRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the region IDs of Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that can be added to Web Application Firewall (WAF) in transparent proxy mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceSupportRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceSupportRegionsResponse
+        /// </returns>
         public DescribeResourceSupportRegionsResponse DescribeResourceSupportRegionsWithOptions(DescribeResourceSupportRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9814,6 +14742,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
             {
                 query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceProduct))
+            {
+                query["ResourceProduct"] = request.ResourceProduct;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9834,13 +14766,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeResourceSupportRegionsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the region IDs of Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that can be added to Web Application Firewall (WAF) in transparent proxy mode.
-         *
-         * @param request DescribeResourceSupportRegionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeResourceSupportRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the region IDs of Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that can be added to Web Application Firewall (WAF) in transparent proxy mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceSupportRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceSupportRegionsResponse
+        /// </returns>
         public async Task<DescribeResourceSupportRegionsResponse> DescribeResourceSupportRegionsWithOptionsAsync(DescribeResourceSupportRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9856,6 +14796,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
             {
                 query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceProduct))
+            {
+                query["ResourceProduct"] = request.ResourceProduct;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9876,37 +14820,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeResourceSupportRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the region IDs of Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that can be added to Web Application Firewall (WAF) in transparent proxy mode.
-         *
-         * @param request DescribeResourceSupportRegionsRequest
-         * @return DescribeResourceSupportRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the region IDs of Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that can be added to Web Application Firewall (WAF) in transparent proxy mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceSupportRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceSupportRegionsResponse
+        /// </returns>
         public DescribeResourceSupportRegionsResponse DescribeResourceSupportRegions(DescribeResourceSupportRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeResourceSupportRegionsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the region IDs of Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that can be added to Web Application Firewall (WAF) in transparent proxy mode.
-         *
-         * @param request DescribeResourceSupportRegionsRequest
-         * @return DescribeResourceSupportRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the region IDs of Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that can be added to Web Application Firewall (WAF) in transparent proxy mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceSupportRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceSupportRegionsResponse
+        /// </returns>
         public async Task<DescribeResourceSupportRegionsResponse> DescribeResourceSupportRegionsAsync(DescribeResourceSupportRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeResourceSupportRegionsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the trend of the number of error codes that are returned to clients or Web Application Firewall (WAF). The error codes include 302, 405, 444, 499, and 5XX.
-         *
-         * @param request DescribeResponseCodeTrendGraphRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeResponseCodeTrendGraphResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trend of the number of error codes that are returned to clients or Web Application Firewall (WAF). The error codes include 302, 405, 444, 499, and 5XX.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResponseCodeTrendGraphRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResponseCodeTrendGraphResponse
+        /// </returns>
         public DescribeResponseCodeTrendGraphResponse DescribeResponseCodeTrendGraphWithOptions(DescribeResponseCodeTrendGraphRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9962,13 +14926,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeResponseCodeTrendGraphResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the trend of the number of error codes that are returned to clients or Web Application Firewall (WAF). The error codes include 302, 405, 444, 499, and 5XX.
-         *
-         * @param request DescribeResponseCodeTrendGraphRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeResponseCodeTrendGraphResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trend of the number of error codes that are returned to clients or Web Application Firewall (WAF). The error codes include 302, 405, 444, 499, and 5XX.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResponseCodeTrendGraphRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResponseCodeTrendGraphResponse
+        /// </returns>
         public async Task<DescribeResponseCodeTrendGraphResponse> DescribeResponseCodeTrendGraphWithOptionsAsync(DescribeResponseCodeTrendGraphRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10024,37 +14996,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeResponseCodeTrendGraphResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the trend of the number of error codes that are returned to clients or Web Application Firewall (WAF). The error codes include 302, 405, 444, 499, and 5XX.
-         *
-         * @param request DescribeResponseCodeTrendGraphRequest
-         * @return DescribeResponseCodeTrendGraphResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trend of the number of error codes that are returned to clients or Web Application Firewall (WAF). The error codes include 302, 405, 444, 499, and 5XX.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResponseCodeTrendGraphRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResponseCodeTrendGraphResponse
+        /// </returns>
         public DescribeResponseCodeTrendGraphResponse DescribeResponseCodeTrendGraph(DescribeResponseCodeTrendGraphRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeResponseCodeTrendGraphWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the trend of the number of error codes that are returned to clients or Web Application Firewall (WAF). The error codes include 302, 405, 444, 499, and 5XX.
-         *
-         * @param request DescribeResponseCodeTrendGraphRequest
-         * @return DescribeResponseCodeTrendGraphResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trend of the number of error codes that are returned to clients or Web Application Firewall (WAF). The error codes include 302, 405, 444, 499, and 5XX.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeResponseCodeTrendGraphRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResponseCodeTrendGraphResponse
+        /// </returns>
         public async Task<DescribeResponseCodeTrendGraphResponse> DescribeResponseCodeTrendGraphAsync(DescribeResponseCodeTrendGraphRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeResponseCodeTrendGraphWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries regular expression rule groups by page.
-         *
-         * @param request DescribeRuleGroupsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRuleGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries regular expression rule groups by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleGroupsResponse
+        /// </returns>
         public DescribeRuleGroupsResponse DescribeRuleGroupsWithOptions(DescribeRuleGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10106,13 +15098,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeRuleGroupsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries regular expression rule groups by page.
-         *
-         * @param request DescribeRuleGroupsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRuleGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries regular expression rule groups by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleGroupsResponse
+        /// </returns>
         public async Task<DescribeRuleGroupsResponse> DescribeRuleGroupsWithOptionsAsync(DescribeRuleGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10164,37 +15164,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeRuleGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries regular expression rule groups by page.
-         *
-         * @param request DescribeRuleGroupsRequest
-         * @return DescribeRuleGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries regular expression rule groups by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleGroupsResponse
+        /// </returns>
         public DescribeRuleGroupsResponse DescribeRuleGroups(DescribeRuleGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRuleGroupsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries regular expression rule groups by page.
-         *
-         * @param request DescribeRuleGroupsRequest
-         * @return DescribeRuleGroupsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries regular expression rule groups by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleGroupsResponse
+        /// </returns>
         public async Task<DescribeRuleGroupsResponse> DescribeRuleGroupsAsync(DescribeRuleGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRuleGroupsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the top 10 IP addresses from which attacks are initiated.
-         *
-         * @param request DescribeRuleHitsTopClientIpRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRuleHitsTopClientIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 IP addresses from which attacks are initiated.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopClientIpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopClientIpResponse
+        /// </returns>
         public DescribeRuleHitsTopClientIpResponse DescribeRuleHitsTopClientIpWithOptions(DescribeRuleHitsTopClientIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10246,13 +15266,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeRuleHitsTopClientIpResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the top 10 IP addresses from which attacks are initiated.
-         *
-         * @param request DescribeRuleHitsTopClientIpRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRuleHitsTopClientIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 IP addresses from which attacks are initiated.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopClientIpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopClientIpResponse
+        /// </returns>
         public async Task<DescribeRuleHitsTopClientIpResponse> DescribeRuleHitsTopClientIpWithOptionsAsync(DescribeRuleHitsTopClientIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10304,37 +15332,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeRuleHitsTopClientIpResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the top 10 IP addresses from which attacks are initiated.
-         *
-         * @param request DescribeRuleHitsTopClientIpRequest
-         * @return DescribeRuleHitsTopClientIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 IP addresses from which attacks are initiated.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopClientIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopClientIpResponse
+        /// </returns>
         public DescribeRuleHitsTopClientIpResponse DescribeRuleHitsTopClientIp(DescribeRuleHitsTopClientIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRuleHitsTopClientIpWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the top 10 IP addresses from which attacks are initiated.
-         *
-         * @param request DescribeRuleHitsTopClientIpRequest
-         * @return DescribeRuleHitsTopClientIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 IP addresses from which attacks are initiated.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopClientIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopClientIpResponse
+        /// </returns>
         public async Task<DescribeRuleHitsTopClientIpResponse> DescribeRuleHitsTopClientIpAsync(DescribeRuleHitsTopClientIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRuleHitsTopClientIpWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the top 10 protected objects that trigger protection rules.
-         *
-         * @param request DescribeRuleHitsTopResourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRuleHitsTopResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 protected objects that trigger protection rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopResourceResponse
+        /// </returns>
         public DescribeRuleHitsTopResourceResponse DescribeRuleHitsTopResourceWithOptions(DescribeRuleHitsTopResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10382,13 +15430,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeRuleHitsTopResourceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the top 10 protected objects that trigger protection rules.
-         *
-         * @param request DescribeRuleHitsTopResourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRuleHitsTopResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 protected objects that trigger protection rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopResourceResponse
+        /// </returns>
         public async Task<DescribeRuleHitsTopResourceResponse> DescribeRuleHitsTopResourceWithOptionsAsync(DescribeRuleHitsTopResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10436,37 +15492,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeRuleHitsTopResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the top 10 protected objects that trigger protection rules.
-         *
-         * @param request DescribeRuleHitsTopResourceRequest
-         * @return DescribeRuleHitsTopResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 protected objects that trigger protection rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopResourceResponse
+        /// </returns>
         public DescribeRuleHitsTopResourceResponse DescribeRuleHitsTopResource(DescribeRuleHitsTopResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRuleHitsTopResourceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the top 10 protected objects that trigger protection rules.
-         *
-         * @param request DescribeRuleHitsTopResourceRequest
-         * @return DescribeRuleHitsTopResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 protected objects that trigger protection rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopResourceResponse
+        /// </returns>
         public async Task<DescribeRuleHitsTopResourceResponse> DescribeRuleHitsTopResourceAsync(DescribeRuleHitsTopResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRuleHitsTopResourceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the IDs of the top 10 protection rules that are matched by requests.
-         *
-         * @param request DescribeRuleHitsTopRuleIdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRuleHitsTopRuleIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs of the top 10 protection rules that are matched by requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopRuleIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopRuleIdResponse
+        /// </returns>
         public DescribeRuleHitsTopRuleIdResponse DescribeRuleHitsTopRuleIdWithOptions(DescribeRuleHitsTopRuleIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10522,13 +15598,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeRuleHitsTopRuleIdResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the IDs of the top 10 protection rules that are matched by requests.
-         *
-         * @param request DescribeRuleHitsTopRuleIdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRuleHitsTopRuleIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs of the top 10 protection rules that are matched by requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopRuleIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopRuleIdResponse
+        /// </returns>
         public async Task<DescribeRuleHitsTopRuleIdResponse> DescribeRuleHitsTopRuleIdWithOptionsAsync(DescribeRuleHitsTopRuleIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10584,37 +15668,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeRuleHitsTopRuleIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the IDs of the top 10 protection rules that are matched by requests.
-         *
-         * @param request DescribeRuleHitsTopRuleIdRequest
-         * @return DescribeRuleHitsTopRuleIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs of the top 10 protection rules that are matched by requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopRuleIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopRuleIdResponse
+        /// </returns>
         public DescribeRuleHitsTopRuleIdResponse DescribeRuleHitsTopRuleId(DescribeRuleHitsTopRuleIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRuleHitsTopRuleIdWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the IDs of the top 10 protection rules that are matched by requests.
-         *
-         * @param request DescribeRuleHitsTopRuleIdRequest
-         * @return DescribeRuleHitsTopRuleIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs of the top 10 protection rules that are matched by requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopRuleIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopRuleIdResponse
+        /// </returns>
         public async Task<DescribeRuleHitsTopRuleIdResponse> DescribeRuleHitsTopRuleIdAsync(DescribeRuleHitsTopRuleIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRuleHitsTopRuleIdWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the top 10 protection modules that are matched.
-         *
-         * @param request DescribeRuleHitsTopTuleTypeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRuleHitsTopTuleTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 protection modules that are matched.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopTuleTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopTuleTypeResponse
+        /// </returns>
         public DescribeRuleHitsTopTuleTypeResponse DescribeRuleHitsTopTuleTypeWithOptions(DescribeRuleHitsTopTuleTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10634,6 +15738,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resource))
             {
                 query["Resource"] = request.Resource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
             {
@@ -10658,13 +15766,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeRuleHitsTopTuleTypeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the top 10 protection modules that are matched.
-         *
-         * @param request DescribeRuleHitsTopTuleTypeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRuleHitsTopTuleTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 protection modules that are matched.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopTuleTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopTuleTypeResponse
+        /// </returns>
         public async Task<DescribeRuleHitsTopTuleTypeResponse> DescribeRuleHitsTopTuleTypeWithOptionsAsync(DescribeRuleHitsTopTuleTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10684,6 +15800,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resource))
             {
                 query["Resource"] = request.Resource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
             {
@@ -10708,37 +15828,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeRuleHitsTopTuleTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the top 10 protection modules that are matched.
-         *
-         * @param request DescribeRuleHitsTopTuleTypeRequest
-         * @return DescribeRuleHitsTopTuleTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 protection modules that are matched.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopTuleTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopTuleTypeResponse
+        /// </returns>
         public DescribeRuleHitsTopTuleTypeResponse DescribeRuleHitsTopTuleType(DescribeRuleHitsTopTuleTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRuleHitsTopTuleTypeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the top 10 protection modules that are matched.
-         *
-         * @param request DescribeRuleHitsTopTuleTypeRequest
-         * @return DescribeRuleHitsTopTuleTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 protection modules that are matched.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopTuleTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopTuleTypeResponse
+        /// </returns>
         public async Task<DescribeRuleHitsTopTuleTypeResponse> DescribeRuleHitsTopTuleTypeAsync(DescribeRuleHitsTopTuleTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRuleHitsTopTuleTypeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the top 10 user agents that are used to initiate attacks.
-         *
-         * @param request DescribeRuleHitsTopUaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRuleHitsTopUaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 user agents that are used to initiate attacks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopUaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopUaResponse
+        /// </returns>
         public DescribeRuleHitsTopUaResponse DescribeRuleHitsTopUaWithOptions(DescribeRuleHitsTopUaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10786,13 +15926,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeRuleHitsTopUaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the top 10 user agents that are used to initiate attacks.
-         *
-         * @param request DescribeRuleHitsTopUaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRuleHitsTopUaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 user agents that are used to initiate attacks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopUaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopUaResponse
+        /// </returns>
         public async Task<DescribeRuleHitsTopUaResponse> DescribeRuleHitsTopUaWithOptionsAsync(DescribeRuleHitsTopUaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10840,37 +15988,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeRuleHitsTopUaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the top 10 user agents that are used to initiate attacks.
-         *
-         * @param request DescribeRuleHitsTopUaRequest
-         * @return DescribeRuleHitsTopUaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 user agents that are used to initiate attacks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopUaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopUaResponse
+        /// </returns>
         public DescribeRuleHitsTopUaResponse DescribeRuleHitsTopUa(DescribeRuleHitsTopUaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRuleHitsTopUaWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the top 10 user agents that are used to initiate attacks.
-         *
-         * @param request DescribeRuleHitsTopUaRequest
-         * @return DescribeRuleHitsTopUaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 user agents that are used to initiate attacks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopUaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopUaResponse
+        /// </returns>
         public async Task<DescribeRuleHitsTopUaResponse> DescribeRuleHitsTopUaAsync(DescribeRuleHitsTopUaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRuleHitsTopUaWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the top 10 URLs that trigger protection rules.
-         *
-         * @param request DescribeRuleHitsTopUrlRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRuleHitsTopUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 URLs that trigger protection rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopUrlResponse
+        /// </returns>
         public DescribeRuleHitsTopUrlResponse DescribeRuleHitsTopUrlWithOptions(DescribeRuleHitsTopUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10922,13 +16090,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeRuleHitsTopUrlResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the top 10 URLs that trigger protection rules.
-         *
-         * @param request DescribeRuleHitsTopUrlRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRuleHitsTopUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 URLs that trigger protection rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopUrlResponse
+        /// </returns>
         public async Task<DescribeRuleHitsTopUrlResponse> DescribeRuleHitsTopUrlWithOptionsAsync(DescribeRuleHitsTopUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10980,37 +16156,1537 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeRuleHitsTopUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the top 10 URLs that trigger protection rules.
-         *
-         * @param request DescribeRuleHitsTopUrlRequest
-         * @return DescribeRuleHitsTopUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 URLs that trigger protection rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopUrlResponse
+        /// </returns>
         public DescribeRuleHitsTopUrlResponse DescribeRuleHitsTopUrl(DescribeRuleHitsTopUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRuleHitsTopUrlWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the top 10 URLs that trigger protection rules.
-         *
-         * @param request DescribeRuleHitsTopUrlRequest
-         * @return DescribeRuleHitsTopUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 URLs that trigger protection rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRuleHitsTopUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRuleHitsTopUrlResponse
+        /// </returns>
         public async Task<DescribeRuleHitsTopUrlResponse> DescribeRuleHitsTopUrlAsync(DescribeRuleHitsTopUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRuleHitsTopUrlWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries whether Web Application Firewall (WAF) is authorized to access Logstores.
-         *
-         * @param request DescribeSlsAuthStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSlsAuthStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the personal information-related APIs and domain names.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveApiStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveApiStatisticResponse
+        /// </returns>
+        public DescribeSensitiveApiStatisticResponse DescribeSensitiveApiStatisticWithOptions(DescribeSensitiveApiStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchedHost))
+            {
+                query["MatchedHost"] = request.MatchedHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSensitiveApiStatistic",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSensitiveApiStatisticResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the personal information-related APIs and domain names.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveApiStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveApiStatisticResponse
+        /// </returns>
+        public async Task<DescribeSensitiveApiStatisticResponse> DescribeSensitiveApiStatisticWithOptionsAsync(DescribeSensitiveApiStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchedHost))
+            {
+                query["MatchedHost"] = request.MatchedHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSensitiveApiStatistic",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSensitiveApiStatisticResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the personal information-related APIs and domain names.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveApiStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveApiStatisticResponse
+        /// </returns>
+        public DescribeSensitiveApiStatisticResponse DescribeSensitiveApiStatistic(DescribeSensitiveApiStatisticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSensitiveApiStatisticWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the personal information-related APIs and domain names.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveApiStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveApiStatisticResponse
+        /// </returns>
+        public async Task<DescribeSensitiveApiStatisticResponse> DescribeSensitiveApiStatisticAsync(DescribeSensitiveApiStatisticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSensitiveApiStatisticWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the compliance check results of API security.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveDetectionResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveDetectionResultResponse
+        /// </returns>
+        public DescribeSensitiveDetectionResultResponse DescribeSensitiveDetectionResultWithOptions(DescribeSensitiveDetectionResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSensitiveDetectionResult",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSensitiveDetectionResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the compliance check results of API security.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveDetectionResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveDetectionResultResponse
+        /// </returns>
+        public async Task<DescribeSensitiveDetectionResultResponse> DescribeSensitiveDetectionResultWithOptionsAsync(DescribeSensitiveDetectionResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSensitiveDetectionResult",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSensitiveDetectionResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the compliance check results of API security.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveDetectionResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveDetectionResultResponse
+        /// </returns>
+        public DescribeSensitiveDetectionResultResponse DescribeSensitiveDetectionResult(DescribeSensitiveDetectionResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSensitiveDetectionResultWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the compliance check results of API security.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveDetectionResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveDetectionResultResponse
+        /// </returns>
+        public async Task<DescribeSensitiveDetectionResultResponse> DescribeSensitiveDetectionResultAsync(DescribeSensitiveDetectionResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSensitiveDetectionResultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the traffic distribution of personal information records involved in cross-border data transfer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveOutboundDistributionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveOutboundDistributionResponse
+        /// </returns>
+        public DescribeSensitiveOutboundDistributionResponse DescribeSensitiveOutboundDistributionWithOptions(DescribeSensitiveOutboundDistributionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSensitiveOutboundDistribution",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSensitiveOutboundDistributionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the traffic distribution of personal information records involved in cross-border data transfer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveOutboundDistributionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveOutboundDistributionResponse
+        /// </returns>
+        public async Task<DescribeSensitiveOutboundDistributionResponse> DescribeSensitiveOutboundDistributionWithOptionsAsync(DescribeSensitiveOutboundDistributionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSensitiveOutboundDistribution",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSensitiveOutboundDistributionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the traffic distribution of personal information records involved in cross-border data transfer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveOutboundDistributionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveOutboundDistributionResponse
+        /// </returns>
+        public DescribeSensitiveOutboundDistributionResponse DescribeSensitiveOutboundDistribution(DescribeSensitiveOutboundDistributionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSensitiveOutboundDistributionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the traffic distribution of personal information records involved in cross-border data transfer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveOutboundDistributionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveOutboundDistributionResponse
+        /// </returns>
+        public async Task<DescribeSensitiveOutboundDistributionResponse> DescribeSensitiveOutboundDistributionAsync(DescribeSensitiveOutboundDistributionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSensitiveOutboundDistributionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the data types of personal information involved in cross-border data transfer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveOutboundStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveOutboundStatisticResponse
+        /// </returns>
+        public DescribeSensitiveOutboundStatisticResponse DescribeSensitiveOutboundStatisticWithOptions(DescribeSensitiveOutboundStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectionResult))
+            {
+                query["DetectionResult"] = request.DetectionResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderKey))
+            {
+                query["OrderKey"] = request.OrderKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderWay))
+            {
+                query["OrderWay"] = request.OrderWay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveCode))
+            {
+                query["SensitiveCode"] = request.SensitiveCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveLevel))
+            {
+                query["SensitiveLevel"] = request.SensitiveLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveType))
+            {
+                query["SensitiveType"] = request.SensitiveType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSensitiveOutboundStatistic",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSensitiveOutboundStatisticResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the data types of personal information involved in cross-border data transfer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveOutboundStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveOutboundStatisticResponse
+        /// </returns>
+        public async Task<DescribeSensitiveOutboundStatisticResponse> DescribeSensitiveOutboundStatisticWithOptionsAsync(DescribeSensitiveOutboundStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectionResult))
+            {
+                query["DetectionResult"] = request.DetectionResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderKey))
+            {
+                query["OrderKey"] = request.OrderKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderWay))
+            {
+                query["OrderWay"] = request.OrderWay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveCode))
+            {
+                query["SensitiveCode"] = request.SensitiveCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveLevel))
+            {
+                query["SensitiveLevel"] = request.SensitiveLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveType))
+            {
+                query["SensitiveType"] = request.SensitiveType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSensitiveOutboundStatistic",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSensitiveOutboundStatisticResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the data types of personal information involved in cross-border data transfer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveOutboundStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveOutboundStatisticResponse
+        /// </returns>
+        public DescribeSensitiveOutboundStatisticResponse DescribeSensitiveOutboundStatistic(DescribeSensitiveOutboundStatisticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSensitiveOutboundStatisticWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the data types of personal information involved in cross-border data transfer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveOutboundStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveOutboundStatisticResponse
+        /// </returns>
+        public async Task<DescribeSensitiveOutboundStatisticResponse> DescribeSensitiveOutboundStatisticAsync(DescribeSensitiveOutboundStatisticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSensitiveOutboundStatisticWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trends of cross-border data transfer of personal information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveOutboundTrendRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveOutboundTrendResponse
+        /// </returns>
+        public DescribeSensitiveOutboundTrendResponse DescribeSensitiveOutboundTrendWithOptions(DescribeSensitiveOutboundTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSensitiveOutboundTrend",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSensitiveOutboundTrendResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trends of cross-border data transfer of personal information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveOutboundTrendRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveOutboundTrendResponse
+        /// </returns>
+        public async Task<DescribeSensitiveOutboundTrendResponse> DescribeSensitiveOutboundTrendWithOptionsAsync(DescribeSensitiveOutboundTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSensitiveOutboundTrend",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSensitiveOutboundTrendResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trends of cross-border data transfer of personal information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveOutboundTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveOutboundTrendResponse
+        /// </returns>
+        public DescribeSensitiveOutboundTrendResponse DescribeSensitiveOutboundTrend(DescribeSensitiveOutboundTrendRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSensitiveOutboundTrendWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trends of cross-border data transfer of personal information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveOutboundTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveOutboundTrendResponse
+        /// </returns>
+        public async Task<DescribeSensitiveOutboundTrendResponse> DescribeSensitiveOutboundTrendAsync(DescribeSensitiveOutboundTrendRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSensitiveOutboundTrendWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access logs of sensitive data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveRequestLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveRequestLogResponse
+        /// </returns>
+        public DescribeSensitiveRequestLogResponse DescribeSensitiveRequestLogWithOptions(DescribeSensitiveRequestLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiFormat))
+            {
+                query["ApiFormat"] = request.ApiFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIP))
+            {
+                query["ClientIP"] = request.ClientIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchedHost))
+            {
+                query["MatchedHost"] = request.MatchedHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveCode))
+            {
+                query["SensitiveCode"] = request.SensitiveCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveData))
+            {
+                query["SensitiveData"] = request.SensitiveData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSensitiveRequestLog",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSensitiveRequestLogResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access logs of sensitive data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveRequestLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveRequestLogResponse
+        /// </returns>
+        public async Task<DescribeSensitiveRequestLogResponse> DescribeSensitiveRequestLogWithOptionsAsync(DescribeSensitiveRequestLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiFormat))
+            {
+                query["ApiFormat"] = request.ApiFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIP))
+            {
+                query["ClientIP"] = request.ClientIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchedHost))
+            {
+                query["MatchedHost"] = request.MatchedHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveCode))
+            {
+                query["SensitiveCode"] = request.SensitiveCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveData))
+            {
+                query["SensitiveData"] = request.SensitiveData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSensitiveRequestLog",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSensitiveRequestLogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access logs of sensitive data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveRequestLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveRequestLogResponse
+        /// </returns>
+        public DescribeSensitiveRequestLogResponse DescribeSensitiveRequestLog(DescribeSensitiveRequestLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSensitiveRequestLogWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access logs of sensitive data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveRequestLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveRequestLogResponse
+        /// </returns>
+        public async Task<DescribeSensitiveRequestLogResponse> DescribeSensitiveRequestLogAsync(DescribeSensitiveRequestLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSensitiveRequestLogWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tracing results of sensitive data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveRequestsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveRequestsResponse
+        /// </returns>
+        public DescribeSensitiveRequestsResponse DescribeSensitiveRequestsWithOptions(DescribeSensitiveRequestsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveCode))
+            {
+                query["SensitiveCode"] = request.SensitiveCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveData))
+            {
+                query["SensitiveData"] = request.SensitiveData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSensitiveRequests",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSensitiveRequestsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tracing results of sensitive data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveRequestsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveRequestsResponse
+        /// </returns>
+        public async Task<DescribeSensitiveRequestsResponse> DescribeSensitiveRequestsWithOptionsAsync(DescribeSensitiveRequestsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveCode))
+            {
+                query["SensitiveCode"] = request.SensitiveCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveData))
+            {
+                query["SensitiveData"] = request.SensitiveData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSensitiveRequests",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSensitiveRequestsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tracing results of sensitive data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveRequestsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveRequestsResponse
+        /// </returns>
+        public DescribeSensitiveRequestsResponse DescribeSensitiveRequests(DescribeSensitiveRequestsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSensitiveRequestsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tracing results of sensitive data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveRequestsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveRequestsResponse
+        /// </returns>
+        public async Task<DescribeSensitiveRequestsResponse> DescribeSensitiveRequestsAsync(DescribeSensitiveRequestsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSensitiveRequestsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the sensitive data statistics of the tracing and auditing feature.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveStatisticResponse
+        /// </returns>
+        public DescribeSensitiveStatisticResponse DescribeSensitiveStatisticWithOptions(DescribeSensitiveStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisticType))
+            {
+                query["StatisticType"] = request.StatisticType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSensitiveStatistic",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSensitiveStatisticResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the sensitive data statistics of the tracing and auditing feature.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveStatisticResponse
+        /// </returns>
+        public async Task<DescribeSensitiveStatisticResponse> DescribeSensitiveStatisticWithOptionsAsync(DescribeSensitiveStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisticType))
+            {
+                query["StatisticType"] = request.StatisticType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSensitiveStatistic",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSensitiveStatisticResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the sensitive data statistics of the tracing and auditing feature.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveStatisticResponse
+        /// </returns>
+        public DescribeSensitiveStatisticResponse DescribeSensitiveStatistic(DescribeSensitiveStatisticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSensitiveStatisticWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the sensitive data statistics of the tracing and auditing feature.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSensitiveStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSensitiveStatisticResponse
+        /// </returns>
+        public async Task<DescribeSensitiveStatisticResponse> DescribeSensitiveStatisticAsync(DescribeSensitiveStatisticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSensitiveStatisticWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether Web Application Firewall (WAF) is authorized to access Logstores.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSlsAuthStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlsAuthStatusResponse
+        /// </returns>
         public DescribeSlsAuthStatusResponse DescribeSlsAuthStatusWithOptions(DescribeSlsAuthStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11046,13 +17722,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeSlsAuthStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether Web Application Firewall (WAF) is authorized to access Logstores.
-         *
-         * @param request DescribeSlsAuthStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSlsAuthStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether Web Application Firewall (WAF) is authorized to access Logstores.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSlsAuthStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlsAuthStatusResponse
+        /// </returns>
         public async Task<DescribeSlsAuthStatusResponse> DescribeSlsAuthStatusWithOptionsAsync(DescribeSlsAuthStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11088,37 +17772,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeSlsAuthStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries whether Web Application Firewall (WAF) is authorized to access Logstores.
-         *
-         * @param request DescribeSlsAuthStatusRequest
-         * @return DescribeSlsAuthStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether Web Application Firewall (WAF) is authorized to access Logstores.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSlsAuthStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlsAuthStatusResponse
+        /// </returns>
         public DescribeSlsAuthStatusResponse DescribeSlsAuthStatus(DescribeSlsAuthStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSlsAuthStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries whether Web Application Firewall (WAF) is authorized to access Logstores.
-         *
-         * @param request DescribeSlsAuthStatusRequest
-         * @return DescribeSlsAuthStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether Web Application Firewall (WAF) is authorized to access Logstores.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSlsAuthStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlsAuthStatusResponse
+        /// </returns>
         public async Task<DescribeSlsAuthStatusResponse> DescribeSlsAuthStatusAsync(DescribeSlsAuthStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSlsAuthStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries information about a Logstore, such as the total capacity, storage duration, and used capacity.
-         *
-         * @param request DescribeSlsLogStoreRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSlsLogStoreResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about a Logstore, such as the total capacity, storage duration, and used capacity.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSlsLogStoreRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlsLogStoreResponse
+        /// </returns>
         public DescribeSlsLogStoreResponse DescribeSlsLogStoreWithOptions(DescribeSlsLogStoreRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11154,13 +17858,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeSlsLogStoreResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries information about a Logstore, such as the total capacity, storage duration, and used capacity.
-         *
-         * @param request DescribeSlsLogStoreRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSlsLogStoreResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about a Logstore, such as the total capacity, storage duration, and used capacity.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSlsLogStoreRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlsLogStoreResponse
+        /// </returns>
         public async Task<DescribeSlsLogStoreResponse> DescribeSlsLogStoreWithOptionsAsync(DescribeSlsLogStoreRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11196,37 +17908,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeSlsLogStoreResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries information about a Logstore, such as the total capacity, storage duration, and used capacity.
-         *
-         * @param request DescribeSlsLogStoreRequest
-         * @return DescribeSlsLogStoreResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about a Logstore, such as the total capacity, storage duration, and used capacity.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSlsLogStoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlsLogStoreResponse
+        /// </returns>
         public DescribeSlsLogStoreResponse DescribeSlsLogStore(DescribeSlsLogStoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSlsLogStoreWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries information about a Logstore, such as the total capacity, storage duration, and used capacity.
-         *
-         * @param request DescribeSlsLogStoreRequest
-         * @return DescribeSlsLogStoreResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about a Logstore, such as the total capacity, storage duration, and used capacity.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSlsLogStoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlsLogStoreResponse
+        /// </returns>
         public async Task<DescribeSlsLogStoreResponse> DescribeSlsLogStoreAsync(DescribeSlsLogStoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSlsLogStoreWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the status of a Simple Log Service Logstore.
-         *
-         * @param request DescribeSlsLogStoreStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSlsLogStoreStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a Simple Log Service Logstore.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSlsLogStoreStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlsLogStoreStatusResponse
+        /// </returns>
         public DescribeSlsLogStoreStatusResponse DescribeSlsLogStoreStatusWithOptions(DescribeSlsLogStoreStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11262,13 +17994,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeSlsLogStoreStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the status of a Simple Log Service Logstore.
-         *
-         * @param request DescribeSlsLogStoreStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSlsLogStoreStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a Simple Log Service Logstore.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSlsLogStoreStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlsLogStoreStatusResponse
+        /// </returns>
         public async Task<DescribeSlsLogStoreStatusResponse> DescribeSlsLogStoreStatusWithOptionsAsync(DescribeSlsLogStoreStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11304,37 +18044,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeSlsLogStoreStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the status of a Simple Log Service Logstore.
-         *
-         * @param request DescribeSlsLogStoreStatusRequest
-         * @return DescribeSlsLogStoreStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a Simple Log Service Logstore.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSlsLogStoreStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlsLogStoreStatusResponse
+        /// </returns>
         public DescribeSlsLogStoreStatusResponse DescribeSlsLogStoreStatus(DescribeSlsLogStoreStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSlsLogStoreStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the status of a Simple Log Service Logstore.
-         *
-         * @param request DescribeSlsLogStoreStatusRequest
-         * @return DescribeSlsLogStoreStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a Simple Log Service Logstore.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSlsLogStoreStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlsLogStoreStatusResponse
+        /// </returns>
         public async Task<DescribeSlsLogStoreStatusResponse> DescribeSlsLogStoreStatusAsync(DescribeSlsLogStoreStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSlsLogStoreStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the number of protected resources for which a protection template takes effect.
-         *
-         * @param request DescribeTemplateResourceCountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTemplateResourceCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of protected resources for which a protection template takes effect.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTemplateResourceCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTemplateResourceCountResponse
+        /// </returns>
         public DescribeTemplateResourceCountResponse DescribeTemplateResourceCountWithOptions(DescribeTemplateResourceCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11374,13 +18134,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeTemplateResourceCountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the number of protected resources for which a protection template takes effect.
-         *
-         * @param request DescribeTemplateResourceCountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTemplateResourceCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of protected resources for which a protection template takes effect.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTemplateResourceCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTemplateResourceCountResponse
+        /// </returns>
         public async Task<DescribeTemplateResourceCountResponse> DescribeTemplateResourceCountWithOptionsAsync(DescribeTemplateResourceCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11420,37 +18188,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeTemplateResourceCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the number of protected resources for which a protection template takes effect.
-         *
-         * @param request DescribeTemplateResourceCountRequest
-         * @return DescribeTemplateResourceCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of protected resources for which a protection template takes effect.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTemplateResourceCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTemplateResourceCountResponse
+        /// </returns>
         public DescribeTemplateResourceCountResponse DescribeTemplateResourceCount(DescribeTemplateResourceCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTemplateResourceCountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the number of protected resources for which a protection template takes effect.
-         *
-         * @param request DescribeTemplateResourceCountRequest
-         * @return DescribeTemplateResourceCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of protected resources for which a protection template takes effect.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTemplateResourceCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTemplateResourceCountResponse
+        /// </returns>
         public async Task<DescribeTemplateResourceCountResponse> DescribeTemplateResourceCountAsync(DescribeTemplateResourceCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTemplateResourceCountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the resources that are associated to a protection rule template.
-         *
-         * @param request DescribeTemplateResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTemplateResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the resources that are associated to a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTemplateResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTemplateResourcesResponse
+        /// </returns>
         public DescribeTemplateResourcesResponse DescribeTemplateResourcesWithOptions(DescribeTemplateResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11494,13 +18282,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeTemplateResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the resources that are associated to a protection rule template.
-         *
-         * @param request DescribeTemplateResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTemplateResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the resources that are associated to a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTemplateResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTemplateResourcesResponse
+        /// </returns>
         public async Task<DescribeTemplateResourcesResponse> DescribeTemplateResourcesWithOptionsAsync(DescribeTemplateResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11544,37 +18340,1001 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeTemplateResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the resources that are associated to a protection rule template.
-         *
-         * @param request DescribeTemplateResourcesRequest
-         * @return DescribeTemplateResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the resources that are associated to a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTemplateResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTemplateResourcesResponse
+        /// </returns>
         public DescribeTemplateResourcesResponse DescribeTemplateResources(DescribeTemplateResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTemplateResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the resources that are associated to a protection rule template.
-         *
-         * @param request DescribeTemplateResourcesRequest
-         * @return DescribeTemplateResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the resources that are associated to a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTemplateResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTemplateResourcesResponse
+        /// </returns>
         public async Task<DescribeTemplateResourcesResponse> DescribeTemplateResourcesAsync(DescribeTemplateResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTemplateResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries available regions for log storage.
-         *
-         * @param request DescribeUserSlsLogRegionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeUserSlsLogRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trends of API security risks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserAbnormalTrendRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserAbnormalTrendResponse
+        /// </returns>
+        public DescribeUserAbnormalTrendResponse DescribeUserAbnormalTrendWithOptions(DescribeUserAbnormalTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserAbnormalTrend",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserAbnormalTrendResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trends of API security risks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserAbnormalTrendRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserAbnormalTrendResponse
+        /// </returns>
+        public async Task<DescribeUserAbnormalTrendResponse> DescribeUserAbnormalTrendWithOptionsAsync(DescribeUserAbnormalTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserAbnormalTrend",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserAbnormalTrendResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trends of API security risks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserAbnormalTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserAbnormalTrendResponse
+        /// </returns>
+        public DescribeUserAbnormalTrendResponse DescribeUserAbnormalTrend(DescribeUserAbnormalTrendRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeUserAbnormalTrendWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trends of API security risks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserAbnormalTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserAbnormalTrendResponse
+        /// </returns>
+        public async Task<DescribeUserAbnormalTrendResponse> DescribeUserAbnormalTrendAsync(DescribeUserAbnormalTrendRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeUserAbnormalTrendWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types and statistics of risks in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserAbnormalTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserAbnormalTypeResponse
+        /// </returns>
+        public DescribeUserAbnormalTypeResponse DescribeUserAbnormalTypeWithOptions(DescribeUserAbnormalTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserAbnormalType",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserAbnormalTypeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types and statistics of risks in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserAbnormalTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserAbnormalTypeResponse
+        /// </returns>
+        public async Task<DescribeUserAbnormalTypeResponse> DescribeUserAbnormalTypeWithOptionsAsync(DescribeUserAbnormalTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserAbnormalType",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserAbnormalTypeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types and statistics of risks in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserAbnormalTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserAbnormalTypeResponse
+        /// </returns>
+        public DescribeUserAbnormalTypeResponse DescribeUserAbnormalType(DescribeUserAbnormalTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeUserAbnormalTypeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types and statistics of risks in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserAbnormalTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserAbnormalTypeResponse
+        /// </returns>
+        public async Task<DescribeUserAbnormalTypeResponse> DescribeUserAbnormalTypeAsync(DescribeUserAbnormalTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeUserAbnormalTypeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the traffic statistics of an API.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserApiRequestRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserApiRequestResponse
+        /// </returns>
+        public DescribeUserApiRequestResponse DescribeUserApiRequestWithOptions(DescribeUserApiRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiFormat))
+            {
+                query["ApiFormat"] = request.ApiFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserApiRequest",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserApiRequestResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the traffic statistics of an API.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserApiRequestRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserApiRequestResponse
+        /// </returns>
+        public async Task<DescribeUserApiRequestResponse> DescribeUserApiRequestWithOptionsAsync(DescribeUserApiRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiFormat))
+            {
+                query["ApiFormat"] = request.ApiFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserApiRequest",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserApiRequestResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the traffic statistics of an API.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserApiRequestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserApiRequestResponse
+        /// </returns>
+        public DescribeUserApiRequestResponse DescribeUserApiRequest(DescribeUserApiRequestRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeUserApiRequestWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the traffic statistics of an API.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserApiRequestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserApiRequestResponse
+        /// </returns>
+        public async Task<DescribeUserApiRequestResponse> DescribeUserApiRequestAsync(DescribeUserApiRequestRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeUserApiRequestWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the user asset statistics in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserAssetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserAssetResponse
+        /// </returns>
+        public DescribeUserAssetResponse DescribeUserAssetWithOptions(DescribeUserAssetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            {
+                query["DataType"] = request.DataType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Days))
+            {
+                query["Days"] = request.Days;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserAsset",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserAssetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the user asset statistics in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserAssetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserAssetResponse
+        /// </returns>
+        public async Task<DescribeUserAssetResponse> DescribeUserAssetWithOptionsAsync(DescribeUserAssetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            {
+                query["DataType"] = request.DataType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Days))
+            {
+                query["Days"] = request.Days;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserAsset",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserAssetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the user asset statistics in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserAssetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserAssetResponse
+        /// </returns>
+        public DescribeUserAssetResponse DescribeUserAsset(DescribeUserAssetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeUserAssetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the user asset statistics in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserAssetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserAssetResponse
+        /// </returns>
+        public async Task<DescribeUserAssetResponse> DescribeUserAssetAsync(DescribeUserAssetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeUserAssetWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trends of attacks detected by the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserEventTrendRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserEventTrendResponse
+        /// </returns>
+        public DescribeUserEventTrendResponse DescribeUserEventTrendWithOptions(DescribeUserEventTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserEventTrend",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserEventTrendResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trends of attacks detected by the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserEventTrendRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserEventTrendResponse
+        /// </returns>
+        public async Task<DescribeUserEventTrendResponse> DescribeUserEventTrendWithOptionsAsync(DescribeUserEventTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserEventTrend",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserEventTrendResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trends of attacks detected by the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserEventTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserEventTrendResponse
+        /// </returns>
+        public DescribeUserEventTrendResponse DescribeUserEventTrend(DescribeUserEventTrendRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeUserEventTrendWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trends of attacks detected by the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserEventTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserEventTrendResponse
+        /// </returns>
+        public async Task<DescribeUserEventTrendResponse> DescribeUserEventTrendAsync(DescribeUserEventTrendRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeUserEventTrendWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types and statistics of security events in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserEventTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserEventTypeResponse
+        /// </returns>
+        public DescribeUserEventTypeResponse DescribeUserEventTypeWithOptions(DescribeUserEventTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserEventType",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserEventTypeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types and statistics of security events in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserEventTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserEventTypeResponse
+        /// </returns>
+        public async Task<DescribeUserEventTypeResponse> DescribeUserEventTypeWithOptionsAsync(DescribeUserEventTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserEventType",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserEventTypeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types and statistics of security events in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserEventTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserEventTypeResponse
+        /// </returns>
+        public DescribeUserEventTypeResponse DescribeUserEventType(DescribeUserEventTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeUserEventTypeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types and statistics of security events in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserEventTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserEventTypeResponse
+        /// </returns>
+        public async Task<DescribeUserEventTypeResponse> DescribeUserEventTypeAsync(DescribeUserEventTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeUserEventTypeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions for log storage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserSlsLogRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserSlsLogRegionsResponse
+        /// </returns>
         public DescribeUserSlsLogRegionsResponse DescribeUserSlsLogRegionsWithOptions(DescribeUserSlsLogRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11610,13 +19370,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeUserSlsLogRegionsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries available regions for log storage.
-         *
-         * @param request DescribeUserSlsLogRegionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeUserSlsLogRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions for log storage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserSlsLogRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserSlsLogRegionsResponse
+        /// </returns>
         public async Task<DescribeUserSlsLogRegionsResponse> DescribeUserSlsLogRegionsWithOptionsAsync(DescribeUserSlsLogRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11652,37 +19420,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeUserSlsLogRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries available regions for log storage.
-         *
-         * @param request DescribeUserSlsLogRegionsRequest
-         * @return DescribeUserSlsLogRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions for log storage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserSlsLogRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserSlsLogRegionsResponse
+        /// </returns>
         public DescribeUserSlsLogRegionsResponse DescribeUserSlsLogRegions(DescribeUserSlsLogRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUserSlsLogRegionsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries available regions for log storage.
-         *
-         * @param request DescribeUserSlsLogRegionsRequest
-         * @return DescribeUserSlsLogRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions for log storage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserSlsLogRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserSlsLogRegionsResponse
+        /// </returns>
         public async Task<DescribeUserSlsLogRegionsResponse> DescribeUserSlsLogRegionsAsync(DescribeUserSlsLogRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUserSlsLogRegionsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the status, region ID, and status modification time of Web Application Firewall (WAF) logs.
-         *
-         * @param request DescribeUserWafLogStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeUserWafLogStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status, region ID, and status modification time of Web Application Firewall (WAF) logs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserWafLogStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserWafLogStatusResponse
+        /// </returns>
         public DescribeUserWafLogStatusResponse DescribeUserWafLogStatusWithOptions(DescribeUserWafLogStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11718,13 +19506,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeUserWafLogStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the status, region ID, and status modification time of Web Application Firewall (WAF) logs.
-         *
-         * @param request DescribeUserWafLogStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeUserWafLogStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status, region ID, and status modification time of Web Application Firewall (WAF) logs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserWafLogStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserWafLogStatusResponse
+        /// </returns>
         public async Task<DescribeUserWafLogStatusResponse> DescribeUserWafLogStatusWithOptionsAsync(DescribeUserWafLogStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11760,37 +19556,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeUserWafLogStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the status, region ID, and status modification time of Web Application Firewall (WAF) logs.
-         *
-         * @param request DescribeUserWafLogStatusRequest
-         * @return DescribeUserWafLogStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status, region ID, and status modification time of Web Application Firewall (WAF) logs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserWafLogStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserWafLogStatusResponse
+        /// </returns>
         public DescribeUserWafLogStatusResponse DescribeUserWafLogStatus(DescribeUserWafLogStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUserWafLogStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the status, region ID, and status modification time of Web Application Firewall (WAF) logs.
-         *
-         * @param request DescribeUserWafLogStatusRequest
-         * @return DescribeUserWafLogStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status, region ID, and status modification time of Web Application Firewall (WAF) logs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserWafLogStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserWafLogStatusResponse
+        /// </returns>
         public async Task<DescribeUserWafLogStatusResponse> DescribeUserWafLogStatusAsync(DescribeUserWafLogStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUserWafLogStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the top 10 IP addresses from which requests are sent.
-         *
-         * @param request DescribeVisitTopIpRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVisitTopIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 IP addresses from which requests are sent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVisitTopIpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVisitTopIpResponse
+        /// </returns>
         public DescribeVisitTopIpResponse DescribeVisitTopIpWithOptions(DescribeVisitTopIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11838,13 +19654,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeVisitTopIpResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the top 10 IP addresses from which requests are sent.
-         *
-         * @param request DescribeVisitTopIpRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVisitTopIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 IP addresses from which requests are sent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVisitTopIpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVisitTopIpResponse
+        /// </returns>
         public async Task<DescribeVisitTopIpResponse> DescribeVisitTopIpWithOptionsAsync(DescribeVisitTopIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11892,37 +19716,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeVisitTopIpResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the top 10 IP addresses from which requests are sent.
-         *
-         * @param request DescribeVisitTopIpRequest
-         * @return DescribeVisitTopIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 IP addresses from which requests are sent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVisitTopIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVisitTopIpResponse
+        /// </returns>
         public DescribeVisitTopIpResponse DescribeVisitTopIp(DescribeVisitTopIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVisitTopIpWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the top 10 IP addresses from which requests are sent.
-         *
-         * @param request DescribeVisitTopIpRequest
-         * @return DescribeVisitTopIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 IP addresses from which requests are sent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVisitTopIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVisitTopIpResponse
+        /// </returns>
         public async Task<DescribeVisitTopIpResponse> DescribeVisitTopIpAsync(DescribeVisitTopIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVisitTopIpWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the top 10 user agents that are used to initiate requests.
-         *
-         * @param request DescribeVisitUasRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVisitUasResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 user agents that are used to initiate requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVisitUasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVisitUasResponse
+        /// </returns>
         public DescribeVisitUasResponse DescribeVisitUasWithOptions(DescribeVisitUasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11942,6 +19786,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resource))
             {
                 query["Resource"] = request.Resource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
             {
@@ -11966,13 +19814,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeVisitUasResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the top 10 user agents that are used to initiate requests.
-         *
-         * @param request DescribeVisitUasRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeVisitUasResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 user agents that are used to initiate requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVisitUasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVisitUasResponse
+        /// </returns>
         public async Task<DescribeVisitUasResponse> DescribeVisitUasWithOptionsAsync(DescribeVisitUasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11992,6 +19848,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resource))
             {
                 query["Resource"] = request.Resource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
             {
@@ -12016,37 +19876,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeVisitUasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the top 10 user agents that are used to initiate requests.
-         *
-         * @param request DescribeVisitUasRequest
-         * @return DescribeVisitUasResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 user agents that are used to initiate requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVisitUasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVisitUasResponse
+        /// </returns>
         public DescribeVisitUasResponse DescribeVisitUas(DescribeVisitUasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVisitUasWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the top 10 user agents that are used to initiate requests.
-         *
-         * @param request DescribeVisitUasRequest
-         * @return DescribeVisitUasResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top 10 user agents that are used to initiate requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVisitUasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVisitUasResponse
+        /// </returns>
         public async Task<DescribeVisitUasResponse> DescribeVisitUasAsync(DescribeVisitUasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVisitUasWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the back-to-origin CIDR blocks of a Web Application Firewall (WAF) instance.
-         *
-         * @param request DescribeWafSourceIpSegmentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeWafSourceIpSegmentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the back-to-origin CIDR blocks of a Web Application Firewall (WAF) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWafSourceIpSegmentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWafSourceIpSegmentResponse
+        /// </returns>
         public DescribeWafSourceIpSegmentResponse DescribeWafSourceIpSegmentWithOptions(DescribeWafSourceIpSegmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12082,13 +19962,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeWafSourceIpSegmentResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the back-to-origin CIDR blocks of a Web Application Firewall (WAF) instance.
-         *
-         * @param request DescribeWafSourceIpSegmentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeWafSourceIpSegmentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the back-to-origin CIDR blocks of a Web Application Firewall (WAF) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWafSourceIpSegmentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWafSourceIpSegmentResponse
+        /// </returns>
         public async Task<DescribeWafSourceIpSegmentResponse> DescribeWafSourceIpSegmentWithOptionsAsync(DescribeWafSourceIpSegmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12124,37 +20012,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<DescribeWafSourceIpSegmentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the back-to-origin CIDR blocks of a Web Application Firewall (WAF) instance.
-         *
-         * @param request DescribeWafSourceIpSegmentRequest
-         * @return DescribeWafSourceIpSegmentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the back-to-origin CIDR blocks of a Web Application Firewall (WAF) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWafSourceIpSegmentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWafSourceIpSegmentResponse
+        /// </returns>
         public DescribeWafSourceIpSegmentResponse DescribeWafSourceIpSegment(DescribeWafSourceIpSegmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeWafSourceIpSegmentWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the back-to-origin CIDR blocks of a Web Application Firewall (WAF) instance.
-         *
-         * @param request DescribeWafSourceIpSegmentRequest
-         * @return DescribeWafSourceIpSegmentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the back-to-origin CIDR blocks of a Web Application Firewall (WAF) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWafSourceIpSegmentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWafSourceIpSegmentResponse
+        /// </returns>
         public async Task<DescribeWafSourceIpSegmentResponse> DescribeWafSourceIpSegmentAsync(DescribeWafSourceIpSegmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeWafSourceIpSegmentWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries tag keys.
-         *
-         * @param request ListTagKeysRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagKeysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagKeysResponse
+        /// </returns>
         public ListTagKeysResponse ListTagKeysWithOptions(ListTagKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12194,13 +20102,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ListTagKeysResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries tag keys.
-         *
-         * @param request ListTagKeysRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagKeysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagKeysResponse
+        /// </returns>
         public async Task<ListTagKeysResponse> ListTagKeysWithOptionsAsync(ListTagKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12240,37 +20156,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ListTagKeysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries tag keys.
-         *
-         * @param request ListTagKeysRequest
-         * @return ListTagKeysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagKeysResponse
+        /// </returns>
         public ListTagKeysResponse ListTagKeys(ListTagKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagKeysWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries tag keys.
-         *
-         * @param request ListTagKeysRequest
-         * @return ListTagKeysResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagKeysResponse
+        /// </returns>
         public async Task<ListTagKeysResponse> ListTagKeysAsync(ListTagKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagKeysWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the tags that are added to a resource.
-         *
-         * @param request ListTagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to a resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12314,13 +20250,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the tags that are added to a resource.
-         *
-         * @param request ListTagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to a resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12364,41 +20308,65 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the tags that are added to a resource.
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to a resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the tags that are added to a resource.
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to a resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the tag values of a tag key.
-         *
-         * @param request ListTagValuesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagValuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values of a tag key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagValuesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagValuesResponse
+        /// </returns>
         public ListTagValuesResponse ListTagValuesWithOptions(ListTagValuesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
             {
                 query["Key"] = request.Key;
@@ -12410,6 +20378,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
@@ -12434,17 +20406,29 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ListTagValuesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the tag values of a tag key.
-         *
-         * @param request ListTagValuesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagValuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values of a tag key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagValuesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagValuesResponse
+        /// </returns>
         public async Task<ListTagValuesResponse> ListTagValuesWithOptionsAsync(ListTagValuesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
             {
                 query["Key"] = request.Key;
@@ -12456,6 +20440,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
@@ -12480,37 +20468,561 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ListTagValuesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the tag values of a tag key.
-         *
-         * @param request ListTagValuesRequest
-         * @return ListTagValuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values of a tag key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagValuesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagValuesResponse
+        /// </returns>
         public ListTagValuesResponse ListTagValues(ListTagValuesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagValuesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the tag values of a tag key.
-         *
-         * @param request ListTagValuesRequest
-         * @return ListTagValuesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values of a tag key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagValuesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagValuesResponse
+        /// </returns>
         public async Task<ListTagValuesResponse> ListTagValuesAsync(ListTagValuesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagValuesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of API security log subscription.
-         *
-         * @param request ModifyApisecLogDeliveryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyApisecLogDeliveryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of multiple risks detected by the API security module at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecAbnormalsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecAbnormalsResponse
+        /// </returns>
+        public ModifyApisecAbnormalsResponse ModifyApisecAbnormalsWithOptions(ModifyApisecAbnormalsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AbnormalIds))
+            {
+                query["AbnormalIds"] = request.AbnormalIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Note))
+            {
+                query["Note"] = request.Note;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserStatus))
+            {
+                query["UserStatus"] = request.UserStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApisecAbnormals",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApisecAbnormalsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of multiple risks detected by the API security module at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecAbnormalsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecAbnormalsResponse
+        /// </returns>
+        public async Task<ModifyApisecAbnormalsResponse> ModifyApisecAbnormalsWithOptionsAsync(ModifyApisecAbnormalsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AbnormalIds))
+            {
+                query["AbnormalIds"] = request.AbnormalIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Note))
+            {
+                query["Note"] = request.Note;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserStatus))
+            {
+                query["UserStatus"] = request.UserStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApisecAbnormals",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApisecAbnormalsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of multiple risks detected by the API security module at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecAbnormalsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecAbnormalsResponse
+        /// </returns>
+        public ModifyApisecAbnormalsResponse ModifyApisecAbnormals(ModifyApisecAbnormalsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyApisecAbnormalsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of multiple risks detected by the API security module at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecAbnormalsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecAbnormalsResponse
+        /// </returns>
+        public async Task<ModifyApisecAbnormalsResponse> ModifyApisecAbnormalsAsync(ModifyApisecAbnormalsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyApisecAbnormalsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the annotations of APIs in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecApiResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecApiResourceResponse
+        /// </returns>
+        public ModifyApisecApiResourceResponse ModifyApisecApiResourceWithOptions(ModifyApisecApiResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Follow))
+            {
+                query["Follow"] = request.Follow;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Note))
+            {
+                query["Note"] = request.Note;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApisecApiResource",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApisecApiResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the annotations of APIs in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecApiResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecApiResourceResponse
+        /// </returns>
+        public async Task<ModifyApisecApiResourceResponse> ModifyApisecApiResourceWithOptionsAsync(ModifyApisecApiResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Follow))
+            {
+                query["Follow"] = request.Follow;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Note))
+            {
+                query["Note"] = request.Note;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApisecApiResource",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApisecApiResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the annotations of APIs in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecApiResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecApiResourceResponse
+        /// </returns>
+        public ModifyApisecApiResourceResponse ModifyApisecApiResource(ModifyApisecApiResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyApisecApiResourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the annotations of APIs in the API security module.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecApiResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecApiResourceResponse
+        /// </returns>
+        public async Task<ModifyApisecApiResourceResponse> ModifyApisecApiResourceAsync(ModifyApisecApiResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyApisecApiResourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of multiple security events detected by the API security module at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecEventsResponse
+        /// </returns>
+        public ModifyApisecEventsResponse ModifyApisecEventsWithOptions(ModifyApisecEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventIds))
+            {
+                query["EventIds"] = request.EventIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Note))
+            {
+                query["Note"] = request.Note;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserStatus))
+            {
+                query["UserStatus"] = request.UserStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApisecEvents",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApisecEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of multiple security events detected by the API security module at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecEventsResponse
+        /// </returns>
+        public async Task<ModifyApisecEventsResponse> ModifyApisecEventsWithOptionsAsync(ModifyApisecEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventIds))
+            {
+                query["EventIds"] = request.EventIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Note))
+            {
+                query["Note"] = request.Note;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserStatus))
+            {
+                query["UserStatus"] = request.UserStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApisecEvents",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApisecEventsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of multiple security events detected by the API security module at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecEventsResponse
+        /// </returns>
+        public ModifyApisecEventsResponse ModifyApisecEvents(ModifyApisecEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyApisecEventsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of multiple security events detected by the API security module at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecEventsResponse
+        /// </returns>
+        public async Task<ModifyApisecEventsResponse> ModifyApisecEventsAsync(ModifyApisecEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyApisecEventsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of API security log subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecLogDeliveryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecLogDeliveryResponse
+        /// </returns>
         public ModifyApisecLogDeliveryResponse ModifyApisecLogDeliveryWithOptions(ModifyApisecLogDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12562,13 +21074,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyApisecLogDeliveryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of API security log subscription.
-         *
-         * @param request ModifyApisecLogDeliveryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyApisecLogDeliveryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of API security log subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecLogDeliveryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecLogDeliveryResponse
+        /// </returns>
         public async Task<ModifyApisecLogDeliveryResponse> ModifyApisecLogDeliveryWithOptionsAsync(ModifyApisecLogDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12620,37 +21140,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyApisecLogDeliveryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of API security log subscription.
-         *
-         * @param request ModifyApisecLogDeliveryRequest
-         * @return ModifyApisecLogDeliveryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of API security log subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecLogDeliveryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecLogDeliveryResponse
+        /// </returns>
         public ModifyApisecLogDeliveryResponse ModifyApisecLogDelivery(ModifyApisecLogDeliveryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyApisecLogDeliveryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of API security log subscription.
-         *
-         * @param request ModifyApisecLogDeliveryRequest
-         * @return ModifyApisecLogDeliveryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of API security log subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecLogDeliveryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecLogDeliveryResponse
+        /// </returns>
         public async Task<ModifyApisecLogDeliveryResponse> ModifyApisecLogDeliveryAsync(ModifyApisecLogDeliveryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyApisecLogDeliveryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the status of API security log subscription.
-         *
-         * @param request ModifyApisecLogDeliveryStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyApisecLogDeliveryStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of API security log subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecLogDeliveryStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecLogDeliveryStatusResponse
+        /// </returns>
         public ModifyApisecLogDeliveryStatusResponse ModifyApisecLogDeliveryStatusWithOptions(ModifyApisecLogDeliveryStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12694,13 +21234,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyApisecLogDeliveryStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the status of API security log subscription.
-         *
-         * @param request ModifyApisecLogDeliveryStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyApisecLogDeliveryStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of API security log subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecLogDeliveryStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecLogDeliveryStatusResponse
+        /// </returns>
         public async Task<ModifyApisecLogDeliveryStatusResponse> ModifyApisecLogDeliveryStatusWithOptionsAsync(ModifyApisecLogDeliveryStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12744,37 +21292,385 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyApisecLogDeliveryStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the status of API security log subscription.
-         *
-         * @param request ModifyApisecLogDeliveryStatusRequest
-         * @return ModifyApisecLogDeliveryStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of API security log subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecLogDeliveryStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecLogDeliveryStatusResponse
+        /// </returns>
         public ModifyApisecLogDeliveryStatusResponse ModifyApisecLogDeliveryStatus(ModifyApisecLogDeliveryStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyApisecLogDeliveryStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the status of API security log subscription.
-         *
-         * @param request ModifyApisecLogDeliveryStatusRequest
-         * @return ModifyApisecLogDeliveryStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of API security log subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecLogDeliveryStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecLogDeliveryStatusResponse
+        /// </returns>
         public async Task<ModifyApisecLogDeliveryStatusResponse> ModifyApisecLogDeliveryStatusAsync(ModifyApisecLogDeliveryStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyApisecLogDeliveryStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 修改云产品资源
-         *
-         * @param tmpReq ModifyCloudResourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyCloudResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of features in the API security module for protected objects or protected object groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecModuleStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecModuleStatusResponse
+        /// </returns>
+        public ModifyApisecModuleStatusResponse ModifyApisecModuleStatusWithOptions(ModifyApisecModuleStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportStatus))
+            {
+                query["ReportStatus"] = request.ReportStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroups))
+            {
+                query["ResourceGroups"] = request.ResourceGroups;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resources))
+            {
+                query["Resources"] = request.Resources;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceStatus))
+            {
+                query["TraceStatus"] = request.TraceStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApisecModuleStatus",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApisecModuleStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of features in the API security module for protected objects or protected object groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecModuleStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecModuleStatusResponse
+        /// </returns>
+        public async Task<ModifyApisecModuleStatusResponse> ModifyApisecModuleStatusWithOptionsAsync(ModifyApisecModuleStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportStatus))
+            {
+                query["ReportStatus"] = request.ReportStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroups))
+            {
+                query["ResourceGroups"] = request.ResourceGroups;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resources))
+            {
+                query["Resources"] = request.Resources;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceStatus))
+            {
+                query["TraceStatus"] = request.TraceStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApisecModuleStatus",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApisecModuleStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of features in the API security module for protected objects or protected object groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecModuleStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecModuleStatusResponse
+        /// </returns>
+        public ModifyApisecModuleStatusResponse ModifyApisecModuleStatus(ModifyApisecModuleStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyApisecModuleStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of features in the API security module for protected objects or protected object groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecModuleStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecModuleStatusResponse
+        /// </returns>
+        public async Task<ModifyApisecModuleStatusResponse> ModifyApisecModuleStatusAsync(ModifyApisecModuleStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyApisecModuleStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of the API security module for protected objects or protected object groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecStatusResponse
+        /// </returns>
+        public ModifyApisecStatusResponse ModifyApisecStatusWithOptions(ModifyApisecStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApisecStatus))
+            {
+                query["ApisecStatus"] = request.ApisecStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroups))
+            {
+                query["ResourceGroups"] = request.ResourceGroups;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resources))
+            {
+                query["Resources"] = request.Resources;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApisecStatus",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApisecStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of the API security module for protected objects or protected object groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecStatusResponse
+        /// </returns>
+        public async Task<ModifyApisecStatusResponse> ModifyApisecStatusWithOptionsAsync(ModifyApisecStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApisecStatus))
+            {
+                query["ApisecStatus"] = request.ApisecStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroups))
+            {
+                query["ResourceGroups"] = request.ResourceGroups;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resources))
+            {
+                query["Resources"] = request.Resources;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApisecStatus",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApisecStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of the API security module for protected objects or protected object groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecStatusResponse
+        /// </returns>
+        public ModifyApisecStatusResponse ModifyApisecStatus(ModifyApisecStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyApisecStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of the API security module for protected objects or protected object groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApisecStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApisecStatusResponse
+        /// </returns>
+        public async Task<ModifyApisecStatusResponse> ModifyApisecStatusAsync(ModifyApisecStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyApisecStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a service that is added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyCloudResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCloudResourceResponse
+        /// </returns>
         public ModifyCloudResourceResponse ModifyCloudResourceWithOptions(ModifyCloudResourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12828,13 +21724,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyCloudResourceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改云产品资源
-         *
-         * @param tmpReq ModifyCloudResourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyCloudResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a service that is added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyCloudResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCloudResourceResponse
+        /// </returns>
         public async Task<ModifyCloudResourceResponse> ModifyCloudResourceWithOptionsAsync(ModifyCloudResourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12888,37 +21792,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyCloudResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改云产品资源
-         *
-         * @param request ModifyCloudResourceRequest
-         * @return ModifyCloudResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a service that is added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCloudResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCloudResourceResponse
+        /// </returns>
         public ModifyCloudResourceResponse ModifyCloudResource(ModifyCloudResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyCloudResourceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 修改云产品资源
-         *
-         * @param request ModifyCloudResourceRequest
-         * @return ModifyCloudResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a service that is added to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCloudResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCloudResourceResponse
+        /// </returns>
         public async Task<ModifyCloudResourceResponse> ModifyCloudResourceAsync(ModifyCloudResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyCloudResourceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 修改默认HTTPS配置
-         *
-         * @param request ModifyDefaultHttpsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDefaultHttpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the default SSL and Transport Layer Security (TLS) settings.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefaultHttpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefaultHttpsResponse
+        /// </returns>
         public ModifyDefaultHttpsResponse ModifyDefaultHttpsWithOptions(ModifyDefaultHttpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12974,13 +21898,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDefaultHttpsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改默认HTTPS配置
-         *
-         * @param request ModifyDefaultHttpsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDefaultHttpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the default SSL and Transport Layer Security (TLS) settings.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefaultHttpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefaultHttpsResponse
+        /// </returns>
         public async Task<ModifyDefaultHttpsResponse> ModifyDefaultHttpsWithOptionsAsync(ModifyDefaultHttpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13036,37 +21968,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDefaultHttpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改默认HTTPS配置
-         *
-         * @param request ModifyDefaultHttpsRequest
-         * @return ModifyDefaultHttpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the default SSL and Transport Layer Security (TLS) settings.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefaultHttpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefaultHttpsResponse
+        /// </returns>
         public ModifyDefaultHttpsResponse ModifyDefaultHttps(ModifyDefaultHttpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDefaultHttpsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 修改默认HTTPS配置
-         *
-         * @param request ModifyDefaultHttpsRequest
-         * @return ModifyDefaultHttpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the default SSL and Transport Layer Security (TLS) settings.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefaultHttpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefaultHttpsResponse
+        /// </returns>
         public async Task<ModifyDefaultHttpsResponse> ModifyDefaultHttpsAsync(ModifyDefaultHttpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDefaultHttpsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of a protected object group.
-         *
-         * @param request ModifyDefenseResourceGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDefenseResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseResourceGroupResponse
+        /// </returns>
         public ModifyDefenseResourceGroupResponse ModifyDefenseResourceGroupWithOptions(ModifyDefenseResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13118,13 +22070,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDefenseResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of a protected object group.
-         *
-         * @param request ModifyDefenseResourceGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDefenseResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseResourceGroupResponse
+        /// </returns>
         public async Task<ModifyDefenseResourceGroupResponse> ModifyDefenseResourceGroupWithOptionsAsync(ModifyDefenseResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13176,37 +22136,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDefenseResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of a protected object group.
-         *
-         * @param request ModifyDefenseResourceGroupRequest
-         * @return ModifyDefenseResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseResourceGroupResponse
+        /// </returns>
         public ModifyDefenseResourceGroupResponse ModifyDefenseResourceGroup(ModifyDefenseResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDefenseResourceGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of a protected object group.
-         *
-         * @param request ModifyDefenseResourceGroupRequest
-         * @return ModifyDefenseResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a protected object group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseResourceGroupResponse
+        /// </returns>
         public async Task<ModifyDefenseResourceGroupResponse> ModifyDefenseResourceGroupAsync(ModifyDefenseResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDefenseResourceGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the cookie settings of a protected object and the method to identify the originating IP addresses of clients.
-         *
-         * @param request ModifyDefenseResourceXffRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDefenseResourceXffResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the cookie settings of a protected object and the method to identify the originating IP addresses of clients.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseResourceXffRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseResourceXffResponse
+        /// </returns>
         public ModifyDefenseResourceXffResponse ModifyDefenseResourceXffWithOptions(ModifyDefenseResourceXffRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13266,13 +22246,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDefenseResourceXffResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the cookie settings of a protected object and the method to identify the originating IP addresses of clients.
-         *
-         * @param request ModifyDefenseResourceXffRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDefenseResourceXffResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the cookie settings of a protected object and the method to identify the originating IP addresses of clients.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseResourceXffRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseResourceXffResponse
+        /// </returns>
         public async Task<ModifyDefenseResourceXffResponse> ModifyDefenseResourceXffWithOptionsAsync(ModifyDefenseResourceXffRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13332,37 +22320,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDefenseResourceXffResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the cookie settings of a protected object and the method to identify the originating IP addresses of clients.
-         *
-         * @param request ModifyDefenseResourceXffRequest
-         * @return ModifyDefenseResourceXffResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the cookie settings of a protected object and the method to identify the originating IP addresses of clients.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseResourceXffRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseResourceXffResponse
+        /// </returns>
         public ModifyDefenseResourceXffResponse ModifyDefenseResourceXff(ModifyDefenseResourceXffRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDefenseResourceXffWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the cookie settings of a protected object and the method to identify the originating IP addresses of clients.
-         *
-         * @param request ModifyDefenseResourceXffRequest
-         * @return ModifyDefenseResourceXffResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the cookie settings of a protected object and the method to identify the originating IP addresses of clients.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseResourceXffRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseResourceXffResponse
+        /// </returns>
         public async Task<ModifyDefenseResourceXffResponse> ModifyDefenseResourceXffAsync(ModifyDefenseResourceXffRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDefenseResourceXffWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of a protection rule.
-         *
-         * @param request ModifyDefenseRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDefenseRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseRuleResponse
+        /// </returns>
         public ModifyDefenseRuleResponse ModifyDefenseRuleWithOptions(ModifyDefenseRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13383,17 +22391,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
-            {
-                query["Rules"] = request.Rules;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
+            {
+                body["Rules"] = request.Rules;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13410,13 +22420,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDefenseRuleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of a protection rule.
-         *
-         * @param request ModifyDefenseRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDefenseRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseRuleResponse
+        /// </returns>
         public async Task<ModifyDefenseRuleResponse> ModifyDefenseRuleWithOptionsAsync(ModifyDefenseRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13437,17 +22455,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
-            {
-                query["Rules"] = request.Rules;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
+            {
+                body["Rules"] = request.Rules;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -13464,37 +22484,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDefenseRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of a protection rule.
-         *
-         * @param request ModifyDefenseRuleRequest
-         * @return ModifyDefenseRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseRuleResponse
+        /// </returns>
         public ModifyDefenseRuleResponse ModifyDefenseRule(ModifyDefenseRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDefenseRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of a protection rule.
-         *
-         * @param request ModifyDefenseRuleRequest
-         * @return ModifyDefenseRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseRuleResponse
+        /// </returns>
         public async Task<ModifyDefenseRuleResponse> ModifyDefenseRuleAsync(ModifyDefenseRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDefenseRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Updates the cached page of a website that is protected based on a website tamper-proofing rule.
-         *
-         * @param request ModifyDefenseRuleCacheRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDefenseRuleCacheResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the cached page of a website that is protected based on a website tamper-proofing rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseRuleCacheRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseRuleCacheResponse
+        /// </returns>
         public ModifyDefenseRuleCacheResponse ModifyDefenseRuleCacheWithOptions(ModifyDefenseRuleCacheRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13538,13 +22578,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDefenseRuleCacheResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the cached page of a website that is protected based on a website tamper-proofing rule.
-         *
-         * @param request ModifyDefenseRuleCacheRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDefenseRuleCacheResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the cached page of a website that is protected based on a website tamper-proofing rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseRuleCacheRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseRuleCacheResponse
+        /// </returns>
         public async Task<ModifyDefenseRuleCacheResponse> ModifyDefenseRuleCacheWithOptionsAsync(ModifyDefenseRuleCacheRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13588,37 +22636,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDefenseRuleCacheResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the cached page of a website that is protected based on a website tamper-proofing rule.
-         *
-         * @param request ModifyDefenseRuleCacheRequest
-         * @return ModifyDefenseRuleCacheResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the cached page of a website that is protected based on a website tamper-proofing rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseRuleCacheRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseRuleCacheResponse
+        /// </returns>
         public ModifyDefenseRuleCacheResponse ModifyDefenseRuleCache(ModifyDefenseRuleCacheRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDefenseRuleCacheWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Updates the cached page of a website that is protected based on a website tamper-proofing rule.
-         *
-         * @param request ModifyDefenseRuleCacheRequest
-         * @return ModifyDefenseRuleCacheResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the cached page of a website that is protected based on a website tamper-proofing rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseRuleCacheRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseRuleCacheResponse
+        /// </returns>
         public async Task<ModifyDefenseRuleCacheResponse> ModifyDefenseRuleCacheAsync(ModifyDefenseRuleCacheRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDefenseRuleCacheWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Changes the status of a protection rule.
-         *
-         * @param request ModifyDefenseRuleStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDefenseRuleStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseRuleStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseRuleStatusResponse
+        /// </returns>
         public ModifyDefenseRuleStatusResponse ModifyDefenseRuleStatusWithOptions(ModifyDefenseRuleStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13666,13 +22734,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDefenseRuleStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the status of a protection rule.
-         *
-         * @param request ModifyDefenseRuleStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDefenseRuleStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseRuleStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseRuleStatusResponse
+        /// </returns>
         public async Task<ModifyDefenseRuleStatusResponse> ModifyDefenseRuleStatusWithOptionsAsync(ModifyDefenseRuleStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13720,37 +22796,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDefenseRuleStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the status of a protection rule.
-         *
-         * @param request ModifyDefenseRuleStatusRequest
-         * @return ModifyDefenseRuleStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseRuleStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseRuleStatusResponse
+        /// </returns>
         public ModifyDefenseRuleStatusResponse ModifyDefenseRuleStatus(ModifyDefenseRuleStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDefenseRuleStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Changes the status of a protection rule.
-         *
-         * @param request ModifyDefenseRuleStatusRequest
-         * @return ModifyDefenseRuleStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of a protection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseRuleStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseRuleStatusResponse
+        /// </returns>
         public async Task<ModifyDefenseRuleStatusResponse> ModifyDefenseRuleStatusAsync(ModifyDefenseRuleStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDefenseRuleStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of a protection rule template.
-         *
-         * @param request ModifyDefenseTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseTemplateResponse
+        /// </returns>
         public ModifyDefenseTemplateResponse ModifyDefenseTemplateWithOptions(ModifyDefenseTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13798,13 +22894,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDefenseTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of a protection rule template.
-         *
-         * @param request ModifyDefenseTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseTemplateResponse
+        /// </returns>
         public async Task<ModifyDefenseTemplateResponse> ModifyDefenseTemplateWithOptionsAsync(ModifyDefenseTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13852,37 +22956,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDefenseTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of a protection rule template.
-         *
-         * @param request ModifyDefenseTemplateRequest
-         * @return ModifyDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseTemplateResponse
+        /// </returns>
         public ModifyDefenseTemplateResponse ModifyDefenseTemplate(ModifyDefenseTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDefenseTemplateWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of a protection rule template.
-         *
-         * @param request ModifyDefenseTemplateRequest
-         * @return ModifyDefenseTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseTemplateResponse
+        /// </returns>
         public async Task<ModifyDefenseTemplateResponse> ModifyDefenseTemplateAsync(ModifyDefenseTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDefenseTemplateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Changes the status of a protection rule template.
-         *
-         * @param request ModifyDefenseTemplateStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDefenseTemplateStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseTemplateStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseTemplateStatusResponse
+        /// </returns>
         public ModifyDefenseTemplateStatusResponse ModifyDefenseTemplateStatusWithOptions(ModifyDefenseTemplateStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13926,13 +23050,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDefenseTemplateStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the status of a protection rule template.
-         *
-         * @param request ModifyDefenseTemplateStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDefenseTemplateStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseTemplateStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseTemplateStatusResponse
+        /// </returns>
         public async Task<ModifyDefenseTemplateStatusResponse> ModifyDefenseTemplateStatusWithOptionsAsync(ModifyDefenseTemplateStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13976,37 +23108,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDefenseTemplateStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the status of a protection rule template.
-         *
-         * @param request ModifyDefenseTemplateStatusRequest
-         * @return ModifyDefenseTemplateStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseTemplateStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseTemplateStatusResponse
+        /// </returns>
         public ModifyDefenseTemplateStatusResponse ModifyDefenseTemplateStatus(ModifyDefenseTemplateStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDefenseTemplateStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Changes the status of a protection rule template.
-         *
-         * @param request ModifyDefenseTemplateStatusRequest
-         * @return ModifyDefenseTemplateStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseTemplateStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseTemplateStatusResponse
+        /// </returns>
         public async Task<ModifyDefenseTemplateStatusResponse> ModifyDefenseTemplateStatusAsync(ModifyDefenseTemplateStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDefenseTemplateStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.
-         *
-         * @param tmpReq ModifyDomainRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDomainResponse
+        /// </returns>
         public ModifyDomainResponse ModifyDomainWithOptions(ModifyDomainRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14064,13 +23216,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDomainResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.
-         *
-         * @param tmpReq ModifyDomainRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDomainResponse
+        /// </returns>
         public async Task<ModifyDomainResponse> ModifyDomainWithOptionsAsync(ModifyDomainRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14128,37 +23288,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.
-         *
-         * @param request ModifyDomainRequest
-         * @return ModifyDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDomainResponse
+        /// </returns>
         public ModifyDomainResponse ModifyDomain(ModifyDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDomainWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.
-         *
-         * @param request ModifyDomainRequest
-         * @return ModifyDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDomainResponse
+        /// </returns>
         public async Task<ModifyDomainResponse> ModifyDomainAsync(ModifyDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDomainWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Re-adds a domain name that is penalized for failing to obtain an Internet Content Provider (ICP) filing to Web Application Firewall (WAF).
-         *
-         * @param request ModifyDomainPunishStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDomainPunishStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Re-adds a domain name that is penalized for failing to obtain an Internet Content Provider (ICP) filing to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDomainPunishStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDomainPunishStatusResponse
+        /// </returns>
         public ModifyDomainPunishStatusResponse ModifyDomainPunishStatusWithOptions(ModifyDomainPunishStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14198,13 +23378,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDomainPunishStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Re-adds a domain name that is penalized for failing to obtain an Internet Content Provider (ICP) filing to Web Application Firewall (WAF).
-         *
-         * @param request ModifyDomainPunishStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDomainPunishStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Re-adds a domain name that is penalized for failing to obtain an Internet Content Provider (ICP) filing to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDomainPunishStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDomainPunishStatusResponse
+        /// </returns>
         public async Task<ModifyDomainPunishStatusResponse> ModifyDomainPunishStatusWithOptionsAsync(ModifyDomainPunishStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14244,37 +23432,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyDomainPunishStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Re-adds a domain name that is penalized for failing to obtain an Internet Content Provider (ICP) filing to Web Application Firewall (WAF).
-         *
-         * @param request ModifyDomainPunishStatusRequest
-         * @return ModifyDomainPunishStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Re-adds a domain name that is penalized for failing to obtain an Internet Content Provider (ICP) filing to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDomainPunishStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDomainPunishStatusResponse
+        /// </returns>
         public ModifyDomainPunishStatusResponse ModifyDomainPunishStatus(ModifyDomainPunishStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDomainPunishStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Re-adds a domain name that is penalized for failing to obtain an Internet Content Provider (ICP) filing to Web Application Firewall (WAF).
-         *
-         * @param request ModifyDomainPunishStatusRequest
-         * @return ModifyDomainPunishStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Re-adds a domain name that is penalized for failing to obtain an Internet Content Provider (ICP) filing to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDomainPunishStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDomainPunishStatusResponse
+        /// </returns>
         public async Task<ModifyDomainPunishStatusResponse> ModifyDomainPunishStatusAsync(ModifyDomainPunishStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDomainPunishStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables manual bypass for a hybrid cloud cluster of the SDK-based traffic mirroring mode.
-         *
-         * @param request ModifyHybridCloudClusterBypassStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyHybridCloudClusterBypassStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables manual bypass for a hybrid cloud cluster of the SDK-based traffic mirroring mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudClusterBypassStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudClusterBypassStatusResponse
+        /// </returns>
         public ModifyHybridCloudClusterBypassStatusResponse ModifyHybridCloudClusterBypassStatusWithOptions(ModifyHybridCloudClusterBypassStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14310,13 +23518,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyHybridCloudClusterBypassStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables or disables manual bypass for a hybrid cloud cluster of the SDK-based traffic mirroring mode.
-         *
-         * @param request ModifyHybridCloudClusterBypassStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyHybridCloudClusterBypassStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables manual bypass for a hybrid cloud cluster of the SDK-based traffic mirroring mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudClusterBypassStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudClusterBypassStatusResponse
+        /// </returns>
         public async Task<ModifyHybridCloudClusterBypassStatusResponse> ModifyHybridCloudClusterBypassStatusWithOptionsAsync(ModifyHybridCloudClusterBypassStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14352,37 +23568,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyHybridCloudClusterBypassStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables or disables manual bypass for a hybrid cloud cluster of the SDK-based traffic mirroring mode.
-         *
-         * @param request ModifyHybridCloudClusterBypassStatusRequest
-         * @return ModifyHybridCloudClusterBypassStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables manual bypass for a hybrid cloud cluster of the SDK-based traffic mirroring mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudClusterBypassStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudClusterBypassStatusResponse
+        /// </returns>
         public ModifyHybridCloudClusterBypassStatusResponse ModifyHybridCloudClusterBypassStatus(ModifyHybridCloudClusterBypassStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHybridCloudClusterBypassStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables manual bypass for a hybrid cloud cluster of the SDK-based traffic mirroring mode.
-         *
-         * @param request ModifyHybridCloudClusterBypassStatusRequest
-         * @return ModifyHybridCloudClusterBypassStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables manual bypass for a hybrid cloud cluster of the SDK-based traffic mirroring mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudClusterBypassStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudClusterBypassStatusResponse
+        /// </returns>
         public async Task<ModifyHybridCloudClusterBypassStatusResponse> ModifyHybridCloudClusterBypassStatusAsync(ModifyHybridCloudClusterBypassStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyHybridCloudClusterBypassStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the rule of a hybrid cloud cluster.
-         *
-         * @param request ModifyHybridCloudClusterRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyHybridCloudClusterRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the rule of a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudClusterRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudClusterRuleResponse
+        /// </returns>
         public ModifyHybridCloudClusterRuleResponse ModifyHybridCloudClusterRuleWithOptions(ModifyHybridCloudClusterRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14434,13 +23670,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyHybridCloudClusterRuleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the rule of a hybrid cloud cluster.
-         *
-         * @param request ModifyHybridCloudClusterRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyHybridCloudClusterRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the rule of a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudClusterRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudClusterRuleResponse
+        /// </returns>
         public async Task<ModifyHybridCloudClusterRuleResponse> ModifyHybridCloudClusterRuleWithOptionsAsync(ModifyHybridCloudClusterRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14492,37 +23736,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyHybridCloudClusterRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the rule of a hybrid cloud cluster.
-         *
-         * @param request ModifyHybridCloudClusterRuleRequest
-         * @return ModifyHybridCloudClusterRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the rule of a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudClusterRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudClusterRuleResponse
+        /// </returns>
         public ModifyHybridCloudClusterRuleResponse ModifyHybridCloudClusterRule(ModifyHybridCloudClusterRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHybridCloudClusterRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the rule of a hybrid cloud cluster.
-         *
-         * @param request ModifyHybridCloudClusterRuleRequest
-         * @return ModifyHybridCloudClusterRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the rule of a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudClusterRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudClusterRuleResponse
+        /// </returns>
         public async Task<ModifyHybridCloudClusterRuleResponse> ModifyHybridCloudClusterRuleAsync(ModifyHybridCloudClusterRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyHybridCloudClusterRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 修改组信息
-         *
-         * @param request ModifyHybridCloudGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyHybridCloudGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改组信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudGroupResponse
+        /// </returns>
         public ModifyHybridCloudGroupResponse ModifyHybridCloudGroupWithOptions(ModifyHybridCloudGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14574,13 +23838,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyHybridCloudGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改组信息
-         *
-         * @param request ModifyHybridCloudGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyHybridCloudGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改组信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudGroupResponse
+        /// </returns>
         public async Task<ModifyHybridCloudGroupResponse> ModifyHybridCloudGroupWithOptionsAsync(ModifyHybridCloudGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14632,37 +23904,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyHybridCloudGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改组信息
-         *
-         * @param request ModifyHybridCloudGroupRequest
-         * @return ModifyHybridCloudGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改组信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudGroupResponse
+        /// </returns>
         public ModifyHybridCloudGroupResponse ModifyHybridCloudGroup(ModifyHybridCloudGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHybridCloudGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 修改组信息
-         *
-         * @param request ModifyHybridCloudGroupRequest
-         * @return ModifyHybridCloudGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改组信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudGroupResponse
+        /// </returns>
         public async Task<ModifyHybridCloudGroupResponse> ModifyHybridCloudGroupAsync(ModifyHybridCloudGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyHybridCloudGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Adds a node to a node group of a hybrid cloud cluster.
-         *
-         * @param request ModifyHybridCloudGroupExpansionServerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyHybridCloudGroupExpansionServerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a node to a node group of a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudGroupExpansionServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudGroupExpansionServerResponse
+        /// </returns>
         public ModifyHybridCloudGroupExpansionServerResponse ModifyHybridCloudGroupExpansionServerWithOptions(ModifyHybridCloudGroupExpansionServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14710,13 +24002,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyHybridCloudGroupExpansionServerResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Adds a node to a node group of a hybrid cloud cluster.
-         *
-         * @param request ModifyHybridCloudGroupExpansionServerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyHybridCloudGroupExpansionServerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a node to a node group of a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudGroupExpansionServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudGroupExpansionServerResponse
+        /// </returns>
         public async Task<ModifyHybridCloudGroupExpansionServerResponse> ModifyHybridCloudGroupExpansionServerWithOptionsAsync(ModifyHybridCloudGroupExpansionServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14764,37 +24064,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyHybridCloudGroupExpansionServerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Adds a node to a node group of a hybrid cloud cluster.
-         *
-         * @param request ModifyHybridCloudGroupExpansionServerRequest
-         * @return ModifyHybridCloudGroupExpansionServerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a node to a node group of a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudGroupExpansionServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudGroupExpansionServerResponse
+        /// </returns>
         public ModifyHybridCloudGroupExpansionServerResponse ModifyHybridCloudGroupExpansionServer(ModifyHybridCloudGroupExpansionServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHybridCloudGroupExpansionServerWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Adds a node to a node group of a hybrid cloud cluster.
-         *
-         * @param request ModifyHybridCloudGroupExpansionServerRequest
-         * @return ModifyHybridCloudGroupExpansionServerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a node to a node group of a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudGroupExpansionServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudGroupExpansionServerResponse
+        /// </returns>
         public async Task<ModifyHybridCloudGroupExpansionServerResponse> ModifyHybridCloudGroupExpansionServerAsync(ModifyHybridCloudGroupExpansionServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyHybridCloudGroupExpansionServerWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a node from a node group of a hybrid cloud cluster.
-         *
-         * @param request ModifyHybridCloudGroupShrinkServerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyHybridCloudGroupShrinkServerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a node from a node group of a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudGroupShrinkServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudGroupShrinkServerResponse
+        /// </returns>
         public ModifyHybridCloudGroupShrinkServerResponse ModifyHybridCloudGroupShrinkServerWithOptions(ModifyHybridCloudGroupShrinkServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14842,13 +24162,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyHybridCloudGroupShrinkServerResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a node from a node group of a hybrid cloud cluster.
-         *
-         * @param request ModifyHybridCloudGroupShrinkServerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyHybridCloudGroupShrinkServerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a node from a node group of a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudGroupShrinkServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudGroupShrinkServerResponse
+        /// </returns>
         public async Task<ModifyHybridCloudGroupShrinkServerResponse> ModifyHybridCloudGroupShrinkServerWithOptionsAsync(ModifyHybridCloudGroupShrinkServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14896,37 +24224,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyHybridCloudGroupShrinkServerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a node from a node group of a hybrid cloud cluster.
-         *
-         * @param request ModifyHybridCloudGroupShrinkServerRequest
-         * @return ModifyHybridCloudGroupShrinkServerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a node from a node group of a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudGroupShrinkServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudGroupShrinkServerResponse
+        /// </returns>
         public ModifyHybridCloudGroupShrinkServerResponse ModifyHybridCloudGroupShrinkServer(ModifyHybridCloudGroupShrinkServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHybridCloudGroupShrinkServerWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a node from a node group of a hybrid cloud cluster.
-         *
-         * @param request ModifyHybridCloudGroupShrinkServerRequest
-         * @return ModifyHybridCloudGroupShrinkServerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a node from a node group of a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudGroupShrinkServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudGroupShrinkServerResponse
+        /// </returns>
         public async Task<ModifyHybridCloudGroupShrinkServerResponse> ModifyHybridCloudGroupShrinkServerAsync(ModifyHybridCloudGroupShrinkServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyHybridCloudGroupShrinkServerWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the traffic redirection status of a hybrid cloud cluster by using an SDK.
-         *
-         * @param request ModifyHybridCloudSdkPullinStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyHybridCloudSdkPullinStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the traffic redirection status of a hybrid cloud cluster by using an SDK.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudSdkPullinStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudSdkPullinStatusResponse
+        /// </returns>
         public ModifyHybridCloudSdkPullinStatusResponse ModifyHybridCloudSdkPullinStatusWithOptions(ModifyHybridCloudSdkPullinStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14962,13 +24310,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyHybridCloudSdkPullinStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the traffic redirection status of a hybrid cloud cluster by using an SDK.
-         *
-         * @param request ModifyHybridCloudSdkPullinStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyHybridCloudSdkPullinStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the traffic redirection status of a hybrid cloud cluster by using an SDK.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudSdkPullinStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudSdkPullinStatusResponse
+        /// </returns>
         public async Task<ModifyHybridCloudSdkPullinStatusResponse> ModifyHybridCloudSdkPullinStatusWithOptionsAsync(ModifyHybridCloudSdkPullinStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15004,37 +24360,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyHybridCloudSdkPullinStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the traffic redirection status of a hybrid cloud cluster by using an SDK.
-         *
-         * @param request ModifyHybridCloudSdkPullinStatusRequest
-         * @return ModifyHybridCloudSdkPullinStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the traffic redirection status of a hybrid cloud cluster by using an SDK.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudSdkPullinStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudSdkPullinStatusResponse
+        /// </returns>
         public ModifyHybridCloudSdkPullinStatusResponse ModifyHybridCloudSdkPullinStatus(ModifyHybridCloudSdkPullinStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHybridCloudSdkPullinStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the traffic redirection status of a hybrid cloud cluster by using an SDK.
-         *
-         * @param request ModifyHybridCloudSdkPullinStatusRequest
-         * @return ModifyHybridCloudSdkPullinStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the traffic redirection status of a hybrid cloud cluster by using an SDK.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudSdkPullinStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudSdkPullinStatusResponse
+        /// </returns>
         public async Task<ModifyHybridCloudSdkPullinStatusResponse> ModifyHybridCloudSdkPullinStatusAsync(ModifyHybridCloudSdkPullinStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyHybridCloudSdkPullinStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the information about a hybrid cloud node.
-         *
-         * @param request ModifyHybridCloudServerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyHybridCloudServerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a hybrid cloud node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudServerResponse
+        /// </returns>
         public ModifyHybridCloudServerResponse ModifyHybridCloudServerWithOptions(ModifyHybridCloudServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15090,13 +24466,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyHybridCloudServerResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the information about a hybrid cloud node.
-         *
-         * @param request ModifyHybridCloudServerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyHybridCloudServerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a hybrid cloud node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudServerResponse
+        /// </returns>
         public async Task<ModifyHybridCloudServerResponse> ModifyHybridCloudServerWithOptionsAsync(ModifyHybridCloudServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15152,37 +24536,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyHybridCloudServerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the information about a hybrid cloud node.
-         *
-         * @param request ModifyHybridCloudServerRequest
-         * @return ModifyHybridCloudServerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a hybrid cloud node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudServerResponse
+        /// </returns>
         public ModifyHybridCloudServerResponse ModifyHybridCloudServer(ModifyHybridCloudServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHybridCloudServerWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the information about a hybrid cloud node.
-         *
-         * @param request ModifyHybridCloudServerRequest
-         * @return ModifyHybridCloudServerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a hybrid cloud node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudServerResponse
+        /// </returns>
         public async Task<ModifyHybridCloudServerResponse> ModifyHybridCloudServerAsync(ModifyHybridCloudServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyHybridCloudServerWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies an IP address blacklist for major event protection.
-         *
-         * @param request ModifyMajorProtectionBlackIpRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyMajorProtectionBlackIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an IP address blacklist for major event protection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyMajorProtectionBlackIpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMajorProtectionBlackIpResponse
+        /// </returns>
         public ModifyMajorProtectionBlackIpResponse ModifyMajorProtectionBlackIpWithOptions(ModifyMajorProtectionBlackIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15238,13 +24642,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyMajorProtectionBlackIpResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies an IP address blacklist for major event protection.
-         *
-         * @param request ModifyMajorProtectionBlackIpRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyMajorProtectionBlackIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an IP address blacklist for major event protection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyMajorProtectionBlackIpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMajorProtectionBlackIpResponse
+        /// </returns>
         public async Task<ModifyMajorProtectionBlackIpResponse> ModifyMajorProtectionBlackIpWithOptionsAsync(ModifyMajorProtectionBlackIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15300,37 +24712,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyMajorProtectionBlackIpResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies an IP address blacklist for major event protection.
-         *
-         * @param request ModifyMajorProtectionBlackIpRequest
-         * @return ModifyMajorProtectionBlackIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an IP address blacklist for major event protection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyMajorProtectionBlackIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMajorProtectionBlackIpResponse
+        /// </returns>
         public ModifyMajorProtectionBlackIpResponse ModifyMajorProtectionBlackIp(ModifyMajorProtectionBlackIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyMajorProtectionBlackIpWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies an IP address blacklist for major event protection.
-         *
-         * @param request ModifyMajorProtectionBlackIpRequest
-         * @return ModifyMajorProtectionBlackIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an IP address blacklist for major event protection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyMajorProtectionBlackIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMajorProtectionBlackIpResponse
+        /// </returns>
         public async Task<ModifyMajorProtectionBlackIpResponse> ModifyMajorProtectionBlackIpAsync(ModifyMajorProtectionBlackIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyMajorProtectionBlackIpWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the information about members that are added for multi-account management.
-         *
-         * @param request ModifyMemberAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyMemberAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about members that are added for multi-account management.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyMemberAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMemberAccountResponse
+        /// </returns>
         public ModifyMemberAccountResponse ModifyMemberAccountWithOptions(ModifyMemberAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15378,13 +24810,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyMemberAccountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the information about members that are added for multi-account management.
-         *
-         * @param request ModifyMemberAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyMemberAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about members that are added for multi-account management.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyMemberAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMemberAccountResponse
+        /// </returns>
         public async Task<ModifyMemberAccountResponse> ModifyMemberAccountWithOptionsAsync(ModifyMemberAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15432,37 +24872,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyMemberAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the information about members that are added for multi-account management.
-         *
-         * @param request ModifyMemberAccountRequest
-         * @return ModifyMemberAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about members that are added for multi-account management.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyMemberAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMemberAccountResponse
+        /// </returns>
         public ModifyMemberAccountResponse ModifyMemberAccount(ModifyMemberAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyMemberAccountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the information about members that are added for multi-account management.
-         *
-         * @param request ModifyMemberAccountRequest
-         * @return ModifyMemberAccountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about members that are added for multi-account management.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyMemberAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMemberAccountResponse
+        /// </returns>
         public async Task<ModifyMemberAccountResponse> ModifyMemberAccountAsync(ModifyMemberAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyMemberAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the protection status of Web Application Firewall (WAF).
-         *
-         * @param request ModifyPauseProtectionStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyPauseProtectionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the protection status of Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPauseProtectionStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPauseProtectionStatusResponse
+        /// </returns>
         public ModifyPauseProtectionStatusResponse ModifyPauseProtectionStatusWithOptions(ModifyPauseProtectionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15502,13 +24962,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyPauseProtectionStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the protection status of Web Application Firewall (WAF).
-         *
-         * @param request ModifyPauseProtectionStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyPauseProtectionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the protection status of Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPauseProtectionStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPauseProtectionStatusResponse
+        /// </returns>
         public async Task<ModifyPauseProtectionStatusResponse> ModifyPauseProtectionStatusWithOptionsAsync(ModifyPauseProtectionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15548,37 +25016,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyPauseProtectionStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the protection status of Web Application Firewall (WAF).
-         *
-         * @param request ModifyPauseProtectionStatusRequest
-         * @return ModifyPauseProtectionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the protection status of Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPauseProtectionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPauseProtectionStatusResponse
+        /// </returns>
         public ModifyPauseProtectionStatusResponse ModifyPauseProtectionStatus(ModifyPauseProtectionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyPauseProtectionStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the protection status of Web Application Firewall (WAF).
-         *
-         * @param request ModifyPauseProtectionStatusRequest
-         * @return ModifyPauseProtectionStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the protection status of Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPauseProtectionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPauseProtectionStatusResponse
+        /// </returns>
         public async Task<ModifyPauseProtectionStatusResponse> ModifyPauseProtectionStatusAsync(ModifyPauseProtectionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyPauseProtectionStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables the log collection feature for a protected object.
-         *
-         * @param request ModifyResourceLogStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyResourceLogStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the log collection feature for a protected object.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyResourceLogStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyResourceLogStatusResponse
+        /// </returns>
         public ModifyResourceLogStatusResponse ModifyResourceLogStatusWithOptions(ModifyResourceLogStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15622,13 +25110,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyResourceLogStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables or disables the log collection feature for a protected object.
-         *
-         * @param request ModifyResourceLogStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyResourceLogStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the log collection feature for a protected object.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyResourceLogStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyResourceLogStatusResponse
+        /// </returns>
         public async Task<ModifyResourceLogStatusResponse> ModifyResourceLogStatusWithOptionsAsync(ModifyResourceLogStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15672,37 +25168,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyResourceLogStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables or disables the log collection feature for a protected object.
-         *
-         * @param request ModifyResourceLogStatusRequest
-         * @return ModifyResourceLogStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the log collection feature for a protected object.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyResourceLogStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyResourceLogStatusResponse
+        /// </returns>
         public ModifyResourceLogStatusResponse ModifyResourceLogStatus(ModifyResourceLogStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyResourceLogStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables the log collection feature for a protected object.
-         *
-         * @param request ModifyResourceLogStatusRequest
-         * @return ModifyResourceLogStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the log collection feature for a protected object.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyResourceLogStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyResourceLogStatusResponse
+        /// </returns>
         public async Task<ModifyResourceLogStatusResponse> ModifyResourceLogStatusAsync(ModifyResourceLogStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyResourceLogStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Associates or disassociates a protected object or protected object group with or from a protection rule template.
-         *
-         * @param request ModifyTemplateResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyTemplateResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates or disassociates a protected object or protected object group with or from a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTemplateResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTemplateResourcesResponse
+        /// </returns>
         public ModifyTemplateResourcesResponse ModifyTemplateResourcesWithOptions(ModifyTemplateResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15758,13 +25274,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyTemplateResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Associates or disassociates a protected object or protected object group with or from a protection rule template.
-         *
-         * @param request ModifyTemplateResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyTemplateResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates or disassociates a protected object or protected object group with or from a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTemplateResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTemplateResourcesResponse
+        /// </returns>
         public async Task<ModifyTemplateResourcesResponse> ModifyTemplateResourcesWithOptionsAsync(ModifyTemplateResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15820,37 +25344,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ModifyTemplateResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Associates or disassociates a protected object or protected object group with or from a protection rule template.
-         *
-         * @param request ModifyTemplateResourcesRequest
-         * @return ModifyTemplateResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates or disassociates a protected object or protected object group with or from a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTemplateResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTemplateResourcesResponse
+        /// </returns>
         public ModifyTemplateResourcesResponse ModifyTemplateResources(ModifyTemplateResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyTemplateResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Associates or disassociates a protected object or protected object group with or from a protection rule template.
-         *
-         * @param request ModifyTemplateResourcesRequest
-         * @return ModifyTemplateResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates or disassociates a protected object or protected object group with or from a protection rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTemplateResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTemplateResourcesResponse
+        /// </returns>
         public async Task<ModifyTemplateResourcesResponse> ModifyTemplateResourcesAsync(ModifyTemplateResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyTemplateResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Releases a Web Application Firewall (WAF) 3.0 instance.
-         *
-         * @param request ReleaseInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReleaseInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a Web Application Firewall (WAF) 3.0 instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseInstanceResponse
+        /// </returns>
         public ReleaseInstanceResponse ReleaseInstanceWithOptions(ReleaseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15886,13 +25430,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ReleaseInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Releases a Web Application Firewall (WAF) 3.0 instance.
-         *
-         * @param request ReleaseInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReleaseInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a Web Application Firewall (WAF) 3.0 instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseInstanceResponse
+        /// </returns>
         public async Task<ReleaseInstanceResponse> ReleaseInstanceWithOptionsAsync(ReleaseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15928,39 +25480,62 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<ReleaseInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Releases a Web Application Firewall (WAF) 3.0 instance.
-         *
-         * @param request ReleaseInstanceRequest
-         * @return ReleaseInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a Web Application Firewall (WAF) 3.0 instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseInstanceResponse
+        /// </returns>
         public ReleaseInstanceResponse ReleaseInstance(ReleaseInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReleaseInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Releases a Web Application Firewall (WAF) 3.0 instance.
-         *
-         * @param request ReleaseInstanceRequest
-         * @return ReleaseInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a Web Application Firewall (WAF) 3.0 instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseInstanceResponse
+        /// </returns>
         public async Task<ReleaseInstanceResponse> ReleaseInstanceAsync(ReleaseInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReleaseInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances to Web Application Firewall (WAF).
-         *
-         * @description SyncProductInstance is an asynchronous operation. You can call the [DescribeProductInstances](https://help.aliyun.com/document_detail/2743168.html) operation to query the status of the task.
-         *
-         * @param request SyncProductInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SyncProductInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>SyncProductInstance is an asynchronous operation. You can call the <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> operation to query the status of the task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SyncProductInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncProductInstanceResponse
+        /// </returns>
         public SyncProductInstanceResponse SyncProductInstanceWithOptions(SyncProductInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15996,15 +25571,26 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<SyncProductInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances to Web Application Firewall (WAF).
-         *
-         * @description SyncProductInstance is an asynchronous operation. You can call the [DescribeProductInstances](https://help.aliyun.com/document_detail/2743168.html) operation to query the status of the task.
-         *
-         * @param request SyncProductInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SyncProductInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>SyncProductInstance is an asynchronous operation. You can call the <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> operation to query the status of the task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SyncProductInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncProductInstanceResponse
+        /// </returns>
         public async Task<SyncProductInstanceResponse> SyncProductInstanceWithOptionsAsync(SyncProductInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16040,41 +25626,67 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<SyncProductInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances to Web Application Firewall (WAF).
-         *
-         * @description SyncProductInstance is an asynchronous operation. You can call the [DescribeProductInstances](https://help.aliyun.com/document_detail/2743168.html) operation to query the status of the task.
-         *
-         * @param request SyncProductInstanceRequest
-         * @return SyncProductInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>SyncProductInstance is an asynchronous operation. You can call the <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> operation to query the status of the task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SyncProductInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncProductInstanceResponse
+        /// </returns>
         public SyncProductInstanceResponse SyncProductInstance(SyncProductInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SyncProductInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances to Web Application Firewall (WAF).
-         *
-         * @description SyncProductInstance is an asynchronous operation. You can call the [DescribeProductInstances](https://help.aliyun.com/document_detail/2743168.html) operation to query the status of the task.
-         *
-         * @param request SyncProductInstanceRequest
-         * @return SyncProductInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances to Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>SyncProductInstance is an asynchronous operation. You can call the <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> operation to query the status of the task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SyncProductInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncProductInstanceResponse
+        /// </returns>
         public async Task<SyncProductInstanceResponse> SyncProductInstanceAsync(SyncProductInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SyncProductInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Adds tags to resources.
-         *
-         * @param request TagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16114,13 +25726,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Adds tags to resources.
-         *
-         * @param request TagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16160,37 +25780,57 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Adds tags to resources.
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Adds tags to resources.
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Removes tags from resources and then deletes the tags.
-         *
-         * @param request UntagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from resources and then deletes the tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16234,13 +25874,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Removes tags from resources and then deletes the tags.
-         *
-         * @param request UntagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from resources and then deletes the tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16284,24 +25932,36 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Removes tags from resources and then deletes the tags.
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from resources and then deletes the tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UntagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Removes tags from resources and then deletes the tags.
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from resources and then deletes the tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

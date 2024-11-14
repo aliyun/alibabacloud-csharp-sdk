@@ -10,28 +10,31 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDomainsResponseBody : TeaModel {
         /// <summary>
-        /// The domain names that are added to WAF in CNAME record mode.
+        /// <para>The domain names that are added to WAF in CNAME record mode.</para>
         /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public List<DescribeDomainsResponseBodyDomains> Domains { get; set; }
         public class DescribeDomainsResponseBodyDomains : TeaModel {
             /// <summary>
-            /// The back-to-origin settings.
+            /// <para>The back-to-origin settings.</para>
             /// </summary>
             [NameInMap("Backeds")]
             [Validation(Required=false)]
             public DescribeDomainsResponseBodyDomainsBackeds Backeds { get; set; }
             public class DescribeDomainsResponseBodyDomainsBackeds : TeaModel {
                 /// <summary>
-                /// The HTTP addresses of the origin server.
+                /// <para>The HTTP addresses of the origin server.</para>
                 /// </summary>
                 [NameInMap("Http")]
                 [Validation(Required=false)]
                 public List<DescribeDomainsResponseBodyDomainsBackedsHttp> Http { get; set; }
                 public class DescribeDomainsResponseBodyDomainsBackedsHttp : TeaModel {
                     /// <summary>
-                    /// The HTTP address of the origin server.
+                    /// <para>The HTTP address of the origin server.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1.1.XX.XX</para>
                     /// </summary>
                     [NameInMap("Backend")]
                     [Validation(Required=false)]
@@ -40,14 +43,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 }
 
                 /// <summary>
-                /// The HTTPS addresses of the origin server.
+                /// <para>The HTTPS addresses of the origin server.</para>
                 /// </summary>
                 [NameInMap("Https")]
                 [Validation(Required=false)]
                 public List<DescribeDomainsResponseBodyDomainsBackedsHttps> Https { get; set; }
                 public class DescribeDomainsResponseBodyDomainsBackedsHttps : TeaModel {
                     /// <summary>
-                    /// The HTTPS address of the origin server.
+                    /// <para>The HTTPS address of the origin server.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1.1.XX.XX</para>
                     /// </summary>
                     [NameInMap("Backend")]
                     [Validation(Required=false)]
@@ -58,35 +64,41 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// The CNAME assigned by WAF to the domain name.
+            /// <para>The CNAME assigned by WAF to the domain name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxxxxcvdaf.****.com</para>
             /// </summary>
             [NameInMap("Cname")]
             [Validation(Required=false)]
             public string Cname { get; set; }
 
             /// <summary>
-            /// The domain name that is added to WAF in CNAME record mode.
+            /// <para>The domain name that is added to WAF in CNAME record mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
             /// </summary>
             [NameInMap("Domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
             /// <summary>
-            /// The configurations of the listeners.
+            /// <para>The configurations of the listeners.</para>
             /// </summary>
             [NameInMap("ListenPorts")]
             [Validation(Required=false)]
             public DescribeDomainsResponseBodyDomainsListenPorts ListenPorts { get; set; }
             public class DescribeDomainsResponseBodyDomainsListenPorts : TeaModel {
                 /// <summary>
-                /// The HTTP listener ports.
+                /// <para>The HTTP listener ports.</para>
                 /// </summary>
                 [NameInMap("Http")]
                 [Validation(Required=false)]
                 public List<long?> Http { get; set; }
 
                 /// <summary>
-                /// The HTTPS listener ports.
+                /// <para>The HTTPS listener ports.</para>
                 /// </summary>
                 [NameInMap("Https")]
                 [Validation(Required=false)]
@@ -95,20 +107,27 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// <para>The ID of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-acfmvtc5z52****</para>
             /// </summary>
             [NameInMap("ResourceManagerResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceManagerResourceGroupId { get; set; }
 
             /// <summary>
-            /// The status of the domain name. Valid values:
+            /// <para>The status of the domain name. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1:</b> The domain name is in a normal state.</description></item>
+            /// <item><description><b>2:</b> The domain name is being created.</description></item>
+            /// <item><description><b>3:</b> The domain name is being modified.</description></item>
+            /// <item><description><b>4:</b> The domain name is being released.</description></item>
+            /// <item><description><b>5:</b> WAF no longer forwards traffic that is sent to the domain name.</description></item>
+            /// </list>
             /// 
-            /// *   **1:** The domain name is in a normal state.
-            /// *   **2:** The domain name is being created.
-            /// *   **3:** The domain name is being modified.
-            /// *   **4:** The domain name is being released.
-            /// *   **5:** WAF no longer forwards traffic that is sent to the domain name.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -117,14 +136,20 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ABF68BB3-2C48-5FA4-9750-D5FE55700E36</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// <para>The total number of returned entries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>146</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

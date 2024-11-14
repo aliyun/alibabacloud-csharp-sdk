@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyHybridCloudGroupExpansionServerResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7BD7F9A1-0E72-5BC1-8248-C629B4***B6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

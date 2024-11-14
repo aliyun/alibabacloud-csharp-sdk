@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeTemplateResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C7BC9373-3960-53B0-8968-2B13454AE18F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array of protected objects or protected object groups that are associated to the protection rule template.
+        /// <para>An array of protected objects or protected object groups that are associated to the protection rule template.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]

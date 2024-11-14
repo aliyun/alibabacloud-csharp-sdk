@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeResourceSupportRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>58FDF266-3D56-5DE8-91E0-96A26B****DD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The region IDs.
+        /// <para>The region IDs.</para>
         /// </summary>
         [NameInMap("SupportRegions")]
         [Validation(Required=false)]

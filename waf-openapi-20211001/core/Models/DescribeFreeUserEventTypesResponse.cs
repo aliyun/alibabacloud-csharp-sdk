@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class DeleteApisecAbnormalResponse : TeaModel {
+    public class DescribeFreeUserEventTypesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public DeleteApisecAbnormalResponseBody Body { get; set; }
+        public DescribeFreeUserEventTypesResponseBody Body { get; set; }
 
     }
 

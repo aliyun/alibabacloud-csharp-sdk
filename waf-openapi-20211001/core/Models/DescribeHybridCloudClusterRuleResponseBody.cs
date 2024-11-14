@@ -10,33 +10,44 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeHybridCloudClusterRuleResponseBody : TeaModel {
         /// <summary>
-        /// The details of the rule.
+        /// <para>The details of the rule.</para>
         /// </summary>
         [NameInMap("ClusterRule")]
         [Validation(Required=false)]
         public DescribeHybridCloudClusterRuleResponseBodyClusterRule ClusterRule { get; set; }
         public class DescribeHybridCloudClusterRuleResponseBodyClusterRule : TeaModel {
             /// <summary>
-            /// The configuration of the rule.
+            /// <para>The configuration of the rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;check_mode\&quot;:\&quot;all\&quot;,\&quot;exclude\&quot;:{\&quot;exact\&quot;:[],\&quot;regex\&quot;:[]}}</para>
             /// </summary>
             [NameInMap("RuleConfig")]
             [Validation(Required=false)]
             public string RuleConfig { get; set; }
 
             /// <summary>
-            /// The status of the rule. Valid values:
+            /// <para>The status of the rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>on</b>: enabled.</description></item>
+            /// <item><description><b>off</b>: disabled.</description></item>
+            /// </list>
             /// 
-            /// *   **on**: enabled.
-            /// *   **off**: disabled.
+            /// <b>Example:</b>
+            /// <para>on</para>
             /// </summary>
             [NameInMap("RuleStatus")]
             [Validation(Required=false)]
             public string RuleStatus { get; set; }
 
             /// <summary>
-            /// The type of the rule. Valid values:
+            /// <para>The type of the rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>pullin</b>: The traffic redirection rule of the hybrid cloud cluster.</description></item>
+            /// </list>
             /// 
-            /// *   **pullin**: The traffic redirection rule of the hybrid cloud cluster.
+            /// <b>Example:</b>
+            /// <para>pullin</para>
             /// </summary>
             [NameInMap("RuleType")]
             [Validation(Required=false)]
@@ -45,7 +56,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1F29A6D2-9EB6-526D-A997-36888**99CB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

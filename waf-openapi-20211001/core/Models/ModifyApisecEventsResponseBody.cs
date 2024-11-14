@@ -8,17 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class DeleteApisecAbnormalResponseBody : TeaModel {
+    public class ModifyApisecEventsResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D7861F61-5B61-****-6B19160D5EB0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Result")]
-        [Validation(Required=false)]
-        public bool? Result { get; set; }
 
     }
 

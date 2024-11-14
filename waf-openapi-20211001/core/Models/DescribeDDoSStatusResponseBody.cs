@@ -10,26 +10,34 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDDoSStatusResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether DDoS attacks occur on specific domain names.
+        /// <para>Indicates whether DDoS attacks occur on specific domain names.</para>
         /// </summary>
         [NameInMap("DDoSStatus")]
         [Validation(Required=false)]
         public List<DescribeDDoSStatusResponseBodyDDoSStatus> DDoSStatus { get; set; }
         public class DescribeDDoSStatusResponseBodyDDoSStatus : TeaModel {
             /// <summary>
-            /// The type of events that are triggered by DDoS attacks. Valid values:
+            /// <para>The type of events that are triggered by DDoS attacks. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>defense: traffic scrubbing events.</description></item>
+            /// <item><description>blackhole: blackhole filtering events.</description></item>
+            /// </list>
             /// 
-            /// *   defense: traffic scrubbing events.
-            /// *   blackhole: blackhole filtering events.
+            /// <b>Example:</b>
+            /// <para>blackhole</para>
             /// </summary>
             [NameInMap("EventType")]
             [Validation(Required=false)]
             public string EventType { get; set; }
 
             /// <summary>
-            /// Indicates whether DDoS attacks occur on specific domain names. Valid value:
+            /// <para>Indicates whether DDoS attacks occur on specific domain names. Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description><b>doing</b>: DDoS attacks occur on specific domain names.</description></item>
+            /// </list>
             /// 
-            /// *   **doing**: DDoS attacks occur on specific domain names.
+            /// <b>Example:</b>
+            /// <para>doing</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -38,7 +46,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D7861F61-5B61-46CE-A47C-***</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

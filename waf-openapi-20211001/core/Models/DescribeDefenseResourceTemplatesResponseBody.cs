@@ -10,98 +10,132 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDefenseResourceTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2305CEB0-BA5A-5543-A1D3-3F1D0891****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The protection templates.
+        /// <para>The protection templates.</para>
         /// </summary>
         [NameInMap("Templates")]
         [Validation(Required=false)]
         public List<DescribeDefenseResourceTemplatesResponseBodyTemplates> Templates { get; set; }
         public class DescribeDefenseResourceTemplatesResponseBodyTemplates : TeaModel {
             /// <summary>
-            /// The scenario in which the protection template is used.
+            /// <para>The scenario in which the protection template is used.</para>
+            /// <list type="bullet">
+            /// <item><description><b>waf_group</b>: basic protection.</description></item>
+            /// <item><description><b>antiscan</b>: scan protection.</description></item>
+            /// <item><description><b>ip_blacklist</b>: IP address blacklist.</description></item>
+            /// <item><description><b>custom_acl</b>: custom rule.</description></item>
+            /// <item><description><b>whitelist</b>: whitelist.</description></item>
+            /// <item><description><b>region_block</b>: region blacklist.</description></item>
+            /// <item><description><b>custom_response</b>: custom response.</description></item>
+            /// <item><description><b>cc</b>: HTTP flood protection.</description></item>
+            /// <item><description><b>tamperproof</b>: website tamper-proofing.</description></item>
+            /// <item><description><b>dlp</b>: data leakage prevention.</description></item>
+            /// </list>
             /// 
-            /// *   **waf_group**: basic protection.
-            /// *   **antiscan**: scan protection.
-            /// *   **ip_blacklist**: IP address blacklist.
-            /// *   **custom_acl**: custom rule.
-            /// *   **whitelist**: whitelist.
-            /// *   **region_block**: region blacklist.
-            /// *   **custom_response**: custom response.
-            /// *   **cc**: HTTP flood protection.
-            /// *   **tamperproof**: website tamper-proofing.
-            /// *   **dlp**: data leakage prevention.
+            /// <b>Example:</b>
+            /// <para>whitelist</para>
             /// </summary>
             [NameInMap("DefenseScene")]
             [Validation(Required=false)]
             public string DefenseScene { get; set; }
 
             /// <summary>
-            /// The sub-scenario in which the template is used. Valid values:
+            /// <para>The sub-scenario in which the template is used. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>web</b>: bot management for website protection.</description></item>
+            /// <item><description><b>app</b>: bot management for app protection.</description></item>
+            /// <item><description><b>basic</b>: bot management for basic protection.</description></item>
+            /// </list>
             /// 
-            /// *   **web**: bot management for website protection.
-            /// *   **app**: bot management for app protection.
-            /// *   **basic**: bot management for basic protection.
+            /// <b>Example:</b>
+            /// <para>basic</para>
             /// </summary>
             [NameInMap("DefenseSubScene")]
             [Validation(Required=false)]
             public string DefenseSubScene { get; set; }
 
             /// <summary>
-            /// The description of the protection template.
+            /// <para>The description of the protection template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The time when the protection template was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// <para>The time when the protection template was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1692930539000</para>
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// The ID of the protection template.
+            /// <para>The ID of the protection template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>12345</para>
             /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public long? TemplateId { get; set; }
 
             /// <summary>
-            /// The name of the protection template.
+            /// <para>The name of the protection template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestTemplateName</para>
             /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// The origin of the protection template. The value custom indicates that the template is a custom template created by the user.
+            /// <para>The origin of the protection template. The value custom indicates that the template is a custom template created by the user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>custom</para>
             /// </summary>
             [NameInMap("TemplateOrigin")]
             [Validation(Required=false)]
             public string TemplateOrigin { get; set; }
 
             /// <summary>
-            /// The status of the protection template. Valid values:
+            /// <para>The status of the protection template. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: disabled.</description></item>
+            /// <item><description><b>1</b>: enabled.</description></item>
+            /// </list>
             /// 
-            /// *   **0**: disabled.
-            /// *   **1**: enabled.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("TemplateStatus")]
             [Validation(Required=false)]
             public int? TemplateStatus { get; set; }
 
             /// <summary>
-            /// The type of the protection template. Valid values:
+            /// <para>The type of the protection template. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>user_default</b>: default template.</description></item>
+            /// <item><description><b>user_custom</b>: custom template.</description></item>
+            /// </list>
             /// 
-            /// *   **user_default**: default template.
-            /// *   **user_custom**: custom template.
+            /// <b>Example:</b>
+            /// <para>user_custom</para>
             /// </summary>
             [NameInMap("TemplateType")]
             [Validation(Required=false)]

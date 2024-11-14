@@ -10,34 +10,39 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyHybridCloudClusterBypassStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the hybrid cloud cluster.
+        /// <para>The ID of the hybrid cloud cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>hdbc_cluster_****</para>
         /// </summary>
         [NameInMap("ClusterResourceId")]
         [Validation(Required=false)]
         public string ClusterResourceId { get; set; }
 
         /// <summary>
-        /// The ID of the Web Application Firewall (WAF) instance.
+        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>**</para>
+        /// <para>**You can call the **DescribeInstanceInfo<a href="https://help.aliyun.com/document_detail/140857.html"> operation to obtain the ID of the WAF instance.</a></para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// **
-        /// 
-        /// **You can call the **DescribeInstanceInfo[ operation to obtain the ID of the WAF instance.](https://help.aliyun.com/document_detail/140857.html)
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>waf_elasticity-cn-0xldbqt****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The status of manual bypass. Valid values:
+        /// <para>The status of manual bypass. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b>: enabled.</description></item>
+        /// <item><description><b>off</b>: disabled. This is the default value.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **on**: enabled.
-        /// *   **off**: disabled. This is the default value.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>on</para>
         /// </summary>
         [NameInMap("RuleStatus")]
         [Validation(Required=false)]

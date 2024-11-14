@@ -10,31 +10,41 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeResourceLogStatusResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0DABF8AB-2321-5F8D-A8D7-922D757FBFFE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned result.
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<DescribeResourceLogStatusResponseBodyResult> Result { get; set; }
         public class DescribeResourceLogStatusResponseBodyResult : TeaModel {
             /// <summary>
-            /// The protected object.
+            /// <para>The protected object.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>alb-wewbb23dfsetetcic****</para>
             /// </summary>
             [NameInMap("Resource")]
             [Validation(Required=false)]
             public string Resource { get; set; }
 
             /// <summary>
-            /// Indicates whether the log collection feature is enabled for the protected object. Valid values:
+            /// <para>Indicates whether the log collection feature is enabled for the protected object. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true:</b> The log collection feature is enabled.</description></item>
+            /// <item><description><b>false:</b> The log collection feature is disabled.</description></item>
+            /// </list>
             /// 
-            /// *   **true:** The log collection feature is enabled.
-            /// *   **false:** The log collection feature is disabled.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

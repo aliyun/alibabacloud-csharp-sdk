@@ -10,74 +10,100 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeRuleHitsTopRuleIdRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.
+        /// <para>The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1665386280</para>
         /// </summary>
         [NameInMap("EndTimestamp")]
         [Validation(Required=false)]
         public string EndTimestamp { get; set; }
 
         /// <summary>
-        /// The ID of the Web Application Firewall (WAF) instance.
+        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to query the ID of the WAF instance.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>waf_cdnsdf3****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// Specifies whether protected objects that trigger protection rules are returned in the response. Valid values
+        /// <para>Specifies whether protected objects that trigger protection rules are returned in the response. Valid values</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: returns only the number of times each protection rule is triggered. If you set IsGroupResource to true, Resource is left empty.</description></item>
+        /// <item><description><b>false</b>: returns the number of times each protection rule is triggered by each protected object.</description></item>
+        /// </list>
         /// 
-        /// - **true**: returns only the number of times each protection rule is triggered. If you set IsGroupResource to true, Resource is left empty.
-        /// - **false**: returns the number of times each protection rule is triggered by each protected object.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsGroupResource")]
         [Validation(Required=false)]
         public string IsGroupResource { get; set; }
 
         /// <summary>
-        /// The region where the WAF instance resides. Valid values:
+        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cn-hangzhou:</b> the Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1:</b> outside the Chinese mainland.</description></item>
+        /// </list>
         /// 
-        /// *   **cn-hangzhou:** the Chinese mainland.
-        /// *   **ap-southeast-1:** outside the Chinese mainland.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The protected object.
+        /// <para>The protected object.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public string Resource { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud resource group.
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfm***q</para>
         /// </summary>
         [NameInMap("ResourceManagerResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// The type of rules that are triggered by the protected object. By default, this parameter is not specified and all types of rules are queried.
+        /// <para>The type of rules that are triggered by the protected object. By default, this parameter is not specified and all types of rules are queried.</para>
+        /// <list type="bullet">
+        /// <item><description><b>blacklist:</b> IP address blacklist rules.</description></item>
+        /// <item><description><b>custom:</b> custom rules.</description></item>
+        /// <item><description><b>antiscan:</b> scan protection rules.</description></item>
+        /// <item><description><b>cc_system:</b> HTTP flood protection rules.</description></item>
+        /// <item><description><b>region_block:</b> region blacklist rules.</description></item>
+        /// </list>
         /// 
-        /// *   **blacklist:** IP address blacklist rules.
-        /// *   **custom:** custom rules.
-        /// *   **antiscan:** scan protection rules.
-        /// *   **cc_system:** HTTP flood protection rules.
-        /// *   **region_block:** region blacklist rules.
+        /// <b>Example:</b>
+        /// <para>blacklist</para>
         /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]
         public string RuleType { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Unit: seconds.
+        /// <para>The beginning of the time range to query. Unit: seconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1665331200</para>
         /// </summary>
         [NameInMap("StartTimestamp")]
         [Validation(Required=false)]

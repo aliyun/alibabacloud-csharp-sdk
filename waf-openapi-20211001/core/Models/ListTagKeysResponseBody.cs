@@ -10,24 +10,31 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ListTagKeysResponseBody : TeaModel {
         /// <summary>
-        /// The keys and types of the tags.
+        /// <para>The keys and types of the tags.</para>
         /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]
         public List<ListTagKeysResponseBodyKeys> Keys { get; set; }
         public class ListTagKeysResponseBodyKeys : TeaModel {
             /// <summary>
-            /// The type of the tag. Valid values:
+            /// <para>The type of the tag. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>custom</description></item>
+            /// <item><description>system</description></item>
+            /// </list>
             /// 
-            /// *   custom
-            /// *   system
+            /// <b>Example:</b>
+            /// <para>custom</para>
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
 
             /// <summary>
-            /// The key of the tag.
+            /// <para>The key of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>demoTagKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -36,14 +43,20 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0*****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8CB8BB88-24C7-5608-BF5E-4DCA****CF1C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

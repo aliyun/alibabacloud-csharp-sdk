@@ -10,87 +10,120 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDefenseTemplateResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D7861F61-5B61-46CE-A47C-6B19160D5EB0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the template.
+        /// <para>The information about the template.</para>
         /// </summary>
         [NameInMap("Template")]
         [Validation(Required=false)]
         public DescribeDefenseTemplateResponseBodyTemplate Template { get; set; }
         public class DescribeDefenseTemplateResponseBodyTemplate : TeaModel {
             /// <summary>
-            /// The scenario in which the template is used. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
+            /// <para>The scenario in which the template is used. For more information, see the description of the <b>DefenseScene</b> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>waf_group</para>
             /// </summary>
             [NameInMap("DefenseScene")]
             [Validation(Required=false)]
             public string DefenseScene { get; set; }
 
             /// <summary>
-            /// The sub-scenario in which the template is used. Valid values:
+            /// <para>The sub-scenario in which the template is used. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>web</b>: The template is a bot management template that is used for website protection.</description></item>
+            /// <item><description><b>app</b>: The template is a bot management template that is used for app protection.</description></item>
+            /// <item><description><b>basic</b>: The template is a bot management template that is used for basic protection.</description></item>
+            /// </list>
             /// 
-            /// *   **web**: The template is a bot management template that is used for website protection.
-            /// *   **app**: The template is a bot management template that is used for app protection.
-            /// *   **basic**: The template is a bot management template that is used for basic protection.
+            /// <b>Example:</b>
+            /// <para>app</para>
             /// </summary>
             [NameInMap("DefenseSubScene")]
             [Validation(Required=false)]
             public string DefenseSubScene { get; set; }
 
             /// <summary>
-            /// The description of the protection rule template.
+            /// <para>The description of the protection rule template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The most recent time when the protection rule template was modified.
+            /// <para>The most recent time when the protection rule template was modified.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1665283642000</para>
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// The ID of the protection rule template.
+            /// <para>The ID of the protection rule template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10097</para>
             /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public long? TemplateId { get; set; }
 
             /// <summary>
-            /// The name of the protection rule template.
+            /// <para>The name of the protection rule template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test0621</para>
             /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// The origin of the protection rule template. If the value of this parameter is custom, the protection rule template is created by the user.
+            /// <para>The origin of the protection rule template. If the value of this parameter is custom, the protection rule template is created by the user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>custom</para>
             /// </summary>
             [NameInMap("TemplateOrigin")]
             [Validation(Required=false)]
             public string TemplateOrigin { get; set; }
 
             /// <summary>
-            /// The status of the protection rule template. Valid values:
+            /// <para>The status of the protection rule template. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0:</b> disabled.</description></item>
+            /// <item><description><b>1:</b> enabled.</description></item>
+            /// </list>
             /// 
-            /// *   **0:** disabled.
-            /// *   **1:** enabled.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("TemplateStatus")]
             [Validation(Required=false)]
             public int? TemplateStatus { get; set; }
 
             /// <summary>
-            /// The type of the protection rule template. Valid values:
+            /// <para>The type of the protection rule template. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>user_default:</b> default template.</description></item>
+            /// <item><description><b>user_custom:</b> custom template.</description></item>
+            /// </list>
             /// 
-            /// *   **user_default:** default template.
-            /// *   **user_custom:** custom template.
+            /// <b>Example:</b>
+            /// <para>user_default</para>
             /// </summary>
             [NameInMap("TemplateType")]
             [Validation(Required=false)]

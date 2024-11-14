@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateMemberAccountsResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>66A98669-ER12-WE34-23PO-301469*****E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

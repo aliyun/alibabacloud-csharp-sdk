@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeHybridCloudServerRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The information about the regions.
+        /// <para>The information about the regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<DescribeHybridCloudServerRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeHybridCloudServerRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// The code of the region.
+            /// <para>The code of the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public int? Code { get; set; }
 
             /// <summary>
-            /// The name of the region.
+            /// <para>The name of the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>aliyun</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0FBBDE11-C35F-531B-96BA-64CA****C875</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

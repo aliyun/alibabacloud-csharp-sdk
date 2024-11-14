@@ -10,67 +10,88 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyHybridCloudClusterRuleRequest : TeaModel {
         /// <summary>
-        /// The ID of the hybrid cloud cluster.
+        /// <para>The ID of the hybrid cloud cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1018</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public long? ClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the WAF instance.
+        /// <para>The ID of the WAF instance.</para>
+        /// <remarks>
+        /// <para> You can call the DescribeInstanceInfo operation to query the ID of the WAF instance.<a href="~~140857~~"></a></para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the DescribeInstanceInfo operation to query the ID of the WAF instance.[](~~140857~~)
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>waf-cn-n6w***x52m</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region in which the WAF instance is deployed. Valid values:
+        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
+        /// </list>
         /// 
-        /// *   **cn-hangzhou**: Chinese mainland.
-        /// *   **ap-southeast-1**: outside the Chinese mainland.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud resource group.
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfm***q</para>
         /// </summary>
         [NameInMap("ResourceManagerResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// The configuration of the rule.
+        /// <para>The configuration of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;check_mode\&quot;:\&quot;part\&quot;,\&quot;include\&quot;:{\&quot;exact\&quot;:[],\&quot;regex\&quot;:[]}}</para>
         /// </summary>
         [NameInMap("RuleConfig")]
         [Validation(Required=false)]
         public string RuleConfig { get; set; }
 
         /// <summary>
-        /// The status of the rule. Valid values:
+        /// <para>The status of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b>: enables the rule.</description></item>
+        /// <item><description><b>off</b>: disables the rule.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **on**: enables the rule.
-        /// *   **off**: disables the rule.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>on</para>
         /// </summary>
         [NameInMap("RuleStatus")]
         [Validation(Required=false)]
         public string RuleStatus { get; set; }
 
         /// <summary>
-        /// The type of the rule. Valid values:
+        /// <para>The type of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>pullin</b>: The traffic redirection rule.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **pullin**: The traffic redirection rule.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pullin</para>
         /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]

@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeRuleHitsTopRuleIdResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F6334274-8870-5D2F-A1AD-D6EF885AC1ED</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The array of the IDs of the top 10 rules that are matched by requests.
+        /// <para>The array of the IDs of the top 10 rules that are matched by requests.</para>
         /// </summary>
         [NameInMap("RuleHitsTopRuleId")]
         [Validation(Required=false)]
         public List<DescribeRuleHitsTopRuleIdResponseBodyRuleHitsTopRuleId> RuleHitsTopRuleId { get; set; }
         public class DescribeRuleHitsTopRuleIdResponseBodyRuleHitsTopRuleId : TeaModel {
             /// <summary>
-            /// The number of requests that match the rule.
+            /// <para>The number of requests that match the rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>181174784</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public long? Count { get; set; }
 
             /// <summary>
-            /// The protected object.
+            /// <para>The protected object.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
             /// </summary>
             [NameInMap("Resource")]
             [Validation(Required=false)]
             public string Resource { get; set; }
 
             /// <summary>
-            /// The ID of the rule.
+            /// <para>The ID of the rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5465465</para>
             /// </summary>
             [NameInMap("RuleId")]
             [Validation(Required=false)]

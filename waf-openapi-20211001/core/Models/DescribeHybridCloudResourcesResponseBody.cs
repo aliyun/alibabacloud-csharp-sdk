@@ -10,169 +10,220 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeHybridCloudResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The domain names.
+        /// <para>The domain names.</para>
         /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public List<DescribeHybridCloudResourcesResponseBodyDomains> Domains { get; set; }
         public class DescribeHybridCloudResourcesResponseBodyDomains : TeaModel {
             /// <summary>
-            /// The CNAME assigned by WAF.
+            /// <para>The CNAME assigned by WAF.</para>
+            /// <remarks>
+            /// <para> This parameter is returned only if the value of <b>CnameEnabled</b> is true.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is returned only if the value of **CnameEnabled** is true.
+            /// <b>Example:</b>
+            /// <para>50fqmu1ci7g0xtiyxnrhgx6qdhmn****.yundunwaf5.com</para>
             /// </summary>
             [NameInMap("Cname")]
             [Validation(Required=false)]
             public string Cname { get; set; }
 
             /// <summary>
-            /// The domain name.
+            /// <para>The domain name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
             /// </summary>
             [NameInMap("Domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
             /// <summary>
-            /// The access ID.
+            /// <para>The access ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// The listeners.
+            /// <para>The listeners.</para>
             /// </summary>
             [NameInMap("Listen")]
             [Validation(Required=false)]
             public DescribeHybridCloudResourcesResponseBodyDomainsListen Listen { get; set; }
             public class DescribeHybridCloudResourcesResponseBodyDomainsListen : TeaModel {
                 /// <summary>
-                /// The ID of the certificate.
+                /// <para>The ID of the certificate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>72***76-cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("CertId")]
                 [Validation(Required=false)]
                 public string CertId { get; set; }
 
                 /// <summary>
-                /// The types of cipher suites that are added. Valid values:
+                /// <para>The types of cipher suites that are added. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>1:</b> all cipher suites.</description></item>
+                /// <item><description><b>2:</b> strong cipher suites.</description></item>
+                /// <item><description><b>99:</b> custom cipher suites.</description></item>
+                /// </list>
                 /// 
-                /// *   **1:** all cipher suites.
-                /// *   **2:** strong cipher suites.
-                /// *   **99:** custom cipher suites.
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("CipherSuite")]
                 [Validation(Required=false)]
                 public int? CipherSuite { get; set; }
 
                 /// <summary>
-                /// The custom cipher suites.
-                /// 
-                /// >  This parameter is returned only if the value of **CipherSuite** is **99**.
+                /// <para>The custom cipher suites.</para>
+                /// <remarks>
+                /// <para> This parameter is returned only if the value of <b>CipherSuite</b> is <b>99</b>.</para>
+                /// </remarks>
                 /// </summary>
                 [NameInMap("CustomCiphers")]
                 [Validation(Required=false)]
                 public List<string> CustomCiphers { get; set; }
 
                 /// <summary>
-                /// Indicates whether TLS 1.3 is supported. Valid values:
+                /// <para>Indicates whether TLS 1.3 is supported. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("EnableTLSv3")]
                 [Validation(Required=false)]
                 public bool? EnableTLSv3 { get; set; }
 
                 /// <summary>
-                /// Indicates whether exclusive IP addresses are supported. Valid values:
+                /// <para>Indicates whether exclusive IP addresses are supported. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("ExclusiveIp")]
                 [Validation(Required=false)]
                 public bool? ExclusiveIp { get; set; }
 
                 /// <summary>
-                /// Indicates whether the HTTP to HTTPS redirection feature is enabled for the domain name. Valid values:
+                /// <para>Indicates whether the HTTP to HTTPS redirection feature is enabled for the domain name. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("FocusHttps")]
                 [Validation(Required=false)]
                 public bool? FocusHttps { get; set; }
 
                 /// <summary>
-                /// Indicates whether HTTP/2 is enabled. Valid values:
+                /// <para>Indicates whether HTTP/2 is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Http2Enabled")]
                 [Validation(Required=false)]
                 public bool? Http2Enabled { get; set; }
 
                 /// <summary>
-                /// The HTTP listener ports.
+                /// <para>The HTTP listener ports.</para>
                 /// </summary>
                 [NameInMap("HttpPorts")]
                 [Validation(Required=false)]
                 public List<long?> HttpPorts { get; set; }
 
                 /// <summary>
-                /// The HTTPS listener ports.
+                /// <para>The HTTPS listener ports.</para>
                 /// </summary>
                 [NameInMap("HttpsPorts")]
                 [Validation(Required=false)]
                 public List<long?> HttpsPorts { get; set; }
 
                 /// <summary>
-                /// Specifies whether to enable IPv6. Valid values:
+                /// <para>Specifies whether to enable IPv6. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("IPv6Enabled")]
                 [Validation(Required=false)]
                 public bool? IPv6Enabled { get; set; }
 
                 /// <summary>
-                /// The type of the protection resource. Valid values:
+                /// <para>The type of the protection resource. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>share:</b> shared cluster.</description></item>
+                /// <item><description><b>gslb:</b> shared cluster-based intelligent load balancing.</description></item>
+                /// </list>
                 /// 
-                /// *   **share:** shared cluster.
-                /// *   **gslb:** shared cluster-based intelligent load balancing.
+                /// <b>Example:</b>
+                /// <para>share</para>
                 /// </summary>
                 [NameInMap("ProtectionResource")]
                 [Validation(Required=false)]
                 public string ProtectionResource { get; set; }
 
                 /// <summary>
-                /// The version of the Transport Layer Security (TLS) protocol. Valid values:
+                /// <para>The version of the Transport Layer Security (TLS) protocol. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>tlsv1</b></description></item>
+                /// <item><description><b>tlsv1.1</b></description></item>
+                /// <item><description><b>tlsv1.2</b></description></item>
+                /// </list>
                 /// 
-                /// *   **tlsv1**
-                /// *   **tlsv1.1**
-                /// *   **tlsv1.2**
+                /// <b>Example:</b>
+                /// <para>tlsv1.2</para>
                 /// </summary>
                 [NameInMap("TLSVersion")]
                 [Validation(Required=false)]
                 public string TLSVersion { get; set; }
 
                 /// <summary>
-                /// The method that is used to obtain the actual IP address of a client. Valid values:
+                /// <para>The method that is used to obtain the actual IP address of a client. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: No Layer 7 proxies are deployed in front of WAF.</description></item>
+                /// <item><description><b>1</b>: WAF reads the first value of the X-Forwarded-For (XFF) header field as the actual IP address of the client.</description></item>
+                /// <item><description><b>2</b>: WAF reads the value of a custom header field as the actual IP address of the client.</description></item>
+                /// </list>
                 /// 
-                /// *   **0**: No Layer 7 proxies are deployed in front of WAF.
-                /// *   **1**: WAF reads the first value of the X-Forwarded-For (XFF) header field as the actual IP address of the client.
-                /// *   **2**: WAF reads the value of a custom header field as the actual IP address of the client.
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("XffHeaderMode")]
                 [Validation(Required=false)]
                 public int? XffHeaderMode { get; set; }
 
                 /// <summary>
-                /// The custom header fields that are used to obtain the actual IP addresses of clients. The value is in the ["header1","header2",...] format.
-                /// 
-                /// >  This parameter is returned only if the value of **XffHeaderMode** is 2.
+                /// <para>The custom header fields that are used to obtain the actual IP addresses of clients. The value is in the [&quot;header1&quot;,&quot;header2&quot;,...] format.</para>
+                /// <remarks>
+                /// <para> This parameter is returned only if the value of <b>XffHeaderMode</b> is 2.</para>
+                /// </remarks>
                 /// </summary>
                 [NameInMap("XffHeaders")]
                 [Validation(Required=false)]
@@ -181,108 +232,144 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// The configurations of the forwarding rule.
+            /// <para>The configurations of the forwarding rule.</para>
             /// </summary>
             [NameInMap("Redirect")]
             [Validation(Required=false)]
             public DescribeHybridCloudResourcesResponseBodyDomainsRedirect Redirect { get; set; }
             public class DescribeHybridCloudResourcesResponseBodyDomainsRedirect : TeaModel {
                 /// <summary>
-                /// The IP addresses or domain names of the origin server.
+                /// <para>The IP addresses or domain names of the origin server.</para>
                 /// </summary>
                 [NameInMap("Backends")]
                 [Validation(Required=false)]
                 public List<string> Backends { get; set; }
 
                 /// <summary>
-                /// Indicates whether the public cloud disaster recovery feature is enabled. Valid values:
+                /// <para>Indicates whether the public cloud disaster recovery feature is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("CnameEnabled")]
                 [Validation(Required=false)]
                 public bool? CnameEnabled { get; set; }
 
                 /// <summary>
-                /// The timeout period for connections. Unit: seconds. Valid values: 5 to 120.
+                /// <para>The timeout period for connections. Unit: seconds. Valid values: 5 to 120.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>120</para>
                 /// </summary>
                 [NameInMap("ConnectTimeout")]
                 [Validation(Required=false)]
                 public long? ConnectTimeout { get; set; }
 
                 /// <summary>
-                /// Indicates whether the HTTPS to HTTP redirection feature is enabled for back-to-origin requests. Valid values:
+                /// <para>Indicates whether the HTTPS to HTTP redirection feature is enabled for back-to-origin requests. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("FocusHttpBackend")]
                 [Validation(Required=false)]
                 public bool? FocusHttpBackend { get; set; }
 
                 /// <summary>
-                /// Indicates whether the persistent connection feature is enabled. Valid values:
+                /// <para>Indicates whether the persistent connection feature is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Keepalive")]
                 [Validation(Required=false)]
                 public bool? Keepalive { get; set; }
 
                 /// <summary>
-                /// The number of reused persistent connections. Valid values: 60 to 1000.
+                /// <para>The number of reused persistent connections. Valid values: 60 to 1000.</para>
+                /// <remarks>
+                /// <para> This parameter indicates the number of reused persistent connections after the persistent connection feature is enabled.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter indicates the number of reused persistent connections after the persistent connection feature is enabled.
+                /// <b>Example:</b>
+                /// <para>1000</para>
                 /// </summary>
                 [NameInMap("KeepaliveRequests")]
                 [Validation(Required=false)]
                 public long? KeepaliveRequests { get; set; }
 
                 /// <summary>
-                /// The timeout period for persistent connections that are in the Idle state. Unit: seconds. Valid values: 1 to 60. Default value: 15.
+                /// <para>The timeout period for persistent connections that are in the Idle state. Unit: seconds. Valid values: 1 to 60. Default value: 15.</para>
+                /// <remarks>
+                /// <para> This parameter indicates the period of time during which a reused persistent connection can remain in the Idle state before the persistent connection is released.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter indicates the period of time during which a reused persistent connection can remain in the Idle state before the persistent connection is released.
+                /// <b>Example:</b>
+                /// <para>15</para>
                 /// </summary>
                 [NameInMap("KeepaliveTimeout")]
                 [Validation(Required=false)]
                 public long? KeepaliveTimeout { get; set; }
 
                 /// <summary>
-                /// The load balancing algorithm that is used to forward requests to the origin server. Valid values:
+                /// <para>The load balancing algorithm that is used to forward requests to the origin server. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>iphash</b></description></item>
+                /// <item><description><b>roundRobin</b></description></item>
+                /// <item><description><b>leastTime</b></description></item>
+                /// </list>
                 /// 
-                /// *   **iphash**
-                /// *   **roundRobin**
-                /// *   **leastTime**
+                /// <b>Example:</b>
+                /// <para>iphash</para>
                 /// </summary>
                 [NameInMap("Loadbalance")]
                 [Validation(Required=false)]
                 public string Loadbalance { get; set; }
 
                 /// <summary>
-                /// The timeout period for read connections. Unit: seconds. Valid values: 5 to 1800.
+                /// <para>The timeout period for read connections. Unit: seconds. Valid values: 5 to 1800.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>200</para>
                 /// </summary>
                 [NameInMap("ReadTimeout")]
                 [Validation(Required=false)]
                 public long? ReadTimeout { get; set; }
 
                 /// <summary>
-                /// The key-value pair that is used to label requests that pass through WAF.
+                /// <para>The key-value pair that is used to label requests that pass through WAF.</para>
                 /// </summary>
                 [NameInMap("RequestHeaders")]
                 [Validation(Required=false)]
                 public List<DescribeHybridCloudResourcesResponseBodyDomainsRedirectRequestHeaders> RequestHeaders { get; set; }
                 public class DescribeHybridCloudResourcesResponseBodyDomainsRedirectRequestHeaders : TeaModel {
                     /// <summary>
-                    /// The key of the custom header field.
+                    /// <para>The key of the custom header field.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>aaa</para>
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// The value of the custom header field.
+                    /// <para>The value of the custom header field.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>bbb</para>
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
@@ -291,47 +378,74 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 }
 
                 /// <summary>
-                /// Indicates whether WAF retries forwarding requests if requests fail to be forwarded to the origin server. Valid values:
+                /// <para>Indicates whether WAF retries forwarding requests if requests fail to be forwarded to the origin server. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Retry")]
                 [Validation(Required=false)]
                 public bool? Retry { get; set; }
 
                 /// <summary>
-                /// The forwarding rules that are configured for the domain name. This parameter is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:
+                /// <para>The forwarding rules that are configured for the domain name. This parameter is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</para>
+                /// <list type="bullet">
+                /// <item><description><b>rs</b>: the back-to-origin IP addresses or CNAMEs. The value is of the ARRAY type.</description></item>
+                /// <item><description><b>location</b>: the name of the protection node. The value is of the STRING type.</description></item>
+                /// <item><description><b>locationId</b>: the ID of the protection node. The value is of the LONG type.</description></item>
+                /// </list>
                 /// 
-                /// *   **rs**: the back-to-origin IP addresses or CNAMEs. The value is of the ARRAY type.
-                /// *   **location**: the name of the protection node. The value is of the STRING type.
-                /// *   **locationId**: the ID of the protection node. The value is of the LONG type.
+                /// <b>Example:</b>
+                /// <para>[
+                ///       {
+                ///             &quot;rs&quot;: [
+                ///                   &quot;1.1.XX.XX&quot;
+                ///             ],
+                ///             &quot;locationId&quot;: 535,
+                ///             &quot;location&quot;: &quot;test1111&quot;
+                ///       }
+                /// ]</para>
                 /// </summary>
                 [NameInMap("RoutingRules")]
                 [Validation(Required=false)]
                 public string RoutingRules { get; set; }
 
                 /// <summary>
-                /// Indicates whether the origin Server Name Indication (SNI) feature is enabled. Valid values:
+                /// <para>Indicates whether the origin Server Name Indication (SNI) feature is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("SniEnabled")]
                 [Validation(Required=false)]
                 public bool? SniEnabled { get; set; }
 
                 /// <summary>
-                /// The value of the custom SNI field. If the parameter is left empty, the value of the **Host** field in the request header is automatically used as the value of the SNI field.
+                /// <para>The value of the custom SNI field. If the parameter is left empty, the value of the <b>Host</b> field in the request header is automatically used as the value of the SNI field.</para>
+                /// <remarks>
+                /// <para> This parameter is returned only if the value of <b>SniEnabled</b> is <b>true</b>.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned only if the value of **SniEnabled** is **true**.
+                /// <b>Example:</b>
+                /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
                 /// </summary>
                 [NameInMap("SniHost")]
                 [Validation(Required=false)]
                 public string SniHost { get; set; }
 
                 /// <summary>
-                /// The timeout period for write connections. Unit: seconds. Valid values: 5 to 1800.
+                /// <para>The timeout period for write connections. Unit: seconds. Valid values: 5 to 1800.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>200</para>
                 /// </summary>
                 [NameInMap("WriteTimeout")]
                 [Validation(Required=false)]
@@ -340,27 +454,37 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// The ID of the Alibaba Cloud resource group.
+            /// <para>The ID of the Alibaba Cloud resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-acfmvtc5z52****</para>
             /// </summary>
             [NameInMap("ResourceManagerResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceManagerResourceGroupId { get; set; }
 
             /// <summary>
-            /// The status of the domain name. Valid values:
+            /// <para>The status of the domain name. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1:</b> The domain name is in a normal state.</description></item>
+            /// <item><description><b>2:</b> The domain name is being created.</description></item>
+            /// <item><description><b>3:</b> The domain name is being modified.</description></item>
+            /// <item><description><b>4:</b> The domain name is being released.</description></item>
+            /// <item><description><b>5:</b> WAF no longer forwards the traffic of the domain name.</description></item>
+            /// </list>
             /// 
-            /// *   **1:** The domain name is in a normal state.
-            /// *   **2:** The domain name is being created.
-            /// *   **3:** The domain name is being modified.
-            /// *   **4:** The domain name is being released.
-            /// *   **5:** WAF no longer forwards the traffic of the domain name.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// The user ID.
+            /// <para>The user ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>130715431409****</para>
             /// </summary>
             [NameInMap("Uid")]
             [Validation(Required=false)]
@@ -369,14 +493,20 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>98D2AA9A-5959-5CCD-83E3-B6606232A2BE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries that are returned.
+        /// <para>The total number of entries that are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>24</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

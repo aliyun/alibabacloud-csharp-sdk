@@ -10,53 +10,62 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:
+        /// <para>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **cn-hangzhou**: Chinese mainland.
-        /// *   **ap-southeast-1**: outside the Chinese mainland.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the resources. You can specify up to 50 resource IDs.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of the resources. You can specify up to 50 resource IDs.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.
+        /// <para>The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ALIYUN::WAF::DEFENSERESOURCE</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags to add to the resource.
-        /// 
-        /// This parameter is required.
+        /// <para>The tags to add to the resource.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N to add to the resource. Valid values of N: 1 to 20.
+            /// <para>The key of tag N to add to the resource. Valid values of N: 1 to 20.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>demoTagKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N to add to the resource. Valid values of N: 1 to 20.
+            /// <para>The value of tag N to add to the resource. Valid values of N: 1 to 20.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>demoTagValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

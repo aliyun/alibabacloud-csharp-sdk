@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class DeleteApisecEventResponse : TeaModel {
+    public class DescribeSensitiveRequestLogResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public DeleteApisecEventResponseBody Body { get; set; }
+        public DescribeSensitiveRequestLogResponseBody Body { get; set; }
 
     }
 

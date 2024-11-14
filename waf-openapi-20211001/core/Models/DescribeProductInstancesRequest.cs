@@ -10,64 +10,100 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeProductInstancesRequest : TeaModel {
         /// <summary>
-        /// The ID of the WAF instance.
+        /// <para>The ID of the WAF instance.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to query the ID of the WAF instance.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>waf_v3prepaid_public_cn-zxu****9d02</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the resource belongs.
+        /// <para>The ID of the Alibaba Cloud account to which the resource belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1704********9107</para>
         /// </summary>
         [NameInMap("OwnerUserId")]
         [Validation(Required=false)]
         public string OwnerUserId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: **10**.
+        /// <para>The number of entries per page. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The region in which the WAF instance is deployed. Valid values:
+        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
+        /// </list>
         /// 
-        /// *   **cn-hangzhou**: Chinese mainland.
-        /// *   **ap-southeast-1**: outside the Chinese mainland.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lb-2zeugkfj81jvo****4tqm</para>
         /// </summary>
         [NameInMap("ResourceInstanceId")]
         [Validation(Required=false)]
         public string ResourceInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The IP address of the instance that is added to WAF.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.X.X.1</para>
+        /// </summary>
         [NameInMap("ResourceInstanceIp")]
         [Validation(Required=false)]
         public string ResourceInstanceIp { get; set; }
 
+        /// <summary>
+        /// <para>The name of the instance that is added to WAF.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demoInstanceName</para>
+        /// </summary>
         [NameInMap("ResourceInstanceName")]
         [Validation(Required=false)]
         public string ResourceInstanceName { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// The public IP address of the instance.
+        /// <para>The public IP address of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.X.X.1</para>
         /// </summary>
         [NameInMap("ResourceIp")]
         [Validation(Required=false)]
@@ -75,14 +111,22 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceIp { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud resource group.
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekz6ql****5uzi</para>
         /// </summary>
         [NameInMap("ResourceManagerResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceManagerResourceGroupId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// The name of the instance.
+        /// <para>The name of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>exampleResourceName</para>
         /// </summary>
         [NameInMap("ResourceName")]
         [Validation(Required=false)]
@@ -90,29 +134,37 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// The cloud service to which the instance belongs. Valid values:
+        /// <para>The cloud service to which the instance belongs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>clb4</b>: Layer 4 Classic Load Balancer (CLB).</description></item>
+        /// <item><description><b>clb7</b>: Layer 7 CLB.</description></item>
+        /// <item><description><b>ecs</b>: Elastic Compute Service (ECS).</description></item>
+        /// </list>
         /// 
-        /// *   **clb4**: Layer 4 Classic Load Balancer (CLB).
-        /// *   **clb7**: Layer 7 CLB.
-        /// *   **ecs**: Elastic Compute Service (ECS).
+        /// <b>Example:</b>
+        /// <para>clb7</para>
         /// </summary>
         [NameInMap("ResourceProduct")]
         [Validation(Required=false)]
         public string ResourceProduct { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. Valid values:
+        /// <para>The region ID of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cn-chengdu</b>: China (Chengdu).</description></item>
+        /// <item><description><b>cn-beijing</b>: China (Beijing).</description></item>
+        /// <item><description><b>cn-zhangjiakou</b>: China (Zhangjiakou).</description></item>
+        /// <item><description><b>cn-hangzhou</b>: China (Hangzhou).</description></item>
+        /// <item><description><b>cn-shanghai</b>: China (Shanghai).</description></item>
+        /// <item><description><b>cn-shenzhen</b>: China (Shenzhen).</description></item>
+        /// <item><description><b>cn-qingdao</b>: China (Qingdao).</description></item>
+        /// <item><description><b>cn-hongkong</b>: China (Hong Kong).</description></item>
+        /// <item><description><b>ap-southeast-3</b>: Malaysia (Kuala Lumpur).</description></item>
+        /// <item><description><b>ap-southeast-5</b>: Indonesia (Jakarta).</description></item>
+        /// </list>
         /// 
-        /// *   **cn-chengdu**: China (Chengdu).
-        /// *   **cn-beijing**: China (Beijing).
-        /// *   **cn-zhangjiakou**: China (Zhangjiakou).
-        /// *   **cn-hangzhou**: China (Hangzhou).
-        /// *   **cn-shanghai**: China (Shanghai).
-        /// *   **cn-shenzhen**: China (Shenzhen).
-        /// *   **cn-qingdao**: China (Qingdao).
-        /// *   **cn-hongkong**: China (Hong Kong).
-        /// *   **ap-southeast-3**: Malaysia (Kuala Lumpur).
-        /// *   **ap-southeast-5**: Indonesia (Jakarta).
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("ResourceRegionId")]
         [Validation(Required=false)]
