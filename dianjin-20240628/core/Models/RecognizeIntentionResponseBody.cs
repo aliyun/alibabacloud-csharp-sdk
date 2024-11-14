@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             [Validation(Required=false)]
             public string IntentionName { get; set; }
 
+            [NameInMap("intentionScript")]
+            [Validation(Required=false)]
+            public string IntentionScript { get; set; }
+
             [NameInMap("recommendIntention")]
             [Validation(Required=false)]
             public string RecommendIntention { get; set; }

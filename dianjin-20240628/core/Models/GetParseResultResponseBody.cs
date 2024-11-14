@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             [Validation(Required=false)]
             public Dictionary<string, object> Result { get; set; }
 
+            [NameInMap("resultUrl")]
+            [Validation(Required=false)]
+            public string ResultUrl { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>WaitRefresh</para>

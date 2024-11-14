@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [Validation(Required=false)]
         public string LibraryId { get; set; }
 
+        [NameInMap("useUrlResult")]
+        [Validation(Required=false)]
+        public bool? UseUrlResult { get; set; }
+
     }
 
 }

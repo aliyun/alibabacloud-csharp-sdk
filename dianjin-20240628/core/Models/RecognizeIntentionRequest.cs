@@ -54,6 +54,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             [Validation(Required=false)]
             public string IntentionCode { get; set; }
 
+            [NameInMap("intentionScript")]
+            [Validation(Required=false)]
+            public string IntentionScript { get; set; }
+
         }
 
         [NameInMap("hierarchicalIntentionList")]
@@ -76,7 +80,15 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             [Validation(Required=false)]
             public string IntentionCode { get; set; }
 
+            [NameInMap("intentionScript")]
+            [Validation(Required=false)]
+            public string IntentionScript { get; set; }
+
         }
+
+        [NameInMap("intentionDomainCode")]
+        [Validation(Required=false)]
+        public string IntentionDomainCode { get; set; }
 
         [NameInMap("intentionList")]
         [Validation(Required=false)]
@@ -97,6 +109,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             [NameInMap("intentionCode")]
             [Validation(Required=false)]
             public string IntentionCode { get; set; }
+
+            [NameInMap("intentionScript")]
+            [Validation(Required=false)]
+            public string IntentionScript { get; set; }
 
         }
 

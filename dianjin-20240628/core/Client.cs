@@ -2779,6 +2779,10 @@ namespace AlibabaCloud.SDK.DianJin20240628
             {
                 body["libraryId"] = request.LibraryId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseUrlResult))
+            {
+                body["useUrlResult"] = request.UseUrlResult;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2828,6 +2832,10 @@ namespace AlibabaCloud.SDK.DianJin20240628
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LibraryId))
             {
                 body["libraryId"] = request.LibraryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseUrlResult))
+            {
+                body["useUrlResult"] = request.UseUrlResult;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4131,6 +4139,10 @@ namespace AlibabaCloud.SDK.DianJin20240628
             {
                 body["hierarchicalIntentionList"] = request.HierarchicalIntentionList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntentionDomainCode))
+            {
+                body["intentionDomainCode"] = request.IntentionDomainCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntentionList))
             {
                 body["intentionList"] = request.IntentionList;
@@ -4204,6 +4216,10 @@ namespace AlibabaCloud.SDK.DianJin20240628
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HierarchicalIntentionList))
             {
                 body["hierarchicalIntentionList"] = request.HierarchicalIntentionList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntentionDomainCode))
+            {
+                body["intentionDomainCode"] = request.IntentionDomainCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntentionList))
             {
