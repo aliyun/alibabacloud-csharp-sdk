@@ -2053,6 +2053,150 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await DescribeDeviceInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>金融级人脸保镖服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFaceGuardRiskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFaceGuardRiskResponse
+        /// </returns>
+        public DescribeFaceGuardRiskResponse DescribeFaceGuardRiskWithOptions(DescribeFaceGuardRiskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceToken))
+            {
+                query["DeviceToken"] = request.DeviceToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterOrderNo))
+            {
+                query["OuterOrderNo"] = request.OuterOrderNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFaceGuardRisk",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFaceGuardRiskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>金融级人脸保镖服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFaceGuardRiskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFaceGuardRiskResponse
+        /// </returns>
+        public async Task<DescribeFaceGuardRiskResponse> DescribeFaceGuardRiskWithOptionsAsync(DescribeFaceGuardRiskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceToken))
+            {
+                query["DeviceToken"] = request.DeviceToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterOrderNo))
+            {
+                query["OuterOrderNo"] = request.OuterOrderNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFaceGuardRisk",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFaceGuardRiskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>金融级人脸保镖服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFaceGuardRiskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFaceGuardRiskResponse
+        /// </returns>
+        public DescribeFaceGuardRiskResponse DescribeFaceGuardRisk(DescribeFaceGuardRiskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeFaceGuardRiskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>金融级人脸保镖服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFaceGuardRiskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFaceGuardRiskResponse
+        /// </returns>
+        public async Task<DescribeFaceGuardRiskResponse> DescribeFaceGuardRiskAsync(DescribeFaceGuardRiskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeFaceGuardRiskWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// DescribeFaceVerifyRequest
         /// </param>
