@@ -31484,7 +31484,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DataWorks计量数据</para>
+        /// <para>Queries the statistics on the number of phone call-based alerts or text message-based alerts reported within the tenant to which your account belongs during the previous 30 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31538,7 +31538,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DataWorks计量数据</para>
+        /// <para>Queries the statistics on the number of phone call-based alerts or text message-based alerts reported within the tenant to which your account belongs during the previous 30 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31592,7 +31592,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DataWorks计量数据</para>
+        /// <para>Queries the statistics on the number of phone call-based alerts or text message-based alerts reported within the tenant to which your account belongs during the previous 30 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31610,7 +31610,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DataWorks计量数据</para>
+        /// <para>Queries the statistics on the number of phone call-based alerts or text message-based alerts reported within the tenant to which your account belongs during the previous 30 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
