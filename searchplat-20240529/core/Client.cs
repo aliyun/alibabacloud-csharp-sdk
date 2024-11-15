@@ -24,14 +24,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
         }
 
 
-        /**
-         * @summary 创建文档解析异步提取任务
-         *
-         * @param request CreateDocumentAnalyzeTaskRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDocumentAnalyzeTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建文档解析异步提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDocumentAnalyzeTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDocumentAnalyzeTaskResponse
+        /// </returns>
         public CreateDocumentAnalyzeTaskResponse CreateDocumentAnalyzeTaskWithOptions(string workspaceName, string serviceId, CreateDocumentAnalyzeTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -64,14 +74,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<CreateDocumentAnalyzeTaskResponse>(Execute(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建文档解析异步提取任务
-         *
-         * @param request CreateDocumentAnalyzeTaskRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDocumentAnalyzeTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建文档解析异步提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDocumentAnalyzeTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDocumentAnalyzeTaskResponse
+        /// </returns>
         public async Task<CreateDocumentAnalyzeTaskResponse> CreateDocumentAnalyzeTaskWithOptionsAsync(string workspaceName, string serviceId, CreateDocumentAnalyzeTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -104,12 +124,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<CreateDocumentAnalyzeTaskResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建文档解析异步提取任务
-         *
-         * @param request CreateDocumentAnalyzeTaskRequest
-         * @return CreateDocumentAnalyzeTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建文档解析异步提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDocumentAnalyzeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDocumentAnalyzeTaskResponse
+        /// </returns>
         public CreateDocumentAnalyzeTaskResponse CreateDocumentAnalyzeTask(string workspaceName, string serviceId, CreateDocumentAnalyzeTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -117,12 +143,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return CreateDocumentAnalyzeTaskWithOptions(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 创建文档解析异步提取任务
-         *
-         * @param request CreateDocumentAnalyzeTaskRequest
-         * @return CreateDocumentAnalyzeTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建文档解析异步提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDocumentAnalyzeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDocumentAnalyzeTaskResponse
+        /// </returns>
         public async Task<CreateDocumentAnalyzeTaskResponse> CreateDocumentAnalyzeTaskAsync(string workspaceName, string serviceId, CreateDocumentAnalyzeTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -130,14 +162,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return await CreateDocumentAnalyzeTaskWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 创建图片解析异步提取任务
-         *
-         * @param request CreateImageAnalyzeTaskRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateImageAnalyzeTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建图片解析异步提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateImageAnalyzeTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageAnalyzeTaskResponse
+        /// </returns>
         public CreateImageAnalyzeTaskResponse CreateImageAnalyzeTaskWithOptions(string workspaceName, string serviceId, CreateImageAnalyzeTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -166,14 +208,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<CreateImageAnalyzeTaskResponse>(Execute(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建图片解析异步提取任务
-         *
-         * @param request CreateImageAnalyzeTaskRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateImageAnalyzeTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建图片解析异步提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateImageAnalyzeTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageAnalyzeTaskResponse
+        /// </returns>
         public async Task<CreateImageAnalyzeTaskResponse> CreateImageAnalyzeTaskWithOptionsAsync(string workspaceName, string serviceId, CreateImageAnalyzeTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -202,12 +254,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<CreateImageAnalyzeTaskResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建图片解析异步提取任务
-         *
-         * @param request CreateImageAnalyzeTaskRequest
-         * @return CreateImageAnalyzeTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建图片解析异步提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateImageAnalyzeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageAnalyzeTaskResponse
+        /// </returns>
         public CreateImageAnalyzeTaskResponse CreateImageAnalyzeTask(string workspaceName, string serviceId, CreateImageAnalyzeTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -215,12 +273,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return CreateImageAnalyzeTaskWithOptions(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 创建图片解析异步提取任务
-         *
-         * @param request CreateImageAnalyzeTaskRequest
-         * @return CreateImageAnalyzeTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建图片解析异步提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateImageAnalyzeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageAnalyzeTaskResponse
+        /// </returns>
         public async Task<CreateImageAnalyzeTaskResponse> CreateImageAnalyzeTaskAsync(string workspaceName, string serviceId, CreateImageAnalyzeTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -228,14 +292,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return await CreateImageAnalyzeTaskWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取文档解析异步提取任务状态
-         *
-         * @param request GetDocumentAnalyzeTaskStatusRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocumentAnalyzeTaskStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档解析异步提取任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentAnalyzeTaskStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentAnalyzeTaskStatusResponse
+        /// </returns>
         public GetDocumentAnalyzeTaskStatusResponse GetDocumentAnalyzeTaskStatusWithOptions(string workspaceName, string serviceId, GetDocumentAnalyzeTaskStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -264,14 +338,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<GetDocumentAnalyzeTaskStatusResponse>(Execute(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取文档解析异步提取任务状态
-         *
-         * @param request GetDocumentAnalyzeTaskStatusRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocumentAnalyzeTaskStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档解析异步提取任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentAnalyzeTaskStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentAnalyzeTaskStatusResponse
+        /// </returns>
         public async Task<GetDocumentAnalyzeTaskStatusResponse> GetDocumentAnalyzeTaskStatusWithOptionsAsync(string workspaceName, string serviceId, GetDocumentAnalyzeTaskStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -300,12 +384,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<GetDocumentAnalyzeTaskStatusResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取文档解析异步提取任务状态
-         *
-         * @param request GetDocumentAnalyzeTaskStatusRequest
-         * @return GetDocumentAnalyzeTaskStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档解析异步提取任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentAnalyzeTaskStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentAnalyzeTaskStatusResponse
+        /// </returns>
         public GetDocumentAnalyzeTaskStatusResponse GetDocumentAnalyzeTaskStatus(string workspaceName, string serviceId, GetDocumentAnalyzeTaskStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -313,12 +403,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return GetDocumentAnalyzeTaskStatusWithOptions(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取文档解析异步提取任务状态
-         *
-         * @param request GetDocumentAnalyzeTaskStatusRequest
-         * @return GetDocumentAnalyzeTaskStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档解析异步提取任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentAnalyzeTaskStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentAnalyzeTaskStatusResponse
+        /// </returns>
         public async Task<GetDocumentAnalyzeTaskStatusResponse> GetDocumentAnalyzeTaskStatusAsync(string workspaceName, string serviceId, GetDocumentAnalyzeTaskStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -326,14 +422,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return await GetDocumentAnalyzeTaskStatusWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 文档相关性打分
-         *
-         * @param request GetDocumentRankRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocumentRankResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档相关性打分</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentRankRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentRankResponse
+        /// </returns>
         public GetDocumentRankResponse GetDocumentRankWithOptions(string workspaceName, string serviceId, GetDocumentRankRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -366,14 +472,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<GetDocumentRankResponse>(Execute(params_, req, runtime));
         }
 
-        /**
-         * @summary 文档相关性打分
-         *
-         * @param request GetDocumentRankRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocumentRankResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档相关性打分</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentRankRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentRankResponse
+        /// </returns>
         public async Task<GetDocumentRankResponse> GetDocumentRankWithOptionsAsync(string workspaceName, string serviceId, GetDocumentRankRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -406,12 +522,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<GetDocumentRankResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 文档相关性打分
-         *
-         * @param request GetDocumentRankRequest
-         * @return GetDocumentRankResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档相关性打分</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentRankRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentRankResponse
+        /// </returns>
         public GetDocumentRankResponse GetDocumentRank(string workspaceName, string serviceId, GetDocumentRankRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -419,12 +541,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return GetDocumentRankWithOptions(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 文档相关性打分
-         *
-         * @param request GetDocumentRankRequest
-         * @return GetDocumentRankResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档相关性打分</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentRankRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentRankResponse
+        /// </returns>
         public async Task<GetDocumentRankResponse> GetDocumentRankAsync(string workspaceName, string serviceId, GetDocumentRankRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -432,14 +560,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return await GetDocumentRankWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 文档切片
-         *
-         * @param request GetDocumentSplitRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocumentSplitResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档切片</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentSplitRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentSplitResponse
+        /// </returns>
         public GetDocumentSplitResponse GetDocumentSplitWithOptions(string workspaceName, string serviceId, GetDocumentSplitRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -472,14 +610,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<GetDocumentSplitResponse>(Execute(params_, req, runtime));
         }
 
-        /**
-         * @summary 文档切片
-         *
-         * @param request GetDocumentSplitRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocumentSplitResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档切片</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentSplitRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentSplitResponse
+        /// </returns>
         public async Task<GetDocumentSplitResponse> GetDocumentSplitWithOptionsAsync(string workspaceName, string serviceId, GetDocumentSplitRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -512,12 +660,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<GetDocumentSplitResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 文档切片
-         *
-         * @param request GetDocumentSplitRequest
-         * @return GetDocumentSplitResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档切片</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentSplitRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentSplitResponse
+        /// </returns>
         public GetDocumentSplitResponse GetDocumentSplit(string workspaceName, string serviceId, GetDocumentSplitRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -525,12 +679,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return GetDocumentSplitWithOptions(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 文档切片
-         *
-         * @param request GetDocumentSplitRequest
-         * @return GetDocumentSplitResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档切片</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocumentSplitRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocumentSplitResponse
+        /// </returns>
         public async Task<GetDocumentSplitResponse> GetDocumentSplitAsync(string workspaceName, string serviceId, GetDocumentSplitRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -538,14 +698,162 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return await GetDocumentSplitWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取图片解析异步提取任务状态
-         *
-         * @param request GetImageAnalyzeTaskStatusRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetImageAnalyzeTaskStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>向量微调</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmbeddingTuningRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmbeddingTuningResponse
+        /// </returns>
+        public GetEmbeddingTuningResponse GetEmbeddingTuningWithOptions(string workspaceName, string serviceId, GetEmbeddingTuningRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                body["input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                body["parameters"] = request.Parameters;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEmbeddingTuning",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/embedding-tuning/" + serviceId,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEmbeddingTuningResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>向量微调</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmbeddingTuningRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmbeddingTuningResponse
+        /// </returns>
+        public async Task<GetEmbeddingTuningResponse> GetEmbeddingTuningWithOptionsAsync(string workspaceName, string serviceId, GetEmbeddingTuningRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                body["input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                body["parameters"] = request.Parameters;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEmbeddingTuning",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/embedding-tuning/" + serviceId,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEmbeddingTuningResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>向量微调</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmbeddingTuningRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmbeddingTuningResponse
+        /// </returns>
+        public GetEmbeddingTuningResponse GetEmbeddingTuning(string workspaceName, string serviceId, GetEmbeddingTuningRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetEmbeddingTuningWithOptions(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>向量微调</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmbeddingTuningRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmbeddingTuningResponse
+        /// </returns>
+        public async Task<GetEmbeddingTuningResponse> GetEmbeddingTuningAsync(string workspaceName, string serviceId, GetEmbeddingTuningRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetEmbeddingTuningWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取图片解析异步提取任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetImageAnalyzeTaskStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageAnalyzeTaskStatusResponse
+        /// </returns>
         public GetImageAnalyzeTaskStatusResponse GetImageAnalyzeTaskStatusWithOptions(string workspaceName, string serviceId, GetImageAnalyzeTaskStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -574,14 +882,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<GetImageAnalyzeTaskStatusResponse>(Execute(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取图片解析异步提取任务状态
-         *
-         * @param request GetImageAnalyzeTaskStatusRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetImageAnalyzeTaskStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取图片解析异步提取任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetImageAnalyzeTaskStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageAnalyzeTaskStatusResponse
+        /// </returns>
         public async Task<GetImageAnalyzeTaskStatusResponse> GetImageAnalyzeTaskStatusWithOptionsAsync(string workspaceName, string serviceId, GetImageAnalyzeTaskStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -610,12 +928,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<GetImageAnalyzeTaskStatusResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取图片解析异步提取任务状态
-         *
-         * @param request GetImageAnalyzeTaskStatusRequest
-         * @return GetImageAnalyzeTaskStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取图片解析异步提取任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetImageAnalyzeTaskStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageAnalyzeTaskStatusResponse
+        /// </returns>
         public GetImageAnalyzeTaskStatusResponse GetImageAnalyzeTaskStatus(string workspaceName, string serviceId, GetImageAnalyzeTaskStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -623,12 +947,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return GetImageAnalyzeTaskStatusWithOptions(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取图片解析异步提取任务状态
-         *
-         * @param request GetImageAnalyzeTaskStatusRequest
-         * @return GetImageAnalyzeTaskStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取图片解析异步提取任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetImageAnalyzeTaskStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageAnalyzeTaskStatusResponse
+        /// </returns>
         public async Task<GetImageAnalyzeTaskStatusResponse> GetImageAnalyzeTaskStatusAsync(string workspaceName, string serviceId, GetImageAnalyzeTaskStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -636,14 +966,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return await GetImageAnalyzeTaskStatusWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取query分析结果
-         *
-         * @param request GetQueryAnalysisRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetQueryAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取query分析结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQueryAnalysisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQueryAnalysisResponse
+        /// </returns>
         public GetQueryAnalysisResponse GetQueryAnalysisWithOptions(string workspaceName, string serviceId, GetQueryAnalysisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -680,14 +1020,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<GetQueryAnalysisResponse>(Execute(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取query分析结果
-         *
-         * @param request GetQueryAnalysisRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetQueryAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取query分析结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQueryAnalysisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQueryAnalysisResponse
+        /// </returns>
         public async Task<GetQueryAnalysisResponse> GetQueryAnalysisWithOptionsAsync(string workspaceName, string serviceId, GetQueryAnalysisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -724,12 +1074,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<GetQueryAnalysisResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取query分析结果
-         *
-         * @param request GetQueryAnalysisRequest
-         * @return GetQueryAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取query分析结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQueryAnalysisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQueryAnalysisResponse
+        /// </returns>
         public GetQueryAnalysisResponse GetQueryAnalysis(string workspaceName, string serviceId, GetQueryAnalysisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -737,12 +1093,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return GetQueryAnalysisWithOptions(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取query分析结果
-         *
-         * @param request GetQueryAnalysisRequest
-         * @return GetQueryAnalysisResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取query分析结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQueryAnalysisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQueryAnalysisResponse
+        /// </returns>
         public async Task<GetQueryAnalysisResponse> GetQueryAnalysisAsync(string workspaceName, string serviceId, GetQueryAnalysisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -750,14 +1112,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return await GetQueryAnalysisWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 文本向量化
-         *
-         * @param request GetTextEmbeddingRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTextEmbeddingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文本向量化</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTextEmbeddingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTextEmbeddingResponse
+        /// </returns>
         public GetTextEmbeddingResponse GetTextEmbeddingWithOptions(string workspaceName, string serviceId, GetTextEmbeddingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -790,14 +1162,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<GetTextEmbeddingResponse>(Execute(params_, req, runtime));
         }
 
-        /**
-         * @summary 文本向量化
-         *
-         * @param request GetTextEmbeddingRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTextEmbeddingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文本向量化</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTextEmbeddingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTextEmbeddingResponse
+        /// </returns>
         public async Task<GetTextEmbeddingResponse> GetTextEmbeddingWithOptionsAsync(string workspaceName, string serviceId, GetTextEmbeddingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -830,12 +1212,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<GetTextEmbeddingResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 文本向量化
-         *
-         * @param request GetTextEmbeddingRequest
-         * @return GetTextEmbeddingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文本向量化</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTextEmbeddingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTextEmbeddingResponse
+        /// </returns>
         public GetTextEmbeddingResponse GetTextEmbedding(string workspaceName, string serviceId, GetTextEmbeddingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -843,12 +1231,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return GetTextEmbeddingWithOptions(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 文本向量化
-         *
-         * @param request GetTextEmbeddingRequest
-         * @return GetTextEmbeddingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文本向量化</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTextEmbeddingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTextEmbeddingResponse
+        /// </returns>
         public async Task<GetTextEmbeddingResponse> GetTextEmbeddingAsync(string workspaceName, string serviceId, GetTextEmbeddingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -856,14 +1250,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return await GetTextEmbeddingWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 大模型问答
-         *
-         * @param request GetTextGenerationRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTextGenerationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>大模型问答</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTextGenerationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTextGenerationResponse
+        /// </returns>
         public GetTextGenerationResponse GetTextGenerationWithOptions(string workspaceName, string serviceId, GetTextGenerationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -904,14 +1308,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<GetTextGenerationResponse>(Execute(params_, req, runtime));
         }
 
-        /**
-         * @summary 大模型问答
-         *
-         * @param request GetTextGenerationRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTextGenerationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>大模型问答</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTextGenerationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTextGenerationResponse
+        /// </returns>
         public async Task<GetTextGenerationResponse> GetTextGenerationWithOptionsAsync(string workspaceName, string serviceId, GetTextGenerationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -952,12 +1366,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<GetTextGenerationResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 大模型问答
-         *
-         * @param request GetTextGenerationRequest
-         * @return GetTextGenerationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>大模型问答</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTextGenerationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTextGenerationResponse
+        /// </returns>
         public GetTextGenerationResponse GetTextGeneration(string workspaceName, string serviceId, GetTextGenerationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -965,12 +1385,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return GetTextGenerationWithOptions(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 大模型问答
-         *
-         * @param request GetTextGenerationRequest
-         * @return GetTextGenerationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>大模型问答</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTextGenerationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTextGenerationResponse
+        /// </returns>
         public async Task<GetTextGenerationResponse> GetTextGenerationAsync(string workspaceName, string serviceId, GetTextGenerationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -978,14 +1404,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return await GetTextGenerationWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 文本稀疏向量化
-         *
-         * @param request GetTextSparseEmbeddingRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTextSparseEmbeddingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文本稀疏向量化</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTextSparseEmbeddingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTextSparseEmbeddingResponse
+        /// </returns>
         public GetTextSparseEmbeddingResponse GetTextSparseEmbeddingWithOptions(string workspaceName, string serviceId, GetTextSparseEmbeddingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1022,14 +1458,24 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<GetTextSparseEmbeddingResponse>(Execute(params_, req, runtime));
         }
 
-        /**
-         * @summary 文本稀疏向量化
-         *
-         * @param request GetTextSparseEmbeddingRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTextSparseEmbeddingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文本稀疏向量化</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTextSparseEmbeddingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTextSparseEmbeddingResponse
+        /// </returns>
         public async Task<GetTextSparseEmbeddingResponse> GetTextSparseEmbeddingWithOptionsAsync(string workspaceName, string serviceId, GetTextSparseEmbeddingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1066,12 +1512,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return TeaModel.ToObject<GetTextSparseEmbeddingResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 文本稀疏向量化
-         *
-         * @param request GetTextSparseEmbeddingRequest
-         * @return GetTextSparseEmbeddingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文本稀疏向量化</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTextSparseEmbeddingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTextSparseEmbeddingResponse
+        /// </returns>
         public GetTextSparseEmbeddingResponse GetTextSparseEmbedding(string workspaceName, string serviceId, GetTextSparseEmbeddingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1079,12 +1531,18 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             return GetTextSparseEmbeddingWithOptions(workspaceName, serviceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 文本稀疏向量化
-         *
-         * @param request GetTextSparseEmbeddingRequest
-         * @return GetTextSparseEmbeddingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文本稀疏向量化</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTextSparseEmbeddingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTextSparseEmbeddingResponse
+        /// </returns>
         public async Task<GetTextSparseEmbeddingResponse> GetTextSparseEmbeddingAsync(string workspaceName, string serviceId, GetTextSparseEmbeddingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Searchplat20240529.Models
         public string CsiLevel { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("messages")]
         [Validation(Required=false)]

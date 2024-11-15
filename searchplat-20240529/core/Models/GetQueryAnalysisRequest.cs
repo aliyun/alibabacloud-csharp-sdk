@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Searchplat20240529.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]

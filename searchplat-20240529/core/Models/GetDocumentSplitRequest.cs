@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchplat20240529.Models
 {
     public class GetDocumentSplitRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("document")]
         [Validation(Required=false)]

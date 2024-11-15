@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Searchplat20240529.Models
 {
     public class GetDocumentRankRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("docs")]
         [Validation(Required=false)]
         public List<string> Docs { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]
