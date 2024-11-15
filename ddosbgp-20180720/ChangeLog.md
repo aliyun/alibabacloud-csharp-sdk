@@ -1,3 +1,6 @@
+2024-11-15 Version: 2.7.6
+- Generated csharp 2018-07-20 for ddosbgp.
+
 2024-11-15 Version: 2.7.5
 - Update API DescribeInstanceList: update response param.
 - Update API DescribeOpEntities: add param OpAction.
