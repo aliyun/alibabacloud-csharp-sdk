@@ -1,3 +1,10 @@
+2024-11-15 Version: 6.2.0
+- Support API CreateHaVip.
+- Support API DeleteHaVips.
+- Support API DescribeEnsRouteTables.
+- Update API PreloadRegionSDG: update param RedundantNum.
+
+
 2024-11-05 Version: 6.1.1
 - Update API CreateARMServerInstances: add param EnvironmentVar.
 - Update API CreateEnsRouteEntry: update param NextHopType.
