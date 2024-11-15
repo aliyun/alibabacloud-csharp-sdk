@@ -1,3 +1,6 @@
+2024-11-15 Version: 1.0.13
+- Generated csharp 2022-02-25 for umeng-push.
+
 2024-11-13 Version: 1.0.12
 - Generated csharp 2022-02-25 for umeng-push.
 

@@ -59,6 +59,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("useHuaweiPlainMessage")]
+        [Validation(Required=false)]
+        public string UseHuaweiPlainMessage { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>&quot;true&quot;,默认&quot;false&quot;</para>
         /// </summary>
         [NameInMap("vivoAddBadge")]
