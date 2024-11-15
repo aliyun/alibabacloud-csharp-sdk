@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterMigrationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The network type of the endpoint. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Public</b>: the public endpoint</description></item>
+        /// <item><description><b>Private</b>: the internal endpoint (VPC)</description></item>
+        /// <item><description><b>Inner</b>: the internal endpoint (classic network)</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

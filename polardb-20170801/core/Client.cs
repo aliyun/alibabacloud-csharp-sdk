@@ -1466,7 +1466,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成轻量化版本激活码</para>
+        /// <para>Generates a lightweight license activation code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1540,7 +1540,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成轻量化版本激活码</para>
+        /// <para>Generates a lightweight license activation code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1614,7 +1614,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成轻量化版本激活码</para>
+        /// <para>Generates a lightweight license activation code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1632,7 +1632,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成轻量化版本激活码</para>
+        /// <para>Generates a lightweight license activation code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2063,6 +2063,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["BackupRetentionPolicyOnClusterDeletion"] = request.BackupRetentionPolicyOnClusterDeletion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BurstingEnabled))
+            {
+                query["BurstingEnabled"] = request.BurstingEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -2316,6 +2320,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupRetentionPolicyOnClusterDeletion))
             {
                 query["BackupRetentionPolicyOnClusterDeletion"] = request.BackupRetentionPolicyOnClusterDeletion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BurstingEnabled))
+            {
+                query["BurstingEnabled"] = request.BurstingEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -4186,7 +4194,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或获取虚拟证书订单</para>
+        /// <para>Creates or obtains a virtual license order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4244,7 +4252,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或获取虚拟证书订单</para>
+        /// <para>Creates or obtains a virtual license order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4302,7 +4310,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或获取虚拟证书订单</para>
+        /// <para>Creates or obtains a virtual license order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4320,7 +4328,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或获取虚拟证书订单</para>
+        /// <para>Creates or obtains a virtual license order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7526,7 +7534,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询激活码列表</para>
+        /// <para>Queries a list of activation codes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7592,7 +7600,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询激活码列表</para>
+        /// <para>Queries a list of activation codes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7658,7 +7666,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询激活码列表</para>
+        /// <para>Queries a list of activation codes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7676,7 +7684,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询激活码列表</para>
+        /// <para>Queries a list of activation codes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9950,15 +9958,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the migration status of PolarDB clusters.</para>
+        /// <para>The ID of the synchronous task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to query the status of data migration from an ApsaraDB RDS instance to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Upgrade ApsaraDB RDS for MySQL to PolarDB for MySQL with one click</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that a one-click upgrade task has been created for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create an upgrade task. Set the <b>CreationOption</b> parameter to <b>MigrationFromRDS</b>.</description></item>
-        /// </list>
+        /// <para>The ID of the request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10016,15 +10021,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the migration status of PolarDB clusters.</para>
+        /// <para>The ID of the synchronous task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to query the status of data migration from an ApsaraDB RDS instance to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Upgrade ApsaraDB RDS for MySQL to PolarDB for MySQL with one click</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that a one-click upgrade task has been created for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create an upgrade task. Set the <b>CreationOption</b> parameter to <b>MigrationFromRDS</b>.</description></item>
-        /// </list>
+        /// <para>The ID of the request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10082,15 +10084,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the migration status of PolarDB clusters.</para>
+        /// <para>The ID of the synchronous task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to query the status of data migration from an ApsaraDB RDS instance to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Upgrade ApsaraDB RDS for MySQL to PolarDB for MySQL with one click</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that a one-click upgrade task has been created for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create an upgrade task. Set the <b>CreationOption</b> parameter to <b>MigrationFromRDS</b>.</description></item>
-        /// </list>
+        /// <para>The ID of the request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10108,15 +10107,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the migration status of PolarDB clusters.</para>
+        /// <para>The ID of the synchronous task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to query the status of data migration from an ApsaraDB RDS instance to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Upgrade ApsaraDB RDS for MySQL to PolarDB for MySQL with one click</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that a one-click upgrade task has been created for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create an upgrade task. Set the <b>CreationOption</b> parameter to <b>MigrationFromRDS</b>.</description></item>
-        /// </list>
+        /// <para>The ID of the request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14222,7 +14218,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询License订单列表</para>
+        /// <para>Queries a list of license orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14300,7 +14296,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询License订单列表</para>
+        /// <para>Queries a list of license orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14378,7 +14374,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询License订单列表</para>
+        /// <para>Queries a list of license orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14396,7 +14392,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询License订单列表</para>
+        /// <para>Queries a list of license orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27594,7 +27590,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Temporarily changes the node configurations of a cluster.</para>
+        /// <para>Temporarily changes the node configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27672,7 +27668,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Temporarily changes the node configurations of a cluster.</para>
+        /// <para>Temporarily changes the node configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27750,7 +27746,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Temporarily changes the node configurations of a cluster.</para>
+        /// <para>Temporarily changes the node configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27768,7 +27764,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Temporarily changes the node configurations of a cluster.</para>
+        /// <para>Temporarily changes the node configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">

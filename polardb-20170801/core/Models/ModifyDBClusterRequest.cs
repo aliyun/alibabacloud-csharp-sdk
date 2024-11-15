@@ -95,6 +95,24 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string FaultSimulateMode { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable automatic IMCI-based query acceleration. IMCI is short for In-Memory Column Index. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>ON</c>: enables automatic IMCI-based query acceleration.</description></item>
+        /// <item><description><c>OFF</c>: disables automatic IMCI-based query acceleration.</description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter is supported only for PolarDB for MySQL clusters.</para>
+        /// </description></item>
+        /// <item><description><para>For information about the cluster version limits, see <a href="https://help.aliyun.com/document_detail/2854119.html">Automatic IMCI-based query acceleration</a>.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OFF</para>
+        /// </summary>
         [NameInMap("ImciAutoIndex")]
         [Validation(Required=false)]
         public string ImciAutoIndex { get; set; }

@@ -239,6 +239,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("TotalLevel2BackupSize")]
+        [Validation(Required=false)]
+        public string TotalLevel2BackupSize { get; set; }
+
         /// <summary>
         /// <para>The total number of returned entries.</para>
         /// 

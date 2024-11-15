@@ -155,6 +155,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <item><description><b>0 or unspecified</b>: does not grant required permissions.</description></item>
         /// <item><description><b>1</b>: grants required permissions.</description></item>
         /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>The parameter is valid only after you configure the <c>AccountPrivilege</c> parameter.</para>
+        /// </description></item>
+        /// <item><description><para>If you set the parameter to <c>1</c>, the current account is granted to the required permissions on all databases in the current cluster that are specified by the <c>AccountPrivilege</c> parameter.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

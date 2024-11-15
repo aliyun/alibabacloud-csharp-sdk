@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAITaskStatusResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The name of the database account that is used to connect to the AI nodes in the cluster.</para>
+        /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
@@ -34,10 +37,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The state of the PolarDB for AI feature. Valid values:</para>
+        /// <para>The status of the PolarDB for AI feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: The feature is enabled.</description></item>
-        /// <item><description><b>2</b>: The feature is disabled.</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
+        /// <item><description><b>2</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The state description of the PolarDB for AI feature.</para>
+        /// <para>The description of the status of the PolarDB for AI feature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Closed State</para>

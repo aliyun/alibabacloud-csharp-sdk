@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateOrGetVirtualLicenseOrderRequest : TeaModel {
         /// <summary>
+        /// <para>The type of the engine. Valid values: PG, Oracle, and MySQL.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

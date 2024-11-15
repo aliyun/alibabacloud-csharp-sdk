@@ -64,11 +64,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The earliest start time to run the task that updates the kernel version of the cluster. Specify the time in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is <c>2021-01-14T09:00:00Z</c>, you can specify a point in time between <c>2021-01-14T09:00:00Z</c> and <c>2021-01-15T09:00:00Z</c>.</description></item>
-        /// <item><description>If you do not specify this parameter, the kernel update task runs immediately after you submit the request.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>The earliest start time of the task can be a point in time within the next 72 hours. For example, if the current time is <c>2021-01-14T09:00:00Z</c>, you can specify a point in time from <c>2021-01-14T09:00:00Z</c> to <c>2021-01-17T09:00:00Z</c>.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not specify this parameter, the kernel update task runs immediately after you submit the request.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-14T09:00:00Z</para>

@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string Cpu { get; set; }
 
+            [NameInMap("EssdMaxStorageCapacity")]
+            [Validation(Required=false)]
+            public string EssdMaxStorageCapacity { get; set; }
+
             /// <summary>
             /// <para>The maximum number of concurrent connections in the cluster.</para>
             /// 
@@ -131,6 +135,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("Pl3MaxIOPS")]
             [Validation(Required=false)]
             public string Pl3MaxIOPS { get; set; }
+
+            [NameInMap("PolarStoreMaxStorageCapacity")]
+            [Validation(Required=false)]
+            public string PolarStoreMaxStorageCapacity { get; set; }
 
             /// <summary>
             /// <para>The maximum Input/output operations per second (IOPS) for PolarStore Level 4 (PSL4). Unit: operations per second.</para>

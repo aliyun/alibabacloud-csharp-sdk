@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster link type. The backend randomly selects the default value. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>lvs</b> :Linux virtual server</description></item>
-        /// <item><description><b>proxy</b>: proxy server</description></item>
-        /// <item><description><b>dns</b>: domain name system</description></item>
+        /// <item><description><b>lvs</b>: Linux virtual server.</description></item>
+        /// <item><description><b>proxy</b>: proxy server.</description></item>
+        /// <item><description><b>dns</b>: domain name system.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,9 +99,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DispenseMode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether Maxscale is created. Default value: true. Valid values:</para>
+        /// <para>Specifies whether to create Maxscale. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>true</b> (default)</description></item>
         /// <item><description><b>false</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>

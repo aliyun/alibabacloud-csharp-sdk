@@ -31,10 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBEndpointId { get; set; }
 
         /// <summary>
-        /// <para>Database instance node ID.</para>
-        /// <remarks>
-        /// <para>It is used to query the metrics of Proxy on different DB nodes, supporting metrics such as PolarProxy_DBConns, PolarProxy_DBQps, and PolarProxy_DBActionOps.</para>
-        /// </remarks>
+        /// <para>The ID of the node in the cluster. This parameter can be used to query the performance metrics of PolarProxy on different nodes. The following metrics are supported: PolarProxy_DBConns, PolarProxy_DBQps, and PolarProxy_DBActionOps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pi-******************</para>

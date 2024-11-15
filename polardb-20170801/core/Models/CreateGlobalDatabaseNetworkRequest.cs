@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to create a global domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("EnableGlobalDomainName")]
         [Validation(Required=false)]
         public bool? EnableGlobalDomainName { get; set; }

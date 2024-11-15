@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? BlktagUsed { get; set; }
 
+        [NameInMap("BurstingEnabled")]
+        [Validation(Required=false)]
+        public string BurstingEnabled { get; set; }
+
         /// <summary>
         /// <para><a href="https://help.aliyun.com/document_detail/183258.html">Product Series</a>, with values as follows:</para>
         /// <list type="bullet">
@@ -214,6 +218,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("DBNodeClass")]
             [Validation(Required=false)]
             public string DBNodeClass { get; set; }
+
+            [NameInMap("DBNodeDescription")]
+            [Validation(Required=false)]
+            public string DBNodeDescription { get; set; }
 
             /// <summary>
             /// <para>Node ID.</para>
