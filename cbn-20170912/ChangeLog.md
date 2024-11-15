@@ -1,3 +1,16 @@
+2024-11-15 Version: 1.2.2
+- Update API ActiveFlowLog: update param CenId.
+- Update API CreateFlowlog: add param LogFormatString.
+- Update API CreateFlowlog: add param TransitRouterId.
+- Update API DeactiveFlowLog: update param CenId.
+- Update API DeleteFlowlog: update param CenId.
+- Update API DescribeFlowlogs: add param FlowLogVersion.
+- Update API DescribeFlowlogs: add param Interval.
+- Update API DescribeFlowlogs: add param TransitRouterId.
+- Update API ModifyFlowLogAttribute: add param Interval.
+- Update API ModifyFlowLogAttribute: update param CenId.
+
+
 2024-10-25 Version: 1.2.1
 - Update API CreateTransitRouterVpnAttachment: update param Zone.
 - Update API DescribeCenChildInstanceRouteEntries: update response param.

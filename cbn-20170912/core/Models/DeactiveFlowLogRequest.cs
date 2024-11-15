@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DeactiveFlowLogRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the CEN instance.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-7qthudw0ll6jmc****</para>

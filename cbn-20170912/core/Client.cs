@@ -3710,6 +3710,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["Interval"] = request.Interval;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogFormatString))
+            {
+                query["LogFormatString"] = request.LogFormatString;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogStoreName))
             {
                 query["LogStoreName"] = request.LogStoreName;
@@ -3745,6 +3749,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentId))
             {
                 query["TransitRouterAttachmentId"] = request.TransitRouterAttachmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterId))
+            {
+                query["TransitRouterId"] = request.TransitRouterId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3822,6 +3830,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["Interval"] = request.Interval;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogFormatString))
+            {
+                query["LogFormatString"] = request.LogFormatString;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogStoreName))
             {
                 query["LogStoreName"] = request.LogStoreName;
@@ -3857,6 +3869,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentId))
             {
                 query["TransitRouterAttachmentId"] = request.TransitRouterAttachmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterId))
+            {
+                query["TransitRouterId"] = request.TransitRouterId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -15640,6 +15656,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["FlowLogName"] = request.FlowLogName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowLogVersion))
+            {
+                query["FlowLogVersion"] = request.FlowLogVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogStoreName))
             {
                 query["LogStoreName"] = request.LogStoreName;
@@ -15687,6 +15711,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentId))
             {
                 query["TransitRouterAttachmentId"] = request.TransitRouterAttachmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterId))
+            {
+                query["TransitRouterId"] = request.TransitRouterId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -15746,6 +15774,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["FlowLogName"] = request.FlowLogName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowLogVersion))
+            {
+                query["FlowLogVersion"] = request.FlowLogVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogStoreName))
             {
                 query["LogStoreName"] = request.LogStoreName;
@@ -15793,6 +15829,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentId))
             {
                 query["TransitRouterAttachmentId"] = request.TransitRouterAttachmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterId))
+            {
+                query["TransitRouterId"] = request.TransitRouterId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -26113,6 +26153,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["FlowLogName"] = request.FlowLogName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -26199,6 +26243,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowLogName))
             {
                 query["FlowLogName"] = request.FlowLogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {

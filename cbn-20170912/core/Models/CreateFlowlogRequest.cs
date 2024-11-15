@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? Interval { get; set; }
 
+        [NameInMap("LogFormatString")]
+        [Validation(Required=false)]
+        public string LogFormatString { get; set; }
+
         /// <summary>
         /// <para>The Logstore where the flow log is stored.</para>
         /// <list type="bullet">
@@ -187,6 +191,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("TransitRouterAttachmentId")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentId { get; set; }
+
+        [NameInMap("TransitRouterId")]
+        [Validation(Required=false)]
+        public string TransitRouterId { get; set; }
 
     }
 

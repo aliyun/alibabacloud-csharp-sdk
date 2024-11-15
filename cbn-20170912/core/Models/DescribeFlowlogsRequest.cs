@@ -65,6 +65,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string FlowLogName { get; set; }
 
+        [NameInMap("FlowLogVersion")]
+        [Validation(Required=false)]
+        public string FlowLogVersion { get; set; }
+
+        [NameInMap("Interval")]
+        [Validation(Required=false)]
+        public int? Interval { get; set; }
+
         /// <summary>
         /// <para>The name of the Logstore where the flow log is stored.</para>
         /// <para>The name must be 3 to 63 characters in length, and can contain lowercase letters, digits, underscores (_), and hyphens (-). It must start or end with a lowercase letter or a digit.</para>
@@ -191,6 +199,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("TransitRouterAttachmentId")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentId { get; set; }
+
+        [NameInMap("TransitRouterId")]
+        [Validation(Required=false)]
+        public string TransitRouterId { get; set; }
 
     }
 

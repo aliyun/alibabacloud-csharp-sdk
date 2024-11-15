@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class ModifyFlowLogAttributeRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the CEN instance.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-7qthudw0ll6jmc****</para>
@@ -66,6 +65,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("FlowLogName")]
         [Validation(Required=false)]
         public string FlowLogName { get; set; }
+
+        [NameInMap("Interval")]
+        [Validation(Required=false)]
+        public long? Interval { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
