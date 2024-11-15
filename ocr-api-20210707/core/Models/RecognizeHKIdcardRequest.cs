@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
     public class RecognizeHKIdcardRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="https://example.png">https://example.png</a></para>
+        /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
     public class RecognizePassportRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="https://img.alicdn.com/tfs/TB1uHglUgHqK1RjSZFEXXcGMXXa-800-502.png">https://img.alicdn.com/tfs/TB1uHglUgHqK1RjSZFEXXcGMXXa-800-502.png</a></para>
+        /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }

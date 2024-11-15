@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="https://img.alicdn.com/tfs/TB1qIIfXAPoK1RjSZKbXXX1IXXa-808-523.jpg">https://img.alicdn.com/tfs/TB1qIIfXAPoK1RjSZKbXXX1IXXa-808-523.jpg</a></para>
+        /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }

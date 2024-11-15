@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
     public class RecognizeRollTicketRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="https://img.alicdn.com/tfs/TB1Y2ryJKT2gK0jSZFvXXXnFXXa-438-934.png">https://img.alicdn.com/tfs/TB1Y2ryJKT2gK0jSZFvXXXnFXXa-438-934.png</a></para>
+        /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }

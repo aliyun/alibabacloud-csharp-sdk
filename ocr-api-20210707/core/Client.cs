@@ -37,13 +37,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 全文识别高精版
-         *
-         * @param request RecognizeAdvancedRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeAdvancedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>全文识别高精版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeAdvancedRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeAdvancedResponse
+        /// </returns>
         public RecognizeAdvancedResponse RecognizeAdvancedWithOptions(RecognizeAdvancedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -105,13 +113,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeAdvancedResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 全文识别高精版
-         *
-         * @param request RecognizeAdvancedRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeAdvancedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>全文识别高精版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeAdvancedRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeAdvancedResponse
+        /// </returns>
         public async Task<RecognizeAdvancedResponse> RecognizeAdvancedWithOptionsAsync(RecognizeAdvancedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -173,37 +189,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeAdvancedResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 全文识别高精版
-         *
-         * @param request RecognizeAdvancedRequest
-         * @return RecognizeAdvancedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>全文识别高精版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeAdvancedRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeAdvancedResponse
+        /// </returns>
         public RecognizeAdvancedResponse RecognizeAdvanced(RecognizeAdvancedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeAdvancedWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 全文识别高精版
-         *
-         * @param request RecognizeAdvancedRequest
-         * @return RecognizeAdvancedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>全文识别高精版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeAdvancedRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeAdvancedResponse
+        /// </returns>
         public async Task<RecognizeAdvancedResponse> RecognizeAdvancedAsync(RecognizeAdvancedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeAdvancedWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 航空行程单
-         *
-         * @param request RecognizeAirItineraryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeAirItineraryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>航空行程单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeAirItineraryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeAirItineraryResponse
+        /// </returns>
         public RecognizeAirItineraryResponse RecognizeAirItineraryWithOptions(RecognizeAirItineraryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -233,13 +269,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeAirItineraryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 航空行程单
-         *
-         * @param request RecognizeAirItineraryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeAirItineraryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>航空行程单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeAirItineraryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeAirItineraryResponse
+        /// </returns>
         public async Task<RecognizeAirItineraryResponse> RecognizeAirItineraryWithOptionsAsync(RecognizeAirItineraryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -269,37 +313,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeAirItineraryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 航空行程单
-         *
-         * @param request RecognizeAirItineraryRequest
-         * @return RecognizeAirItineraryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>航空行程单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeAirItineraryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeAirItineraryResponse
+        /// </returns>
         public RecognizeAirItineraryResponse RecognizeAirItinerary(RecognizeAirItineraryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeAirItineraryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 航空行程单
-         *
-         * @param request RecognizeAirItineraryRequest
-         * @return RecognizeAirItineraryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>航空行程单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeAirItineraryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeAirItineraryResponse
+        /// </returns>
         public async Task<RecognizeAirItineraryResponse> RecognizeAirItineraryAsync(RecognizeAirItineraryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeAirItineraryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 统一Api
-         *
-         * @param tmpReq RecognizeAllTextRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeAllTextResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统一Api</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RecognizeAllTextRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeAllTextResponse
+        /// </returns>
         public RecognizeAllTextResponse RecognizeAllTextWithOptions(RecognizeAllTextRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -415,13 +479,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeAllTextResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 统一Api
-         *
-         * @param tmpReq RecognizeAllTextRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeAllTextResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统一Api</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RecognizeAllTextRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeAllTextResponse
+        /// </returns>
         public async Task<RecognizeAllTextResponse> RecognizeAllTextWithOptionsAsync(RecognizeAllTextRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -537,37 +609,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeAllTextResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 统一Api
-         *
-         * @param request RecognizeAllTextRequest
-         * @return RecognizeAllTextResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统一Api</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeAllTextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeAllTextResponse
+        /// </returns>
         public RecognizeAllTextResponse RecognizeAllText(RecognizeAllTextRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeAllTextWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 统一Api
-         *
-         * @param request RecognizeAllTextRequest
-         * @return RecognizeAllTextResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统一Api</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeAllTextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeAllTextResponse
+        /// </returns>
         public async Task<RecognizeAllTextResponse> RecognizeAllTextAsync(RecognizeAllTextRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeAllTextWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 银承汇票识别
-         *
-         * @param request RecognizeBankAcceptanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeBankAcceptanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>银承汇票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBankAcceptanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBankAcceptanceResponse
+        /// </returns>
         public RecognizeBankAcceptanceResponse RecognizeBankAcceptanceWithOptions(RecognizeBankAcceptanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -597,13 +689,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeBankAcceptanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 银承汇票识别
-         *
-         * @param request RecognizeBankAcceptanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeBankAcceptanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>银承汇票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBankAcceptanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBankAcceptanceResponse
+        /// </returns>
         public async Task<RecognizeBankAcceptanceResponse> RecognizeBankAcceptanceWithOptionsAsync(RecognizeBankAcceptanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -633,37 +733,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeBankAcceptanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 银承汇票识别
-         *
-         * @param request RecognizeBankAcceptanceRequest
-         * @return RecognizeBankAcceptanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>银承汇票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBankAcceptanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBankAcceptanceResponse
+        /// </returns>
         public RecognizeBankAcceptanceResponse RecognizeBankAcceptance(RecognizeBankAcceptanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeBankAcceptanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 银承汇票识别
-         *
-         * @param request RecognizeBankAcceptanceRequest
-         * @return RecognizeBankAcceptanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>银承汇票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBankAcceptanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBankAcceptanceResponse
+        /// </returns>
         public async Task<RecognizeBankAcceptanceResponse> RecognizeBankAcceptanceAsync(RecognizeBankAcceptanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeBankAcceptanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 银行开户许可证识别
-         *
-         * @param request RecognizeBankAccountLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeBankAccountLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>银行开户许可证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBankAccountLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBankAccountLicenseResponse
+        /// </returns>
         public RecognizeBankAccountLicenseResponse RecognizeBankAccountLicenseWithOptions(RecognizeBankAccountLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -693,13 +813,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeBankAccountLicenseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 银行开户许可证识别
-         *
-         * @param request RecognizeBankAccountLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeBankAccountLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>银行开户许可证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBankAccountLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBankAccountLicenseResponse
+        /// </returns>
         public async Task<RecognizeBankAccountLicenseResponse> RecognizeBankAccountLicenseWithOptionsAsync(RecognizeBankAccountLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -729,37 +857,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeBankAccountLicenseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 银行开户许可证识别
-         *
-         * @param request RecognizeBankAccountLicenseRequest
-         * @return RecognizeBankAccountLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>银行开户许可证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBankAccountLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBankAccountLicenseResponse
+        /// </returns>
         public RecognizeBankAccountLicenseResponse RecognizeBankAccountLicense(RecognizeBankAccountLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeBankAccountLicenseWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 银行开户许可证识别
-         *
-         * @param request RecognizeBankAccountLicenseRequest
-         * @return RecognizeBankAccountLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>银行开户许可证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBankAccountLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBankAccountLicenseResponse
+        /// </returns>
         public async Task<RecognizeBankAccountLicenseResponse> RecognizeBankAccountLicenseAsync(RecognizeBankAccountLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeBankAccountLicenseWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 银行卡识别
-         *
-         * @param request RecognizeBankCardRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeBankCardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>银行卡识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBankCardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBankCardResponse
+        /// </returns>
         public RecognizeBankCardResponse RecognizeBankCardWithOptions(RecognizeBankCardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -789,13 +937,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeBankCardResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 银行卡识别
-         *
-         * @param request RecognizeBankCardRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeBankCardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>银行卡识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBankCardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBankCardResponse
+        /// </returns>
         public async Task<RecognizeBankCardResponse> RecognizeBankCardWithOptionsAsync(RecognizeBankCardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -825,37 +981,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeBankCardResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 银行卡识别
-         *
-         * @param request RecognizeBankCardRequest
-         * @return RecognizeBankCardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>银行卡识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBankCardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBankCardResponse
+        /// </returns>
         public RecognizeBankCardResponse RecognizeBankCard(RecognizeBankCardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeBankCardWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 银行卡识别
-         *
-         * @param request RecognizeBankCardRequest
-         * @return RecognizeBankCardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>银行卡识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBankCardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBankCardResponse
+        /// </returns>
         public async Task<RecognizeBankCardResponse> RecognizeBankCardAsync(RecognizeBankCardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeBankCardWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 电商图片文字识别
-         *
-         * @param request RecognizeBasicRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeBasicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>电商图片文字识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBasicRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBasicResponse
+        /// </returns>
         public RecognizeBasicResponse RecognizeBasicWithOptions(RecognizeBasicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -889,13 +1065,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeBasicResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 电商图片文字识别
-         *
-         * @param request RecognizeBasicRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeBasicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>电商图片文字识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBasicRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBasicResponse
+        /// </returns>
         public async Task<RecognizeBasicResponse> RecognizeBasicWithOptionsAsync(RecognizeBasicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -929,37 +1113,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeBasicResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 电商图片文字识别
-         *
-         * @param request RecognizeBasicRequest
-         * @return RecognizeBasicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>电商图片文字识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBasicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBasicResponse
+        /// </returns>
         public RecognizeBasicResponse RecognizeBasic(RecognizeBasicRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeBasicWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 电商图片文字识别
-         *
-         * @param request RecognizeBasicRequest
-         * @return RecognizeBasicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>电商图片文字识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBasicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBasicResponse
+        /// </returns>
         public async Task<RecognizeBasicResponse> RecognizeBasicAsync(RecognizeBasicRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeBasicWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 出生证明
-         *
-         * @param request RecognizeBirthCertificationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeBirthCertificationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>出生证明</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBirthCertificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBirthCertificationResponse
+        /// </returns>
         public RecognizeBirthCertificationResponse RecognizeBirthCertificationWithOptions(RecognizeBirthCertificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -989,13 +1193,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeBirthCertificationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 出生证明
-         *
-         * @param request RecognizeBirthCertificationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeBirthCertificationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>出生证明</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBirthCertificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBirthCertificationResponse
+        /// </returns>
         public async Task<RecognizeBirthCertificationResponse> RecognizeBirthCertificationWithOptionsAsync(RecognizeBirthCertificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1025,37 +1237,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeBirthCertificationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 出生证明
-         *
-         * @param request RecognizeBirthCertificationRequest
-         * @return RecognizeBirthCertificationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>出生证明</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBirthCertificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBirthCertificationResponse
+        /// </returns>
         public RecognizeBirthCertificationResponse RecognizeBirthCertification(RecognizeBirthCertificationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeBirthCertificationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 出生证明
-         *
-         * @param request RecognizeBirthCertificationRequest
-         * @return RecognizeBirthCertificationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>出生证明</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBirthCertificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBirthCertificationResponse
+        /// </returns>
         public async Task<RecognizeBirthCertificationResponse> RecognizeBirthCertificationAsync(RecognizeBirthCertificationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeBirthCertificationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 客运车船票识别
-         *
-         * @param request RecognizeBusShipTicketRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeBusShipTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客运车船票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBusShipTicketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBusShipTicketResponse
+        /// </returns>
         public RecognizeBusShipTicketResponse RecognizeBusShipTicketWithOptions(RecognizeBusShipTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1085,13 +1317,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeBusShipTicketResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 客运车船票识别
-         *
-         * @param request RecognizeBusShipTicketRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeBusShipTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客运车船票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBusShipTicketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBusShipTicketResponse
+        /// </returns>
         public async Task<RecognizeBusShipTicketResponse> RecognizeBusShipTicketWithOptionsAsync(RecognizeBusShipTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1121,37 +1361,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeBusShipTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 客运车船票识别
-         *
-         * @param request RecognizeBusShipTicketRequest
-         * @return RecognizeBusShipTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客运车船票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBusShipTicketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBusShipTicketResponse
+        /// </returns>
         public RecognizeBusShipTicketResponse RecognizeBusShipTicket(RecognizeBusShipTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeBusShipTicketWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 客运车船票识别
-         *
-         * @param request RecognizeBusShipTicketRequest
-         * @return RecognizeBusShipTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客运车船票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBusShipTicketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBusShipTicketResponse
+        /// </returns>
         public async Task<RecognizeBusShipTicketResponse> RecognizeBusShipTicketAsync(RecognizeBusShipTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeBusShipTicketWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 营业执照识别
-         *
-         * @param request RecognizeBusinessLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeBusinessLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>营业执照识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBusinessLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBusinessLicenseResponse
+        /// </returns>
         public RecognizeBusinessLicenseResponse RecognizeBusinessLicenseWithOptions(RecognizeBusinessLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1181,13 +1441,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeBusinessLicenseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 营业执照识别
-         *
-         * @param request RecognizeBusinessLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeBusinessLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>营业执照识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBusinessLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBusinessLicenseResponse
+        /// </returns>
         public async Task<RecognizeBusinessLicenseResponse> RecognizeBusinessLicenseWithOptionsAsync(RecognizeBusinessLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1217,37 +1485,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeBusinessLicenseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 营业执照识别
-         *
-         * @param request RecognizeBusinessLicenseRequest
-         * @return RecognizeBusinessLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>营业执照识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBusinessLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBusinessLicenseResponse
+        /// </returns>
         public RecognizeBusinessLicenseResponse RecognizeBusinessLicense(RecognizeBusinessLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeBusinessLicenseWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 营业执照识别
-         *
-         * @param request RecognizeBusinessLicenseRequest
-         * @return RecognizeBusinessLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>营业执照识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeBusinessLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeBusinessLicenseResponse
+        /// </returns>
         public async Task<RecognizeBusinessLicenseResponse> RecognizeBusinessLicenseAsync(RecognizeBusinessLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeBusinessLicenseWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 机动车销售发票
-         *
-         * @param request RecognizeCarInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeCarInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机动车销售发票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCarInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCarInvoiceResponse
+        /// </returns>
         public RecognizeCarInvoiceResponse RecognizeCarInvoiceWithOptions(RecognizeCarInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1277,13 +1565,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeCarInvoiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 机动车销售发票
-         *
-         * @param request RecognizeCarInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeCarInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机动车销售发票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCarInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCarInvoiceResponse
+        /// </returns>
         public async Task<RecognizeCarInvoiceResponse> RecognizeCarInvoiceWithOptionsAsync(RecognizeCarInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1313,37 +1609,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeCarInvoiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 机动车销售发票
-         *
-         * @param request RecognizeCarInvoiceRequest
-         * @return RecognizeCarInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机动车销售发票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCarInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCarInvoiceResponse
+        /// </returns>
         public RecognizeCarInvoiceResponse RecognizeCarInvoice(RecognizeCarInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeCarInvoiceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 机动车销售发票
-         *
-         * @param request RecognizeCarInvoiceRequest
-         * @return RecognizeCarInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机动车销售发票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCarInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCarInvoiceResponse
+        /// </returns>
         public async Task<RecognizeCarInvoiceResponse> RecognizeCarInvoiceAsync(RecognizeCarInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeCarInvoiceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 车牌识别
-         *
-         * @param request RecognizeCarNumberRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeCarNumberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>车牌识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCarNumberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCarNumberResponse
+        /// </returns>
         public RecognizeCarNumberResponse RecognizeCarNumberWithOptions(RecognizeCarNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1373,13 +1689,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeCarNumberResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 车牌识别
-         *
-         * @param request RecognizeCarNumberRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeCarNumberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>车牌识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCarNumberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCarNumberResponse
+        /// </returns>
         public async Task<RecognizeCarNumberResponse> RecognizeCarNumberWithOptionsAsync(RecognizeCarNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1409,37 +1733,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeCarNumberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 车牌识别
-         *
-         * @param request RecognizeCarNumberRequest
-         * @return RecognizeCarNumberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>车牌识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCarNumberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCarNumberResponse
+        /// </returns>
         public RecognizeCarNumberResponse RecognizeCarNumber(RecognizeCarNumberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeCarNumberWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 车牌识别
-         *
-         * @param request RecognizeCarNumberRequest
-         * @return RecognizeCarNumberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>车牌识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCarNumberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCarNumberResponse
+        /// </returns>
         public async Task<RecognizeCarNumberResponse> RecognizeCarNumberAsync(RecognizeCarNumberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeCarNumberWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 车辆vin码识别
-         *
-         * @param request RecognizeCarVinCodeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeCarVinCodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>车辆vin码识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCarVinCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCarVinCodeResponse
+        /// </returns>
         public RecognizeCarVinCodeResponse RecognizeCarVinCodeWithOptions(RecognizeCarVinCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1469,13 +1813,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeCarVinCodeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 车辆vin码识别
-         *
-         * @param request RecognizeCarVinCodeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeCarVinCodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>车辆vin码识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCarVinCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCarVinCodeResponse
+        /// </returns>
         public async Task<RecognizeCarVinCodeResponse> RecognizeCarVinCodeWithOptionsAsync(RecognizeCarVinCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1505,37 +1857,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeCarVinCodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 车辆vin码识别
-         *
-         * @param request RecognizeCarVinCodeRequest
-         * @return RecognizeCarVinCodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>车辆vin码识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCarVinCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCarVinCodeResponse
+        /// </returns>
         public RecognizeCarVinCodeResponse RecognizeCarVinCode(RecognizeCarVinCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeCarVinCodeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 车辆vin码识别
-         *
-         * @param request RecognizeCarVinCodeRequest
-         * @return RecognizeCarVinCodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>车辆vin码识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCarVinCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCarVinCodeResponse
+        /// </returns>
         public async Task<RecognizeCarVinCodeResponse> RecognizeCarVinCodeAsync(RecognizeCarVinCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeCarVinCodeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 中国护照识别
-         *
-         * @param request RecognizeChinesePassportRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeChinesePassportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>中国护照识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeChinesePassportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeChinesePassportResponse
+        /// </returns>
         public RecognizeChinesePassportResponse RecognizeChinesePassportWithOptions(RecognizeChinesePassportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1569,13 +1941,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeChinesePassportResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 中国护照识别
-         *
-         * @param request RecognizeChinesePassportRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeChinesePassportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>中国护照识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeChinesePassportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeChinesePassportResponse
+        /// </returns>
         public async Task<RecognizeChinesePassportResponse> RecognizeChinesePassportWithOptionsAsync(RecognizeChinesePassportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1609,37 +1989,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeChinesePassportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 中国护照识别
-         *
-         * @param request RecognizeChinesePassportRequest
-         * @return RecognizeChinesePassportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>中国护照识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeChinesePassportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeChinesePassportResponse
+        /// </returns>
         public RecognizeChinesePassportResponse RecognizeChinesePassport(RecognizeChinesePassportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeChinesePassportWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 中国护照识别
-         *
-         * @param request RecognizeChinesePassportRequest
-         * @return RecognizeChinesePassportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>中国护照识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeChinesePassportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeChinesePassportResponse
+        /// </returns>
         public async Task<RecognizeChinesePassportResponse> RecognizeChinesePassportAsync(RecognizeChinesePassportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeChinesePassportWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 通用机打发票识别
-         *
-         * @param request RecognizeCommonPrintedInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeCommonPrintedInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用机打发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCommonPrintedInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCommonPrintedInvoiceResponse
+        /// </returns>
         public RecognizeCommonPrintedInvoiceResponse RecognizeCommonPrintedInvoiceWithOptions(RecognizeCommonPrintedInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1669,13 +2069,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeCommonPrintedInvoiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 通用机打发票识别
-         *
-         * @param request RecognizeCommonPrintedInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeCommonPrintedInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用机打发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCommonPrintedInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCommonPrintedInvoiceResponse
+        /// </returns>
         public async Task<RecognizeCommonPrintedInvoiceResponse> RecognizeCommonPrintedInvoiceWithOptionsAsync(RecognizeCommonPrintedInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1705,37 +2113,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeCommonPrintedInvoiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 通用机打发票识别
-         *
-         * @param request RecognizeCommonPrintedInvoiceRequest
-         * @return RecognizeCommonPrintedInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用机打发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCommonPrintedInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCommonPrintedInvoiceResponse
+        /// </returns>
         public RecognizeCommonPrintedInvoiceResponse RecognizeCommonPrintedInvoice(RecognizeCommonPrintedInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeCommonPrintedInvoiceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 通用机打发票识别
-         *
-         * @param request RecognizeCommonPrintedInvoiceRequest
-         * @return RecognizeCommonPrintedInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用机打发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCommonPrintedInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCommonPrintedInvoiceResponse
+        /// </returns>
         public async Task<RecognizeCommonPrintedInvoiceResponse> RecognizeCommonPrintedInvoiceAsync(RecognizeCommonPrintedInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeCommonPrintedInvoiceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 化妆品生产许可证识别
-         *
-         * @param request RecognizeCosmeticProduceLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeCosmeticProduceLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>化妆品生产许可证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCosmeticProduceLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCosmeticProduceLicenseResponse
+        /// </returns>
         public RecognizeCosmeticProduceLicenseResponse RecognizeCosmeticProduceLicenseWithOptions(RecognizeCosmeticProduceLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1765,13 +2193,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeCosmeticProduceLicenseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 化妆品生产许可证识别
-         *
-         * @param request RecognizeCosmeticProduceLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeCosmeticProduceLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>化妆品生产许可证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCosmeticProduceLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCosmeticProduceLicenseResponse
+        /// </returns>
         public async Task<RecognizeCosmeticProduceLicenseResponse> RecognizeCosmeticProduceLicenseWithOptionsAsync(RecognizeCosmeticProduceLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1801,37 +2237,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeCosmeticProduceLicenseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 化妆品生产许可证识别
-         *
-         * @param request RecognizeCosmeticProduceLicenseRequest
-         * @return RecognizeCosmeticProduceLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>化妆品生产许可证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCosmeticProduceLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCosmeticProduceLicenseResponse
+        /// </returns>
         public RecognizeCosmeticProduceLicenseResponse RecognizeCosmeticProduceLicense(RecognizeCosmeticProduceLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeCosmeticProduceLicenseWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 化妆品生产许可证识别
-         *
-         * @param request RecognizeCosmeticProduceLicenseRequest
-         * @return RecognizeCosmeticProduceLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>化妆品生产许可证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCosmeticProduceLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCosmeticProduceLicenseResponse
+        /// </returns>
         public async Task<RecognizeCosmeticProduceLicenseResponse> RecognizeCosmeticProduceLicenseAsync(RecognizeCosmeticProduceLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeCosmeticProduceLicenseWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 核算检测报告识别
-         *
-         * @param request RecognizeCovidTestReportRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeCovidTestReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>核算检测报告识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCovidTestReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCovidTestReportResponse
+        /// </returns>
         public RecognizeCovidTestReportResponse RecognizeCovidTestReportWithOptions(RecognizeCovidTestReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1865,13 +2321,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeCovidTestReportResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 核算检测报告识别
-         *
-         * @param request RecognizeCovidTestReportRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeCovidTestReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>核算检测报告识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCovidTestReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCovidTestReportResponse
+        /// </returns>
         public async Task<RecognizeCovidTestReportResponse> RecognizeCovidTestReportWithOptionsAsync(RecognizeCovidTestReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1905,37 +2369,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeCovidTestReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 核算检测报告识别
-         *
-         * @param request RecognizeCovidTestReportRequest
-         * @return RecognizeCovidTestReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>核算检测报告识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCovidTestReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCovidTestReportResponse
+        /// </returns>
         public RecognizeCovidTestReportResponse RecognizeCovidTestReport(RecognizeCovidTestReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeCovidTestReportWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 核算检测报告识别
-         *
-         * @param request RecognizeCovidTestReportRequest
-         * @return RecognizeCovidTestReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>核算检测报告识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCovidTestReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCovidTestReportResponse
+        /// </returns>
         public async Task<RecognizeCovidTestReportResponse> RecognizeCovidTestReportAsync(RecognizeCovidTestReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeCovidTestReportWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 第二类医疗器械经营备案凭证
-         *
-         * @param request RecognizeCtwoMedicalDeviceManageLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeCtwoMedicalDeviceManageLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>第二类医疗器械经营备案凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCtwoMedicalDeviceManageLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCtwoMedicalDeviceManageLicenseResponse
+        /// </returns>
         public RecognizeCtwoMedicalDeviceManageLicenseResponse RecognizeCtwoMedicalDeviceManageLicenseWithOptions(RecognizeCtwoMedicalDeviceManageLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1965,13 +2449,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeCtwoMedicalDeviceManageLicenseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 第二类医疗器械经营备案凭证
-         *
-         * @param request RecognizeCtwoMedicalDeviceManageLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeCtwoMedicalDeviceManageLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>第二类医疗器械经营备案凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCtwoMedicalDeviceManageLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCtwoMedicalDeviceManageLicenseResponse
+        /// </returns>
         public async Task<RecognizeCtwoMedicalDeviceManageLicenseResponse> RecognizeCtwoMedicalDeviceManageLicenseWithOptionsAsync(RecognizeCtwoMedicalDeviceManageLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2001,37 +2493,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeCtwoMedicalDeviceManageLicenseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 第二类医疗器械经营备案凭证
-         *
-         * @param request RecognizeCtwoMedicalDeviceManageLicenseRequest
-         * @return RecognizeCtwoMedicalDeviceManageLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>第二类医疗器械经营备案凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCtwoMedicalDeviceManageLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCtwoMedicalDeviceManageLicenseResponse
+        /// </returns>
         public RecognizeCtwoMedicalDeviceManageLicenseResponse RecognizeCtwoMedicalDeviceManageLicense(RecognizeCtwoMedicalDeviceManageLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeCtwoMedicalDeviceManageLicenseWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 第二类医疗器械经营备案凭证
-         *
-         * @param request RecognizeCtwoMedicalDeviceManageLicenseRequest
-         * @return RecognizeCtwoMedicalDeviceManageLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>第二类医疗器械经营备案凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeCtwoMedicalDeviceManageLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeCtwoMedicalDeviceManageLicenseResponse
+        /// </returns>
         public async Task<RecognizeCtwoMedicalDeviceManageLicenseResponse> RecognizeCtwoMedicalDeviceManageLicenseAsync(RecognizeCtwoMedicalDeviceManageLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeCtwoMedicalDeviceManageLicenseWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 文档结构化识别
-         *
-         * @param request RecognizeDocumentStructureRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeDocumentStructureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档结构化识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeDocumentStructureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeDocumentStructureResponse
+        /// </returns>
         public RecognizeDocumentStructureResponse RecognizeDocumentStructureWithOptions(RecognizeDocumentStructureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2097,13 +2609,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeDocumentStructureResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 文档结构化识别
-         *
-         * @param request RecognizeDocumentStructureRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeDocumentStructureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档结构化识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeDocumentStructureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeDocumentStructureResponse
+        /// </returns>
         public async Task<RecognizeDocumentStructureResponse> RecognizeDocumentStructureWithOptionsAsync(RecognizeDocumentStructureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2169,37 +2689,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeDocumentStructureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 文档结构化识别
-         *
-         * @param request RecognizeDocumentStructureRequest
-         * @return RecognizeDocumentStructureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档结构化识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeDocumentStructureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeDocumentStructureResponse
+        /// </returns>
         public RecognizeDocumentStructureResponse RecognizeDocumentStructure(RecognizeDocumentStructureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeDocumentStructureWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 文档结构化识别
-         *
-         * @param request RecognizeDocumentStructureRequest
-         * @return RecognizeDocumentStructureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档结构化识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeDocumentStructureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeDocumentStructureResponse
+        /// </returns>
         public async Task<RecognizeDocumentStructureResponse> RecognizeDocumentStructureAsync(RecognizeDocumentStructureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeDocumentStructureWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 驾驶证识别
-         *
-         * @param request RecognizeDrivingLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeDrivingLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>驾驶证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeDrivingLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeDrivingLicenseResponse
+        /// </returns>
         public RecognizeDrivingLicenseResponse RecognizeDrivingLicenseWithOptions(RecognizeDrivingLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2229,13 +2769,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeDrivingLicenseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 驾驶证识别
-         *
-         * @param request RecognizeDrivingLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeDrivingLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>驾驶证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeDrivingLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeDrivingLicenseResponse
+        /// </returns>
         public async Task<RecognizeDrivingLicenseResponse> RecognizeDrivingLicenseWithOptionsAsync(RecognizeDrivingLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2265,37 +2813,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeDrivingLicenseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 驾驶证识别
-         *
-         * @param request RecognizeDrivingLicenseRequest
-         * @return RecognizeDrivingLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>驾驶证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeDrivingLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeDrivingLicenseResponse
+        /// </returns>
         public RecognizeDrivingLicenseResponse RecognizeDrivingLicense(RecognizeDrivingLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeDrivingLicenseWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 驾驶证识别
-         *
-         * @param request RecognizeDrivingLicenseRequest
-         * @return RecognizeDrivingLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>驾驶证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeDrivingLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeDrivingLicenseResponse
+        /// </returns>
         public async Task<RecognizeDrivingLicenseResponse> RecognizeDrivingLicenseAsync(RecognizeDrivingLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeDrivingLicenseWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 印刷体数学公式识别
-         *
-         * @param request RecognizeEduFormulaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeEduFormulaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>印刷体数学公式识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduFormulaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduFormulaResponse
+        /// </returns>
         public RecognizeEduFormulaResponse RecognizeEduFormulaWithOptions(RecognizeEduFormulaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2325,13 +2893,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeEduFormulaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 印刷体数学公式识别
-         *
-         * @param request RecognizeEduFormulaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeEduFormulaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>印刷体数学公式识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduFormulaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduFormulaResponse
+        /// </returns>
         public async Task<RecognizeEduFormulaResponse> RecognizeEduFormulaWithOptionsAsync(RecognizeEduFormulaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2361,37 +2937,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeEduFormulaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 印刷体数学公式识别
-         *
-         * @param request RecognizeEduFormulaRequest
-         * @return RecognizeEduFormulaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>印刷体数学公式识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduFormulaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduFormulaResponse
+        /// </returns>
         public RecognizeEduFormulaResponse RecognizeEduFormula(RecognizeEduFormulaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeEduFormulaWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 印刷体数学公式识别
-         *
-         * @param request RecognizeEduFormulaRequest
-         * @return RecognizeEduFormulaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>印刷体数学公式识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduFormulaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduFormulaResponse
+        /// </returns>
         public async Task<RecognizeEduFormulaResponse> RecognizeEduFormulaAsync(RecognizeEduFormulaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeEduFormulaWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 口算判题
-         *
-         * @param request RecognizeEduOralCalculationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeEduOralCalculationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>口算判题</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduOralCalculationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduOralCalculationResponse
+        /// </returns>
         public RecognizeEduOralCalculationResponse RecognizeEduOralCalculationWithOptions(RecognizeEduOralCalculationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2421,13 +3017,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeEduOralCalculationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 口算判题
-         *
-         * @param request RecognizeEduOralCalculationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeEduOralCalculationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>口算判题</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduOralCalculationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduOralCalculationResponse
+        /// </returns>
         public async Task<RecognizeEduOralCalculationResponse> RecognizeEduOralCalculationWithOptionsAsync(RecognizeEduOralCalculationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2457,37 +3061,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeEduOralCalculationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 口算判题
-         *
-         * @param request RecognizeEduOralCalculationRequest
-         * @return RecognizeEduOralCalculationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>口算判题</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduOralCalculationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduOralCalculationResponse
+        /// </returns>
         public RecognizeEduOralCalculationResponse RecognizeEduOralCalculation(RecognizeEduOralCalculationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeEduOralCalculationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 口算判题
-         *
-         * @param request RecognizeEduOralCalculationRequest
-         * @return RecognizeEduOralCalculationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>口算判题</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduOralCalculationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduOralCalculationResponse
+        /// </returns>
         public async Task<RecognizeEduOralCalculationResponse> RecognizeEduOralCalculationAsync(RecognizeEduOralCalculationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeEduOralCalculationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 试卷切题识别
-         *
-         * @param request RecognizeEduPaperCutRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeEduPaperCutResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>试卷切题识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduPaperCutRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduPaperCutResponse
+        /// </returns>
         public RecognizeEduPaperCutResponse RecognizeEduPaperCutWithOptions(RecognizeEduPaperCutRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2533,13 +3157,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeEduPaperCutResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 试卷切题识别
-         *
-         * @param request RecognizeEduPaperCutRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeEduPaperCutResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>试卷切题识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduPaperCutRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduPaperCutResponse
+        /// </returns>
         public async Task<RecognizeEduPaperCutResponse> RecognizeEduPaperCutWithOptionsAsync(RecognizeEduPaperCutRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2585,37 +3217,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeEduPaperCutResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 试卷切题识别
-         *
-         * @param request RecognizeEduPaperCutRequest
-         * @return RecognizeEduPaperCutResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>试卷切题识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduPaperCutRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduPaperCutResponse
+        /// </returns>
         public RecognizeEduPaperCutResponse RecognizeEduPaperCut(RecognizeEduPaperCutRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeEduPaperCutWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 试卷切题识别
-         *
-         * @param request RecognizeEduPaperCutRequest
-         * @return RecognizeEduPaperCutResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>试卷切题识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduPaperCutRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduPaperCutResponse
+        /// </returns>
         public async Task<RecognizeEduPaperCutResponse> RecognizeEduPaperCutAsync(RecognizeEduPaperCutRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeEduPaperCutWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 整页试卷识别
-         *
-         * @param request RecognizeEduPaperOcrRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeEduPaperOcrResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整页试卷识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduPaperOcrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduPaperOcrResponse
+        /// </returns>
         public RecognizeEduPaperOcrResponse RecognizeEduPaperOcrWithOptions(RecognizeEduPaperOcrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2657,13 +3309,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeEduPaperOcrResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 整页试卷识别
-         *
-         * @param request RecognizeEduPaperOcrRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeEduPaperOcrResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整页试卷识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduPaperOcrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduPaperOcrResponse
+        /// </returns>
         public async Task<RecognizeEduPaperOcrResponse> RecognizeEduPaperOcrWithOptionsAsync(RecognizeEduPaperOcrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2705,37 +3365,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeEduPaperOcrResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 整页试卷识别
-         *
-         * @param request RecognizeEduPaperOcrRequest
-         * @return RecognizeEduPaperOcrResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整页试卷识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduPaperOcrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduPaperOcrResponse
+        /// </returns>
         public RecognizeEduPaperOcrResponse RecognizeEduPaperOcr(RecognizeEduPaperOcrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeEduPaperOcrWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 整页试卷识别
-         *
-         * @param request RecognizeEduPaperOcrRequest
-         * @return RecognizeEduPaperOcrResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整页试卷识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduPaperOcrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduPaperOcrResponse
+        /// </returns>
         public async Task<RecognizeEduPaperOcrResponse> RecognizeEduPaperOcrAsync(RecognizeEduPaperOcrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeEduPaperOcrWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 精细版结构化切题
-         *
-         * @param request RecognizeEduPaperStructedRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeEduPaperStructedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>精细版结构化切题</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduPaperStructedRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduPaperStructedResponse
+        /// </returns>
         public RecognizeEduPaperStructedResponse RecognizeEduPaperStructedWithOptions(RecognizeEduPaperStructedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2743,6 +3423,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedRotate))
             {
                 query["NeedRotate"] = request.NeedRotate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputOricoord))
+            {
+                query["OutputOricoord"] = request.OutputOricoord;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Subject))
             {
@@ -2773,13 +3457,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeEduPaperStructedResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 精细版结构化切题
-         *
-         * @param request RecognizeEduPaperStructedRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeEduPaperStructedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>精细版结构化切题</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduPaperStructedRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduPaperStructedResponse
+        /// </returns>
         public async Task<RecognizeEduPaperStructedResponse> RecognizeEduPaperStructedWithOptionsAsync(RecognizeEduPaperStructedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2787,6 +3479,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedRotate))
             {
                 query["NeedRotate"] = request.NeedRotate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputOricoord))
+            {
+                query["OutputOricoord"] = request.OutputOricoord;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Subject))
             {
@@ -2817,37 +3513,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeEduPaperStructedResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 精细版结构化切题
-         *
-         * @param request RecognizeEduPaperStructedRequest
-         * @return RecognizeEduPaperStructedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>精细版结构化切题</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduPaperStructedRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduPaperStructedResponse
+        /// </returns>
         public RecognizeEduPaperStructedResponse RecognizeEduPaperStructed(RecognizeEduPaperStructedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeEduPaperStructedWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 精细版结构化切题
-         *
-         * @param request RecognizeEduPaperStructedRequest
-         * @return RecognizeEduPaperStructedResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>精细版结构化切题</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduPaperStructedRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduPaperStructedResponse
+        /// </returns>
         public async Task<RecognizeEduPaperStructedResponse> RecognizeEduPaperStructedAsync(RecognizeEduPaperStructedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeEduPaperStructedWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 题目识别
-         *
-         * @param request RecognizeEduQuestionOcrRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeEduQuestionOcrResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>题目识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduQuestionOcrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduQuestionOcrResponse
+        /// </returns>
         public RecognizeEduQuestionOcrResponse RecognizeEduQuestionOcrWithOptions(RecognizeEduQuestionOcrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2881,13 +3597,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeEduQuestionOcrResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 题目识别
-         *
-         * @param request RecognizeEduQuestionOcrRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeEduQuestionOcrResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>题目识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduQuestionOcrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduQuestionOcrResponse
+        /// </returns>
         public async Task<RecognizeEduQuestionOcrResponse> RecognizeEduQuestionOcrWithOptionsAsync(RecognizeEduQuestionOcrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2921,37 +3645,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeEduQuestionOcrResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 题目识别
-         *
-         * @param request RecognizeEduQuestionOcrRequest
-         * @return RecognizeEduQuestionOcrResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>题目识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduQuestionOcrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduQuestionOcrResponse
+        /// </returns>
         public RecognizeEduQuestionOcrResponse RecognizeEduQuestionOcr(RecognizeEduQuestionOcrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeEduQuestionOcrWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 题目识别
-         *
-         * @param request RecognizeEduQuestionOcrRequest
-         * @return RecognizeEduQuestionOcrResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>题目识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEduQuestionOcrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEduQuestionOcrResponse
+        /// </returns>
         public async Task<RecognizeEduQuestionOcrResponse> RecognizeEduQuestionOcrAsync(RecognizeEduQuestionOcrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeEduQuestionOcrWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 英语专项识别
-         *
-         * @param request RecognizeEnglishRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeEnglishResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>英语专项识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEnglishRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEnglishResponse
+        /// </returns>
         public RecognizeEnglishResponse RecognizeEnglishWithOptions(RecognizeEnglishRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2989,13 +3733,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeEnglishResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 英语专项识别
-         *
-         * @param request RecognizeEnglishRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeEnglishResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>英语专项识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEnglishRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEnglishResponse
+        /// </returns>
         public async Task<RecognizeEnglishResponse> RecognizeEnglishWithOptionsAsync(RecognizeEnglishRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3033,37 +3785,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeEnglishResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 英语专项识别
-         *
-         * @param request RecognizeEnglishRequest
-         * @return RecognizeEnglishResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>英语专项识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEnglishRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEnglishResponse
+        /// </returns>
         public RecognizeEnglishResponse RecognizeEnglish(RecognizeEnglishRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeEnglishWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 英语专项识别
-         *
-         * @param request RecognizeEnglishRequest
-         * @return RecognizeEnglishResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>英语专项识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEnglishRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEnglishResponse
+        /// </returns>
         public async Task<RecognizeEnglishResponse> RecognizeEnglishAsync(RecognizeEnglishRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeEnglishWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 不动产权证
-         *
-         * @param request RecognizeEstateCertificationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeEstateCertificationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>不动产权证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEstateCertificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEstateCertificationResponse
+        /// </returns>
         public RecognizeEstateCertificationResponse RecognizeEstateCertificationWithOptions(RecognizeEstateCertificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3093,13 +3865,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeEstateCertificationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 不动产权证
-         *
-         * @param request RecognizeEstateCertificationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeEstateCertificationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>不动产权证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEstateCertificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEstateCertificationResponse
+        /// </returns>
         public async Task<RecognizeEstateCertificationResponse> RecognizeEstateCertificationWithOptionsAsync(RecognizeEstateCertificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3129,37 +3909,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeEstateCertificationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 不动产权证
-         *
-         * @param request RecognizeEstateCertificationRequest
-         * @return RecognizeEstateCertificationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>不动产权证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEstateCertificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEstateCertificationResponse
+        /// </returns>
         public RecognizeEstateCertificationResponse RecognizeEstateCertification(RecognizeEstateCertificationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeEstateCertificationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 不动产权证
-         *
-         * @param request RecognizeEstateCertificationRequest
-         * @return RecognizeEstateCertificationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>不动产权证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeEstateCertificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeEstateCertificationResponse
+        /// </returns>
         public async Task<RecognizeEstateCertificationResponse> RecognizeEstateCertificationAsync(RecognizeEstateCertificationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeEstateCertificationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 来往港澳台通行证识别
-         *
-         * @param request RecognizeExitEntryPermitToHKRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeExitEntryPermitToHKResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>来往港澳台通行证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeExitEntryPermitToHKRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeExitEntryPermitToHKResponse
+        /// </returns>
         public RecognizeExitEntryPermitToHKResponse RecognizeExitEntryPermitToHKWithOptions(RecognizeExitEntryPermitToHKRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3193,13 +3993,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeExitEntryPermitToHKResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 来往港澳台通行证识别
-         *
-         * @param request RecognizeExitEntryPermitToHKRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeExitEntryPermitToHKResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>来往港澳台通行证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeExitEntryPermitToHKRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeExitEntryPermitToHKResponse
+        /// </returns>
         public async Task<RecognizeExitEntryPermitToHKResponse> RecognizeExitEntryPermitToHKWithOptionsAsync(RecognizeExitEntryPermitToHKRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3233,37 +4041,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeExitEntryPermitToHKResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 来往港澳台通行证识别
-         *
-         * @param request RecognizeExitEntryPermitToHKRequest
-         * @return RecognizeExitEntryPermitToHKResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>来往港澳台通行证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeExitEntryPermitToHKRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeExitEntryPermitToHKResponse
+        /// </returns>
         public RecognizeExitEntryPermitToHKResponse RecognizeExitEntryPermitToHK(RecognizeExitEntryPermitToHKRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeExitEntryPermitToHKWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 来往港澳台通行证识别
-         *
-         * @param request RecognizeExitEntryPermitToHKRequest
-         * @return RecognizeExitEntryPermitToHKResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>来往港澳台通行证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeExitEntryPermitToHKRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeExitEntryPermitToHKResponse
+        /// </returns>
         public async Task<RecognizeExitEntryPermitToHKResponse> RecognizeExitEntryPermitToHKAsync(RecognizeExitEntryPermitToHKRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeExitEntryPermitToHKWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 来往大陆(内地)通行证识别
-         *
-         * @param request RecognizeExitEntryPermitToMainlandRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeExitEntryPermitToMainlandResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>来往大陆(内地)通行证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeExitEntryPermitToMainlandRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeExitEntryPermitToMainlandResponse
+        /// </returns>
         public RecognizeExitEntryPermitToMainlandResponse RecognizeExitEntryPermitToMainlandWithOptions(RecognizeExitEntryPermitToMainlandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3297,13 +4125,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeExitEntryPermitToMainlandResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 来往大陆(内地)通行证识别
-         *
-         * @param request RecognizeExitEntryPermitToMainlandRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeExitEntryPermitToMainlandResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>来往大陆(内地)通行证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeExitEntryPermitToMainlandRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeExitEntryPermitToMainlandResponse
+        /// </returns>
         public async Task<RecognizeExitEntryPermitToMainlandResponse> RecognizeExitEntryPermitToMainlandWithOptionsAsync(RecognizeExitEntryPermitToMainlandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3337,37 +4173,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeExitEntryPermitToMainlandResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 来往大陆(内地)通行证识别
-         *
-         * @param request RecognizeExitEntryPermitToMainlandRequest
-         * @return RecognizeExitEntryPermitToMainlandResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>来往大陆(内地)通行证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeExitEntryPermitToMainlandRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeExitEntryPermitToMainlandResponse
+        /// </returns>
         public RecognizeExitEntryPermitToMainlandResponse RecognizeExitEntryPermitToMainland(RecognizeExitEntryPermitToMainlandRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeExitEntryPermitToMainlandWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 来往大陆(内地)通行证识别
-         *
-         * @param request RecognizeExitEntryPermitToMainlandRequest
-         * @return RecognizeExitEntryPermitToMainlandResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>来往大陆(内地)通行证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeExitEntryPermitToMainlandRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeExitEntryPermitToMainlandResponse
+        /// </returns>
         public async Task<RecognizeExitEntryPermitToMainlandResponse> RecognizeExitEntryPermitToMainlandAsync(RecognizeExitEntryPermitToMainlandRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeExitEntryPermitToMainlandWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 食品经营许可证
-         *
-         * @param request RecognizeFoodManageLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeFoodManageLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>食品经营许可证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeFoodManageLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeFoodManageLicenseResponse
+        /// </returns>
         public RecognizeFoodManageLicenseResponse RecognizeFoodManageLicenseWithOptions(RecognizeFoodManageLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3397,13 +4253,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeFoodManageLicenseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 食品经营许可证
-         *
-         * @param request RecognizeFoodManageLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeFoodManageLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>食品经营许可证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeFoodManageLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeFoodManageLicenseResponse
+        /// </returns>
         public async Task<RecognizeFoodManageLicenseResponse> RecognizeFoodManageLicenseWithOptionsAsync(RecognizeFoodManageLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3433,37 +4297,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeFoodManageLicenseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 食品经营许可证
-         *
-         * @param request RecognizeFoodManageLicenseRequest
-         * @return RecognizeFoodManageLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>食品经营许可证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeFoodManageLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeFoodManageLicenseResponse
+        /// </returns>
         public RecognizeFoodManageLicenseResponse RecognizeFoodManageLicense(RecognizeFoodManageLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeFoodManageLicenseWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 食品经营许可证
-         *
-         * @param request RecognizeFoodManageLicenseRequest
-         * @return RecognizeFoodManageLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>食品经营许可证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeFoodManageLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeFoodManageLicenseResponse
+        /// </returns>
         public async Task<RecognizeFoodManageLicenseResponse> RecognizeFoodManageLicenseAsync(RecognizeFoodManageLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeFoodManageLicenseWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 食品生产许可证
-         *
-         * @param request RecognizeFoodProduceLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeFoodProduceLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>食品生产许可证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeFoodProduceLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeFoodProduceLicenseResponse
+        /// </returns>
         public RecognizeFoodProduceLicenseResponse RecognizeFoodProduceLicenseWithOptions(RecognizeFoodProduceLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3493,13 +4377,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeFoodProduceLicenseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 食品生产许可证
-         *
-         * @param request RecognizeFoodProduceLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeFoodProduceLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>食品生产许可证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeFoodProduceLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeFoodProduceLicenseResponse
+        /// </returns>
         public async Task<RecognizeFoodProduceLicenseResponse> RecognizeFoodProduceLicenseWithOptionsAsync(RecognizeFoodProduceLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3529,37 +4421,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeFoodProduceLicenseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 食品生产许可证
-         *
-         * @param request RecognizeFoodProduceLicenseRequest
-         * @return RecognizeFoodProduceLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>食品生产许可证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeFoodProduceLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeFoodProduceLicenseResponse
+        /// </returns>
         public RecognizeFoodProduceLicenseResponse RecognizeFoodProduceLicense(RecognizeFoodProduceLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeFoodProduceLicenseWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 食品生产许可证
-         *
-         * @param request RecognizeFoodProduceLicenseRequest
-         * @return RecognizeFoodProduceLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>食品生产许可证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeFoodProduceLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeFoodProduceLicenseResponse
+        /// </returns>
         public async Task<RecognizeFoodProduceLicenseResponse> RecognizeFoodProduceLicenseAsync(RecognizeFoodProduceLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeFoodProduceLicenseWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 通用文字识别
-         *
-         * @param request RecognizeGeneralRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeGeneralResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用文字识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeGeneralRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeGeneralResponse
+        /// </returns>
         public RecognizeGeneralResponse RecognizeGeneralWithOptions(RecognizeGeneralRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3589,13 +4501,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeGeneralResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 通用文字识别
-         *
-         * @param request RecognizeGeneralRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeGeneralResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用文字识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeGeneralRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeGeneralResponse
+        /// </returns>
         public async Task<RecognizeGeneralResponse> RecognizeGeneralWithOptionsAsync(RecognizeGeneralRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3625,37 +4545,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeGeneralResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 通用文字识别
-         *
-         * @param request RecognizeGeneralRequest
-         * @return RecognizeGeneralResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用文字识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeGeneralRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeGeneralResponse
+        /// </returns>
         public RecognizeGeneralResponse RecognizeGeneral(RecognizeGeneralRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeGeneralWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 通用文字识别
-         *
-         * @param request RecognizeGeneralRequest
-         * @return RecognizeGeneralResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用文字识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeGeneralRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeGeneralResponse
+        /// </returns>
         public async Task<RecognizeGeneralResponse> RecognizeGeneralAsync(RecognizeGeneralRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeGeneralWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary DocMaster
-         *
-         * @param tmpReq RecognizeGeneralStructureRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeGeneralStructureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DocMaster</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RecognizeGeneralStructureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeGeneralStructureResponse
+        /// </returns>
         public RecognizeGeneralStructureResponse RecognizeGeneralStructureWithOptions(RecognizeGeneralStructureRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3695,13 +4635,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeGeneralStructureResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary DocMaster
-         *
-         * @param tmpReq RecognizeGeneralStructureRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeGeneralStructureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DocMaster</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RecognizeGeneralStructureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeGeneralStructureResponse
+        /// </returns>
         public async Task<RecognizeGeneralStructureResponse> RecognizeGeneralStructureWithOptionsAsync(RecognizeGeneralStructureRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3741,37 +4689,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeGeneralStructureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary DocMaster
-         *
-         * @param request RecognizeGeneralStructureRequest
-         * @return RecognizeGeneralStructureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DocMaster</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeGeneralStructureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeGeneralStructureResponse
+        /// </returns>
         public RecognizeGeneralStructureResponse RecognizeGeneralStructure(RecognizeGeneralStructureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeGeneralStructureWithOptions(request, runtime);
         }
 
-        /**
-         * @summary DocMaster
-         *
-         * @param request RecognizeGeneralStructureRequest
-         * @return RecognizeGeneralStructureResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DocMaster</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeGeneralStructureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeGeneralStructureResponse
+        /// </returns>
         public async Task<RecognizeGeneralStructureResponse> RecognizeGeneralStructureAsync(RecognizeGeneralStructureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeGeneralStructureWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 香港身份证识别
-         *
-         * @param request RecognizeHKIdcardRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeHKIdcardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>香港身份证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHKIdcardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHKIdcardResponse
+        /// </returns>
         public RecognizeHKIdcardResponse RecognizeHKIdcardWithOptions(RecognizeHKIdcardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3801,13 +4769,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeHKIdcardResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 香港身份证识别
-         *
-         * @param request RecognizeHKIdcardRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeHKIdcardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>香港身份证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHKIdcardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHKIdcardResponse
+        /// </returns>
         public async Task<RecognizeHKIdcardResponse> RecognizeHKIdcardWithOptionsAsync(RecognizeHKIdcardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3837,37 +4813,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeHKIdcardResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 香港身份证识别
-         *
-         * @param request RecognizeHKIdcardRequest
-         * @return RecognizeHKIdcardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>香港身份证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHKIdcardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHKIdcardResponse
+        /// </returns>
         public RecognizeHKIdcardResponse RecognizeHKIdcard(RecognizeHKIdcardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeHKIdcardWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 香港身份证识别
-         *
-         * @param request RecognizeHKIdcardRequest
-         * @return RecognizeHKIdcardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>香港身份证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHKIdcardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHKIdcardResponse
+        /// </returns>
         public async Task<RecognizeHKIdcardResponse> RecognizeHKIdcardAsync(RecognizeHKIdcardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeHKIdcardWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 通用手写体识别
-         *
-         * @param request RecognizeHandwritingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeHandwritingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用手写体识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHandwritingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHandwritingResponse
+        /// </returns>
         public RecognizeHandwritingResponse RecognizeHandwritingWithOptions(RecognizeHandwritingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3917,13 +4913,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeHandwritingResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 通用手写体识别
-         *
-         * @param request RecognizeHandwritingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeHandwritingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用手写体识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHandwritingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHandwritingResponse
+        /// </returns>
         public async Task<RecognizeHandwritingResponse> RecognizeHandwritingWithOptionsAsync(RecognizeHandwritingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3973,37 +4977,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeHandwritingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 通用手写体识别
-         *
-         * @param request RecognizeHandwritingRequest
-         * @return RecognizeHandwritingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用手写体识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHandwritingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHandwritingResponse
+        /// </returns>
         public RecognizeHandwritingResponse RecognizeHandwriting(RecognizeHandwritingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeHandwritingWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 通用手写体识别
-         *
-         * @param request RecognizeHandwritingRequest
-         * @return RecognizeHandwritingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用手写体识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHandwritingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHandwritingResponse
+        /// </returns>
         public async Task<RecognizeHandwritingResponse> RecognizeHandwritingAsync(RecognizeHandwritingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeHandwritingWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 防疫健康码识别
-         *
-         * @param request RecognizeHealthCodeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeHealthCodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>防疫健康码识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHealthCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHealthCodeResponse
+        /// </returns>
         public RecognizeHealthCodeResponse RecognizeHealthCodeWithOptions(RecognizeHealthCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4033,13 +5057,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeHealthCodeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 防疫健康码识别
-         *
-         * @param request RecognizeHealthCodeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeHealthCodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>防疫健康码识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHealthCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHealthCodeResponse
+        /// </returns>
         public async Task<RecognizeHealthCodeResponse> RecognizeHealthCodeWithOptionsAsync(RecognizeHealthCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4069,37 +5101,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeHealthCodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 防疫健康码识别
-         *
-         * @param request RecognizeHealthCodeRequest
-         * @return RecognizeHealthCodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>防疫健康码识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHealthCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHealthCodeResponse
+        /// </returns>
         public RecognizeHealthCodeResponse RecognizeHealthCode(RecognizeHealthCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeHealthCodeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 防疫健康码识别
-         *
-         * @param request RecognizeHealthCodeRequest
-         * @return RecognizeHealthCodeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>防疫健康码识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHealthCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHealthCodeResponse
+        /// </returns>
         public async Task<RecognizeHealthCodeResponse> RecognizeHealthCodeAsync(RecognizeHealthCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeHealthCodeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 酒店流水识别
-         *
-         * @param request RecognizeHotelConsumeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeHotelConsumeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>酒店流水识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHotelConsumeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHotelConsumeResponse
+        /// </returns>
         public RecognizeHotelConsumeResponse RecognizeHotelConsumeWithOptions(RecognizeHotelConsumeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4129,13 +5181,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeHotelConsumeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 酒店流水识别
-         *
-         * @param request RecognizeHotelConsumeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeHotelConsumeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>酒店流水识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHotelConsumeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHotelConsumeResponse
+        /// </returns>
         public async Task<RecognizeHotelConsumeResponse> RecognizeHotelConsumeWithOptionsAsync(RecognizeHotelConsumeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4165,37 +5225,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeHotelConsumeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 酒店流水识别
-         *
-         * @param request RecognizeHotelConsumeRequest
-         * @return RecognizeHotelConsumeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>酒店流水识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHotelConsumeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHotelConsumeResponse
+        /// </returns>
         public RecognizeHotelConsumeResponse RecognizeHotelConsume(RecognizeHotelConsumeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeHotelConsumeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 酒店流水识别
-         *
-         * @param request RecognizeHotelConsumeRequest
-         * @return RecognizeHotelConsumeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>酒店流水识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHotelConsumeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHotelConsumeResponse
+        /// </returns>
         public async Task<RecognizeHotelConsumeResponse> RecognizeHotelConsumeAsync(RecognizeHotelConsumeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeHotelConsumeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 户口本识别
-         *
-         * @param request RecognizeHouseholdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeHouseholdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>户口本识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHouseholdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHouseholdResponse
+        /// </returns>
         public RecognizeHouseholdResponse RecognizeHouseholdWithOptions(RecognizeHouseholdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4229,13 +5309,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeHouseholdResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 户口本识别
-         *
-         * @param request RecognizeHouseholdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeHouseholdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>户口本识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHouseholdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHouseholdResponse
+        /// </returns>
         public async Task<RecognizeHouseholdResponse> RecognizeHouseholdWithOptionsAsync(RecognizeHouseholdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4269,37 +5357,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeHouseholdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 户口本识别
-         *
-         * @param request RecognizeHouseholdRequest
-         * @return RecognizeHouseholdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>户口本识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHouseholdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHouseholdResponse
+        /// </returns>
         public RecognizeHouseholdResponse RecognizeHousehold(RecognizeHouseholdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeHouseholdWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 户口本识别
-         *
-         * @param request RecognizeHouseholdRequest
-         * @return RecognizeHouseholdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>户口本识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeHouseholdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeHouseholdResponse
+        /// </returns>
         public async Task<RecognizeHouseholdResponse> RecognizeHouseholdAsync(RecognizeHouseholdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeHouseholdWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 身份证识别
-         *
-         * @param request RecognizeIdcardRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeIdcardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>身份证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeIdcardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeIdcardResponse
+        /// </returns>
         public RecognizeIdcardResponse RecognizeIdcardWithOptions(RecognizeIdcardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4337,13 +5445,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeIdcardResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 身份证识别
-         *
-         * @param request RecognizeIdcardRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeIdcardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>身份证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeIdcardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeIdcardResponse
+        /// </returns>
         public async Task<RecognizeIdcardResponse> RecognizeIdcardWithOptionsAsync(RecognizeIdcardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4381,37 +5497,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeIdcardResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 身份证识别
-         *
-         * @param request RecognizeIdcardRequest
-         * @return RecognizeIdcardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>身份证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeIdcardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeIdcardResponse
+        /// </returns>
         public RecognizeIdcardResponse RecognizeIdcard(RecognizeIdcardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeIdcardWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 身份证识别
-         *
-         * @param request RecognizeIdcardRequest
-         * @return RecognizeIdcardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>身份证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeIdcardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeIdcardResponse
+        /// </returns>
         public async Task<RecognizeIdcardResponse> RecognizeIdcardAsync(RecognizeIdcardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeIdcardWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 国际营业执照识别
-         *
-         * @param request RecognizeInternationalBusinessLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeInternationalBusinessLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际营业执照识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeInternationalBusinessLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeInternationalBusinessLicenseResponse
+        /// </returns>
         public RecognizeInternationalBusinessLicenseResponse RecognizeInternationalBusinessLicenseWithOptions(RecognizeInternationalBusinessLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4445,13 +5581,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeInternationalBusinessLicenseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 国际营业执照识别
-         *
-         * @param request RecognizeInternationalBusinessLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeInternationalBusinessLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际营业执照识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeInternationalBusinessLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeInternationalBusinessLicenseResponse
+        /// </returns>
         public async Task<RecognizeInternationalBusinessLicenseResponse> RecognizeInternationalBusinessLicenseWithOptionsAsync(RecognizeInternationalBusinessLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4485,37 +5629,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeInternationalBusinessLicenseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 国际营业执照识别
-         *
-         * @param request RecognizeInternationalBusinessLicenseRequest
-         * @return RecognizeInternationalBusinessLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际营业执照识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeInternationalBusinessLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeInternationalBusinessLicenseResponse
+        /// </returns>
         public RecognizeInternationalBusinessLicenseResponse RecognizeInternationalBusinessLicense(RecognizeInternationalBusinessLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeInternationalBusinessLicenseWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 国际营业执照识别
-         *
-         * @param request RecognizeInternationalBusinessLicenseRequest
-         * @return RecognizeInternationalBusinessLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际营业执照识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeInternationalBusinessLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeInternationalBusinessLicenseResponse
+        /// </returns>
         public async Task<RecognizeInternationalBusinessLicenseResponse> RecognizeInternationalBusinessLicenseAsync(RecognizeInternationalBusinessLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeInternationalBusinessLicenseWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 国际身份证识别
-         *
-         * @param request RecognizeInternationalIdcardRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeInternationalIdcardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际身份证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeInternationalIdcardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeInternationalIdcardResponse
+        /// </returns>
         public RecognizeInternationalIdcardResponse RecognizeInternationalIdcardWithOptions(RecognizeInternationalIdcardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4549,13 +5713,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeInternationalIdcardResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 国际身份证识别
-         *
-         * @param request RecognizeInternationalIdcardRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeInternationalIdcardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际身份证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeInternationalIdcardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeInternationalIdcardResponse
+        /// </returns>
         public async Task<RecognizeInternationalIdcardResponse> RecognizeInternationalIdcardWithOptionsAsync(RecognizeInternationalIdcardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4589,37 +5761,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeInternationalIdcardResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 国际身份证识别
-         *
-         * @param request RecognizeInternationalIdcardRequest
-         * @return RecognizeInternationalIdcardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际身份证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeInternationalIdcardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeInternationalIdcardResponse
+        /// </returns>
         public RecognizeInternationalIdcardResponse RecognizeInternationalIdcard(RecognizeInternationalIdcardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeInternationalIdcardWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 国际身份证识别
-         *
-         * @param request RecognizeInternationalIdcardRequest
-         * @return RecognizeInternationalIdcardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际身份证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeInternationalIdcardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeInternationalIdcardResponse
+        /// </returns>
         public async Task<RecognizeInternationalIdcardResponse> RecognizeInternationalIdcardAsync(RecognizeInternationalIdcardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeInternationalIdcardWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 增值税发票识别
-         *
-         * @param request RecognizeInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增值税发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeInvoiceResponse
+        /// </returns>
         public RecognizeInvoiceResponse RecognizeInvoiceWithOptions(RecognizeInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4653,13 +5845,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeInvoiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 增值税发票识别
-         *
-         * @param request RecognizeInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增值税发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeInvoiceResponse
+        /// </returns>
         public async Task<RecognizeInvoiceResponse> RecognizeInvoiceWithOptionsAsync(RecognizeInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4693,37 +5893,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeInvoiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 增值税发票识别
-         *
-         * @param request RecognizeInvoiceRequest
-         * @return RecognizeInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增值税发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeInvoiceResponse
+        /// </returns>
         public RecognizeInvoiceResponse RecognizeInvoice(RecognizeInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeInvoiceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 增值税发票识别
-         *
-         * @param request RecognizeInvoiceRequest
-         * @return RecognizeInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增值税发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeInvoiceResponse
+        /// </returns>
         public async Task<RecognizeInvoiceResponse> RecognizeInvoiceAsync(RecognizeInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeInvoiceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 日语识别
-         *
-         * @param request RecognizeJanpaneseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeJanpaneseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>日语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeJanpaneseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeJanpaneseResponse
+        /// </returns>
         public RecognizeJanpaneseResponse RecognizeJanpaneseWithOptions(RecognizeJanpaneseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4765,13 +5985,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeJanpaneseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 日语识别
-         *
-         * @param request RecognizeJanpaneseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeJanpaneseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>日语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeJanpaneseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeJanpaneseResponse
+        /// </returns>
         public async Task<RecognizeJanpaneseResponse> RecognizeJanpaneseWithOptionsAsync(RecognizeJanpaneseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4813,37 +6041,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeJanpaneseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 日语识别
-         *
-         * @param request RecognizeJanpaneseRequest
-         * @return RecognizeJanpaneseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>日语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeJanpaneseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeJanpaneseResponse
+        /// </returns>
         public RecognizeJanpaneseResponse RecognizeJanpanese(RecognizeJanpaneseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeJanpaneseWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 日语识别
-         *
-         * @param request RecognizeJanpaneseRequest
-         * @return RecognizeJanpaneseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>日语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeJanpaneseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeJanpaneseResponse
+        /// </returns>
         public async Task<RecognizeJanpaneseResponse> RecognizeJanpaneseAsync(RecognizeJanpaneseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeJanpaneseWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 韩语识别
-         *
-         * @param request RecognizeKoreanRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeKoreanResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>韩语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeKoreanRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeKoreanResponse
+        /// </returns>
         public RecognizeKoreanResponse RecognizeKoreanWithOptions(RecognizeKoreanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4885,13 +6133,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeKoreanResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 韩语识别
-         *
-         * @param request RecognizeKoreanRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeKoreanResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>韩语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeKoreanRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeKoreanResponse
+        /// </returns>
         public async Task<RecognizeKoreanResponse> RecognizeKoreanWithOptionsAsync(RecognizeKoreanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4933,37 +6189,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeKoreanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 韩语识别
-         *
-         * @param request RecognizeKoreanRequest
-         * @return RecognizeKoreanResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>韩语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeKoreanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeKoreanResponse
+        /// </returns>
         public RecognizeKoreanResponse RecognizeKorean(RecognizeKoreanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeKoreanWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 韩语识别
-         *
-         * @param request RecognizeKoreanRequest
-         * @return RecognizeKoreanResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>韩语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeKoreanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeKoreanResponse
+        /// </returns>
         public async Task<RecognizeKoreanResponse> RecognizeKoreanAsync(RecognizeKoreanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeKoreanWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 拉丁语识别
-         *
-         * @param request RecognizeLatinRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeLatinResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拉丁语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeLatinRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeLatinResponse
+        /// </returns>
         public RecognizeLatinResponse RecognizeLatinWithOptions(RecognizeLatinRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5005,13 +6281,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeLatinResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 拉丁语识别
-         *
-         * @param request RecognizeLatinRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeLatinResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拉丁语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeLatinRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeLatinResponse
+        /// </returns>
         public async Task<RecognizeLatinResponse> RecognizeLatinWithOptionsAsync(RecognizeLatinRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5053,37 +6337,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeLatinResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 拉丁语识别
-         *
-         * @param request RecognizeLatinRequest
-         * @return RecognizeLatinResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拉丁语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeLatinRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeLatinResponse
+        /// </returns>
         public RecognizeLatinResponse RecognizeLatin(RecognizeLatinRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeLatinWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 拉丁语识别
-         *
-         * @param request RecognizeLatinRequest
-         * @return RecognizeLatinResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拉丁语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeLatinRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeLatinResponse
+        /// </returns>
         public async Task<RecognizeLatinResponse> RecognizeLatinAsync(RecognizeLatinRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeLatinWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 医疗器械经营许可证
-         *
-         * @param request RecognizeMedicalDeviceManageLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeMedicalDeviceManageLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>医疗器械经营许可证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeMedicalDeviceManageLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeMedicalDeviceManageLicenseResponse
+        /// </returns>
         public RecognizeMedicalDeviceManageLicenseResponse RecognizeMedicalDeviceManageLicenseWithOptions(RecognizeMedicalDeviceManageLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5113,13 +6417,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeMedicalDeviceManageLicenseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 医疗器械经营许可证
-         *
-         * @param request RecognizeMedicalDeviceManageLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeMedicalDeviceManageLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>医疗器械经营许可证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeMedicalDeviceManageLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeMedicalDeviceManageLicenseResponse
+        /// </returns>
         public async Task<RecognizeMedicalDeviceManageLicenseResponse> RecognizeMedicalDeviceManageLicenseWithOptionsAsync(RecognizeMedicalDeviceManageLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5149,37 +6461,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeMedicalDeviceManageLicenseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 医疗器械经营许可证
-         *
-         * @param request RecognizeMedicalDeviceManageLicenseRequest
-         * @return RecognizeMedicalDeviceManageLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>医疗器械经营许可证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeMedicalDeviceManageLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeMedicalDeviceManageLicenseResponse
+        /// </returns>
         public RecognizeMedicalDeviceManageLicenseResponse RecognizeMedicalDeviceManageLicense(RecognizeMedicalDeviceManageLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeMedicalDeviceManageLicenseWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 医疗器械经营许可证
-         *
-         * @param request RecognizeMedicalDeviceManageLicenseRequest
-         * @return RecognizeMedicalDeviceManageLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>医疗器械经营许可证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeMedicalDeviceManageLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeMedicalDeviceManageLicenseResponse
+        /// </returns>
         public async Task<RecognizeMedicalDeviceManageLicenseResponse> RecognizeMedicalDeviceManageLicenseAsync(RecognizeMedicalDeviceManageLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeMedicalDeviceManageLicenseWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 医疗器械生产许可证
-         *
-         * @param request RecognizeMedicalDeviceProduceLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeMedicalDeviceProduceLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>医疗器械生产许可证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeMedicalDeviceProduceLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeMedicalDeviceProduceLicenseResponse
+        /// </returns>
         public RecognizeMedicalDeviceProduceLicenseResponse RecognizeMedicalDeviceProduceLicenseWithOptions(RecognizeMedicalDeviceProduceLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5209,13 +6541,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeMedicalDeviceProduceLicenseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 医疗器械生产许可证
-         *
-         * @param request RecognizeMedicalDeviceProduceLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeMedicalDeviceProduceLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>医疗器械生产许可证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeMedicalDeviceProduceLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeMedicalDeviceProduceLicenseResponse
+        /// </returns>
         public async Task<RecognizeMedicalDeviceProduceLicenseResponse> RecognizeMedicalDeviceProduceLicenseWithOptionsAsync(RecognizeMedicalDeviceProduceLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5245,37 +6585,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeMedicalDeviceProduceLicenseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 医疗器械生产许可证
-         *
-         * @param request RecognizeMedicalDeviceProduceLicenseRequest
-         * @return RecognizeMedicalDeviceProduceLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>医疗器械生产许可证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeMedicalDeviceProduceLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeMedicalDeviceProduceLicenseResponse
+        /// </returns>
         public RecognizeMedicalDeviceProduceLicenseResponse RecognizeMedicalDeviceProduceLicense(RecognizeMedicalDeviceProduceLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeMedicalDeviceProduceLicenseWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 医疗器械生产许可证
-         *
-         * @param request RecognizeMedicalDeviceProduceLicenseRequest
-         * @return RecognizeMedicalDeviceProduceLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>医疗器械生产许可证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeMedicalDeviceProduceLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeMedicalDeviceProduceLicenseResponse
+        /// </returns>
         public async Task<RecognizeMedicalDeviceProduceLicenseResponse> RecognizeMedicalDeviceProduceLicenseAsync(RecognizeMedicalDeviceProduceLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeMedicalDeviceProduceLicenseWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 混贴发票识别
-         *
-         * @param request RecognizeMixedInvoicesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeMixedInvoicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>混贴发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeMixedInvoicesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeMixedInvoicesResponse
+        /// </returns>
         public RecognizeMixedInvoicesResponse RecognizeMixedInvoicesWithOptions(RecognizeMixedInvoicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5313,13 +6673,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeMixedInvoicesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 混贴发票识别
-         *
-         * @param request RecognizeMixedInvoicesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeMixedInvoicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>混贴发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeMixedInvoicesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeMixedInvoicesResponse
+        /// </returns>
         public async Task<RecognizeMixedInvoicesResponse> RecognizeMixedInvoicesWithOptionsAsync(RecognizeMixedInvoicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5357,37 +6725,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeMixedInvoicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 混贴发票识别
-         *
-         * @param request RecognizeMixedInvoicesRequest
-         * @return RecognizeMixedInvoicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>混贴发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeMixedInvoicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeMixedInvoicesResponse
+        /// </returns>
         public RecognizeMixedInvoicesResponse RecognizeMixedInvoices(RecognizeMixedInvoicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeMixedInvoicesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 混贴发票识别
-         *
-         * @param request RecognizeMixedInvoicesRequest
-         * @return RecognizeMixedInvoicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>混贴发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeMixedInvoicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeMixedInvoicesResponse
+        /// </returns>
         public async Task<RecognizeMixedInvoicesResponse> RecognizeMixedInvoicesAsync(RecognizeMixedInvoicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeMixedInvoicesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 通用多语言识别
-         *
-         * @param tmpReq RecognizeMultiLanguageRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeMultiLanguageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用多语言识别</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RecognizeMultiLanguageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeMultiLanguageResponse
+        /// </returns>
         public RecognizeMultiLanguageResponse RecognizeMultiLanguageWithOptions(RecognizeMultiLanguageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5443,13 +6831,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeMultiLanguageResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 通用多语言识别
-         *
-         * @param tmpReq RecognizeMultiLanguageRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeMultiLanguageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用多语言识别</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RecognizeMultiLanguageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeMultiLanguageResponse
+        /// </returns>
         public async Task<RecognizeMultiLanguageResponse> RecognizeMultiLanguageWithOptionsAsync(RecognizeMultiLanguageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5505,37 +6901,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeMultiLanguageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 通用多语言识别
-         *
-         * @param request RecognizeMultiLanguageRequest
-         * @return RecognizeMultiLanguageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用多语言识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeMultiLanguageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeMultiLanguageResponse
+        /// </returns>
         public RecognizeMultiLanguageResponse RecognizeMultiLanguage(RecognizeMultiLanguageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeMultiLanguageWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 通用多语言识别
-         *
-         * @param request RecognizeMultiLanguageRequest
-         * @return RecognizeMultiLanguageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用多语言识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeMultiLanguageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeMultiLanguageResponse
+        /// </returns>
         public async Task<RecognizeMultiLanguageResponse> RecognizeMultiLanguageAsync(RecognizeMultiLanguageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeMultiLanguageWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 非税收入票据识别
-         *
-         * @param request RecognizeNonTaxInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeNonTaxInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>非税收入票据识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeNonTaxInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeNonTaxInvoiceResponse
+        /// </returns>
         public RecognizeNonTaxInvoiceResponse RecognizeNonTaxInvoiceWithOptions(RecognizeNonTaxInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5565,13 +6981,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeNonTaxInvoiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 非税收入票据识别
-         *
-         * @param request RecognizeNonTaxInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeNonTaxInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>非税收入票据识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeNonTaxInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeNonTaxInvoiceResponse
+        /// </returns>
         public async Task<RecognizeNonTaxInvoiceResponse> RecognizeNonTaxInvoiceWithOptionsAsync(RecognizeNonTaxInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5601,37 +7025,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeNonTaxInvoiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 非税收入票据识别
-         *
-         * @param request RecognizeNonTaxInvoiceRequest
-         * @return RecognizeNonTaxInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>非税收入票据识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeNonTaxInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeNonTaxInvoiceResponse
+        /// </returns>
         public RecognizeNonTaxInvoiceResponse RecognizeNonTaxInvoice(RecognizeNonTaxInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeNonTaxInvoiceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 非税收入票据识别
-         *
-         * @param request RecognizeNonTaxInvoiceRequest
-         * @return RecognizeNonTaxInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>非税收入票据识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeNonTaxInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeNonTaxInvoiceResponse
+        /// </returns>
         public async Task<RecognizeNonTaxInvoiceResponse> RecognizeNonTaxInvoiceAsync(RecognizeNonTaxInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeNonTaxInvoiceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 护照识别
-         *
-         * @param request RecognizePassportRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizePassportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>护照识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizePassportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizePassportResponse
+        /// </returns>
         public RecognizePassportResponse RecognizePassportWithOptions(RecognizePassportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5661,13 +7105,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizePassportResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 护照识别
-         *
-         * @param request RecognizePassportRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizePassportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>护照识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizePassportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizePassportResponse
+        /// </returns>
         public async Task<RecognizePassportResponse> RecognizePassportWithOptionsAsync(RecognizePassportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5697,37 +7149,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizePassportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 护照识别
-         *
-         * @param request RecognizePassportRequest
-         * @return RecognizePassportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>护照识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizePassportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizePassportResponse
+        /// </returns>
         public RecognizePassportResponse RecognizePassport(RecognizePassportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizePassportWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 护照识别
-         *
-         * @param request RecognizePassportRequest
-         * @return RecognizePassportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>护照识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizePassportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizePassportResponse
+        /// </returns>
         public async Task<RecognizePassportResponse> RecognizePassportAsync(RecognizePassportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizePassportWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 支付详情页识别
-         *
-         * @param request RecognizePaymentRecordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizePaymentRecordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>支付详情页识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizePaymentRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizePaymentRecordResponse
+        /// </returns>
         public RecognizePaymentRecordResponse RecognizePaymentRecordWithOptions(RecognizePaymentRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5757,13 +7229,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizePaymentRecordResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 支付详情页识别
-         *
-         * @param request RecognizePaymentRecordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizePaymentRecordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>支付详情页识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizePaymentRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizePaymentRecordResponse
+        /// </returns>
         public async Task<RecognizePaymentRecordResponse> RecognizePaymentRecordWithOptionsAsync(RecognizePaymentRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5793,37 +7273,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizePaymentRecordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 支付详情页识别
-         *
-         * @param request RecognizePaymentRecordRequest
-         * @return RecognizePaymentRecordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>支付详情页识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizePaymentRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizePaymentRecordResponse
+        /// </returns>
         public RecognizePaymentRecordResponse RecognizePaymentRecord(RecognizePaymentRecordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizePaymentRecordWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 支付详情页识别
-         *
-         * @param request RecognizePaymentRecordRequest
-         * @return RecognizePaymentRecordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>支付详情页识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizePaymentRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizePaymentRecordResponse
+        /// </returns>
         public async Task<RecognizePaymentRecordResponse> RecognizePaymentRecordAsync(RecognizePaymentRecordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizePaymentRecordWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 电商订单页识别
-         *
-         * @param request RecognizePurchaseRecordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizePurchaseRecordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>电商订单页识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizePurchaseRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizePurchaseRecordResponse
+        /// </returns>
         public RecognizePurchaseRecordResponse RecognizePurchaseRecordWithOptions(RecognizePurchaseRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5857,13 +7357,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizePurchaseRecordResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 电商订单页识别
-         *
-         * @param request RecognizePurchaseRecordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizePurchaseRecordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>电商订单页识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizePurchaseRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizePurchaseRecordResponse
+        /// </returns>
         public async Task<RecognizePurchaseRecordResponse> RecognizePurchaseRecordWithOptionsAsync(RecognizePurchaseRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5897,37 +7405,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizePurchaseRecordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 电商订单页识别
-         *
-         * @param request RecognizePurchaseRecordRequest
-         * @return RecognizePurchaseRecordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>电商订单页识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizePurchaseRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizePurchaseRecordResponse
+        /// </returns>
         public RecognizePurchaseRecordResponse RecognizePurchaseRecord(RecognizePurchaseRecordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizePurchaseRecordWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 电商订单页识别
-         *
-         * @param request RecognizePurchaseRecordRequest
-         * @return RecognizePurchaseRecordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>电商订单页识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizePurchaseRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizePurchaseRecordResponse
+        /// </returns>
         public async Task<RecognizePurchaseRecordResponse> RecognizePurchaseRecordAsync(RecognizePurchaseRecordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizePurchaseRecordWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 定额发票
-         *
-         * @param request RecognizeQuotaInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeQuotaInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>定额发票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeQuotaInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeQuotaInvoiceResponse
+        /// </returns>
         public RecognizeQuotaInvoiceResponse RecognizeQuotaInvoiceWithOptions(RecognizeQuotaInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5957,13 +7485,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeQuotaInvoiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 定额发票
-         *
-         * @param request RecognizeQuotaInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeQuotaInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>定额发票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeQuotaInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeQuotaInvoiceResponse
+        /// </returns>
         public async Task<RecognizeQuotaInvoiceResponse> RecognizeQuotaInvoiceWithOptionsAsync(RecognizeQuotaInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5993,37 +7529,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeQuotaInvoiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 定额发票
-         *
-         * @param request RecognizeQuotaInvoiceRequest
-         * @return RecognizeQuotaInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>定额发票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeQuotaInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeQuotaInvoiceResponse
+        /// </returns>
         public RecognizeQuotaInvoiceResponse RecognizeQuotaInvoice(RecognizeQuotaInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeQuotaInvoiceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 定额发票
-         *
-         * @param request RecognizeQuotaInvoiceRequest
-         * @return RecognizeQuotaInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>定额发票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeQuotaInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeQuotaInvoiceResponse
+        /// </returns>
         public async Task<RecognizeQuotaInvoiceResponse> RecognizeQuotaInvoiceAsync(RecognizeQuotaInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeQuotaInvoiceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 网约车行程单识别
-         *
-         * @param request RecognizeRideHailingItineraryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeRideHailingItineraryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>网约车行程单识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeRideHailingItineraryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeRideHailingItineraryResponse
+        /// </returns>
         public RecognizeRideHailingItineraryResponse RecognizeRideHailingItineraryWithOptions(RecognizeRideHailingItineraryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6053,13 +7609,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeRideHailingItineraryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 网约车行程单识别
-         *
-         * @param request RecognizeRideHailingItineraryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeRideHailingItineraryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>网约车行程单识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeRideHailingItineraryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeRideHailingItineraryResponse
+        /// </returns>
         public async Task<RecognizeRideHailingItineraryResponse> RecognizeRideHailingItineraryWithOptionsAsync(RecognizeRideHailingItineraryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6089,37 +7653,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeRideHailingItineraryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 网约车行程单识别
-         *
-         * @param request RecognizeRideHailingItineraryRequest
-         * @return RecognizeRideHailingItineraryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>网约车行程单识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeRideHailingItineraryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeRideHailingItineraryResponse
+        /// </returns>
         public RecognizeRideHailingItineraryResponse RecognizeRideHailingItinerary(RecognizeRideHailingItineraryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeRideHailingItineraryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 网约车行程单识别
-         *
-         * @param request RecognizeRideHailingItineraryRequest
-         * @return RecognizeRideHailingItineraryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>网约车行程单识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeRideHailingItineraryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeRideHailingItineraryResponse
+        /// </returns>
         public async Task<RecognizeRideHailingItineraryResponse> RecognizeRideHailingItineraryAsync(RecognizeRideHailingItineraryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeRideHailingItineraryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 增值税发票卷票
-         *
-         * @param request RecognizeRollTicketRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeRollTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增值税发票卷票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeRollTicketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeRollTicketResponse
+        /// </returns>
         public RecognizeRollTicketResponse RecognizeRollTicketWithOptions(RecognizeRollTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6149,13 +7733,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeRollTicketResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 增值税发票卷票
-         *
-         * @param request RecognizeRollTicketRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeRollTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增值税发票卷票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeRollTicketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeRollTicketResponse
+        /// </returns>
         public async Task<RecognizeRollTicketResponse> RecognizeRollTicketWithOptionsAsync(RecognizeRollTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6185,37 +7777,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeRollTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 增值税发票卷票
-         *
-         * @param request RecognizeRollTicketRequest
-         * @return RecognizeRollTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增值税发票卷票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeRollTicketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeRollTicketResponse
+        /// </returns>
         public RecognizeRollTicketResponse RecognizeRollTicket(RecognizeRollTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeRollTicketWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 增值税发票卷票
-         *
-         * @param request RecognizeRollTicketRequest
-         * @return RecognizeRollTicketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增值税发票卷票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeRollTicketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeRollTicketResponse
+        /// </returns>
         public async Task<RecognizeRollTicketResponse> RecognizeRollTicketAsync(RecognizeRollTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeRollTicketWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 俄语识别
-         *
-         * @param request RecognizeRussianRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeRussianResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>俄语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeRussianRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeRussianResponse
+        /// </returns>
         public RecognizeRussianResponse RecognizeRussianWithOptions(RecognizeRussianRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6257,13 +7869,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeRussianResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 俄语识别
-         *
-         * @param request RecognizeRussianRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeRussianResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>俄语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeRussianRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeRussianResponse
+        /// </returns>
         public async Task<RecognizeRussianResponse> RecognizeRussianWithOptionsAsync(RecognizeRussianRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6305,37 +7925,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeRussianResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 俄语识别
-         *
-         * @param request RecognizeRussianRequest
-         * @return RecognizeRussianResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>俄语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeRussianRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeRussianResponse
+        /// </returns>
         public RecognizeRussianResponse RecognizeRussian(RecognizeRussianRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeRussianWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 俄语识别
-         *
-         * @param request RecognizeRussianRequest
-         * @return RecognizeRussianResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>俄语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeRussianRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeRussianResponse
+        /// </returns>
         public async Task<RecognizeRussianResponse> RecognizeRussianAsync(RecognizeRussianRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeRussianWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 购物小票识别
-         *
-         * @param request RecognizeShoppingReceiptRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeShoppingReceiptResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>购物小票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeShoppingReceiptRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeShoppingReceiptResponse
+        /// </returns>
         public RecognizeShoppingReceiptResponse RecognizeShoppingReceiptWithOptions(RecognizeShoppingReceiptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6365,13 +8005,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeShoppingReceiptResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 购物小票识别
-         *
-         * @param request RecognizeShoppingReceiptRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeShoppingReceiptResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>购物小票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeShoppingReceiptRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeShoppingReceiptResponse
+        /// </returns>
         public async Task<RecognizeShoppingReceiptResponse> RecognizeShoppingReceiptWithOptionsAsync(RecognizeShoppingReceiptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6401,37 +8049,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeShoppingReceiptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 购物小票识别
-         *
-         * @param request RecognizeShoppingReceiptRequest
-         * @return RecognizeShoppingReceiptResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>购物小票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeShoppingReceiptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeShoppingReceiptResponse
+        /// </returns>
         public RecognizeShoppingReceiptResponse RecognizeShoppingReceipt(RecognizeShoppingReceiptRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeShoppingReceiptWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 购物小票识别
-         *
-         * @param request RecognizeShoppingReceiptRequest
-         * @return RecognizeShoppingReceiptResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>购物小票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeShoppingReceiptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeShoppingReceiptResponse
+        /// </returns>
         public async Task<RecognizeShoppingReceiptResponse> RecognizeShoppingReceiptAsync(RecognizeShoppingReceiptRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeShoppingReceiptWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 社会保障卡识别
-         *
-         * @param request RecognizeSocialSecurityCardRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeSocialSecurityCardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>社会保障卡识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeSocialSecurityCardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeSocialSecurityCardResponse
+        /// </returns>
         public RecognizeSocialSecurityCardResponse RecognizeSocialSecurityCardWithOptions(RecognizeSocialSecurityCardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6461,13 +8129,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeSocialSecurityCardResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 社会保障卡识别
-         *
-         * @param request RecognizeSocialSecurityCardRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeSocialSecurityCardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>社会保障卡识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeSocialSecurityCardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeSocialSecurityCardResponse
+        /// </returns>
         public async Task<RecognizeSocialSecurityCardResponse> RecognizeSocialSecurityCardWithOptionsAsync(RecognizeSocialSecurityCardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6497,37 +8173,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeSocialSecurityCardResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 社会保障卡识别
-         *
-         * @param request RecognizeSocialSecurityCardRequest
-         * @return RecognizeSocialSecurityCardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>社会保障卡识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeSocialSecurityCardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeSocialSecurityCardResponse
+        /// </returns>
         public RecognizeSocialSecurityCardResponse RecognizeSocialSecurityCard(RecognizeSocialSecurityCardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeSocialSecurityCardWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 社会保障卡识别
-         *
-         * @param request RecognizeSocialSecurityCardRequest
-         * @return RecognizeSocialSecurityCardResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>社会保障卡识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeSocialSecurityCardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeSocialSecurityCardResponse
+        /// </returns>
         public async Task<RecognizeSocialSecurityCardResponse> RecognizeSocialSecurityCardAsync(RecognizeSocialSecurityCardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeSocialSecurityCardWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 社保卡识别
-         *
-         * @param request RecognizeSocialSecurityCardVersionIIRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeSocialSecurityCardVersionIIResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>社保卡识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeSocialSecurityCardVersionIIRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeSocialSecurityCardVersionIIResponse
+        /// </returns>
         public RecognizeSocialSecurityCardVersionIIResponse RecognizeSocialSecurityCardVersionIIWithOptions(RecognizeSocialSecurityCardVersionIIRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6557,13 +8253,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeSocialSecurityCardVersionIIResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 社保卡识别
-         *
-         * @param request RecognizeSocialSecurityCardVersionIIRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeSocialSecurityCardVersionIIResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>社保卡识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeSocialSecurityCardVersionIIRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeSocialSecurityCardVersionIIResponse
+        /// </returns>
         public async Task<RecognizeSocialSecurityCardVersionIIResponse> RecognizeSocialSecurityCardVersionIIWithOptionsAsync(RecognizeSocialSecurityCardVersionIIRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6593,37 +8297,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeSocialSecurityCardVersionIIResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 社保卡识别
-         *
-         * @param request RecognizeSocialSecurityCardVersionIIRequest
-         * @return RecognizeSocialSecurityCardVersionIIResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>社保卡识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeSocialSecurityCardVersionIIRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeSocialSecurityCardVersionIIResponse
+        /// </returns>
         public RecognizeSocialSecurityCardVersionIIResponse RecognizeSocialSecurityCardVersionII(RecognizeSocialSecurityCardVersionIIRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeSocialSecurityCardVersionIIWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 社保卡识别
-         *
-         * @param request RecognizeSocialSecurityCardVersionIIRequest
-         * @return RecognizeSocialSecurityCardVersionIIResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>社保卡识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeSocialSecurityCardVersionIIRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeSocialSecurityCardVersionIIResponse
+        /// </returns>
         public async Task<RecognizeSocialSecurityCardVersionIIResponse> RecognizeSocialSecurityCardVersionIIAsync(RecognizeSocialSecurityCardVersionIIRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeSocialSecurityCardVersionIIWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 表格识别
-         *
-         * @param request RecognizeTableOcrRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeTableOcrResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>表格识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTableOcrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTableOcrResponse
+        /// </returns>
         public RecognizeTableOcrResponse RecognizeTableOcrWithOptions(RecognizeTableOcrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6669,13 +8393,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeTableOcrResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 表格识别
-         *
-         * @param request RecognizeTableOcrRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeTableOcrResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>表格识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTableOcrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTableOcrResponse
+        /// </returns>
         public async Task<RecognizeTableOcrResponse> RecognizeTableOcrWithOptionsAsync(RecognizeTableOcrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6721,37 +8453,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeTableOcrResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 表格识别
-         *
-         * @param request RecognizeTableOcrRequest
-         * @return RecognizeTableOcrResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>表格识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTableOcrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTableOcrResponse
+        /// </returns>
         public RecognizeTableOcrResponse RecognizeTableOcr(RecognizeTableOcrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeTableOcrWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 表格识别
-         *
-         * @param request RecognizeTableOcrRequest
-         * @return RecognizeTableOcrResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>表格识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTableOcrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTableOcrResponse
+        /// </returns>
         public async Task<RecognizeTableOcrResponse> RecognizeTableOcrAsync(RecognizeTableOcrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeTableOcrWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 税收完税证明识别
-         *
-         * @param request RecognizeTaxClearanceCertificateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeTaxClearanceCertificateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>税收完税证明识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTaxClearanceCertificateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTaxClearanceCertificateResponse
+        /// </returns>
         public RecognizeTaxClearanceCertificateResponse RecognizeTaxClearanceCertificateWithOptions(RecognizeTaxClearanceCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6781,13 +8533,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeTaxClearanceCertificateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 税收完税证明识别
-         *
-         * @param request RecognizeTaxClearanceCertificateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeTaxClearanceCertificateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>税收完税证明识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTaxClearanceCertificateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTaxClearanceCertificateResponse
+        /// </returns>
         public async Task<RecognizeTaxClearanceCertificateResponse> RecognizeTaxClearanceCertificateWithOptionsAsync(RecognizeTaxClearanceCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6817,37 +8577,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeTaxClearanceCertificateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 税收完税证明识别
-         *
-         * @param request RecognizeTaxClearanceCertificateRequest
-         * @return RecognizeTaxClearanceCertificateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>税收完税证明识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTaxClearanceCertificateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTaxClearanceCertificateResponse
+        /// </returns>
         public RecognizeTaxClearanceCertificateResponse RecognizeTaxClearanceCertificate(RecognizeTaxClearanceCertificateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeTaxClearanceCertificateWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 税收完税证明识别
-         *
-         * @param request RecognizeTaxClearanceCertificateRequest
-         * @return RecognizeTaxClearanceCertificateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>税收完税证明识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTaxClearanceCertificateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTaxClearanceCertificateResponse
+        /// </returns>
         public async Task<RecognizeTaxClearanceCertificateResponse> RecognizeTaxClearanceCertificateAsync(RecognizeTaxClearanceCertificateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeTaxClearanceCertificateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 出租车发票
-         *
-         * @param request RecognizeTaxiInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeTaxiInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>出租车发票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTaxiInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTaxiInvoiceResponse
+        /// </returns>
         public RecognizeTaxiInvoiceResponse RecognizeTaxiInvoiceWithOptions(RecognizeTaxiInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6877,13 +8657,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeTaxiInvoiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 出租车发票
-         *
-         * @param request RecognizeTaxiInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeTaxiInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>出租车发票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTaxiInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTaxiInvoiceResponse
+        /// </returns>
         public async Task<RecognizeTaxiInvoiceResponse> RecognizeTaxiInvoiceWithOptionsAsync(RecognizeTaxiInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6913,37 +8701,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeTaxiInvoiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 出租车发票
-         *
-         * @param request RecognizeTaxiInvoiceRequest
-         * @return RecognizeTaxiInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>出租车发票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTaxiInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTaxiInvoiceResponse
+        /// </returns>
         public RecognizeTaxiInvoiceResponse RecognizeTaxiInvoice(RecognizeTaxiInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeTaxiInvoiceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 出租车发票
-         *
-         * @param request RecognizeTaxiInvoiceRequest
-         * @return RecognizeTaxiInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>出租车发票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTaxiInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTaxiInvoiceResponse
+        /// </returns>
         public async Task<RecognizeTaxiInvoiceResponse> RecognizeTaxiInvoiceAsync(RecognizeTaxiInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeTaxiInvoiceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 泰语识别
-         *
-         * @param request RecognizeThaiRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeThaiResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>泰语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeThaiRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeThaiResponse
+        /// </returns>
         public RecognizeThaiResponse RecognizeThaiWithOptions(RecognizeThaiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6985,13 +8793,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeThaiResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 泰语识别
-         *
-         * @param request RecognizeThaiRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeThaiResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>泰语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeThaiRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeThaiResponse
+        /// </returns>
         public async Task<RecognizeThaiResponse> RecognizeThaiWithOptionsAsync(RecognizeThaiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7033,37 +8849,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeThaiResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 泰语识别
-         *
-         * @param request RecognizeThaiRequest
-         * @return RecognizeThaiResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>泰语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeThaiRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeThaiResponse
+        /// </returns>
         public RecognizeThaiResponse RecognizeThai(RecognizeThaiRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeThaiWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 泰语识别
-         *
-         * @param request RecognizeThaiRequest
-         * @return RecognizeThaiResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>泰语识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeThaiRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeThaiResponse
+        /// </returns>
         public async Task<RecognizeThaiResponse> RecognizeThaiAsync(RecognizeThaiRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeThaiWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 过路过桥费发票识别
-         *
-         * @param request RecognizeTollInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeTollInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>过路过桥费发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTollInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTollInvoiceResponse
+        /// </returns>
         public RecognizeTollInvoiceResponse RecognizeTollInvoiceWithOptions(RecognizeTollInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7093,13 +8929,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeTollInvoiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 过路过桥费发票识别
-         *
-         * @param request RecognizeTollInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeTollInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>过路过桥费发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTollInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTollInvoiceResponse
+        /// </returns>
         public async Task<RecognizeTollInvoiceResponse> RecognizeTollInvoiceWithOptionsAsync(RecognizeTollInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7129,37 +8973,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeTollInvoiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 过路过桥费发票识别
-         *
-         * @param request RecognizeTollInvoiceRequest
-         * @return RecognizeTollInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>过路过桥费发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTollInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTollInvoiceResponse
+        /// </returns>
         public RecognizeTollInvoiceResponse RecognizeTollInvoice(RecognizeTollInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeTollInvoiceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 过路过桥费发票识别
-         *
-         * @param request RecognizeTollInvoiceRequest
-         * @return RecognizeTollInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>过路过桥费发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTollInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTollInvoiceResponse
+        /// </returns>
         public async Task<RecognizeTollInvoiceResponse> RecognizeTollInvoiceAsync(RecognizeTollInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeTollInvoiceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 商标注册证
-         *
-         * @param request RecognizeTradeMarkCertificationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeTradeMarkCertificationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>商标注册证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTradeMarkCertificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTradeMarkCertificationResponse
+        /// </returns>
         public RecognizeTradeMarkCertificationResponse RecognizeTradeMarkCertificationWithOptions(RecognizeTradeMarkCertificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7189,13 +9053,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeTradeMarkCertificationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 商标注册证
-         *
-         * @param request RecognizeTradeMarkCertificationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeTradeMarkCertificationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>商标注册证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTradeMarkCertificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTradeMarkCertificationResponse
+        /// </returns>
         public async Task<RecognizeTradeMarkCertificationResponse> RecognizeTradeMarkCertificationWithOptionsAsync(RecognizeTradeMarkCertificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7225,37 +9097,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeTradeMarkCertificationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 商标注册证
-         *
-         * @param request RecognizeTradeMarkCertificationRequest
-         * @return RecognizeTradeMarkCertificationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>商标注册证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTradeMarkCertificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTradeMarkCertificationResponse
+        /// </returns>
         public RecognizeTradeMarkCertificationResponse RecognizeTradeMarkCertification(RecognizeTradeMarkCertificationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeTradeMarkCertificationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 商标注册证
-         *
-         * @param request RecognizeTradeMarkCertificationRequest
-         * @return RecognizeTradeMarkCertificationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>商标注册证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTradeMarkCertificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTradeMarkCertificationResponse
+        /// </returns>
         public async Task<RecognizeTradeMarkCertificationResponse> RecognizeTradeMarkCertificationAsync(RecognizeTradeMarkCertificationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeTradeMarkCertificationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 火车票
-         *
-         * @param request RecognizeTrainInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeTrainInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>火车票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTrainInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTrainInvoiceResponse
+        /// </returns>
         public RecognizeTrainInvoiceResponse RecognizeTrainInvoiceWithOptions(RecognizeTrainInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7285,13 +9177,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeTrainInvoiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 火车票
-         *
-         * @param request RecognizeTrainInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeTrainInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>火车票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTrainInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTrainInvoiceResponse
+        /// </returns>
         public async Task<RecognizeTrainInvoiceResponse> RecognizeTrainInvoiceWithOptionsAsync(RecognizeTrainInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7321,37 +9221,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeTrainInvoiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 火车票
-         *
-         * @param request RecognizeTrainInvoiceRequest
-         * @return RecognizeTrainInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>火车票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTrainInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTrainInvoiceResponse
+        /// </returns>
         public RecognizeTrainInvoiceResponse RecognizeTrainInvoice(RecognizeTrainInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeTrainInvoiceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 火车票
-         *
-         * @param request RecognizeTrainInvoiceRequest
-         * @return RecognizeTrainInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>火车票</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeTrainInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeTrainInvoiceResponse
+        /// </returns>
         public async Task<RecognizeTrainInvoiceResponse> RecognizeTrainInvoiceAsync(RecognizeTrainInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeTrainInvoiceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 二手车统一销售发票识别
-         *
-         * @param request RecognizeUsedCarInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeUsedCarInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>二手车统一销售发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeUsedCarInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeUsedCarInvoiceResponse
+        /// </returns>
         public RecognizeUsedCarInvoiceResponse RecognizeUsedCarInvoiceWithOptions(RecognizeUsedCarInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7381,13 +9301,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeUsedCarInvoiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 二手车统一销售发票识别
-         *
-         * @param request RecognizeUsedCarInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeUsedCarInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>二手车统一销售发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeUsedCarInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeUsedCarInvoiceResponse
+        /// </returns>
         public async Task<RecognizeUsedCarInvoiceResponse> RecognizeUsedCarInvoiceWithOptionsAsync(RecognizeUsedCarInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7417,37 +9345,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeUsedCarInvoiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 二手车统一销售发票识别
-         *
-         * @param request RecognizeUsedCarInvoiceRequest
-         * @return RecognizeUsedCarInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>二手车统一销售发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeUsedCarInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeUsedCarInvoiceResponse
+        /// </returns>
         public RecognizeUsedCarInvoiceResponse RecognizeUsedCarInvoice(RecognizeUsedCarInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeUsedCarInvoiceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 二手车统一销售发票识别
-         *
-         * @param request RecognizeUsedCarInvoiceRequest
-         * @return RecognizeUsedCarInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>二手车统一销售发票识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeUsedCarInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeUsedCarInvoiceResponse
+        /// </returns>
         public async Task<RecognizeUsedCarInvoiceResponse> RecognizeUsedCarInvoiceAsync(RecognizeUsedCarInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeUsedCarInvoiceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 车辆合格证识别
-         *
-         * @param request RecognizeVehicleCertificationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeVehicleCertificationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>车辆合格证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeVehicleCertificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeVehicleCertificationResponse
+        /// </returns>
         public RecognizeVehicleCertificationResponse RecognizeVehicleCertificationWithOptions(RecognizeVehicleCertificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7477,13 +9425,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeVehicleCertificationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 车辆合格证识别
-         *
-         * @param request RecognizeVehicleCertificationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeVehicleCertificationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>车辆合格证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeVehicleCertificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeVehicleCertificationResponse
+        /// </returns>
         public async Task<RecognizeVehicleCertificationResponse> RecognizeVehicleCertificationWithOptionsAsync(RecognizeVehicleCertificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7513,37 +9469,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeVehicleCertificationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 车辆合格证识别
-         *
-         * @param request RecognizeVehicleCertificationRequest
-         * @return RecognizeVehicleCertificationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>车辆合格证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeVehicleCertificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeVehicleCertificationResponse
+        /// </returns>
         public RecognizeVehicleCertificationResponse RecognizeVehicleCertification(RecognizeVehicleCertificationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeVehicleCertificationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 车辆合格证识别
-         *
-         * @param request RecognizeVehicleCertificationRequest
-         * @return RecognizeVehicleCertificationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>车辆合格证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeVehicleCertificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeVehicleCertificationResponse
+        /// </returns>
         public async Task<RecognizeVehicleCertificationResponse> RecognizeVehicleCertificationAsync(RecognizeVehicleCertificationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeVehicleCertificationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 行驶证识别
-         *
-         * @param request RecognizeVehicleLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeVehicleLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>行驶证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeVehicleLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeVehicleLicenseResponse
+        /// </returns>
         public RecognizeVehicleLicenseResponse RecognizeVehicleLicenseWithOptions(RecognizeVehicleLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7573,13 +9549,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeVehicleLicenseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 行驶证识别
-         *
-         * @param request RecognizeVehicleLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeVehicleLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>行驶证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeVehicleLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeVehicleLicenseResponse
+        /// </returns>
         public async Task<RecognizeVehicleLicenseResponse> RecognizeVehicleLicenseWithOptionsAsync(RecognizeVehicleLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7609,37 +9593,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeVehicleLicenseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 行驶证识别
-         *
-         * @param request RecognizeVehicleLicenseRequest
-         * @return RecognizeVehicleLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>行驶证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeVehicleLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeVehicleLicenseResponse
+        /// </returns>
         public RecognizeVehicleLicenseResponse RecognizeVehicleLicense(RecognizeVehicleLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeVehicleLicenseWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 行驶证识别
-         *
-         * @param request RecognizeVehicleLicenseRequest
-         * @return RecognizeVehicleLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>行驶证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeVehicleLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeVehicleLicenseResponse
+        /// </returns>
         public async Task<RecognizeVehicleLicenseResponse> RecognizeVehicleLicenseAsync(RecognizeVehicleLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeVehicleLicenseWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 机动车注册登记证识别
-         *
-         * @param request RecognizeVehicleRegistrationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeVehicleRegistrationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机动车注册登记证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeVehicleRegistrationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeVehicleRegistrationResponse
+        /// </returns>
         public RecognizeVehicleRegistrationResponse RecognizeVehicleRegistrationWithOptions(RecognizeVehicleRegistrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7669,13 +9673,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeVehicleRegistrationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 机动车注册登记证识别
-         *
-         * @param request RecognizeVehicleRegistrationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeVehicleRegistrationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机动车注册登记证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeVehicleRegistrationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeVehicleRegistrationResponse
+        /// </returns>
         public async Task<RecognizeVehicleRegistrationResponse> RecognizeVehicleRegistrationWithOptionsAsync(RecognizeVehicleRegistrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7705,37 +9717,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeVehicleRegistrationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 机动车注册登记证识别
-         *
-         * @param request RecognizeVehicleRegistrationRequest
-         * @return RecognizeVehicleRegistrationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机动车注册登记证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeVehicleRegistrationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeVehicleRegistrationResponse
+        /// </returns>
         public RecognizeVehicleRegistrationResponse RecognizeVehicleRegistration(RecognizeVehicleRegistrationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeVehicleRegistrationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 机动车注册登记证识别
-         *
-         * @param request RecognizeVehicleRegistrationRequest
-         * @return RecognizeVehicleRegistrationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>机动车注册登记证识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeVehicleRegistrationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeVehicleRegistrationResponse
+        /// </returns>
         public async Task<RecognizeVehicleRegistrationResponse> RecognizeVehicleRegistrationAsync(RecognizeVehicleRegistrationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeVehicleRegistrationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 电子面单识别
-         *
-         * @param request RecognizeWaybillRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeWaybillResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>电子面单识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeWaybillRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeWaybillResponse
+        /// </returns>
         public RecognizeWaybillResponse RecognizeWaybillWithOptions(RecognizeWaybillRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7765,13 +9797,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeWaybillResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 电子面单识别
-         *
-         * @param request RecognizeWaybillRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecognizeWaybillResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>电子面单识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeWaybillRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeWaybillResponse
+        /// </returns>
         public async Task<RecognizeWaybillResponse> RecognizeWaybillWithOptionsAsync(RecognizeWaybillRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7801,37 +9841,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<RecognizeWaybillResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 电子面单识别
-         *
-         * @param request RecognizeWaybillRequest
-         * @return RecognizeWaybillResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>电子面单识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeWaybillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeWaybillResponse
+        /// </returns>
         public RecognizeWaybillResponse RecognizeWaybill(RecognizeWaybillRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecognizeWaybillWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 电子面单识别
-         *
-         * @param request RecognizeWaybillRequest
-         * @return RecognizeWaybillResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>电子面单识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecognizeWaybillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecognizeWaybillResponse
+        /// </returns>
         public async Task<RecognizeWaybillResponse> RecognizeWaybillAsync(RecognizeWaybillRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeWaybillWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 营业执照核验
-         *
-         * @param request VerifyBusinessLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return VerifyBusinessLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>营业执照核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyBusinessLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyBusinessLicenseResponse
+        /// </returns>
         public VerifyBusinessLicenseResponse VerifyBusinessLicenseWithOptions(VerifyBusinessLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7867,13 +9927,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<VerifyBusinessLicenseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 营业执照核验
-         *
-         * @param request VerifyBusinessLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return VerifyBusinessLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>营业执照核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyBusinessLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyBusinessLicenseResponse
+        /// </returns>
         public async Task<VerifyBusinessLicenseResponse> VerifyBusinessLicenseWithOptionsAsync(VerifyBusinessLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7909,37 +9977,57 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<VerifyBusinessLicenseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 营业执照核验
-         *
-         * @param request VerifyBusinessLicenseRequest
-         * @return VerifyBusinessLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>营业执照核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyBusinessLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyBusinessLicenseResponse
+        /// </returns>
         public VerifyBusinessLicenseResponse VerifyBusinessLicense(VerifyBusinessLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return VerifyBusinessLicenseWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 营业执照核验
-         *
-         * @param request VerifyBusinessLicenseRequest
-         * @return VerifyBusinessLicenseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>营业执照核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyBusinessLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyBusinessLicenseResponse
+        /// </returns>
         public async Task<VerifyBusinessLicenseResponse> VerifyBusinessLicenseAsync(VerifyBusinessLicenseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await VerifyBusinessLicenseWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 增值税发票核验
-         *
-         * @param request VerifyVATInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return VerifyVATInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增值税发票核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyVATInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyVATInvoiceResponse
+        /// </returns>
         public VerifyVATInvoiceResponse VerifyVATInvoiceWithOptions(VerifyVATInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7987,13 +10075,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<VerifyVATInvoiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 增值税发票核验
-         *
-         * @param request VerifyVATInvoiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return VerifyVATInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增值税发票核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyVATInvoiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyVATInvoiceResponse
+        /// </returns>
         public async Task<VerifyVATInvoiceResponse> VerifyVATInvoiceWithOptionsAsync(VerifyVATInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8041,24 +10137,36 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return TeaModel.ToObject<VerifyVATInvoiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 增值税发票核验
-         *
-         * @param request VerifyVATInvoiceRequest
-         * @return VerifyVATInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增值税发票核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyVATInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyVATInvoiceResponse
+        /// </returns>
         public VerifyVATInvoiceResponse VerifyVATInvoice(VerifyVATInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return VerifyVATInvoiceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 增值税发票核验
-         *
-         * @param request VerifyVATInvoiceRequest
-         * @return VerifyVATInvoiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增值税发票核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyVATInvoiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyVATInvoiceResponse
+        /// </returns>
         public async Task<VerifyVATInvoiceResponse> VerifyVATInvoiceAsync(VerifyVATInvoiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

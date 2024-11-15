@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
     public class VerifyBusinessLicenseRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CompanyName")]
         [Validation(Required=false)]
         public string CompanyName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreditCode")]
         [Validation(Required=false)]
         public string CreditCode { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("LegalPerson")]
         [Validation(Required=false)]

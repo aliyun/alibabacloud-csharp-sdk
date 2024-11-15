@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
     public class RecognizeEduOralCalculationRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="https://img.alicdn.com/imgextra/i4/O1CN01diDxZe21hNSkCBf5n_!!6000000007016-0-tps-2268-3024.jpg">https://img.alicdn.com/imgextra/i4/O1CN01diDxZe21hNSkCBf5n_!!6000000007016-0-tps-2268-3024.jpg</a></para>
+        /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }

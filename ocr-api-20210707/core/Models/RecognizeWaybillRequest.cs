@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
     public class RecognizeWaybillRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="https://img.alicdn.com/tfs/TB1lOe6VqL7gK0jSZFBXXXZZpXa-480-640.png">https://img.alicdn.com/tfs/TB1lOe6VqL7gK0jSZFBXXXZZpXa-480-640.png</a></para>
+        /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }

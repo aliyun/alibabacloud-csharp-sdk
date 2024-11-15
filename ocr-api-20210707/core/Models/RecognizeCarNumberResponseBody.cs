@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
     public class RecognizeCarNumberResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -17,6 +21,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         [Validation(Required=false)]
         public string Data { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>message</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }

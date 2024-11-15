@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>86B83935-DD36-195B-B6E4-D07BE370C8B6</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
