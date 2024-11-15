@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("OpAction")]
+        [Validation(Required=false)]
+        public int? OpAction { get; set; }
+
         /// <summary>
         /// <para>The sorting method of operation logs. Set the value to <b>opdate</b>, which indicates sorting based on the operation time.</para>
         /// 

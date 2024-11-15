@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             [Validation(Required=false)]
             public int? CoverageType { get; set; }
 
+            [NameInMap("DebtStatus")]
+            [Validation(Required=false)]
+            public long? DebtStatus { get; set; }
+
             /// <summary>
             /// <para>The time when the instance expires. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 

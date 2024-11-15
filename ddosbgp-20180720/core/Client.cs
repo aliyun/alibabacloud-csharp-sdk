@@ -3778,6 +3778,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpAction))
+            {
+                query["OpAction"] = request.OpAction;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
             {
                 query["OrderBy"] = request.OrderBy;
@@ -3858,6 +3862,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpAction))
+            {
+                query["OpAction"] = request.OpAction;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
             {
