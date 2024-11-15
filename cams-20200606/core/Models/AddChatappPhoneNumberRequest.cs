@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,14 +10,22 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class AddChatappPhoneNumberRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>86</para>
         /// </summary>
         [NameInMap("Cc")]
         [Validation(Required=false)]
         public string Cc { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>Adds a phone number for a WhatsApp Business account (WABA).</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>93928389****</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -31,14 +36,27 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>AddChatappPhoneNumber</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1380000****</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
         public string PhoneNumber { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// <para>cams:ChatappPhoneNumberRegister</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1020****</para>
+        /// </summary>
         [NameInMap("PreValidateId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string PreValidateId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
@@ -50,7 +68,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>Private</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Alibaba</para>
         /// </summary>
         [NameInMap("VerifiedName")]
         [Validation(Required=false)]

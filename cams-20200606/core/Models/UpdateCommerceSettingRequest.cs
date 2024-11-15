@@ -10,27 +10,41 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateCommerceSettingRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to display the shopping cart button.
+        /// <para>Specifies whether to display the shopping cart button. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("CartEnable")]
         [Validation(Required=false)]
         public bool? CartEnable { get; set; }
 
         /// <summary>
-        /// Specifies whether to display the catalog button.
+        /// <para>Specifies whether to display the catalog button. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("CatalogVisible")]
         [Validation(Required=false)]
         public bool? CatalogVisible { get; set; }
 
         /// <summary>
-        /// The space ID of the user within the independent software vendor (ISV) account.
+        /// <para>The space ID of the user within the independent software vendor (ISV) account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>293483938849493</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -41,9 +55,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The phone number.
+        /// <para>The phone number.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1380000****</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]

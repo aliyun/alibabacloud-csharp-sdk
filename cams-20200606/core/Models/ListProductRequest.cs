@@ -10,46 +10,62 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListProductRequest : TeaModel {
         /// <summary>
-        /// The cursor that points to the end of the page of the returned data.
+        /// <para>The cursor that points to the end of the page of the returned data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>kdkii48jfjjei3</para>
         /// </summary>
         [NameInMap("After")]
         [Validation(Required=false)]
         public string After { get; set; }
 
         /// <summary>
-        /// The cursor that points to the beginning of the page of the returned data.
+        /// <para>The cursor that points to the beginning of the page of the returned data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wiidkd939kek93</para>
         /// </summary>
         [NameInMap("Before")]
         [Validation(Required=false)]
         public string Before { get; set; }
 
         /// <summary>
-        /// The catalog ID.
+        /// <para>The catalog ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>29398389292</para>
         /// </summary>
         [NameInMap("CatalogId")]
         [Validation(Required=false)]
         public string CatalogId { get; set; }
 
         /// <summary>
-        /// The space ID of the user within the independent software vendor (ISV) account.
+        /// <para>The space ID of the user within the independent software vendor (ISV) account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C29398388383</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The fields. Separate multiple fields with commas (,).
+        /// <para>The fields. Separate multiple fields with commas (,).</para>
+        /// <para> see <a href="https://help.aliyun.com/document_detail/2579419.html">product fields</a></para>
         /// 
-        ///  see [product fields](https://help.aliyun.com/document_detail/2579419.html)
+        /// <b>Example:</b>
+        /// <para>id,name</para>
         /// </summary>
         [NameInMap("Fields")]
         [Validation(Required=false)]
         public string Fields { get; set; }
 
         /// <summary>
-        /// The number of products to be queried. Valid values: 1 to 1000.
+        /// <para>The number of products to be queried. Valid values: 1 to 1000.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>73</para>
         /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]
@@ -68,9 +84,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the WhatsApp Business account (WABA).
+        /// <para>The ID of the WhatsApp Business account (WABA).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>38487474747</para>
         /// </summary>
         [NameInMap("WabaId")]
         [Validation(Required=false)]

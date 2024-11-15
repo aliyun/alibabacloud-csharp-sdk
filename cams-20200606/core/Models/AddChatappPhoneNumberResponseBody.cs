@@ -10,36 +10,51 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class AddChatappPhoneNumberResponseBody : TeaModel {
         /// <summary>
-        /// The details about the access denial.
+        /// <para>com.alicom.access.oxs.client.channel.aliyun.flow.AyFlowExecuteService</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://pop_access_slb_sgvpc/#vpc">http://pop_access_slb_sgvpc/#vpc</a></para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// The response code.
+        /// <para>The phone number.</para>
         /// 
-        /// *   The value OK indicates that the request was successful.
-        /// *   Other values indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/196974.html).
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>com.alicom.access.oxs.client.channel.aliyun.flow.dto.AyCommonApiRequest</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>formData</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>90E63D28-E31D-1EB2-8939-A9486641****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>13800000000</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

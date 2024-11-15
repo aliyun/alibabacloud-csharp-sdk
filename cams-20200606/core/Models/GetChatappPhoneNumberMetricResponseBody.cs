@@ -10,68 +10,92 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatappPhoneNumberMetricResponseBody : TeaModel {
         /// <summary>
-        /// The details about the access denial.
+        /// <para>The details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NONE</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// The value OK indicates that the request was successful.
+        /// <para>The value OK indicates that the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetChatappPhoneNumberMetricResponseBodyData> Data { get; set; }
         public class GetChatappPhoneNumberMetricResponseBodyData : TeaModel {
             /// <summary>
-            /// The number of delivered messages.
+            /// <para>The number of delivered messages.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("DeliveredCount")]
             [Validation(Required=false)]
             public int? DeliveredCount { get; set; }
 
             /// <summary>
-            /// The end of the time range that you queried.
+            /// <para>The end of the time range that you queried.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1667196043904</para>
             /// </summary>
             [NameInMap("End")]
             [Validation(Required=false)]
             public long? End { get; set; }
 
             /// <summary>
-            /// The granularity of the metric.
+            /// <para>The granularity of the metric.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>DAILY</description></item>
+            /// <item><description>HALF_HOUR</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   DAILY
-            /// *   HALF_HOUR
+            /// <b>Example:</b>
+            /// <para>DAILY</para>
             /// </summary>
             [NameInMap("Granularity")]
             [Validation(Required=false)]
             public string Granularity { get; set; }
 
             /// <summary>
-            /// The business phone number.
+            /// <para>The business phone number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>861380000</para>
             /// </summary>
             [NameInMap("PhoneNumber")]
             [Validation(Required=false)]
             public string PhoneNumber { get; set; }
 
             /// <summary>
-            /// The number of sent messages.
+            /// <para>The number of sent messages.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("SentCount")]
             [Validation(Required=false)]
             public int? SentCount { get; set; }
 
             /// <summary>
-            /// The beginning of the time range that you queried.
+            /// <para>The beginning of the time range that you queried.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1669619491000</para>
             /// </summary>
             [NameInMap("Start")]
             [Validation(Required=false)]
@@ -80,14 +104,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1612C226-E271-4CFE-9F18-4066D******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

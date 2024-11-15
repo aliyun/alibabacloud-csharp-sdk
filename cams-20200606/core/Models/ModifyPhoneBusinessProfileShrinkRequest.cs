@@ -9,35 +9,52 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ModifyPhoneBusinessProfileShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The business information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>business profile</para>
+        /// </summary>
         [NameInMap("About")]
         [Validation(Required=false)]
         public string About { get; set; }
 
         /// <summary>
-        /// The space ID of the user under the independent software vendor (ISV) account.
+        /// <para>The address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The phone number.</para>
         /// </summary>
         [NameInMap("Address")]
         [Validation(Required=false)]
         public string Address { get; set; }
 
         /// <summary>
-        /// Modifies the business information of the account to which a specified phone number is bound.
+        /// <para>The space ID of the RAM user within the independent software vendor (ISV) account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>293483938849****</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The address.
+        /// <para>The description of the phone number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The description.
+        /// <para>The email address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="mailto:aa@aliyun.com">aa@aliyun.com</a></para>
         /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]
@@ -48,18 +65,21 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+        /// <para>The mobile phone number.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>8613800001234</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// The industry.
+        /// <para>The URL of the profile picture.</para>
         /// 
-        /// > Enum: {OTHER, AUTO, BEAUTY, APPAREL, EDU, ENTERTAIN, EVENT_PLAN, FINANCE, GROCERY, GOVT, HOTEL, HEALTH, NONPROFIT, PROF_SERVICES, RETAIL, TRAVEL, RESTAURANT}
+        /// <b>Example:</b>
+        /// <para><a href="http://a.img">http://a.img</a></para>
         /// </summary>
         [NameInMap("ProfilePictureUrl")]
         [Validation(Required=false)]
@@ -74,14 +94,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Sichuan
+        /// <para>The industry.</para>
+        /// <remarks>
+        /// <para> Valid values: OTHER, AUTO, BEAUTY, APPAREL, EDU, ENTERTAIN, EVENT_PLAN, FINANCE, GROCERY, GOVT, HOTEL, HEALTH, NONPROFIT, PROF_SERVICES, RETAIL, TRAVEL, and RESTAURANT.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OTHER</para>
         /// </summary>
         [NameInMap("Vertical")]
         [Validation(Required=false)]
         public string Vertical { get; set; }
 
         /// <summary>
-        /// The email address.
+        /// <para>The URLs of the websites.</para>
         /// </summary>
         [NameInMap("Websites")]
         [Validation(Required=false)]

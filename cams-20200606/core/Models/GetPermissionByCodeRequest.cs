@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetPermissionByCodeRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>Authorize code information.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>flow_001</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The space ID of the RAM user within the independent software vendor (ISV) account.
+        /// <para>The space ID of the RAM user within the independent software vendor (ISV) account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>393847477</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The permissions.
+        /// <para>The permissions.</para>
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]

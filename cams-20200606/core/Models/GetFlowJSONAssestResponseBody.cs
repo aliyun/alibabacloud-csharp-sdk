@@ -9,26 +9,38 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetFlowJSONAssestResponseBody : TeaModel {
+        /// <summary>
+        /// <para>If OK is returned, the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetFlowJSONAssestResponseBodyData Data { get; set; }
         public class GetFlowJSONAssestResponseBodyData : TeaModel {
             /// <summary>
-            /// The file path.
+            /// <para>The file path.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://url.com/json.json">https://url.com/json.json</a></para>
             /// </summary>
             [NameInMap("FilePath")]
             [Validation(Required=false)]
             public string FilePath { get; set; }
 
             /// <summary>
-            /// The Flow ID.
+            /// <para>The Flow ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>flow_id_arms</para>
             /// </summary>
             [NameInMap("FlowId")]
             [Validation(Required=false)]
@@ -36,12 +48,21 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         }
 
+        /// <summary>
+        /// <para>Error description information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>90E63D28-E31D-1EB2-8939-A9486641****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

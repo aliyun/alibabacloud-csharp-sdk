@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetWhatsappConnectionCatalogRequest : TeaModel {
         /// <summary>
-        /// The space ID of the user within the ISV account.
+        /// <para>The space ID of the user within the ISV account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C2020939922929292</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -29,9 +32,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The WABA ID.
+        /// <para>The WABA ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>292939399393</para>
         /// </summary>
         [NameInMap("WabaId")]
         [Validation(Required=false)]

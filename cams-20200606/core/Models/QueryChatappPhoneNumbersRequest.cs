@@ -10,19 +10,31 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class QueryChatappPhoneNumbersRequest : TeaModel {
         /// <summary>
-        /// The space ID of the user under the ISV account.
+        /// <para>The space ID of the RAM user within the ISV account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>293483938849493</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
+        /// <para>The independent software vendor (ISV) verification code, which is used to verify whether the RAM user is authorized by the ISV account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aksik93kdkkxmwol93939</para>
         /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]
         public string IsvCode { get; set; }
 
+        /// <summary>
+        /// <para>The state of the phone number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>VERIFIED</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

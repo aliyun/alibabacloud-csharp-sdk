@@ -10,96 +10,117 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetFlowResponseBody : TeaModel {
         /// <summary>
-        /// If OK is returned, the request was successful.
+        /// <para>If OK is returned, the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetFlowResponseBodyData Data { get; set; }
         public class GetFlowResponseBodyData : TeaModel {
             /// <summary>
-            /// The categories of the Flow.
+            /// <para>The categories of the Flow.</para>
             /// </summary>
             [NameInMap("Categories")]
             [Validation(Required=false)]
             public List<string> Categories { get; set; }
 
             /// <summary>
-            /// The version number of the API.
+            /// <para>The version number of the API.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3.0</para>
             /// </summary>
             [NameInMap("DataApiVersion")]
             [Validation(Required=false)]
             public string DataApiVersion { get; set; }
 
             /// <summary>
-            /// The Flow ID.
+            /// <para>The Flow ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>flow_id_arms</para>
             /// </summary>
             [NameInMap("FlowId")]
             [Validation(Required=false)]
             public string FlowId { get; set; }
 
             /// <summary>
-            /// The Flow name.
+            /// <para>The Flow name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dnjn</para>
             /// </summary>
             [NameInMap("FlowName")]
             [Validation(Required=false)]
             public string FlowName { get; set; }
 
             /// <summary>
-            /// The JSON version.
+            /// <para>The JSON version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2.1</para>
             /// </summary>
             [NameInMap("JSONVersion")]
             [Validation(Required=false)]
             public string JSONVersion { get; set; }
 
             /// <summary>
-            /// The temporary preview URL.
+            /// <para>The temporary preview URL.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://pre-url">https://pre-url</a></para>
             /// </summary>
             [NameInMap("PreviewUrl")]
             [Validation(Required=false)]
             public string PreviewUrl { get; set; }
 
             /// <summary>
-            /// The time when the preview URL expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// <para>The time when the preview URL expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1700617436633</para>
             /// </summary>
             [NameInMap("PreviewUrlExpires")]
             [Validation(Required=false)]
             public long? PreviewUrlExpires { get; set; }
 
             /// <summary>
-            /// The state of the Flow.
+            /// <para>The state of the Flow.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>PUBLISHED</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   PUBLISHED
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>DRAFT</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>DEPRECATED</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   DRAFT
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   DEPRECATED
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>DRAFT</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -108,14 +129,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>90E63D28-E31D-1EB2-8939-A9486641****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

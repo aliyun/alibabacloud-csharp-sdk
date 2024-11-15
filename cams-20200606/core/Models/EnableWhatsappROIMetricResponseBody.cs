@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class EnableWhatsappROIMetricResponseBody : TeaModel {
         /// <summary>
-        /// The details about the access denial.
+        /// <para>The details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NONE</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// The value OK indicates that the request was successful.
+        /// <para>The value OK indicates that the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>90E63D28-E31D-1EB2-8939-A9486641****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

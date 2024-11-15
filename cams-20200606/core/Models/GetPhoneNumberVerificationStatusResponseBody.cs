@@ -10,38 +10,51 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetPhoneNumberVerificationStatusResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// <list type="bullet">
+        /// <item><description>A value of OK indicates that the call is successful.</description></item>
+        /// <item><description>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</description></item>
+        /// </list>
         /// 
-        /// *   A value of OK indicates that the call is successful.
-        /// *   Other values indicate that the call fails. For more information, see [Error codes](https://help.aliyun.com/document_detail/196974.html).
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetPhoneNumberVerificationStatusResponseBodyData Data { get; set; }
         public class GetPhoneNumberVerificationStatusResponseBodyData : TeaModel {
             /// <summary>
-            /// The verification status.
+            /// <para>The verification status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>VERIFIED</para>
             /// </summary>
             [NameInMap("CodeVerificationStatus")]
             [Validation(Required=false)]
             public string CodeVerificationStatus { get; set; }
 
             /// <summary>
-            /// The ID of the number.
+            /// <para>The ID of the number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2224342624</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The phone number.
+            /// <para>The phone number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8613900001234</para>
             /// </summary>
             [NameInMap("PhoneNumber")]
             [Validation(Required=false)]
@@ -50,14 +63,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>90E63D28-E31D-1EB2-8939-A94866411B2D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

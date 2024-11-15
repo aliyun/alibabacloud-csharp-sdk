@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class QueryWabaBusinessInfoRequest : TeaModel {
         /// <summary>
-        /// The space ID of the user under the independent software vendor (ISV) account.
+        /// <para>The space ID of the RAM user within the independent software vendor (ISV) account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>293483938849493****</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -31,9 +33,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the WABA.
+        /// <para>The ID of the WhatsApp Business Account (WABA).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>293848822333</para>
         /// </summary>
         [NameInMap("WabaId")]
         [Validation(Required=false)]

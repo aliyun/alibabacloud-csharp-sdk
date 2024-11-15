@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ChatappPhoneNumberRegisterRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>939283893939</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8613800000000</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]

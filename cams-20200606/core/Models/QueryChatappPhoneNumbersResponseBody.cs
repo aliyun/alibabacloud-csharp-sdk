@@ -9,130 +9,192 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class QueryChatappPhoneNumbersResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// <list type="bullet">
+        /// <item><description>A value of OK indicates that the call is successful.</description></item>
+        /// <item><description>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</description></item>
+        /// </list>
         /// 
-        /// *   A value of OK indicates that the call is successful.
-        /// *   Other values indicate that the call fails. For more information, see [Error codes](https://help.aliyun.com/document_detail/196974.html).
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SUCCESS</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The list of phone numbers.
+        /// <para>The phone numbers.</para>
         /// </summary>
         [NameInMap("PhoneNumbers")]
         [Validation(Required=false)]
         public List<QueryChatappPhoneNumbersResponseBodyPhoneNumbers> PhoneNumbers { get; set; }
         public class QueryChatappPhoneNumbersResponseBodyPhoneNumbers : TeaModel {
             /// <summary>
-            /// The verification status of the phone number.
+            /// <para>The verification status of the phone number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>VERIFIED</para>
             /// </summary>
             [NameInMap("CodeVerificationStatus")]
             [Validation(Required=false)]
             public string CodeVerificationStatus { get; set; }
 
             /// <summary>
-            /// The maximum number of messages that can be sent to users by using the phone number.
+            /// <para>The number of phone numbers to which messages can be sent in a day.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>TIER_100K: 100,000</description></item>
+            /// <item><description>TIER_UNLIMITED: unlimited</description></item>
+            /// <item><description>TIER_250: 250</description></item>
+            /// <item><description>TIER_1K: 1,000</description></item>
+            /// <item><description>TIER_50: 50</description></item>
+            /// <item><description>TIER_10K: 10,000</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TIER_10</para>
             /// </summary>
             [NameInMap("MessagingLimitTier")]
             [Validation(Required=false)]
             public string MessagingLimitTier { get; set; }
 
             /// <summary>
-            /// The status of the business name.
+            /// <para>The status of the business name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Approval</para>
             /// </summary>
             [NameInMap("NameStatus")]
             [Validation(Required=false)]
             public string NameStatus { get; set; }
 
             /// <summary>
-            /// The review status of the new business name.
+            /// <para>The review status of the new business name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Approval</para>
             /// </summary>
             [NameInMap("NewNameStatus")]
             [Validation(Required=false)]
             public string NewNameStatus { get; set; }
 
             /// <summary>
-            /// The phone number.
+            /// <para>The phone number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8613800000</para>
             /// </summary>
             [NameInMap("PhoneNumber")]
             [Validation(Required=false)]
             public string PhoneNumber { get; set; }
 
             /// <summary>
-            /// The quality rating of the phone number. Valid values:
+            /// <para>The quality rating of the phone number.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>RED</description></item>
+            /// <item><description>YELLOW</description></item>
+            /// <item><description>UNKNOWN</description></item>
+            /// <item><description>GREEN</description></item>
+            /// </list>
             /// 
-            /// *   **GREEN**
-            /// *   **YELLOW**
-            /// *   **RED**
-            /// *   **UNKNOWN**
+            /// <b>Example:</b>
+            /// <para>GREEN</para>
             /// </summary>
             [NameInMap("QualityRating")]
             [Validation(Required=false)]
             public string QualityRating { get; set; }
 
             /// <summary>
-            /// The status of the phone number.
+            /// <para>The state of the phone number.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>MIGRATED</description></item>
+            /// <item><description>FLAGGED</description></item>
+            /// <item><description>DISCONNECTED</description></item>
+            /// <item><description>UNVERIFIED</description></item>
+            /// <item><description>BANNED</description></item>
+            /// <item><description>RATE_LIMITED</description></item>
+            /// <item><description>PENDING</description></item>
+            /// <item><description>CONNECTED</description></item>
+            /// <item><description>UNKNOWN</description></item>
+            /// <item><description>DELETED</description></item>
+            /// <item><description>RESTRICTED</description></item>
+            /// </list>
             /// 
-            /// *   PENDING
-            /// *   DELETED
-            /// *   MIGRATED
-            /// *   BANNED
-            /// *   RESTRICTED
-            /// *   RATE_LIMITED
-            /// *   FLAGGED
-            /// *   CONNECTED
-            /// *   DISCONNECTED
-            /// *   UNKNOWN
-            /// *   UNVERIFIED
+            /// <b>Example:</b>
+            /// <para>CONNECTED</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The callback URL to which status reports are sent by using HTTP callbacks.
+            /// <para>The callback URL to which status reports are sent by using HTTP callbacks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://ali.com/status">https://ali.com/status</a></para>
             /// </summary>
             [NameInMap("StatusCallbackUrl")]
             [Validation(Required=false)]
             public string StatusCallbackUrl { get; set; }
 
             /// <summary>
-            /// The status report notification queue.
+            /// <para>The status report queue.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Alicom-Queue-****-ChatAppStatus</para>
             /// </summary>
             [NameInMap("StatusQueue")]
             [Validation(Required=false)]
             public string StatusQueue { get; set; }
 
             /// <summary>
-            /// The callback URL to which MO messages are sent by using HTTP callbacks.
+            /// <para>The callback URL to which MO messages are sent by using HTTP callbacks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://ali.com/inbound">https://ali.com/inbound</a></para>
             /// </summary>
             [NameInMap("UpCallbackUrl")]
             [Validation(Required=false)]
             public string UpCallbackUrl { get; set; }
 
             /// <summary>
-            /// The mobile originated (MO) message notification queue.
+            /// <para>The mobile originated (MO) message notification queue.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Alicom-Queue-****-ChatAppInbound</para>
             /// </summary>
             [NameInMap("UpQueue")]
             [Validation(Required=false)]
             public string UpQueue { get; set; }
 
             /// <summary>
-            /// The name of the company with which the phone number is associated.
+            /// <para>The name of the company with which the phone number is associated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Alibaba</para>
             /// </summary>
             [NameInMap("VerifiedName")]
             [Validation(Required=false)]
@@ -141,7 +203,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>90E63D28-E31D-1EB2-8939-A94866411B2O</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

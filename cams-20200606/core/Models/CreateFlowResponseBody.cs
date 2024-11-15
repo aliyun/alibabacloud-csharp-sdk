@@ -10,35 +10,44 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateFlowResponseBody : TeaModel {
         /// <summary>
-        /// If OK is returned, the request was successful.
+        /// <para>If OK is returned, the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateFlowResponseBodyData Data { get; set; }
         public class CreateFlowResponseBodyData : TeaModel {
             /// <summary>
-            /// The categories of the Flow.
+            /// <para>The categories of the Flow.</para>
             /// </summary>
             [NameInMap("Categories")]
             [Validation(Required=false)]
             public List<string> Categories { get; set; }
 
             /// <summary>
-            /// The Flow ID.
+            /// <para>The Flow ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>333993838***</para>
             /// </summary>
             [NameInMap("FlowId")]
             [Validation(Required=false)]
             public string FlowId { get; set; }
 
             /// <summary>
-            /// The name of the Flow.
+            /// <para>The name of the Flow.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test1</para>
             /// </summary>
             [NameInMap("FlowName")]
             [Validation(Required=false)]
@@ -47,14 +56,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>90E63D28-E31D-1EB2-8939-A9486641****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

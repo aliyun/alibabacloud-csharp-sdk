@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListFlowRequest : TeaModel {
         /// <summary>
-        /// The space ID of the RAM user within the independent software vendor (ISV) account.
+        /// <para>The space ID of the RAM user within the independent software vendor (ISV) account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>99948484</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The name of the Flow that you want to query. If FlowName is left empty, the information about all Flows is queried.
+        /// <para>The name of the Flow that you want to query. If FlowName is left empty, the information about all Flows is queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>flow_001</para>
         /// </summary>
         [NameInMap("FlowName")]
         [Validation(Required=false)]
         public string FlowName { get; set; }
 
         /// <summary>
-        /// The returned pages.
+        /// <para>The returned pages.</para>
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public ListFlowRequestPage Page { get; set; }
         public class ListFlowRequestPage : TeaModel {
             /// <summary>
-            /// The page number.
+            /// <para>The page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Index")]
             [Validation(Required=false)]
             public int? Index { get; set; }
 
             /// <summary>
-            /// The number of entries per page.
+            /// <para>The number of entries per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]

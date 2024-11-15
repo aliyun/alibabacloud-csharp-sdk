@@ -10,67 +10,80 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class SubmitIsvCustomerTermsRequest : TeaModel {
         /// <summary>
-        /// The use scenario.
+        /// <para>The business scenario.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Marketing products</para>
         /// </summary>
         [NameInMap("BusinessDesc")]
         [Validation(Required=false)]
         public string BusinessDesc { get; set; }
 
         /// <summary>
-        /// The email address of your business.
+        /// <para>The enterprise mail.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para><a href="mailto:partner@aliyun.com">partner@aliyun.com</a></para>
         /// </summary>
         [NameInMap("ContactMail")]
         [Validation(Required=false)]
         public string ContactMail { get; set; }
 
         /// <summary>
-        /// The country code.
+        /// <para>The country code.</para>
+        /// <remarks>
+        /// <para> For more information about country codes, see <a href="https://help.aliyun.com/document_detail/608210.html">Country codes</a>.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>CN</para>
         /// </summary>
         [NameInMap("CountryId")]
         [Validation(Required=false)]
         public string CountryId { get; set; }
 
         /// <summary>
-        /// The display name of your business.
+        /// <para>The enterprise name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Aliyun</para>
         /// </summary>
         [NameInMap("CustName")]
         [Validation(Required=false)]
         public string CustName { get; set; }
 
         /// <summary>
-        /// The space ID of the user under the ISV account.
+        /// <para>The space ID of the user within the independent software vendor (ISV) account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>293483938849493</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The ISV or Client Agreement.
+        /// <para>The ISV or Client agreement.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > Before you upload files to Object Storage Service (OSS) servers, you must call the GetChatappUploadAuthorization operation to obtain the authentication information required to upload files. You can use the SDK provided by OSS to upload files. When you upload a file, you must set the key parameter value. To set the value for the key parameter, concatenate the value of the Dir parameter and the file name by using a forward slash (/). You can obtain the value of the Dir parameter by calling the GetChatappUploadAuthorization operation.
-        /// 
-        /// > The value of this parameter is the name of the uploaded file.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>isvTerms.pdf</para>
         /// </summary>
         [NameInMap("IsvTerms")]
         [Validation(Required=false)]
         public string IsvTerms { get; set; }
 
         /// <summary>
-        /// The address of your business.
+        /// <para>The enterprise address.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Hangzhou</para>
         /// </summary>
         [NameInMap("OfficeAddress")]
         [Validation(Required=false)]

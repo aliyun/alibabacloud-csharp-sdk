@@ -10,25 +10,29 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateFlowShrinkRequest : TeaModel {
         /// <summary>
-        /// The categories of the Flow.
-        /// 
-        /// This parameter is required.
+        /// <para>The categories of the Flow.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Categories")]
         [Validation(Required=false)]
         public string CategoriesShrink { get; set; }
 
         /// <summary>
-        /// The space ID of the user within the independent software vendor (ISV) account.
+        /// <para>The space ID of the user within the independent software vendor (ISV) account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>93994848</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The name of the Flow.
+        /// <para>The name of the Flow.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>flow_001</para>
         /// </summary>
         [NameInMap("FlowName")]
         [Validation(Required=false)]

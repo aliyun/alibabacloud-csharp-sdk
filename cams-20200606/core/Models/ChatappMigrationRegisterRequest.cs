@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ChatappMigrationRegisterRequest : TeaModel {
         /// <summary>
-        /// The space ID of the user under the independent software vendor (ISV) account.
+        /// <para>None</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>29348393884****</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The phone number.
+        /// <para>phone number.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>8613800****</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]

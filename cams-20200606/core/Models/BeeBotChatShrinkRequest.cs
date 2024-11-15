@@ -10,78 +10,109 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class BeeBotChatShrinkRequest : TeaModel {
         /// <summary>
-        /// The ID of the bot instance.
+        /// <para>Indicates whether the answer is in plain text or rich text.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ChatBotInstanceId")]
         [Validation(Required=false)]
         public string ChatBotInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The metadata.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>293483938849493</para>
+        /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The name of the intent in the dialog flow. When this parameter is specified, the bot conducts a Q\\&A based on the intent.
+        /// <para>The source of the answer.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>intent</para>
         /// </summary>
         [NameInMap("IntentName")]
         [Validation(Required=false)]
         public string IntentName { get; set; }
 
         /// <summary>
-        /// The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
+        /// <para>The source of the answer.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ksiekdki39ksks93939</para>
         /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// The ID of the knowledge title in the knowledge base.
+        /// <para>The hit statement.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("KnowledgeId")]
         [Validation(Required=false)]
         public string KnowledgeId { get; set; }
 
         /// <summary>
-        /// The list of codes for answers from different perspectives.
+        /// <para>Beijing</para>
         /// </summary>
         [NameInMap("Perspective")]
         [Validation(Required=false)]
         public string PerspectiveShrink { get; set; }
 
         /// <summary>
-        /// The ID of the visitor, which is used to identify users in the current session.
+        /// <para>The information about the slot.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>861500000000</para>
         /// </summary>
         [NameInMap("SenderId")]
         [Validation(Required=false)]
         public string SenderId { get; set; }
 
         /// <summary>
-        /// The nickname of the visitor in the current session.
+        /// <para>Beijing</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>nick</para>
         /// </summary>
         [NameInMap("SenderNick")]
         [Validation(Required=false)]
         public string SenderNick { get; set; }
 
         /// <summary>
-        /// The ID of the session, which is used to identify the session and store context information of the session.
+        /// <para>The title of the related knowledge.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("SessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
         /// <summary>
-        /// The input of the visitor.
+        /// <para>The title of the hit question.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>659216218162179</para>
         /// </summary>
         [NameInMap("Utterance")]
         [Validation(Required=false)]
         public string Utterance { get; set; }
 
         /// <summary>
-        /// The user-defined parameter set in JSON format. You can specify user-defined parameters for conversation engines.
+        /// <para>The node name. When AnswerSource is set to BotFramework, a value is returned for this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;skills\&quot;:\&quot;chat_search\&quot;,\&quot;accessToken\&quot;:\&quot;73f4d5c8e8c334d9b538890bca68ac9a\&quot;,\&quot;senderStaffId\&quot;:\&quot;1697204021326\&quot;,\&quot;senderCorpId\&quot;:\&quot;dingee291fb2828058b9\&quot;}</para>
         /// </summary>
         [NameInMap("VendorParam")]
         [Validation(Required=false)]

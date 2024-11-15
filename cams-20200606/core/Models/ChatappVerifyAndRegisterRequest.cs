@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ChatappVerifyAndRegisterRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>29389299388383</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>86138000000</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
@@ -36,7 +42,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123466</para>
         /// </summary>
         [NameInMap("VerifyCode")]
         [Validation(Required=false)]

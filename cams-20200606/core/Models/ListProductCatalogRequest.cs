@@ -10,45 +10,62 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListProductCatalogRequest : TeaModel {
         /// <summary>
-        /// The cursor that points to the end of the page of the returned data.
+        /// <para>The cursor that points to the end of the page of the returned data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>kdkii48jfjjei3</para>
         /// </summary>
         [NameInMap("After")]
         [Validation(Required=false)]
         public string After { get; set; }
 
         /// <summary>
-        /// The cursor that points to the beginning of the page of the returned data.
+        /// <para>The cursor that points to the beginning of the page of the returned data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wiidkd939kek93</para>
         /// </summary>
         [NameInMap("Before")]
         [Validation(Required=false)]
         public string Before { get; set; }
 
         /// <summary>
-        /// The Business Manager ID.
+        /// <para>The Business Manager ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>28</para>
         /// </summary>
         [NameInMap("BusinessId")]
         [Validation(Required=false)]
         public long? BusinessId { get; set; }
 
         /// <summary>
-        /// The space ID of the user within the independent software vendor (ISV) account.
+        /// <para>The space ID of the user within the independent software vendor (ISV) account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>293483938849493</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The fields. Separate multiple fields with commas (,).
-        /// see  [catalog fields](https://help.aliyun.com/document_detail/2579419.html)
+        /// <para>The fields. Separate multiple fields with commas (,).
+        /// see  <a href="https://help.aliyun.com/document_detail/2579419.html">catalog fields</a></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>id,name</para>
         /// </summary>
         [NameInMap("Fields")]
         [Validation(Required=false)]
         public string Fields { get; set; }
 
         /// <summary>
-        /// The number of catalogs to be queried. Valid values: 1 to 1000.
+        /// <para>The number of catalogs to be queried. Valid values: 1 to 1000.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>73</para>
         /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]

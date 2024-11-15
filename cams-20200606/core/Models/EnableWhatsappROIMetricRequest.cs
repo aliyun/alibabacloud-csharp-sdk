@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class EnableWhatsappROIMetricRequest : TeaModel {
         /// <summary>
-        /// The space ID of the user within the ISV account.
+        /// <para>The space ID of the user within the ISV account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>293483938849493</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The verification code used to verify whether the RAM user is authorized by the independent software vendor (ISV) account.
+        /// <para>The verification code used to verify whether the RAM user is authorized by the independent software vendor (ISV) account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>skdi3kksloslikdkkdk</para>
         /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]

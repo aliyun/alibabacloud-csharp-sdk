@@ -10,28 +10,44 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetMigrationVerifyCodeRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The space ID of the user under the independent software vendor (ISV) account.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>293483938849493</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The language.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh_CN</para>
         /// </summary>
         [NameInMap("Locale")]
         [Validation(Required=false)]
         public string Locale { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The method to obtain the verification code. Valid values: SMS and VOICE.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sms</para>
         /// </summary>
         [NameInMap("Method")]
         [Validation(Required=false)]
         public string Method { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>Phone number.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8613800001234</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]

@@ -22,7 +22,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>33993***</para>
         /// </summary>
         [NameInMap("WabaId")]
         [Validation(Required=false)]
