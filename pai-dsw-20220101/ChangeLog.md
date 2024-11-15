@@ -1,3 +1,6 @@
+2024-11-15 Version: 1.5.7
+- Generated csharp 2022-01-01 for pai-dsw.
+
 2024-11-05 Version: 1.5.6
 - Update API CreateInstance: update param body.
 - Update API CreateInstanceSnapshot: update param body.

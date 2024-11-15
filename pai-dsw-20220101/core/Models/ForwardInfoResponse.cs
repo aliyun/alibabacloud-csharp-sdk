@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class ForwardInfoResponse : TeaModel {
+        [NameInMap("AccessType")]
+        [Validation(Required=false)]
+        public List<string> AccessType { get; set; }
+
         [NameInMap("ConnectInfo")]
         [Validation(Required=false)]
         public ForwardInfoResponseConnectInfo ConnectInfo { get; set; }
@@ -101,19 +105,35 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>ngw-bp1uewa15k4iy5770****</para>
+        /// <para>1024</para>
         /// </summary>
-        [NameInMap("NatGatewayId")]
+        [NameInMap("ExternalPort")]
         [Validation(Required=false)]
-        public string NatGatewayId { get; set; }
+        public string ExternalPort { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
         /// <para>22</para>
         /// </summary>
-        [NameInMap("Port")]
+        [NameInMap("ForwardPort")]
         [Validation(Required=false)]
-        public string Port { get; set; }
+        public string ForwardPort { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ssh</para>
+        /// </summary>
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ngw-bp1uewa15k4iy5770****</para>
+        /// </summary>
+        [NameInMap("NatGatewayId")]
+        [Validation(Required=false)]
+        public string NatGatewayId { get; set; }
 
         [NameInMap("SSHPublicKey")]
         [Validation(Required=false)]
