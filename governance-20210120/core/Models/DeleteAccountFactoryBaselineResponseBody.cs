@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class DeleteAccountFactoryBaselineResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0F45D888-8C4D-55E5-ACA2-D1515159181D</para>
         /// </summary>

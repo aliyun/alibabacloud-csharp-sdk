@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class RunEvaluationResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2D3E2A3A-F2B8-578D-9659-3195F94A****</para>
         /// </summary>

@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class ListEvaluationMetadataRequest : TeaModel {
         /// <summary>
+        /// <para>The language. The information is returned in the specified language. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +24,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string Language { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Governance20210120.Models
 {
-    public class ListEvaluationScoreHistoryRequest : TeaModel {
+    public class RunEvaluationShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The Alibaba Cloud account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</para>
         /// 
@@ -19,16 +19,9 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         [Validation(Required=false)]
         public long? AccountId { get; set; }
 
-        /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the YYYY-MM-DD format.</para>
-        /// <para>By default, the historical scores that were generated in the seven days before the current date are queried.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2024-07-11</para>
-        /// </summary>
-        [NameInMap("EndDate")]
+        [NameInMap("MetricIds")]
         [Validation(Required=false)]
-        public string EndDate { get; set; }
+        public string MetricIdsShrink { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>
@@ -41,15 +34,18 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.</para>
-        /// <para>You can query the historical scores within the previous 180 days.</para>
+        /// <para>The check range of the governance maturity check. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Account (default): A single-account governance maturity check is performed to check only the Alibaba Cloud account that you use to access Cloud Governance Center.</description></item>
+        /// <item><description>ResourceDirectory: A multi-account governance maturity check is performed to check all members within a resource directory. Before you perform a multi-account governance maturity check, you must enable the multi-account governance maturity check feature.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>2024-06-11</para>
+        /// <para>ResourceDirectory</para>
         /// </summary>
-        [NameInMap("StartDate")]
+        [NameInMap("Scope")]
         [Validation(Required=false)]
-        public string StartDate { get; set; }
+        public string Scope { get; set; }
 
     }
 

@@ -40,8 +40,14 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号工厂批量注册账号</para>
+        /// <para>Applies an account baseline to multiple existing resource accounts at a time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to apply an account baseline to existing resource accounts.
+        /// Accounts are enrolled in the account factory in asynchronous mode. After a resource account is created, an account baseline is applied to the account. You can call the <a href="https://help.aliyun.com/document_detail/609062.html">GetEnrolledAccount</a> operation to query the details of the account enrolled in the account factory and check whether the account baseline is applied to the account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchEnrollAccountsRequest
@@ -94,8 +100,14 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号工厂批量注册账号</para>
+        /// <para>Applies an account baseline to multiple existing resource accounts at a time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to apply an account baseline to existing resource accounts.
+        /// Accounts are enrolled in the account factory in asynchronous mode. After a resource account is created, an account baseline is applied to the account. You can call the <a href="https://help.aliyun.com/document_detail/609062.html">GetEnrolledAccount</a> operation to query the details of the account enrolled in the account factory and check whether the account baseline is applied to the account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchEnrollAccountsRequest
@@ -148,8 +160,14 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号工厂批量注册账号</para>
+        /// <para>Applies an account baseline to multiple existing resource accounts at a time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to apply an account baseline to existing resource accounts.
+        /// Accounts are enrolled in the account factory in asynchronous mode. After a resource account is created, an account baseline is applied to the account. You can call the <a href="https://help.aliyun.com/document_detail/609062.html">GetEnrolledAccount</a> operation to query the details of the account enrolled in the account factory and check whether the account baseline is applied to the account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchEnrollAccountsRequest
@@ -166,8 +184,14 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号工厂批量注册账号</para>
+        /// <para>Applies an account baseline to multiple existing resource accounts at a time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to apply an account baseline to existing resource accounts.
+        /// Accounts are enrolled in the account factory in asynchronous mode. After a resource account is created, an account baseline is applied to the account. You can call the <a href="https://help.aliyun.com/document_detail/609062.html">GetEnrolledAccount</a> operation to query the details of the account enrolled in the account factory and check whether the account baseline is applied to the account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchEnrollAccountsRequest
@@ -184,7 +208,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建账号工厂基线</para>
+        /// <para>Creates a baseline of the account factory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -238,7 +262,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建账号工厂基线</para>
+        /// <para>Creates a baseline of the account factory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -292,7 +316,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建账号工厂基线</para>
+        /// <para>Creates a baseline of the account factory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -310,7 +334,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建账号工厂基线</para>
+        /// <para>Creates a baseline of the account factory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -328,7 +352,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除账号工厂基线</para>
+        /// <para>Deletes an account factory baseline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -374,7 +398,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除账号工厂基线</para>
+        /// <para>Deletes an account factory baseline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -420,7 +444,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除账号工厂基线</para>
+        /// <para>Deletes an account factory baseline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -438,7 +462,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除账号工厂基线</para>
+        /// <para>Deletes an account factory baseline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -940,7 +964,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号工厂基线元素列表</para>
+        /// <para>Queries a list of baseline items that are supported by the account factory of Cloud Governance Center (CGC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1002,7 +1026,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号工厂基线元素列表</para>
+        /// <para>Queries a list of baseline items that are supported by the account factory of Cloud Governance Center (CGC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1064,7 +1088,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号工厂基线元素列表</para>
+        /// <para>Queries a list of baseline items that are supported by the account factory of Cloud Governance Center (CGC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1082,7 +1106,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号工厂基线元素列表</para>
+        /// <para>Queries a list of baseline items that are supported by the account factory of Cloud Governance Center (CGC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1372,7 +1396,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看治理检测定义</para>
+        /// <para>Queries all available information about check items in a governance maturity check, including the name, ID, description, stage, resource metadata, and fixing guide.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1418,7 +1442,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看治理检测定义</para>
+        /// <para>Queries all available information about check items in a governance maturity check, including the name, ID, description, stage, resource metadata, and fixing guide.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1464,7 +1488,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看治理检测定义</para>
+        /// <para>Queries all available information about check items in a governance maturity check, including the name, ID, description, stage, resource metadata, and fixing guide.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1482,7 +1506,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看治理检测定义</para>
+        /// <para>Queries all available information about check items in a governance maturity check, including the name, ID, description, stage, resource metadata, and fixing guide.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1500,7 +1524,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云治理中心治理检测项结果详情</para>
+        /// <para>Queries the non-compliant resource information of a check item, including the name, ID, category, type, region, and related metadata of non-compliant resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1558,7 +1582,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云治理中心治理检测项结果详情</para>
+        /// <para>Queries the non-compliant resource information of a check item, including the name, ID, category, type, region, and related metadata of non-compliant resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1616,7 +1640,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云治理中心治理检测项结果详情</para>
+        /// <para>Queries the non-compliant resource information of a check item, including the name, ID, category, type, region, and related metadata of non-compliant resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1634,7 +1658,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云治理中心治理检测项结果详情</para>
+        /// <para>Queries the non-compliant resource information of a check item, including the name, ID, category, type, region, and related metadata of non-compliant resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1780,7 +1804,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看治理检测定义</para>
+        /// <para>Queries the historical scores of a governance maturity check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1834,7 +1858,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看治理检测定义</para>
+        /// <para>Queries the historical scores of a governance maturity check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1888,7 +1912,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看治理检测定义</para>
+        /// <para>Queries the historical scores of a governance maturity check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1906,7 +1930,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看治理检测定义</para>
+        /// <para>Queries the historical scores of a governance maturity check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1924,10 +1948,10 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行云治理中心治理检测</para>
+        /// <para>Performs a governance maturity check.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// RunEvaluationRequest
         /// </param>
         /// <param name="runtime">
@@ -1937,13 +1961,23 @@ namespace AlibabaCloud.SDK.Governance20210120
         /// <returns>
         /// RunEvaluationResponse
         /// </returns>
-        public RunEvaluationResponse RunEvaluationWithOptions(RunEvaluationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public RunEvaluationResponse RunEvaluationWithOptions(RunEvaluationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunEvaluationShrinkRequest request = new RunEvaluationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MetricIds))
+            {
+                request.MetricIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MetricIds, "MetricIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
             {
                 query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricIdsShrink))
+            {
+                query["MetricIds"] = request.MetricIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1974,10 +2008,10 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行云治理中心治理检测</para>
+        /// <para>Performs a governance maturity check.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// RunEvaluationRequest
         /// </param>
         /// <param name="runtime">
@@ -1987,13 +2021,23 @@ namespace AlibabaCloud.SDK.Governance20210120
         /// <returns>
         /// RunEvaluationResponse
         /// </returns>
-        public async Task<RunEvaluationResponse> RunEvaluationWithOptionsAsync(RunEvaluationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<RunEvaluationResponse> RunEvaluationWithOptionsAsync(RunEvaluationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunEvaluationShrinkRequest request = new RunEvaluationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MetricIds))
+            {
+                request.MetricIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MetricIds, "MetricIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
             {
                 query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricIdsShrink))
+            {
+                query["MetricIds"] = request.MetricIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -2024,7 +2068,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行云治理中心治理检测</para>
+        /// <para>Performs a governance maturity check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2042,7 +2086,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行云治理中心治理检测</para>
+        /// <para>Performs a governance maturity check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2060,7 +2104,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新账号工厂基线</para>
+        /// <para>Updates a baseline of the account factory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2118,7 +2162,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新账号工厂基线</para>
+        /// <para>Updates a baseline of the account factory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2176,7 +2220,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新账号工厂基线</para>
+        /// <para>Updates a baseline of the account factory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2194,7 +2238,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新账号工厂基线</para>
+        /// <para>Updates a baseline of the account factory.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -171,6 +171,9 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         [Validation(Required=false)]
         public string ResellAccountType { get; set; }
 
+        /// <summary>
+        /// <para>The tags. You can specify up to 20 tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public string TagShrink { get; set; }

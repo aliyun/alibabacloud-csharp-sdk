@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class DeleteAccountFactoryBaselineRequest : TeaModel {
         /// <summary>
+        /// <para>The baseline ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>afb-bp1durvn3lgqe28v****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string BaselineId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

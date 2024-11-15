@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class ListAccountFactoryBaselinesResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of baselines.</para>
+        /// <para>The baselines.</para>
         /// </summary>
         [NameInMap("Baselines")]
         [Validation(Required=false)]
@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             /// <summary>
             /// <para>The type of the baseline. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>System: default baseline</description></item>
-            /// <item><description>Custom: custom baseline</description></item>
+            /// <item><description>System: default baseline.</description></item>
+            /// <item><description>Custom: custom baseline.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

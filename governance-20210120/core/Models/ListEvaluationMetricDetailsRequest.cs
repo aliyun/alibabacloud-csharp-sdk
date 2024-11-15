@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class ListEvaluationMetricDetailsRequest : TeaModel {
         /// <summary>
+        /// <para>The account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>103144549568****</para>
         /// </summary>
@@ -18,6 +20,9 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public long? AccountId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the check item.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2841889.html">ListEvaluationMetadata</a> operation to query the ID of the check item.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xfyve5****</para>
         /// </summary>
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries to return for a single request. Default value: 5.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -34,6 +41,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAGEaXR18y1rqykZHIqRuBejOqED4S3Xne33c7zbn****</para>
         /// </summary>
@@ -42,6 +51,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

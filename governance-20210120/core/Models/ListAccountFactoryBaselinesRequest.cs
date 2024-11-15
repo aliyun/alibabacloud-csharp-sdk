@@ -21,7 +21,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>You do not need to specify this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAALHWGpGoYCcYMxiFfmlhvh62Xr2DzYbz/SAfc*****</para>
@@ -31,7 +32,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>RegionId</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
