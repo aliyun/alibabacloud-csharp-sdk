@@ -31,9 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ComponentType { get; set; }
 
                 /// <summary>
-                /// <remarks>
-                /// <para> This parameter is in invitational preview and is not publicly available.</para>
-                /// </remarks>
+                /// <para>The version number of the image component.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -107,9 +105,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <remarks>
-                /// <para> This parameter is in invitational preview and is not publicly available.</para>
-                /// </remarks>
+                /// <para>The parameters contained in the image component.</para>
                 /// </summary>
                 [NameInMap("Parameters")]
                 [Validation(Required=false)]
@@ -120,9 +116,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter> Parameter { get; set; }
                     public class DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter : TeaModel {
                         /// <summary>
-                        /// <remarks>
-                        /// <para> This parameter is in invitational preview and is not publicly available.</para>
-                        /// </remarks>
+                        /// <para>The default value of the parameter.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>null</para>
@@ -132,9 +126,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string DefaultValue { get; set; }
 
                         /// <summary>
-                        /// <remarks>
-                        /// <para> This parameter is in invitational preview and is not publicly available.</para>
-                        /// </remarks>
+                        /// <para>The name of the parameter.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>null</para>
@@ -144,9 +136,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// <remarks>
-                        /// <para> This parameter is in invitational preview and is not publicly available.</para>
-                        /// </remarks>
+                        /// <para>The type of the parameter.</para>
+                        /// <para>Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>String</description></item>
+                        /// <item><description>Number</description></item>
+                        /// <item><description>Boolean</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>null</para>

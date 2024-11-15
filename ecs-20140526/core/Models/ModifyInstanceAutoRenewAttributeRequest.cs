@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyInstanceAutoRenewAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal for the instance.</para>
+        /// <para>Specifies whether to enable auto-renewal.</para>
         /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>

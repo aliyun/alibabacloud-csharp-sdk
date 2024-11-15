@@ -102,9 +102,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <remarks>
-                /// <para> This parameter is in invitational preview and is not publicly available.</para>
-                /// </remarks>
+                /// <para>The image family.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -164,9 +162,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <remarks>
-                /// <para> This parameter is in invitational preview and is not publicly available.</para>
-                /// </remarks>
+                /// <para>The repair mode of the image template.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Standard: the standard mode</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -231,9 +231,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <remarks>
-                /// <para> This parameter is in invitational preview and is not publicly available.</para>
-                /// </remarks>
+                /// <para>The content of the image test template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>

@@ -10,9 +10,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImageComponentsRequest : TeaModel {
         /// <summary>
-        /// <remarks>
-        /// <para> This parameter is in invitational preview and is not publicly available.</para>
-        /// </remarks>
+        /// <para>The type of the image component.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Build</description></item>
+        /// <item><description>Test</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -22,8 +25,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ComponentType { get; set; }
 
         /// <summary>
+        /// <para>The version number of the image component in the \<major>.\<minor>.\<patch> format. You can set \<major>, \<minor>, and \<patch> to non-negative integers, or set one of \<major>, \<minor>, and \<patch> to the wildcard (\*) and the other two to non-negative integers.</para>
         /// <remarks>
-        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+        /// <para> This parameter takes effect only if you specify Name.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -129,9 +133,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <remarks>
-        /// <para> This parameter is in invitational preview and is not publicly available.</para>
-        /// </remarks>
+        /// <para>The type of the operating system supported by the image component.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Linux</description></item>
+        /// <item><description>Windows</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

@@ -20,8 +20,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The type of the image component. Only image build components are supported. Set the value to Build.</para>
+        /// <para>The type of the image component. Only image building components and image test components are supported.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Build</description></item>
+        /// <item><description>Test</description></item>
+        /// </list>
         /// <para>Default value: Build.</para>
+        /// <remarks>
+        /// <para> Image building components can be used only in image building templates. Image test components can be used only in image test templates.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Build</para>
@@ -31,9 +39,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ComponentType { get; set; }
 
         /// <summary>
-        /// <remarks>
-        /// <para> This parameter is in invitational preview and is not publicly available.</para>
-        /// </remarks>
+        /// <para>The version number of the image component, which is used together with the name of the image component. The version number is in the \<major>.\<minor>.\<patch> format. Set \<major>, \<minor>, and \<patch> to non-negative integers.</para>
+        /// <para>Default value: (x + 1).0.0, in which x is the maximum major version number of the image component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -113,7 +120,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the operating system supported by the image component. Only Linux operating systems are supported. Set the value to Linux.</para>
+        /// <para>The type of the operating system supported by the image component.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Linux</description></item>
+        /// <item><description>Windows</description></item>
+        /// </list>
         /// <para>Default value: Linux.</para>
         /// 
         /// <b>Example:</b>

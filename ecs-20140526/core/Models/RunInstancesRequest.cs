@@ -937,8 +937,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string HttpEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The HTTP PUT response hop limit for accessing instance metadata. Valid values: 1 to 64.</para>
-        /// <para>Default value: 1.</para>
+        /// <remarks>
+        /// <para> This parameter is not publicly available.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -1036,7 +1037,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). The default value of this parameter is the <c>InstanceId</c> value.</para>
+        /// <para>The name of the ECS instance. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). The default value of this parameter is the <c>InstanceId</c> value.</para>
         /// <para>When you batch create instances, you can batch configure sequential names for the instances. The sequential names can contain brackets ([ ]) and commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for multiple instances</a>.</para>
         /// 
         /// <b>Example:</b>
@@ -1237,8 +1238,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>Specifies whether to release ENI N when the associated instance is released. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description>true: releases the ENI when the associated instance is released.</description></item>
+            /// <item><description>false: retains the ENI when the associated instance is released.</description></item>
             /// </list>
             /// <para>Default value: true.</para>
             /// <remarks>
@@ -1272,8 +1273,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The type of ENI N. The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Primary: primary ENI.</description></item>
-            /// <item><description>Secondary: secondary ENI.</description></item>
+            /// <item><description>Primary: the primary ENI</description></item>
+            /// <item><description>Secondary: the secondary ENI</description></item>
             /// </list>
             /// <para>Default value: Secondary.</para>
             /// 
@@ -1316,9 +1317,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The index of the network card for ENI N.</para>
             /// <para>When you specify this parameter, take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description>You can specify network card indexes only for instances of specific instance types.</description></item>
+            /// <item><description>You can specify NIC indexes only for instances of specific instance types.</description></item>
             /// <item><description>If you set NetworkInterface.N.InstanceType to Primary, you can set NetworkInterface.N.NetworkCardIndex only to 0 for instance types that support network cards.</description></item>
-            /// <item><description>If you set NetworkInterface.N.InstanceType to Secondary or do not specify the parameter, you can specify NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</description></item>
+            /// <item><description>If you set NetworkInterface.N.InstanceType to Secondary or leave NetworkInterface.N.InstanceType empty, you can specify NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1408,7 +1409,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <list type="bullet">
             /// <item><description>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</description></item>
             /// <item><description>The value of this parameter cannot exceed the maximum number of queues allowed per ENI.</description></item>
-            /// <item><description>The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the <c>MaximumQueueNumberPerEni</c> and <c>TotalEniQueueQuantity</c> values in the response.</description></item>
+            /// <item><description>The total number of queues for all ENIs on an instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the <c>MaximumQueueNumberPerEni</c> and <c>TotalEniQueueQuantity</c> values in the response.</description></item>
             /// <item><description>If you specify this parameter and set <c>NetworkInterface.N.InstanceType</c> to <c>Primary</c>, you cannot specify <c>NetworkInterfaceQueueNumber</c>.</description></item>
             /// </list>
             /// 
