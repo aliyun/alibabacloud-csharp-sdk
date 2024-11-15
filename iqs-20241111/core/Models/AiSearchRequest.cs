@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IQS20241111.Models
 {
-    public class GenericSearchRequest : TeaModel {
+    public class AiSearchRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>finance</para>
+        /// </summary>
         [NameInMap("industry")]
         [Validation(Required=false)]
         public string Industry { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>{\&quot;total_count\&quot;: 6851, \&quot;page_number\&quot;: 54, \&quot;page_size\&quot;: 100}</para>
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public string Query { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>17dc8bcd-f34a-46d1-a7a3-0fa3d1ce3824</para>
+        /// </summary>
         [NameInMap("sessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }

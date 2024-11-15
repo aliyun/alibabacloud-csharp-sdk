@@ -39,6 +39,314 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>AI搜索流式接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AiSearchRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AiSearchResponse
+        /// </returns>
+        public AiSearchResponse AiSearchWithOptions(AiSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Industry))
+            {
+                query["industry"] = request.Industry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRange))
+            {
+                query["timeRange"] = request.TimeRange;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AiSearch",
+                Version = "2024-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-entry/v3/linkedRetrieval/commands/aiSearch",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AiSearchResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AI搜索流式接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AiSearchRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AiSearchResponse
+        /// </returns>
+        public async Task<AiSearchResponse> AiSearchWithOptionsAsync(AiSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Industry))
+            {
+                query["industry"] = request.Industry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRange))
+            {
+                query["timeRange"] = request.TimeRange;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AiSearch",
+                Version = "2024-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-entry/v3/linkedRetrieval/commands/aiSearch",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AiSearchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AI搜索流式接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AiSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AiSearchResponse
+        /// </returns>
+        public AiSearchResponse AiSearch(AiSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AiSearchWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AI搜索流式接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AiSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AiSearchResponse
+        /// </returns>
+        public async Task<AiSearchResponse> AiSearchAsync(AiSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AiSearchWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增强版通用搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenericAdvancedSearchRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenericAdvancedSearchResponse
+        /// </returns>
+        public GenericAdvancedSearchResponse GenericAdvancedSearchWithOptions(GenericAdvancedSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRange))
+            {
+                query["timeRange"] = request.TimeRange;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenericAdvancedSearch",
+                Version = "2024-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-entry/v2/linkedRetrieval/commands/genericAdvancedSearch",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenericAdvancedSearchResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增强版通用搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenericAdvancedSearchRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenericAdvancedSearchResponse
+        /// </returns>
+        public async Task<GenericAdvancedSearchResponse> GenericAdvancedSearchWithOptionsAsync(GenericAdvancedSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRange))
+            {
+                query["timeRange"] = request.TimeRange;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenericAdvancedSearch",
+                Version = "2024-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-entry/v2/linkedRetrieval/commands/genericAdvancedSearch",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenericAdvancedSearchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增强版通用搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenericAdvancedSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenericAdvancedSearchResponse
+        /// </returns>
+        public GenericAdvancedSearchResponse GenericAdvancedSearch(GenericAdvancedSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GenericAdvancedSearchWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增强版通用搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenericAdvancedSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenericAdvancedSearchResponse
+        /// </returns>
+        public async Task<GenericAdvancedSearchResponse> GenericAdvancedSearchAsync(GenericAdvancedSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GenericAdvancedSearchWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>通用搜索</para>
         /// </summary>
         /// 
@@ -59,9 +367,21 @@ namespace AlibabaCloud.SDK.IQS20241111
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Industry))
+            {
+                query["industry"] = request.Industry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 query["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRange))
             {
@@ -109,9 +429,21 @@ namespace AlibabaCloud.SDK.IQS20241111
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Industry))
+            {
+                query["industry"] = request.Industry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 query["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRange))
             {

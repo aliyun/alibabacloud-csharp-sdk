@@ -8,19 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IQS20241111.Models
 {
-    public class GenericSearchRequest : TeaModel {
-        [NameInMap("industry")]
-        [Validation(Required=false)]
-        public string Industry { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
-        [NameInMap("page")]
-        [Validation(Required=false)]
-        public int? Page { get; set; }
-
+    public class GenericAdvancedSearchRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -28,6 +16,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public string Query { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>job-4065bee3-e7aa-49fc-aad2-a8e3a7fd6acd</para>
+        /// </summary>
         [NameInMap("sessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
