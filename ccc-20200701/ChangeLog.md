@@ -1,3 +1,9 @@
+2024-11-15 Version: 2.33.0
+- Support API AddFeedback.
+- Support API DeleteInstance.
+- Support API ListSmsMetadata.
+
+
 2024-11-11 Version: 2.32.0
 - Support API ExportContactFlow.
 - Support API ImportContactFlow.

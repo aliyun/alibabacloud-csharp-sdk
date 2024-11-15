@@ -8,12 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
-    public class ChangeVisibilityRequest : TeaModel {
+    public class AddFeedbackRequest : TeaModel {
+        [NameInMap("Feedback")]
+        [Validation(Required=false)]
+        public string Feedback { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>szpczf</para>
+        /// <para>ccc-test</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -21,19 +25,27 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>thumbsUp</para>
         /// </summary>
-        [NameInMap("Invisible")]
+        [NameInMap("Rating")]
         [Validation(Required=false)]
-        public bool? Invisible { get; set; }
+        public int? Rating { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>sam@szpczf</para>
+        /// <para>f780ade8-****-458b-b067-63077946a570</para>
         /// </summary>
-        [NameInMap("UserId")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string UserId { get; set; }
+        public string TaskId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Abstract:fields</para>
+        /// </summary>
+        [NameInMap("TaskName")]
+        [Validation(Required=false)]
+        public string TaskName { get; set; }
 
     }
 

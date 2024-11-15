@@ -8,32 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
-    public class ChangeVisibilityRequest : TeaModel {
+    public class AddFeedbackResponseBody : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>szpczf</para>
+        /// <para>OK</para>
         /// </summary>
-        [NameInMap("InstanceId")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string Code { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>200</para>
         /// </summary>
-        [NameInMap("Invisible")]
+        [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
-        public bool? Invisible { get; set; }
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>sam@szpczf</para>
+        /// <para>C81FD1A5-4B99-470A-A527-D80150228784</para>
         /// </summary>
-        [NameInMap("UserId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string UserId { get; set; }
+        public string RequestId { get; set; }
 
     }
 
