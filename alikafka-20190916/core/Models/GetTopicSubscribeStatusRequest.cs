@@ -10,31 +10,35 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetTopicSubscribeStatusRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/437663.html">GetInstanceList</a> operation to query the list of instances.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [GetInstanceList](https://help.aliyun.com/document_detail/437663.html) operation to query the list of instances.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>alikafka_pre-cn-v0h1cng0***</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The topic name.
+        /// <para>The topic name.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/437677.html">GetTopicList</a> operation to query the list of topics.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [GetTopicList](https://help.aliyun.com/document_detail/437677.html) operation to query the list of topics.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>topic_name</para>
         /// </summary>
         [NameInMap("Topic")]
         [Validation(Required=false)]

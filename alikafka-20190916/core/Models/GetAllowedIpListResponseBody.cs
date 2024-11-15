@@ -10,49 +10,56 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetAllowedIpListResponseBody : TeaModel {
         /// <summary>
-        /// The IP address whitelist.
+        /// <para>The IP address whitelist.</para>
         /// </summary>
         [NameInMap("AllowedList")]
         [Validation(Required=false)]
         public GetAllowedIpListResponseBodyAllowedList AllowedList { get; set; }
         public class GetAllowedIpListResponseBodyAllowedList : TeaModel {
             /// <summary>
-            /// The deployment mode of the instance. Valid values:
+            /// <para>The deployment mode of the instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>4</b>: allows access from the Internet and a virtual private cloud (VPC).</description></item>
+            /// <item><description><b>5</b>: allows access from a VPC.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> Only integrators need to concern themselves with the value of this parameter.</para>
+            /// </remarks>
             /// 
-            /// *   **4**: allows access from the Internet and a virtual private cloud (VPC).
-            /// *   **5**: allows access from a VPC.
-            /// 
-            /// >  Only integrators need to concern themselves with the value of this parameter.
+            /// <b>Example:</b>
+            /// <para>4</para>
             /// </summary>
             [NameInMap("DeployType")]
             [Validation(Required=false)]
             public int? DeployType { get; set; }
 
             /// <summary>
-            /// The whitelist for access from the Internet.
+            /// <para>The whitelist for access from the Internet.</para>
             /// </summary>
             [NameInMap("InternetList")]
             [Validation(Required=false)]
             public List<GetAllowedIpListResponseBodyAllowedListInternetList> InternetList { get; set; }
             public class GetAllowedIpListResponseBodyAllowedListInternetList : TeaModel {
                 /// <summary>
-                /// The group to which the IP address whitelist belongs.
+                /// <para>The group to which the IP address whitelist belongs.</para>
                 /// </summary>
                 [NameInMap("AllowedIpGroup")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> AllowedIpGroup { get; set; }
 
                 /// <summary>
-                /// The information about the IP address whitelist.
+                /// <para>The information about the IP address whitelist.</para>
                 /// </summary>
                 [NameInMap("AllowedIpList")]
                 [Validation(Required=false)]
                 public List<string> AllowedIpList { get; set; }
 
                 /// <summary>
-                /// The port range. Valid value:
+                /// <para>The port range. Valid value:</para>
+                /// <para><b>9093/9093</b>.</para>
                 /// 
-                /// **9093/9093**.
+                /// <b>Example:</b>
+                /// <para>9093/9093</para>
                 /// </summary>
                 [NameInMap("PortRange")]
                 [Validation(Required=false)]
@@ -61,30 +68,32 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             }
 
             /// <summary>
-            /// The whitelist for access from a virtual private cloud (VPC).
+            /// <para>The whitelist for access from a virtual private cloud (VPC).</para>
             /// </summary>
             [NameInMap("VpcList")]
             [Validation(Required=false)]
             public List<GetAllowedIpListResponseBodyAllowedListVpcList> VpcList { get; set; }
             public class GetAllowedIpListResponseBodyAllowedListVpcList : TeaModel {
                 /// <summary>
-                /// The group to which the IP address whitelist belongs.
+                /// <para>The group to which the IP address whitelist belongs.</para>
                 /// </summary>
                 [NameInMap("AllowedIpGroup")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> AllowedIpGroup { get; set; }
 
                 /// <summary>
-                /// The information about the IP address whitelist.
+                /// <para>The information about the IP address whitelist.</para>
                 /// </summary>
                 [NameInMap("AllowedIpList")]
                 [Validation(Required=false)]
                 public List<string> AllowedIpList { get; set; }
 
                 /// <summary>
-                /// The port range. Valid value:
+                /// <para>The port range. Valid value:</para>
+                /// <para><b>9092/9092</b>.</para>
                 /// 
-                /// **9092/9092**.
+                /// <b>Example:</b>
+                /// <para>9092/9092</para>
                 /// </summary>
                 [NameInMap("PortRange")]
                 [Validation(Required=false)]
@@ -95,28 +104,40 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         }
 
         /// <summary>
-        /// The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+        /// <para>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>operation success.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A421CCD7-5BC5-4B32-8DD8-64668A8FCB56</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

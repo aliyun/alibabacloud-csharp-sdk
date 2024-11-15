@@ -10,169 +10,217 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class CreatePostPayOrderShrinkRequest : TeaModel {
         /// <summary>
-        /// The deployment mode of the instance. Valid values:
+        /// <para>The deployment mode of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>4</b>: deploys the instance that allows access from the Internet and a VPC.</description></item>
+        /// <item><description><b>5</b>: deploys the instance that allows access only from a VPC.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **4**: deploys the instance that allows access from the Internet and a VPC.
-        /// *   **5**: deploys the instance that allows access only from a VPC.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("DeployType")]
         [Validation(Required=false)]
         public int? DeployType { get; set; }
 
         /// <summary>
-        /// The disk size.
+        /// <para>The disk size.</para>
+        /// <para>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// <remarks>
+        /// <para> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</para>
+        /// </remarks>
         /// 
-        /// For information about the valid values of this parameter, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-        /// 
-        /// >  If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.
+        /// <b>Example:</b>
+        /// <para>500</para>
         /// </summary>
         [NameInMap("DiskSize")]
         [Validation(Required=false)]
         public int? DiskSize { get; set; }
 
         /// <summary>
-        /// The disk type. Valid values:
+        /// <para>The disk type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: ultra disk</description></item>
+        /// <item><description><b>1</b>: standard SSD</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</para>
+        /// </remarks>
         /// 
-        /// *   **0**: ultra disk
-        /// *   **1**: standard SSD
-        /// 
-        /// >  If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("DiskType")]
         [Validation(Required=false)]
         public string DiskType { get; set; }
 
         /// <summary>
-        /// The maximum Internet traffic in the instance.
+        /// <para>The maximum Internet traffic in the instance.</para>
+        /// <list type="bullet">
+        /// <item><description>If you set <b>DeployType</b> to <b>4</b>, you must configure this parameter.</description></item>
+        /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</para>
+        /// </remarks>
         /// 
-        /// *   If you set **DeployType** to **4**, you must configure this parameter.
-        /// *   For information about the valid values of this parameter, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-        /// 
-        /// >  If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("EipMax")]
         [Validation(Required=false)]
         public int? EipMax { get; set; }
 
         /// <summary>
-        /// The maximum traffic in the instance. We recommend that you do not configure this parameter.
+        /// <para>The maximum traffic in the instance. We recommend that you do not configure this parameter.</para>
+        /// <list type="bullet">
+        /// <item><description>You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.</description></item>
+        /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</para>
+        /// </remarks>
         /// 
-        /// *   You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.
-        /// *   For information about the valid values of this parameter, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-        /// 
-        /// >  If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("IoMax")]
         [Validation(Required=false)]
         public int? IoMax { get; set; }
 
         /// <summary>
-        /// The traffic specification of the instance. We recommend that you configure this parameter.
+        /// <para>The traffic specification of the instance. We recommend that you configure this parameter.</para>
+        /// <list type="bullet">
+        /// <item><description>You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.</description></item>
+        /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</para>
+        /// </remarks>
         /// 
-        /// *   You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.
-        /// *   For information about the valid values of this parameter, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-        /// 
-        /// >  If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.
+        /// <b>Example:</b>
+        /// <para>alikafka.hw.2xlarge</para>
         /// </summary>
         [NameInMap("IoMaxSpec")]
         [Validation(Required=false)]
         public string IoMaxSpec { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. Valid values:
+        /// <para>The billing method of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: the pay-as-you-go billing method for ApsaraMQ for Kafka V2 instances.</description></item>
+        /// <item><description>3: the pay-as-you-go billing method for serverless ApsaraMQ for Kafka V3 instances.</description></item>
+        /// </list>
         /// 
-        /// *   1: the pay-as-you-go billing method for ApsaraMQ for Kafka V2 instances.
-        /// *   3: the pay-as-you-go billing method for serverless ApsaraMQ for Kafka V3 instances.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PaidType")]
         [Validation(Required=false)]
         public int? PaidType { get; set; }
 
         /// <summary>
-        /// The number of partitions. We recommend that you configure this parameter.
+        /// <para>The number of partitions. We recommend that you configure this parameter.</para>
+        /// <list type="bullet">
+        /// <item><description>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.</description></item>
+        /// <item><description>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</description></item>
+        /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</para>
+        /// </remarks>
         /// 
-        /// *   You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.
-        /// *   If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.
-        /// *   For information about the valid values of this parameter, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-        /// 
-        /// >  If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("PartitionNum")]
         [Validation(Required=false)]
         public int? PartitionNum { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// <para>The region ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// <para>If this parameter is left empty, the default resource group is used. You can view the resource group ID on the Resource Group page in the Resource Management console.</para>
         /// 
-        /// If this parameter is left empty, the default resource group is used. You can view the resource group ID on the Resource Group page in the Resource Management console.
+        /// <b>Example:</b>
+        /// <para>rg-ac***********7q</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The parameters configured for the serverless ApsaraMQ for Kafka V3 instance. When you create a Serverless ApsaraMQ for Kafka V3 serverless instance, you must configure these parameters.
+        /// <para>The parameters configured for the serverless ApsaraMQ for Kafka V3 instance. When you create a Serverless ApsaraMQ for Kafka V3 serverless instance, you must configure these parameters.</para>
         /// </summary>
         [NameInMap("ServerlessConfig")]
         [Validation(Required=false)]
         public string ServerlessConfigShrink { get; set; }
 
         /// <summary>
-        /// The instance edition.
+        /// <para>The instance edition.</para>
+        /// <para>Valid values if you set PaidType to 1:</para>
+        /// <list type="bullet">
+        /// <item><description>normal: Standard Edition (High Write)</description></item>
+        /// <item><description>professional: Professional Edition (High Write)</description></item>
+        /// <item><description>professionalForHighRead: Professional Edition (High Read)</description></item>
+        /// </list>
+        /// <para>Valid values if you set PaidType to 3:</para>
+        /// <list type="bullet">
+        /// <item><description>normal: Serverless Standard Edition</description></item>
+        /// </list>
+        /// <para>For more information about the instance editions, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
         /// 
-        /// Valid values if you set PaidType to 1:
-        /// 
-        /// *   normal: Standard Edition (High Write)
-        /// *   professional: Professional Edition (High Write)
-        /// *   professionalForHighRead: Professional Edition (High Read)
-        /// 
-        /// Valid values if you set PaidType to 3:
-        /// 
-        /// *   normal: Serverless Standard Edition
-        /// 
-        /// For more information about the instance editions, see [Billing](https://help.aliyun.com/document_detail/84737.html).
+        /// <b>Example:</b>
+        /// <para>normal</para>
         /// </summary>
         [NameInMap("SpecType")]
         [Validation(Required=false)]
         public string SpecType { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreatePostPayOrderShrinkRequestTag> Tag { get; set; }
         public class CreatePostPayOrderShrinkRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N.
+            /// <para>The key of tag N.</para>
+            /// <list type="bullet">
+            /// <item><description>Valid values of N: 1 to 20.</description></item>
+            /// <item><description>If this parameter is left empty, the keys of all tags are matched.</description></item>
+            /// <item><description>The tag key must be up to 128 characters in length. It cannot start with acs: or aliyun or contain <a href="http://https://%E3%80%82">http:// or https://.</a></description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   Valid values of N: 1 to 20.
-            /// *   If this parameter is left empty, the keys of all tags are matched.
-            /// *   The tag key must be up to 128 characters in length. It cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>FinanceDept</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N.
+            /// <para>The value of tag N.</para>
+            /// <list type="bullet">
+            /// <item><description>Valid values of N: 1 to 20.</description></item>
+            /// <item><description>If you do not specify a tag key, you cannot specify a tag value. If this parameter is not configured, all tag values are matched.</description></item>
+            /// <item><description>The tag value must be 1 to 128 characters in length. It cannot start with acs: or aliyun or contain <a href="http://https://%E3%80%82">http:// or https://.</a></description></item>
+            /// </list>
             /// 
-            /// *   Valid values of N: 1 to 20.
-            /// *   If you do not specify a tag key, you cannot specify a tag value. If this parameter is not configured, all tag values are matched.
-            /// *   The tag value must be 1 to 128 characters in length. It cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+            /// <b>Example:</b>
+            /// <para>FinanceJoshua</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -181,14 +229,19 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         }
 
         /// <summary>
-        /// The number of topics. We recommend that you do not configure this parameter.
+        /// <para>The number of topics. We recommend that you do not configure this parameter.</para>
+        /// <list type="bullet">
+        /// <item><description>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.</description></item>
+        /// <item><description>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</description></item>
+        /// <item><description>The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you consume exceeds the default value, you are charged additional fees.</description></item>
+        /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</para>
+        /// </remarks>
         /// 
-        /// *   You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.
-        /// *   If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.
-        /// *   The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you consume exceeds the default value, you are charged additional fees.
-        /// *   For information about the valid values of this parameter, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-        /// 
-        /// >  If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("TopicQuota")]
         [Validation(Required=false)]

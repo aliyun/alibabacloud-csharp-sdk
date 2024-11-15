@@ -10,29 +10,37 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class ConvertPostPayOrderRequest : TeaModel {
         /// <summary>
-        /// The subscription duration. Unit: months. Valid values:
+        /// <para>The subscription duration. Unit: months. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1~12</b></description></item>
+        /// <item><description><b>24</b></description></item>
+        /// <item><description><b>36</b></description></item>
+        /// </list>
         /// 
-        /// *   **1~12**
-        /// *   **24**
-        /// *   **36**
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>alikafka_post-cn-v0h1fgs2****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// <para>The region ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

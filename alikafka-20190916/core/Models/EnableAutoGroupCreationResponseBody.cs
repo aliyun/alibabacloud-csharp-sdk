@@ -10,30 +10,41 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class EnableAutoGroupCreationResponseBody : TeaModel {
         /// <summary>
-        /// The returned HTTP status code.
+        /// <para>The returned HTTP status code.</para>
+        /// <para>If the value <b>200</b> is returned, the request is successful.</para>
         /// 
-        /// If the value **200** is returned, the request is successful.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>operation success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A421CCD7-5BC5-4B32-8DD8-64668A8FCB56</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

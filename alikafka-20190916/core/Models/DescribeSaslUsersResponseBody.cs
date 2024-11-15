@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class DescribeSaslUsersResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+        /// <para>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>operation success.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9E3B3592-5994-4F65-A61E-E62A77A****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The Simple Authentication and Security Layer (SASL) users.
+        /// <para>The Simple Authentication and Security Layer (SASL) users.</para>
         /// </summary>
         [NameInMap("SaslUserList")]
         [Validation(Required=false)]
@@ -42,36 +51,49 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public List<DescribeSaslUsersResponseBodySaslUserListSaslUserVO> SaslUserVO { get; set; }
             public class DescribeSaslUsersResponseBodySaslUserListSaslUserVO : TeaModel {
                 /// <summary>
-                /// The encryption method.
+                /// <para>The encryption method.</para>
+                /// <remarks>
+                /// <para> This field is available only for serverless ApsaraMQ for Kafka V3 instances.</para>
+                /// </remarks>
                 /// 
-                /// >  This field is available only for serverless ApsaraMQ for Kafka V3 instances.
+                /// <b>Example:</b>
+                /// <para>SCRAM-SHA-256</para>
                 /// </summary>
                 [NameInMap("Mechanism")]
                 [Validation(Required=false)]
                 public string Mechanism { get; set; }
 
                 /// <summary>
-                /// The password.
+                /// <para>The password.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <hr>
                 /// </summary>
                 [NameInMap("Password")]
                 [Validation(Required=false)]
                 public string Password { get; set; }
 
                 /// <summary>
-                /// The type of the SASL user. Valid values:
+                /// <para>The type of the SASL user. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>plain</b>: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.</description></item>
+                /// <item><description><b>SCRAM</b>: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.</description></item>
+                /// <item><description><b>LDAP</b>: This value is available only for the SASL users of ApsaraMQ for Confluent instances.</description></item>
+                /// </list>
+                /// <para>Default value: <b>plain</b>.</para>
                 /// 
-                /// *   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.
-                /// *   **SCRAM**: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.
-                /// *   **LDAP**: This value is available only for the SASL users of ApsaraMQ for Confluent instances.
-                /// 
-                /// Default value: **plain**.
+                /// <b>Example:</b>
+                /// <para>scram</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The username.
+                /// <para>The username.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test12***</para>
                 /// </summary>
                 [NameInMap("Username")]
                 [Validation(Required=false)]
@@ -82,7 +104,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

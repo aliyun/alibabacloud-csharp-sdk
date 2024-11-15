@@ -10,47 +10,61 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to detach all tags from the resource. This parameter only takes effect when the TagKey.N parameter is not configured. Default value: **false**.
+        /// <para>Specifies whether to detach all tags from the resource. This parameter only takes effect when the TagKey.N parameter is not configured. Default value: <b>false</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the resource is deployed.
+        /// <para>The ID of the region in which the resource is deployed.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the resources from which you want to detach tags.
+        /// <para>The IDs of the resources from which you want to detach tags.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>alikafka_post-cn-v0h1fgs2****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resources. Valid values:
+        /// <para>The type of the resources. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>INSTANCE</b></description></item>
+        /// <item><description><b>TOPIC</b></description></item>
+        /// <item><description><b>CONSUMERGROUP</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> The value of this parameter is not case-sensitive.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **INSTANCE**
-        /// *   **TOPIC**
-        /// *   **CONSUMERGROUP**
-        /// 
-        /// >  The value of this parameter is not case-sensitive.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>INSTANCE</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The key of the resource tag.
+        /// <para>The key of the resource tag.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FinanceDept</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

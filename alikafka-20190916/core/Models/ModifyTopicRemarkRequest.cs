@@ -10,34 +10,43 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class ModifyTopicRemarkRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>alikafka_post-cn-0pp1l9z****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// <para>The region ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The description of the topic.
+        /// <para>The description of the topic.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testremark</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// The name of the topic.
+        /// <para>The name of the topic.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>alikafka_post-cn-0pp1l9z8****</para>
         /// </summary>
         [NameInMap("Topic")]
         [Validation(Required=false)]

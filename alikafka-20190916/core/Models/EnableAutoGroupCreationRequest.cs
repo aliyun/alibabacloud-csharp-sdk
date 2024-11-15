@@ -10,32 +10,38 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class EnableAutoGroupCreationRequest : TeaModel {
         /// <summary>
-        /// Specify whether to enable the flexible group creation feature. Valid values:
+        /// <para>Specify whether to enable the flexible group creation feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables the flexible group creation feature.</description></item>
+        /// <item><description><b>false</b>: disabled the flexible group creation feature.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **true**: enables the flexible group creation feature.
-        /// *   **false**: disabled the flexible group creation feature.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/437663.html">GetInstanceList</a> operation to query instances.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [GetInstanceList](https://help.aliyun.com/document_detail/437663.html) operation to query instances.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>alikafka_post-cn-mp919o4v****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

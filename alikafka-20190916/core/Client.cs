@@ -37,13 +37,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary Changes the resource group of an ApsaraMQ for Kafka instance.
-         *
-         * @param request ChangeResourceGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group of an ApsaraMQ for Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public ChangeResourceGroupResponse ChangeResourceGroupWithOptions(ChangeResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -79,13 +87,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ChangeResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the resource group of an ApsaraMQ for Kafka instance.
-         *
-         * @param request ChangeResourceGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group of an ApsaraMQ for Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public async Task<ChangeResourceGroupResponse> ChangeResourceGroupWithOptionsAsync(ChangeResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -121,37 +137,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ChangeResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the resource group of an ApsaraMQ for Kafka instance.
-         *
-         * @param request ChangeResourceGroupRequest
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group of an ApsaraMQ for Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public ChangeResourceGroupResponse ChangeResourceGroup(ChangeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ChangeResourceGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Changes the resource group of an ApsaraMQ for Kafka instance.
-         *
-         * @param request ChangeResourceGroupRequest
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group of an ApsaraMQ for Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public async Task<ChangeResourceGroupResponse> ChangeResourceGroupAsync(ChangeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ChangeResourceGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Changes the billing method of a Message Queue for Apache Kafka instance from pay-as-you-go to subscription.
-         *
-         * @param request ConvertPostPayOrderRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConvertPostPayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of a Message Queue for Apache Kafka instance from pay-as-you-go to subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConvertPostPayOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertPostPayOrderResponse
+        /// </returns>
         public ConvertPostPayOrderResponse ConvertPostPayOrderWithOptions(ConvertPostPayOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -187,13 +223,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ConvertPostPayOrderResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the billing method of a Message Queue for Apache Kafka instance from pay-as-you-go to subscription.
-         *
-         * @param request ConvertPostPayOrderRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ConvertPostPayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of a Message Queue for Apache Kafka instance from pay-as-you-go to subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConvertPostPayOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertPostPayOrderResponse
+        /// </returns>
         public async Task<ConvertPostPayOrderResponse> ConvertPostPayOrderWithOptionsAsync(ConvertPostPayOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -229,37 +273,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ConvertPostPayOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the billing method of a Message Queue for Apache Kafka instance from pay-as-you-go to subscription.
-         *
-         * @param request ConvertPostPayOrderRequest
-         * @return ConvertPostPayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of a Message Queue for Apache Kafka instance from pay-as-you-go to subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConvertPostPayOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertPostPayOrderResponse
+        /// </returns>
         public ConvertPostPayOrderResponse ConvertPostPayOrder(ConvertPostPayOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConvertPostPayOrderWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Changes the billing method of a Message Queue for Apache Kafka instance from pay-as-you-go to subscription.
-         *
-         * @param request ConvertPostPayOrderRequest
-         * @return ConvertPostPayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of a Message Queue for Apache Kafka instance from pay-as-you-go to subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConvertPostPayOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertPostPayOrderResponse
+        /// </returns>
         public async Task<ConvertPostPayOrderResponse> ConvertPostPayOrderAsync(ConvertPostPayOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConvertPostPayOrderWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates an access control list (ACL).
-         *
-         * @param request CreateAclRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAclRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAclResponse
+        /// </returns>
         public CreateAclResponse CreateAclWithOptions(CreateAclRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -323,13 +387,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<CreateAclResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an access control list (ACL).
-         *
-         * @param request CreateAclRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAclRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAclResponse
+        /// </returns>
         public async Task<CreateAclResponse> CreateAclWithOptionsAsync(CreateAclRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -393,37 +465,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<CreateAclResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an access control list (ACL).
-         *
-         * @param request CreateAclRequest
-         * @return CreateAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAclResponse
+        /// </returns>
         public CreateAclResponse CreateAcl(CreateAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateAclWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates an access control list (ACL).
-         *
-         * @param request CreateAclRequest
-         * @return CreateAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAclResponse
+        /// </returns>
         public async Task<CreateAclResponse> CreateAclAsync(CreateAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateAclWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a consumer group.
-         *
-         * @param request CreateConsumerGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConsumerGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConsumerGroupResponse
+        /// </returns>
         public CreateConsumerGroupResponse CreateConsumerGroupWithOptions(CreateConsumerGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -467,13 +559,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<CreateConsumerGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a consumer group.
-         *
-         * @param request CreateConsumerGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConsumerGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConsumerGroupResponse
+        /// </returns>
         public async Task<CreateConsumerGroupResponse> CreateConsumerGroupWithOptionsAsync(CreateConsumerGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -517,39 +617,62 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<CreateConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a consumer group.
-         *
-         * @param request CreateConsumerGroupRequest
-         * @return CreateConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConsumerGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConsumerGroupResponse
+        /// </returns>
         public CreateConsumerGroupResponse CreateConsumerGroup(CreateConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateConsumerGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a consumer group.
-         *
-         * @param request CreateConsumerGroupRequest
-         * @return CreateConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConsumerGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConsumerGroupResponse
+        /// </returns>
         public async Task<CreateConsumerGroupResponse> CreateConsumerGroupAsync(CreateConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateConsumerGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a pay-as-you-go ApsaraMQ for Kafka instance. Pay-as-you-go instances allow you to pay after you use the resources. You are charged for pay-as-you-go instances based on the actual resource usage. You can use pay-as-you-go instances in test scenarios or scenarios in which the peak traffic is uncertain.
-         *
-         * @description Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-         *
-         * @param tmpReq CreatePostPayOrderRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreatePostPayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a pay-as-you-go ApsaraMQ for Kafka instance. Pay-as-you-go instances allow you to pay after you use the resources. You are charged for pay-as-you-go instances based on the actual resource usage. You can use pay-as-you-go instances in test scenarios or scenarios in which the peak traffic is uncertain.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreatePostPayOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePostPayOrderResponse
+        /// </returns>
         public CreatePostPayOrderResponse CreatePostPayOrderWithOptions(CreatePostPayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -635,15 +758,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<CreatePostPayOrderResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a pay-as-you-go ApsaraMQ for Kafka instance. Pay-as-you-go instances allow you to pay after you use the resources. You are charged for pay-as-you-go instances based on the actual resource usage. You can use pay-as-you-go instances in test scenarios or scenarios in which the peak traffic is uncertain.
-         *
-         * @description Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-         *
-         * @param tmpReq CreatePostPayOrderRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreatePostPayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a pay-as-you-go ApsaraMQ for Kafka instance. Pay-as-you-go instances allow you to pay after you use the resources. You are charged for pay-as-you-go instances based on the actual resource usage. You can use pay-as-you-go instances in test scenarios or scenarios in which the peak traffic is uncertain.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreatePostPayOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePostPayOrderResponse
+        /// </returns>
         public async Task<CreatePostPayOrderResponse> CreatePostPayOrderWithOptionsAsync(CreatePostPayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -729,44 +863,75 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<CreatePostPayOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a pay-as-you-go ApsaraMQ for Kafka instance. Pay-as-you-go instances allow you to pay after you use the resources. You are charged for pay-as-you-go instances based on the actual resource usage. You can use pay-as-you-go instances in test scenarios or scenarios in which the peak traffic is uncertain.
-         *
-         * @description Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-         *
-         * @param request CreatePostPayOrderRequest
-         * @return CreatePostPayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a pay-as-you-go ApsaraMQ for Kafka instance. Pay-as-you-go instances allow you to pay after you use the resources. You are charged for pay-as-you-go instances based on the actual resource usage. You can use pay-as-you-go instances in test scenarios or scenarios in which the peak traffic is uncertain.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePostPayOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePostPayOrderResponse
+        /// </returns>
         public CreatePostPayOrderResponse CreatePostPayOrder(CreatePostPayOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreatePostPayOrderWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a pay-as-you-go ApsaraMQ for Kafka instance. Pay-as-you-go instances allow you to pay after you use the resources. You are charged for pay-as-you-go instances based on the actual resource usage. You can use pay-as-you-go instances in test scenarios or scenarios in which the peak traffic is uncertain.
-         *
-         * @description Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-         *
-         * @param request CreatePostPayOrderRequest
-         * @return CreatePostPayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a pay-as-you-go ApsaraMQ for Kafka instance. Pay-as-you-go instances allow you to pay after you use the resources. You are charged for pay-as-you-go instances based on the actual resource usage. You can use pay-as-you-go instances in test scenarios or scenarios in which the peak traffic is uncertain.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePostPayOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePostPayOrderResponse
+        /// </returns>
         public async Task<CreatePostPayOrderResponse> CreatePostPayOrderAsync(CreatePostPayOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreatePostPayOrderWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a subscription ApsaraMQ for Kafka instance. You can use subscription instances only after you pay for them. Subscription instances are suitable for long-term and stable business scenarios.
-         *
-         * @description *   Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-         * *   If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the [Renewal](https://renew.console.aliyun.com/#/ecs) page in the Alibaba Cloud Management Console.
-         *
-         * @param tmpReq CreatePrePayOrderRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreatePrePayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a subscription ApsaraMQ for Kafka instance. You can use subscription instances only after you pay for them. Subscription instances are suitable for long-term and stable business scenarios.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal</a> page in the Alibaba Cloud Management Console.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreatePrePayOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePrePayOrderResponse
+        /// </returns>
         public CreatePrePayOrderResponse CreatePrePayOrderWithOptions(CreatePrePayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -856,16 +1021,29 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<CreatePrePayOrderResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a subscription ApsaraMQ for Kafka instance. You can use subscription instances only after you pay for them. Subscription instances are suitable for long-term and stable business scenarios.
-         *
-         * @description *   Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-         * *   If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the [Renewal](https://renew.console.aliyun.com/#/ecs) page in the Alibaba Cloud Management Console.
-         *
-         * @param tmpReq CreatePrePayOrderRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreatePrePayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a subscription ApsaraMQ for Kafka instance. You can use subscription instances only after you pay for them. Subscription instances are suitable for long-term and stable business scenarios.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal</a> page in the Alibaba Cloud Management Console.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreatePrePayOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePrePayOrderResponse
+        /// </returns>
         public async Task<CreatePrePayOrderResponse> CreatePrePayOrderWithOptionsAsync(CreatePrePayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -955,43 +1133,73 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<CreatePrePayOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a subscription ApsaraMQ for Kafka instance. You can use subscription instances only after you pay for them. Subscription instances are suitable for long-term and stable business scenarios.
-         *
-         * @description *   Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-         * *   If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the [Renewal](https://renew.console.aliyun.com/#/ecs) page in the Alibaba Cloud Management Console.
-         *
-         * @param request CreatePrePayOrderRequest
-         * @return CreatePrePayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a subscription ApsaraMQ for Kafka instance. You can use subscription instances only after you pay for them. Subscription instances are suitable for long-term and stable business scenarios.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal</a> page in the Alibaba Cloud Management Console.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePrePayOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePrePayOrderResponse
+        /// </returns>
         public CreatePrePayOrderResponse CreatePrePayOrder(CreatePrePayOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreatePrePayOrderWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a subscription ApsaraMQ for Kafka instance. You can use subscription instances only after you pay for them. Subscription instances are suitable for long-term and stable business scenarios.
-         *
-         * @description *   Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-         * *   If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the [Renewal](https://renew.console.aliyun.com/#/ecs) page in the Alibaba Cloud Management Console.
-         *
-         * @param request CreatePrePayOrderRequest
-         * @return CreatePrePayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a subscription ApsaraMQ for Kafka instance. You can use subscription instances only after you pay for them. Subscription instances are suitable for long-term and stable business scenarios.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal</a> page in the Alibaba Cloud Management Console.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePrePayOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePrePayOrderResponse
+        /// </returns>
         public async Task<CreatePrePayOrderResponse> CreatePrePayOrderAsync(CreatePrePayOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreatePrePayOrderWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a Simple Authentication and Security Layer (SASL) user.
-         *
-         * @param request CreateSaslUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSaslUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Simple Authentication and Security Layer (SASL) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSaslUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSaslUserResponse
+        /// </returns>
         public CreateSaslUserResponse CreateSaslUserWithOptions(CreateSaslUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1039,13 +1247,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<CreateSaslUserResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a Simple Authentication and Security Layer (SASL) user.
-         *
-         * @param request CreateSaslUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSaslUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Simple Authentication and Security Layer (SASL) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSaslUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSaslUserResponse
+        /// </returns>
         public async Task<CreateSaslUserResponse> CreateSaslUserWithOptionsAsync(CreateSaslUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1093,39 +1309,62 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<CreateSaslUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a Simple Authentication and Security Layer (SASL) user.
-         *
-         * @param request CreateSaslUserRequest
-         * @return CreateSaslUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Simple Authentication and Security Layer (SASL) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSaslUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSaslUserResponse
+        /// </returns>
         public CreateSaslUserResponse CreateSaslUser(CreateSaslUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSaslUserWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a Simple Authentication and Security Layer (SASL) user.
-         *
-         * @param request CreateSaslUserRequest
-         * @return CreateSaslUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Simple Authentication and Security Layer (SASL) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSaslUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSaslUserResponse
+        /// </returns>
         public async Task<CreateSaslUserResponse> CreateSaslUserAsync(CreateSaslUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSaslUserWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
-         *
-         * @param tmpReq CreateScheduledScalingRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateScheduledScalingRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateScheduledScalingRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateScheduledScalingRuleResponse
+        /// </returns>
         public CreateScheduledScalingRuleResponse CreateScheduledScalingRuleWithOptions(CreateScheduledScalingRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1203,15 +1442,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<CreateScheduledScalingRuleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
-         *
-         * @param tmpReq CreateScheduledScalingRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateScheduledScalingRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateScheduledScalingRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateScheduledScalingRuleResponse
+        /// </returns>
         public async Task<CreateScheduledScalingRuleResponse> CreateScheduledScalingRuleWithOptionsAsync(CreateScheduledScalingRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1289,44 +1539,75 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<CreateScheduledScalingRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
-         *
-         * @param request CreateScheduledScalingRuleRequest
-         * @return CreateScheduledScalingRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateScheduledScalingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateScheduledScalingRuleResponse
+        /// </returns>
         public CreateScheduledScalingRuleResponse CreateScheduledScalingRule(CreateScheduledScalingRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateScheduledScalingRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
-         *
-         * @param request CreateScheduledScalingRuleRequest
-         * @return CreateScheduledScalingRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateScheduledScalingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateScheduledScalingRuleResponse
+        /// </returns>
         public async Task<CreateScheduledScalingRuleResponse> CreateScheduledScalingRuleAsync(CreateScheduledScalingRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateScheduledScalingRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a topic.
-         *
-         * @description *   Each Alibaba Cloud account can call this operation up to once per second.
-         * *   The maximum number of topics that you can create in an instance is determined by the specification of the instance.
-         *
-         * @param request CreateTopicRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a topic.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Each Alibaba Cloud account can call this operation up to once per second.</para>
+        /// <list type="bullet">
+        /// <item><description>The maximum number of topics that you can create in an instance is determined by the specification of the instance.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateTopicRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTopicResponse
+        /// </returns>
         public CreateTopicResponse CreateTopicWithOptions(CreateTopicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1394,16 +1675,29 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<CreateTopicResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a topic.
-         *
-         * @description *   Each Alibaba Cloud account can call this operation up to once per second.
-         * *   The maximum number of topics that you can create in an instance is determined by the specification of the instance.
-         *
-         * @param request CreateTopicRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a topic.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Each Alibaba Cloud account can call this operation up to once per second.</para>
+        /// <list type="bullet">
+        /// <item><description>The maximum number of topics that you can create in an instance is determined by the specification of the instance.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateTopicRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTopicResponse
+        /// </returns>
         public async Task<CreateTopicResponse> CreateTopicWithOptionsAsync(CreateTopicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1471,43 +1765,73 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<CreateTopicResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a topic.
-         *
-         * @description *   Each Alibaba Cloud account can call this operation up to once per second.
-         * *   The maximum number of topics that you can create in an instance is determined by the specification of the instance.
-         *
-         * @param request CreateTopicRequest
-         * @return CreateTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a topic.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Each Alibaba Cloud account can call this operation up to once per second.</para>
+        /// <list type="bullet">
+        /// <item><description>The maximum number of topics that you can create in an instance is determined by the specification of the instance.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateTopicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTopicResponse
+        /// </returns>
         public CreateTopicResponse CreateTopic(CreateTopicRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTopicWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a topic.
-         *
-         * @description *   Each Alibaba Cloud account can call this operation up to once per second.
-         * *   The maximum number of topics that you can create in an instance is determined by the specification of the instance.
-         *
-         * @param request CreateTopicRequest
-         * @return CreateTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a topic.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Each Alibaba Cloud account can call this operation up to once per second.</para>
+        /// <list type="bullet">
+        /// <item><description>The maximum number of topics that you can create in an instance is determined by the specification of the instance.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateTopicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTopicResponse
+        /// </returns>
         public async Task<CreateTopicResponse> CreateTopicAsync(CreateTopicRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTopicWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes an access control list (ACL).
-         *
-         * @param request DeleteAclRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAclRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAclResponse
+        /// </returns>
         public DeleteAclResponse DeleteAclWithOptions(DeleteAclRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1571,13 +1895,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<DeleteAclResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an access control list (ACL).
-         *
-         * @param request DeleteAclRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAclRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAclResponse
+        /// </returns>
         public async Task<DeleteAclResponse> DeleteAclWithOptionsAsync(DeleteAclRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1641,37 +1973,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<DeleteAclResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an access control list (ACL).
-         *
-         * @param request DeleteAclRequest
-         * @return DeleteAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAclResponse
+        /// </returns>
         public DeleteAclResponse DeleteAcl(DeleteAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAclWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes an access control list (ACL).
-         *
-         * @param request DeleteAclRequest
-         * @return DeleteAclResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAclRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAclResponse
+        /// </returns>
         public async Task<DeleteAclResponse> DeleteAclAsync(DeleteAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAclWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a consumer group from a specified Message Queue for Apache Kafka instance.
-         *
-         * @param request DeleteConsumerGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a consumer group from a specified Message Queue for Apache Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConsumerGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumerGroupResponse
+        /// </returns>
         public DeleteConsumerGroupResponse DeleteConsumerGroupWithOptions(DeleteConsumerGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1707,13 +2059,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<DeleteConsumerGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a consumer group from a specified Message Queue for Apache Kafka instance.
-         *
-         * @param request DeleteConsumerGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a consumer group from a specified Message Queue for Apache Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConsumerGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumerGroupResponse
+        /// </returns>
         public async Task<DeleteConsumerGroupResponse> DeleteConsumerGroupWithOptionsAsync(DeleteConsumerGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1749,37 +2109,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<DeleteConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a consumer group from a specified Message Queue for Apache Kafka instance.
-         *
-         * @param request DeleteConsumerGroupRequest
-         * @return DeleteConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a consumer group from a specified Message Queue for Apache Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConsumerGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumerGroupResponse
+        /// </returns>
         public DeleteConsumerGroupResponse DeleteConsumerGroup(DeleteConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteConsumerGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a consumer group from a specified Message Queue for Apache Kafka instance.
-         *
-         * @param request DeleteConsumerGroupRequest
-         * @return DeleteConsumerGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a consumer group from a specified Message Queue for Apache Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConsumerGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumerGroupResponse
+        /// </returns>
         public async Task<DeleteConsumerGroupResponse> DeleteConsumerGroupAsync(DeleteConsumerGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteConsumerGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes an instance. You can delete subscription and pay-as-you-go instances after you release them.
-         *
-         * @param request DeleteInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an instance. You can delete subscription and pay-as-you-go instances after you release them.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public DeleteInstanceResponse DeleteInstanceWithOptions(DeleteInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1811,13 +2191,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an instance. You can delete subscription and pay-as-you-go instances after you release them.
-         *
-         * @param request DeleteInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an instance. You can delete subscription and pay-as-you-go instances after you release them.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public async Task<DeleteInstanceResponse> DeleteInstanceWithOptionsAsync(DeleteInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1849,37 +2237,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an instance. You can delete subscription and pay-as-you-go instances after you release them.
-         *
-         * @param request DeleteInstanceRequest
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an instance. You can delete subscription and pay-as-you-go instances after you release them.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes an instance. You can delete subscription and pay-as-you-go instances after you release them.
-         *
-         * @param request DeleteInstanceRequest
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an instance. You can delete subscription and pay-as-you-go instances after you release them.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public async Task<DeleteInstanceResponse> DeleteInstanceAsync(DeleteInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a Simple Authentication and Security Layer (SASL) user.
-         *
-         * @param request DeleteSaslUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteSaslUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Simple Authentication and Security Layer (SASL) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSaslUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSaslUserResponse
+        /// </returns>
         public DeleteSaslUserResponse DeleteSaslUserWithOptions(DeleteSaslUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1923,13 +2331,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<DeleteSaslUserResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a Simple Authentication and Security Layer (SASL) user.
-         *
-         * @param request DeleteSaslUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteSaslUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Simple Authentication and Security Layer (SASL) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSaslUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSaslUserResponse
+        /// </returns>
         public async Task<DeleteSaslUserResponse> DeleteSaslUserWithOptionsAsync(DeleteSaslUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1973,39 +2389,62 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<DeleteSaslUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a Simple Authentication and Security Layer (SASL) user.
-         *
-         * @param request DeleteSaslUserRequest
-         * @return DeleteSaslUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Simple Authentication and Security Layer (SASL) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSaslUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSaslUserResponse
+        /// </returns>
         public DeleteSaslUserResponse DeleteSaslUser(DeleteSaslUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSaslUserWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a Simple Authentication and Security Layer (SASL) user.
-         *
-         * @param request DeleteSaslUserRequest
-         * @return DeleteSaslUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Simple Authentication and Security Layer (SASL) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSaslUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSaslUserResponse
+        /// </returns>
         public async Task<DeleteSaslUserResponse> DeleteSaslUserAsync(DeleteSaslUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSaslUserWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a scheduled scaling task for a serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @param request DeleteScheduledScalingRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteScheduledScalingRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a scheduled scaling task for a serverless ApsaraMQ for Kafka V3 instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instance.</h6>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteScheduledScalingRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteScheduledScalingRuleResponse
+        /// </returns>
         public DeleteScheduledScalingRuleResponse DeleteScheduledScalingRuleWithOptions(DeleteScheduledScalingRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2041,15 +2480,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<DeleteScheduledScalingRuleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a scheduled scaling task for a serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @param request DeleteScheduledScalingRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteScheduledScalingRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a scheduled scaling task for a serverless ApsaraMQ for Kafka V3 instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instance.</h6>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteScheduledScalingRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteScheduledScalingRuleResponse
+        /// </returns>
         public async Task<DeleteScheduledScalingRuleResponse> DeleteScheduledScalingRuleWithOptionsAsync(DeleteScheduledScalingRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2085,41 +2535,67 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<DeleteScheduledScalingRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a scheduled scaling task for a serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @param request DeleteScheduledScalingRuleRequest
-         * @return DeleteScheduledScalingRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a scheduled scaling task for a serverless ApsaraMQ for Kafka V3 instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instance.</h6>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteScheduledScalingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteScheduledScalingRuleResponse
+        /// </returns>
         public DeleteScheduledScalingRuleResponse DeleteScheduledScalingRule(DeleteScheduledScalingRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteScheduledScalingRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a scheduled scaling task for a serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @param request DeleteScheduledScalingRuleRequest
-         * @return DeleteScheduledScalingRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a scheduled scaling task for a serverless ApsaraMQ for Kafka V3 instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instance.</h6>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteScheduledScalingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteScheduledScalingRuleResponse
+        /// </returns>
         public async Task<DeleteScheduledScalingRuleResponse> DeleteScheduledScalingRuleAsync(DeleteScheduledScalingRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteScheduledScalingRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a topic.
-         *
-         * @param request DeleteTopicRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTopicRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTopicResponse
+        /// </returns>
         public DeleteTopicResponse DeleteTopicWithOptions(DeleteTopicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2155,13 +2631,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<DeleteTopicResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a topic.
-         *
-         * @param request DeleteTopicRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTopicRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTopicResponse
+        /// </returns>
         public async Task<DeleteTopicResponse> DeleteTopicWithOptionsAsync(DeleteTopicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2197,37 +2681,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<DeleteTopicResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a topic.
-         *
-         * @param request DeleteTopicRequest
-         * @return DeleteTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTopicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTopicResponse
+        /// </returns>
         public DeleteTopicResponse DeleteTopic(DeleteTopicRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTopicWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a topic.
-         *
-         * @param request DeleteTopicRequest
-         * @return DeleteTopicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTopicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTopicResponse
+        /// </returns>
         public async Task<DeleteTopicResponse> DeleteTopicAsync(DeleteTopicRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTopicWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries access control lists (ACLs).
-         *
-         * @param request DescribeAclsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAclsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries access control lists (ACLs).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAclsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAclsResponse
+        /// </returns>
         public DescribeAclsResponse DescribeAclsWithOptions(DescribeAclsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2287,13 +2791,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<DescribeAclsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries access control lists (ACLs).
-         *
-         * @param request DescribeAclsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAclsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries access control lists (ACLs).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAclsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAclsResponse
+        /// </returns>
         public async Task<DescribeAclsResponse> DescribeAclsWithOptionsAsync(DescribeAclsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2353,37 +2865,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<DescribeAclsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries access control lists (ACLs).
-         *
-         * @param request DescribeAclsRequest
-         * @return DescribeAclsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries access control lists (ACLs).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAclsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAclsResponse
+        /// </returns>
         public DescribeAclsResponse DescribeAcls(DescribeAclsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAclsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries access control lists (ACLs).
-         *
-         * @param request DescribeAclsRequest
-         * @return DescribeAclsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries access control lists (ACLs).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAclsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAclsResponse
+        /// </returns>
         public async Task<DescribeAclsResponse> DescribeAclsAsync(DescribeAclsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAclsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries Simple Authentication and Security Layer (SASL) users.
-         *
-         * @param request DescribeSaslUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSaslUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Simple Authentication and Security Layer (SASL) users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSaslUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSaslUsersResponse
+        /// </returns>
         public DescribeSaslUsersResponse DescribeSaslUsersWithOptions(DescribeSaslUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2415,13 +2947,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<DescribeSaslUsersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries Simple Authentication and Security Layer (SASL) users.
-         *
-         * @param request DescribeSaslUsersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSaslUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Simple Authentication and Security Layer (SASL) users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSaslUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSaslUsersResponse
+        /// </returns>
         public async Task<DescribeSaslUsersResponse> DescribeSaslUsersWithOptionsAsync(DescribeSaslUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2453,37 +2993,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<DescribeSaslUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries Simple Authentication and Security Layer (SASL) users.
-         *
-         * @param request DescribeSaslUsersRequest
-         * @return DescribeSaslUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Simple Authentication and Security Layer (SASL) users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSaslUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSaslUsersResponse
+        /// </returns>
         public DescribeSaslUsersResponse DescribeSaslUsers(DescribeSaslUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSaslUsersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries Simple Authentication and Security Layer (SASL) users.
-         *
-         * @param request DescribeSaslUsersRequest
-         * @return DescribeSaslUsersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Simple Authentication and Security Layer (SASL) users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSaslUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSaslUsersResponse
+        /// </returns>
         public async Task<DescribeSaslUsersResponse> DescribeSaslUsersAsync(DescribeSaslUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSaslUsersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables and disables the flexible group creation feature.
-         *
-         * @param request EnableAutoGroupCreationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableAutoGroupCreationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables and disables the flexible group creation feature.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableAutoGroupCreationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableAutoGroupCreationResponse
+        /// </returns>
         public EnableAutoGroupCreationResponse EnableAutoGroupCreationWithOptions(EnableAutoGroupCreationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2519,13 +3079,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<EnableAutoGroupCreationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables and disables the flexible group creation feature.
-         *
-         * @param request EnableAutoGroupCreationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableAutoGroupCreationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables and disables the flexible group creation feature.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableAutoGroupCreationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableAutoGroupCreationResponse
+        /// </returns>
         public async Task<EnableAutoGroupCreationResponse> EnableAutoGroupCreationWithOptionsAsync(EnableAutoGroupCreationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2561,37 +3129,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<EnableAutoGroupCreationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables and disables the flexible group creation feature.
-         *
-         * @param request EnableAutoGroupCreationRequest
-         * @return EnableAutoGroupCreationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables and disables the flexible group creation feature.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableAutoGroupCreationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableAutoGroupCreationResponse
+        /// </returns>
         public EnableAutoGroupCreationResponse EnableAutoGroupCreation(EnableAutoGroupCreationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableAutoGroupCreationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables and disables the flexible group creation feature.
-         *
-         * @param request EnableAutoGroupCreationRequest
-         * @return EnableAutoGroupCreationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables and disables the flexible group creation feature.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableAutoGroupCreationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableAutoGroupCreationResponse
+        /// </returns>
         public async Task<EnableAutoGroupCreationResponse> EnableAutoGroupCreationAsync(EnableAutoGroupCreationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableAutoGroupCreationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables the automatic topic creation feature, or changes the number of partitions in topics that are automatically created.
-         *
-         * @param request EnableAutoTopicCreationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableAutoTopicCreationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the automatic topic creation feature, or changes the number of partitions in topics that are automatically created.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableAutoTopicCreationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableAutoTopicCreationResponse
+        /// </returns>
         public EnableAutoTopicCreationResponse EnableAutoTopicCreationWithOptions(EnableAutoTopicCreationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2631,13 +3219,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<EnableAutoTopicCreationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables or disables the automatic topic creation feature, or changes the number of partitions in topics that are automatically created.
-         *
-         * @param request EnableAutoTopicCreationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableAutoTopicCreationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the automatic topic creation feature, or changes the number of partitions in topics that are automatically created.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableAutoTopicCreationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableAutoTopicCreationResponse
+        /// </returns>
         public async Task<EnableAutoTopicCreationResponse> EnableAutoTopicCreationWithOptionsAsync(EnableAutoTopicCreationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2677,37 +3273,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<EnableAutoTopicCreationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables or disables the automatic topic creation feature, or changes the number of partitions in topics that are automatically created.
-         *
-         * @param request EnableAutoTopicCreationRequest
-         * @return EnableAutoTopicCreationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the automatic topic creation feature, or changes the number of partitions in topics that are automatically created.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableAutoTopicCreationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableAutoTopicCreationResponse
+        /// </returns>
         public EnableAutoTopicCreationResponse EnableAutoTopicCreation(EnableAutoTopicCreationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableAutoTopicCreationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables or disables the automatic topic creation feature, or changes the number of partitions in topics that are automatically created.
-         *
-         * @param request EnableAutoTopicCreationRequest
-         * @return EnableAutoTopicCreationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the automatic topic creation feature, or changes the number of partitions in topics that are automatically created.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableAutoTopicCreationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableAutoTopicCreationResponse
+        /// </returns>
         public async Task<EnableAutoTopicCreationResponse> EnableAutoTopicCreationAsync(EnableAutoTopicCreationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableAutoTopicCreationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the IDs of all instances in the current account.
-         *
-         * @param request GetAllInstanceIdListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAllInstanceIdListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs of all instances in the current account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAllInstanceIdListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAllInstanceIdListResponse
+        /// </returns>
         public GetAllInstanceIdListResponse GetAllInstanceIdListWithOptions(GetAllInstanceIdListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2735,13 +3351,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetAllInstanceIdListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the IDs of all instances in the current account.
-         *
-         * @param request GetAllInstanceIdListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAllInstanceIdListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs of all instances in the current account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAllInstanceIdListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAllInstanceIdListResponse
+        /// </returns>
         public async Task<GetAllInstanceIdListResponse> GetAllInstanceIdListWithOptionsAsync(GetAllInstanceIdListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2769,37 +3393,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetAllInstanceIdListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the IDs of all instances in the current account.
-         *
-         * @param request GetAllInstanceIdListRequest
-         * @return GetAllInstanceIdListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs of all instances in the current account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAllInstanceIdListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAllInstanceIdListResponse
+        /// </returns>
         public GetAllInstanceIdListResponse GetAllInstanceIdList(GetAllInstanceIdListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAllInstanceIdListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the IDs of all instances in the current account.
-         *
-         * @param request GetAllInstanceIdListRequest
-         * @return GetAllInstanceIdListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs of all instances in the current account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAllInstanceIdListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAllInstanceIdListResponse
+        /// </returns>
         public async Task<GetAllInstanceIdListResponse> GetAllInstanceIdListAsync(GetAllInstanceIdListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAllInstanceIdListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the IP address whitelist.
-         *
-         * @param request GetAllowedIpListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAllowedIpListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IP address whitelist.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAllowedIpListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAllowedIpListResponse
+        /// </returns>
         public GetAllowedIpListResponse GetAllowedIpListWithOptions(GetAllowedIpListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2831,13 +3475,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetAllowedIpListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the IP address whitelist.
-         *
-         * @param request GetAllowedIpListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAllowedIpListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IP address whitelist.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAllowedIpListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAllowedIpListResponse
+        /// </returns>
         public async Task<GetAllowedIpListResponse> GetAllowedIpListWithOptionsAsync(GetAllowedIpListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2869,39 +3521,62 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetAllowedIpListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the IP address whitelist.
-         *
-         * @param request GetAllowedIpListRequest
-         * @return GetAllowedIpListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IP address whitelist.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAllowedIpListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAllowedIpListResponse
+        /// </returns>
         public GetAllowedIpListResponse GetAllowedIpList(GetAllowedIpListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAllowedIpListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the IP address whitelist.
-         *
-         * @param request GetAllowedIpListRequest
-         * @return GetAllowedIpListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IP address whitelist.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAllowedIpListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAllowedIpListResponse
+        /// </returns>
         public async Task<GetAllowedIpListResponse> GetAllowedIpListAsync(GetAllowedIpListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAllowedIpListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the configurations of the scheduled scaling rule of a serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @description ###### [](#-v3-serverless-)**This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
-         *
-         * @param request GetAutoScalingConfigurationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAutoScalingConfigurationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of the scheduled scaling rule of a serverless ApsaraMQ for Kafka V3 instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h6><a href="#-v3-serverless-"></a>**This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAutoScalingConfigurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutoScalingConfigurationResponse
+        /// </returns>
         public GetAutoScalingConfigurationResponse GetAutoScalingConfigurationWithOptions(GetAutoScalingConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2933,15 +3608,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetAutoScalingConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the configurations of the scheduled scaling rule of a serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @description ###### [](#-v3-serverless-)**This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
-         *
-         * @param request GetAutoScalingConfigurationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAutoScalingConfigurationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of the scheduled scaling rule of a serverless ApsaraMQ for Kafka V3 instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h6><a href="#-v3-serverless-"></a>**This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAutoScalingConfigurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutoScalingConfigurationResponse
+        /// </returns>
         public async Task<GetAutoScalingConfigurationResponse> GetAutoScalingConfigurationWithOptionsAsync(GetAutoScalingConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2973,41 +3659,67 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetAutoScalingConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the configurations of the scheduled scaling rule of a serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @description ###### [](#-v3-serverless-)**This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
-         *
-         * @param request GetAutoScalingConfigurationRequest
-         * @return GetAutoScalingConfigurationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of the scheduled scaling rule of a serverless ApsaraMQ for Kafka V3 instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h6><a href="#-v3-serverless-"></a>**This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAutoScalingConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutoScalingConfigurationResponse
+        /// </returns>
         public GetAutoScalingConfigurationResponse GetAutoScalingConfiguration(GetAutoScalingConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAutoScalingConfigurationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the configurations of the scheduled scaling rule of a serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @description ###### [](#-v3-serverless-)**This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
-         *
-         * @param request GetAutoScalingConfigurationRequest
-         * @return GetAutoScalingConfigurationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of the scheduled scaling rule of a serverless ApsaraMQ for Kafka V3 instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h6><a href="#-v3-serverless-"></a>**This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAutoScalingConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutoScalingConfigurationResponse
+        /// </returns>
         public async Task<GetAutoScalingConfigurationResponse> GetAutoScalingConfigurationAsync(GetAutoScalingConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAutoScalingConfigurationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries one or more consumer groups in a specified Message Queue for Apache Kafka instance.
-         *
-         * @param request GetConsumerListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetConsumerListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries one or more consumer groups in a specified Message Queue for Apache Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConsumerListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumerListResponse
+        /// </returns>
         public GetConsumerListResponse GetConsumerListWithOptions(GetConsumerListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3051,13 +3763,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetConsumerListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries one or more consumer groups in a specified Message Queue for Apache Kafka instance.
-         *
-         * @param request GetConsumerListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetConsumerListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries one or more consumer groups in a specified Message Queue for Apache Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConsumerListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumerListResponse
+        /// </returns>
         public async Task<GetConsumerListResponse> GetConsumerListWithOptionsAsync(GetConsumerListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3101,37 +3821,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetConsumerListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries one or more consumer groups in a specified Message Queue for Apache Kafka instance.
-         *
-         * @param request GetConsumerListRequest
-         * @return GetConsumerListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries one or more consumer groups in a specified Message Queue for Apache Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConsumerListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumerListResponse
+        /// </returns>
         public GetConsumerListResponse GetConsumerList(GetConsumerListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetConsumerListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries one or more consumer groups in a specified Message Queue for Apache Kafka instance.
-         *
-         * @param request GetConsumerListRequest
-         * @return GetConsumerListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries one or more consumer groups in a specified Message Queue for Apache Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConsumerListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumerListResponse
+        /// </returns>
         public async Task<GetConsumerListResponse> GetConsumerListAsync(GetConsumerListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetConsumerListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the consumer progress of a consumer group.
-         *
-         * @param request GetConsumerProgressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetConsumerProgressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the consumer progress of a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConsumerProgressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumerProgressResponse
+        /// </returns>
         public GetConsumerProgressResponse GetConsumerProgressWithOptions(GetConsumerProgressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3171,13 +3911,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetConsumerProgressResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the consumer progress of a consumer group.
-         *
-         * @param request GetConsumerProgressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetConsumerProgressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the consumer progress of a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConsumerProgressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumerProgressResponse
+        /// </returns>
         public async Task<GetConsumerProgressResponse> GetConsumerProgressWithOptionsAsync(GetConsumerProgressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3217,37 +3965,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetConsumerProgressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the consumer progress of a consumer group.
-         *
-         * @param request GetConsumerProgressRequest
-         * @return GetConsumerProgressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the consumer progress of a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConsumerProgressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumerProgressResponse
+        /// </returns>
         public GetConsumerProgressResponse GetConsumerProgress(GetConsumerProgressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetConsumerProgressWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the consumer progress of a consumer group.
-         *
-         * @param request GetConsumerProgressRequest
-         * @return GetConsumerProgressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the consumer progress of a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConsumerProgressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumerProgressResponse
+        /// </returns>
         public async Task<GetConsumerProgressResponse> GetConsumerProgressAsync(GetConsumerProgressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetConsumerProgressWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about instances in a specified region.
-         *
-         * @param request GetInstanceListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetInstanceListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about instances in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceListResponse
+        /// </returns>
         public GetInstanceListResponse GetInstanceListWithOptions(GetInstanceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3295,13 +4063,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetInstanceListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about instances in a specified region.
-         *
-         * @param request GetInstanceListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetInstanceListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about instances in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceListResponse
+        /// </returns>
         public async Task<GetInstanceListResponse> GetInstanceListWithOptionsAsync(GetInstanceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3349,37 +4125,225 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetInstanceListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about instances in a specified region.
-         *
-         * @param request GetInstanceListRequest
-         * @return GetInstanceListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about instances in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceListResponse
+        /// </returns>
         public GetInstanceListResponse GetInstanceList(GetInstanceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetInstanceListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about instances in a specified region.
-         *
-         * @param request GetInstanceListRequest
-         * @return GetInstanceListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about instances in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceListResponse
+        /// </returns>
         public async Task<GetInstanceListResponse> GetInstanceListAsync(GetInstanceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetInstanceListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the used quota of topics and partitions.
-         *
-         * @param request GetQuotaTipRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetQuotaTipResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取kafka客户端ip</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetKafkaClientIpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKafkaClientIpResponse
+        /// </returns>
+        public GetKafkaClientIpResponse GetKafkaClientIpWithOptions(GetKafkaClientIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Group))
+            {
+                query["Group"] = request.Group;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                query["Topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKafkaClientIp",
+                Version = "2019-09-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKafkaClientIpResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取kafka客户端ip</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetKafkaClientIpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKafkaClientIpResponse
+        /// </returns>
+        public async Task<GetKafkaClientIpResponse> GetKafkaClientIpWithOptionsAsync(GetKafkaClientIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Group))
+            {
+                query["Group"] = request.Group;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                query["Topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKafkaClientIp",
+                Version = "2019-09-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKafkaClientIpResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取kafka客户端ip</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetKafkaClientIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKafkaClientIpResponse
+        /// </returns>
+        public GetKafkaClientIpResponse GetKafkaClientIp(GetKafkaClientIpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetKafkaClientIpWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取kafka客户端ip</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetKafkaClientIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKafkaClientIpResponse
+        /// </returns>
+        public async Task<GetKafkaClientIpResponse> GetKafkaClientIpAsync(GetKafkaClientIpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetKafkaClientIpWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the used quota of topics and partitions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQuotaTipRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQuotaTipResponse
+        /// </returns>
         public GetQuotaTipResponse GetQuotaTipWithOptions(GetQuotaTipRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3411,13 +4375,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetQuotaTipResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the used quota of topics and partitions.
-         *
-         * @param request GetQuotaTipRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetQuotaTipResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the used quota of topics and partitions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQuotaTipRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQuotaTipResponse
+        /// </returns>
         public async Task<GetQuotaTipResponse> GetQuotaTipWithOptionsAsync(GetQuotaTipRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3449,37 +4421,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetQuotaTipResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the used quota of topics and partitions.
-         *
-         * @param request GetQuotaTipRequest
-         * @return GetQuotaTipResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the used quota of topics and partitions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQuotaTipRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQuotaTipResponse
+        /// </returns>
         public GetQuotaTipResponse GetQuotaTip(GetQuotaTipRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetQuotaTipWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the used quota of topics and partitions.
-         *
-         * @param request GetQuotaTipRequest
-         * @return GetQuotaTipResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the used quota of topics and partitions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQuotaTipRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQuotaTipResponse
+        /// </returns>
         public async Task<GetQuotaTipResponse> GetQuotaTipAsync(GetQuotaTipRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetQuotaTipWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about a topic.
-         *
-         * @param request GetTopicListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTopicListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTopicListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTopicListResponse
+        /// </returns>
         public GetTopicListResponse GetTopicListWithOptions(GetTopicListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3523,13 +4515,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetTopicListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about a topic.
-         *
-         * @param request GetTopicListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTopicListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTopicListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTopicListResponse
+        /// </returns>
         public async Task<GetTopicListResponse> GetTopicListWithOptionsAsync(GetTopicListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3573,37 +4573,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetTopicListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about a topic.
-         *
-         * @param request GetTopicListRequest
-         * @return GetTopicListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTopicListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTopicListResponse
+        /// </returns>
         public GetTopicListResponse GetTopicList(GetTopicListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTopicListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about a topic.
-         *
-         * @param request GetTopicListRequest
-         * @return GetTopicListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTopicListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTopicListResponse
+        /// </returns>
         public async Task<GetTopicListResponse> GetTopicListAsync(GetTopicListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTopicListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the messaging status of a topic.
-         *
-         * @param request GetTopicStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTopicStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the messaging status of a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTopicStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTopicStatusResponse
+        /// </returns>
         public GetTopicStatusResponse GetTopicStatusWithOptions(GetTopicStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3639,13 +4659,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetTopicStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the messaging status of a topic.
-         *
-         * @param request GetTopicStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTopicStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the messaging status of a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTopicStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTopicStatusResponse
+        /// </returns>
         public async Task<GetTopicStatusResponse> GetTopicStatusWithOptionsAsync(GetTopicStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3681,37 +4709,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetTopicStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the messaging status of a topic.
-         *
-         * @param request GetTopicStatusRequest
-         * @return GetTopicStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the messaging status of a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTopicStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTopicStatusResponse
+        /// </returns>
         public GetTopicStatusResponse GetTopicStatus(GetTopicStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTopicStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the messaging status of a topic.
-         *
-         * @param request GetTopicStatusRequest
-         * @return GetTopicStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the messaging status of a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTopicStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTopicStatusResponse
+        /// </returns>
         public async Task<GetTopicStatusResponse> GetTopicStatusAsync(GetTopicStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTopicStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about the groups that subscribe to a topic.
-         *
-         * @param request GetTopicSubscribeStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTopicSubscribeStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the groups that subscribe to a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTopicSubscribeStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTopicSubscribeStatusResponse
+        /// </returns>
         public GetTopicSubscribeStatusResponse GetTopicSubscribeStatusWithOptions(GetTopicSubscribeStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3747,13 +4795,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetTopicSubscribeStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about the groups that subscribe to a topic.
-         *
-         * @param request GetTopicSubscribeStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTopicSubscribeStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the groups that subscribe to a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTopicSubscribeStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTopicSubscribeStatusResponse
+        /// </returns>
         public async Task<GetTopicSubscribeStatusResponse> GetTopicSubscribeStatusWithOptionsAsync(GetTopicSubscribeStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3789,37 +4845,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<GetTopicSubscribeStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about the groups that subscribe to a topic.
-         *
-         * @param request GetTopicSubscribeStatusRequest
-         * @return GetTopicSubscribeStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the groups that subscribe to a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTopicSubscribeStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTopicSubscribeStatusResponse
+        /// </returns>
         public GetTopicSubscribeStatusResponse GetTopicSubscribeStatus(GetTopicSubscribeStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTopicSubscribeStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about the groups that subscribe to a topic.
-         *
-         * @param request GetTopicSubscribeStatusRequest
-         * @return GetTopicSubscribeStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the groups that subscribe to a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTopicSubscribeStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTopicSubscribeStatusResponse
+        /// </returns>
         public async Task<GetTopicSubscribeStatusResponse> GetTopicSubscribeStatusAsync(GetTopicSubscribeStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTopicSubscribeStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the tags that are attached to a specified resource.
-         *
-         * @param request ListTagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are attached to a specified resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3863,13 +4939,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the tags that are attached to a specified resource.
-         *
-         * @param request ListTagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are attached to a specified resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3913,37 +4997,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the tags that are attached to a specified resource.
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are attached to a specified resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the tags that are attached to a specified resource.
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are attached to a specified resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Changes the name of an ApsaraMQ for Kafka instance. After you deploy an instance, you can call this operation to change the name of the instance.
-         *
-         * @param request ModifyInstanceNameRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyInstanceNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of an ApsaraMQ for Kafka instance. After you deploy an instance, you can call this operation to change the name of the instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceNameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceNameResponse
+        /// </returns>
         public ModifyInstanceNameResponse ModifyInstanceNameWithOptions(ModifyInstanceNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3979,13 +5083,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ModifyInstanceNameResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the name of an ApsaraMQ for Kafka instance. After you deploy an instance, you can call this operation to change the name of the instance.
-         *
-         * @param request ModifyInstanceNameRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyInstanceNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of an ApsaraMQ for Kafka instance. After you deploy an instance, you can call this operation to change the name of the instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceNameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceNameResponse
+        /// </returns>
         public async Task<ModifyInstanceNameResponse> ModifyInstanceNameWithOptionsAsync(ModifyInstanceNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4021,37 +5133,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ModifyInstanceNameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the name of an ApsaraMQ for Kafka instance. After you deploy an instance, you can call this operation to change the name of the instance.
-         *
-         * @param request ModifyInstanceNameRequest
-         * @return ModifyInstanceNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of an ApsaraMQ for Kafka instance. After you deploy an instance, you can call this operation to change the name of the instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceNameResponse
+        /// </returns>
         public ModifyInstanceNameResponse ModifyInstanceName(ModifyInstanceNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceNameWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Changes the name of an ApsaraMQ for Kafka instance. After you deploy an instance, you can call this operation to change the name of the instance.
-         *
-         * @param request ModifyInstanceNameRequest
-         * @return ModifyInstanceNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of an ApsaraMQ for Kafka instance. After you deploy an instance, you can call this operation to change the name of the instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceNameResponse
+        /// </returns>
         public async Task<ModifyInstanceNameResponse> ModifyInstanceNameAsync(ModifyInstanceNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceNameWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Changes the number of partitions in a topic.
-         *
-         * @param request ModifyPartitionNumRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyPartitionNumResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the number of partitions in a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPartitionNumRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPartitionNumResponse
+        /// </returns>
         public ModifyPartitionNumResponse ModifyPartitionNumWithOptions(ModifyPartitionNumRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4091,13 +5223,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ModifyPartitionNumResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the number of partitions in a topic.
-         *
-         * @param request ModifyPartitionNumRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyPartitionNumResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the number of partitions in a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPartitionNumRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPartitionNumResponse
+        /// </returns>
         public async Task<ModifyPartitionNumResponse> ModifyPartitionNumWithOptionsAsync(ModifyPartitionNumRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4137,39 +5277,62 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ModifyPartitionNumResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the number of partitions in a topic.
-         *
-         * @param request ModifyPartitionNumRequest
-         * @return ModifyPartitionNumResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the number of partitions in a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPartitionNumRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPartitionNumResponse
+        /// </returns>
         public ModifyPartitionNumResponse ModifyPartitionNum(ModifyPartitionNumRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyPartitionNumWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Changes the number of partitions in a topic.
-         *
-         * @param request ModifyPartitionNumRequest
-         * @return ModifyPartitionNumResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the number of partitions in a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPartitionNumRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPartitionNumResponse
+        /// </returns>
         public async Task<ModifyPartitionNumResponse> ModifyPartitionNumAsync(ModifyPartitionNumRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyPartitionNumWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
-         *
-         * @param request ModifyScheduledScalingRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyScheduledScalingRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyScheduledScalingRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyScheduledScalingRuleResponse
+        /// </returns>
         public ModifyScheduledScalingRuleResponse ModifyScheduledScalingRuleWithOptions(ModifyScheduledScalingRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4209,15 +5372,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ModifyScheduledScalingRuleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
-         *
-         * @param request ModifyScheduledScalingRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyScheduledScalingRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyScheduledScalingRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyScheduledScalingRuleResponse
+        /// </returns>
         public async Task<ModifyScheduledScalingRuleResponse> ModifyScheduledScalingRuleWithOptionsAsync(ModifyScheduledScalingRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4257,41 +5431,67 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ModifyScheduledScalingRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
-         *
-         * @param request ModifyScheduledScalingRuleRequest
-         * @return ModifyScheduledScalingRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyScheduledScalingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyScheduledScalingRuleResponse
+        /// </returns>
         public ModifyScheduledScalingRuleResponse ModifyScheduledScalingRule(ModifyScheduledScalingRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyScheduledScalingRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.
-         *
-         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
-         *
-         * @param request ModifyScheduledScalingRuleRequest
-         * @return ModifyScheduledScalingRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyScheduledScalingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyScheduledScalingRuleResponse
+        /// </returns>
         public async Task<ModifyScheduledScalingRuleResponse> ModifyScheduledScalingRuleAsync(ModifyScheduledScalingRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyScheduledScalingRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the description of a topic.
-         *
-         * @param request ModifyTopicRemarkRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyTopicRemarkResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the description of a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTopicRemarkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTopicRemarkResponse
+        /// </returns>
         public ModifyTopicRemarkResponse ModifyTopicRemarkWithOptions(ModifyTopicRemarkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4331,13 +5531,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ModifyTopicRemarkResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the description of a topic.
-         *
-         * @param request ModifyTopicRemarkRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyTopicRemarkResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the description of a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTopicRemarkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTopicRemarkResponse
+        /// </returns>
         public async Task<ModifyTopicRemarkResponse> ModifyTopicRemarkWithOptionsAsync(ModifyTopicRemarkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4377,37 +5585,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ModifyTopicRemarkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the description of a topic.
-         *
-         * @param request ModifyTopicRemarkRequest
-         * @return ModifyTopicRemarkResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the description of a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTopicRemarkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTopicRemarkResponse
+        /// </returns>
         public ModifyTopicRemarkResponse ModifyTopicRemark(ModifyTopicRemarkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyTopicRemarkWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the description of a topic.
-         *
-         * @param request ModifyTopicRemarkRequest
-         * @return ModifyTopicRemarkResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the description of a topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTopicRemarkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTopicRemarkResponse
+        /// </returns>
         public async Task<ModifyTopicRemarkResponse> ModifyTopicRemarkAsync(ModifyTopicRemarkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyTopicRemarkWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries messages stored in a topic. You can query messages by creation time or offset.
-         *
-         * @param request QueryMessageRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries messages stored in a topic. You can query messages by creation time or offset.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMessageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMessageResponse
+        /// </returns>
         public QueryMessageResponse QueryMessageWithOptions(QueryMessageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4431,13 +5659,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<QueryMessageResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries messages stored in a topic. You can query messages by creation time or offset.
-         *
-         * @param request QueryMessageRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries messages stored in a topic. You can query messages by creation time or offset.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMessageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMessageResponse
+        /// </returns>
         public async Task<QueryMessageResponse> QueryMessageWithOptionsAsync(QueryMessageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4461,39 +5697,62 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<QueryMessageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries messages stored in a topic. You can query messages by creation time or offset.
-         *
-         * @param request QueryMessageRequest
-         * @return QueryMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries messages stored in a topic. You can query messages by creation time or offset.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMessageResponse
+        /// </returns>
         public QueryMessageResponse QueryMessage(QueryMessageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryMessageWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries messages stored in a topic. You can query messages by creation time or offset.
-         *
-         * @param request QueryMessageRequest
-         * @return QueryMessageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries messages stored in a topic. You can query messages by creation time or offset.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMessageResponse
+        /// </returns>
         public async Task<QueryMessageResponse> QueryMessageAsync(QueryMessageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryMessageWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Releases a pay-as-you-go instance.
-         *
-         * @description You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.
-         *
-         * @param request ReleaseInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReleaseInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a pay-as-you-go instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReleaseInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseInstanceResponse
+        /// </returns>
         public ReleaseInstanceResponse ReleaseInstanceWithOptions(ReleaseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4529,15 +5788,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ReleaseInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Releases a pay-as-you-go instance.
-         *
-         * @description You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.
-         *
-         * @param request ReleaseInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReleaseInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a pay-as-you-go instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReleaseInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseInstanceResponse
+        /// </returns>
         public async Task<ReleaseInstanceResponse> ReleaseInstanceWithOptionsAsync(ReleaseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4573,43 +5843,72 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ReleaseInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Releases a pay-as-you-go instance.
-         *
-         * @description You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.
-         *
-         * @param request ReleaseInstanceRequest
-         * @return ReleaseInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a pay-as-you-go instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReleaseInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseInstanceResponse
+        /// </returns>
         public ReleaseInstanceResponse ReleaseInstance(ReleaseInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReleaseInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Releases a pay-as-you-go instance.
-         *
-         * @description You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.
-         *
-         * @param request ReleaseInstanceRequest
-         * @return ReleaseInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a pay-as-you-go instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReleaseInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseInstanceResponse
+        /// </returns>
         public async Task<ReleaseInstanceResponse> ReleaseInstanceAsync(ReleaseInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReleaseInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables an ApsaraMQ for Kafka instance.
-         *
-         * @description You can call this operation only if your instance is in the Stopped state.
-         *
-         * @param request ReopenInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReopenInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables an ApsaraMQ for Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation only if your instance is in the Stopped state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReopenInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReopenInstanceResponse
+        /// </returns>
         public ReopenInstanceResponse ReopenInstanceWithOptions(ReopenInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4641,15 +5940,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ReopenInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables an ApsaraMQ for Kafka instance.
-         *
-         * @description You can call this operation only if your instance is in the Stopped state.
-         *
-         * @param request ReopenInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReopenInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables an ApsaraMQ for Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation only if your instance is in the Stopped state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReopenInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReopenInstanceResponse
+        /// </returns>
         public async Task<ReopenInstanceResponse> ReopenInstanceWithOptionsAsync(ReopenInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4681,43 +5991,74 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ReopenInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Enables an ApsaraMQ for Kafka instance.
-         *
-         * @description You can call this operation only if your instance is in the Stopped state.
-         *
-         * @param request ReopenInstanceRequest
-         * @return ReopenInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables an ApsaraMQ for Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation only if your instance is in the Stopped state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReopenInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReopenInstanceResponse
+        /// </returns>
         public ReopenInstanceResponse ReopenInstance(ReopenInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReopenInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables an ApsaraMQ for Kafka instance.
-         *
-         * @description You can call this operation only if your instance is in the Stopped state.
-         *
-         * @param request ReopenInstanceRequest
-         * @return ReopenInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables an ApsaraMQ for Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation only if your instance is in the Stopped state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReopenInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReopenInstanceResponse
+        /// </returns>
         public async Task<ReopenInstanceResponse> ReopenInstanceAsync(ReopenInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReopenInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deploys an ApsaraMQ for Kafka instance. You must purchase and deploy an ApsaraMQ for Kafka instance before you can use the instance to send and receive messages.
-         *
-         * @description >  You can call this operation up to twice per second.
-         *
-         * @param request StartInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deploys an ApsaraMQ for Kafka instance. You must purchase and deploy an ApsaraMQ for Kafka instance before you can use the instance to send and receive messages.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can call this operation up to twice per second.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartInstanceResponse
+        /// </returns>
         public StartInstanceResponse StartInstanceWithOptions(StartInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4825,15 +6166,28 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<StartInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deploys an ApsaraMQ for Kafka instance. You must purchase and deploy an ApsaraMQ for Kafka instance before you can use the instance to send and receive messages.
-         *
-         * @description >  You can call this operation up to twice per second.
-         *
-         * @param request StartInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deploys an ApsaraMQ for Kafka instance. You must purchase and deploy an ApsaraMQ for Kafka instance before you can use the instance to send and receive messages.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can call this operation up to twice per second.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartInstanceResponse
+        /// </returns>
         public async Task<StartInstanceResponse> StartInstanceWithOptionsAsync(StartInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4941,43 +6295,76 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<StartInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deploys an ApsaraMQ for Kafka instance. You must purchase and deploy an ApsaraMQ for Kafka instance before you can use the instance to send and receive messages.
-         *
-         * @description >  You can call this operation up to twice per second.
-         *
-         * @param request StartInstanceRequest
-         * @return StartInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deploys an ApsaraMQ for Kafka instance. You must purchase and deploy an ApsaraMQ for Kafka instance before you can use the instance to send and receive messages.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can call this operation up to twice per second.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartInstanceResponse
+        /// </returns>
         public StartInstanceResponse StartInstance(StartInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deploys an ApsaraMQ for Kafka instance. You must purchase and deploy an ApsaraMQ for Kafka instance before you can use the instance to send and receive messages.
-         *
-         * @description >  You can call this operation up to twice per second.
-         *
-         * @param request StartInstanceRequest
-         * @return StartInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deploys an ApsaraMQ for Kafka instance. You must purchase and deploy an ApsaraMQ for Kafka instance before you can use the instance to send and receive messages.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can call this operation up to twice per second.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartInstanceResponse
+        /// </returns>
         public async Task<StartInstanceResponse> StartInstanceAsync(StartInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Stops an ApsaraMQ for Kafka instance.
-         *
-         * @description You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.
-         *
-         * @param request StopInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an ApsaraMQ for Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopInstanceResponse
+        /// </returns>
         public StopInstanceResponse StopInstanceWithOptions(StopInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5009,15 +6396,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<StopInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Stops an ApsaraMQ for Kafka instance.
-         *
-         * @description You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.
-         *
-         * @param request StopInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an ApsaraMQ for Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopInstanceResponse
+        /// </returns>
         public async Task<StopInstanceResponse> StopInstanceWithOptionsAsync(StopInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5049,41 +6447,67 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<StopInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Stops an ApsaraMQ for Kafka instance.
-         *
-         * @description You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.
-         *
-         * @param request StopInstanceRequest
-         * @return StopInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an ApsaraMQ for Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopInstanceResponse
+        /// </returns>
         public StopInstanceResponse StopInstance(StopInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StopInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Stops an ApsaraMQ for Kafka instance.
-         *
-         * @description You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.
-         *
-         * @param request StopInstanceRequest
-         * @return StopInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an ApsaraMQ for Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopInstanceResponse
+        /// </returns>
         public async Task<StopInstanceResponse> StopInstanceAsync(StopInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Attaches a tag to a resource.
-         *
-         * @param request TagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attaches a tag to a resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5127,13 +6551,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Attaches a tag to a resource.
-         *
-         * @param request TagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attaches a tag to a resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5177,37 +6609,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Attaches a tag to a resource.
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attaches a tag to a resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Attaches a tag to a resource.
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attaches a tag to a resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Detaches tags from a specified resource.
-         *
-         * @param request UntagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detaches tags from a specified resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5251,13 +6703,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Detaches tags from a specified resource.
-         *
-         * @param request UntagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detaches tags from a specified resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5301,37 +6761,57 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Detaches tags from a specified resource.
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detaches tags from a specified resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UntagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Detaches tags from a specified resource.
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detaches tags from a specified resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Updates the IP address whitelist of an ApsaraMQ for Kafka instance. Only IP addresses and ports that are configured in the IP address whitelist of an instance can access the instance.
-         *
-         * @param request UpdateAllowedIpRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateAllowedIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the IP address whitelist of an ApsaraMQ for Kafka instance. Only IP addresses and ports that are configured in the IP address whitelist of an instance can access the instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAllowedIpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAllowedIpResponse
+        /// </returns>
         public UpdateAllowedIpResponse UpdateAllowedIpWithOptions(UpdateAllowedIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5383,13 +6863,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpdateAllowedIpResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the IP address whitelist of an ApsaraMQ for Kafka instance. Only IP addresses and ports that are configured in the IP address whitelist of an instance can access the instance.
-         *
-         * @param request UpdateAllowedIpRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateAllowedIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the IP address whitelist of an ApsaraMQ for Kafka instance. Only IP addresses and ports that are configured in the IP address whitelist of an instance can access the instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAllowedIpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAllowedIpResponse
+        /// </returns>
         public async Task<UpdateAllowedIpResponse> UpdateAllowedIpWithOptionsAsync(UpdateAllowedIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5441,42 +6929,67 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpdateAllowedIpResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the IP address whitelist of an ApsaraMQ for Kafka instance. Only IP addresses and ports that are configured in the IP address whitelist of an instance can access the instance.
-         *
-         * @param request UpdateAllowedIpRequest
-         * @return UpdateAllowedIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the IP address whitelist of an ApsaraMQ for Kafka instance. Only IP addresses and ports that are configured in the IP address whitelist of an instance can access the instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAllowedIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAllowedIpResponse
+        /// </returns>
         public UpdateAllowedIpResponse UpdateAllowedIp(UpdateAllowedIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateAllowedIpWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Updates the IP address whitelist of an ApsaraMQ for Kafka instance. Only IP addresses and ports that are configured in the IP address whitelist of an instance can access the instance.
-         *
-         * @param request UpdateAllowedIpRequest
-         * @return UpdateAllowedIpResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the IP address whitelist of an ApsaraMQ for Kafka instance. Only IP addresses and ports that are configured in the IP address whitelist of an instance can access the instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAllowedIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAllowedIpResponse
+        /// </returns>
         public async Task<UpdateAllowedIpResponse> UpdateAllowedIpAsync(UpdateAllowedIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateAllowedIpWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Resets the consumer offsets of the subscribed topics of a consumer group.
-         *
-         * @description You can call this operation to reset the consumer offset of a specific consumer group. You can use the timestamp or offset parameter to reset the consumer offset of a consumer group. You can implement the following features by configuring a combination of different parameters:
-         * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to the latest offset. This way, you can consume messages in the topics from the latest offset.
-         * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to a specific point in time. This way, you can consume messages in the topics from the specified point in time.
-         * *   Reset the consumer offset of one subscribed topic of a consumer group to a specific offset in a specific partition. This way, you can consume messages from the specified offset in the specified partition.
-         *
-         * @param tmpReq UpdateConsumerOffsetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateConsumerOffsetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the consumer offsets of the subscribed topics of a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to reset the consumer offset of a specific consumer group. You can use the timestamp or offset parameter to reset the consumer offset of a consumer group. You can implement the following features by configuring a combination of different parameters:</para>
+        /// <list type="bullet">
+        /// <item><description>Reset the consumer offsets of one or all subscribed topics of a consumer group to the latest offset. This way, you can consume messages in the topics from the latest offset.</description></item>
+        /// <item><description>Reset the consumer offsets of one or all subscribed topics of a consumer group to a specific point in time. This way, you can consume messages in the topics from the specified point in time.</description></item>
+        /// <item><description>Reset the consumer offset of one subscribed topic of a consumer group to a specific offset in a specific partition. This way, you can consume messages from the specified offset in the specified partition.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateConsumerOffsetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConsumerOffsetResponse
+        /// </returns>
         public UpdateConsumerOffsetResponse UpdateConsumerOffsetWithOptions(UpdateConsumerOffsetRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5534,18 +7047,31 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpdateConsumerOffsetResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Resets the consumer offsets of the subscribed topics of a consumer group.
-         *
-         * @description You can call this operation to reset the consumer offset of a specific consumer group. You can use the timestamp or offset parameter to reset the consumer offset of a consumer group. You can implement the following features by configuring a combination of different parameters:
-         * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to the latest offset. This way, you can consume messages in the topics from the latest offset.
-         * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to a specific point in time. This way, you can consume messages in the topics from the specified point in time.
-         * *   Reset the consumer offset of one subscribed topic of a consumer group to a specific offset in a specific partition. This way, you can consume messages from the specified offset in the specified partition.
-         *
-         * @param tmpReq UpdateConsumerOffsetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateConsumerOffsetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the consumer offsets of the subscribed topics of a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to reset the consumer offset of a specific consumer group. You can use the timestamp or offset parameter to reset the consumer offset of a consumer group. You can implement the following features by configuring a combination of different parameters:</para>
+        /// <list type="bullet">
+        /// <item><description>Reset the consumer offsets of one or all subscribed topics of a consumer group to the latest offset. This way, you can consume messages in the topics from the latest offset.</description></item>
+        /// <item><description>Reset the consumer offsets of one or all subscribed topics of a consumer group to a specific point in time. This way, you can consume messages in the topics from the specified point in time.</description></item>
+        /// <item><description>Reset the consumer offset of one subscribed topic of a consumer group to a specific offset in a specific partition. This way, you can consume messages from the specified offset in the specified partition.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateConsumerOffsetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConsumerOffsetResponse
+        /// </returns>
         public async Task<UpdateConsumerOffsetResponse> UpdateConsumerOffsetWithOptionsAsync(UpdateConsumerOffsetRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5603,53 +7129,97 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpdateConsumerOffsetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Resets the consumer offsets of the subscribed topics of a consumer group.
-         *
-         * @description You can call this operation to reset the consumer offset of a specific consumer group. You can use the timestamp or offset parameter to reset the consumer offset of a consumer group. You can implement the following features by configuring a combination of different parameters:
-         * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to the latest offset. This way, you can consume messages in the topics from the latest offset.
-         * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to a specific point in time. This way, you can consume messages in the topics from the specified point in time.
-         * *   Reset the consumer offset of one subscribed topic of a consumer group to a specific offset in a specific partition. This way, you can consume messages from the specified offset in the specified partition.
-         *
-         * @param request UpdateConsumerOffsetRequest
-         * @return UpdateConsumerOffsetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the consumer offsets of the subscribed topics of a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to reset the consumer offset of a specific consumer group. You can use the timestamp or offset parameter to reset the consumer offset of a consumer group. You can implement the following features by configuring a combination of different parameters:</para>
+        /// <list type="bullet">
+        /// <item><description>Reset the consumer offsets of one or all subscribed topics of a consumer group to the latest offset. This way, you can consume messages in the topics from the latest offset.</description></item>
+        /// <item><description>Reset the consumer offsets of one or all subscribed topics of a consumer group to a specific point in time. This way, you can consume messages in the topics from the specified point in time.</description></item>
+        /// <item><description>Reset the consumer offset of one subscribed topic of a consumer group to a specific offset in a specific partition. This way, you can consume messages from the specified offset in the specified partition.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateConsumerOffsetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConsumerOffsetResponse
+        /// </returns>
         public UpdateConsumerOffsetResponse UpdateConsumerOffset(UpdateConsumerOffsetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateConsumerOffsetWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Resets the consumer offsets of the subscribed topics of a consumer group.
-         *
-         * @description You can call this operation to reset the consumer offset of a specific consumer group. You can use the timestamp or offset parameter to reset the consumer offset of a consumer group. You can implement the following features by configuring a combination of different parameters:
-         * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to the latest offset. This way, you can consume messages in the topics from the latest offset.
-         * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to a specific point in time. This way, you can consume messages in the topics from the specified point in time.
-         * *   Reset the consumer offset of one subscribed topic of a consumer group to a specific offset in a specific partition. This way, you can consume messages from the specified offset in the specified partition.
-         *
-         * @param request UpdateConsumerOffsetRequest
-         * @return UpdateConsumerOffsetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the consumer offsets of the subscribed topics of a consumer group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to reset the consumer offset of a specific consumer group. You can use the timestamp or offset parameter to reset the consumer offset of a consumer group. You can implement the following features by configuring a combination of different parameters:</para>
+        /// <list type="bullet">
+        /// <item><description>Reset the consumer offsets of one or all subscribed topics of a consumer group to the latest offset. This way, you can consume messages in the topics from the latest offset.</description></item>
+        /// <item><description>Reset the consumer offsets of one or all subscribed topics of a consumer group to a specific point in time. This way, you can consume messages in the topics from the specified point in time.</description></item>
+        /// <item><description>Reset the consumer offset of one subscribed topic of a consumer group to a specific offset in a specific partition. This way, you can consume messages from the specified offset in the specified partition.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateConsumerOffsetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConsumerOffsetResponse
+        /// </returns>
         public async Task<UpdateConsumerOffsetResponse> UpdateConsumerOffsetAsync(UpdateConsumerOffsetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateConsumerOffsetWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of an ApsaraMQ for Kafka instance. ApsaraMQ for Kafka allows you to modify the configurations of an instance, including the access control list (ACL) feature, the Secure Sockets Layer (SSL) feature, the message retention period, and the maximum message size.
-         *
-         * @description ## **Permissions**
-         * If a RAM user wants to call the **UpdateInstanceConfig** operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see [RAM policies](https://help.aliyun.com/document_detail/185815.html).
-         * |API|Action|Resource|
-         * |---|---|---|
-         * |UpdateInstanceConfig|alikafka: UpdateInstance|acs:alikafka:*:*:{instanceId}|
-         *
-         * @param request UpdateInstanceConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateInstanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an ApsaraMQ for Kafka instance. ApsaraMQ for Kafka allows you to modify the configurations of an instance, including the access control list (ACL) feature, the Secure Sockets Layer (SSL) feature, the message retention period, and the maximum message size.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><b>Permissions</b></h2>
+        /// <para>If a RAM user wants to call the <b>UpdateInstanceConfig</b> operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see <a href="https://help.aliyun.com/document_detail/185815.html">RAM policies</a>.</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>API</th>
+        /// <th>Action</th>
+        /// <th>Resource</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>UpdateInstanceConfig</td>
+        /// <td>alikafka: UpdateInstance</td>
+        /// <td>acs:alikafka:<em>:</em>:{instanceId}</td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceConfigResponse
+        /// </returns>
         public UpdateInstanceConfigResponse UpdateInstanceConfigWithOptions(UpdateInstanceConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5685,19 +7255,41 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpdateInstanceConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of an ApsaraMQ for Kafka instance. ApsaraMQ for Kafka allows you to modify the configurations of an instance, including the access control list (ACL) feature, the Secure Sockets Layer (SSL) feature, the message retention period, and the maximum message size.
-         *
-         * @description ## **Permissions**
-         * If a RAM user wants to call the **UpdateInstanceConfig** operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see [RAM policies](https://help.aliyun.com/document_detail/185815.html).
-         * |API|Action|Resource|
-         * |---|---|---|
-         * |UpdateInstanceConfig|alikafka: UpdateInstance|acs:alikafka:*:*:{instanceId}|
-         *
-         * @param request UpdateInstanceConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateInstanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an ApsaraMQ for Kafka instance. ApsaraMQ for Kafka allows you to modify the configurations of an instance, including the access control list (ACL) feature, the Secure Sockets Layer (SSL) feature, the message retention period, and the maximum message size.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><b>Permissions</b></h2>
+        /// <para>If a RAM user wants to call the <b>UpdateInstanceConfig</b> operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see <a href="https://help.aliyun.com/document_detail/185815.html">RAM policies</a>.</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>API</th>
+        /// <th>Action</th>
+        /// <th>Resource</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>UpdateInstanceConfig</td>
+        /// <td>alikafka: UpdateInstance</td>
+        /// <td>acs:alikafka:<em>:</em>:{instanceId}</td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceConfigResponse
+        /// </returns>
         public async Task<UpdateInstanceConfigResponse> UpdateInstanceConfigWithOptionsAsync(UpdateInstanceConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5733,49 +7325,97 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpdateInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of an ApsaraMQ for Kafka instance. ApsaraMQ for Kafka allows you to modify the configurations of an instance, including the access control list (ACL) feature, the Secure Sockets Layer (SSL) feature, the message retention period, and the maximum message size.
-         *
-         * @description ## **Permissions**
-         * If a RAM user wants to call the **UpdateInstanceConfig** operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see [RAM policies](https://help.aliyun.com/document_detail/185815.html).
-         * |API|Action|Resource|
-         * |---|---|---|
-         * |UpdateInstanceConfig|alikafka: UpdateInstance|acs:alikafka:*:*:{instanceId}|
-         *
-         * @param request UpdateInstanceConfigRequest
-         * @return UpdateInstanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an ApsaraMQ for Kafka instance. ApsaraMQ for Kafka allows you to modify the configurations of an instance, including the access control list (ACL) feature, the Secure Sockets Layer (SSL) feature, the message retention period, and the maximum message size.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><b>Permissions</b></h2>
+        /// <para>If a RAM user wants to call the <b>UpdateInstanceConfig</b> operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see <a href="https://help.aliyun.com/document_detail/185815.html">RAM policies</a>.</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>API</th>
+        /// <th>Action</th>
+        /// <th>Resource</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>UpdateInstanceConfig</td>
+        /// <td>alikafka: UpdateInstance</td>
+        /// <td>acs:alikafka:<em>:</em>:{instanceId}</td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceConfigResponse
+        /// </returns>
         public UpdateInstanceConfigResponse UpdateInstanceConfig(UpdateInstanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateInstanceConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of an ApsaraMQ for Kafka instance. ApsaraMQ for Kafka allows you to modify the configurations of an instance, including the access control list (ACL) feature, the Secure Sockets Layer (SSL) feature, the message retention period, and the maximum message size.
-         *
-         * @description ## **Permissions**
-         * If a RAM user wants to call the **UpdateInstanceConfig** operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see [RAM policies](https://help.aliyun.com/document_detail/185815.html).
-         * |API|Action|Resource|
-         * |---|---|---|
-         * |UpdateInstanceConfig|alikafka: UpdateInstance|acs:alikafka:*:*:{instanceId}|
-         *
-         * @param request UpdateInstanceConfigRequest
-         * @return UpdateInstanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of an ApsaraMQ for Kafka instance. ApsaraMQ for Kafka allows you to modify the configurations of an instance, including the access control list (ACL) feature, the Secure Sockets Layer (SSL) feature, the message retention period, and the maximum message size.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><b>Permissions</b></h2>
+        /// <para>If a RAM user wants to call the <b>UpdateInstanceConfig</b> operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see <a href="https://help.aliyun.com/document_detail/185815.html">RAM policies</a>.</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>API</th>
+        /// <th>Action</th>
+        /// <th>Resource</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>UpdateInstanceConfig</td>
+        /// <td>alikafka: UpdateInstance</td>
+        /// <td>acs:alikafka:<em>:</em>:{instanceId}</td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceConfigResponse
+        /// </returns>
         public async Task<UpdateInstanceConfigResponse> UpdateInstanceConfigAsync(UpdateInstanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateInstanceConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of a topic. After you create a topic, you can modify the message retention period and maximum message size of the topic.
-         *
-         * @param request UpdateTopicConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateTopicConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a topic. After you create a topic, you can modify the message retention period and maximum message size of the topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTopicConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTopicConfigResponse
+        /// </returns>
         public UpdateTopicConfigResponse UpdateTopicConfigWithOptions(UpdateTopicConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5819,13 +7459,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpdateTopicConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of a topic. After you create a topic, you can modify the message retention period and maximum message size of the topic.
-         *
-         * @param request UpdateTopicConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateTopicConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a topic. After you create a topic, you can modify the message retention period and maximum message size of the topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTopicConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTopicConfigResponse
+        /// </returns>
         public async Task<UpdateTopicConfigResponse> UpdateTopicConfigWithOptionsAsync(UpdateTopicConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5869,45 +7517,79 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpdateTopicConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of a topic. After you create a topic, you can modify the message retention period and maximum message size of the topic.
-         *
-         * @param request UpdateTopicConfigRequest
-         * @return UpdateTopicConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a topic. After you create a topic, you can modify the message retention period and maximum message size of the topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTopicConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTopicConfigResponse
+        /// </returns>
         public UpdateTopicConfigResponse UpdateTopicConfig(UpdateTopicConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateTopicConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of a topic. After you create a topic, you can modify the message retention period and maximum message size of the topic.
-         *
-         * @param request UpdateTopicConfigRequest
-         * @return UpdateTopicConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a topic. After you create a topic, you can modify the message retention period and maximum message size of the topic.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTopicConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTopicConfigResponse
+        /// </returns>
         public async Task<UpdateTopicConfigResponse> UpdateTopicConfigAsync(UpdateTopicConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateTopicConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Updates the version of an instance.
-         *
-         * @description ## **Permissions**
-         * A RAM user must be granted the required permissions before the RAM user calls the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](https://help.aliyun.com/document_detail/185815.html).
-         * |API|Action|Resource|
-         * |---|---|---|
-         * |UpgradeInstanceVersion|UpdateInstance|acs:alikafka:*:*:{instanceId}|
-         * ## **QPS limits**
-         * You can send a maximum of two queries per second (QPS).
-         *
-         * @param request UpgradeInstanceVersionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpgradeInstanceVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the version of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><b>Permissions</b></h2>
+        /// <para>A RAM user must be granted the required permissions before the RAM user calls the <b>UpgradeInstanceVersion</b> operation. For information about how to grant permissions, see <a href="https://help.aliyun.com/document_detail/185815.html">RAM policies</a>.</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>API</th>
+        /// <th>Action</th>
+        /// <th>Resource</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>UpgradeInstanceVersion</td>
+        /// <td>UpdateInstance</td>
+        /// <td>acs:alikafka:<em>:</em>:{instanceId}</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h2><b>QPS limits</b></h2>
+        /// <para>You can send a maximum of two queries per second (QPS).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeInstanceVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeInstanceVersionResponse
+        /// </returns>
         public UpgradeInstanceVersionResponse UpgradeInstanceVersionWithOptions(UpgradeInstanceVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5943,21 +7625,43 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpgradeInstanceVersionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the version of an instance.
-         *
-         * @description ## **Permissions**
-         * A RAM user must be granted the required permissions before the RAM user calls the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](https://help.aliyun.com/document_detail/185815.html).
-         * |API|Action|Resource|
-         * |---|---|---|
-         * |UpgradeInstanceVersion|UpdateInstance|acs:alikafka:*:*:{instanceId}|
-         * ## **QPS limits**
-         * You can send a maximum of two queries per second (QPS).
-         *
-         * @param request UpgradeInstanceVersionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpgradeInstanceVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the version of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><b>Permissions</b></h2>
+        /// <para>A RAM user must be granted the required permissions before the RAM user calls the <b>UpgradeInstanceVersion</b> operation. For information about how to grant permissions, see <a href="https://help.aliyun.com/document_detail/185815.html">RAM policies</a>.</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>API</th>
+        /// <th>Action</th>
+        /// <th>Resource</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>UpgradeInstanceVersion</td>
+        /// <td>UpdateInstance</td>
+        /// <td>acs:alikafka:<em>:</em>:{instanceId}</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h2><b>QPS limits</b></h2>
+        /// <para>You can send a maximum of two queries per second (QPS).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeInstanceVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeInstanceVersionResponse
+        /// </returns>
         public async Task<UpgradeInstanceVersionResponse> UpgradeInstanceVersionWithOptionsAsync(UpgradeInstanceVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5993,55 +7697,106 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpgradeInstanceVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Updates the version of an instance.
-         *
-         * @description ## **Permissions**
-         * A RAM user must be granted the required permissions before the RAM user calls the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](https://help.aliyun.com/document_detail/185815.html).
-         * |API|Action|Resource|
-         * |---|---|---|
-         * |UpgradeInstanceVersion|UpdateInstance|acs:alikafka:*:*:{instanceId}|
-         * ## **QPS limits**
-         * You can send a maximum of two queries per second (QPS).
-         *
-         * @param request UpgradeInstanceVersionRequest
-         * @return UpgradeInstanceVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the version of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><b>Permissions</b></h2>
+        /// <para>A RAM user must be granted the required permissions before the RAM user calls the <b>UpgradeInstanceVersion</b> operation. For information about how to grant permissions, see <a href="https://help.aliyun.com/document_detail/185815.html">RAM policies</a>.</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>API</th>
+        /// <th>Action</th>
+        /// <th>Resource</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>UpgradeInstanceVersion</td>
+        /// <td>UpdateInstance</td>
+        /// <td>acs:alikafka:<em>:</em>:{instanceId}</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h2><b>QPS limits</b></h2>
+        /// <para>You can send a maximum of two queries per second (QPS).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeInstanceVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeInstanceVersionResponse
+        /// </returns>
         public UpgradeInstanceVersionResponse UpgradeInstanceVersion(UpgradeInstanceVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeInstanceVersionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Updates the version of an instance.
-         *
-         * @description ## **Permissions**
-         * A RAM user must be granted the required permissions before the RAM user calls the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](https://help.aliyun.com/document_detail/185815.html).
-         * |API|Action|Resource|
-         * |---|---|---|
-         * |UpgradeInstanceVersion|UpdateInstance|acs:alikafka:*:*:{instanceId}|
-         * ## **QPS limits**
-         * You can send a maximum of two queries per second (QPS).
-         *
-         * @param request UpgradeInstanceVersionRequest
-         * @return UpgradeInstanceVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the version of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><b>Permissions</b></h2>
+        /// <para>A RAM user must be granted the required permissions before the RAM user calls the <b>UpgradeInstanceVersion</b> operation. For information about how to grant permissions, see <a href="https://help.aliyun.com/document_detail/185815.html">RAM policies</a>.</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>API</th>
+        /// <th>Action</th>
+        /// <th>Resource</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>UpgradeInstanceVersion</td>
+        /// <td>UpdateInstance</td>
+        /// <td>acs:alikafka:<em>:</em>:{instanceId}</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h2><b>QPS limits</b></h2>
+        /// <para>You can send a maximum of two queries per second (QPS).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeInstanceVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeInstanceVersionResponse
+        /// </returns>
         public async Task<UpgradeInstanceVersionResponse> UpgradeInstanceVersionAsync(UpgradeInstanceVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradeInstanceVersionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Upgrades a pay-as-you-go ApsaraMQ for Kafka instance.
-         *
-         * @description Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-         *
-         * @param tmpReq UpgradePostPayOrderRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpgradePostPayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades a pay-as-you-go ApsaraMQ for Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpgradePostPayOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradePostPayOrderResponse
+        /// </returns>
         public UpgradePostPayOrderResponse UpgradePostPayOrderWithOptions(UpgradePostPayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6115,15 +7870,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpgradePostPayOrderResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Upgrades a pay-as-you-go ApsaraMQ for Kafka instance.
-         *
-         * @description Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-         *
-         * @param tmpReq UpgradePostPayOrderRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpgradePostPayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades a pay-as-you-go ApsaraMQ for Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpgradePostPayOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradePostPayOrderResponse
+        /// </returns>
         public async Task<UpgradePostPayOrderResponse> UpgradePostPayOrderWithOptionsAsync(UpgradePostPayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6197,43 +7963,72 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpgradePostPayOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Upgrades a pay-as-you-go ApsaraMQ for Kafka instance.
-         *
-         * @description Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-         *
-         * @param request UpgradePostPayOrderRequest
-         * @return UpgradePostPayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades a pay-as-you-go ApsaraMQ for Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradePostPayOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradePostPayOrderResponse
+        /// </returns>
         public UpgradePostPayOrderResponse UpgradePostPayOrder(UpgradePostPayOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradePostPayOrderWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Upgrades a pay-as-you-go ApsaraMQ for Kafka instance.
-         *
-         * @description Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-         *
-         * @param request UpgradePostPayOrderRequest
-         * @return UpgradePostPayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades a pay-as-you-go ApsaraMQ for Kafka instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradePostPayOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradePostPayOrderResponse
+        /// </returns>
         public async Task<UpgradePostPayOrderResponse> UpgradePostPayOrderAsync(UpgradePostPayOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradePostPayOrderWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.
-         *
-         * @description Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see [Billing overview](https://help.aliyun.com/document_detail/84737.html).
-         *
-         * @param tmpReq UpgradePrePayOrderRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpgradePrePayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpgradePrePayOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradePrePayOrderResponse
+        /// </returns>
         public UpgradePrePayOrderResponse UpgradePrePayOrderWithOptions(UpgradePrePayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6311,15 +8106,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpgradePrePayOrderResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.
-         *
-         * @description Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see [Billing overview](https://help.aliyun.com/document_detail/84737.html).
-         *
-         * @param tmpReq UpgradePrePayOrderRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpgradePrePayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpgradePrePayOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradePrePayOrderResponse
+        /// </returns>
         public async Task<UpgradePrePayOrderResponse> UpgradePrePayOrderWithOptionsAsync(UpgradePrePayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6397,28 +8203,46 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpgradePrePayOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.
-         *
-         * @description Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see [Billing overview](https://help.aliyun.com/document_detail/84737.html).
-         *
-         * @param request UpgradePrePayOrderRequest
-         * @return UpgradePrePayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradePrePayOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradePrePayOrderResponse
+        /// </returns>
         public UpgradePrePayOrderResponse UpgradePrePayOrder(UpgradePrePayOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradePrePayOrderWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.
-         *
-         * @description Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see [Billing overview](https://help.aliyun.com/document_detail/84737.html).
-         *
-         * @param request UpgradePrePayOrderRequest
-         * @return UpgradePrePayOrderResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradePrePayOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradePrePayOrderResponse
+        /// </returns>
         public async Task<UpgradePrePayOrderResponse> UpgradePrePayOrderAsync(UpgradePrePayOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
