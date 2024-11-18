@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Accessibility { get; set; }
 
+        [NameInMap("Cpu")]
+        [Validation(Required=false)]
+        public long? Cpu { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>datasource-test</para>
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("DataSourceId")]
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
+
+        [NameInMap("DataSourceType")]
+        [Validation(Required=false)]
+        public string DataSourceType { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -68,6 +76,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
+
+        [NameInMap("MaxRunningTimeMinutes")]
+        [Validation(Required=false)]
+        public long? MaxRunningTimeMinutes { get; set; }
+
+        [NameInMap("Memory")]
+        [Validation(Required=false)]
+        public long? Memory { get; set; }
+
+        [NameInMap("Options")]
+        [Validation(Required=false)]
+        public string Options { get; set; }
 
         [NameInMap("Priority")]
         [Validation(Required=false)]
@@ -121,6 +141,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string SummaryPath { get; set; }
 
+        [NameInMap("SummaryRelativePath")]
+        [Validation(Required=false)]
+        public string SummaryRelativePath { get; set; }
+
         [NameInMap("TensorboardDataSources")]
         [Validation(Required=false)]
         public List<TensorboardDataSourceSpec> TensorboardDataSources { get; set; }
@@ -145,6 +169,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string TensorboardUrl { get; set; }
 
+        [NameInMap("Token")]
+        [Validation(Required=false)]
+        public string Token { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>lycxxxxx</para>
@@ -160,6 +188,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("Username")]
         [Validation(Required=false)]
         public string Username { get; set; }
+
+        [NameInMap("Workspaceid")]
+        [Validation(Required=false)]
+        public string Workspaceid { get; set; }
 
     }
 

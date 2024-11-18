@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public long? MaxRunningTimeMinutes { get; set; }
 
+        [NameInMap("Priority")]
+        [Validation(Required=false)]
+        public string Priority { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>380</para>

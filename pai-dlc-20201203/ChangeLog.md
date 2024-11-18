@@ -1,3 +1,7 @@
+2024-11-18 Version: 1.5.18
+- Update API UpdateTensorboard: add param Priority.
+
+
 2024-10-29 Version: 1.5.17
 - Generated csharp 2020-12-03 for pai-dlc.
 

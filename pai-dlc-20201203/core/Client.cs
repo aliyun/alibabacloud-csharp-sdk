@@ -3784,6 +3784,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["MaxRunningTimeMinutes"] = request.MaxRunningTimeMinutes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
                 query["WorkspaceId"] = request.WorkspaceId;
@@ -3837,6 +3841,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxRunningTimeMinutes))
             {
                 query["MaxRunningTimeMinutes"] = request.MaxRunningTimeMinutes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
